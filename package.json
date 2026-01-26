@@ -1,5 +1,5 @@
 {
-  "name": "CiberVet-server",
+  "name": "cibervet-server",
   "version": "1.0.0",
   "description": "Backend API para sistema de gestión veterinaria",
   "main": "dist/index.js",
