@@ -1,0 +1,300 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// =====================================================
+// ENUMS
+// =====================================================
+
+enum UserRole {
+  owner
+  operator
+  admin
+}
+
+enum AppointmentStatus {
+  scheduled
+  confirmed
+  in_progress
+  completed
+  cancelled
+  no_show
+}
+
+// =====================================================
+// MODELOS
+// =====================================================
+
+model User {
+  id                  String       @id @db.Uuid
+  email               String       @unique @db.VarChar(255)
+  fullName            String       @map("full_name") @db.VarChar(255)
+  phone               String?      @db.VarChar(20)
+  role                UserRole     @default(owner)
+  veterinaryId        String?      @map("veterinary_id") @db.Uuid
+  isActive            Boolean      @default(true) @map("is_active")
+  createdAt           DateTime     @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt           DateTime     @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  veterinary          Veterinary?  @relation(fields: [veterinaryId], references: [id])
+  owner               Owner?
+  operator            Operator?
+  createdAppointments Appointment[] @relation("CreatedBy")
+
+  @@map("users")
+  @@index([role])
+  @@index([veterinaryId])
+}
+
+model Veterinary {
+  id            String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  name          String    @db.VarChar(255)
+  email         String    @unique @db.VarChar(255)
+  phone         String?   @db.VarChar(20)
+  address       String?
+  city          String?   @db.VarChar(100)
+  state         String?   @db.VarChar(100)
+  country       String    @default("República Dominicana") @db.VarChar(100)
+  postalCode    String?   @map("postal_code") @db.VarChar(20)
+  logoUrl       String?   @map("logo_url")
+  businessHours Json?     @map("business_hours")
+  isActive      Boolean   @default(true) @map("is_active")
+  createdAt     DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt     DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  users          User[]
+  owners         Owner[]
+  operators      Operator[]
+  patients       Patient[]
+  appointments   Appointment[]
+  clinicalRecords ClinicalRecord[]
+  activityLogs   ActivityLog[]
+
+  @@map("veterinaries")
+}
+
+model Owner {
+  id                    String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  userId                String    @unique @map("user_id") @db.Uuid
+  veterinaryId          String?   @map("veterinary_id") @db.Uuid
+  address               String?
+  city                  String?   @db.VarChar(100)
+  emergencyContactName  String?   @map("emergency_contact_name") @db.VarChar(255)
+  emergencyContactPhone String?   @map("emergency_contact_phone") @db.VarChar(20)
+  notes                 String?
+  createdAt             DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt             DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  user          User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  veterinary    Veterinary?   @relation(fields: [veterinaryId], references: [id])
+  patients      Patient[]
+  appointments  Appointment[]
+  emailReminders EmailReminder[]
+
+  @@map("owners")
+  @@index([userId])
+}
+
+model Operator {
+  id            String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  userId        String    @unique @map("user_id") @db.Uuid
+  veterinaryId  String    @map("veterinary_id") @db.Uuid
+  position      String?   @db.VarChar(100)
+  hireDate      DateTime? @map("hire_date") @db.Date
+  isActive      Boolean   @default(true) @map("is_active")
+  permissions   Json?
+  createdAt     DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt     DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  user            User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  veterinary      Veterinary        @relation(fields: [veterinaryId], references: [id])
+  appointments    Appointment[]
+  procedures      Procedure[]
+  clinicalRecords ClinicalRecord[]  @relation("RecordedBy")
+  vaccinations    Vaccination[]
+
+  @@map("operators")
+  @@index([userId])
+}
+
+model Patient {
+  id               String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  ownerId          String    @map("owner_id") @db.Uuid
+  veterinaryId     String?   @map("veterinary_id") @db.Uuid
+  name             String    @db.VarChar(255)
+  species          String    @db.VarChar(100)
+  breed            String?   @db.VarChar(100)
+  color            String?   @db.VarChar(100)
+  birthDate        DateTime? @map("birth_date") @db.Date
+  gender           String?   @db.VarChar(20)
+  weight           Decimal?  @db.Decimal(10, 2)
+  photoUrl         String?   @map("photo_url")
+  microchipNumber  String?   @map("microchip_number") @db.VarChar(50)
+  isNeutered       Boolean   @default(false) @map("is_neutered")
+  allergies        String?
+  specialConditions String?  @map("special_conditions")
+  isActive         Boolean   @default(true) @map("is_active")
+  createdAt        DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt        DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  owner           Owner             @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  veterinary      Veterinary?       @relation(fields: [veterinaryId], references: [id])
+  appointments    Appointment[]
+  clinicalRecords ClinicalRecord[]
+  vaccinations    Vaccination[]
+
+  @@map("patients")
+  @@index([ownerId])
+}
+
+model Appointment {
+  id                   String            @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  patientId            String            @map("patient_id") @db.Uuid
+  ownerId              String?           @map("owner_id") @db.Uuid
+  veterinaryId         String?           @map("veterinary_id") @db.Uuid
+  operatorId           String?           @map("operator_id") @db.Uuid
+  dateTime             DateTime          @map("date_time") @db.Timestamptz(6)
+  durationMinutes      Int               @default(30) @map("duration_minutes")
+  status               AppointmentStatus @default(scheduled)
+  appointmentType      String?           @map("appointment_type") @db.VarChar(100)
+  reason               String
+  notes                String?
+  googleCalendarEventId String?          @map("google_calendar_event_id") @db.VarChar(255)
+  reminderSent         Boolean           @default(false) @map("reminder_sent")
+  reminderSentAt       DateTime?         @map("reminder_sent_at") @db.Timestamptz(6)
+  cancelledAt          DateTime?         @map("cancelled_at") @db.Timestamptz(6)
+  cancellationReason   String?           @map("cancellation_reason")
+  createdBy            String?           @map("created_by") @db.Uuid
+  createdAt            DateTime          @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt            DateTime          @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  patient         Patient           @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  owner           Owner?            @relation(fields: [ownerId], references: [id])
+  veterinary      Veterinary?       @relation(fields: [veterinaryId], references: [id])
+  operator        Operator?         @relation(fields: [operatorId], references: [id])
+  creator         User?             @relation("CreatedBy", fields: [createdBy], references: [id])
+  procedures      Procedure[]
+  clinicalRecords ClinicalRecord[]
+  emailReminders  EmailReminder[]
+
+  @@map("appointments")
+  @@index([patientId])
+  @@index([ownerId])
+  @@index([dateTime])
+  @@index([status])
+}
+
+model Procedure {
+  id              String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  appointmentId   String    @map("appointment_id") @db.Uuid
+  name            String    @db.VarChar(255)
+  description     String?
+  cost            Decimal?  @db.Decimal(10, 2)
+  durationMinutes Int?      @map("duration_minutes")
+  performedBy     String?   @map("performed_by") @db.Uuid
+  performedAt     DateTime  @default(now()) @map("performed_at") @db.Timestamptz(6)
+  createdAt       DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  appointment Appointment @relation(fields: [appointmentId], references: [id], onDelete: Cascade)
+  performer   Operator?   @relation(fields: [performedBy], references: [id])
+
+  @@map("procedures")
+}
+
+model ClinicalRecord {
+  id             String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  patientId      String    @map("patient_id") @db.Uuid
+  appointmentId  String?   @map("appointment_id") @db.Uuid
+  veterinaryId   String?   @map("veterinary_id") @db.Uuid
+  recordedBy     String?   @map("recorded_by") @db.Uuid
+  recordType     String?   @map("record_type") @db.VarChar(50)
+  diagnosis      String?
+  symptoms       String?
+  treatment      String?
+  medications    Json?
+  labResults     Json?     @map("lab_results")
+  images         Json?
+  observations   String?
+  followUpDate   DateTime? @map("follow_up_date") @db.Date
+  createdAt      DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt      DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  patient      Patient       @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  appointment  Appointment?  @relation(fields: [appointmentId], references: [id])
+  veterinary   Veterinary?   @relation(fields: [veterinaryId], references: [id])
+  recorder     Operator?     @relation("RecordedBy", fields: [recordedBy], references: [id])
+  vaccinations Vaccination[]
+
+  @@map("clinical_records")
+  @@index([patientId])
+}
+
+model Vaccination {
+  id                String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  patientId         String    @map("patient_id") @db.Uuid
+  clinicalRecordId  String?   @map("clinical_record_id") @db.Uuid
+  vaccineName       String    @map("vaccine_name") @db.VarChar(255)
+  vaccineType       String?   @map("vaccine_type") @db.VarChar(100)
+  batchNumber       String?   @map("batch_number") @db.VarChar(100)
+  administeredDate  DateTime  @map("administered_date") @db.Date
+  nextDueDate       DateTime? @map("next_due_date") @db.Date
+  administeredBy    String?   @map("administered_by") @db.Uuid
+  notes             String?
+  createdAt         DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  patient        Patient         @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  clinicalRecord ClinicalRecord? @relation(fields: [clinicalRecordId], references: [id])
+  administrator  Operator?       @relation(fields: [administeredBy], references: [id])
+
+  @@map("vaccinations")
+  @@index([patientId])
+}
+
+model EmailReminder {
+  id            String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  appointmentId String    @map("appointment_id") @db.Uuid
+  ownerId       String?   @map("owner_id") @db.Uuid
+  emailTo       String    @map("email_to") @db.VarChar(255)
+  subject       String?   @db.VarChar(255)
+  body          String?
+  scheduledFor  DateTime  @map("scheduled_for") @db.Timestamptz(6)
+  sentAt        DateTime? @map("sent_at") @db.Timestamptz(6)
+  status        String    @default("pending") @db.VarChar(50)
+  errorMessage  String?   @map("error_message")
+  createdAt     DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  appointment Appointment @relation(fields: [appointmentId], references: [id], onDelete: Cascade)
+  owner       Owner?      @relation(fields: [ownerId], references: [id])
+
+  @@map("email_reminders")
+}
+
+model ActivityLog {
+  id            String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  veterinaryId  String?   @map("veterinary_id") @db.Uuid
+  userId        String?   @map("user_id") @db.Uuid
+  actionType    String    @map("action_type") @db.VarChar(50)
+  entityType    String?   @map("entity_type") @db.VarChar(50)
+  entityId      String?   @map("entity_id") @db.Uuid
+  description   String
+  metadata      Json?
+  createdAt     DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  veterinary Veterinary? @relation(fields: [veterinaryId], references: [id])
+
+  @@map("activity_log")
+  @@index([veterinaryId])
+  @@index([userId])
+  @@index([createdAt(sort: Desc)])
+}

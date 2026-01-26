@@ -1,0 +1,95 @@
+// Archivo de prueba para la API de autenticación
+// Puedes usar este archivo con extensiones como REST Client para VS Code
+
+### Variables
+@baseUrl = http://localhost:3000/api/v1
+@email = test@ejemplo.com
+@password = password123
+@name = Usuario Test
+
+### 1. Registrar un nuevo usuario (Owner)
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+  "email": "{{email}}",
+  "password": "{{password}}",
+  "name": "{{name}}",
+  "role": "owner"
+}
+
+### 2. Iniciar sesión
+# @name login
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "{{email}}",
+  "password": "{{password}}"
+}
+
+### 3. Obtener usuario actual (usa el token del login)
+GET {{baseUrl}}/auth/me
+Authorization: Bearer {{login.response.body.data.session.access_token}}
+
+### 4. Refrescar token
+POST {{baseUrl}}/auth/refresh
+Content-Type: application/json
+
+{
+  "refreshToken": "{{login.response.body.data.session.refresh_token}}"
+}
+
+### 5. Cerrar sesión
+POST {{baseUrl}}/auth/logout
+Authorization: Bearer {{login.response.body.data.session.access_token}}
+
+### 6. Registrar un operador
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+  "email": "operador@ejemplo.com",
+  "password": "password123",
+  "name": "Operador Test",
+  "role": "operator"
+}
+
+### 7. Registrar un administrador
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+  "email": "admin@ejemplo.com",
+  "password": "password123",
+  "name": "Admin Test",
+  "role": "admin"
+}
+
+### 8. Prueba de validación - Email inválido
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+  "email": "email-invalido",
+  "password": "password123",
+  "name": "Test"
+}
+
+### 9. Prueba de validación - Contraseña corta
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+  "email": "test2@ejemplo.com",
+  "password": "123",
+  "name": "Test"
+}
+
+### 10. Prueba de validación - Nombre faltante
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@ejemplo.com"
+}
