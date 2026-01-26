@@ -9,13 +9,22 @@ export class AuthService {
    */
   async register(data: RegisterDTO): Promise<AuthResponse> {
     try {
-      // 1. Crear usuario en Supabase Auth
+      // 1. Verificar si el usuario ya existe en la BD
+      const existingUser = await prisma.user.findUnique({
+        where: { email: data.email },
+      });
+
+      if (existingUser) {
+        throw new Error("El email ya está registrado");
+      }
+
+      // 2. Crear usuario en Supabase Auth
       const { data: authData, error: authError } = await supabase.auth.signUp({
         email: data.email,
         password: data.password,
         options: {
           data: {
-            name: data.name,
+            full_name: data.name,
             role: data.role,
           },
         },
@@ -25,11 +34,11 @@ export class AuthService {
         throw new Error(`Error al crear usuario: ${authError.message}`);
       }
 
-      if (!authData.user || !authData.session) {
-        throw new Error("No se pudo crear el usuario o la sesión en Supabase");
+      if (!authData.user) {
+        throw new Error("No se pudo crear el usuario en Supabase");
       }
 
-      // 2. Crear usuario en la base de datos
+      // 3. Crear usuario en la base de datos
       const dbUser = await prisma.user.create({
         data: {
           id: authData.user.id,
@@ -39,7 +48,7 @@ export class AuthService {
         },
       });
 
-      // 3. Crear registro específico según el rol
+      // 4. Crear registro específico según el rol
       if (data.role === "owner") {
         await prisma.owner.create({
           data: {
@@ -50,23 +59,44 @@ export class AuthService {
       // Nota: Para operadores, se debe asignar un veterinaryId posteriormente
       // ya que es un campo requerido
 
-      // 4. Retornar respuesta formateada
+      // 5. Verificar si el email requiere confirmación
+      const emailConfirmed = authData.user.email_confirmed_at !== null;
+      const hasSession = authData.session !== null;
+
+      console.log("Registro exitoso:", {
+        userId: dbUser.id,
+        email: dbUser.email,
+        emailConfirmed,
+        hasSession,
+      });
+
+      // 6. Retornar respuesta formateada
       return {
         user: {
           id: dbUser.id,
           email: dbUser.email,
-          name: dbUser.fullName,
+          fullName: dbUser.fullName,
           role: dbUser.role,
         },
-        session: {
-          access_token: authData.session.access_token,
-          refresh_token: authData.session.refresh_token,
-          expires_in: authData.session.expires_in!,
-          expires_at: authData.session.expires_at!,
-        },
+        session: hasSession
+          ? {
+              access_token: authData.session!.access_token,
+              refresh_token: authData.session!.refresh_token,
+              expires_in: authData.session!.expires_in,
+              expires_at: authData.session!.expires_at!,
+            }
+          : null,
+        emailConfirmed,
+        message: !emailConfirmed
+          ? "Usuario registrado. Por favor revisa tu correo para confirmar tu cuenta."
+          : undefined,
       };
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error en AuthService.register:", error);
+
+      // Si el usuario se creó en Supabase pero falló en la BD, intentar limpiarlo
+      // (esto es opcional y puede causar problemas si no se maneja bien)
+
       throw error;
     }
   }
@@ -105,8 +135,8 @@ export class AuthService {
         user: {
           id: dbUser.id,
           email: dbUser.email,
-          name: dbUser.fullName,
-          role: dbUser.role,
+          fullName: dbUser.fullName,
+          role: authData.user.user_metadata?.role || dbUser.role,
         },
         session: {
           access_token: authData.session.access_token,
@@ -147,7 +177,7 @@ export class AuthService {
         user: {
           id: dbUser.id,
           email: dbUser.email,
-          name: dbUser.fullName,
+          fullName: dbUser.fullName,
           role: dbUser.role,
         },
         session: {

@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { supabase } from "../config/supabase";
+import { prisma } from "../config/prisma";
 import { UserPayload } from "../models/dto/auth.dto";
 
 // Extender el tipo Request de Express para incluir el usuario
@@ -44,11 +45,31 @@ export const authenticate = async (
       return;
     }
 
-    // Agregar el usuario al request
+    // Obtener datos del usuario desde la base de datos para tener el rol correcto
+    const dbUser = await prisma.user.findUnique({
+      where: { id: user.id },
+      select: {
+        id: true,
+        email: true,
+        fullName: true,
+        role: true,
+      },
+    });
+
+    if (!dbUser) {
+      res.status(401).json({
+        error: "No autorizado",
+        message: "Usuario no encontrado en la base de datos",
+      });
+      return;
+    }
+
+    // Agregar el usuario al request con los datos de la BD
     req.user = {
-      id: user.id,
-      email: user.email!,
-      role: user.user_metadata?.role || "owner",
+      id: dbUser.id,
+      email: dbUser.email,
+      role: dbUser.role,
+      fullName: dbUser.fullName,
     };
 
     next();
