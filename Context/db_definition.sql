@@ -71,6 +71,34 @@ CREATE TABLE operators (
 );
 
 -- =====================================================
+-- ESPECIES
+-- =====================================================
+CREATE TABLE species (
+  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  name VARCHAR(100) UNIQUE NOT NULL,
+  description TEXT,
+  is_active BOOLEAN DEFAULT TRUE,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- =====================================================
+-- RAZAS
+-- =====================================================
+CREATE TABLE breeds (
+  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  species_id UUID REFERENCES species(id) NOT NULL,
+  name VARCHAR(100) NOT NULL,
+  description TEXT,
+  is_active BOOLEAN DEFAULT TRUE,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  UNIQUE(species_id, name)
+);
+
+CREATE INDEX idx_breeds_species_id ON breeds(species_id);
+
+-- =====================================================
 -- PACIENTES (MASCOTAS)
 -- =====================================================
 CREATE TABLE patients (
@@ -78,8 +106,8 @@ CREATE TABLE patients (
   owner_id UUID REFERENCES owners(id) ON DELETE CASCADE,
   veterinary_id UUID REFERENCES veterinaries(id),
   name VARCHAR(255) NOT NULL,
-  species VARCHAR(100) NOT NULL, -- Perro, Gato, Ave, etc.
-  breed VARCHAR(100),
+  species_id UUID REFERENCES species(id) NOT NULL,
+  breed_id UUID REFERENCES breeds(id),
   color VARCHAR(100),
   birth_date DATE,
   gender VARCHAR(20), -- Macho, Hembra
@@ -222,6 +250,8 @@ CREATE INDEX idx_users_veterinary ON users(veterinary_id);
 CREATE INDEX idx_owners_user ON owners(user_id);
 CREATE INDEX idx_operators_user ON operators(user_id);
 CREATE INDEX idx_patients_owner ON patients(owner_id);
+CREATE INDEX idx_patients_species ON patients(species_id);
+CREATE INDEX idx_patients_breed ON patients(breed_id);
 CREATE INDEX idx_appointments_patient ON appointments(patient_id);
 CREATE INDEX idx_appointments_owner ON appointments(owner_id);
 CREATE INDEX idx_appointments_datetime ON appointments(date_time);

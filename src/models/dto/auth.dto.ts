@@ -3,7 +3,10 @@ export interface AuthResponse {
     id: string;
     email: string;
     fullName: string;
-    role: string;
+    role: "owner" | "operator" | "admin";
+    phone?: string | null;
+    veterinaryId?: string | null;
+    isActive: boolean;
   };
   session?: {
     access_token: string;
@@ -18,6 +21,9 @@ export interface AuthResponse {
 export interface UserPayload {
   id: string;
   email: string;
-  role: string;
+  role: "owner" | "operator" | "admin";
   fullName?: string;
+  phone?: string | null;
+  veterinaryId?: string | null;
+  isActive: boolean;
 }

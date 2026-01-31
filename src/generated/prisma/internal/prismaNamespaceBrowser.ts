@@ -55,6 +55,8 @@ export const ModelName = {
   Veterinary: 'Veterinary',
   Owner: 'Owner',
   Operator: 'Operator',
+  Species: 'Species',
+  Breed: 'Breed',
   Patient: 'Patient',
   Appointment: 'Appointment',
   Procedure: 'Procedure',
@@ -146,13 +148,38 @@ export const OperatorScalarFieldEnum = {
 export type OperatorScalarFieldEnum = (typeof OperatorScalarFieldEnum)[keyof typeof OperatorScalarFieldEnum]
 
 
+export const SpeciesScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  description: 'description',
+  isActive: 'isActive',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type SpeciesScalarFieldEnum = (typeof SpeciesScalarFieldEnum)[keyof typeof SpeciesScalarFieldEnum]
+
+
+export const BreedScalarFieldEnum = {
+  id: 'id',
+  speciesId: 'speciesId',
+  name: 'name',
+  description: 'description',
+  isActive: 'isActive',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type BreedScalarFieldEnum = (typeof BreedScalarFieldEnum)[keyof typeof BreedScalarFieldEnum]
+
+
 export const PatientScalarFieldEnum = {
   id: 'id',
   ownerId: 'ownerId',
   veterinaryId: 'veterinaryId',
   name: 'name',
-  species: 'species',
-  breed: 'breed',
+  speciesId: 'speciesId',
+  breedId: 'breedId',
   color: 'color',
   birthDate: 'birthDate',
   gender: 'gender',

@@ -70,13 +70,16 @@ export class AuthService {
         hasSession,
       });
 
-      // 6. Retornar respuesta formateada
+      // 6. Retornar respuesta formateada con todos los campos
       return {
         user: {
           id: dbUser.id,
           email: dbUser.email,
           fullName: dbUser.fullName,
+          phone: dbUser.phone,
           role: dbUser.role,
+          veterinaryId: dbUser.veterinaryId,
+          isActive: dbUser.isActive,
         },
         session: hasSession
           ? {
@@ -130,13 +133,16 @@ export class AuthService {
         throw new Error("Usuario no encontrado en la base de datos");
       }
 
-      // 3. Retornar respuesta formateada
+      // 3. Retornar respuesta formateada con todos los campos actualizados
       return {
         user: {
           id: dbUser.id,
           email: dbUser.email,
           fullName: dbUser.fullName,
-          role: authData.user.user_metadata?.role || dbUser.role,
+          phone: dbUser.phone,
+          role: dbUser.role,
+          veterinaryId: dbUser.veterinaryId,
+          isActive: dbUser.isActive,
         },
         session: {
           access_token: authData.session.access_token,
@@ -178,7 +184,10 @@ export class AuthService {
           id: dbUser.id,
           email: dbUser.email,
           fullName: dbUser.fullName,
+          phone: dbUser.phone,
           role: dbUser.role,
+          veterinaryId: dbUser.veterinaryId,
+          isActive: dbUser.isActive,
         },
         session: {
           access_token: authData.session.access_token,
