@@ -26,58 +26,58 @@ export type AggregateSpecies = {
 
 export type SpeciesMinAggregateOutputType = {
   id: string | null
-  name: string | null
-  description: string | null
-  isActive: boolean | null
-  createdAt: Date | null
-  updatedAt: Date | null
+  nombre: string | null
+  descripcion: string | null
+  estaActivo: boolean | null
+  creadoEn: Date | null
+  actualizadoEn: Date | null
 }
 
 export type SpeciesMaxAggregateOutputType = {
   id: string | null
-  name: string | null
-  description: string | null
-  isActive: boolean | null
-  createdAt: Date | null
-  updatedAt: Date | null
+  nombre: string | null
+  descripcion: string | null
+  estaActivo: boolean | null
+  creadoEn: Date | null
+  actualizadoEn: Date | null
 }
 
 export type SpeciesCountAggregateOutputType = {
   id: number
-  name: number
-  description: number
-  isActive: number
-  createdAt: number
-  updatedAt: number
+  nombre: number
+  descripcion: number
+  estaActivo: number
+  creadoEn: number
+  actualizadoEn: number
   _all: number
 }
 
 
 export type SpeciesMinAggregateInputType = {
   id?: true
-  name?: true
-  description?: true
-  isActive?: true
-  createdAt?: true
-  updatedAt?: true
+  nombre?: true
+  descripcion?: true
+  estaActivo?: true
+  creadoEn?: true
+  actualizadoEn?: true
 }
 
 export type SpeciesMaxAggregateInputType = {
   id?: true
-  name?: true
-  description?: true
-  isActive?: true
-  createdAt?: true
-  updatedAt?: true
+  nombre?: true
+  descripcion?: true
+  estaActivo?: true
+  creadoEn?: true
+  actualizadoEn?: true
 }
 
 export type SpeciesCountAggregateInputType = {
   id?: true
-  name?: true
-  description?: true
-  isActive?: true
-  createdAt?: true
-  updatedAt?: true
+  nombre?: true
+  descripcion?: true
+  estaActivo?: true
+  creadoEn?: true
+  actualizadoEn?: true
   _all?: true
 }
 
@@ -155,11 +155,11 @@ export type SpeciesGroupByArgs<ExtArgs extends runtime.Types.Extensions.Internal
 
 export type SpeciesGroupByOutputType = {
   id: string
-  name: string
-  description: string | null
-  isActive: boolean
-  createdAt: Date
-  updatedAt: Date
+  nombre: string
+  descripcion: string | null
+  estaActivo: boolean
+  creadoEn: Date
+  actualizadoEn: Date
   _count: SpeciesCountAggregateOutputType | null
   _min: SpeciesMinAggregateOutputType | null
   _max: SpeciesMaxAggregateOutputType | null
@@ -185,47 +185,47 @@ export type SpeciesWhereInput = {
   OR?: Prisma.SpeciesWhereInput[]
   NOT?: Prisma.SpeciesWhereInput | Prisma.SpeciesWhereInput[]
   id?: Prisma.UuidFilter<"Species"> | string
-  name?: Prisma.StringFilter<"Species"> | string
-  description?: Prisma.StringNullableFilter<"Species"> | string | null
-  isActive?: Prisma.BoolFilter<"Species"> | boolean
-  createdAt?: Prisma.DateTimeFilter<"Species"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"Species"> | Date | string
-  breeds?: Prisma.BreedListRelationFilter
-  patients?: Prisma.PatientListRelationFilter
+  nombre?: Prisma.StringFilter<"Species"> | string
+  descripcion?: Prisma.StringNullableFilter<"Species"> | string | null
+  estaActivo?: Prisma.BoolFilter<"Species"> | boolean
+  creadoEn?: Prisma.DateTimeFilter<"Species"> | Date | string
+  actualizadoEn?: Prisma.DateTimeFilter<"Species"> | Date | string
+  razas?: Prisma.BreedListRelationFilter
+  pacientes?: Prisma.PatientListRelationFilter
 }
 
 export type SpeciesOrderByWithRelationInput = {
   id?: Prisma.SortOrder
-  name?: Prisma.SortOrder
-  description?: Prisma.SortOrderInput | Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
-  breeds?: Prisma.BreedOrderByRelationAggregateInput
-  patients?: Prisma.PatientOrderByRelationAggregateInput
+  nombre?: Prisma.SortOrder
+  descripcion?: Prisma.SortOrderInput | Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
+  razas?: Prisma.BreedOrderByRelationAggregateInput
+  pacientes?: Prisma.PatientOrderByRelationAggregateInput
 }
 
 export type SpeciesWhereUniqueInput = Prisma.AtLeast<{
   id?: string
-  name?: string
+  nombre?: string
   AND?: Prisma.SpeciesWhereInput | Prisma.SpeciesWhereInput[]
   OR?: Prisma.SpeciesWhereInput[]
   NOT?: Prisma.SpeciesWhereInput | Prisma.SpeciesWhereInput[]
-  description?: Prisma.StringNullableFilter<"Species"> | string | null
-  isActive?: Prisma.BoolFilter<"Species"> | boolean
-  createdAt?: Prisma.DateTimeFilter<"Species"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"Species"> | Date | string
-  breeds?: Prisma.BreedListRelationFilter
-  patients?: Prisma.PatientListRelationFilter
-}, "id" | "name">
+  descripcion?: Prisma.StringNullableFilter<"Species"> | string | null
+  estaActivo?: Prisma.BoolFilter<"Species"> | boolean
+  creadoEn?: Prisma.DateTimeFilter<"Species"> | Date | string
+  actualizadoEn?: Prisma.DateTimeFilter<"Species"> | Date | string
+  razas?: Prisma.BreedListRelationFilter
+  pacientes?: Prisma.PatientListRelationFilter
+}, "id" | "nombre">
 
 export type SpeciesOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
-  name?: Prisma.SortOrder
-  description?: Prisma.SortOrderInput | Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  nombre?: Prisma.SortOrder
+  descripcion?: Prisma.SortOrderInput | Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
   _count?: Prisma.SpeciesCountOrderByAggregateInput
   _max?: Prisma.SpeciesMaxOrderByAggregateInput
   _min?: Prisma.SpeciesMinOrderByAggregateInput
@@ -236,109 +236,109 @@ export type SpeciesScalarWhereWithAggregatesInput = {
   OR?: Prisma.SpeciesScalarWhereWithAggregatesInput[]
   NOT?: Prisma.SpeciesScalarWhereWithAggregatesInput | Prisma.SpeciesScalarWhereWithAggregatesInput[]
   id?: Prisma.UuidWithAggregatesFilter<"Species"> | string
-  name?: Prisma.StringWithAggregatesFilter<"Species"> | string
-  description?: Prisma.StringNullableWithAggregatesFilter<"Species"> | string | null
-  isActive?: Prisma.BoolWithAggregatesFilter<"Species"> | boolean
-  createdAt?: Prisma.DateTimeWithAggregatesFilter<"Species"> | Date | string
-  updatedAt?: Prisma.DateTimeWithAggregatesFilter<"Species"> | Date | string
+  nombre?: Prisma.StringWithAggregatesFilter<"Species"> | string
+  descripcion?: Prisma.StringNullableWithAggregatesFilter<"Species"> | string | null
+  estaActivo?: Prisma.BoolWithAggregatesFilter<"Species"> | boolean
+  creadoEn?: Prisma.DateTimeWithAggregatesFilter<"Species"> | Date | string
+  actualizadoEn?: Prisma.DateTimeWithAggregatesFilter<"Species"> | Date | string
 }
 
 export type SpeciesCreateInput = {
   id?: string
-  name: string
-  description?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  breeds?: Prisma.BreedCreateNestedManyWithoutSpeciesInput
-  patients?: Prisma.PatientCreateNestedManyWithoutSpeciesInput
+  nombre: string
+  descripcion?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  razas?: Prisma.BreedCreateNestedManyWithoutEspecieInput
+  pacientes?: Prisma.PatientCreateNestedManyWithoutEspecieInput
 }
 
 export type SpeciesUncheckedCreateInput = {
   id?: string
-  name: string
-  description?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  breeds?: Prisma.BreedUncheckedCreateNestedManyWithoutSpeciesInput
-  patients?: Prisma.PatientUncheckedCreateNestedManyWithoutSpeciesInput
+  nombre: string
+  descripcion?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  razas?: Prisma.BreedUncheckedCreateNestedManyWithoutEspecieInput
+  pacientes?: Prisma.PatientUncheckedCreateNestedManyWithoutEspecieInput
 }
 
 export type SpeciesUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  breeds?: Prisma.BreedUpdateManyWithoutSpeciesNestedInput
-  patients?: Prisma.PatientUpdateManyWithoutSpeciesNestedInput
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  descripcion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  razas?: Prisma.BreedUpdateManyWithoutEspecieNestedInput
+  pacientes?: Prisma.PatientUpdateManyWithoutEspecieNestedInput
 }
 
 export type SpeciesUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  breeds?: Prisma.BreedUncheckedUpdateManyWithoutSpeciesNestedInput
-  patients?: Prisma.PatientUncheckedUpdateManyWithoutSpeciesNestedInput
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  descripcion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  razas?: Prisma.BreedUncheckedUpdateManyWithoutEspecieNestedInput
+  pacientes?: Prisma.PatientUncheckedUpdateManyWithoutEspecieNestedInput
 }
 
 export type SpeciesCreateManyInput = {
   id?: string
-  name: string
-  description?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
+  nombre: string
+  descripcion?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
 }
 
 export type SpeciesUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  descripcion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type SpeciesUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  descripcion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type SpeciesCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  name?: Prisma.SortOrder
-  description?: Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  nombre?: Prisma.SortOrder
+  descripcion?: Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
 }
 
 export type SpeciesMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  name?: Prisma.SortOrder
-  description?: Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  nombre?: Prisma.SortOrder
+  descripcion?: Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
 }
 
 export type SpeciesMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  name?: Prisma.SortOrder
-  description?: Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  nombre?: Prisma.SortOrder
+  descripcion?: Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
 }
 
 export type SpeciesScalarRelationFilter = {
@@ -346,144 +346,144 @@ export type SpeciesScalarRelationFilter = {
   isNot?: Prisma.SpeciesWhereInput
 }
 
-export type SpeciesCreateNestedOneWithoutBreedsInput = {
-  create?: Prisma.XOR<Prisma.SpeciesCreateWithoutBreedsInput, Prisma.SpeciesUncheckedCreateWithoutBreedsInput>
-  connectOrCreate?: Prisma.SpeciesCreateOrConnectWithoutBreedsInput
+export type SpeciesCreateNestedOneWithoutRazasInput = {
+  create?: Prisma.XOR<Prisma.SpeciesCreateWithoutRazasInput, Prisma.SpeciesUncheckedCreateWithoutRazasInput>
+  connectOrCreate?: Prisma.SpeciesCreateOrConnectWithoutRazasInput
   connect?: Prisma.SpeciesWhereUniqueInput
 }
 
-export type SpeciesUpdateOneRequiredWithoutBreedsNestedInput = {
-  create?: Prisma.XOR<Prisma.SpeciesCreateWithoutBreedsInput, Prisma.SpeciesUncheckedCreateWithoutBreedsInput>
-  connectOrCreate?: Prisma.SpeciesCreateOrConnectWithoutBreedsInput
-  upsert?: Prisma.SpeciesUpsertWithoutBreedsInput
+export type SpeciesUpdateOneRequiredWithoutRazasNestedInput = {
+  create?: Prisma.XOR<Prisma.SpeciesCreateWithoutRazasInput, Prisma.SpeciesUncheckedCreateWithoutRazasInput>
+  connectOrCreate?: Prisma.SpeciesCreateOrConnectWithoutRazasInput
+  upsert?: Prisma.SpeciesUpsertWithoutRazasInput
   connect?: Prisma.SpeciesWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.SpeciesUpdateToOneWithWhereWithoutBreedsInput, Prisma.SpeciesUpdateWithoutBreedsInput>, Prisma.SpeciesUncheckedUpdateWithoutBreedsInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.SpeciesUpdateToOneWithWhereWithoutRazasInput, Prisma.SpeciesUpdateWithoutRazasInput>, Prisma.SpeciesUncheckedUpdateWithoutRazasInput>
 }
 
-export type SpeciesCreateNestedOneWithoutPatientsInput = {
-  create?: Prisma.XOR<Prisma.SpeciesCreateWithoutPatientsInput, Prisma.SpeciesUncheckedCreateWithoutPatientsInput>
-  connectOrCreate?: Prisma.SpeciesCreateOrConnectWithoutPatientsInput
+export type SpeciesCreateNestedOneWithoutPacientesInput = {
+  create?: Prisma.XOR<Prisma.SpeciesCreateWithoutPacientesInput, Prisma.SpeciesUncheckedCreateWithoutPacientesInput>
+  connectOrCreate?: Prisma.SpeciesCreateOrConnectWithoutPacientesInput
   connect?: Prisma.SpeciesWhereUniqueInput
 }
 
-export type SpeciesUpdateOneRequiredWithoutPatientsNestedInput = {
-  create?: Prisma.XOR<Prisma.SpeciesCreateWithoutPatientsInput, Prisma.SpeciesUncheckedCreateWithoutPatientsInput>
-  connectOrCreate?: Prisma.SpeciesCreateOrConnectWithoutPatientsInput
-  upsert?: Prisma.SpeciesUpsertWithoutPatientsInput
+export type SpeciesUpdateOneRequiredWithoutPacientesNestedInput = {
+  create?: Prisma.XOR<Prisma.SpeciesCreateWithoutPacientesInput, Prisma.SpeciesUncheckedCreateWithoutPacientesInput>
+  connectOrCreate?: Prisma.SpeciesCreateOrConnectWithoutPacientesInput
+  upsert?: Prisma.SpeciesUpsertWithoutPacientesInput
   connect?: Prisma.SpeciesWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.SpeciesUpdateToOneWithWhereWithoutPatientsInput, Prisma.SpeciesUpdateWithoutPatientsInput>, Prisma.SpeciesUncheckedUpdateWithoutPatientsInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.SpeciesUpdateToOneWithWhereWithoutPacientesInput, Prisma.SpeciesUpdateWithoutPacientesInput>, Prisma.SpeciesUncheckedUpdateWithoutPacientesInput>
 }
 
-export type SpeciesCreateWithoutBreedsInput = {
+export type SpeciesCreateWithoutRazasInput = {
   id?: string
-  name: string
-  description?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  patients?: Prisma.PatientCreateNestedManyWithoutSpeciesInput
+  nombre: string
+  descripcion?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  pacientes?: Prisma.PatientCreateNestedManyWithoutEspecieInput
 }
 
-export type SpeciesUncheckedCreateWithoutBreedsInput = {
+export type SpeciesUncheckedCreateWithoutRazasInput = {
   id?: string
-  name: string
-  description?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  patients?: Prisma.PatientUncheckedCreateNestedManyWithoutSpeciesInput
+  nombre: string
+  descripcion?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  pacientes?: Prisma.PatientUncheckedCreateNestedManyWithoutEspecieInput
 }
 
-export type SpeciesCreateOrConnectWithoutBreedsInput = {
+export type SpeciesCreateOrConnectWithoutRazasInput = {
   where: Prisma.SpeciesWhereUniqueInput
-  create: Prisma.XOR<Prisma.SpeciesCreateWithoutBreedsInput, Prisma.SpeciesUncheckedCreateWithoutBreedsInput>
+  create: Prisma.XOR<Prisma.SpeciesCreateWithoutRazasInput, Prisma.SpeciesUncheckedCreateWithoutRazasInput>
 }
 
-export type SpeciesUpsertWithoutBreedsInput = {
-  update: Prisma.XOR<Prisma.SpeciesUpdateWithoutBreedsInput, Prisma.SpeciesUncheckedUpdateWithoutBreedsInput>
-  create: Prisma.XOR<Prisma.SpeciesCreateWithoutBreedsInput, Prisma.SpeciesUncheckedCreateWithoutBreedsInput>
+export type SpeciesUpsertWithoutRazasInput = {
+  update: Prisma.XOR<Prisma.SpeciesUpdateWithoutRazasInput, Prisma.SpeciesUncheckedUpdateWithoutRazasInput>
+  create: Prisma.XOR<Prisma.SpeciesCreateWithoutRazasInput, Prisma.SpeciesUncheckedCreateWithoutRazasInput>
   where?: Prisma.SpeciesWhereInput
 }
 
-export type SpeciesUpdateToOneWithWhereWithoutBreedsInput = {
+export type SpeciesUpdateToOneWithWhereWithoutRazasInput = {
   where?: Prisma.SpeciesWhereInput
-  data: Prisma.XOR<Prisma.SpeciesUpdateWithoutBreedsInput, Prisma.SpeciesUncheckedUpdateWithoutBreedsInput>
+  data: Prisma.XOR<Prisma.SpeciesUpdateWithoutRazasInput, Prisma.SpeciesUncheckedUpdateWithoutRazasInput>
 }
 
-export type SpeciesUpdateWithoutBreedsInput = {
+export type SpeciesUpdateWithoutRazasInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  patients?: Prisma.PatientUpdateManyWithoutSpeciesNestedInput
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  descripcion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pacientes?: Prisma.PatientUpdateManyWithoutEspecieNestedInput
 }
 
-export type SpeciesUncheckedUpdateWithoutBreedsInput = {
+export type SpeciesUncheckedUpdateWithoutRazasInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  patients?: Prisma.PatientUncheckedUpdateManyWithoutSpeciesNestedInput
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  descripcion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pacientes?: Prisma.PatientUncheckedUpdateManyWithoutEspecieNestedInput
 }
 
-export type SpeciesCreateWithoutPatientsInput = {
+export type SpeciesCreateWithoutPacientesInput = {
   id?: string
-  name: string
-  description?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  breeds?: Prisma.BreedCreateNestedManyWithoutSpeciesInput
+  nombre: string
+  descripcion?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  razas?: Prisma.BreedCreateNestedManyWithoutEspecieInput
 }
 
-export type SpeciesUncheckedCreateWithoutPatientsInput = {
+export type SpeciesUncheckedCreateWithoutPacientesInput = {
   id?: string
-  name: string
-  description?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  breeds?: Prisma.BreedUncheckedCreateNestedManyWithoutSpeciesInput
+  nombre: string
+  descripcion?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  razas?: Prisma.BreedUncheckedCreateNestedManyWithoutEspecieInput
 }
 
-export type SpeciesCreateOrConnectWithoutPatientsInput = {
+export type SpeciesCreateOrConnectWithoutPacientesInput = {
   where: Prisma.SpeciesWhereUniqueInput
-  create: Prisma.XOR<Prisma.SpeciesCreateWithoutPatientsInput, Prisma.SpeciesUncheckedCreateWithoutPatientsInput>
+  create: Prisma.XOR<Prisma.SpeciesCreateWithoutPacientesInput, Prisma.SpeciesUncheckedCreateWithoutPacientesInput>
 }
 
-export type SpeciesUpsertWithoutPatientsInput = {
-  update: Prisma.XOR<Prisma.SpeciesUpdateWithoutPatientsInput, Prisma.SpeciesUncheckedUpdateWithoutPatientsInput>
-  create: Prisma.XOR<Prisma.SpeciesCreateWithoutPatientsInput, Prisma.SpeciesUncheckedCreateWithoutPatientsInput>
+export type SpeciesUpsertWithoutPacientesInput = {
+  update: Prisma.XOR<Prisma.SpeciesUpdateWithoutPacientesInput, Prisma.SpeciesUncheckedUpdateWithoutPacientesInput>
+  create: Prisma.XOR<Prisma.SpeciesCreateWithoutPacientesInput, Prisma.SpeciesUncheckedCreateWithoutPacientesInput>
   where?: Prisma.SpeciesWhereInput
 }
 
-export type SpeciesUpdateToOneWithWhereWithoutPatientsInput = {
+export type SpeciesUpdateToOneWithWhereWithoutPacientesInput = {
   where?: Prisma.SpeciesWhereInput
-  data: Prisma.XOR<Prisma.SpeciesUpdateWithoutPatientsInput, Prisma.SpeciesUncheckedUpdateWithoutPatientsInput>
+  data: Prisma.XOR<Prisma.SpeciesUpdateWithoutPacientesInput, Prisma.SpeciesUncheckedUpdateWithoutPacientesInput>
 }
 
-export type SpeciesUpdateWithoutPatientsInput = {
+export type SpeciesUpdateWithoutPacientesInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  breeds?: Prisma.BreedUpdateManyWithoutSpeciesNestedInput
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  descripcion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  razas?: Prisma.BreedUpdateManyWithoutEspecieNestedInput
 }
 
-export type SpeciesUncheckedUpdateWithoutPatientsInput = {
+export type SpeciesUncheckedUpdateWithoutPacientesInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  breeds?: Prisma.BreedUncheckedUpdateManyWithoutSpeciesNestedInput
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  descripcion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  razas?: Prisma.BreedUncheckedUpdateManyWithoutEspecieNestedInput
 }
 
 
@@ -492,13 +492,13 @@ export type SpeciesUncheckedUpdateWithoutPatientsInput = {
  */
 
 export type SpeciesCountOutputType = {
-  breeds: number
-  patients: number
+  razas: number
+  pacientes: number
 }
 
 export type SpeciesCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  breeds?: boolean | SpeciesCountOutputTypeCountBreedsArgs
-  patients?: boolean | SpeciesCountOutputTypeCountPatientsArgs
+  razas?: boolean | SpeciesCountOutputTypeCountRazasArgs
+  pacientes?: boolean | SpeciesCountOutputTypeCountPacientesArgs
 }
 
 /**
@@ -514,61 +514,61 @@ export type SpeciesCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.Exte
 /**
  * SpeciesCountOutputType without action
  */
-export type SpeciesCountOutputTypeCountBreedsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type SpeciesCountOutputTypeCountRazasArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.BreedWhereInput
 }
 
 /**
  * SpeciesCountOutputType without action
  */
-export type SpeciesCountOutputTypeCountPatientsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type SpeciesCountOutputTypeCountPacientesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.PatientWhereInput
 }
 
 
 export type SpeciesSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  name?: boolean
-  description?: boolean
-  isActive?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
-  breeds?: boolean | Prisma.Species$breedsArgs<ExtArgs>
-  patients?: boolean | Prisma.Species$patientsArgs<ExtArgs>
+  nombre?: boolean
+  descripcion?: boolean
+  estaActivo?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
+  razas?: boolean | Prisma.Species$razasArgs<ExtArgs>
+  pacientes?: boolean | Prisma.Species$pacientesArgs<ExtArgs>
   _count?: boolean | Prisma.SpeciesCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["species"]>
 
 export type SpeciesSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  name?: boolean
-  description?: boolean
-  isActive?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
+  nombre?: boolean
+  descripcion?: boolean
+  estaActivo?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
 }, ExtArgs["result"]["species"]>
 
 export type SpeciesSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  name?: boolean
-  description?: boolean
-  isActive?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
+  nombre?: boolean
+  descripcion?: boolean
+  estaActivo?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
 }, ExtArgs["result"]["species"]>
 
 export type SpeciesSelectScalar = {
   id?: boolean
-  name?: boolean
-  description?: boolean
-  isActive?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
+  nombre?: boolean
+  descripcion?: boolean
+  estaActivo?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
 }
 
-export type SpeciesOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "description" | "isActive" | "createdAt" | "updatedAt", ExtArgs["result"]["species"]>
+export type SpeciesOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "nombre" | "descripcion" | "estaActivo" | "creadoEn" | "actualizadoEn", ExtArgs["result"]["species"]>
 export type SpeciesInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  breeds?: boolean | Prisma.Species$breedsArgs<ExtArgs>
-  patients?: boolean | Prisma.Species$patientsArgs<ExtArgs>
+  razas?: boolean | Prisma.Species$razasArgs<ExtArgs>
+  pacientes?: boolean | Prisma.Species$pacientesArgs<ExtArgs>
   _count?: boolean | Prisma.SpeciesCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type SpeciesIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {}
@@ -577,16 +577,16 @@ export type SpeciesIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Exte
 export type $SpeciesPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Species"
   objects: {
-    breeds: Prisma.$BreedPayload<ExtArgs>[]
-    patients: Prisma.$PatientPayload<ExtArgs>[]
+    razas: Prisma.$BreedPayload<ExtArgs>[]
+    pacientes: Prisma.$PatientPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
-    name: string
-    description: string | null
-    isActive: boolean
-    createdAt: Date
-    updatedAt: Date
+    nombre: string
+    descripcion: string | null
+    estaActivo: boolean
+    creadoEn: Date
+    actualizadoEn: Date
   }, ExtArgs["result"]["species"]>
   composites: {}
 }
@@ -981,8 +981,8 @@ readonly fields: SpeciesFieldRefs;
  */
 export interface Prisma__SpeciesClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  breeds<T extends Prisma.Species$breedsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Species$breedsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$BreedPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  patients<T extends Prisma.Species$patientsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Species$patientsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$PatientPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  razas<T extends Prisma.Species$razasArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Species$razasArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$BreedPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  pacientes<T extends Prisma.Species$pacientesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Species$pacientesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$PatientPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1013,11 +1013,11 @@ export interface Prisma__SpeciesClient<T, Null = never, ExtArgs extends runtime.
  */
 export interface SpeciesFieldRefs {
   readonly id: Prisma.FieldRef<"Species", 'String'>
-  readonly name: Prisma.FieldRef<"Species", 'String'>
-  readonly description: Prisma.FieldRef<"Species", 'String'>
-  readonly isActive: Prisma.FieldRef<"Species", 'Boolean'>
-  readonly createdAt: Prisma.FieldRef<"Species", 'DateTime'>
-  readonly updatedAt: Prisma.FieldRef<"Species", 'DateTime'>
+  readonly nombre: Prisma.FieldRef<"Species", 'String'>
+  readonly descripcion: Prisma.FieldRef<"Species", 'String'>
+  readonly estaActivo: Prisma.FieldRef<"Species", 'Boolean'>
+  readonly creadoEn: Prisma.FieldRef<"Species", 'DateTime'>
+  readonly actualizadoEn: Prisma.FieldRef<"Species", 'DateTime'>
 }
     
 
@@ -1406,9 +1406,9 @@ export type SpeciesDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.Inter
 }
 
 /**
- * Species.breeds
+ * Species.razas
  */
-export type Species$breedsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Species$razasArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Breed
    */
@@ -1430,9 +1430,9 @@ export type Species$breedsArgs<ExtArgs extends runtime.Types.Extensions.Internal
 }
 
 /**
- * Species.patients
+ * Species.pacientes
  */
-export type Species$patientsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Species$pacientesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Patient
    */

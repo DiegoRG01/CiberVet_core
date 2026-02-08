@@ -27,153 +27,153 @@ export type AggregateAppointment = {
 }
 
 export type AppointmentAvgAggregateOutputType = {
-  durationMinutes: number | null
+  duracionMinutos: number | null
 }
 
 export type AppointmentSumAggregateOutputType = {
-  durationMinutes: number | null
+  duracionMinutos: number | null
 }
 
 export type AppointmentMinAggregateOutputType = {
   id: string | null
-  patientId: string | null
-  ownerId: string | null
-  veterinaryId: string | null
-  operatorId: string | null
-  dateTime: Date | null
-  durationMinutes: number | null
-  status: $Enums.AppointmentStatus | null
-  appointmentType: string | null
-  reason: string | null
-  notes: string | null
-  googleCalendarEventId: string | null
-  reminderSent: boolean | null
-  reminderSentAt: Date | null
-  cancelledAt: Date | null
-  cancellationReason: string | null
-  createdBy: string | null
-  createdAt: Date | null
-  updatedAt: Date | null
+  pacienteId: string | null
+  propietarioId: string | null
+  veterinariaId: string | null
+  operadorId: string | null
+  fechaHora: Date | null
+  duracionMinutos: number | null
+  estado: $Enums.AppointmentStatus | null
+  tipoCita: string | null
+  motivo: string | null
+  notas: string | null
+  idEventoGoogleCalendar: string | null
+  recordatorioEnviado: boolean | null
+  recordatorioEnviadoEn: Date | null
+  canceladoEn: Date | null
+  motivoCancelacion: string | null
+  creadoPor: string | null
+  creadoEn: Date | null
+  actualizadoEn: Date | null
 }
 
 export type AppointmentMaxAggregateOutputType = {
   id: string | null
-  patientId: string | null
-  ownerId: string | null
-  veterinaryId: string | null
-  operatorId: string | null
-  dateTime: Date | null
-  durationMinutes: number | null
-  status: $Enums.AppointmentStatus | null
-  appointmentType: string | null
-  reason: string | null
-  notes: string | null
-  googleCalendarEventId: string | null
-  reminderSent: boolean | null
-  reminderSentAt: Date | null
-  cancelledAt: Date | null
-  cancellationReason: string | null
-  createdBy: string | null
-  createdAt: Date | null
-  updatedAt: Date | null
+  pacienteId: string | null
+  propietarioId: string | null
+  veterinariaId: string | null
+  operadorId: string | null
+  fechaHora: Date | null
+  duracionMinutos: number | null
+  estado: $Enums.AppointmentStatus | null
+  tipoCita: string | null
+  motivo: string | null
+  notas: string | null
+  idEventoGoogleCalendar: string | null
+  recordatorioEnviado: boolean | null
+  recordatorioEnviadoEn: Date | null
+  canceladoEn: Date | null
+  motivoCancelacion: string | null
+  creadoPor: string | null
+  creadoEn: Date | null
+  actualizadoEn: Date | null
 }
 
 export type AppointmentCountAggregateOutputType = {
   id: number
-  patientId: number
-  ownerId: number
-  veterinaryId: number
-  operatorId: number
-  dateTime: number
-  durationMinutes: number
-  status: number
-  appointmentType: number
-  reason: number
-  notes: number
-  googleCalendarEventId: number
-  reminderSent: number
-  reminderSentAt: number
-  cancelledAt: number
-  cancellationReason: number
-  createdBy: number
-  createdAt: number
-  updatedAt: number
+  pacienteId: number
+  propietarioId: number
+  veterinariaId: number
+  operadorId: number
+  fechaHora: number
+  duracionMinutos: number
+  estado: number
+  tipoCita: number
+  motivo: number
+  notas: number
+  idEventoGoogleCalendar: number
+  recordatorioEnviado: number
+  recordatorioEnviadoEn: number
+  canceladoEn: number
+  motivoCancelacion: number
+  creadoPor: number
+  creadoEn: number
+  actualizadoEn: number
   _all: number
 }
 
 
 export type AppointmentAvgAggregateInputType = {
-  durationMinutes?: true
+  duracionMinutos?: true
 }
 
 export type AppointmentSumAggregateInputType = {
-  durationMinutes?: true
+  duracionMinutos?: true
 }
 
 export type AppointmentMinAggregateInputType = {
   id?: true
-  patientId?: true
-  ownerId?: true
-  veterinaryId?: true
-  operatorId?: true
-  dateTime?: true
-  durationMinutes?: true
-  status?: true
-  appointmentType?: true
-  reason?: true
-  notes?: true
-  googleCalendarEventId?: true
-  reminderSent?: true
-  reminderSentAt?: true
-  cancelledAt?: true
-  cancellationReason?: true
-  createdBy?: true
-  createdAt?: true
-  updatedAt?: true
+  pacienteId?: true
+  propietarioId?: true
+  veterinariaId?: true
+  operadorId?: true
+  fechaHora?: true
+  duracionMinutos?: true
+  estado?: true
+  tipoCita?: true
+  motivo?: true
+  notas?: true
+  idEventoGoogleCalendar?: true
+  recordatorioEnviado?: true
+  recordatorioEnviadoEn?: true
+  canceladoEn?: true
+  motivoCancelacion?: true
+  creadoPor?: true
+  creadoEn?: true
+  actualizadoEn?: true
 }
 
 export type AppointmentMaxAggregateInputType = {
   id?: true
-  patientId?: true
-  ownerId?: true
-  veterinaryId?: true
-  operatorId?: true
-  dateTime?: true
-  durationMinutes?: true
-  status?: true
-  appointmentType?: true
-  reason?: true
-  notes?: true
-  googleCalendarEventId?: true
-  reminderSent?: true
-  reminderSentAt?: true
-  cancelledAt?: true
-  cancellationReason?: true
-  createdBy?: true
-  createdAt?: true
-  updatedAt?: true
+  pacienteId?: true
+  propietarioId?: true
+  veterinariaId?: true
+  operadorId?: true
+  fechaHora?: true
+  duracionMinutos?: true
+  estado?: true
+  tipoCita?: true
+  motivo?: true
+  notas?: true
+  idEventoGoogleCalendar?: true
+  recordatorioEnviado?: true
+  recordatorioEnviadoEn?: true
+  canceladoEn?: true
+  motivoCancelacion?: true
+  creadoPor?: true
+  creadoEn?: true
+  actualizadoEn?: true
 }
 
 export type AppointmentCountAggregateInputType = {
   id?: true
-  patientId?: true
-  ownerId?: true
-  veterinaryId?: true
-  operatorId?: true
-  dateTime?: true
-  durationMinutes?: true
-  status?: true
-  appointmentType?: true
-  reason?: true
-  notes?: true
-  googleCalendarEventId?: true
-  reminderSent?: true
-  reminderSentAt?: true
-  cancelledAt?: true
-  cancellationReason?: true
-  createdBy?: true
-  createdAt?: true
-  updatedAt?: true
+  pacienteId?: true
+  propietarioId?: true
+  veterinariaId?: true
+  operadorId?: true
+  fechaHora?: true
+  duracionMinutos?: true
+  estado?: true
+  tipoCita?: true
+  motivo?: true
+  notas?: true
+  idEventoGoogleCalendar?: true
+  recordatorioEnviado?: true
+  recordatorioEnviadoEn?: true
+  canceladoEn?: true
+  motivoCancelacion?: true
+  creadoPor?: true
+  creadoEn?: true
+  actualizadoEn?: true
   _all?: true
 }
 
@@ -265,24 +265,24 @@ export type AppointmentGroupByArgs<ExtArgs extends runtime.Types.Extensions.Inte
 
 export type AppointmentGroupByOutputType = {
   id: string
-  patientId: string
-  ownerId: string | null
-  veterinaryId: string | null
-  operatorId: string | null
-  dateTime: Date
-  durationMinutes: number
-  status: $Enums.AppointmentStatus
-  appointmentType: string | null
-  reason: string
-  notes: string | null
-  googleCalendarEventId: string | null
-  reminderSent: boolean
-  reminderSentAt: Date | null
-  cancelledAt: Date | null
-  cancellationReason: string | null
-  createdBy: string | null
-  createdAt: Date
-  updatedAt: Date
+  pacienteId: string
+  propietarioId: string | null
+  veterinariaId: string | null
+  operadorId: string | null
+  fechaHora: Date
+  duracionMinutos: number
+  estado: $Enums.AppointmentStatus
+  tipoCita: string | null
+  motivo: string
+  notas: string | null
+  idEventoGoogleCalendar: string | null
+  recordatorioEnviado: boolean
+  recordatorioEnviadoEn: Date | null
+  canceladoEn: Date | null
+  motivoCancelacion: string | null
+  creadoPor: string | null
+  creadoEn: Date
+  actualizadoEn: Date
   _count: AppointmentCountAggregateOutputType | null
   _avg: AppointmentAvgAggregateOutputType | null
   _sum: AppointmentSumAggregateOutputType | null
@@ -310,62 +310,62 @@ export type AppointmentWhereInput = {
   OR?: Prisma.AppointmentWhereInput[]
   NOT?: Prisma.AppointmentWhereInput | Prisma.AppointmentWhereInput[]
   id?: Prisma.UuidFilter<"Appointment"> | string
-  patientId?: Prisma.UuidFilter<"Appointment"> | string
-  ownerId?: Prisma.UuidNullableFilter<"Appointment"> | string | null
-  veterinaryId?: Prisma.UuidNullableFilter<"Appointment"> | string | null
-  operatorId?: Prisma.UuidNullableFilter<"Appointment"> | string | null
-  dateTime?: Prisma.DateTimeFilter<"Appointment"> | Date | string
-  durationMinutes?: Prisma.IntFilter<"Appointment"> | number
-  status?: Prisma.EnumAppointmentStatusFilter<"Appointment"> | $Enums.AppointmentStatus
-  appointmentType?: Prisma.StringNullableFilter<"Appointment"> | string | null
-  reason?: Prisma.StringFilter<"Appointment"> | string
-  notes?: Prisma.StringNullableFilter<"Appointment"> | string | null
-  googleCalendarEventId?: Prisma.StringNullableFilter<"Appointment"> | string | null
-  reminderSent?: Prisma.BoolFilter<"Appointment"> | boolean
-  reminderSentAt?: Prisma.DateTimeNullableFilter<"Appointment"> | Date | string | null
-  cancelledAt?: Prisma.DateTimeNullableFilter<"Appointment"> | Date | string | null
-  cancellationReason?: Prisma.StringNullableFilter<"Appointment"> | string | null
-  createdBy?: Prisma.UuidNullableFilter<"Appointment"> | string | null
-  createdAt?: Prisma.DateTimeFilter<"Appointment"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"Appointment"> | Date | string
-  patient?: Prisma.XOR<Prisma.PatientScalarRelationFilter, Prisma.PatientWhereInput>
-  owner?: Prisma.XOR<Prisma.OwnerNullableScalarRelationFilter, Prisma.OwnerWhereInput> | null
-  veterinary?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
-  operator?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
-  creator?: Prisma.XOR<Prisma.UserNullableScalarRelationFilter, Prisma.UserWhereInput> | null
-  procedures?: Prisma.ProcedureListRelationFilter
-  clinicalRecords?: Prisma.ClinicalRecordListRelationFilter
-  emailReminders?: Prisma.EmailReminderListRelationFilter
+  pacienteId?: Prisma.UuidFilter<"Appointment"> | string
+  propietarioId?: Prisma.UuidNullableFilter<"Appointment"> | string | null
+  veterinariaId?: Prisma.UuidNullableFilter<"Appointment"> | string | null
+  operadorId?: Prisma.UuidNullableFilter<"Appointment"> | string | null
+  fechaHora?: Prisma.DateTimeFilter<"Appointment"> | Date | string
+  duracionMinutos?: Prisma.IntFilter<"Appointment"> | number
+  estado?: Prisma.EnumAppointmentStatusFilter<"Appointment"> | $Enums.AppointmentStatus
+  tipoCita?: Prisma.StringNullableFilter<"Appointment"> | string | null
+  motivo?: Prisma.StringFilter<"Appointment"> | string
+  notas?: Prisma.StringNullableFilter<"Appointment"> | string | null
+  idEventoGoogleCalendar?: Prisma.StringNullableFilter<"Appointment"> | string | null
+  recordatorioEnviado?: Prisma.BoolFilter<"Appointment"> | boolean
+  recordatorioEnviadoEn?: Prisma.DateTimeNullableFilter<"Appointment"> | Date | string | null
+  canceladoEn?: Prisma.DateTimeNullableFilter<"Appointment"> | Date | string | null
+  motivoCancelacion?: Prisma.StringNullableFilter<"Appointment"> | string | null
+  creadoPor?: Prisma.UuidNullableFilter<"Appointment"> | string | null
+  creadoEn?: Prisma.DateTimeFilter<"Appointment"> | Date | string
+  actualizadoEn?: Prisma.DateTimeFilter<"Appointment"> | Date | string
+  paciente?: Prisma.XOR<Prisma.PatientScalarRelationFilter, Prisma.PatientWhereInput>
+  propietario?: Prisma.XOR<Prisma.OwnerNullableScalarRelationFilter, Prisma.OwnerWhereInput> | null
+  veterinaria?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
+  operador?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
+  creador?: Prisma.XOR<Prisma.UserNullableScalarRelationFilter, Prisma.UserWhereInput> | null
+  procedimientos?: Prisma.ProcedureListRelationFilter
+  registrosClinico?: Prisma.ClinicalRecordListRelationFilter
+  recordatoriosCorreo?: Prisma.EmailReminderListRelationFilter
 }
 
 export type AppointmentOrderByWithRelationInput = {
   id?: Prisma.SortOrder
-  patientId?: Prisma.SortOrder
-  ownerId?: Prisma.SortOrderInput | Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrderInput | Prisma.SortOrder
-  operatorId?: Prisma.SortOrderInput | Prisma.SortOrder
-  dateTime?: Prisma.SortOrder
-  durationMinutes?: Prisma.SortOrder
-  status?: Prisma.SortOrder
-  appointmentType?: Prisma.SortOrderInput | Prisma.SortOrder
-  reason?: Prisma.SortOrder
-  notes?: Prisma.SortOrderInput | Prisma.SortOrder
-  googleCalendarEventId?: Prisma.SortOrderInput | Prisma.SortOrder
-  reminderSent?: Prisma.SortOrder
-  reminderSentAt?: Prisma.SortOrderInput | Prisma.SortOrder
-  cancelledAt?: Prisma.SortOrderInput | Prisma.SortOrder
-  cancellationReason?: Prisma.SortOrderInput | Prisma.SortOrder
-  createdBy?: Prisma.SortOrderInput | Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
-  patient?: Prisma.PatientOrderByWithRelationInput
-  owner?: Prisma.OwnerOrderByWithRelationInput
-  veterinary?: Prisma.VeterinaryOrderByWithRelationInput
-  operator?: Prisma.OperatorOrderByWithRelationInput
-  creator?: Prisma.UserOrderByWithRelationInput
-  procedures?: Prisma.ProcedureOrderByRelationAggregateInput
-  clinicalRecords?: Prisma.ClinicalRecordOrderByRelationAggregateInput
-  emailReminders?: Prisma.EmailReminderOrderByRelationAggregateInput
+  pacienteId?: Prisma.SortOrder
+  propietarioId?: Prisma.SortOrderInput | Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrderInput | Prisma.SortOrder
+  operadorId?: Prisma.SortOrderInput | Prisma.SortOrder
+  fechaHora?: Prisma.SortOrder
+  duracionMinutos?: Prisma.SortOrder
+  estado?: Prisma.SortOrder
+  tipoCita?: Prisma.SortOrderInput | Prisma.SortOrder
+  motivo?: Prisma.SortOrder
+  notas?: Prisma.SortOrderInput | Prisma.SortOrder
+  idEventoGoogleCalendar?: Prisma.SortOrderInput | Prisma.SortOrder
+  recordatorioEnviado?: Prisma.SortOrder
+  recordatorioEnviadoEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  canceladoEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  motivoCancelacion?: Prisma.SortOrderInput | Prisma.SortOrder
+  creadoPor?: Prisma.SortOrderInput | Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
+  paciente?: Prisma.PatientOrderByWithRelationInput
+  propietario?: Prisma.OwnerOrderByWithRelationInput
+  veterinaria?: Prisma.VeterinaryOrderByWithRelationInput
+  operador?: Prisma.OperatorOrderByWithRelationInput
+  creador?: Prisma.UserOrderByWithRelationInput
+  procedimientos?: Prisma.ProcedureOrderByRelationAggregateInput
+  registrosClinico?: Prisma.ClinicalRecordOrderByRelationAggregateInput
+  recordatoriosCorreo?: Prisma.EmailReminderOrderByRelationAggregateInput
 }
 
 export type AppointmentWhereUniqueInput = Prisma.AtLeast<{
@@ -373,54 +373,54 @@ export type AppointmentWhereUniqueInput = Prisma.AtLeast<{
   AND?: Prisma.AppointmentWhereInput | Prisma.AppointmentWhereInput[]
   OR?: Prisma.AppointmentWhereInput[]
   NOT?: Prisma.AppointmentWhereInput | Prisma.AppointmentWhereInput[]
-  patientId?: Prisma.UuidFilter<"Appointment"> | string
-  ownerId?: Prisma.UuidNullableFilter<"Appointment"> | string | null
-  veterinaryId?: Prisma.UuidNullableFilter<"Appointment"> | string | null
-  operatorId?: Prisma.UuidNullableFilter<"Appointment"> | string | null
-  dateTime?: Prisma.DateTimeFilter<"Appointment"> | Date | string
-  durationMinutes?: Prisma.IntFilter<"Appointment"> | number
-  status?: Prisma.EnumAppointmentStatusFilter<"Appointment"> | $Enums.AppointmentStatus
-  appointmentType?: Prisma.StringNullableFilter<"Appointment"> | string | null
-  reason?: Prisma.StringFilter<"Appointment"> | string
-  notes?: Prisma.StringNullableFilter<"Appointment"> | string | null
-  googleCalendarEventId?: Prisma.StringNullableFilter<"Appointment"> | string | null
-  reminderSent?: Prisma.BoolFilter<"Appointment"> | boolean
-  reminderSentAt?: Prisma.DateTimeNullableFilter<"Appointment"> | Date | string | null
-  cancelledAt?: Prisma.DateTimeNullableFilter<"Appointment"> | Date | string | null
-  cancellationReason?: Prisma.StringNullableFilter<"Appointment"> | string | null
-  createdBy?: Prisma.UuidNullableFilter<"Appointment"> | string | null
-  createdAt?: Prisma.DateTimeFilter<"Appointment"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"Appointment"> | Date | string
-  patient?: Prisma.XOR<Prisma.PatientScalarRelationFilter, Prisma.PatientWhereInput>
-  owner?: Prisma.XOR<Prisma.OwnerNullableScalarRelationFilter, Prisma.OwnerWhereInput> | null
-  veterinary?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
-  operator?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
-  creator?: Prisma.XOR<Prisma.UserNullableScalarRelationFilter, Prisma.UserWhereInput> | null
-  procedures?: Prisma.ProcedureListRelationFilter
-  clinicalRecords?: Prisma.ClinicalRecordListRelationFilter
-  emailReminders?: Prisma.EmailReminderListRelationFilter
+  pacienteId?: Prisma.UuidFilter<"Appointment"> | string
+  propietarioId?: Prisma.UuidNullableFilter<"Appointment"> | string | null
+  veterinariaId?: Prisma.UuidNullableFilter<"Appointment"> | string | null
+  operadorId?: Prisma.UuidNullableFilter<"Appointment"> | string | null
+  fechaHora?: Prisma.DateTimeFilter<"Appointment"> | Date | string
+  duracionMinutos?: Prisma.IntFilter<"Appointment"> | number
+  estado?: Prisma.EnumAppointmentStatusFilter<"Appointment"> | $Enums.AppointmentStatus
+  tipoCita?: Prisma.StringNullableFilter<"Appointment"> | string | null
+  motivo?: Prisma.StringFilter<"Appointment"> | string
+  notas?: Prisma.StringNullableFilter<"Appointment"> | string | null
+  idEventoGoogleCalendar?: Prisma.StringNullableFilter<"Appointment"> | string | null
+  recordatorioEnviado?: Prisma.BoolFilter<"Appointment"> | boolean
+  recordatorioEnviadoEn?: Prisma.DateTimeNullableFilter<"Appointment"> | Date | string | null
+  canceladoEn?: Prisma.DateTimeNullableFilter<"Appointment"> | Date | string | null
+  motivoCancelacion?: Prisma.StringNullableFilter<"Appointment"> | string | null
+  creadoPor?: Prisma.UuidNullableFilter<"Appointment"> | string | null
+  creadoEn?: Prisma.DateTimeFilter<"Appointment"> | Date | string
+  actualizadoEn?: Prisma.DateTimeFilter<"Appointment"> | Date | string
+  paciente?: Prisma.XOR<Prisma.PatientScalarRelationFilter, Prisma.PatientWhereInput>
+  propietario?: Prisma.XOR<Prisma.OwnerNullableScalarRelationFilter, Prisma.OwnerWhereInput> | null
+  veterinaria?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
+  operador?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
+  creador?: Prisma.XOR<Prisma.UserNullableScalarRelationFilter, Prisma.UserWhereInput> | null
+  procedimientos?: Prisma.ProcedureListRelationFilter
+  registrosClinico?: Prisma.ClinicalRecordListRelationFilter
+  recordatoriosCorreo?: Prisma.EmailReminderListRelationFilter
 }, "id">
 
 export type AppointmentOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
-  patientId?: Prisma.SortOrder
-  ownerId?: Prisma.SortOrderInput | Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrderInput | Prisma.SortOrder
-  operatorId?: Prisma.SortOrderInput | Prisma.SortOrder
-  dateTime?: Prisma.SortOrder
-  durationMinutes?: Prisma.SortOrder
-  status?: Prisma.SortOrder
-  appointmentType?: Prisma.SortOrderInput | Prisma.SortOrder
-  reason?: Prisma.SortOrder
-  notes?: Prisma.SortOrderInput | Prisma.SortOrder
-  googleCalendarEventId?: Prisma.SortOrderInput | Prisma.SortOrder
-  reminderSent?: Prisma.SortOrder
-  reminderSentAt?: Prisma.SortOrderInput | Prisma.SortOrder
-  cancelledAt?: Prisma.SortOrderInput | Prisma.SortOrder
-  cancellationReason?: Prisma.SortOrderInput | Prisma.SortOrder
-  createdBy?: Prisma.SortOrderInput | Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  pacienteId?: Prisma.SortOrder
+  propietarioId?: Prisma.SortOrderInput | Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrderInput | Prisma.SortOrder
+  operadorId?: Prisma.SortOrderInput | Prisma.SortOrder
+  fechaHora?: Prisma.SortOrder
+  duracionMinutos?: Prisma.SortOrder
+  estado?: Prisma.SortOrder
+  tipoCita?: Prisma.SortOrderInput | Prisma.SortOrder
+  motivo?: Prisma.SortOrder
+  notas?: Prisma.SortOrderInput | Prisma.SortOrder
+  idEventoGoogleCalendar?: Prisma.SortOrderInput | Prisma.SortOrder
+  recordatorioEnviado?: Prisma.SortOrder
+  recordatorioEnviadoEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  canceladoEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  motivoCancelacion?: Prisma.SortOrderInput | Prisma.SortOrder
+  creadoPor?: Prisma.SortOrderInput | Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
   _count?: Prisma.AppointmentCountOrderByAggregateInput
   _avg?: Prisma.AppointmentAvgOrderByAggregateInput
   _max?: Prisma.AppointmentMaxOrderByAggregateInput
@@ -433,185 +433,185 @@ export type AppointmentScalarWhereWithAggregatesInput = {
   OR?: Prisma.AppointmentScalarWhereWithAggregatesInput[]
   NOT?: Prisma.AppointmentScalarWhereWithAggregatesInput | Prisma.AppointmentScalarWhereWithAggregatesInput[]
   id?: Prisma.UuidWithAggregatesFilter<"Appointment"> | string
-  patientId?: Prisma.UuidWithAggregatesFilter<"Appointment"> | string
-  ownerId?: Prisma.UuidNullableWithAggregatesFilter<"Appointment"> | string | null
-  veterinaryId?: Prisma.UuidNullableWithAggregatesFilter<"Appointment"> | string | null
-  operatorId?: Prisma.UuidNullableWithAggregatesFilter<"Appointment"> | string | null
-  dateTime?: Prisma.DateTimeWithAggregatesFilter<"Appointment"> | Date | string
-  durationMinutes?: Prisma.IntWithAggregatesFilter<"Appointment"> | number
-  status?: Prisma.EnumAppointmentStatusWithAggregatesFilter<"Appointment"> | $Enums.AppointmentStatus
-  appointmentType?: Prisma.StringNullableWithAggregatesFilter<"Appointment"> | string | null
-  reason?: Prisma.StringWithAggregatesFilter<"Appointment"> | string
-  notes?: Prisma.StringNullableWithAggregatesFilter<"Appointment"> | string | null
-  googleCalendarEventId?: Prisma.StringNullableWithAggregatesFilter<"Appointment"> | string | null
-  reminderSent?: Prisma.BoolWithAggregatesFilter<"Appointment"> | boolean
-  reminderSentAt?: Prisma.DateTimeNullableWithAggregatesFilter<"Appointment"> | Date | string | null
-  cancelledAt?: Prisma.DateTimeNullableWithAggregatesFilter<"Appointment"> | Date | string | null
-  cancellationReason?: Prisma.StringNullableWithAggregatesFilter<"Appointment"> | string | null
-  createdBy?: Prisma.UuidNullableWithAggregatesFilter<"Appointment"> | string | null
-  createdAt?: Prisma.DateTimeWithAggregatesFilter<"Appointment"> | Date | string
-  updatedAt?: Prisma.DateTimeWithAggregatesFilter<"Appointment"> | Date | string
+  pacienteId?: Prisma.UuidWithAggregatesFilter<"Appointment"> | string
+  propietarioId?: Prisma.UuidNullableWithAggregatesFilter<"Appointment"> | string | null
+  veterinariaId?: Prisma.UuidNullableWithAggregatesFilter<"Appointment"> | string | null
+  operadorId?: Prisma.UuidNullableWithAggregatesFilter<"Appointment"> | string | null
+  fechaHora?: Prisma.DateTimeWithAggregatesFilter<"Appointment"> | Date | string
+  duracionMinutos?: Prisma.IntWithAggregatesFilter<"Appointment"> | number
+  estado?: Prisma.EnumAppointmentStatusWithAggregatesFilter<"Appointment"> | $Enums.AppointmentStatus
+  tipoCita?: Prisma.StringNullableWithAggregatesFilter<"Appointment"> | string | null
+  motivo?: Prisma.StringWithAggregatesFilter<"Appointment"> | string
+  notas?: Prisma.StringNullableWithAggregatesFilter<"Appointment"> | string | null
+  idEventoGoogleCalendar?: Prisma.StringNullableWithAggregatesFilter<"Appointment"> | string | null
+  recordatorioEnviado?: Prisma.BoolWithAggregatesFilter<"Appointment"> | boolean
+  recordatorioEnviadoEn?: Prisma.DateTimeNullableWithAggregatesFilter<"Appointment"> | Date | string | null
+  canceladoEn?: Prisma.DateTimeNullableWithAggregatesFilter<"Appointment"> | Date | string | null
+  motivoCancelacion?: Prisma.StringNullableWithAggregatesFilter<"Appointment"> | string | null
+  creadoPor?: Prisma.UuidNullableWithAggregatesFilter<"Appointment"> | string | null
+  creadoEn?: Prisma.DateTimeWithAggregatesFilter<"Appointment"> | Date | string
+  actualizadoEn?: Prisma.DateTimeWithAggregatesFilter<"Appointment"> | Date | string
 }
 
 export type AppointmentCreateInput = {
   id?: string
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  patient: Prisma.PatientCreateNestedOneWithoutAppointmentsInput
-  owner?: Prisma.OwnerCreateNestedOneWithoutAppointmentsInput
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutAppointmentsInput
-  operator?: Prisma.OperatorCreateNestedOneWithoutAppointmentsInput
-  creator?: Prisma.UserCreateNestedOneWithoutCreatedAppointmentsInput
-  procedures?: Prisma.ProcedureCreateNestedManyWithoutAppointmentInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutAppointmentInput
-  emailReminders?: Prisma.EmailReminderCreateNestedManyWithoutAppointmentInput
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  paciente: Prisma.PatientCreateNestedOneWithoutCitasInput
+  propietario?: Prisma.OwnerCreateNestedOneWithoutCitasInput
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutCitasInput
+  operador?: Prisma.OperatorCreateNestedOneWithoutCitasInput
+  creador?: Prisma.UserCreateNestedOneWithoutCitasCreadasInput
+  procedimientos?: Prisma.ProcedureCreateNestedManyWithoutCitaInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutCitaInput
+  recordatoriosCorreo?: Prisma.EmailReminderCreateNestedManyWithoutCitaInput
 }
 
 export type AppointmentUncheckedCreateInput = {
   id?: string
-  patientId: string
-  ownerId?: string | null
-  veterinaryId?: string | null
-  operatorId?: string | null
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdBy?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  procedures?: Prisma.ProcedureUncheckedCreateNestedManyWithoutAppointmentInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutAppointmentInput
-  emailReminders?: Prisma.EmailReminderUncheckedCreateNestedManyWithoutAppointmentInput
+  pacienteId: string
+  propietarioId?: string | null
+  veterinariaId?: string | null
+  operadorId?: string | null
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoPor?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  procedimientos?: Prisma.ProcedureUncheckedCreateNestedManyWithoutCitaInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutCitaInput
+  recordatoriosCorreo?: Prisma.EmailReminderUncheckedCreateNestedManyWithoutCitaInput
 }
 
 export type AppointmentUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  patient?: Prisma.PatientUpdateOneRequiredWithoutAppointmentsNestedInput
-  owner?: Prisma.OwnerUpdateOneWithoutAppointmentsNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutAppointmentsNestedInput
-  operator?: Prisma.OperatorUpdateOneWithoutAppointmentsNestedInput
-  creator?: Prisma.UserUpdateOneWithoutCreatedAppointmentsNestedInput
-  procedures?: Prisma.ProcedureUpdateManyWithoutAppointmentNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutAppointmentNestedInput
-  emailReminders?: Prisma.EmailReminderUpdateManyWithoutAppointmentNestedInput
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  paciente?: Prisma.PatientUpdateOneRequiredWithoutCitasNestedInput
+  propietario?: Prisma.OwnerUpdateOneWithoutCitasNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutCitasNestedInput
+  operador?: Prisma.OperatorUpdateOneWithoutCitasNestedInput
+  creador?: Prisma.UserUpdateOneWithoutCitasCreadasNestedInput
+  procedimientos?: Prisma.ProcedureUpdateManyWithoutCitaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutCitaNestedInput
+  recordatoriosCorreo?: Prisma.EmailReminderUpdateManyWithoutCitaNestedInput
 }
 
 export type AppointmentUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  operatorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  procedures?: Prisma.ProcedureUncheckedUpdateManyWithoutAppointmentNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutAppointmentNestedInput
-  emailReminders?: Prisma.EmailReminderUncheckedUpdateManyWithoutAppointmentNestedInput
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  propietarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  operadorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  procedimientos?: Prisma.ProcedureUncheckedUpdateManyWithoutCitaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutCitaNestedInput
+  recordatoriosCorreo?: Prisma.EmailReminderUncheckedUpdateManyWithoutCitaNestedInput
 }
 
 export type AppointmentCreateManyInput = {
   id?: string
-  patientId: string
-  ownerId?: string | null
-  veterinaryId?: string | null
-  operatorId?: string | null
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdBy?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
+  pacienteId: string
+  propietarioId?: string | null
+  veterinariaId?: string | null
+  operadorId?: string | null
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoPor?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
 }
 
 export type AppointmentUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type AppointmentUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  operatorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  propietarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  operadorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type AppointmentListRelationFilter = {
@@ -626,76 +626,76 @@ export type AppointmentOrderByRelationAggregateInput = {
 
 export type AppointmentCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  patientId?: Prisma.SortOrder
-  ownerId?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrder
-  operatorId?: Prisma.SortOrder
-  dateTime?: Prisma.SortOrder
-  durationMinutes?: Prisma.SortOrder
-  status?: Prisma.SortOrder
-  appointmentType?: Prisma.SortOrder
-  reason?: Prisma.SortOrder
-  notes?: Prisma.SortOrder
-  googleCalendarEventId?: Prisma.SortOrder
-  reminderSent?: Prisma.SortOrder
-  reminderSentAt?: Prisma.SortOrder
-  cancelledAt?: Prisma.SortOrder
-  cancellationReason?: Prisma.SortOrder
-  createdBy?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  pacienteId?: Prisma.SortOrder
+  propietarioId?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrder
+  operadorId?: Prisma.SortOrder
+  fechaHora?: Prisma.SortOrder
+  duracionMinutos?: Prisma.SortOrder
+  estado?: Prisma.SortOrder
+  tipoCita?: Prisma.SortOrder
+  motivo?: Prisma.SortOrder
+  notas?: Prisma.SortOrder
+  idEventoGoogleCalendar?: Prisma.SortOrder
+  recordatorioEnviado?: Prisma.SortOrder
+  recordatorioEnviadoEn?: Prisma.SortOrder
+  canceladoEn?: Prisma.SortOrder
+  motivoCancelacion?: Prisma.SortOrder
+  creadoPor?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
 }
 
 export type AppointmentAvgOrderByAggregateInput = {
-  durationMinutes?: Prisma.SortOrder
+  duracionMinutos?: Prisma.SortOrder
 }
 
 export type AppointmentMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  patientId?: Prisma.SortOrder
-  ownerId?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrder
-  operatorId?: Prisma.SortOrder
-  dateTime?: Prisma.SortOrder
-  durationMinutes?: Prisma.SortOrder
-  status?: Prisma.SortOrder
-  appointmentType?: Prisma.SortOrder
-  reason?: Prisma.SortOrder
-  notes?: Prisma.SortOrder
-  googleCalendarEventId?: Prisma.SortOrder
-  reminderSent?: Prisma.SortOrder
-  reminderSentAt?: Prisma.SortOrder
-  cancelledAt?: Prisma.SortOrder
-  cancellationReason?: Prisma.SortOrder
-  createdBy?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  pacienteId?: Prisma.SortOrder
+  propietarioId?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrder
+  operadorId?: Prisma.SortOrder
+  fechaHora?: Prisma.SortOrder
+  duracionMinutos?: Prisma.SortOrder
+  estado?: Prisma.SortOrder
+  tipoCita?: Prisma.SortOrder
+  motivo?: Prisma.SortOrder
+  notas?: Prisma.SortOrder
+  idEventoGoogleCalendar?: Prisma.SortOrder
+  recordatorioEnviado?: Prisma.SortOrder
+  recordatorioEnviadoEn?: Prisma.SortOrder
+  canceladoEn?: Prisma.SortOrder
+  motivoCancelacion?: Prisma.SortOrder
+  creadoPor?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
 }
 
 export type AppointmentMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  patientId?: Prisma.SortOrder
-  ownerId?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrder
-  operatorId?: Prisma.SortOrder
-  dateTime?: Prisma.SortOrder
-  durationMinutes?: Prisma.SortOrder
-  status?: Prisma.SortOrder
-  appointmentType?: Prisma.SortOrder
-  reason?: Prisma.SortOrder
-  notes?: Prisma.SortOrder
-  googleCalendarEventId?: Prisma.SortOrder
-  reminderSent?: Prisma.SortOrder
-  reminderSentAt?: Prisma.SortOrder
-  cancelledAt?: Prisma.SortOrder
-  cancellationReason?: Prisma.SortOrder
-  createdBy?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  pacienteId?: Prisma.SortOrder
+  propietarioId?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrder
+  operadorId?: Prisma.SortOrder
+  fechaHora?: Prisma.SortOrder
+  duracionMinutos?: Prisma.SortOrder
+  estado?: Prisma.SortOrder
+  tipoCita?: Prisma.SortOrder
+  motivo?: Prisma.SortOrder
+  notas?: Prisma.SortOrder
+  idEventoGoogleCalendar?: Prisma.SortOrder
+  recordatorioEnviado?: Prisma.SortOrder
+  recordatorioEnviadoEn?: Prisma.SortOrder
+  canceladoEn?: Prisma.SortOrder
+  motivoCancelacion?: Prisma.SortOrder
+  creadoPor?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
 }
 
 export type AppointmentSumOrderByAggregateInput = {
-  durationMinutes?: Prisma.SortOrder
+  duracionMinutos?: Prisma.SortOrder
 }
 
 export type AppointmentScalarRelationFilter = {
@@ -708,213 +708,213 @@ export type AppointmentNullableScalarRelationFilter = {
   isNot?: Prisma.AppointmentWhereInput | null
 }
 
-export type AppointmentCreateNestedManyWithoutCreatorInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutCreatorInput, Prisma.AppointmentUncheckedCreateWithoutCreatorInput> | Prisma.AppointmentCreateWithoutCreatorInput[] | Prisma.AppointmentUncheckedCreateWithoutCreatorInput[]
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutCreatorInput | Prisma.AppointmentCreateOrConnectWithoutCreatorInput[]
-  createMany?: Prisma.AppointmentCreateManyCreatorInputEnvelope
+export type AppointmentCreateNestedManyWithoutCreadorInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutCreadorInput, Prisma.AppointmentUncheckedCreateWithoutCreadorInput> | Prisma.AppointmentCreateWithoutCreadorInput[] | Prisma.AppointmentUncheckedCreateWithoutCreadorInput[]
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutCreadorInput | Prisma.AppointmentCreateOrConnectWithoutCreadorInput[]
+  createMany?: Prisma.AppointmentCreateManyCreadorInputEnvelope
   connect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
 }
 
-export type AppointmentUncheckedCreateNestedManyWithoutCreatorInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutCreatorInput, Prisma.AppointmentUncheckedCreateWithoutCreatorInput> | Prisma.AppointmentCreateWithoutCreatorInput[] | Prisma.AppointmentUncheckedCreateWithoutCreatorInput[]
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutCreatorInput | Prisma.AppointmentCreateOrConnectWithoutCreatorInput[]
-  createMany?: Prisma.AppointmentCreateManyCreatorInputEnvelope
+export type AppointmentUncheckedCreateNestedManyWithoutCreadorInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutCreadorInput, Prisma.AppointmentUncheckedCreateWithoutCreadorInput> | Prisma.AppointmentCreateWithoutCreadorInput[] | Prisma.AppointmentUncheckedCreateWithoutCreadorInput[]
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutCreadorInput | Prisma.AppointmentCreateOrConnectWithoutCreadorInput[]
+  createMany?: Prisma.AppointmentCreateManyCreadorInputEnvelope
   connect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
 }
 
-export type AppointmentUpdateManyWithoutCreatorNestedInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutCreatorInput, Prisma.AppointmentUncheckedCreateWithoutCreatorInput> | Prisma.AppointmentCreateWithoutCreatorInput[] | Prisma.AppointmentUncheckedCreateWithoutCreatorInput[]
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutCreatorInput | Prisma.AppointmentCreateOrConnectWithoutCreatorInput[]
-  upsert?: Prisma.AppointmentUpsertWithWhereUniqueWithoutCreatorInput | Prisma.AppointmentUpsertWithWhereUniqueWithoutCreatorInput[]
-  createMany?: Prisma.AppointmentCreateManyCreatorInputEnvelope
+export type AppointmentUpdateManyWithoutCreadorNestedInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutCreadorInput, Prisma.AppointmentUncheckedCreateWithoutCreadorInput> | Prisma.AppointmentCreateWithoutCreadorInput[] | Prisma.AppointmentUncheckedCreateWithoutCreadorInput[]
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutCreadorInput | Prisma.AppointmentCreateOrConnectWithoutCreadorInput[]
+  upsert?: Prisma.AppointmentUpsertWithWhereUniqueWithoutCreadorInput | Prisma.AppointmentUpsertWithWhereUniqueWithoutCreadorInput[]
+  createMany?: Prisma.AppointmentCreateManyCreadorInputEnvelope
   set?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   disconnect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   delete?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   connect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
-  update?: Prisma.AppointmentUpdateWithWhereUniqueWithoutCreatorInput | Prisma.AppointmentUpdateWithWhereUniqueWithoutCreatorInput[]
-  updateMany?: Prisma.AppointmentUpdateManyWithWhereWithoutCreatorInput | Prisma.AppointmentUpdateManyWithWhereWithoutCreatorInput[]
+  update?: Prisma.AppointmentUpdateWithWhereUniqueWithoutCreadorInput | Prisma.AppointmentUpdateWithWhereUniqueWithoutCreadorInput[]
+  updateMany?: Prisma.AppointmentUpdateManyWithWhereWithoutCreadorInput | Prisma.AppointmentUpdateManyWithWhereWithoutCreadorInput[]
   deleteMany?: Prisma.AppointmentScalarWhereInput | Prisma.AppointmentScalarWhereInput[]
 }
 
-export type AppointmentUncheckedUpdateManyWithoutCreatorNestedInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutCreatorInput, Prisma.AppointmentUncheckedCreateWithoutCreatorInput> | Prisma.AppointmentCreateWithoutCreatorInput[] | Prisma.AppointmentUncheckedCreateWithoutCreatorInput[]
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutCreatorInput | Prisma.AppointmentCreateOrConnectWithoutCreatorInput[]
-  upsert?: Prisma.AppointmentUpsertWithWhereUniqueWithoutCreatorInput | Prisma.AppointmentUpsertWithWhereUniqueWithoutCreatorInput[]
-  createMany?: Prisma.AppointmentCreateManyCreatorInputEnvelope
+export type AppointmentUncheckedUpdateManyWithoutCreadorNestedInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutCreadorInput, Prisma.AppointmentUncheckedCreateWithoutCreadorInput> | Prisma.AppointmentCreateWithoutCreadorInput[] | Prisma.AppointmentUncheckedCreateWithoutCreadorInput[]
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutCreadorInput | Prisma.AppointmentCreateOrConnectWithoutCreadorInput[]
+  upsert?: Prisma.AppointmentUpsertWithWhereUniqueWithoutCreadorInput | Prisma.AppointmentUpsertWithWhereUniqueWithoutCreadorInput[]
+  createMany?: Prisma.AppointmentCreateManyCreadorInputEnvelope
   set?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   disconnect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   delete?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   connect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
-  update?: Prisma.AppointmentUpdateWithWhereUniqueWithoutCreatorInput | Prisma.AppointmentUpdateWithWhereUniqueWithoutCreatorInput[]
-  updateMany?: Prisma.AppointmentUpdateManyWithWhereWithoutCreatorInput | Prisma.AppointmentUpdateManyWithWhereWithoutCreatorInput[]
+  update?: Prisma.AppointmentUpdateWithWhereUniqueWithoutCreadorInput | Prisma.AppointmentUpdateWithWhereUniqueWithoutCreadorInput[]
+  updateMany?: Prisma.AppointmentUpdateManyWithWhereWithoutCreadorInput | Prisma.AppointmentUpdateManyWithWhereWithoutCreadorInput[]
   deleteMany?: Prisma.AppointmentScalarWhereInput | Prisma.AppointmentScalarWhereInput[]
 }
 
-export type AppointmentCreateNestedManyWithoutVeterinaryInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutVeterinaryInput, Prisma.AppointmentUncheckedCreateWithoutVeterinaryInput> | Prisma.AppointmentCreateWithoutVeterinaryInput[] | Prisma.AppointmentUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutVeterinaryInput | Prisma.AppointmentCreateOrConnectWithoutVeterinaryInput[]
-  createMany?: Prisma.AppointmentCreateManyVeterinaryInputEnvelope
+export type AppointmentCreateNestedManyWithoutVeterinariaInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutVeterinariaInput, Prisma.AppointmentUncheckedCreateWithoutVeterinariaInput> | Prisma.AppointmentCreateWithoutVeterinariaInput[] | Prisma.AppointmentUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutVeterinariaInput | Prisma.AppointmentCreateOrConnectWithoutVeterinariaInput[]
+  createMany?: Prisma.AppointmentCreateManyVeterinariaInputEnvelope
   connect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
 }
 
-export type AppointmentUncheckedCreateNestedManyWithoutVeterinaryInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutVeterinaryInput, Prisma.AppointmentUncheckedCreateWithoutVeterinaryInput> | Prisma.AppointmentCreateWithoutVeterinaryInput[] | Prisma.AppointmentUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutVeterinaryInput | Prisma.AppointmentCreateOrConnectWithoutVeterinaryInput[]
-  createMany?: Prisma.AppointmentCreateManyVeterinaryInputEnvelope
+export type AppointmentUncheckedCreateNestedManyWithoutVeterinariaInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutVeterinariaInput, Prisma.AppointmentUncheckedCreateWithoutVeterinariaInput> | Prisma.AppointmentCreateWithoutVeterinariaInput[] | Prisma.AppointmentUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutVeterinariaInput | Prisma.AppointmentCreateOrConnectWithoutVeterinariaInput[]
+  createMany?: Prisma.AppointmentCreateManyVeterinariaInputEnvelope
   connect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
 }
 
-export type AppointmentUpdateManyWithoutVeterinaryNestedInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutVeterinaryInput, Prisma.AppointmentUncheckedCreateWithoutVeterinaryInput> | Prisma.AppointmentCreateWithoutVeterinaryInput[] | Prisma.AppointmentUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutVeterinaryInput | Prisma.AppointmentCreateOrConnectWithoutVeterinaryInput[]
-  upsert?: Prisma.AppointmentUpsertWithWhereUniqueWithoutVeterinaryInput | Prisma.AppointmentUpsertWithWhereUniqueWithoutVeterinaryInput[]
-  createMany?: Prisma.AppointmentCreateManyVeterinaryInputEnvelope
+export type AppointmentUpdateManyWithoutVeterinariaNestedInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutVeterinariaInput, Prisma.AppointmentUncheckedCreateWithoutVeterinariaInput> | Prisma.AppointmentCreateWithoutVeterinariaInput[] | Prisma.AppointmentUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutVeterinariaInput | Prisma.AppointmentCreateOrConnectWithoutVeterinariaInput[]
+  upsert?: Prisma.AppointmentUpsertWithWhereUniqueWithoutVeterinariaInput | Prisma.AppointmentUpsertWithWhereUniqueWithoutVeterinariaInput[]
+  createMany?: Prisma.AppointmentCreateManyVeterinariaInputEnvelope
   set?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   disconnect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   delete?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   connect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
-  update?: Prisma.AppointmentUpdateWithWhereUniqueWithoutVeterinaryInput | Prisma.AppointmentUpdateWithWhereUniqueWithoutVeterinaryInput[]
-  updateMany?: Prisma.AppointmentUpdateManyWithWhereWithoutVeterinaryInput | Prisma.AppointmentUpdateManyWithWhereWithoutVeterinaryInput[]
+  update?: Prisma.AppointmentUpdateWithWhereUniqueWithoutVeterinariaInput | Prisma.AppointmentUpdateWithWhereUniqueWithoutVeterinariaInput[]
+  updateMany?: Prisma.AppointmentUpdateManyWithWhereWithoutVeterinariaInput | Prisma.AppointmentUpdateManyWithWhereWithoutVeterinariaInput[]
   deleteMany?: Prisma.AppointmentScalarWhereInput | Prisma.AppointmentScalarWhereInput[]
 }
 
-export type AppointmentUncheckedUpdateManyWithoutVeterinaryNestedInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutVeterinaryInput, Prisma.AppointmentUncheckedCreateWithoutVeterinaryInput> | Prisma.AppointmentCreateWithoutVeterinaryInput[] | Prisma.AppointmentUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutVeterinaryInput | Prisma.AppointmentCreateOrConnectWithoutVeterinaryInput[]
-  upsert?: Prisma.AppointmentUpsertWithWhereUniqueWithoutVeterinaryInput | Prisma.AppointmentUpsertWithWhereUniqueWithoutVeterinaryInput[]
-  createMany?: Prisma.AppointmentCreateManyVeterinaryInputEnvelope
+export type AppointmentUncheckedUpdateManyWithoutVeterinariaNestedInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutVeterinariaInput, Prisma.AppointmentUncheckedCreateWithoutVeterinariaInput> | Prisma.AppointmentCreateWithoutVeterinariaInput[] | Prisma.AppointmentUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutVeterinariaInput | Prisma.AppointmentCreateOrConnectWithoutVeterinariaInput[]
+  upsert?: Prisma.AppointmentUpsertWithWhereUniqueWithoutVeterinariaInput | Prisma.AppointmentUpsertWithWhereUniqueWithoutVeterinariaInput[]
+  createMany?: Prisma.AppointmentCreateManyVeterinariaInputEnvelope
   set?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   disconnect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   delete?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   connect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
-  update?: Prisma.AppointmentUpdateWithWhereUniqueWithoutVeterinaryInput | Prisma.AppointmentUpdateWithWhereUniqueWithoutVeterinaryInput[]
-  updateMany?: Prisma.AppointmentUpdateManyWithWhereWithoutVeterinaryInput | Prisma.AppointmentUpdateManyWithWhereWithoutVeterinaryInput[]
+  update?: Prisma.AppointmentUpdateWithWhereUniqueWithoutVeterinariaInput | Prisma.AppointmentUpdateWithWhereUniqueWithoutVeterinariaInput[]
+  updateMany?: Prisma.AppointmentUpdateManyWithWhereWithoutVeterinariaInput | Prisma.AppointmentUpdateManyWithWhereWithoutVeterinariaInput[]
   deleteMany?: Prisma.AppointmentScalarWhereInput | Prisma.AppointmentScalarWhereInput[]
 }
 
-export type AppointmentCreateNestedManyWithoutOwnerInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutOwnerInput, Prisma.AppointmentUncheckedCreateWithoutOwnerInput> | Prisma.AppointmentCreateWithoutOwnerInput[] | Prisma.AppointmentUncheckedCreateWithoutOwnerInput[]
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutOwnerInput | Prisma.AppointmentCreateOrConnectWithoutOwnerInput[]
-  createMany?: Prisma.AppointmentCreateManyOwnerInputEnvelope
+export type AppointmentCreateNestedManyWithoutPropietarioInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutPropietarioInput, Prisma.AppointmentUncheckedCreateWithoutPropietarioInput> | Prisma.AppointmentCreateWithoutPropietarioInput[] | Prisma.AppointmentUncheckedCreateWithoutPropietarioInput[]
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutPropietarioInput | Prisma.AppointmentCreateOrConnectWithoutPropietarioInput[]
+  createMany?: Prisma.AppointmentCreateManyPropietarioInputEnvelope
   connect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
 }
 
-export type AppointmentUncheckedCreateNestedManyWithoutOwnerInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutOwnerInput, Prisma.AppointmentUncheckedCreateWithoutOwnerInput> | Prisma.AppointmentCreateWithoutOwnerInput[] | Prisma.AppointmentUncheckedCreateWithoutOwnerInput[]
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutOwnerInput | Prisma.AppointmentCreateOrConnectWithoutOwnerInput[]
-  createMany?: Prisma.AppointmentCreateManyOwnerInputEnvelope
+export type AppointmentUncheckedCreateNestedManyWithoutPropietarioInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutPropietarioInput, Prisma.AppointmentUncheckedCreateWithoutPropietarioInput> | Prisma.AppointmentCreateWithoutPropietarioInput[] | Prisma.AppointmentUncheckedCreateWithoutPropietarioInput[]
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutPropietarioInput | Prisma.AppointmentCreateOrConnectWithoutPropietarioInput[]
+  createMany?: Prisma.AppointmentCreateManyPropietarioInputEnvelope
   connect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
 }
 
-export type AppointmentUpdateManyWithoutOwnerNestedInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutOwnerInput, Prisma.AppointmentUncheckedCreateWithoutOwnerInput> | Prisma.AppointmentCreateWithoutOwnerInput[] | Prisma.AppointmentUncheckedCreateWithoutOwnerInput[]
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutOwnerInput | Prisma.AppointmentCreateOrConnectWithoutOwnerInput[]
-  upsert?: Prisma.AppointmentUpsertWithWhereUniqueWithoutOwnerInput | Prisma.AppointmentUpsertWithWhereUniqueWithoutOwnerInput[]
-  createMany?: Prisma.AppointmentCreateManyOwnerInputEnvelope
+export type AppointmentUpdateManyWithoutPropietarioNestedInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutPropietarioInput, Prisma.AppointmentUncheckedCreateWithoutPropietarioInput> | Prisma.AppointmentCreateWithoutPropietarioInput[] | Prisma.AppointmentUncheckedCreateWithoutPropietarioInput[]
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutPropietarioInput | Prisma.AppointmentCreateOrConnectWithoutPropietarioInput[]
+  upsert?: Prisma.AppointmentUpsertWithWhereUniqueWithoutPropietarioInput | Prisma.AppointmentUpsertWithWhereUniqueWithoutPropietarioInput[]
+  createMany?: Prisma.AppointmentCreateManyPropietarioInputEnvelope
   set?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   disconnect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   delete?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   connect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
-  update?: Prisma.AppointmentUpdateWithWhereUniqueWithoutOwnerInput | Prisma.AppointmentUpdateWithWhereUniqueWithoutOwnerInput[]
-  updateMany?: Prisma.AppointmentUpdateManyWithWhereWithoutOwnerInput | Prisma.AppointmentUpdateManyWithWhereWithoutOwnerInput[]
+  update?: Prisma.AppointmentUpdateWithWhereUniqueWithoutPropietarioInput | Prisma.AppointmentUpdateWithWhereUniqueWithoutPropietarioInput[]
+  updateMany?: Prisma.AppointmentUpdateManyWithWhereWithoutPropietarioInput | Prisma.AppointmentUpdateManyWithWhereWithoutPropietarioInput[]
   deleteMany?: Prisma.AppointmentScalarWhereInput | Prisma.AppointmentScalarWhereInput[]
 }
 
-export type AppointmentUncheckedUpdateManyWithoutOwnerNestedInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutOwnerInput, Prisma.AppointmentUncheckedCreateWithoutOwnerInput> | Prisma.AppointmentCreateWithoutOwnerInput[] | Prisma.AppointmentUncheckedCreateWithoutOwnerInput[]
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutOwnerInput | Prisma.AppointmentCreateOrConnectWithoutOwnerInput[]
-  upsert?: Prisma.AppointmentUpsertWithWhereUniqueWithoutOwnerInput | Prisma.AppointmentUpsertWithWhereUniqueWithoutOwnerInput[]
-  createMany?: Prisma.AppointmentCreateManyOwnerInputEnvelope
+export type AppointmentUncheckedUpdateManyWithoutPropietarioNestedInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutPropietarioInput, Prisma.AppointmentUncheckedCreateWithoutPropietarioInput> | Prisma.AppointmentCreateWithoutPropietarioInput[] | Prisma.AppointmentUncheckedCreateWithoutPropietarioInput[]
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutPropietarioInput | Prisma.AppointmentCreateOrConnectWithoutPropietarioInput[]
+  upsert?: Prisma.AppointmentUpsertWithWhereUniqueWithoutPropietarioInput | Prisma.AppointmentUpsertWithWhereUniqueWithoutPropietarioInput[]
+  createMany?: Prisma.AppointmentCreateManyPropietarioInputEnvelope
   set?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   disconnect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   delete?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   connect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
-  update?: Prisma.AppointmentUpdateWithWhereUniqueWithoutOwnerInput | Prisma.AppointmentUpdateWithWhereUniqueWithoutOwnerInput[]
-  updateMany?: Prisma.AppointmentUpdateManyWithWhereWithoutOwnerInput | Prisma.AppointmentUpdateManyWithWhereWithoutOwnerInput[]
+  update?: Prisma.AppointmentUpdateWithWhereUniqueWithoutPropietarioInput | Prisma.AppointmentUpdateWithWhereUniqueWithoutPropietarioInput[]
+  updateMany?: Prisma.AppointmentUpdateManyWithWhereWithoutPropietarioInput | Prisma.AppointmentUpdateManyWithWhereWithoutPropietarioInput[]
   deleteMany?: Prisma.AppointmentScalarWhereInput | Prisma.AppointmentScalarWhereInput[]
 }
 
-export type AppointmentCreateNestedManyWithoutOperatorInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutOperatorInput, Prisma.AppointmentUncheckedCreateWithoutOperatorInput> | Prisma.AppointmentCreateWithoutOperatorInput[] | Prisma.AppointmentUncheckedCreateWithoutOperatorInput[]
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutOperatorInput | Prisma.AppointmentCreateOrConnectWithoutOperatorInput[]
-  createMany?: Prisma.AppointmentCreateManyOperatorInputEnvelope
+export type AppointmentCreateNestedManyWithoutOperadorInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutOperadorInput, Prisma.AppointmentUncheckedCreateWithoutOperadorInput> | Prisma.AppointmentCreateWithoutOperadorInput[] | Prisma.AppointmentUncheckedCreateWithoutOperadorInput[]
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutOperadorInput | Prisma.AppointmentCreateOrConnectWithoutOperadorInput[]
+  createMany?: Prisma.AppointmentCreateManyOperadorInputEnvelope
   connect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
 }
 
-export type AppointmentUncheckedCreateNestedManyWithoutOperatorInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutOperatorInput, Prisma.AppointmentUncheckedCreateWithoutOperatorInput> | Prisma.AppointmentCreateWithoutOperatorInput[] | Prisma.AppointmentUncheckedCreateWithoutOperatorInput[]
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutOperatorInput | Prisma.AppointmentCreateOrConnectWithoutOperatorInput[]
-  createMany?: Prisma.AppointmentCreateManyOperatorInputEnvelope
+export type AppointmentUncheckedCreateNestedManyWithoutOperadorInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutOperadorInput, Prisma.AppointmentUncheckedCreateWithoutOperadorInput> | Prisma.AppointmentCreateWithoutOperadorInput[] | Prisma.AppointmentUncheckedCreateWithoutOperadorInput[]
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutOperadorInput | Prisma.AppointmentCreateOrConnectWithoutOperadorInput[]
+  createMany?: Prisma.AppointmentCreateManyOperadorInputEnvelope
   connect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
 }
 
-export type AppointmentUpdateManyWithoutOperatorNestedInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutOperatorInput, Prisma.AppointmentUncheckedCreateWithoutOperatorInput> | Prisma.AppointmentCreateWithoutOperatorInput[] | Prisma.AppointmentUncheckedCreateWithoutOperatorInput[]
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutOperatorInput | Prisma.AppointmentCreateOrConnectWithoutOperatorInput[]
-  upsert?: Prisma.AppointmentUpsertWithWhereUniqueWithoutOperatorInput | Prisma.AppointmentUpsertWithWhereUniqueWithoutOperatorInput[]
-  createMany?: Prisma.AppointmentCreateManyOperatorInputEnvelope
+export type AppointmentUpdateManyWithoutOperadorNestedInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutOperadorInput, Prisma.AppointmentUncheckedCreateWithoutOperadorInput> | Prisma.AppointmentCreateWithoutOperadorInput[] | Prisma.AppointmentUncheckedCreateWithoutOperadorInput[]
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutOperadorInput | Prisma.AppointmentCreateOrConnectWithoutOperadorInput[]
+  upsert?: Prisma.AppointmentUpsertWithWhereUniqueWithoutOperadorInput | Prisma.AppointmentUpsertWithWhereUniqueWithoutOperadorInput[]
+  createMany?: Prisma.AppointmentCreateManyOperadorInputEnvelope
   set?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   disconnect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   delete?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   connect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
-  update?: Prisma.AppointmentUpdateWithWhereUniqueWithoutOperatorInput | Prisma.AppointmentUpdateWithWhereUniqueWithoutOperatorInput[]
-  updateMany?: Prisma.AppointmentUpdateManyWithWhereWithoutOperatorInput | Prisma.AppointmentUpdateManyWithWhereWithoutOperatorInput[]
+  update?: Prisma.AppointmentUpdateWithWhereUniqueWithoutOperadorInput | Prisma.AppointmentUpdateWithWhereUniqueWithoutOperadorInput[]
+  updateMany?: Prisma.AppointmentUpdateManyWithWhereWithoutOperadorInput | Prisma.AppointmentUpdateManyWithWhereWithoutOperadorInput[]
   deleteMany?: Prisma.AppointmentScalarWhereInput | Prisma.AppointmentScalarWhereInput[]
 }
 
-export type AppointmentUncheckedUpdateManyWithoutOperatorNestedInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutOperatorInput, Prisma.AppointmentUncheckedCreateWithoutOperatorInput> | Prisma.AppointmentCreateWithoutOperatorInput[] | Prisma.AppointmentUncheckedCreateWithoutOperatorInput[]
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutOperatorInput | Prisma.AppointmentCreateOrConnectWithoutOperatorInput[]
-  upsert?: Prisma.AppointmentUpsertWithWhereUniqueWithoutOperatorInput | Prisma.AppointmentUpsertWithWhereUniqueWithoutOperatorInput[]
-  createMany?: Prisma.AppointmentCreateManyOperatorInputEnvelope
+export type AppointmentUncheckedUpdateManyWithoutOperadorNestedInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutOperadorInput, Prisma.AppointmentUncheckedCreateWithoutOperadorInput> | Prisma.AppointmentCreateWithoutOperadorInput[] | Prisma.AppointmentUncheckedCreateWithoutOperadorInput[]
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutOperadorInput | Prisma.AppointmentCreateOrConnectWithoutOperadorInput[]
+  upsert?: Prisma.AppointmentUpsertWithWhereUniqueWithoutOperadorInput | Prisma.AppointmentUpsertWithWhereUniqueWithoutOperadorInput[]
+  createMany?: Prisma.AppointmentCreateManyOperadorInputEnvelope
   set?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   disconnect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   delete?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   connect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
-  update?: Prisma.AppointmentUpdateWithWhereUniqueWithoutOperatorInput | Prisma.AppointmentUpdateWithWhereUniqueWithoutOperatorInput[]
-  updateMany?: Prisma.AppointmentUpdateManyWithWhereWithoutOperatorInput | Prisma.AppointmentUpdateManyWithWhereWithoutOperatorInput[]
+  update?: Prisma.AppointmentUpdateWithWhereUniqueWithoutOperadorInput | Prisma.AppointmentUpdateWithWhereUniqueWithoutOperadorInput[]
+  updateMany?: Prisma.AppointmentUpdateManyWithWhereWithoutOperadorInput | Prisma.AppointmentUpdateManyWithWhereWithoutOperadorInput[]
   deleteMany?: Prisma.AppointmentScalarWhereInput | Prisma.AppointmentScalarWhereInput[]
 }
 
-export type AppointmentCreateNestedManyWithoutPatientInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutPatientInput, Prisma.AppointmentUncheckedCreateWithoutPatientInput> | Prisma.AppointmentCreateWithoutPatientInput[] | Prisma.AppointmentUncheckedCreateWithoutPatientInput[]
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutPatientInput | Prisma.AppointmentCreateOrConnectWithoutPatientInput[]
-  createMany?: Prisma.AppointmentCreateManyPatientInputEnvelope
+export type AppointmentCreateNestedManyWithoutPacienteInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutPacienteInput, Prisma.AppointmentUncheckedCreateWithoutPacienteInput> | Prisma.AppointmentCreateWithoutPacienteInput[] | Prisma.AppointmentUncheckedCreateWithoutPacienteInput[]
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutPacienteInput | Prisma.AppointmentCreateOrConnectWithoutPacienteInput[]
+  createMany?: Prisma.AppointmentCreateManyPacienteInputEnvelope
   connect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
 }
 
-export type AppointmentUncheckedCreateNestedManyWithoutPatientInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutPatientInput, Prisma.AppointmentUncheckedCreateWithoutPatientInput> | Prisma.AppointmentCreateWithoutPatientInput[] | Prisma.AppointmentUncheckedCreateWithoutPatientInput[]
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutPatientInput | Prisma.AppointmentCreateOrConnectWithoutPatientInput[]
-  createMany?: Prisma.AppointmentCreateManyPatientInputEnvelope
+export type AppointmentUncheckedCreateNestedManyWithoutPacienteInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutPacienteInput, Prisma.AppointmentUncheckedCreateWithoutPacienteInput> | Prisma.AppointmentCreateWithoutPacienteInput[] | Prisma.AppointmentUncheckedCreateWithoutPacienteInput[]
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutPacienteInput | Prisma.AppointmentCreateOrConnectWithoutPacienteInput[]
+  createMany?: Prisma.AppointmentCreateManyPacienteInputEnvelope
   connect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
 }
 
-export type AppointmentUpdateManyWithoutPatientNestedInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutPatientInput, Prisma.AppointmentUncheckedCreateWithoutPatientInput> | Prisma.AppointmentCreateWithoutPatientInput[] | Prisma.AppointmentUncheckedCreateWithoutPatientInput[]
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutPatientInput | Prisma.AppointmentCreateOrConnectWithoutPatientInput[]
-  upsert?: Prisma.AppointmentUpsertWithWhereUniqueWithoutPatientInput | Prisma.AppointmentUpsertWithWhereUniqueWithoutPatientInput[]
-  createMany?: Prisma.AppointmentCreateManyPatientInputEnvelope
+export type AppointmentUpdateManyWithoutPacienteNestedInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutPacienteInput, Prisma.AppointmentUncheckedCreateWithoutPacienteInput> | Prisma.AppointmentCreateWithoutPacienteInput[] | Prisma.AppointmentUncheckedCreateWithoutPacienteInput[]
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutPacienteInput | Prisma.AppointmentCreateOrConnectWithoutPacienteInput[]
+  upsert?: Prisma.AppointmentUpsertWithWhereUniqueWithoutPacienteInput | Prisma.AppointmentUpsertWithWhereUniqueWithoutPacienteInput[]
+  createMany?: Prisma.AppointmentCreateManyPacienteInputEnvelope
   set?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   disconnect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   delete?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   connect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
-  update?: Prisma.AppointmentUpdateWithWhereUniqueWithoutPatientInput | Prisma.AppointmentUpdateWithWhereUniqueWithoutPatientInput[]
-  updateMany?: Prisma.AppointmentUpdateManyWithWhereWithoutPatientInput | Prisma.AppointmentUpdateManyWithWhereWithoutPatientInput[]
+  update?: Prisma.AppointmentUpdateWithWhereUniqueWithoutPacienteInput | Prisma.AppointmentUpdateWithWhereUniqueWithoutPacienteInput[]
+  updateMany?: Prisma.AppointmentUpdateManyWithWhereWithoutPacienteInput | Prisma.AppointmentUpdateManyWithWhereWithoutPacienteInput[]
   deleteMany?: Prisma.AppointmentScalarWhereInput | Prisma.AppointmentScalarWhereInput[]
 }
 
-export type AppointmentUncheckedUpdateManyWithoutPatientNestedInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutPatientInput, Prisma.AppointmentUncheckedCreateWithoutPatientInput> | Prisma.AppointmentCreateWithoutPatientInput[] | Prisma.AppointmentUncheckedCreateWithoutPatientInput[]
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutPatientInput | Prisma.AppointmentCreateOrConnectWithoutPatientInput[]
-  upsert?: Prisma.AppointmentUpsertWithWhereUniqueWithoutPatientInput | Prisma.AppointmentUpsertWithWhereUniqueWithoutPatientInput[]
-  createMany?: Prisma.AppointmentCreateManyPatientInputEnvelope
+export type AppointmentUncheckedUpdateManyWithoutPacienteNestedInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutPacienteInput, Prisma.AppointmentUncheckedCreateWithoutPacienteInput> | Prisma.AppointmentCreateWithoutPacienteInput[] | Prisma.AppointmentUncheckedCreateWithoutPacienteInput[]
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutPacienteInput | Prisma.AppointmentCreateOrConnectWithoutPacienteInput[]
+  upsert?: Prisma.AppointmentUpsertWithWhereUniqueWithoutPacienteInput | Prisma.AppointmentUpsertWithWhereUniqueWithoutPacienteInput[]
+  createMany?: Prisma.AppointmentCreateManyPacienteInputEnvelope
   set?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   disconnect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   delete?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
   connect?: Prisma.AppointmentWhereUniqueInput | Prisma.AppointmentWhereUniqueInput[]
-  update?: Prisma.AppointmentUpdateWithWhereUniqueWithoutPatientInput | Prisma.AppointmentUpdateWithWhereUniqueWithoutPatientInput[]
-  updateMany?: Prisma.AppointmentUpdateManyWithWhereWithoutPatientInput | Prisma.AppointmentUpdateManyWithWhereWithoutPatientInput[]
+  update?: Prisma.AppointmentUpdateWithWhereUniqueWithoutPacienteInput | Prisma.AppointmentUpdateWithWhereUniqueWithoutPacienteInput[]
+  updateMany?: Prisma.AppointmentUpdateManyWithWhereWithoutPacienteInput | Prisma.AppointmentUpdateManyWithWhereWithoutPacienteInput[]
   deleteMany?: Prisma.AppointmentScalarWhereInput | Prisma.AppointmentScalarWhereInput[]
 }
 
@@ -930,122 +930,122 @@ export type EnumAppointmentStatusFieldUpdateOperationsInput = {
   set?: $Enums.AppointmentStatus
 }
 
-export type AppointmentCreateNestedOneWithoutProceduresInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutProceduresInput, Prisma.AppointmentUncheckedCreateWithoutProceduresInput>
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutProceduresInput
+export type AppointmentCreateNestedOneWithoutProcedimientosInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutProcedimientosInput, Prisma.AppointmentUncheckedCreateWithoutProcedimientosInput>
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutProcedimientosInput
   connect?: Prisma.AppointmentWhereUniqueInput
 }
 
-export type AppointmentUpdateOneRequiredWithoutProceduresNestedInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutProceduresInput, Prisma.AppointmentUncheckedCreateWithoutProceduresInput>
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutProceduresInput
-  upsert?: Prisma.AppointmentUpsertWithoutProceduresInput
+export type AppointmentUpdateOneRequiredWithoutProcedimientosNestedInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutProcedimientosInput, Prisma.AppointmentUncheckedCreateWithoutProcedimientosInput>
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutProcedimientosInput
+  upsert?: Prisma.AppointmentUpsertWithoutProcedimientosInput
   connect?: Prisma.AppointmentWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.AppointmentUpdateToOneWithWhereWithoutProceduresInput, Prisma.AppointmentUpdateWithoutProceduresInput>, Prisma.AppointmentUncheckedUpdateWithoutProceduresInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.AppointmentUpdateToOneWithWhereWithoutProcedimientosInput, Prisma.AppointmentUpdateWithoutProcedimientosInput>, Prisma.AppointmentUncheckedUpdateWithoutProcedimientosInput>
 }
 
-export type AppointmentCreateNestedOneWithoutClinicalRecordsInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutClinicalRecordsInput, Prisma.AppointmentUncheckedCreateWithoutClinicalRecordsInput>
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutClinicalRecordsInput
+export type AppointmentCreateNestedOneWithoutRegistrosClinicoInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutRegistrosClinicoInput, Prisma.AppointmentUncheckedCreateWithoutRegistrosClinicoInput>
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutRegistrosClinicoInput
   connect?: Prisma.AppointmentWhereUniqueInput
 }
 
-export type AppointmentUpdateOneWithoutClinicalRecordsNestedInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutClinicalRecordsInput, Prisma.AppointmentUncheckedCreateWithoutClinicalRecordsInput>
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutClinicalRecordsInput
-  upsert?: Prisma.AppointmentUpsertWithoutClinicalRecordsInput
+export type AppointmentUpdateOneWithoutRegistrosClinicoNestedInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutRegistrosClinicoInput, Prisma.AppointmentUncheckedCreateWithoutRegistrosClinicoInput>
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutRegistrosClinicoInput
+  upsert?: Prisma.AppointmentUpsertWithoutRegistrosClinicoInput
   disconnect?: Prisma.AppointmentWhereInput | boolean
   delete?: Prisma.AppointmentWhereInput | boolean
   connect?: Prisma.AppointmentWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.AppointmentUpdateToOneWithWhereWithoutClinicalRecordsInput, Prisma.AppointmentUpdateWithoutClinicalRecordsInput>, Prisma.AppointmentUncheckedUpdateWithoutClinicalRecordsInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.AppointmentUpdateToOneWithWhereWithoutRegistrosClinicoInput, Prisma.AppointmentUpdateWithoutRegistrosClinicoInput>, Prisma.AppointmentUncheckedUpdateWithoutRegistrosClinicoInput>
 }
 
-export type AppointmentCreateNestedOneWithoutEmailRemindersInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutEmailRemindersInput, Prisma.AppointmentUncheckedCreateWithoutEmailRemindersInput>
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutEmailRemindersInput
+export type AppointmentCreateNestedOneWithoutRecordatoriosCorreoInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutRecordatoriosCorreoInput, Prisma.AppointmentUncheckedCreateWithoutRecordatoriosCorreoInput>
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutRecordatoriosCorreoInput
   connect?: Prisma.AppointmentWhereUniqueInput
 }
 
-export type AppointmentUpdateOneRequiredWithoutEmailRemindersNestedInput = {
-  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutEmailRemindersInput, Prisma.AppointmentUncheckedCreateWithoutEmailRemindersInput>
-  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutEmailRemindersInput
-  upsert?: Prisma.AppointmentUpsertWithoutEmailRemindersInput
+export type AppointmentUpdateOneRequiredWithoutRecordatoriosCorreoNestedInput = {
+  create?: Prisma.XOR<Prisma.AppointmentCreateWithoutRecordatoriosCorreoInput, Prisma.AppointmentUncheckedCreateWithoutRecordatoriosCorreoInput>
+  connectOrCreate?: Prisma.AppointmentCreateOrConnectWithoutRecordatoriosCorreoInput
+  upsert?: Prisma.AppointmentUpsertWithoutRecordatoriosCorreoInput
   connect?: Prisma.AppointmentWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.AppointmentUpdateToOneWithWhereWithoutEmailRemindersInput, Prisma.AppointmentUpdateWithoutEmailRemindersInput>, Prisma.AppointmentUncheckedUpdateWithoutEmailRemindersInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.AppointmentUpdateToOneWithWhereWithoutRecordatoriosCorreoInput, Prisma.AppointmentUpdateWithoutRecordatoriosCorreoInput>, Prisma.AppointmentUncheckedUpdateWithoutRecordatoriosCorreoInput>
 }
 
-export type AppointmentCreateWithoutCreatorInput = {
+export type AppointmentCreateWithoutCreadorInput = {
   id?: string
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  patient: Prisma.PatientCreateNestedOneWithoutAppointmentsInput
-  owner?: Prisma.OwnerCreateNestedOneWithoutAppointmentsInput
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutAppointmentsInput
-  operator?: Prisma.OperatorCreateNestedOneWithoutAppointmentsInput
-  procedures?: Prisma.ProcedureCreateNestedManyWithoutAppointmentInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutAppointmentInput
-  emailReminders?: Prisma.EmailReminderCreateNestedManyWithoutAppointmentInput
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  paciente: Prisma.PatientCreateNestedOneWithoutCitasInput
+  propietario?: Prisma.OwnerCreateNestedOneWithoutCitasInput
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutCitasInput
+  operador?: Prisma.OperatorCreateNestedOneWithoutCitasInput
+  procedimientos?: Prisma.ProcedureCreateNestedManyWithoutCitaInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutCitaInput
+  recordatoriosCorreo?: Prisma.EmailReminderCreateNestedManyWithoutCitaInput
 }
 
-export type AppointmentUncheckedCreateWithoutCreatorInput = {
+export type AppointmentUncheckedCreateWithoutCreadorInput = {
   id?: string
-  patientId: string
-  ownerId?: string | null
-  veterinaryId?: string | null
-  operatorId?: string | null
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  procedures?: Prisma.ProcedureUncheckedCreateNestedManyWithoutAppointmentInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutAppointmentInput
-  emailReminders?: Prisma.EmailReminderUncheckedCreateNestedManyWithoutAppointmentInput
+  pacienteId: string
+  propietarioId?: string | null
+  veterinariaId?: string | null
+  operadorId?: string | null
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  procedimientos?: Prisma.ProcedureUncheckedCreateNestedManyWithoutCitaInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutCitaInput
+  recordatoriosCorreo?: Prisma.EmailReminderUncheckedCreateNestedManyWithoutCitaInput
 }
 
-export type AppointmentCreateOrConnectWithoutCreatorInput = {
+export type AppointmentCreateOrConnectWithoutCreadorInput = {
   where: Prisma.AppointmentWhereUniqueInput
-  create: Prisma.XOR<Prisma.AppointmentCreateWithoutCreatorInput, Prisma.AppointmentUncheckedCreateWithoutCreatorInput>
+  create: Prisma.XOR<Prisma.AppointmentCreateWithoutCreadorInput, Prisma.AppointmentUncheckedCreateWithoutCreadorInput>
 }
 
-export type AppointmentCreateManyCreatorInputEnvelope = {
-  data: Prisma.AppointmentCreateManyCreatorInput | Prisma.AppointmentCreateManyCreatorInput[]
+export type AppointmentCreateManyCreadorInputEnvelope = {
+  data: Prisma.AppointmentCreateManyCreadorInput | Prisma.AppointmentCreateManyCreadorInput[]
   skipDuplicates?: boolean
 }
 
-export type AppointmentUpsertWithWhereUniqueWithoutCreatorInput = {
+export type AppointmentUpsertWithWhereUniqueWithoutCreadorInput = {
   where: Prisma.AppointmentWhereUniqueInput
-  update: Prisma.XOR<Prisma.AppointmentUpdateWithoutCreatorInput, Prisma.AppointmentUncheckedUpdateWithoutCreatorInput>
-  create: Prisma.XOR<Prisma.AppointmentCreateWithoutCreatorInput, Prisma.AppointmentUncheckedCreateWithoutCreatorInput>
+  update: Prisma.XOR<Prisma.AppointmentUpdateWithoutCreadorInput, Prisma.AppointmentUncheckedUpdateWithoutCreadorInput>
+  create: Prisma.XOR<Prisma.AppointmentCreateWithoutCreadorInput, Prisma.AppointmentUncheckedCreateWithoutCreadorInput>
 }
 
-export type AppointmentUpdateWithWhereUniqueWithoutCreatorInput = {
+export type AppointmentUpdateWithWhereUniqueWithoutCreadorInput = {
   where: Prisma.AppointmentWhereUniqueInput
-  data: Prisma.XOR<Prisma.AppointmentUpdateWithoutCreatorInput, Prisma.AppointmentUncheckedUpdateWithoutCreatorInput>
+  data: Prisma.XOR<Prisma.AppointmentUpdateWithoutCreadorInput, Prisma.AppointmentUncheckedUpdateWithoutCreadorInput>
 }
 
-export type AppointmentUpdateManyWithWhereWithoutCreatorInput = {
+export type AppointmentUpdateManyWithWhereWithoutCreadorInput = {
   where: Prisma.AppointmentScalarWhereInput
-  data: Prisma.XOR<Prisma.AppointmentUpdateManyMutationInput, Prisma.AppointmentUncheckedUpdateManyWithoutCreatorInput>
+  data: Prisma.XOR<Prisma.AppointmentUpdateManyMutationInput, Prisma.AppointmentUncheckedUpdateManyWithoutCreadorInput>
 }
 
 export type AppointmentScalarWhereInput = {
@@ -1053,1106 +1053,1106 @@ export type AppointmentScalarWhereInput = {
   OR?: Prisma.AppointmentScalarWhereInput[]
   NOT?: Prisma.AppointmentScalarWhereInput | Prisma.AppointmentScalarWhereInput[]
   id?: Prisma.UuidFilter<"Appointment"> | string
-  patientId?: Prisma.UuidFilter<"Appointment"> | string
-  ownerId?: Prisma.UuidNullableFilter<"Appointment"> | string | null
-  veterinaryId?: Prisma.UuidNullableFilter<"Appointment"> | string | null
-  operatorId?: Prisma.UuidNullableFilter<"Appointment"> | string | null
-  dateTime?: Prisma.DateTimeFilter<"Appointment"> | Date | string
-  durationMinutes?: Prisma.IntFilter<"Appointment"> | number
-  status?: Prisma.EnumAppointmentStatusFilter<"Appointment"> | $Enums.AppointmentStatus
-  appointmentType?: Prisma.StringNullableFilter<"Appointment"> | string | null
-  reason?: Prisma.StringFilter<"Appointment"> | string
-  notes?: Prisma.StringNullableFilter<"Appointment"> | string | null
-  googleCalendarEventId?: Prisma.StringNullableFilter<"Appointment"> | string | null
-  reminderSent?: Prisma.BoolFilter<"Appointment"> | boolean
-  reminderSentAt?: Prisma.DateTimeNullableFilter<"Appointment"> | Date | string | null
-  cancelledAt?: Prisma.DateTimeNullableFilter<"Appointment"> | Date | string | null
-  cancellationReason?: Prisma.StringNullableFilter<"Appointment"> | string | null
-  createdBy?: Prisma.UuidNullableFilter<"Appointment"> | string | null
-  createdAt?: Prisma.DateTimeFilter<"Appointment"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"Appointment"> | Date | string
+  pacienteId?: Prisma.UuidFilter<"Appointment"> | string
+  propietarioId?: Prisma.UuidNullableFilter<"Appointment"> | string | null
+  veterinariaId?: Prisma.UuidNullableFilter<"Appointment"> | string | null
+  operadorId?: Prisma.UuidNullableFilter<"Appointment"> | string | null
+  fechaHora?: Prisma.DateTimeFilter<"Appointment"> | Date | string
+  duracionMinutos?: Prisma.IntFilter<"Appointment"> | number
+  estado?: Prisma.EnumAppointmentStatusFilter<"Appointment"> | $Enums.AppointmentStatus
+  tipoCita?: Prisma.StringNullableFilter<"Appointment"> | string | null
+  motivo?: Prisma.StringFilter<"Appointment"> | string
+  notas?: Prisma.StringNullableFilter<"Appointment"> | string | null
+  idEventoGoogleCalendar?: Prisma.StringNullableFilter<"Appointment"> | string | null
+  recordatorioEnviado?: Prisma.BoolFilter<"Appointment"> | boolean
+  recordatorioEnviadoEn?: Prisma.DateTimeNullableFilter<"Appointment"> | Date | string | null
+  canceladoEn?: Prisma.DateTimeNullableFilter<"Appointment"> | Date | string | null
+  motivoCancelacion?: Prisma.StringNullableFilter<"Appointment"> | string | null
+  creadoPor?: Prisma.UuidNullableFilter<"Appointment"> | string | null
+  creadoEn?: Prisma.DateTimeFilter<"Appointment"> | Date | string
+  actualizadoEn?: Prisma.DateTimeFilter<"Appointment"> | Date | string
 }
 
-export type AppointmentCreateWithoutVeterinaryInput = {
+export type AppointmentCreateWithoutVeterinariaInput = {
   id?: string
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  patient: Prisma.PatientCreateNestedOneWithoutAppointmentsInput
-  owner?: Prisma.OwnerCreateNestedOneWithoutAppointmentsInput
-  operator?: Prisma.OperatorCreateNestedOneWithoutAppointmentsInput
-  creator?: Prisma.UserCreateNestedOneWithoutCreatedAppointmentsInput
-  procedures?: Prisma.ProcedureCreateNestedManyWithoutAppointmentInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutAppointmentInput
-  emailReminders?: Prisma.EmailReminderCreateNestedManyWithoutAppointmentInput
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  paciente: Prisma.PatientCreateNestedOneWithoutCitasInput
+  propietario?: Prisma.OwnerCreateNestedOneWithoutCitasInput
+  operador?: Prisma.OperatorCreateNestedOneWithoutCitasInput
+  creador?: Prisma.UserCreateNestedOneWithoutCitasCreadasInput
+  procedimientos?: Prisma.ProcedureCreateNestedManyWithoutCitaInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutCitaInput
+  recordatoriosCorreo?: Prisma.EmailReminderCreateNestedManyWithoutCitaInput
 }
 
-export type AppointmentUncheckedCreateWithoutVeterinaryInput = {
+export type AppointmentUncheckedCreateWithoutVeterinariaInput = {
   id?: string
-  patientId: string
-  ownerId?: string | null
-  operatorId?: string | null
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdBy?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  procedures?: Prisma.ProcedureUncheckedCreateNestedManyWithoutAppointmentInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutAppointmentInput
-  emailReminders?: Prisma.EmailReminderUncheckedCreateNestedManyWithoutAppointmentInput
+  pacienteId: string
+  propietarioId?: string | null
+  operadorId?: string | null
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoPor?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  procedimientos?: Prisma.ProcedureUncheckedCreateNestedManyWithoutCitaInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutCitaInput
+  recordatoriosCorreo?: Prisma.EmailReminderUncheckedCreateNestedManyWithoutCitaInput
 }
 
-export type AppointmentCreateOrConnectWithoutVeterinaryInput = {
+export type AppointmentCreateOrConnectWithoutVeterinariaInput = {
   where: Prisma.AppointmentWhereUniqueInput
-  create: Prisma.XOR<Prisma.AppointmentCreateWithoutVeterinaryInput, Prisma.AppointmentUncheckedCreateWithoutVeterinaryInput>
+  create: Prisma.XOR<Prisma.AppointmentCreateWithoutVeterinariaInput, Prisma.AppointmentUncheckedCreateWithoutVeterinariaInput>
 }
 
-export type AppointmentCreateManyVeterinaryInputEnvelope = {
-  data: Prisma.AppointmentCreateManyVeterinaryInput | Prisma.AppointmentCreateManyVeterinaryInput[]
+export type AppointmentCreateManyVeterinariaInputEnvelope = {
+  data: Prisma.AppointmentCreateManyVeterinariaInput | Prisma.AppointmentCreateManyVeterinariaInput[]
   skipDuplicates?: boolean
 }
 
-export type AppointmentUpsertWithWhereUniqueWithoutVeterinaryInput = {
+export type AppointmentUpsertWithWhereUniqueWithoutVeterinariaInput = {
   where: Prisma.AppointmentWhereUniqueInput
-  update: Prisma.XOR<Prisma.AppointmentUpdateWithoutVeterinaryInput, Prisma.AppointmentUncheckedUpdateWithoutVeterinaryInput>
-  create: Prisma.XOR<Prisma.AppointmentCreateWithoutVeterinaryInput, Prisma.AppointmentUncheckedCreateWithoutVeterinaryInput>
+  update: Prisma.XOR<Prisma.AppointmentUpdateWithoutVeterinariaInput, Prisma.AppointmentUncheckedUpdateWithoutVeterinariaInput>
+  create: Prisma.XOR<Prisma.AppointmentCreateWithoutVeterinariaInput, Prisma.AppointmentUncheckedCreateWithoutVeterinariaInput>
 }
 
-export type AppointmentUpdateWithWhereUniqueWithoutVeterinaryInput = {
+export type AppointmentUpdateWithWhereUniqueWithoutVeterinariaInput = {
   where: Prisma.AppointmentWhereUniqueInput
-  data: Prisma.XOR<Prisma.AppointmentUpdateWithoutVeterinaryInput, Prisma.AppointmentUncheckedUpdateWithoutVeterinaryInput>
+  data: Prisma.XOR<Prisma.AppointmentUpdateWithoutVeterinariaInput, Prisma.AppointmentUncheckedUpdateWithoutVeterinariaInput>
 }
 
-export type AppointmentUpdateManyWithWhereWithoutVeterinaryInput = {
+export type AppointmentUpdateManyWithWhereWithoutVeterinariaInput = {
   where: Prisma.AppointmentScalarWhereInput
-  data: Prisma.XOR<Prisma.AppointmentUpdateManyMutationInput, Prisma.AppointmentUncheckedUpdateManyWithoutVeterinaryInput>
+  data: Prisma.XOR<Prisma.AppointmentUpdateManyMutationInput, Prisma.AppointmentUncheckedUpdateManyWithoutVeterinariaInput>
 }
 
-export type AppointmentCreateWithoutOwnerInput = {
+export type AppointmentCreateWithoutPropietarioInput = {
   id?: string
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  patient: Prisma.PatientCreateNestedOneWithoutAppointmentsInput
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutAppointmentsInput
-  operator?: Prisma.OperatorCreateNestedOneWithoutAppointmentsInput
-  creator?: Prisma.UserCreateNestedOneWithoutCreatedAppointmentsInput
-  procedures?: Prisma.ProcedureCreateNestedManyWithoutAppointmentInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutAppointmentInput
-  emailReminders?: Prisma.EmailReminderCreateNestedManyWithoutAppointmentInput
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  paciente: Prisma.PatientCreateNestedOneWithoutCitasInput
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutCitasInput
+  operador?: Prisma.OperatorCreateNestedOneWithoutCitasInput
+  creador?: Prisma.UserCreateNestedOneWithoutCitasCreadasInput
+  procedimientos?: Prisma.ProcedureCreateNestedManyWithoutCitaInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutCitaInput
+  recordatoriosCorreo?: Prisma.EmailReminderCreateNestedManyWithoutCitaInput
 }
 
-export type AppointmentUncheckedCreateWithoutOwnerInput = {
+export type AppointmentUncheckedCreateWithoutPropietarioInput = {
   id?: string
-  patientId: string
-  veterinaryId?: string | null
-  operatorId?: string | null
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdBy?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  procedures?: Prisma.ProcedureUncheckedCreateNestedManyWithoutAppointmentInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutAppointmentInput
-  emailReminders?: Prisma.EmailReminderUncheckedCreateNestedManyWithoutAppointmentInput
+  pacienteId: string
+  veterinariaId?: string | null
+  operadorId?: string | null
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoPor?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  procedimientos?: Prisma.ProcedureUncheckedCreateNestedManyWithoutCitaInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutCitaInput
+  recordatoriosCorreo?: Prisma.EmailReminderUncheckedCreateNestedManyWithoutCitaInput
 }
 
-export type AppointmentCreateOrConnectWithoutOwnerInput = {
+export type AppointmentCreateOrConnectWithoutPropietarioInput = {
   where: Prisma.AppointmentWhereUniqueInput
-  create: Prisma.XOR<Prisma.AppointmentCreateWithoutOwnerInput, Prisma.AppointmentUncheckedCreateWithoutOwnerInput>
+  create: Prisma.XOR<Prisma.AppointmentCreateWithoutPropietarioInput, Prisma.AppointmentUncheckedCreateWithoutPropietarioInput>
 }
 
-export type AppointmentCreateManyOwnerInputEnvelope = {
-  data: Prisma.AppointmentCreateManyOwnerInput | Prisma.AppointmentCreateManyOwnerInput[]
+export type AppointmentCreateManyPropietarioInputEnvelope = {
+  data: Prisma.AppointmentCreateManyPropietarioInput | Prisma.AppointmentCreateManyPropietarioInput[]
   skipDuplicates?: boolean
 }
 
-export type AppointmentUpsertWithWhereUniqueWithoutOwnerInput = {
+export type AppointmentUpsertWithWhereUniqueWithoutPropietarioInput = {
   where: Prisma.AppointmentWhereUniqueInput
-  update: Prisma.XOR<Prisma.AppointmentUpdateWithoutOwnerInput, Prisma.AppointmentUncheckedUpdateWithoutOwnerInput>
-  create: Prisma.XOR<Prisma.AppointmentCreateWithoutOwnerInput, Prisma.AppointmentUncheckedCreateWithoutOwnerInput>
+  update: Prisma.XOR<Prisma.AppointmentUpdateWithoutPropietarioInput, Prisma.AppointmentUncheckedUpdateWithoutPropietarioInput>
+  create: Prisma.XOR<Prisma.AppointmentCreateWithoutPropietarioInput, Prisma.AppointmentUncheckedCreateWithoutPropietarioInput>
 }
 
-export type AppointmentUpdateWithWhereUniqueWithoutOwnerInput = {
+export type AppointmentUpdateWithWhereUniqueWithoutPropietarioInput = {
   where: Prisma.AppointmentWhereUniqueInput
-  data: Prisma.XOR<Prisma.AppointmentUpdateWithoutOwnerInput, Prisma.AppointmentUncheckedUpdateWithoutOwnerInput>
+  data: Prisma.XOR<Prisma.AppointmentUpdateWithoutPropietarioInput, Prisma.AppointmentUncheckedUpdateWithoutPropietarioInput>
 }
 
-export type AppointmentUpdateManyWithWhereWithoutOwnerInput = {
+export type AppointmentUpdateManyWithWhereWithoutPropietarioInput = {
   where: Prisma.AppointmentScalarWhereInput
-  data: Prisma.XOR<Prisma.AppointmentUpdateManyMutationInput, Prisma.AppointmentUncheckedUpdateManyWithoutOwnerInput>
+  data: Prisma.XOR<Prisma.AppointmentUpdateManyMutationInput, Prisma.AppointmentUncheckedUpdateManyWithoutPropietarioInput>
 }
 
-export type AppointmentCreateWithoutOperatorInput = {
+export type AppointmentCreateWithoutOperadorInput = {
   id?: string
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  patient: Prisma.PatientCreateNestedOneWithoutAppointmentsInput
-  owner?: Prisma.OwnerCreateNestedOneWithoutAppointmentsInput
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutAppointmentsInput
-  creator?: Prisma.UserCreateNestedOneWithoutCreatedAppointmentsInput
-  procedures?: Prisma.ProcedureCreateNestedManyWithoutAppointmentInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutAppointmentInput
-  emailReminders?: Prisma.EmailReminderCreateNestedManyWithoutAppointmentInput
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  paciente: Prisma.PatientCreateNestedOneWithoutCitasInput
+  propietario?: Prisma.OwnerCreateNestedOneWithoutCitasInput
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutCitasInput
+  creador?: Prisma.UserCreateNestedOneWithoutCitasCreadasInput
+  procedimientos?: Prisma.ProcedureCreateNestedManyWithoutCitaInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutCitaInput
+  recordatoriosCorreo?: Prisma.EmailReminderCreateNestedManyWithoutCitaInput
 }
 
-export type AppointmentUncheckedCreateWithoutOperatorInput = {
+export type AppointmentUncheckedCreateWithoutOperadorInput = {
   id?: string
-  patientId: string
-  ownerId?: string | null
-  veterinaryId?: string | null
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdBy?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  procedures?: Prisma.ProcedureUncheckedCreateNestedManyWithoutAppointmentInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutAppointmentInput
-  emailReminders?: Prisma.EmailReminderUncheckedCreateNestedManyWithoutAppointmentInput
+  pacienteId: string
+  propietarioId?: string | null
+  veterinariaId?: string | null
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoPor?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  procedimientos?: Prisma.ProcedureUncheckedCreateNestedManyWithoutCitaInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutCitaInput
+  recordatoriosCorreo?: Prisma.EmailReminderUncheckedCreateNestedManyWithoutCitaInput
 }
 
-export type AppointmentCreateOrConnectWithoutOperatorInput = {
+export type AppointmentCreateOrConnectWithoutOperadorInput = {
   where: Prisma.AppointmentWhereUniqueInput
-  create: Prisma.XOR<Prisma.AppointmentCreateWithoutOperatorInput, Prisma.AppointmentUncheckedCreateWithoutOperatorInput>
+  create: Prisma.XOR<Prisma.AppointmentCreateWithoutOperadorInput, Prisma.AppointmentUncheckedCreateWithoutOperadorInput>
 }
 
-export type AppointmentCreateManyOperatorInputEnvelope = {
-  data: Prisma.AppointmentCreateManyOperatorInput | Prisma.AppointmentCreateManyOperatorInput[]
+export type AppointmentCreateManyOperadorInputEnvelope = {
+  data: Prisma.AppointmentCreateManyOperadorInput | Prisma.AppointmentCreateManyOperadorInput[]
   skipDuplicates?: boolean
 }
 
-export type AppointmentUpsertWithWhereUniqueWithoutOperatorInput = {
+export type AppointmentUpsertWithWhereUniqueWithoutOperadorInput = {
   where: Prisma.AppointmentWhereUniqueInput
-  update: Prisma.XOR<Prisma.AppointmentUpdateWithoutOperatorInput, Prisma.AppointmentUncheckedUpdateWithoutOperatorInput>
-  create: Prisma.XOR<Prisma.AppointmentCreateWithoutOperatorInput, Prisma.AppointmentUncheckedCreateWithoutOperatorInput>
+  update: Prisma.XOR<Prisma.AppointmentUpdateWithoutOperadorInput, Prisma.AppointmentUncheckedUpdateWithoutOperadorInput>
+  create: Prisma.XOR<Prisma.AppointmentCreateWithoutOperadorInput, Prisma.AppointmentUncheckedCreateWithoutOperadorInput>
 }
 
-export type AppointmentUpdateWithWhereUniqueWithoutOperatorInput = {
+export type AppointmentUpdateWithWhereUniqueWithoutOperadorInput = {
   where: Prisma.AppointmentWhereUniqueInput
-  data: Prisma.XOR<Prisma.AppointmentUpdateWithoutOperatorInput, Prisma.AppointmentUncheckedUpdateWithoutOperatorInput>
+  data: Prisma.XOR<Prisma.AppointmentUpdateWithoutOperadorInput, Prisma.AppointmentUncheckedUpdateWithoutOperadorInput>
 }
 
-export type AppointmentUpdateManyWithWhereWithoutOperatorInput = {
+export type AppointmentUpdateManyWithWhereWithoutOperadorInput = {
   where: Prisma.AppointmentScalarWhereInput
-  data: Prisma.XOR<Prisma.AppointmentUpdateManyMutationInput, Prisma.AppointmentUncheckedUpdateManyWithoutOperatorInput>
+  data: Prisma.XOR<Prisma.AppointmentUpdateManyMutationInput, Prisma.AppointmentUncheckedUpdateManyWithoutOperadorInput>
 }
 
-export type AppointmentCreateWithoutPatientInput = {
+export type AppointmentCreateWithoutPacienteInput = {
   id?: string
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  owner?: Prisma.OwnerCreateNestedOneWithoutAppointmentsInput
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutAppointmentsInput
-  operator?: Prisma.OperatorCreateNestedOneWithoutAppointmentsInput
-  creator?: Prisma.UserCreateNestedOneWithoutCreatedAppointmentsInput
-  procedures?: Prisma.ProcedureCreateNestedManyWithoutAppointmentInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutAppointmentInput
-  emailReminders?: Prisma.EmailReminderCreateNestedManyWithoutAppointmentInput
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  propietario?: Prisma.OwnerCreateNestedOneWithoutCitasInput
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutCitasInput
+  operador?: Prisma.OperatorCreateNestedOneWithoutCitasInput
+  creador?: Prisma.UserCreateNestedOneWithoutCitasCreadasInput
+  procedimientos?: Prisma.ProcedureCreateNestedManyWithoutCitaInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutCitaInput
+  recordatoriosCorreo?: Prisma.EmailReminderCreateNestedManyWithoutCitaInput
 }
 
-export type AppointmentUncheckedCreateWithoutPatientInput = {
+export type AppointmentUncheckedCreateWithoutPacienteInput = {
   id?: string
-  ownerId?: string | null
-  veterinaryId?: string | null
-  operatorId?: string | null
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdBy?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  procedures?: Prisma.ProcedureUncheckedCreateNestedManyWithoutAppointmentInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutAppointmentInput
-  emailReminders?: Prisma.EmailReminderUncheckedCreateNestedManyWithoutAppointmentInput
+  propietarioId?: string | null
+  veterinariaId?: string | null
+  operadorId?: string | null
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoPor?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  procedimientos?: Prisma.ProcedureUncheckedCreateNestedManyWithoutCitaInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutCitaInput
+  recordatoriosCorreo?: Prisma.EmailReminderUncheckedCreateNestedManyWithoutCitaInput
 }
 
-export type AppointmentCreateOrConnectWithoutPatientInput = {
+export type AppointmentCreateOrConnectWithoutPacienteInput = {
   where: Prisma.AppointmentWhereUniqueInput
-  create: Prisma.XOR<Prisma.AppointmentCreateWithoutPatientInput, Prisma.AppointmentUncheckedCreateWithoutPatientInput>
+  create: Prisma.XOR<Prisma.AppointmentCreateWithoutPacienteInput, Prisma.AppointmentUncheckedCreateWithoutPacienteInput>
 }
 
-export type AppointmentCreateManyPatientInputEnvelope = {
-  data: Prisma.AppointmentCreateManyPatientInput | Prisma.AppointmentCreateManyPatientInput[]
+export type AppointmentCreateManyPacienteInputEnvelope = {
+  data: Prisma.AppointmentCreateManyPacienteInput | Prisma.AppointmentCreateManyPacienteInput[]
   skipDuplicates?: boolean
 }
 
-export type AppointmentUpsertWithWhereUniqueWithoutPatientInput = {
+export type AppointmentUpsertWithWhereUniqueWithoutPacienteInput = {
   where: Prisma.AppointmentWhereUniqueInput
-  update: Prisma.XOR<Prisma.AppointmentUpdateWithoutPatientInput, Prisma.AppointmentUncheckedUpdateWithoutPatientInput>
-  create: Prisma.XOR<Prisma.AppointmentCreateWithoutPatientInput, Prisma.AppointmentUncheckedCreateWithoutPatientInput>
+  update: Prisma.XOR<Prisma.AppointmentUpdateWithoutPacienteInput, Prisma.AppointmentUncheckedUpdateWithoutPacienteInput>
+  create: Prisma.XOR<Prisma.AppointmentCreateWithoutPacienteInput, Prisma.AppointmentUncheckedCreateWithoutPacienteInput>
 }
 
-export type AppointmentUpdateWithWhereUniqueWithoutPatientInput = {
+export type AppointmentUpdateWithWhereUniqueWithoutPacienteInput = {
   where: Prisma.AppointmentWhereUniqueInput
-  data: Prisma.XOR<Prisma.AppointmentUpdateWithoutPatientInput, Prisma.AppointmentUncheckedUpdateWithoutPatientInput>
+  data: Prisma.XOR<Prisma.AppointmentUpdateWithoutPacienteInput, Prisma.AppointmentUncheckedUpdateWithoutPacienteInput>
 }
 
-export type AppointmentUpdateManyWithWhereWithoutPatientInput = {
+export type AppointmentUpdateManyWithWhereWithoutPacienteInput = {
   where: Prisma.AppointmentScalarWhereInput
-  data: Prisma.XOR<Prisma.AppointmentUpdateManyMutationInput, Prisma.AppointmentUncheckedUpdateManyWithoutPatientInput>
+  data: Prisma.XOR<Prisma.AppointmentUpdateManyMutationInput, Prisma.AppointmentUncheckedUpdateManyWithoutPacienteInput>
 }
 
-export type AppointmentCreateWithoutProceduresInput = {
+export type AppointmentCreateWithoutProcedimientosInput = {
   id?: string
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  patient: Prisma.PatientCreateNestedOneWithoutAppointmentsInput
-  owner?: Prisma.OwnerCreateNestedOneWithoutAppointmentsInput
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutAppointmentsInput
-  operator?: Prisma.OperatorCreateNestedOneWithoutAppointmentsInput
-  creator?: Prisma.UserCreateNestedOneWithoutCreatedAppointmentsInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutAppointmentInput
-  emailReminders?: Prisma.EmailReminderCreateNestedManyWithoutAppointmentInput
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  paciente: Prisma.PatientCreateNestedOneWithoutCitasInput
+  propietario?: Prisma.OwnerCreateNestedOneWithoutCitasInput
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutCitasInput
+  operador?: Prisma.OperatorCreateNestedOneWithoutCitasInput
+  creador?: Prisma.UserCreateNestedOneWithoutCitasCreadasInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutCitaInput
+  recordatoriosCorreo?: Prisma.EmailReminderCreateNestedManyWithoutCitaInput
 }
 
-export type AppointmentUncheckedCreateWithoutProceduresInput = {
+export type AppointmentUncheckedCreateWithoutProcedimientosInput = {
   id?: string
-  patientId: string
-  ownerId?: string | null
-  veterinaryId?: string | null
-  operatorId?: string | null
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdBy?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutAppointmentInput
-  emailReminders?: Prisma.EmailReminderUncheckedCreateNestedManyWithoutAppointmentInput
+  pacienteId: string
+  propietarioId?: string | null
+  veterinariaId?: string | null
+  operadorId?: string | null
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoPor?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutCitaInput
+  recordatoriosCorreo?: Prisma.EmailReminderUncheckedCreateNestedManyWithoutCitaInput
 }
 
-export type AppointmentCreateOrConnectWithoutProceduresInput = {
+export type AppointmentCreateOrConnectWithoutProcedimientosInput = {
   where: Prisma.AppointmentWhereUniqueInput
-  create: Prisma.XOR<Prisma.AppointmentCreateWithoutProceduresInput, Prisma.AppointmentUncheckedCreateWithoutProceduresInput>
+  create: Prisma.XOR<Prisma.AppointmentCreateWithoutProcedimientosInput, Prisma.AppointmentUncheckedCreateWithoutProcedimientosInput>
 }
 
-export type AppointmentUpsertWithoutProceduresInput = {
-  update: Prisma.XOR<Prisma.AppointmentUpdateWithoutProceduresInput, Prisma.AppointmentUncheckedUpdateWithoutProceduresInput>
-  create: Prisma.XOR<Prisma.AppointmentCreateWithoutProceduresInput, Prisma.AppointmentUncheckedCreateWithoutProceduresInput>
+export type AppointmentUpsertWithoutProcedimientosInput = {
+  update: Prisma.XOR<Prisma.AppointmentUpdateWithoutProcedimientosInput, Prisma.AppointmentUncheckedUpdateWithoutProcedimientosInput>
+  create: Prisma.XOR<Prisma.AppointmentCreateWithoutProcedimientosInput, Prisma.AppointmentUncheckedCreateWithoutProcedimientosInput>
   where?: Prisma.AppointmentWhereInput
 }
 
-export type AppointmentUpdateToOneWithWhereWithoutProceduresInput = {
+export type AppointmentUpdateToOneWithWhereWithoutProcedimientosInput = {
   where?: Prisma.AppointmentWhereInput
-  data: Prisma.XOR<Prisma.AppointmentUpdateWithoutProceduresInput, Prisma.AppointmentUncheckedUpdateWithoutProceduresInput>
+  data: Prisma.XOR<Prisma.AppointmentUpdateWithoutProcedimientosInput, Prisma.AppointmentUncheckedUpdateWithoutProcedimientosInput>
 }
 
-export type AppointmentUpdateWithoutProceduresInput = {
+export type AppointmentUpdateWithoutProcedimientosInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  patient?: Prisma.PatientUpdateOneRequiredWithoutAppointmentsNestedInput
-  owner?: Prisma.OwnerUpdateOneWithoutAppointmentsNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutAppointmentsNestedInput
-  operator?: Prisma.OperatorUpdateOneWithoutAppointmentsNestedInput
-  creator?: Prisma.UserUpdateOneWithoutCreatedAppointmentsNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutAppointmentNestedInput
-  emailReminders?: Prisma.EmailReminderUpdateManyWithoutAppointmentNestedInput
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  paciente?: Prisma.PatientUpdateOneRequiredWithoutCitasNestedInput
+  propietario?: Prisma.OwnerUpdateOneWithoutCitasNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutCitasNestedInput
+  operador?: Prisma.OperatorUpdateOneWithoutCitasNestedInput
+  creador?: Prisma.UserUpdateOneWithoutCitasCreadasNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutCitaNestedInput
+  recordatoriosCorreo?: Prisma.EmailReminderUpdateManyWithoutCitaNestedInput
 }
 
-export type AppointmentUncheckedUpdateWithoutProceduresInput = {
+export type AppointmentUncheckedUpdateWithoutProcedimientosInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  operatorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutAppointmentNestedInput
-  emailReminders?: Prisma.EmailReminderUncheckedUpdateManyWithoutAppointmentNestedInput
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  propietarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  operadorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutCitaNestedInput
+  recordatoriosCorreo?: Prisma.EmailReminderUncheckedUpdateManyWithoutCitaNestedInput
 }
 
-export type AppointmentCreateWithoutClinicalRecordsInput = {
+export type AppointmentCreateWithoutRegistrosClinicoInput = {
   id?: string
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  patient: Prisma.PatientCreateNestedOneWithoutAppointmentsInput
-  owner?: Prisma.OwnerCreateNestedOneWithoutAppointmentsInput
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutAppointmentsInput
-  operator?: Prisma.OperatorCreateNestedOneWithoutAppointmentsInput
-  creator?: Prisma.UserCreateNestedOneWithoutCreatedAppointmentsInput
-  procedures?: Prisma.ProcedureCreateNestedManyWithoutAppointmentInput
-  emailReminders?: Prisma.EmailReminderCreateNestedManyWithoutAppointmentInput
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  paciente: Prisma.PatientCreateNestedOneWithoutCitasInput
+  propietario?: Prisma.OwnerCreateNestedOneWithoutCitasInput
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutCitasInput
+  operador?: Prisma.OperatorCreateNestedOneWithoutCitasInput
+  creador?: Prisma.UserCreateNestedOneWithoutCitasCreadasInput
+  procedimientos?: Prisma.ProcedureCreateNestedManyWithoutCitaInput
+  recordatoriosCorreo?: Prisma.EmailReminderCreateNestedManyWithoutCitaInput
 }
 
-export type AppointmentUncheckedCreateWithoutClinicalRecordsInput = {
+export type AppointmentUncheckedCreateWithoutRegistrosClinicoInput = {
   id?: string
-  patientId: string
-  ownerId?: string | null
-  veterinaryId?: string | null
-  operatorId?: string | null
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdBy?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  procedures?: Prisma.ProcedureUncheckedCreateNestedManyWithoutAppointmentInput
-  emailReminders?: Prisma.EmailReminderUncheckedCreateNestedManyWithoutAppointmentInput
+  pacienteId: string
+  propietarioId?: string | null
+  veterinariaId?: string | null
+  operadorId?: string | null
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoPor?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  procedimientos?: Prisma.ProcedureUncheckedCreateNestedManyWithoutCitaInput
+  recordatoriosCorreo?: Prisma.EmailReminderUncheckedCreateNestedManyWithoutCitaInput
 }
 
-export type AppointmentCreateOrConnectWithoutClinicalRecordsInput = {
+export type AppointmentCreateOrConnectWithoutRegistrosClinicoInput = {
   where: Prisma.AppointmentWhereUniqueInput
-  create: Prisma.XOR<Prisma.AppointmentCreateWithoutClinicalRecordsInput, Prisma.AppointmentUncheckedCreateWithoutClinicalRecordsInput>
+  create: Prisma.XOR<Prisma.AppointmentCreateWithoutRegistrosClinicoInput, Prisma.AppointmentUncheckedCreateWithoutRegistrosClinicoInput>
 }
 
-export type AppointmentUpsertWithoutClinicalRecordsInput = {
-  update: Prisma.XOR<Prisma.AppointmentUpdateWithoutClinicalRecordsInput, Prisma.AppointmentUncheckedUpdateWithoutClinicalRecordsInput>
-  create: Prisma.XOR<Prisma.AppointmentCreateWithoutClinicalRecordsInput, Prisma.AppointmentUncheckedCreateWithoutClinicalRecordsInput>
+export type AppointmentUpsertWithoutRegistrosClinicoInput = {
+  update: Prisma.XOR<Prisma.AppointmentUpdateWithoutRegistrosClinicoInput, Prisma.AppointmentUncheckedUpdateWithoutRegistrosClinicoInput>
+  create: Prisma.XOR<Prisma.AppointmentCreateWithoutRegistrosClinicoInput, Prisma.AppointmentUncheckedCreateWithoutRegistrosClinicoInput>
   where?: Prisma.AppointmentWhereInput
 }
 
-export type AppointmentUpdateToOneWithWhereWithoutClinicalRecordsInput = {
+export type AppointmentUpdateToOneWithWhereWithoutRegistrosClinicoInput = {
   where?: Prisma.AppointmentWhereInput
-  data: Prisma.XOR<Prisma.AppointmentUpdateWithoutClinicalRecordsInput, Prisma.AppointmentUncheckedUpdateWithoutClinicalRecordsInput>
+  data: Prisma.XOR<Prisma.AppointmentUpdateWithoutRegistrosClinicoInput, Prisma.AppointmentUncheckedUpdateWithoutRegistrosClinicoInput>
 }
 
-export type AppointmentUpdateWithoutClinicalRecordsInput = {
+export type AppointmentUpdateWithoutRegistrosClinicoInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  patient?: Prisma.PatientUpdateOneRequiredWithoutAppointmentsNestedInput
-  owner?: Prisma.OwnerUpdateOneWithoutAppointmentsNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutAppointmentsNestedInput
-  operator?: Prisma.OperatorUpdateOneWithoutAppointmentsNestedInput
-  creator?: Prisma.UserUpdateOneWithoutCreatedAppointmentsNestedInput
-  procedures?: Prisma.ProcedureUpdateManyWithoutAppointmentNestedInput
-  emailReminders?: Prisma.EmailReminderUpdateManyWithoutAppointmentNestedInput
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  paciente?: Prisma.PatientUpdateOneRequiredWithoutCitasNestedInput
+  propietario?: Prisma.OwnerUpdateOneWithoutCitasNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutCitasNestedInput
+  operador?: Prisma.OperatorUpdateOneWithoutCitasNestedInput
+  creador?: Prisma.UserUpdateOneWithoutCitasCreadasNestedInput
+  procedimientos?: Prisma.ProcedureUpdateManyWithoutCitaNestedInput
+  recordatoriosCorreo?: Prisma.EmailReminderUpdateManyWithoutCitaNestedInput
 }
 
-export type AppointmentUncheckedUpdateWithoutClinicalRecordsInput = {
+export type AppointmentUncheckedUpdateWithoutRegistrosClinicoInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  operatorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  procedures?: Prisma.ProcedureUncheckedUpdateManyWithoutAppointmentNestedInput
-  emailReminders?: Prisma.EmailReminderUncheckedUpdateManyWithoutAppointmentNestedInput
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  propietarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  operadorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  procedimientos?: Prisma.ProcedureUncheckedUpdateManyWithoutCitaNestedInput
+  recordatoriosCorreo?: Prisma.EmailReminderUncheckedUpdateManyWithoutCitaNestedInput
 }
 
-export type AppointmentCreateWithoutEmailRemindersInput = {
+export type AppointmentCreateWithoutRecordatoriosCorreoInput = {
   id?: string
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  patient: Prisma.PatientCreateNestedOneWithoutAppointmentsInput
-  owner?: Prisma.OwnerCreateNestedOneWithoutAppointmentsInput
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutAppointmentsInput
-  operator?: Prisma.OperatorCreateNestedOneWithoutAppointmentsInput
-  creator?: Prisma.UserCreateNestedOneWithoutCreatedAppointmentsInput
-  procedures?: Prisma.ProcedureCreateNestedManyWithoutAppointmentInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutAppointmentInput
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  paciente: Prisma.PatientCreateNestedOneWithoutCitasInput
+  propietario?: Prisma.OwnerCreateNestedOneWithoutCitasInput
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutCitasInput
+  operador?: Prisma.OperatorCreateNestedOneWithoutCitasInput
+  creador?: Prisma.UserCreateNestedOneWithoutCitasCreadasInput
+  procedimientos?: Prisma.ProcedureCreateNestedManyWithoutCitaInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutCitaInput
 }
 
-export type AppointmentUncheckedCreateWithoutEmailRemindersInput = {
+export type AppointmentUncheckedCreateWithoutRecordatoriosCorreoInput = {
   id?: string
-  patientId: string
-  ownerId?: string | null
-  veterinaryId?: string | null
-  operatorId?: string | null
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdBy?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  procedures?: Prisma.ProcedureUncheckedCreateNestedManyWithoutAppointmentInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutAppointmentInput
+  pacienteId: string
+  propietarioId?: string | null
+  veterinariaId?: string | null
+  operadorId?: string | null
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoPor?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  procedimientos?: Prisma.ProcedureUncheckedCreateNestedManyWithoutCitaInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutCitaInput
 }
 
-export type AppointmentCreateOrConnectWithoutEmailRemindersInput = {
+export type AppointmentCreateOrConnectWithoutRecordatoriosCorreoInput = {
   where: Prisma.AppointmentWhereUniqueInput
-  create: Prisma.XOR<Prisma.AppointmentCreateWithoutEmailRemindersInput, Prisma.AppointmentUncheckedCreateWithoutEmailRemindersInput>
+  create: Prisma.XOR<Prisma.AppointmentCreateWithoutRecordatoriosCorreoInput, Prisma.AppointmentUncheckedCreateWithoutRecordatoriosCorreoInput>
 }
 
-export type AppointmentUpsertWithoutEmailRemindersInput = {
-  update: Prisma.XOR<Prisma.AppointmentUpdateWithoutEmailRemindersInput, Prisma.AppointmentUncheckedUpdateWithoutEmailRemindersInput>
-  create: Prisma.XOR<Prisma.AppointmentCreateWithoutEmailRemindersInput, Prisma.AppointmentUncheckedCreateWithoutEmailRemindersInput>
+export type AppointmentUpsertWithoutRecordatoriosCorreoInput = {
+  update: Prisma.XOR<Prisma.AppointmentUpdateWithoutRecordatoriosCorreoInput, Prisma.AppointmentUncheckedUpdateWithoutRecordatoriosCorreoInput>
+  create: Prisma.XOR<Prisma.AppointmentCreateWithoutRecordatoriosCorreoInput, Prisma.AppointmentUncheckedCreateWithoutRecordatoriosCorreoInput>
   where?: Prisma.AppointmentWhereInput
 }
 
-export type AppointmentUpdateToOneWithWhereWithoutEmailRemindersInput = {
+export type AppointmentUpdateToOneWithWhereWithoutRecordatoriosCorreoInput = {
   where?: Prisma.AppointmentWhereInput
-  data: Prisma.XOR<Prisma.AppointmentUpdateWithoutEmailRemindersInput, Prisma.AppointmentUncheckedUpdateWithoutEmailRemindersInput>
+  data: Prisma.XOR<Prisma.AppointmentUpdateWithoutRecordatoriosCorreoInput, Prisma.AppointmentUncheckedUpdateWithoutRecordatoriosCorreoInput>
 }
 
-export type AppointmentUpdateWithoutEmailRemindersInput = {
+export type AppointmentUpdateWithoutRecordatoriosCorreoInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  patient?: Prisma.PatientUpdateOneRequiredWithoutAppointmentsNestedInput
-  owner?: Prisma.OwnerUpdateOneWithoutAppointmentsNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutAppointmentsNestedInput
-  operator?: Prisma.OperatorUpdateOneWithoutAppointmentsNestedInput
-  creator?: Prisma.UserUpdateOneWithoutCreatedAppointmentsNestedInput
-  procedures?: Prisma.ProcedureUpdateManyWithoutAppointmentNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutAppointmentNestedInput
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  paciente?: Prisma.PatientUpdateOneRequiredWithoutCitasNestedInput
+  propietario?: Prisma.OwnerUpdateOneWithoutCitasNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutCitasNestedInput
+  operador?: Prisma.OperatorUpdateOneWithoutCitasNestedInput
+  creador?: Prisma.UserUpdateOneWithoutCitasCreadasNestedInput
+  procedimientos?: Prisma.ProcedureUpdateManyWithoutCitaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutCitaNestedInput
 }
 
-export type AppointmentUncheckedUpdateWithoutEmailRemindersInput = {
+export type AppointmentUncheckedUpdateWithoutRecordatoriosCorreoInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  operatorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  procedures?: Prisma.ProcedureUncheckedUpdateManyWithoutAppointmentNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutAppointmentNestedInput
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  propietarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  operadorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  procedimientos?: Prisma.ProcedureUncheckedUpdateManyWithoutCitaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutCitaNestedInput
 }
 
-export type AppointmentCreateManyCreatorInput = {
+export type AppointmentCreateManyCreadorInput = {
   id?: string
-  patientId: string
-  ownerId?: string | null
-  veterinaryId?: string | null
-  operatorId?: string | null
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
+  pacienteId: string
+  propietarioId?: string | null
+  veterinariaId?: string | null
+  operadorId?: string | null
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
 }
 
-export type AppointmentUpdateWithoutCreatorInput = {
+export type AppointmentUpdateWithoutCreadorInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  patient?: Prisma.PatientUpdateOneRequiredWithoutAppointmentsNestedInput
-  owner?: Prisma.OwnerUpdateOneWithoutAppointmentsNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutAppointmentsNestedInput
-  operator?: Prisma.OperatorUpdateOneWithoutAppointmentsNestedInput
-  procedures?: Prisma.ProcedureUpdateManyWithoutAppointmentNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutAppointmentNestedInput
-  emailReminders?: Prisma.EmailReminderUpdateManyWithoutAppointmentNestedInput
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  paciente?: Prisma.PatientUpdateOneRequiredWithoutCitasNestedInput
+  propietario?: Prisma.OwnerUpdateOneWithoutCitasNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutCitasNestedInput
+  operador?: Prisma.OperatorUpdateOneWithoutCitasNestedInput
+  procedimientos?: Prisma.ProcedureUpdateManyWithoutCitaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutCitaNestedInput
+  recordatoriosCorreo?: Prisma.EmailReminderUpdateManyWithoutCitaNestedInput
 }
 
-export type AppointmentUncheckedUpdateWithoutCreatorInput = {
+export type AppointmentUncheckedUpdateWithoutCreadorInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  operatorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  procedures?: Prisma.ProcedureUncheckedUpdateManyWithoutAppointmentNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutAppointmentNestedInput
-  emailReminders?: Prisma.EmailReminderUncheckedUpdateManyWithoutAppointmentNestedInput
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  propietarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  operadorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  procedimientos?: Prisma.ProcedureUncheckedUpdateManyWithoutCitaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutCitaNestedInput
+  recordatoriosCorreo?: Prisma.EmailReminderUncheckedUpdateManyWithoutCitaNestedInput
 }
 
-export type AppointmentUncheckedUpdateManyWithoutCreatorInput = {
+export type AppointmentUncheckedUpdateManyWithoutCreadorInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  operatorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  propietarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  operadorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type AppointmentCreateManyVeterinaryInput = {
+export type AppointmentCreateManyVeterinariaInput = {
   id?: string
-  patientId: string
-  ownerId?: string | null
-  operatorId?: string | null
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdBy?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
+  pacienteId: string
+  propietarioId?: string | null
+  operadorId?: string | null
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoPor?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
 }
 
-export type AppointmentUpdateWithoutVeterinaryInput = {
+export type AppointmentUpdateWithoutVeterinariaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  patient?: Prisma.PatientUpdateOneRequiredWithoutAppointmentsNestedInput
-  owner?: Prisma.OwnerUpdateOneWithoutAppointmentsNestedInput
-  operator?: Prisma.OperatorUpdateOneWithoutAppointmentsNestedInput
-  creator?: Prisma.UserUpdateOneWithoutCreatedAppointmentsNestedInput
-  procedures?: Prisma.ProcedureUpdateManyWithoutAppointmentNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutAppointmentNestedInput
-  emailReminders?: Prisma.EmailReminderUpdateManyWithoutAppointmentNestedInput
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  paciente?: Prisma.PatientUpdateOneRequiredWithoutCitasNestedInput
+  propietario?: Prisma.OwnerUpdateOneWithoutCitasNestedInput
+  operador?: Prisma.OperatorUpdateOneWithoutCitasNestedInput
+  creador?: Prisma.UserUpdateOneWithoutCitasCreadasNestedInput
+  procedimientos?: Prisma.ProcedureUpdateManyWithoutCitaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutCitaNestedInput
+  recordatoriosCorreo?: Prisma.EmailReminderUpdateManyWithoutCitaNestedInput
 }
 
-export type AppointmentUncheckedUpdateWithoutVeterinaryInput = {
+export type AppointmentUncheckedUpdateWithoutVeterinariaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  operatorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  procedures?: Prisma.ProcedureUncheckedUpdateManyWithoutAppointmentNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutAppointmentNestedInput
-  emailReminders?: Prisma.EmailReminderUncheckedUpdateManyWithoutAppointmentNestedInput
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  propietarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  operadorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  procedimientos?: Prisma.ProcedureUncheckedUpdateManyWithoutCitaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutCitaNestedInput
+  recordatoriosCorreo?: Prisma.EmailReminderUncheckedUpdateManyWithoutCitaNestedInput
 }
 
-export type AppointmentUncheckedUpdateManyWithoutVeterinaryInput = {
+export type AppointmentUncheckedUpdateManyWithoutVeterinariaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  operatorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  propietarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  operadorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type AppointmentCreateManyOwnerInput = {
+export type AppointmentCreateManyPropietarioInput = {
   id?: string
-  patientId: string
-  veterinaryId?: string | null
-  operatorId?: string | null
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdBy?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
+  pacienteId: string
+  veterinariaId?: string | null
+  operadorId?: string | null
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoPor?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
 }
 
-export type AppointmentUpdateWithoutOwnerInput = {
+export type AppointmentUpdateWithoutPropietarioInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  patient?: Prisma.PatientUpdateOneRequiredWithoutAppointmentsNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutAppointmentsNestedInput
-  operator?: Prisma.OperatorUpdateOneWithoutAppointmentsNestedInput
-  creator?: Prisma.UserUpdateOneWithoutCreatedAppointmentsNestedInput
-  procedures?: Prisma.ProcedureUpdateManyWithoutAppointmentNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutAppointmentNestedInput
-  emailReminders?: Prisma.EmailReminderUpdateManyWithoutAppointmentNestedInput
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  paciente?: Prisma.PatientUpdateOneRequiredWithoutCitasNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutCitasNestedInput
+  operador?: Prisma.OperatorUpdateOneWithoutCitasNestedInput
+  creador?: Prisma.UserUpdateOneWithoutCitasCreadasNestedInput
+  procedimientos?: Prisma.ProcedureUpdateManyWithoutCitaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutCitaNestedInput
+  recordatoriosCorreo?: Prisma.EmailReminderUpdateManyWithoutCitaNestedInput
 }
 
-export type AppointmentUncheckedUpdateWithoutOwnerInput = {
+export type AppointmentUncheckedUpdateWithoutPropietarioInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  operatorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  procedures?: Prisma.ProcedureUncheckedUpdateManyWithoutAppointmentNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutAppointmentNestedInput
-  emailReminders?: Prisma.EmailReminderUncheckedUpdateManyWithoutAppointmentNestedInput
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  operadorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  procedimientos?: Prisma.ProcedureUncheckedUpdateManyWithoutCitaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutCitaNestedInput
+  recordatoriosCorreo?: Prisma.EmailReminderUncheckedUpdateManyWithoutCitaNestedInput
 }
 
-export type AppointmentUncheckedUpdateManyWithoutOwnerInput = {
+export type AppointmentUncheckedUpdateManyWithoutPropietarioInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  operatorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  operadorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type AppointmentCreateManyOperatorInput = {
+export type AppointmentCreateManyOperadorInput = {
   id?: string
-  patientId: string
-  ownerId?: string | null
-  veterinaryId?: string | null
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdBy?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
+  pacienteId: string
+  propietarioId?: string | null
+  veterinariaId?: string | null
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoPor?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
 }
 
-export type AppointmentUpdateWithoutOperatorInput = {
+export type AppointmentUpdateWithoutOperadorInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  patient?: Prisma.PatientUpdateOneRequiredWithoutAppointmentsNestedInput
-  owner?: Prisma.OwnerUpdateOneWithoutAppointmentsNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutAppointmentsNestedInput
-  creator?: Prisma.UserUpdateOneWithoutCreatedAppointmentsNestedInput
-  procedures?: Prisma.ProcedureUpdateManyWithoutAppointmentNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutAppointmentNestedInput
-  emailReminders?: Prisma.EmailReminderUpdateManyWithoutAppointmentNestedInput
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  paciente?: Prisma.PatientUpdateOneRequiredWithoutCitasNestedInput
+  propietario?: Prisma.OwnerUpdateOneWithoutCitasNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutCitasNestedInput
+  creador?: Prisma.UserUpdateOneWithoutCitasCreadasNestedInput
+  procedimientos?: Prisma.ProcedureUpdateManyWithoutCitaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutCitaNestedInput
+  recordatoriosCorreo?: Prisma.EmailReminderUpdateManyWithoutCitaNestedInput
 }
 
-export type AppointmentUncheckedUpdateWithoutOperatorInput = {
+export type AppointmentUncheckedUpdateWithoutOperadorInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  procedures?: Prisma.ProcedureUncheckedUpdateManyWithoutAppointmentNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutAppointmentNestedInput
-  emailReminders?: Prisma.EmailReminderUncheckedUpdateManyWithoutAppointmentNestedInput
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  propietarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  procedimientos?: Prisma.ProcedureUncheckedUpdateManyWithoutCitaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutCitaNestedInput
+  recordatoriosCorreo?: Prisma.EmailReminderUncheckedUpdateManyWithoutCitaNestedInput
 }
 
-export type AppointmentUncheckedUpdateManyWithoutOperatorInput = {
+export type AppointmentUncheckedUpdateManyWithoutOperadorInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  propietarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type AppointmentCreateManyPatientInput = {
+export type AppointmentCreateManyPacienteInput = {
   id?: string
-  ownerId?: string | null
-  veterinaryId?: string | null
-  operatorId?: string | null
-  dateTime: Date | string
-  durationMinutes?: number
-  status?: $Enums.AppointmentStatus
-  appointmentType?: string | null
-  reason: string
-  notes?: string | null
-  googleCalendarEventId?: string | null
-  reminderSent?: boolean
-  reminderSentAt?: Date | string | null
-  cancelledAt?: Date | string | null
-  cancellationReason?: string | null
-  createdBy?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
+  propietarioId?: string | null
+  veterinariaId?: string | null
+  operadorId?: string | null
+  fechaHora: Date | string
+  duracionMinutos?: number
+  estado?: $Enums.AppointmentStatus
+  tipoCita?: string | null
+  motivo: string
+  notas?: string | null
+  idEventoGoogleCalendar?: string | null
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: Date | string | null
+  canceladoEn?: Date | string | null
+  motivoCancelacion?: string | null
+  creadoPor?: string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
 }
 
-export type AppointmentUpdateWithoutPatientInput = {
+export type AppointmentUpdateWithoutPacienteInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  owner?: Prisma.OwnerUpdateOneWithoutAppointmentsNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutAppointmentsNestedInput
-  operator?: Prisma.OperatorUpdateOneWithoutAppointmentsNestedInput
-  creator?: Prisma.UserUpdateOneWithoutCreatedAppointmentsNestedInput
-  procedures?: Prisma.ProcedureUpdateManyWithoutAppointmentNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutAppointmentNestedInput
-  emailReminders?: Prisma.EmailReminderUpdateManyWithoutAppointmentNestedInput
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  propietario?: Prisma.OwnerUpdateOneWithoutCitasNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutCitasNestedInput
+  operador?: Prisma.OperatorUpdateOneWithoutCitasNestedInput
+  creador?: Prisma.UserUpdateOneWithoutCitasCreadasNestedInput
+  procedimientos?: Prisma.ProcedureUpdateManyWithoutCitaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutCitaNestedInput
+  recordatoriosCorreo?: Prisma.EmailReminderUpdateManyWithoutCitaNestedInput
 }
 
-export type AppointmentUncheckedUpdateWithoutPatientInput = {
+export type AppointmentUncheckedUpdateWithoutPacienteInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  operatorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  procedures?: Prisma.ProcedureUncheckedUpdateManyWithoutAppointmentNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutAppointmentNestedInput
-  emailReminders?: Prisma.EmailReminderUncheckedUpdateManyWithoutAppointmentNestedInput
+  propietarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  operadorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  procedimientos?: Prisma.ProcedureUncheckedUpdateManyWithoutCitaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutCitaNestedInput
+  recordatoriosCorreo?: Prisma.EmailReminderUncheckedUpdateManyWithoutCitaNestedInput
 }
 
-export type AppointmentUncheckedUpdateManyWithoutPatientInput = {
+export type AppointmentUncheckedUpdateManyWithoutPacienteInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  operatorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  dateTime?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  durationMinutes?: Prisma.IntFieldUpdateOperationsInput | number
-  status?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
-  appointmentType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reason?: Prisma.StringFieldUpdateOperationsInput | string
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  googleCalendarEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  reminderSent?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  reminderSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancelledAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  cancellationReason?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  propietarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  operadorId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaHora?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  duracionMinutos?: Prisma.IntFieldUpdateOperationsInput | number
+  estado?: Prisma.EnumAppointmentStatusFieldUpdateOperationsInput | $Enums.AppointmentStatus
+  tipoCita?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  motivo?: Prisma.StringFieldUpdateOperationsInput | string
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  idEventoGoogleCalendar?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  recordatorioEnviado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  recordatorioEnviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  canceladoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 
@@ -2161,15 +2161,15 @@ export type AppointmentUncheckedUpdateManyWithoutPatientInput = {
  */
 
 export type AppointmentCountOutputType = {
-  procedures: number
-  clinicalRecords: number
-  emailReminders: number
+  procedimientos: number
+  registrosClinico: number
+  recordatoriosCorreo: number
 }
 
 export type AppointmentCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  procedures?: boolean | AppointmentCountOutputTypeCountProceduresArgs
-  clinicalRecords?: boolean | AppointmentCountOutputTypeCountClinicalRecordsArgs
-  emailReminders?: boolean | AppointmentCountOutputTypeCountEmailRemindersArgs
+  procedimientos?: boolean | AppointmentCountOutputTypeCountProcedimientosArgs
+  registrosClinico?: boolean | AppointmentCountOutputTypeCountRegistrosClinicoArgs
+  recordatoriosCorreo?: boolean | AppointmentCountOutputTypeCountRecordatoriosCorreoArgs
 }
 
 /**
@@ -2185,191 +2185,191 @@ export type AppointmentCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.
 /**
  * AppointmentCountOutputType without action
  */
-export type AppointmentCountOutputTypeCountProceduresArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type AppointmentCountOutputTypeCountProcedimientosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.ProcedureWhereInput
 }
 
 /**
  * AppointmentCountOutputType without action
  */
-export type AppointmentCountOutputTypeCountClinicalRecordsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type AppointmentCountOutputTypeCountRegistrosClinicoArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.ClinicalRecordWhereInput
 }
 
 /**
  * AppointmentCountOutputType without action
  */
-export type AppointmentCountOutputTypeCountEmailRemindersArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type AppointmentCountOutputTypeCountRecordatoriosCorreoArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.EmailReminderWhereInput
 }
 
 
 export type AppointmentSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  patientId?: boolean
-  ownerId?: boolean
-  veterinaryId?: boolean
-  operatorId?: boolean
-  dateTime?: boolean
-  durationMinutes?: boolean
-  status?: boolean
-  appointmentType?: boolean
-  reason?: boolean
-  notes?: boolean
-  googleCalendarEventId?: boolean
-  reminderSent?: boolean
-  reminderSentAt?: boolean
-  cancelledAt?: boolean
-  cancellationReason?: boolean
-  createdBy?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
-  patient?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
-  owner?: boolean | Prisma.Appointment$ownerArgs<ExtArgs>
-  veterinary?: boolean | Prisma.Appointment$veterinaryArgs<ExtArgs>
-  operator?: boolean | Prisma.Appointment$operatorArgs<ExtArgs>
-  creator?: boolean | Prisma.Appointment$creatorArgs<ExtArgs>
-  procedures?: boolean | Prisma.Appointment$proceduresArgs<ExtArgs>
-  clinicalRecords?: boolean | Prisma.Appointment$clinicalRecordsArgs<ExtArgs>
-  emailReminders?: boolean | Prisma.Appointment$emailRemindersArgs<ExtArgs>
+  pacienteId?: boolean
+  propietarioId?: boolean
+  veterinariaId?: boolean
+  operadorId?: boolean
+  fechaHora?: boolean
+  duracionMinutos?: boolean
+  estado?: boolean
+  tipoCita?: boolean
+  motivo?: boolean
+  notas?: boolean
+  idEventoGoogleCalendar?: boolean
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: boolean
+  canceladoEn?: boolean
+  motivoCancelacion?: boolean
+  creadoPor?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
+  paciente?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
+  propietario?: boolean | Prisma.Appointment$propietarioArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.Appointment$veterinariaArgs<ExtArgs>
+  operador?: boolean | Prisma.Appointment$operadorArgs<ExtArgs>
+  creador?: boolean | Prisma.Appointment$creadorArgs<ExtArgs>
+  procedimientos?: boolean | Prisma.Appointment$procedimientosArgs<ExtArgs>
+  registrosClinico?: boolean | Prisma.Appointment$registrosClinicoArgs<ExtArgs>
+  recordatoriosCorreo?: boolean | Prisma.Appointment$recordatoriosCorreoArgs<ExtArgs>
   _count?: boolean | Prisma.AppointmentCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["appointment"]>
 
 export type AppointmentSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  patientId?: boolean
-  ownerId?: boolean
-  veterinaryId?: boolean
-  operatorId?: boolean
-  dateTime?: boolean
-  durationMinutes?: boolean
-  status?: boolean
-  appointmentType?: boolean
-  reason?: boolean
-  notes?: boolean
-  googleCalendarEventId?: boolean
-  reminderSent?: boolean
-  reminderSentAt?: boolean
-  cancelledAt?: boolean
-  cancellationReason?: boolean
-  createdBy?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
-  patient?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
-  owner?: boolean | Prisma.Appointment$ownerArgs<ExtArgs>
-  veterinary?: boolean | Prisma.Appointment$veterinaryArgs<ExtArgs>
-  operator?: boolean | Prisma.Appointment$operatorArgs<ExtArgs>
-  creator?: boolean | Prisma.Appointment$creatorArgs<ExtArgs>
+  pacienteId?: boolean
+  propietarioId?: boolean
+  veterinariaId?: boolean
+  operadorId?: boolean
+  fechaHora?: boolean
+  duracionMinutos?: boolean
+  estado?: boolean
+  tipoCita?: boolean
+  motivo?: boolean
+  notas?: boolean
+  idEventoGoogleCalendar?: boolean
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: boolean
+  canceladoEn?: boolean
+  motivoCancelacion?: boolean
+  creadoPor?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
+  paciente?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
+  propietario?: boolean | Prisma.Appointment$propietarioArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.Appointment$veterinariaArgs<ExtArgs>
+  operador?: boolean | Prisma.Appointment$operadorArgs<ExtArgs>
+  creador?: boolean | Prisma.Appointment$creadorArgs<ExtArgs>
 }, ExtArgs["result"]["appointment"]>
 
 export type AppointmentSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  patientId?: boolean
-  ownerId?: boolean
-  veterinaryId?: boolean
-  operatorId?: boolean
-  dateTime?: boolean
-  durationMinutes?: boolean
-  status?: boolean
-  appointmentType?: boolean
-  reason?: boolean
-  notes?: boolean
-  googleCalendarEventId?: boolean
-  reminderSent?: boolean
-  reminderSentAt?: boolean
-  cancelledAt?: boolean
-  cancellationReason?: boolean
-  createdBy?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
-  patient?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
-  owner?: boolean | Prisma.Appointment$ownerArgs<ExtArgs>
-  veterinary?: boolean | Prisma.Appointment$veterinaryArgs<ExtArgs>
-  operator?: boolean | Prisma.Appointment$operatorArgs<ExtArgs>
-  creator?: boolean | Prisma.Appointment$creatorArgs<ExtArgs>
+  pacienteId?: boolean
+  propietarioId?: boolean
+  veterinariaId?: boolean
+  operadorId?: boolean
+  fechaHora?: boolean
+  duracionMinutos?: boolean
+  estado?: boolean
+  tipoCita?: boolean
+  motivo?: boolean
+  notas?: boolean
+  idEventoGoogleCalendar?: boolean
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: boolean
+  canceladoEn?: boolean
+  motivoCancelacion?: boolean
+  creadoPor?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
+  paciente?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
+  propietario?: boolean | Prisma.Appointment$propietarioArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.Appointment$veterinariaArgs<ExtArgs>
+  operador?: boolean | Prisma.Appointment$operadorArgs<ExtArgs>
+  creador?: boolean | Prisma.Appointment$creadorArgs<ExtArgs>
 }, ExtArgs["result"]["appointment"]>
 
 export type AppointmentSelectScalar = {
   id?: boolean
-  patientId?: boolean
-  ownerId?: boolean
-  veterinaryId?: boolean
-  operatorId?: boolean
-  dateTime?: boolean
-  durationMinutes?: boolean
-  status?: boolean
-  appointmentType?: boolean
-  reason?: boolean
-  notes?: boolean
-  googleCalendarEventId?: boolean
-  reminderSent?: boolean
-  reminderSentAt?: boolean
-  cancelledAt?: boolean
-  cancellationReason?: boolean
-  createdBy?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
+  pacienteId?: boolean
+  propietarioId?: boolean
+  veterinariaId?: boolean
+  operadorId?: boolean
+  fechaHora?: boolean
+  duracionMinutos?: boolean
+  estado?: boolean
+  tipoCita?: boolean
+  motivo?: boolean
+  notas?: boolean
+  idEventoGoogleCalendar?: boolean
+  recordatorioEnviado?: boolean
+  recordatorioEnviadoEn?: boolean
+  canceladoEn?: boolean
+  motivoCancelacion?: boolean
+  creadoPor?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
 }
 
-export type AppointmentOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "patientId" | "ownerId" | "veterinaryId" | "operatorId" | "dateTime" | "durationMinutes" | "status" | "appointmentType" | "reason" | "notes" | "googleCalendarEventId" | "reminderSent" | "reminderSentAt" | "cancelledAt" | "cancellationReason" | "createdBy" | "createdAt" | "updatedAt", ExtArgs["result"]["appointment"]>
+export type AppointmentOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "pacienteId" | "propietarioId" | "veterinariaId" | "operadorId" | "fechaHora" | "duracionMinutos" | "estado" | "tipoCita" | "motivo" | "notas" | "idEventoGoogleCalendar" | "recordatorioEnviado" | "recordatorioEnviadoEn" | "canceladoEn" | "motivoCancelacion" | "creadoPor" | "creadoEn" | "actualizadoEn", ExtArgs["result"]["appointment"]>
 export type AppointmentInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  patient?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
-  owner?: boolean | Prisma.Appointment$ownerArgs<ExtArgs>
-  veterinary?: boolean | Prisma.Appointment$veterinaryArgs<ExtArgs>
-  operator?: boolean | Prisma.Appointment$operatorArgs<ExtArgs>
-  creator?: boolean | Prisma.Appointment$creatorArgs<ExtArgs>
-  procedures?: boolean | Prisma.Appointment$proceduresArgs<ExtArgs>
-  clinicalRecords?: boolean | Prisma.Appointment$clinicalRecordsArgs<ExtArgs>
-  emailReminders?: boolean | Prisma.Appointment$emailRemindersArgs<ExtArgs>
+  paciente?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
+  propietario?: boolean | Prisma.Appointment$propietarioArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.Appointment$veterinariaArgs<ExtArgs>
+  operador?: boolean | Prisma.Appointment$operadorArgs<ExtArgs>
+  creador?: boolean | Prisma.Appointment$creadorArgs<ExtArgs>
+  procedimientos?: boolean | Prisma.Appointment$procedimientosArgs<ExtArgs>
+  registrosClinico?: boolean | Prisma.Appointment$registrosClinicoArgs<ExtArgs>
+  recordatoriosCorreo?: boolean | Prisma.Appointment$recordatoriosCorreoArgs<ExtArgs>
   _count?: boolean | Prisma.AppointmentCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type AppointmentIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  patient?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
-  owner?: boolean | Prisma.Appointment$ownerArgs<ExtArgs>
-  veterinary?: boolean | Prisma.Appointment$veterinaryArgs<ExtArgs>
-  operator?: boolean | Prisma.Appointment$operatorArgs<ExtArgs>
-  creator?: boolean | Prisma.Appointment$creatorArgs<ExtArgs>
+  paciente?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
+  propietario?: boolean | Prisma.Appointment$propietarioArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.Appointment$veterinariaArgs<ExtArgs>
+  operador?: boolean | Prisma.Appointment$operadorArgs<ExtArgs>
+  creador?: boolean | Prisma.Appointment$creadorArgs<ExtArgs>
 }
 export type AppointmentIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  patient?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
-  owner?: boolean | Prisma.Appointment$ownerArgs<ExtArgs>
-  veterinary?: boolean | Prisma.Appointment$veterinaryArgs<ExtArgs>
-  operator?: boolean | Prisma.Appointment$operatorArgs<ExtArgs>
-  creator?: boolean | Prisma.Appointment$creatorArgs<ExtArgs>
+  paciente?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
+  propietario?: boolean | Prisma.Appointment$propietarioArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.Appointment$veterinariaArgs<ExtArgs>
+  operador?: boolean | Prisma.Appointment$operadorArgs<ExtArgs>
+  creador?: boolean | Prisma.Appointment$creadorArgs<ExtArgs>
 }
 
 export type $AppointmentPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Appointment"
   objects: {
-    patient: Prisma.$PatientPayload<ExtArgs>
-    owner: Prisma.$OwnerPayload<ExtArgs> | null
-    veterinary: Prisma.$VeterinaryPayload<ExtArgs> | null
-    operator: Prisma.$OperatorPayload<ExtArgs> | null
-    creator: Prisma.$UserPayload<ExtArgs> | null
-    procedures: Prisma.$ProcedurePayload<ExtArgs>[]
-    clinicalRecords: Prisma.$ClinicalRecordPayload<ExtArgs>[]
-    emailReminders: Prisma.$EmailReminderPayload<ExtArgs>[]
+    paciente: Prisma.$PatientPayload<ExtArgs>
+    propietario: Prisma.$OwnerPayload<ExtArgs> | null
+    veterinaria: Prisma.$VeterinaryPayload<ExtArgs> | null
+    operador: Prisma.$OperatorPayload<ExtArgs> | null
+    creador: Prisma.$UserPayload<ExtArgs> | null
+    procedimientos: Prisma.$ProcedurePayload<ExtArgs>[]
+    registrosClinico: Prisma.$ClinicalRecordPayload<ExtArgs>[]
+    recordatoriosCorreo: Prisma.$EmailReminderPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
-    patientId: string
-    ownerId: string | null
-    veterinaryId: string | null
-    operatorId: string | null
-    dateTime: Date
-    durationMinutes: number
-    status: $Enums.AppointmentStatus
-    appointmentType: string | null
-    reason: string
-    notes: string | null
-    googleCalendarEventId: string | null
-    reminderSent: boolean
-    reminderSentAt: Date | null
-    cancelledAt: Date | null
-    cancellationReason: string | null
-    createdBy: string | null
-    createdAt: Date
-    updatedAt: Date
+    pacienteId: string
+    propietarioId: string | null
+    veterinariaId: string | null
+    operadorId: string | null
+    fechaHora: Date
+    duracionMinutos: number
+    estado: $Enums.AppointmentStatus
+    tipoCita: string | null
+    motivo: string
+    notas: string | null
+    idEventoGoogleCalendar: string | null
+    recordatorioEnviado: boolean
+    recordatorioEnviadoEn: Date | null
+    canceladoEn: Date | null
+    motivoCancelacion: string | null
+    creadoPor: string | null
+    creadoEn: Date
+    actualizadoEn: Date
   }, ExtArgs["result"]["appointment"]>
   composites: {}
 }
@@ -2764,14 +2764,14 @@ readonly fields: AppointmentFieldRefs;
  */
 export interface Prisma__AppointmentClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  patient<T extends Prisma.PatientDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.PatientDefaultArgs<ExtArgs>>): Prisma.Prisma__PatientClient<runtime.Types.Result.GetResult<Prisma.$PatientPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  owner<T extends Prisma.Appointment$ownerArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Appointment$ownerArgs<ExtArgs>>): Prisma.Prisma__OwnerClient<runtime.Types.Result.GetResult<Prisma.$OwnerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-  veterinary<T extends Prisma.Appointment$veterinaryArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Appointment$veterinaryArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-  operator<T extends Prisma.Appointment$operatorArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Appointment$operatorArgs<ExtArgs>>): Prisma.Prisma__OperatorClient<runtime.Types.Result.GetResult<Prisma.$OperatorPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-  creator<T extends Prisma.Appointment$creatorArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Appointment$creatorArgs<ExtArgs>>): Prisma.Prisma__UserClient<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-  procedures<T extends Prisma.Appointment$proceduresArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Appointment$proceduresArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ProcedurePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  clinicalRecords<T extends Prisma.Appointment$clinicalRecordsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Appointment$clinicalRecordsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ClinicalRecordPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  emailReminders<T extends Prisma.Appointment$emailRemindersArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Appointment$emailRemindersArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$EmailReminderPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  paciente<T extends Prisma.PatientDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.PatientDefaultArgs<ExtArgs>>): Prisma.Prisma__PatientClient<runtime.Types.Result.GetResult<Prisma.$PatientPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  propietario<T extends Prisma.Appointment$propietarioArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Appointment$propietarioArgs<ExtArgs>>): Prisma.Prisma__OwnerClient<runtime.Types.Result.GetResult<Prisma.$OwnerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  veterinaria<T extends Prisma.Appointment$veterinariaArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Appointment$veterinariaArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  operador<T extends Prisma.Appointment$operadorArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Appointment$operadorArgs<ExtArgs>>): Prisma.Prisma__OperatorClient<runtime.Types.Result.GetResult<Prisma.$OperatorPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  creador<T extends Prisma.Appointment$creadorArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Appointment$creadorArgs<ExtArgs>>): Prisma.Prisma__UserClient<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  procedimientos<T extends Prisma.Appointment$procedimientosArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Appointment$procedimientosArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ProcedurePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  registrosClinico<T extends Prisma.Appointment$registrosClinicoArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Appointment$registrosClinicoArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ClinicalRecordPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  recordatoriosCorreo<T extends Prisma.Appointment$recordatoriosCorreoArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Appointment$recordatoriosCorreoArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$EmailReminderPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2802,24 +2802,24 @@ export interface Prisma__AppointmentClient<T, Null = never, ExtArgs extends runt
  */
 export interface AppointmentFieldRefs {
   readonly id: Prisma.FieldRef<"Appointment", 'String'>
-  readonly patientId: Prisma.FieldRef<"Appointment", 'String'>
-  readonly ownerId: Prisma.FieldRef<"Appointment", 'String'>
-  readonly veterinaryId: Prisma.FieldRef<"Appointment", 'String'>
-  readonly operatorId: Prisma.FieldRef<"Appointment", 'String'>
-  readonly dateTime: Prisma.FieldRef<"Appointment", 'DateTime'>
-  readonly durationMinutes: Prisma.FieldRef<"Appointment", 'Int'>
-  readonly status: Prisma.FieldRef<"Appointment", 'AppointmentStatus'>
-  readonly appointmentType: Prisma.FieldRef<"Appointment", 'String'>
-  readonly reason: Prisma.FieldRef<"Appointment", 'String'>
-  readonly notes: Prisma.FieldRef<"Appointment", 'String'>
-  readonly googleCalendarEventId: Prisma.FieldRef<"Appointment", 'String'>
-  readonly reminderSent: Prisma.FieldRef<"Appointment", 'Boolean'>
-  readonly reminderSentAt: Prisma.FieldRef<"Appointment", 'DateTime'>
-  readonly cancelledAt: Prisma.FieldRef<"Appointment", 'DateTime'>
-  readonly cancellationReason: Prisma.FieldRef<"Appointment", 'String'>
-  readonly createdBy: Prisma.FieldRef<"Appointment", 'String'>
-  readonly createdAt: Prisma.FieldRef<"Appointment", 'DateTime'>
-  readonly updatedAt: Prisma.FieldRef<"Appointment", 'DateTime'>
+  readonly pacienteId: Prisma.FieldRef<"Appointment", 'String'>
+  readonly propietarioId: Prisma.FieldRef<"Appointment", 'String'>
+  readonly veterinariaId: Prisma.FieldRef<"Appointment", 'String'>
+  readonly operadorId: Prisma.FieldRef<"Appointment", 'String'>
+  readonly fechaHora: Prisma.FieldRef<"Appointment", 'DateTime'>
+  readonly duracionMinutos: Prisma.FieldRef<"Appointment", 'Int'>
+  readonly estado: Prisma.FieldRef<"Appointment", 'AppointmentStatus'>
+  readonly tipoCita: Prisma.FieldRef<"Appointment", 'String'>
+  readonly motivo: Prisma.FieldRef<"Appointment", 'String'>
+  readonly notas: Prisma.FieldRef<"Appointment", 'String'>
+  readonly idEventoGoogleCalendar: Prisma.FieldRef<"Appointment", 'String'>
+  readonly recordatorioEnviado: Prisma.FieldRef<"Appointment", 'Boolean'>
+  readonly recordatorioEnviadoEn: Prisma.FieldRef<"Appointment", 'DateTime'>
+  readonly canceladoEn: Prisma.FieldRef<"Appointment", 'DateTime'>
+  readonly motivoCancelacion: Prisma.FieldRef<"Appointment", 'String'>
+  readonly creadoPor: Prisma.FieldRef<"Appointment", 'String'>
+  readonly creadoEn: Prisma.FieldRef<"Appointment", 'DateTime'>
+  readonly actualizadoEn: Prisma.FieldRef<"Appointment", 'DateTime'>
 }
     
 
@@ -3216,9 +3216,9 @@ export type AppointmentDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.I
 }
 
 /**
- * Appointment.owner
+ * Appointment.propietario
  */
-export type Appointment$ownerArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Appointment$propietarioArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Owner
    */
@@ -3235,9 +3235,9 @@ export type Appointment$ownerArgs<ExtArgs extends runtime.Types.Extensions.Inter
 }
 
 /**
- * Appointment.veterinary
+ * Appointment.veterinaria
  */
-export type Appointment$veterinaryArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Appointment$veterinariaArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Veterinary
    */
@@ -3254,9 +3254,9 @@ export type Appointment$veterinaryArgs<ExtArgs extends runtime.Types.Extensions.
 }
 
 /**
- * Appointment.operator
+ * Appointment.operador
  */
-export type Appointment$operatorArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Appointment$operadorArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Operator
    */
@@ -3273,9 +3273,9 @@ export type Appointment$operatorArgs<ExtArgs extends runtime.Types.Extensions.In
 }
 
 /**
- * Appointment.creator
+ * Appointment.creador
  */
-export type Appointment$creatorArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Appointment$creadorArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the User
    */
@@ -3292,9 +3292,9 @@ export type Appointment$creatorArgs<ExtArgs extends runtime.Types.Extensions.Int
 }
 
 /**
- * Appointment.procedures
+ * Appointment.procedimientos
  */
-export type Appointment$proceduresArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Appointment$procedimientosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Procedure
    */
@@ -3316,9 +3316,9 @@ export type Appointment$proceduresArgs<ExtArgs extends runtime.Types.Extensions.
 }
 
 /**
- * Appointment.clinicalRecords
+ * Appointment.registrosClinico
  */
-export type Appointment$clinicalRecordsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Appointment$registrosClinicoArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the ClinicalRecord
    */
@@ -3340,9 +3340,9 @@ export type Appointment$clinicalRecordsArgs<ExtArgs extends runtime.Types.Extens
 }
 
 /**
- * Appointment.emailReminders
+ * Appointment.recordatoriosCorreo
  */
-export type Appointment$emailRemindersArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Appointment$recordatoriosCorreoArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the EmailReminder
    */

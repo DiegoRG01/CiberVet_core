@@ -3,7 +3,7 @@ export interface AuthResponse {
     id: string;
     email: string;
     fullName: string;
-    role: "owner" | "operator" | "admin";
+    role: "propietario" | "operador" | "admin";
     phone?: string | null;
     veterinaryId?: string | null;
     isActive: boolean;
@@ -21,7 +21,7 @@ export interface AuthResponse {
 export interface UserPayload {
   id: string;
   email: string;
-  role: "owner" | "operator" | "admin";
+  role: "propietario" | "operador" | "admin";
   fullName?: string;
   phone?: string | null;
   veterinaryId?: string | null;

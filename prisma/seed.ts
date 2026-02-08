@@ -14,21 +14,21 @@ async function main() {
 
   // Crear especies
   const speciesData = [
-    { name: "Perro", description: "Canis lupus familiaris" },
-    { name: "Gato", description: "Felis catus" },
-    { name: "Ave", description: "Aves domésticas" },
-    { name: "Conejo", description: "Oryctolagus cuniculus" },
-    { name: "Hámster", description: "Cricetinae" },
-    { name: "Cobayo", description: "Cavia porcellus" },
-    { name: "Reptil", description: "Reptilia" },
-    { name: "Pez", description: "Peces ornamentales" },
+    { nombre: "Perro", descripcion: "Canis lupus familiaris" },
+    { nombre: "Gato", descripcion: "Felis catus" },
+    { nombre: "Ave", descripcion: "Aves domésticas" },
+    { nombre: "Conejo", descripcion: "Oryctolagus cuniculus" },
+    { nombre: "Hámster", descripcion: "Cricetinae" },
+    { nombre: "Cobayo", descripcion: "Cavia porcellus" },
+    { nombre: "Reptil", descripcion: "Reptilia" },
+    { nombre: "Pez", descripcion: "Peces ornamentales" },
   ];
 
   console.log("📦 Creando especies...");
   const species = await Promise.all(
     speciesData.map(async (sp) => {
       return await prisma.species.upsert({
-        where: { name: sp.name },
+        where: { nombre: sp.nombre },
         update: {},
         create: sp,
       });
@@ -37,7 +37,7 @@ async function main() {
   console.log(`✅ ${species.length} especies creadas`);
 
   // Crear razas de perros
-  const dogSpecies = species.find((s) => s.name === "Perro");
+  const dogSpecies = species.find((s) => s.nombre === "Perro");
   if (dogSpecies) {
     const dogBreeds = [
       "Labrador Retriever",
@@ -68,15 +68,15 @@ async function main() {
       dogBreeds.map(async (breed) => {
         return await prisma.breed.upsert({
           where: {
-            speciesId_name: {
-              speciesId: dogSpecies.id,
-              name: breed,
+            especieId_nombre: {
+              especieId: dogSpecies.id,
+              nombre: breed,
             },
           },
           update: {},
           create: {
-            speciesId: dogSpecies.id,
-            name: breed,
+            especieId: dogSpecies.id,
+            nombre: breed,
           },
         });
       }),
@@ -85,7 +85,7 @@ async function main() {
   }
 
   // Crear razas de gatos
-  const catSpecies = species.find((s) => s.name === "Gato");
+  const catSpecies = species.find((s) => s.nombre === "Gato");
   if (catSpecies) {
     const catBreeds = [
       "Persa",
@@ -108,15 +108,15 @@ async function main() {
       catBreeds.map(async (breed) => {
         return await prisma.breed.upsert({
           where: {
-            speciesId_name: {
-              speciesId: catSpecies.id,
-              name: breed,
+            especieId_nombre: {
+              especieId: catSpecies.id,
+              nombre: breed,
             },
           },
           update: {},
           create: {
-            speciesId: catSpecies.id,
-            name: breed,
+            especieId: catSpecies.id,
+            nombre: breed,
           },
         });
       }),
@@ -125,7 +125,7 @@ async function main() {
   }
 
   // Crear razas de aves
-  const birdSpecies = species.find((s) => s.name === "Ave");
+  const birdSpecies = species.find((s) => s.nombre === "Ave");
   if (birdSpecies) {
     const birdBreeds = [
       "Periquito",
@@ -143,15 +143,15 @@ async function main() {
       birdBreeds.map(async (breed) => {
         return await prisma.breed.upsert({
           where: {
-            speciesId_name: {
-              speciesId: birdSpecies.id,
-              name: breed,
+            especieId_nombre: {
+              especieId: birdSpecies.id,
+              nombre: breed,
             },
           },
           update: {},
           create: {
-            speciesId: birdSpecies.id,
-            name: breed,
+            especieId: birdSpecies.id,
+            nombre: breed,
           },
         });
       }),
@@ -160,7 +160,7 @@ async function main() {
   }
 
   // Crear razas de conejos
-  const rabbitSpecies = species.find((s) => s.name === "Conejo");
+  const rabbitSpecies = species.find((s) => s.nombre === "Conejo");
   if (rabbitSpecies) {
     const rabbitBreeds = [
       "Holandés",
@@ -177,15 +177,15 @@ async function main() {
       rabbitBreeds.map(async (breed) => {
         return await prisma.breed.upsert({
           where: {
-            speciesId_name: {
-              speciesId: rabbitSpecies.id,
-              name: breed,
+            especieId_nombre: {
+              especieId: rabbitSpecies.id,
+              nombre: breed,
             },
           },
           update: {},
           create: {
-            speciesId: rabbitSpecies.id,
-            name: breed,
+            especieId: rabbitSpecies.id,
+            nombre: breed,
           },
         });
       }),
@@ -199,56 +199,84 @@ async function main() {
 
   console.log("\n🏥 Creando veterinaria de prueba...");
   const veterinary = await prisma.veterinary.upsert({
-    where: { email: "clinica@cibervet.com" },
+    where: { correo: "clinica@cibervet.com" },
     update: {},
     create: {
-      name: "CiberVet - Clínica Veterinaria",
-      email: "clinica@cibervet.com",
-      phone: "809-555-0100",
-      address: "Av. Principal #123",
-      city: "Santo Domingo",
-      state: "Distrito Nacional",
-      country: "República Dominicana",
-      postalCode: "10101",
+      nombre: "CiberVet - Clínica Veterinaria",
+      correo: "clinica@cibervet.com",
+      telefono: "809-555-0100",
+      direccion: "Av. Principal #123",
+      ciudad: "Santo Domingo",
+      estado: "Distrito Nacional",
+      pais: "República Dominicana",
+      codigoPostal: "10101",
     },
   });
-  console.log(`✅ Veterinaria creada: ${veterinary.name}`);
+  console.log(`✅ Veterinaria creada: ${veterinary.nombre}`);
 
   // Obtener razas para los pacientes
   const labradorBreed = await prisma.breed.findFirst({
-    where: { name: "Labrador Retriever" },
+    where: { nombre: "Labrador Retriever" },
   });
   const persaBreed = await prisma.breed.findFirst({
-    where: { name: "Persa" },
+    where: { nombre: "Persa" },
   });
   const beagleBreed = await prisma.breed.findFirst({
-    where: { name: "Beagle" },
+    where: { nombre: "Beagle" },
   });
 
-  console.log("\n👥 Creando dueños de prueba...");
+  console.log("\n👥 Creando usuarios y dueños de prueba...");
   
-  // IDs de usuarios existentes en Supabase
-  const userIds = [
-    "601c6b1e-8c3e-4473-8d05-411b1ba0e0f2",
-    "3cbb9ba5-578d-46fc-9cf9-f3841614cfc9",
-    "76b901bf-73c5-47b4-8c4c-155ed8b5cf61",
+  // Primero crear usuarios de prueba
+  const usersData = [
+    {
+      id: "601c6b1e-8c3e-4473-8d05-411b1ba0e0f2",
+      correo: "maria@example.com",
+      nombreCompleto: "María García",
+      telefono: "809-555-0001",
+      rol: "propietario" as const,
+    },
+    {
+      id: "3cbb9ba5-578d-46fc-9cf9-f3841614cfc9",
+      correo: "juan@example.com",
+      nombreCompleto: "Juan Pérez",
+      telefono: "809-555-0002",
+      rol: "propietario" as const,
+    },
+    {
+      id: "76b901bf-73c5-47b4-8c4c-155ed8b5cf61",
+      correo: "ana@example.com",
+      nombreCompleto: "Ana Rodríguez",
+      telefono: "809-555-0003",
+      rol: "propietario" as const,
+    },
   ];
+
+  // Crear usuarios
+  for (const userData of usersData) {
+    await prisma.user.upsert({
+      where: { id: userData.id },
+      update: {},
+      create: userData,
+    });
+  }
+  console.log(`✅ ${usersData.length} usuarios creados`);
 
   const ownersData = [
     {
-      userId: userIds[0],
-      address: "Calle Luna #45",
-      city: "Santo Domingo",
+      usuarioId: usersData[0].id,
+      direccion: "Calle Luna #45",
+      ciudad: "Santo Domingo",
     },
     {
-      userId: userIds[1],
-      address: "Av. Sol #78",
-      city: "Santiago",
+      usuarioId: usersData[1].id,
+      direccion: "Av. Sol #78",
+      ciudad: "Santiago",
     },
     {
-      userId: userIds[2],
-      address: "Calle Estrella #12",
-      city: "La Vega",
+      usuarioId: usersData[2].id,
+      direccion: "Calle Estrella #12",
+      ciudad: "La Vega",
     },
   ];
 
@@ -256,16 +284,16 @@ async function main() {
   for (const ownerData of ownersData) {
     // Crear o actualizar owner
     const owner = await prisma.owner.upsert({
-      where: { userId: ownerData.userId },
+      where: { usuarioId: ownerData.usuarioId },
       update: {
-        address: ownerData.address,
-        city: ownerData.city,
+        direccion: ownerData.direccion,
+        ciudad: ownerData.ciudad,
       },
       create: {
-        userId: ownerData.userId,
-        veterinaryId: veterinary.id,
-        address: ownerData.address,
-        city: ownerData.city,
+        usuarioId: ownerData.usuarioId,
+        veterinariaId: veterinary.id,
+        direccion: ownerData.direccion,
+        ciudad: ownerData.ciudad,
       },
     });
     owners.push(owner);
@@ -285,22 +313,22 @@ async function main() {
   if (owners[0] && dogSpecies && labradorBreed) {
     let max = await prisma.patient.findFirst({
       where: {
-        ownerId: owners[0].id,
-        name: "Max"
+        propietarioId: owners[0].id,
+        nombre: "Max"
       }
     });
     
     if (!max) {
       max = await prisma.patient.create({
         data: {
-          name: "Max",
-          ownerId: owners[0].id,
-          veterinaryId: veterinary.id,
-          speciesId: dogSpecies.id,
-          breedId: labradorBreed.id,
-          gender: "Macho",
-          birthDate: new Date("2020-03-15"),
-          weight: 28.5,
+          nombre: "Max",
+          propietarioId: owners[0].id,
+          veterinariaId: veterinary.id,
+          especieId: dogSpecies.id,
+          razaId: labradorBreed.id,
+          genero: "Macho",
+          fechaNacimiento: new Date("2020-03-15"),
+          peso: 28.5,
           color: "Dorado",
         },
       });
@@ -312,22 +340,22 @@ async function main() {
   if (owners[1] && catSpecies && persaBreed) {
     let luna = await prisma.patient.findFirst({
       where: {
-        ownerId: owners[1].id,
-        name: "Luna"
+        propietarioId: owners[1].id,
+        nombre: "Luna"
       }
     });
     
     if (!luna) {
       luna = await prisma.patient.create({
         data: {
-          name: "Luna",
-          ownerId: owners[1].id,
-          veterinaryId: veterinary.id,
-          speciesId: catSpecies.id,
-          breedId: persaBreed.id,
-          gender: "Hembra",
-          birthDate: new Date("2021-07-20"),
-          weight: 4.2,
+          nombre: "Luna",
+          propietarioId: owners[1].id,
+          veterinariaId: veterinary.id,
+          especieId: catSpecies.id,
+          razaId: persaBreed.id,
+          genero: "Hembra",
+          fechaNacimiento: new Date("2021-07-20"),
+          peso: 4.2,
           color: "Blanco",
         },
       });
@@ -339,22 +367,22 @@ async function main() {
   if (owners[2] && dogSpecies && beagleBreed) {
     let rocky = await prisma.patient.findFirst({
       where: {
-        ownerId: owners[2].id,
-        name: "Rocky"
+        propietarioId: owners[2].id,
+        nombre: "Rocky"
       }
     });
     
     if (!rocky) {
       rocky = await prisma.patient.create({
         data: {
-          name: "Rocky",
-          ownerId: owners[2].id,
-          veterinaryId: veterinary.id,
-          speciesId: dogSpecies.id,
-          breedId: beagleBreed.id,
-          gender: "Macho",
-          birthDate: new Date("2019-11-10"),
-          weight: 12.8,
+          nombre: "Rocky",
+          propietarioId: owners[2].id,
+          veterinariaId: veterinary.id,
+          especieId: dogSpecies.id,
+          razaId: beagleBreed.id,
+          genero: "Macho",
+          fechaNacimiento: new Date("2019-11-10"),
+          peso: 12.8,
           color: "Tricolor",
         },
       });
@@ -377,94 +405,94 @@ async function main() {
   const appointmentsData = [
     // Cita programada para hoy a las 9:00 AM
     {
-      patientId: patients[0]?.id,
-      ownerId: owners[0]?.id,
-      veterinaryId: veterinary.id,
-      dateTime: new Date(today.setHours(9, 0, 0, 0)),
-      durationMinutes: 30,
-      status: "scheduled" as const,
-      appointmentType: "Consulta General",
-      reason: "Revisión de rutina",
-      notes: "Primera visita del mes",
+      pacienteId: patients[0]?.id,
+      propietarioId: owners[0]?.id,
+      veterinariaId: veterinary.id,
+      fechaHora: new Date(today.setHours(9, 0, 0, 0)),
+      duracionMinutos: 30,
+      estado: "programada" as const,
+      tipoCita: "Consulta General",
+      motivo: "Revisión de rutina",
+      notas: "Primera visita del mes",
     },
     // Cita confirmada para hoy a las 11:00 AM
     {
-      patientId: patients[1]?.id,
-      ownerId: owners[1]?.id,
-      veterinaryId: veterinary.id,
-      dateTime: new Date(today.setHours(11, 0, 0, 0)),
-      durationMinutes: 45,
-      status: "confirmed" as const,
-      appointmentType: "Vacunación",
-      reason: "Vacuna antirrábica anual",
-      notes: "Traer cartilla de vacunación",
+      pacienteId: patients[1]?.id,
+      propietarioId: owners[1]?.id,
+      veterinariaId: veterinary.id,
+      fechaHora: new Date(today.setHours(11, 0, 0, 0)),
+      duracionMinutos: 45,
+      estado: "confirmada" as const,
+      tipoCita: "Vacunación",
+      motivo: "Vacuna antirrábica anual",
+      notas: "Traer cartilla de vacunación",
     },
     // Cita en progreso para hoy a las 2:00 PM
     {
-      patientId: patients[2]?.id,
-      ownerId: owners[2]?.id,
-      veterinaryId: veterinary.id,
-      dateTime: new Date(today.setHours(14, 0, 0, 0)),
-      durationMinutes: 60,
-      status: "in_progress" as const,
-      appointmentType: "Cirugía Menor",
-      reason: "Extracción dental",
-      notes: "Paciente en ayunas desde anoche",
+      pacienteId: patients[2]?.id,
+      propietarioId: owners[2]?.id,
+      veterinariaId: veterinary.id,
+      fechaHora: new Date(today.setHours(14, 0, 0, 0)),
+      duracionMinutos: 60,
+      estado: "en_progreso" as const,
+      tipoCita: "Cirugía Menor",
+      motivo: "Extracción dental",
+      notas: "Paciente en ayunas desde anoche",
     },
     // Cita completada de ayer a las 10:00 AM
     {
-      patientId: patients[0]?.id,
-      ownerId: owners[0]?.id,
-      veterinaryId: veterinary.id,
-      dateTime: new Date(yesterday.setHours(10, 0, 0, 0)),
-      durationMinutes: 30,
-      status: "completed" as const,
-      appointmentType: "Consulta General",
-      reason: "Control post-operatorio",
-      notes: "Evolución favorable",
+      pacienteId: patients[0]?.id,
+      propietarioId: owners[0]?.id,
+      veterinariaId: veterinary.id,
+      fechaHora: new Date(yesterday.setHours(10, 0, 0, 0)),
+      duracionMinutos: 30,
+      estado: "completada" as const,
+      tipoCita: "Consulta General",
+      motivo: "Control post-operatorio",
+      notas: "Evolución favorable",
     },
     // Cita cancelada de ayer a las 3:00 PM
     {
-      patientId: patients[1]?.id,
-      ownerId: owners[1]?.id,
-      veterinaryId: veterinary.id,
-      dateTime: new Date(yesterday.setHours(15, 0, 0, 0)),
-      durationMinutes: 30,
-      status: "cancelled" as const,
-      appointmentType: "Baño y Peluquería",
-      reason: "Servicio de estética",
-      notes: "Cancelado por el cliente",
-      cancelledAt: new Date(yesterday.setHours(14, 30, 0, 0)),
-      cancellationReason: "Emergencia familiar",
+      pacienteId: patients[1]?.id,
+      propietarioId: owners[1]?.id,
+      veterinariaId: veterinary.id,
+      fechaHora: new Date(yesterday.setHours(15, 0, 0, 0)),
+      duracionMinutos: 30,
+      estado: "cancelada" as const,
+      tipoCita: "Baño y Peluquería",
+      motivo: "Servicio de estética",
+      notas: "Cancelado por el cliente",
+      canceladoEn: new Date(yesterday.setHours(14, 30, 0, 0)),
+      motivoCancelacion: "Emergencia familiar",
     },
     // Cita programada para mañana a las 8:00 AM
     {
-      patientId: patients[2]?.id,
-      ownerId: owners[2]?.id,
-      veterinaryId: veterinary.id,
-      dateTime: new Date(tomorrow.setHours(8, 0, 0, 0)),
-      durationMinutes: 30,
-      status: "scheduled" as const,
-      appointmentType: "Control",
-      reason: "Revisión post-cirugía",
-      notes: "Retirar puntos",
+      pacienteId: patients[2]?.id,
+      propietarioId: owners[2]?.id,
+      veterinariaId: veterinary.id,
+      fechaHora: new Date(tomorrow.setHours(8, 0, 0, 0)),
+      duracionMinutos: 30,
+      estado: "programada" as const,
+      tipoCita: "Control",
+      motivo: "Revisión post-cirugía",
+      notas: "Retirar puntos",
     },
     // Cita programada para la próxima semana a las 10:30 AM
     {
-      patientId: patients[0]?.id,
-      ownerId: owners[0]?.id,
-      veterinaryId: veterinary.id,
-      dateTime: new Date(nextWeek.setHours(10, 30, 0, 0)),
-      durationMinutes: 45,
-      status: "scheduled" as const,
-      appointmentType: "Desparasitación",
-      reason: "Desparasitación trimestral",
-      notes: "Aplicar tratamiento preventivo",
+      pacienteId: patients[0]?.id,
+      propietarioId: owners[0]?.id,
+      veterinariaId: veterinary.id,
+      fechaHora: new Date(nextWeek.setHours(10, 30, 0, 0)),
+      duracionMinutos: 45,
+      estado: "programada" as const,
+      tipoCita: "Desparasitación",
+      motivo: "Desparasitación trimestral",
+      notas: "Aplicar tratamiento preventivo",
     },
   ];
 
   for (const apptData of appointmentsData) {
-    if (apptData.patientId && apptData.ownerId) {
+    if (apptData.pacienteId && apptData.propietarioId) {
       await prisma.appointment.create({
         data: apptData,
       });

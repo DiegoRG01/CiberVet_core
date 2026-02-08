@@ -5,58 +5,58 @@ export class AppointmentService {
   /**
    * Obtener todas las citas con filtros opcionales
    */
-  async getAllAppointments(status?: AppointmentStatus) {
+  async getAllAppointments(estado?: AppointmentStatus) {
     try {
       const appointments = await prisma.appointment.findMany({
-        where: status ? { status } : undefined,
+        where: estado ? { estado } : undefined,
         include: {
-          patient: {
+          paciente: {
             select: {
               id: true,
-              name: true,
-              species: {
+              nombre: true,
+              especie: {
                 select: {
-                  name: true,
+                  nombre: true,
                 },
               },
-              breed: {
+              raza: {
                 select: {
-                  name: true,
-                },
-              },
-            },
-          },
-          owner: {
-            select: {
-              id: true,
-              user: {
-                select: {
-                  fullName: true,
-                  email: true,
-                  phone: true,
+                  nombre: true,
                 },
               },
             },
           },
-          veterinary: {
+          propietario: {
             select: {
               id: true,
-              name: true,
+              usuario: {
+                select: {
+                  nombreCompleto: true,
+                  correo: true,
+                  telefono: true,
+                },
+              },
             },
           },
-          operator: {
+          veterinaria: {
             select: {
               id: true,
-              user: {
+              nombre: true,
+            },
+          },
+          operador: {
+            select: {
+              id: true,
+              usuario: {
                 select: {
-                  fullName: true,
+                  nombreCompleto: true,
                 },
               },
             },
           },
         },
         orderBy: {
-          dateTime: "asc",
+          fechaHora: "asc",
         },
       });
 
@@ -75,52 +75,52 @@ export class AppointmentService {
       const appointment = await prisma.appointment.findUnique({
         where: { id: appointmentId },
         include: {
-          patient: {
+          paciente: {
             select: {
               id: true,
-              name: true,
-              species: {
+              nombre: true,
+              especie: {
                 select: {
-                  name: true,
+                  nombre: true,
                 },
               },
-              breed: {
+              raza: {
                 select: {
-                  name: true,
-                },
-              },
-            },
-          },
-          owner: {
-            select: {
-              id: true,
-              user: {
-                select: {
-                  fullName: true,
-                  email: true,
-                  phone: true,
+                  nombre: true,
                 },
               },
             },
           },
-          veterinary: {
+          propietario: {
             select: {
               id: true,
-              name: true,
-            },
-          },
-          operator: {
-            select: {
-              id: true,
-              user: {
+              usuario: {
                 select: {
-                  fullName: true,
+                  nombreCompleto: true,
+                  correo: true,
+                  telefono: true,
                 },
               },
             },
           },
-          procedures: true,
-          clinicalRecords: true,
+          veterinaria: {
+            select: {
+              id: true,
+              nombre: true,
+            },
+          },
+          operador: {
+            select: {
+              id: true,
+              usuario: {
+                select: {
+                  nombreCompleto: true,
+                },
+              },
+            },
+          },
+          procedimientos: true,
+          registrosClinico: true,
         },
       });
 
@@ -135,22 +135,22 @@ export class AppointmentService {
    * Crear una nueva cita
    */
   async createAppointment(data: {
-    patientId: string;
-    veterinaryId?: string;
-    operatorId?: string;
-    dateTime: Date;
-    durationMinutes?: number;
-    appointmentType?: string;
-    reason: string;
-    notes?: string;
-    createdBy?: string;
+    pacienteId: string;
+    veterinariaId?: string;
+    operadorId?: string;
+    fechaHora: Date;
+    duracionMinutos?: number;
+    tipoCita?: string;
+    motivo: string;
+    notas?: string;
+    creadoPor?: string;
   }) {
     try {
       // Verificar que el paciente existe
       const patient = await prisma.patient.findUnique({
-        where: { id: data.patientId },
+        where: { id: data.pacienteId },
         include: {
-          owner: true,
+          propietario: true,
         },
       });
 
@@ -160,30 +160,30 @@ export class AppointmentService {
 
       const appointment = await prisma.appointment.create({
         data: {
-          patientId: data.patientId,
-          ownerId: patient.ownerId,
-          veterinaryId: data.veterinaryId,
-          operatorId: data.operatorId,
-          dateTime: data.dateTime,
-          durationMinutes: data.durationMinutes || 30,
-          appointmentType: data.appointmentType,
-          reason: data.reason,
-          notes: data.notes,
-          createdBy: data.createdBy,
+          pacienteId: data.pacienteId,
+          propietarioId: patient.propietarioId,
+          veterinariaId: data.veterinariaId,
+          operadorId: data.operadorId,
+          fechaHora: data.fechaHora,
+          duracionMinutos: data.duracionMinutos || 30,
+          tipoCita: data.tipoCita,
+          motivo: data.motivo,
+          notas: data.notas,
+          creadoPor: data.creadoPor,
         },
         include: {
-          patient: {
+          paciente: {
             select: {
               id: true,
-              name: true,
+              nombre: true,
             },
           },
-          owner: {
+          propietario: {
             select: {
               id: true,
-              user: {
+              usuario: {
                 select: {
-                  fullName: true,
+                  nombreCompleto: true,
                 },
               },
             },
@@ -204,12 +204,12 @@ export class AppointmentService {
   async updateAppointment(
     appointmentId: string,
     data: {
-      dateTime?: Date;
-      durationMinutes?: number;
-      status?: AppointmentStatus;
-      appointmentType?: string;
-      reason?: string;
-      notes?: string;
+      fechaHora?: Date;
+      duracionMinutos?: number;
+      estado?: AppointmentStatus;
+      tipoCita?: string;
+      motivo?: string;
+      notas?: string;
     }
   ) {
     try {
@@ -217,18 +217,18 @@ export class AppointmentService {
         where: { id: appointmentId },
         data,
         include: {
-          patient: {
+          paciente: {
             select: {
               id: true,
-              name: true,
+              nombre: true,
             },
           },
-          owner: {
+          propietario: {
             select: {
               id: true,
-              user: {
+              usuario: {
                 select: {
-                  fullName: true,
+                  nombreCompleto: true,
                 },
               },
             },
@@ -251,9 +251,9 @@ export class AppointmentService {
       const appointment = await prisma.appointment.update({
         where: { id: appointmentId },
         data: {
-          status: "cancelled",
-          cancelledAt: new Date(),
-          cancellationReason: reason,
+          estado: "cancelada",
+          canceladoEn: new Date(),
+          motivoCancelacion: reason,
         },
       });
 

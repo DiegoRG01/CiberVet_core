@@ -26,88 +26,88 @@ export type AggregateVaccination = {
 
 export type VaccinationMinAggregateOutputType = {
   id: string | null
-  patientId: string | null
-  clinicalRecordId: string | null
-  vaccineName: string | null
-  vaccineType: string | null
-  batchNumber: string | null
-  administeredDate: Date | null
-  nextDueDate: Date | null
-  administeredBy: string | null
-  notes: string | null
-  createdAt: Date | null
+  pacienteId: string | null
+  registroClinicoId: string | null
+  nombreVacuna: string | null
+  tipoVacuna: string | null
+  numeroLote: string | null
+  fechaAdministracion: Date | null
+  proximaFechaVencimiento: Date | null
+  administradoPor: string | null
+  notas: string | null
+  creadoEn: Date | null
 }
 
 export type VaccinationMaxAggregateOutputType = {
   id: string | null
-  patientId: string | null
-  clinicalRecordId: string | null
-  vaccineName: string | null
-  vaccineType: string | null
-  batchNumber: string | null
-  administeredDate: Date | null
-  nextDueDate: Date | null
-  administeredBy: string | null
-  notes: string | null
-  createdAt: Date | null
+  pacienteId: string | null
+  registroClinicoId: string | null
+  nombreVacuna: string | null
+  tipoVacuna: string | null
+  numeroLote: string | null
+  fechaAdministracion: Date | null
+  proximaFechaVencimiento: Date | null
+  administradoPor: string | null
+  notas: string | null
+  creadoEn: Date | null
 }
 
 export type VaccinationCountAggregateOutputType = {
   id: number
-  patientId: number
-  clinicalRecordId: number
-  vaccineName: number
-  vaccineType: number
-  batchNumber: number
-  administeredDate: number
-  nextDueDate: number
-  administeredBy: number
-  notes: number
-  createdAt: number
+  pacienteId: number
+  registroClinicoId: number
+  nombreVacuna: number
+  tipoVacuna: number
+  numeroLote: number
+  fechaAdministracion: number
+  proximaFechaVencimiento: number
+  administradoPor: number
+  notas: number
+  creadoEn: number
   _all: number
 }
 
 
 export type VaccinationMinAggregateInputType = {
   id?: true
-  patientId?: true
-  clinicalRecordId?: true
-  vaccineName?: true
-  vaccineType?: true
-  batchNumber?: true
-  administeredDate?: true
-  nextDueDate?: true
-  administeredBy?: true
-  notes?: true
-  createdAt?: true
+  pacienteId?: true
+  registroClinicoId?: true
+  nombreVacuna?: true
+  tipoVacuna?: true
+  numeroLote?: true
+  fechaAdministracion?: true
+  proximaFechaVencimiento?: true
+  administradoPor?: true
+  notas?: true
+  creadoEn?: true
 }
 
 export type VaccinationMaxAggregateInputType = {
   id?: true
-  patientId?: true
-  clinicalRecordId?: true
-  vaccineName?: true
-  vaccineType?: true
-  batchNumber?: true
-  administeredDate?: true
-  nextDueDate?: true
-  administeredBy?: true
-  notes?: true
-  createdAt?: true
+  pacienteId?: true
+  registroClinicoId?: true
+  nombreVacuna?: true
+  tipoVacuna?: true
+  numeroLote?: true
+  fechaAdministracion?: true
+  proximaFechaVencimiento?: true
+  administradoPor?: true
+  notas?: true
+  creadoEn?: true
 }
 
 export type VaccinationCountAggregateInputType = {
   id?: true
-  patientId?: true
-  clinicalRecordId?: true
-  vaccineName?: true
-  vaccineType?: true
-  batchNumber?: true
-  administeredDate?: true
-  nextDueDate?: true
-  administeredBy?: true
-  notes?: true
-  createdAt?: true
+  pacienteId?: true
+  registroClinicoId?: true
+  nombreVacuna?: true
+  tipoVacuna?: true
+  numeroLote?: true
+  fechaAdministracion?: true
+  proximaFechaVencimiento?: true
+  administradoPor?: true
+  notas?: true
+  creadoEn?: true
   _all?: true
 }
 
@@ -185,16 +185,16 @@ export type VaccinationGroupByArgs<ExtArgs extends runtime.Types.Extensions.Inte
 
 export type VaccinationGroupByOutputType = {
   id: string
-  patientId: string
-  clinicalRecordId: string | null
-  vaccineName: string
-  vaccineType: string | null
-  batchNumber: string | null
-  administeredDate: Date
-  nextDueDate: Date | null
-  administeredBy: string | null
-  notes: string | null
-  createdAt: Date
+  pacienteId: string
+  registroClinicoId: string | null
+  nombreVacuna: string
+  tipoVacuna: string | null
+  numeroLote: string | null
+  fechaAdministracion: Date
+  proximaFechaVencimiento: Date | null
+  administradoPor: string | null
+  notas: string | null
+  creadoEn: Date
   _count: VaccinationCountAggregateOutputType | null
   _min: VaccinationMinAggregateOutputType | null
   _max: VaccinationMaxAggregateOutputType | null
@@ -220,36 +220,36 @@ export type VaccinationWhereInput = {
   OR?: Prisma.VaccinationWhereInput[]
   NOT?: Prisma.VaccinationWhereInput | Prisma.VaccinationWhereInput[]
   id?: Prisma.UuidFilter<"Vaccination"> | string
-  patientId?: Prisma.UuidFilter<"Vaccination"> | string
-  clinicalRecordId?: Prisma.UuidNullableFilter<"Vaccination"> | string | null
-  vaccineName?: Prisma.StringFilter<"Vaccination"> | string
-  vaccineType?: Prisma.StringNullableFilter<"Vaccination"> | string | null
-  batchNumber?: Prisma.StringNullableFilter<"Vaccination"> | string | null
-  administeredDate?: Prisma.DateTimeFilter<"Vaccination"> | Date | string
-  nextDueDate?: Prisma.DateTimeNullableFilter<"Vaccination"> | Date | string | null
-  administeredBy?: Prisma.UuidNullableFilter<"Vaccination"> | string | null
-  notes?: Prisma.StringNullableFilter<"Vaccination"> | string | null
-  createdAt?: Prisma.DateTimeFilter<"Vaccination"> | Date | string
-  patient?: Prisma.XOR<Prisma.PatientScalarRelationFilter, Prisma.PatientWhereInput>
-  clinicalRecord?: Prisma.XOR<Prisma.ClinicalRecordNullableScalarRelationFilter, Prisma.ClinicalRecordWhereInput> | null
-  administrator?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
+  pacienteId?: Prisma.UuidFilter<"Vaccination"> | string
+  registroClinicoId?: Prisma.UuidNullableFilter<"Vaccination"> | string | null
+  nombreVacuna?: Prisma.StringFilter<"Vaccination"> | string
+  tipoVacuna?: Prisma.StringNullableFilter<"Vaccination"> | string | null
+  numeroLote?: Prisma.StringNullableFilter<"Vaccination"> | string | null
+  fechaAdministracion?: Prisma.DateTimeFilter<"Vaccination"> | Date | string
+  proximaFechaVencimiento?: Prisma.DateTimeNullableFilter<"Vaccination"> | Date | string | null
+  administradoPor?: Prisma.UuidNullableFilter<"Vaccination"> | string | null
+  notas?: Prisma.StringNullableFilter<"Vaccination"> | string | null
+  creadoEn?: Prisma.DateTimeFilter<"Vaccination"> | Date | string
+  paciente?: Prisma.XOR<Prisma.PatientScalarRelationFilter, Prisma.PatientWhereInput>
+  registroClinico?: Prisma.XOR<Prisma.ClinicalRecordNullableScalarRelationFilter, Prisma.ClinicalRecordWhereInput> | null
+  administrador?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
 }
 
 export type VaccinationOrderByWithRelationInput = {
   id?: Prisma.SortOrder
-  patientId?: Prisma.SortOrder
-  clinicalRecordId?: Prisma.SortOrderInput | Prisma.SortOrder
-  vaccineName?: Prisma.SortOrder
-  vaccineType?: Prisma.SortOrderInput | Prisma.SortOrder
-  batchNumber?: Prisma.SortOrderInput | Prisma.SortOrder
-  administeredDate?: Prisma.SortOrder
-  nextDueDate?: Prisma.SortOrderInput | Prisma.SortOrder
-  administeredBy?: Prisma.SortOrderInput | Prisma.SortOrder
-  notes?: Prisma.SortOrderInput | Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  patient?: Prisma.PatientOrderByWithRelationInput
-  clinicalRecord?: Prisma.ClinicalRecordOrderByWithRelationInput
-  administrator?: Prisma.OperatorOrderByWithRelationInput
+  pacienteId?: Prisma.SortOrder
+  registroClinicoId?: Prisma.SortOrderInput | Prisma.SortOrder
+  nombreVacuna?: Prisma.SortOrder
+  tipoVacuna?: Prisma.SortOrderInput | Prisma.SortOrder
+  numeroLote?: Prisma.SortOrderInput | Prisma.SortOrder
+  fechaAdministracion?: Prisma.SortOrder
+  proximaFechaVencimiento?: Prisma.SortOrderInput | Prisma.SortOrder
+  administradoPor?: Prisma.SortOrderInput | Prisma.SortOrder
+  notas?: Prisma.SortOrderInput | Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  paciente?: Prisma.PatientOrderByWithRelationInput
+  registroClinico?: Prisma.ClinicalRecordOrderByWithRelationInput
+  administrador?: Prisma.OperatorOrderByWithRelationInput
 }
 
 export type VaccinationWhereUniqueInput = Prisma.AtLeast<{
@@ -257,33 +257,33 @@ export type VaccinationWhereUniqueInput = Prisma.AtLeast<{
   AND?: Prisma.VaccinationWhereInput | Prisma.VaccinationWhereInput[]
   OR?: Prisma.VaccinationWhereInput[]
   NOT?: Prisma.VaccinationWhereInput | Prisma.VaccinationWhereInput[]
-  patientId?: Prisma.UuidFilter<"Vaccination"> | string
-  clinicalRecordId?: Prisma.UuidNullableFilter<"Vaccination"> | string | null
-  vaccineName?: Prisma.StringFilter<"Vaccination"> | string
-  vaccineType?: Prisma.StringNullableFilter<"Vaccination"> | string | null
-  batchNumber?: Prisma.StringNullableFilter<"Vaccination"> | string | null
-  administeredDate?: Prisma.DateTimeFilter<"Vaccination"> | Date | string
-  nextDueDate?: Prisma.DateTimeNullableFilter<"Vaccination"> | Date | string | null
-  administeredBy?: Prisma.UuidNullableFilter<"Vaccination"> | string | null
-  notes?: Prisma.StringNullableFilter<"Vaccination"> | string | null
-  createdAt?: Prisma.DateTimeFilter<"Vaccination"> | Date | string
-  patient?: Prisma.XOR<Prisma.PatientScalarRelationFilter, Prisma.PatientWhereInput>
-  clinicalRecord?: Prisma.XOR<Prisma.ClinicalRecordNullableScalarRelationFilter, Prisma.ClinicalRecordWhereInput> | null
-  administrator?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
+  pacienteId?: Prisma.UuidFilter<"Vaccination"> | string
+  registroClinicoId?: Prisma.UuidNullableFilter<"Vaccination"> | string | null
+  nombreVacuna?: Prisma.StringFilter<"Vaccination"> | string
+  tipoVacuna?: Prisma.StringNullableFilter<"Vaccination"> | string | null
+  numeroLote?: Prisma.StringNullableFilter<"Vaccination"> | string | null
+  fechaAdministracion?: Prisma.DateTimeFilter<"Vaccination"> | Date | string
+  proximaFechaVencimiento?: Prisma.DateTimeNullableFilter<"Vaccination"> | Date | string | null
+  administradoPor?: Prisma.UuidNullableFilter<"Vaccination"> | string | null
+  notas?: Prisma.StringNullableFilter<"Vaccination"> | string | null
+  creadoEn?: Prisma.DateTimeFilter<"Vaccination"> | Date | string
+  paciente?: Prisma.XOR<Prisma.PatientScalarRelationFilter, Prisma.PatientWhereInput>
+  registroClinico?: Prisma.XOR<Prisma.ClinicalRecordNullableScalarRelationFilter, Prisma.ClinicalRecordWhereInput> | null
+  administrador?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
 }, "id">
 
 export type VaccinationOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
-  patientId?: Prisma.SortOrder
-  clinicalRecordId?: Prisma.SortOrderInput | Prisma.SortOrder
-  vaccineName?: Prisma.SortOrder
-  vaccineType?: Prisma.SortOrderInput | Prisma.SortOrder
-  batchNumber?: Prisma.SortOrderInput | Prisma.SortOrder
-  administeredDate?: Prisma.SortOrder
-  nextDueDate?: Prisma.SortOrderInput | Prisma.SortOrder
-  administeredBy?: Prisma.SortOrderInput | Prisma.SortOrder
-  notes?: Prisma.SortOrderInput | Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
+  pacienteId?: Prisma.SortOrder
+  registroClinicoId?: Prisma.SortOrderInput | Prisma.SortOrder
+  nombreVacuna?: Prisma.SortOrder
+  tipoVacuna?: Prisma.SortOrderInput | Prisma.SortOrder
+  numeroLote?: Prisma.SortOrderInput | Prisma.SortOrder
+  fechaAdministracion?: Prisma.SortOrder
+  proximaFechaVencimiento?: Prisma.SortOrderInput | Prisma.SortOrder
+  administradoPor?: Prisma.SortOrderInput | Prisma.SortOrder
+  notas?: Prisma.SortOrderInput | Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
   _count?: Prisma.VaccinationCountOrderByAggregateInput
   _max?: Prisma.VaccinationMaxOrderByAggregateInput
   _min?: Prisma.VaccinationMinOrderByAggregateInput
@@ -294,111 +294,111 @@ export type VaccinationScalarWhereWithAggregatesInput = {
   OR?: Prisma.VaccinationScalarWhereWithAggregatesInput[]
   NOT?: Prisma.VaccinationScalarWhereWithAggregatesInput | Prisma.VaccinationScalarWhereWithAggregatesInput[]
   id?: Prisma.UuidWithAggregatesFilter<"Vaccination"> | string
-  patientId?: Prisma.UuidWithAggregatesFilter<"Vaccination"> | string
-  clinicalRecordId?: Prisma.UuidNullableWithAggregatesFilter<"Vaccination"> | string | null
-  vaccineName?: Prisma.StringWithAggregatesFilter<"Vaccination"> | string
-  vaccineType?: Prisma.StringNullableWithAggregatesFilter<"Vaccination"> | string | null
-  batchNumber?: Prisma.StringNullableWithAggregatesFilter<"Vaccination"> | string | null
-  administeredDate?: Prisma.DateTimeWithAggregatesFilter<"Vaccination"> | Date | string
-  nextDueDate?: Prisma.DateTimeNullableWithAggregatesFilter<"Vaccination"> | Date | string | null
-  administeredBy?: Prisma.UuidNullableWithAggregatesFilter<"Vaccination"> | string | null
-  notes?: Prisma.StringNullableWithAggregatesFilter<"Vaccination"> | string | null
-  createdAt?: Prisma.DateTimeWithAggregatesFilter<"Vaccination"> | Date | string
+  pacienteId?: Prisma.UuidWithAggregatesFilter<"Vaccination"> | string
+  registroClinicoId?: Prisma.UuidNullableWithAggregatesFilter<"Vaccination"> | string | null
+  nombreVacuna?: Prisma.StringWithAggregatesFilter<"Vaccination"> | string
+  tipoVacuna?: Prisma.StringNullableWithAggregatesFilter<"Vaccination"> | string | null
+  numeroLote?: Prisma.StringNullableWithAggregatesFilter<"Vaccination"> | string | null
+  fechaAdministracion?: Prisma.DateTimeWithAggregatesFilter<"Vaccination"> | Date | string
+  proximaFechaVencimiento?: Prisma.DateTimeNullableWithAggregatesFilter<"Vaccination"> | Date | string | null
+  administradoPor?: Prisma.UuidNullableWithAggregatesFilter<"Vaccination"> | string | null
+  notas?: Prisma.StringNullableWithAggregatesFilter<"Vaccination"> | string | null
+  creadoEn?: Prisma.DateTimeWithAggregatesFilter<"Vaccination"> | Date | string
 }
 
 export type VaccinationCreateInput = {
   id?: string
-  vaccineName: string
-  vaccineType?: string | null
-  batchNumber?: string | null
-  administeredDate: Date | string
-  nextDueDate?: Date | string | null
-  notes?: string | null
-  createdAt?: Date | string
-  patient: Prisma.PatientCreateNestedOneWithoutVaccinationsInput
-  clinicalRecord?: Prisma.ClinicalRecordCreateNestedOneWithoutVaccinationsInput
-  administrator?: Prisma.OperatorCreateNestedOneWithoutVaccinationsInput
+  nombreVacuna: string
+  tipoVacuna?: string | null
+  numeroLote?: string | null
+  fechaAdministracion: Date | string
+  proximaFechaVencimiento?: Date | string | null
+  notas?: string | null
+  creadoEn?: Date | string
+  paciente: Prisma.PatientCreateNestedOneWithoutVacunacionesInput
+  registroClinico?: Prisma.ClinicalRecordCreateNestedOneWithoutVacunacionesInput
+  administrador?: Prisma.OperatorCreateNestedOneWithoutVacunacionesInput
 }
 
 export type VaccinationUncheckedCreateInput = {
   id?: string
-  patientId: string
-  clinicalRecordId?: string | null
-  vaccineName: string
-  vaccineType?: string | null
-  batchNumber?: string | null
-  administeredDate: Date | string
-  nextDueDate?: Date | string | null
-  administeredBy?: string | null
-  notes?: string | null
-  createdAt?: Date | string
+  pacienteId: string
+  registroClinicoId?: string | null
+  nombreVacuna: string
+  tipoVacuna?: string | null
+  numeroLote?: string | null
+  fechaAdministracion: Date | string
+  proximaFechaVencimiento?: Date | string | null
+  administradoPor?: string | null
+  notas?: string | null
+  creadoEn?: Date | string
 }
 
 export type VaccinationUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  vaccineName?: Prisma.StringFieldUpdateOperationsInput | string
-  vaccineType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  batchNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  administeredDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  nextDueDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  patient?: Prisma.PatientUpdateOneRequiredWithoutVaccinationsNestedInput
-  clinicalRecord?: Prisma.ClinicalRecordUpdateOneWithoutVaccinationsNestedInput
-  administrator?: Prisma.OperatorUpdateOneWithoutVaccinationsNestedInput
+  nombreVacuna?: Prisma.StringFieldUpdateOperationsInput | string
+  tipoVacuna?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroLote?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaAdministracion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  proximaFechaVencimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  paciente?: Prisma.PatientUpdateOneRequiredWithoutVacunacionesNestedInput
+  registroClinico?: Prisma.ClinicalRecordUpdateOneWithoutVacunacionesNestedInput
+  administrador?: Prisma.OperatorUpdateOneWithoutVacunacionesNestedInput
 }
 
 export type VaccinationUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  clinicalRecordId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  vaccineName?: Prisma.StringFieldUpdateOperationsInput | string
-  vaccineType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  batchNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  administeredDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  nextDueDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  administeredBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  registroClinicoId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  nombreVacuna?: Prisma.StringFieldUpdateOperationsInput | string
+  tipoVacuna?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroLote?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaAdministracion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  proximaFechaVencimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  administradoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type VaccinationCreateManyInput = {
   id?: string
-  patientId: string
-  clinicalRecordId?: string | null
-  vaccineName: string
-  vaccineType?: string | null
-  batchNumber?: string | null
-  administeredDate: Date | string
-  nextDueDate?: Date | string | null
-  administeredBy?: string | null
-  notes?: string | null
-  createdAt?: Date | string
+  pacienteId: string
+  registroClinicoId?: string | null
+  nombreVacuna: string
+  tipoVacuna?: string | null
+  numeroLote?: string | null
+  fechaAdministracion: Date | string
+  proximaFechaVencimiento?: Date | string | null
+  administradoPor?: string | null
+  notas?: string | null
+  creadoEn?: Date | string
 }
 
 export type VaccinationUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  vaccineName?: Prisma.StringFieldUpdateOperationsInput | string
-  vaccineType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  batchNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  administeredDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  nextDueDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  nombreVacuna?: Prisma.StringFieldUpdateOperationsInput | string
+  tipoVacuna?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroLote?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaAdministracion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  proximaFechaVencimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type VaccinationUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  clinicalRecordId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  vaccineName?: Prisma.StringFieldUpdateOperationsInput | string
-  vaccineType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  batchNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  administeredDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  nextDueDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  administeredBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  registroClinicoId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  nombreVacuna?: Prisma.StringFieldUpdateOperationsInput | string
+  tipoVacuna?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroLote?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaAdministracion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  proximaFechaVencimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  administradoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type VaccinationListRelationFilter = {
@@ -413,222 +413,222 @@ export type VaccinationOrderByRelationAggregateInput = {
 
 export type VaccinationCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  patientId?: Prisma.SortOrder
-  clinicalRecordId?: Prisma.SortOrder
-  vaccineName?: Prisma.SortOrder
-  vaccineType?: Prisma.SortOrder
-  batchNumber?: Prisma.SortOrder
-  administeredDate?: Prisma.SortOrder
-  nextDueDate?: Prisma.SortOrder
-  administeredBy?: Prisma.SortOrder
-  notes?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
+  pacienteId?: Prisma.SortOrder
+  registroClinicoId?: Prisma.SortOrder
+  nombreVacuna?: Prisma.SortOrder
+  tipoVacuna?: Prisma.SortOrder
+  numeroLote?: Prisma.SortOrder
+  fechaAdministracion?: Prisma.SortOrder
+  proximaFechaVencimiento?: Prisma.SortOrder
+  administradoPor?: Prisma.SortOrder
+  notas?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
 }
 
 export type VaccinationMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  patientId?: Prisma.SortOrder
-  clinicalRecordId?: Prisma.SortOrder
-  vaccineName?: Prisma.SortOrder
-  vaccineType?: Prisma.SortOrder
-  batchNumber?: Prisma.SortOrder
-  administeredDate?: Prisma.SortOrder
-  nextDueDate?: Prisma.SortOrder
-  administeredBy?: Prisma.SortOrder
-  notes?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
+  pacienteId?: Prisma.SortOrder
+  registroClinicoId?: Prisma.SortOrder
+  nombreVacuna?: Prisma.SortOrder
+  tipoVacuna?: Prisma.SortOrder
+  numeroLote?: Prisma.SortOrder
+  fechaAdministracion?: Prisma.SortOrder
+  proximaFechaVencimiento?: Prisma.SortOrder
+  administradoPor?: Prisma.SortOrder
+  notas?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
 }
 
 export type VaccinationMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  patientId?: Prisma.SortOrder
-  clinicalRecordId?: Prisma.SortOrder
-  vaccineName?: Prisma.SortOrder
-  vaccineType?: Prisma.SortOrder
-  batchNumber?: Prisma.SortOrder
-  administeredDate?: Prisma.SortOrder
-  nextDueDate?: Prisma.SortOrder
-  administeredBy?: Prisma.SortOrder
-  notes?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
+  pacienteId?: Prisma.SortOrder
+  registroClinicoId?: Prisma.SortOrder
+  nombreVacuna?: Prisma.SortOrder
+  tipoVacuna?: Prisma.SortOrder
+  numeroLote?: Prisma.SortOrder
+  fechaAdministracion?: Prisma.SortOrder
+  proximaFechaVencimiento?: Prisma.SortOrder
+  administradoPor?: Prisma.SortOrder
+  notas?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
 }
 
-export type VaccinationCreateNestedManyWithoutAdministratorInput = {
-  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutAdministratorInput, Prisma.VaccinationUncheckedCreateWithoutAdministratorInput> | Prisma.VaccinationCreateWithoutAdministratorInput[] | Prisma.VaccinationUncheckedCreateWithoutAdministratorInput[]
-  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutAdministratorInput | Prisma.VaccinationCreateOrConnectWithoutAdministratorInput[]
-  createMany?: Prisma.VaccinationCreateManyAdministratorInputEnvelope
+export type VaccinationCreateNestedManyWithoutAdministradorInput = {
+  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutAdministradorInput, Prisma.VaccinationUncheckedCreateWithoutAdministradorInput> | Prisma.VaccinationCreateWithoutAdministradorInput[] | Prisma.VaccinationUncheckedCreateWithoutAdministradorInput[]
+  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutAdministradorInput | Prisma.VaccinationCreateOrConnectWithoutAdministradorInput[]
+  createMany?: Prisma.VaccinationCreateManyAdministradorInputEnvelope
   connect?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
 }
 
-export type VaccinationUncheckedCreateNestedManyWithoutAdministratorInput = {
-  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutAdministratorInput, Prisma.VaccinationUncheckedCreateWithoutAdministratorInput> | Prisma.VaccinationCreateWithoutAdministratorInput[] | Prisma.VaccinationUncheckedCreateWithoutAdministratorInput[]
-  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutAdministratorInput | Prisma.VaccinationCreateOrConnectWithoutAdministratorInput[]
-  createMany?: Prisma.VaccinationCreateManyAdministratorInputEnvelope
+export type VaccinationUncheckedCreateNestedManyWithoutAdministradorInput = {
+  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutAdministradorInput, Prisma.VaccinationUncheckedCreateWithoutAdministradorInput> | Prisma.VaccinationCreateWithoutAdministradorInput[] | Prisma.VaccinationUncheckedCreateWithoutAdministradorInput[]
+  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutAdministradorInput | Prisma.VaccinationCreateOrConnectWithoutAdministradorInput[]
+  createMany?: Prisma.VaccinationCreateManyAdministradorInputEnvelope
   connect?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
 }
 
-export type VaccinationUpdateManyWithoutAdministratorNestedInput = {
-  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutAdministratorInput, Prisma.VaccinationUncheckedCreateWithoutAdministratorInput> | Prisma.VaccinationCreateWithoutAdministratorInput[] | Prisma.VaccinationUncheckedCreateWithoutAdministratorInput[]
-  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutAdministratorInput | Prisma.VaccinationCreateOrConnectWithoutAdministratorInput[]
-  upsert?: Prisma.VaccinationUpsertWithWhereUniqueWithoutAdministratorInput | Prisma.VaccinationUpsertWithWhereUniqueWithoutAdministratorInput[]
-  createMany?: Prisma.VaccinationCreateManyAdministratorInputEnvelope
+export type VaccinationUpdateManyWithoutAdministradorNestedInput = {
+  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutAdministradorInput, Prisma.VaccinationUncheckedCreateWithoutAdministradorInput> | Prisma.VaccinationCreateWithoutAdministradorInput[] | Prisma.VaccinationUncheckedCreateWithoutAdministradorInput[]
+  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutAdministradorInput | Prisma.VaccinationCreateOrConnectWithoutAdministradorInput[]
+  upsert?: Prisma.VaccinationUpsertWithWhereUniqueWithoutAdministradorInput | Prisma.VaccinationUpsertWithWhereUniqueWithoutAdministradorInput[]
+  createMany?: Prisma.VaccinationCreateManyAdministradorInputEnvelope
   set?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
   disconnect?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
   delete?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
   connect?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
-  update?: Prisma.VaccinationUpdateWithWhereUniqueWithoutAdministratorInput | Prisma.VaccinationUpdateWithWhereUniqueWithoutAdministratorInput[]
-  updateMany?: Prisma.VaccinationUpdateManyWithWhereWithoutAdministratorInput | Prisma.VaccinationUpdateManyWithWhereWithoutAdministratorInput[]
+  update?: Prisma.VaccinationUpdateWithWhereUniqueWithoutAdministradorInput | Prisma.VaccinationUpdateWithWhereUniqueWithoutAdministradorInput[]
+  updateMany?: Prisma.VaccinationUpdateManyWithWhereWithoutAdministradorInput | Prisma.VaccinationUpdateManyWithWhereWithoutAdministradorInput[]
   deleteMany?: Prisma.VaccinationScalarWhereInput | Prisma.VaccinationScalarWhereInput[]
 }
 
-export type VaccinationUncheckedUpdateManyWithoutAdministratorNestedInput = {
-  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutAdministratorInput, Prisma.VaccinationUncheckedCreateWithoutAdministratorInput> | Prisma.VaccinationCreateWithoutAdministratorInput[] | Prisma.VaccinationUncheckedCreateWithoutAdministratorInput[]
-  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutAdministratorInput | Prisma.VaccinationCreateOrConnectWithoutAdministratorInput[]
-  upsert?: Prisma.VaccinationUpsertWithWhereUniqueWithoutAdministratorInput | Prisma.VaccinationUpsertWithWhereUniqueWithoutAdministratorInput[]
-  createMany?: Prisma.VaccinationCreateManyAdministratorInputEnvelope
+export type VaccinationUncheckedUpdateManyWithoutAdministradorNestedInput = {
+  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutAdministradorInput, Prisma.VaccinationUncheckedCreateWithoutAdministradorInput> | Prisma.VaccinationCreateWithoutAdministradorInput[] | Prisma.VaccinationUncheckedCreateWithoutAdministradorInput[]
+  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutAdministradorInput | Prisma.VaccinationCreateOrConnectWithoutAdministradorInput[]
+  upsert?: Prisma.VaccinationUpsertWithWhereUniqueWithoutAdministradorInput | Prisma.VaccinationUpsertWithWhereUniqueWithoutAdministradorInput[]
+  createMany?: Prisma.VaccinationCreateManyAdministradorInputEnvelope
   set?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
   disconnect?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
   delete?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
   connect?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
-  update?: Prisma.VaccinationUpdateWithWhereUniqueWithoutAdministratorInput | Prisma.VaccinationUpdateWithWhereUniqueWithoutAdministratorInput[]
-  updateMany?: Prisma.VaccinationUpdateManyWithWhereWithoutAdministratorInput | Prisma.VaccinationUpdateManyWithWhereWithoutAdministratorInput[]
+  update?: Prisma.VaccinationUpdateWithWhereUniqueWithoutAdministradorInput | Prisma.VaccinationUpdateWithWhereUniqueWithoutAdministradorInput[]
+  updateMany?: Prisma.VaccinationUpdateManyWithWhereWithoutAdministradorInput | Prisma.VaccinationUpdateManyWithWhereWithoutAdministradorInput[]
   deleteMany?: Prisma.VaccinationScalarWhereInput | Prisma.VaccinationScalarWhereInput[]
 }
 
-export type VaccinationCreateNestedManyWithoutPatientInput = {
-  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutPatientInput, Prisma.VaccinationUncheckedCreateWithoutPatientInput> | Prisma.VaccinationCreateWithoutPatientInput[] | Prisma.VaccinationUncheckedCreateWithoutPatientInput[]
-  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutPatientInput | Prisma.VaccinationCreateOrConnectWithoutPatientInput[]
-  createMany?: Prisma.VaccinationCreateManyPatientInputEnvelope
+export type VaccinationCreateNestedManyWithoutPacienteInput = {
+  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutPacienteInput, Prisma.VaccinationUncheckedCreateWithoutPacienteInput> | Prisma.VaccinationCreateWithoutPacienteInput[] | Prisma.VaccinationUncheckedCreateWithoutPacienteInput[]
+  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutPacienteInput | Prisma.VaccinationCreateOrConnectWithoutPacienteInput[]
+  createMany?: Prisma.VaccinationCreateManyPacienteInputEnvelope
   connect?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
 }
 
-export type VaccinationUncheckedCreateNestedManyWithoutPatientInput = {
-  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutPatientInput, Prisma.VaccinationUncheckedCreateWithoutPatientInput> | Prisma.VaccinationCreateWithoutPatientInput[] | Prisma.VaccinationUncheckedCreateWithoutPatientInput[]
-  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutPatientInput | Prisma.VaccinationCreateOrConnectWithoutPatientInput[]
-  createMany?: Prisma.VaccinationCreateManyPatientInputEnvelope
+export type VaccinationUncheckedCreateNestedManyWithoutPacienteInput = {
+  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutPacienteInput, Prisma.VaccinationUncheckedCreateWithoutPacienteInput> | Prisma.VaccinationCreateWithoutPacienteInput[] | Prisma.VaccinationUncheckedCreateWithoutPacienteInput[]
+  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutPacienteInput | Prisma.VaccinationCreateOrConnectWithoutPacienteInput[]
+  createMany?: Prisma.VaccinationCreateManyPacienteInputEnvelope
   connect?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
 }
 
-export type VaccinationUpdateManyWithoutPatientNestedInput = {
-  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutPatientInput, Prisma.VaccinationUncheckedCreateWithoutPatientInput> | Prisma.VaccinationCreateWithoutPatientInput[] | Prisma.VaccinationUncheckedCreateWithoutPatientInput[]
-  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutPatientInput | Prisma.VaccinationCreateOrConnectWithoutPatientInput[]
-  upsert?: Prisma.VaccinationUpsertWithWhereUniqueWithoutPatientInput | Prisma.VaccinationUpsertWithWhereUniqueWithoutPatientInput[]
-  createMany?: Prisma.VaccinationCreateManyPatientInputEnvelope
+export type VaccinationUpdateManyWithoutPacienteNestedInput = {
+  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutPacienteInput, Prisma.VaccinationUncheckedCreateWithoutPacienteInput> | Prisma.VaccinationCreateWithoutPacienteInput[] | Prisma.VaccinationUncheckedCreateWithoutPacienteInput[]
+  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutPacienteInput | Prisma.VaccinationCreateOrConnectWithoutPacienteInput[]
+  upsert?: Prisma.VaccinationUpsertWithWhereUniqueWithoutPacienteInput | Prisma.VaccinationUpsertWithWhereUniqueWithoutPacienteInput[]
+  createMany?: Prisma.VaccinationCreateManyPacienteInputEnvelope
   set?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
   disconnect?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
   delete?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
   connect?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
-  update?: Prisma.VaccinationUpdateWithWhereUniqueWithoutPatientInput | Prisma.VaccinationUpdateWithWhereUniqueWithoutPatientInput[]
-  updateMany?: Prisma.VaccinationUpdateManyWithWhereWithoutPatientInput | Prisma.VaccinationUpdateManyWithWhereWithoutPatientInput[]
+  update?: Prisma.VaccinationUpdateWithWhereUniqueWithoutPacienteInput | Prisma.VaccinationUpdateWithWhereUniqueWithoutPacienteInput[]
+  updateMany?: Prisma.VaccinationUpdateManyWithWhereWithoutPacienteInput | Prisma.VaccinationUpdateManyWithWhereWithoutPacienteInput[]
   deleteMany?: Prisma.VaccinationScalarWhereInput | Prisma.VaccinationScalarWhereInput[]
 }
 
-export type VaccinationUncheckedUpdateManyWithoutPatientNestedInput = {
-  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutPatientInput, Prisma.VaccinationUncheckedCreateWithoutPatientInput> | Prisma.VaccinationCreateWithoutPatientInput[] | Prisma.VaccinationUncheckedCreateWithoutPatientInput[]
-  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutPatientInput | Prisma.VaccinationCreateOrConnectWithoutPatientInput[]
-  upsert?: Prisma.VaccinationUpsertWithWhereUniqueWithoutPatientInput | Prisma.VaccinationUpsertWithWhereUniqueWithoutPatientInput[]
-  createMany?: Prisma.VaccinationCreateManyPatientInputEnvelope
+export type VaccinationUncheckedUpdateManyWithoutPacienteNestedInput = {
+  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutPacienteInput, Prisma.VaccinationUncheckedCreateWithoutPacienteInput> | Prisma.VaccinationCreateWithoutPacienteInput[] | Prisma.VaccinationUncheckedCreateWithoutPacienteInput[]
+  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutPacienteInput | Prisma.VaccinationCreateOrConnectWithoutPacienteInput[]
+  upsert?: Prisma.VaccinationUpsertWithWhereUniqueWithoutPacienteInput | Prisma.VaccinationUpsertWithWhereUniqueWithoutPacienteInput[]
+  createMany?: Prisma.VaccinationCreateManyPacienteInputEnvelope
   set?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
   disconnect?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
   delete?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
   connect?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
-  update?: Prisma.VaccinationUpdateWithWhereUniqueWithoutPatientInput | Prisma.VaccinationUpdateWithWhereUniqueWithoutPatientInput[]
-  updateMany?: Prisma.VaccinationUpdateManyWithWhereWithoutPatientInput | Prisma.VaccinationUpdateManyWithWhereWithoutPatientInput[]
+  update?: Prisma.VaccinationUpdateWithWhereUniqueWithoutPacienteInput | Prisma.VaccinationUpdateWithWhereUniqueWithoutPacienteInput[]
+  updateMany?: Prisma.VaccinationUpdateManyWithWhereWithoutPacienteInput | Prisma.VaccinationUpdateManyWithWhereWithoutPacienteInput[]
   deleteMany?: Prisma.VaccinationScalarWhereInput | Prisma.VaccinationScalarWhereInput[]
 }
 
-export type VaccinationCreateNestedManyWithoutClinicalRecordInput = {
-  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutClinicalRecordInput, Prisma.VaccinationUncheckedCreateWithoutClinicalRecordInput> | Prisma.VaccinationCreateWithoutClinicalRecordInput[] | Prisma.VaccinationUncheckedCreateWithoutClinicalRecordInput[]
-  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutClinicalRecordInput | Prisma.VaccinationCreateOrConnectWithoutClinicalRecordInput[]
-  createMany?: Prisma.VaccinationCreateManyClinicalRecordInputEnvelope
+export type VaccinationCreateNestedManyWithoutRegistroClinicoInput = {
+  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutRegistroClinicoInput, Prisma.VaccinationUncheckedCreateWithoutRegistroClinicoInput> | Prisma.VaccinationCreateWithoutRegistroClinicoInput[] | Prisma.VaccinationUncheckedCreateWithoutRegistroClinicoInput[]
+  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutRegistroClinicoInput | Prisma.VaccinationCreateOrConnectWithoutRegistroClinicoInput[]
+  createMany?: Prisma.VaccinationCreateManyRegistroClinicoInputEnvelope
   connect?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
 }
 
-export type VaccinationUncheckedCreateNestedManyWithoutClinicalRecordInput = {
-  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutClinicalRecordInput, Prisma.VaccinationUncheckedCreateWithoutClinicalRecordInput> | Prisma.VaccinationCreateWithoutClinicalRecordInput[] | Prisma.VaccinationUncheckedCreateWithoutClinicalRecordInput[]
-  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutClinicalRecordInput | Prisma.VaccinationCreateOrConnectWithoutClinicalRecordInput[]
-  createMany?: Prisma.VaccinationCreateManyClinicalRecordInputEnvelope
+export type VaccinationUncheckedCreateNestedManyWithoutRegistroClinicoInput = {
+  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutRegistroClinicoInput, Prisma.VaccinationUncheckedCreateWithoutRegistroClinicoInput> | Prisma.VaccinationCreateWithoutRegistroClinicoInput[] | Prisma.VaccinationUncheckedCreateWithoutRegistroClinicoInput[]
+  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutRegistroClinicoInput | Prisma.VaccinationCreateOrConnectWithoutRegistroClinicoInput[]
+  createMany?: Prisma.VaccinationCreateManyRegistroClinicoInputEnvelope
   connect?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
 }
 
-export type VaccinationUpdateManyWithoutClinicalRecordNestedInput = {
-  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutClinicalRecordInput, Prisma.VaccinationUncheckedCreateWithoutClinicalRecordInput> | Prisma.VaccinationCreateWithoutClinicalRecordInput[] | Prisma.VaccinationUncheckedCreateWithoutClinicalRecordInput[]
-  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutClinicalRecordInput | Prisma.VaccinationCreateOrConnectWithoutClinicalRecordInput[]
-  upsert?: Prisma.VaccinationUpsertWithWhereUniqueWithoutClinicalRecordInput | Prisma.VaccinationUpsertWithWhereUniqueWithoutClinicalRecordInput[]
-  createMany?: Prisma.VaccinationCreateManyClinicalRecordInputEnvelope
+export type VaccinationUpdateManyWithoutRegistroClinicoNestedInput = {
+  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutRegistroClinicoInput, Prisma.VaccinationUncheckedCreateWithoutRegistroClinicoInput> | Prisma.VaccinationCreateWithoutRegistroClinicoInput[] | Prisma.VaccinationUncheckedCreateWithoutRegistroClinicoInput[]
+  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutRegistroClinicoInput | Prisma.VaccinationCreateOrConnectWithoutRegistroClinicoInput[]
+  upsert?: Prisma.VaccinationUpsertWithWhereUniqueWithoutRegistroClinicoInput | Prisma.VaccinationUpsertWithWhereUniqueWithoutRegistroClinicoInput[]
+  createMany?: Prisma.VaccinationCreateManyRegistroClinicoInputEnvelope
   set?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
   disconnect?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
   delete?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
   connect?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
-  update?: Prisma.VaccinationUpdateWithWhereUniqueWithoutClinicalRecordInput | Prisma.VaccinationUpdateWithWhereUniqueWithoutClinicalRecordInput[]
-  updateMany?: Prisma.VaccinationUpdateManyWithWhereWithoutClinicalRecordInput | Prisma.VaccinationUpdateManyWithWhereWithoutClinicalRecordInput[]
+  update?: Prisma.VaccinationUpdateWithWhereUniqueWithoutRegistroClinicoInput | Prisma.VaccinationUpdateWithWhereUniqueWithoutRegistroClinicoInput[]
+  updateMany?: Prisma.VaccinationUpdateManyWithWhereWithoutRegistroClinicoInput | Prisma.VaccinationUpdateManyWithWhereWithoutRegistroClinicoInput[]
   deleteMany?: Prisma.VaccinationScalarWhereInput | Prisma.VaccinationScalarWhereInput[]
 }
 
-export type VaccinationUncheckedUpdateManyWithoutClinicalRecordNestedInput = {
-  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutClinicalRecordInput, Prisma.VaccinationUncheckedCreateWithoutClinicalRecordInput> | Prisma.VaccinationCreateWithoutClinicalRecordInput[] | Prisma.VaccinationUncheckedCreateWithoutClinicalRecordInput[]
-  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutClinicalRecordInput | Prisma.VaccinationCreateOrConnectWithoutClinicalRecordInput[]
-  upsert?: Prisma.VaccinationUpsertWithWhereUniqueWithoutClinicalRecordInput | Prisma.VaccinationUpsertWithWhereUniqueWithoutClinicalRecordInput[]
-  createMany?: Prisma.VaccinationCreateManyClinicalRecordInputEnvelope
+export type VaccinationUncheckedUpdateManyWithoutRegistroClinicoNestedInput = {
+  create?: Prisma.XOR<Prisma.VaccinationCreateWithoutRegistroClinicoInput, Prisma.VaccinationUncheckedCreateWithoutRegistroClinicoInput> | Prisma.VaccinationCreateWithoutRegistroClinicoInput[] | Prisma.VaccinationUncheckedCreateWithoutRegistroClinicoInput[]
+  connectOrCreate?: Prisma.VaccinationCreateOrConnectWithoutRegistroClinicoInput | Prisma.VaccinationCreateOrConnectWithoutRegistroClinicoInput[]
+  upsert?: Prisma.VaccinationUpsertWithWhereUniqueWithoutRegistroClinicoInput | Prisma.VaccinationUpsertWithWhereUniqueWithoutRegistroClinicoInput[]
+  createMany?: Prisma.VaccinationCreateManyRegistroClinicoInputEnvelope
   set?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
   disconnect?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
   delete?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
   connect?: Prisma.VaccinationWhereUniqueInput | Prisma.VaccinationWhereUniqueInput[]
-  update?: Prisma.VaccinationUpdateWithWhereUniqueWithoutClinicalRecordInput | Prisma.VaccinationUpdateWithWhereUniqueWithoutClinicalRecordInput[]
-  updateMany?: Prisma.VaccinationUpdateManyWithWhereWithoutClinicalRecordInput | Prisma.VaccinationUpdateManyWithWhereWithoutClinicalRecordInput[]
+  update?: Prisma.VaccinationUpdateWithWhereUniqueWithoutRegistroClinicoInput | Prisma.VaccinationUpdateWithWhereUniqueWithoutRegistroClinicoInput[]
+  updateMany?: Prisma.VaccinationUpdateManyWithWhereWithoutRegistroClinicoInput | Prisma.VaccinationUpdateManyWithWhereWithoutRegistroClinicoInput[]
   deleteMany?: Prisma.VaccinationScalarWhereInput | Prisma.VaccinationScalarWhereInput[]
 }
 
-export type VaccinationCreateWithoutAdministratorInput = {
+export type VaccinationCreateWithoutAdministradorInput = {
   id?: string
-  vaccineName: string
-  vaccineType?: string | null
-  batchNumber?: string | null
-  administeredDate: Date | string
-  nextDueDate?: Date | string | null
-  notes?: string | null
-  createdAt?: Date | string
-  patient: Prisma.PatientCreateNestedOneWithoutVaccinationsInput
-  clinicalRecord?: Prisma.ClinicalRecordCreateNestedOneWithoutVaccinationsInput
+  nombreVacuna: string
+  tipoVacuna?: string | null
+  numeroLote?: string | null
+  fechaAdministracion: Date | string
+  proximaFechaVencimiento?: Date | string | null
+  notas?: string | null
+  creadoEn?: Date | string
+  paciente: Prisma.PatientCreateNestedOneWithoutVacunacionesInput
+  registroClinico?: Prisma.ClinicalRecordCreateNestedOneWithoutVacunacionesInput
 }
 
-export type VaccinationUncheckedCreateWithoutAdministratorInput = {
+export type VaccinationUncheckedCreateWithoutAdministradorInput = {
   id?: string
-  patientId: string
-  clinicalRecordId?: string | null
-  vaccineName: string
-  vaccineType?: string | null
-  batchNumber?: string | null
-  administeredDate: Date | string
-  nextDueDate?: Date | string | null
-  notes?: string | null
-  createdAt?: Date | string
+  pacienteId: string
+  registroClinicoId?: string | null
+  nombreVacuna: string
+  tipoVacuna?: string | null
+  numeroLote?: string | null
+  fechaAdministracion: Date | string
+  proximaFechaVencimiento?: Date | string | null
+  notas?: string | null
+  creadoEn?: Date | string
 }
 
-export type VaccinationCreateOrConnectWithoutAdministratorInput = {
+export type VaccinationCreateOrConnectWithoutAdministradorInput = {
   where: Prisma.VaccinationWhereUniqueInput
-  create: Prisma.XOR<Prisma.VaccinationCreateWithoutAdministratorInput, Prisma.VaccinationUncheckedCreateWithoutAdministratorInput>
+  create: Prisma.XOR<Prisma.VaccinationCreateWithoutAdministradorInput, Prisma.VaccinationUncheckedCreateWithoutAdministradorInput>
 }
 
-export type VaccinationCreateManyAdministratorInputEnvelope = {
-  data: Prisma.VaccinationCreateManyAdministratorInput | Prisma.VaccinationCreateManyAdministratorInput[]
+export type VaccinationCreateManyAdministradorInputEnvelope = {
+  data: Prisma.VaccinationCreateManyAdministradorInput | Prisma.VaccinationCreateManyAdministradorInput[]
   skipDuplicates?: boolean
 }
 
-export type VaccinationUpsertWithWhereUniqueWithoutAdministratorInput = {
+export type VaccinationUpsertWithWhereUniqueWithoutAdministradorInput = {
   where: Prisma.VaccinationWhereUniqueInput
-  update: Prisma.XOR<Prisma.VaccinationUpdateWithoutAdministratorInput, Prisma.VaccinationUncheckedUpdateWithoutAdministratorInput>
-  create: Prisma.XOR<Prisma.VaccinationCreateWithoutAdministratorInput, Prisma.VaccinationUncheckedCreateWithoutAdministratorInput>
+  update: Prisma.XOR<Prisma.VaccinationUpdateWithoutAdministradorInput, Prisma.VaccinationUncheckedUpdateWithoutAdministradorInput>
+  create: Prisma.XOR<Prisma.VaccinationCreateWithoutAdministradorInput, Prisma.VaccinationUncheckedCreateWithoutAdministradorInput>
 }
 
-export type VaccinationUpdateWithWhereUniqueWithoutAdministratorInput = {
+export type VaccinationUpdateWithWhereUniqueWithoutAdministradorInput = {
   where: Prisma.VaccinationWhereUniqueInput
-  data: Prisma.XOR<Prisma.VaccinationUpdateWithoutAdministratorInput, Prisma.VaccinationUncheckedUpdateWithoutAdministratorInput>
+  data: Prisma.XOR<Prisma.VaccinationUpdateWithoutAdministradorInput, Prisma.VaccinationUncheckedUpdateWithoutAdministradorInput>
 }
 
-export type VaccinationUpdateManyWithWhereWithoutAdministratorInput = {
+export type VaccinationUpdateManyWithWhereWithoutAdministradorInput = {
   where: Prisma.VaccinationScalarWhereInput
-  data: Prisma.XOR<Prisma.VaccinationUpdateManyMutationInput, Prisma.VaccinationUncheckedUpdateManyWithoutAdministratorInput>
+  data: Prisma.XOR<Prisma.VaccinationUpdateManyMutationInput, Prisma.VaccinationUncheckedUpdateManyWithoutAdministradorInput>
 }
 
 export type VaccinationScalarWhereInput = {
@@ -636,381 +636,381 @@ export type VaccinationScalarWhereInput = {
   OR?: Prisma.VaccinationScalarWhereInput[]
   NOT?: Prisma.VaccinationScalarWhereInput | Prisma.VaccinationScalarWhereInput[]
   id?: Prisma.UuidFilter<"Vaccination"> | string
-  patientId?: Prisma.UuidFilter<"Vaccination"> | string
-  clinicalRecordId?: Prisma.UuidNullableFilter<"Vaccination"> | string | null
-  vaccineName?: Prisma.StringFilter<"Vaccination"> | string
-  vaccineType?: Prisma.StringNullableFilter<"Vaccination"> | string | null
-  batchNumber?: Prisma.StringNullableFilter<"Vaccination"> | string | null
-  administeredDate?: Prisma.DateTimeFilter<"Vaccination"> | Date | string
-  nextDueDate?: Prisma.DateTimeNullableFilter<"Vaccination"> | Date | string | null
-  administeredBy?: Prisma.UuidNullableFilter<"Vaccination"> | string | null
-  notes?: Prisma.StringNullableFilter<"Vaccination"> | string | null
-  createdAt?: Prisma.DateTimeFilter<"Vaccination"> | Date | string
+  pacienteId?: Prisma.UuidFilter<"Vaccination"> | string
+  registroClinicoId?: Prisma.UuidNullableFilter<"Vaccination"> | string | null
+  nombreVacuna?: Prisma.StringFilter<"Vaccination"> | string
+  tipoVacuna?: Prisma.StringNullableFilter<"Vaccination"> | string | null
+  numeroLote?: Prisma.StringNullableFilter<"Vaccination"> | string | null
+  fechaAdministracion?: Prisma.DateTimeFilter<"Vaccination"> | Date | string
+  proximaFechaVencimiento?: Prisma.DateTimeNullableFilter<"Vaccination"> | Date | string | null
+  administradoPor?: Prisma.UuidNullableFilter<"Vaccination"> | string | null
+  notas?: Prisma.StringNullableFilter<"Vaccination"> | string | null
+  creadoEn?: Prisma.DateTimeFilter<"Vaccination"> | Date | string
 }
 
-export type VaccinationCreateWithoutPatientInput = {
+export type VaccinationCreateWithoutPacienteInput = {
   id?: string
-  vaccineName: string
-  vaccineType?: string | null
-  batchNumber?: string | null
-  administeredDate: Date | string
-  nextDueDate?: Date | string | null
-  notes?: string | null
-  createdAt?: Date | string
-  clinicalRecord?: Prisma.ClinicalRecordCreateNestedOneWithoutVaccinationsInput
-  administrator?: Prisma.OperatorCreateNestedOneWithoutVaccinationsInput
+  nombreVacuna: string
+  tipoVacuna?: string | null
+  numeroLote?: string | null
+  fechaAdministracion: Date | string
+  proximaFechaVencimiento?: Date | string | null
+  notas?: string | null
+  creadoEn?: Date | string
+  registroClinico?: Prisma.ClinicalRecordCreateNestedOneWithoutVacunacionesInput
+  administrador?: Prisma.OperatorCreateNestedOneWithoutVacunacionesInput
 }
 
-export type VaccinationUncheckedCreateWithoutPatientInput = {
+export type VaccinationUncheckedCreateWithoutPacienteInput = {
   id?: string
-  clinicalRecordId?: string | null
-  vaccineName: string
-  vaccineType?: string | null
-  batchNumber?: string | null
-  administeredDate: Date | string
-  nextDueDate?: Date | string | null
-  administeredBy?: string | null
-  notes?: string | null
-  createdAt?: Date | string
+  registroClinicoId?: string | null
+  nombreVacuna: string
+  tipoVacuna?: string | null
+  numeroLote?: string | null
+  fechaAdministracion: Date | string
+  proximaFechaVencimiento?: Date | string | null
+  administradoPor?: string | null
+  notas?: string | null
+  creadoEn?: Date | string
 }
 
-export type VaccinationCreateOrConnectWithoutPatientInput = {
+export type VaccinationCreateOrConnectWithoutPacienteInput = {
   where: Prisma.VaccinationWhereUniqueInput
-  create: Prisma.XOR<Prisma.VaccinationCreateWithoutPatientInput, Prisma.VaccinationUncheckedCreateWithoutPatientInput>
+  create: Prisma.XOR<Prisma.VaccinationCreateWithoutPacienteInput, Prisma.VaccinationUncheckedCreateWithoutPacienteInput>
 }
 
-export type VaccinationCreateManyPatientInputEnvelope = {
-  data: Prisma.VaccinationCreateManyPatientInput | Prisma.VaccinationCreateManyPatientInput[]
+export type VaccinationCreateManyPacienteInputEnvelope = {
+  data: Prisma.VaccinationCreateManyPacienteInput | Prisma.VaccinationCreateManyPacienteInput[]
   skipDuplicates?: boolean
 }
 
-export type VaccinationUpsertWithWhereUniqueWithoutPatientInput = {
+export type VaccinationUpsertWithWhereUniqueWithoutPacienteInput = {
   where: Prisma.VaccinationWhereUniqueInput
-  update: Prisma.XOR<Prisma.VaccinationUpdateWithoutPatientInput, Prisma.VaccinationUncheckedUpdateWithoutPatientInput>
-  create: Prisma.XOR<Prisma.VaccinationCreateWithoutPatientInput, Prisma.VaccinationUncheckedCreateWithoutPatientInput>
+  update: Prisma.XOR<Prisma.VaccinationUpdateWithoutPacienteInput, Prisma.VaccinationUncheckedUpdateWithoutPacienteInput>
+  create: Prisma.XOR<Prisma.VaccinationCreateWithoutPacienteInput, Prisma.VaccinationUncheckedCreateWithoutPacienteInput>
 }
 
-export type VaccinationUpdateWithWhereUniqueWithoutPatientInput = {
+export type VaccinationUpdateWithWhereUniqueWithoutPacienteInput = {
   where: Prisma.VaccinationWhereUniqueInput
-  data: Prisma.XOR<Prisma.VaccinationUpdateWithoutPatientInput, Prisma.VaccinationUncheckedUpdateWithoutPatientInput>
+  data: Prisma.XOR<Prisma.VaccinationUpdateWithoutPacienteInput, Prisma.VaccinationUncheckedUpdateWithoutPacienteInput>
 }
 
-export type VaccinationUpdateManyWithWhereWithoutPatientInput = {
+export type VaccinationUpdateManyWithWhereWithoutPacienteInput = {
   where: Prisma.VaccinationScalarWhereInput
-  data: Prisma.XOR<Prisma.VaccinationUpdateManyMutationInput, Prisma.VaccinationUncheckedUpdateManyWithoutPatientInput>
+  data: Prisma.XOR<Prisma.VaccinationUpdateManyMutationInput, Prisma.VaccinationUncheckedUpdateManyWithoutPacienteInput>
 }
 
-export type VaccinationCreateWithoutClinicalRecordInput = {
+export type VaccinationCreateWithoutRegistroClinicoInput = {
   id?: string
-  vaccineName: string
-  vaccineType?: string | null
-  batchNumber?: string | null
-  administeredDate: Date | string
-  nextDueDate?: Date | string | null
-  notes?: string | null
-  createdAt?: Date | string
-  patient: Prisma.PatientCreateNestedOneWithoutVaccinationsInput
-  administrator?: Prisma.OperatorCreateNestedOneWithoutVaccinationsInput
+  nombreVacuna: string
+  tipoVacuna?: string | null
+  numeroLote?: string | null
+  fechaAdministracion: Date | string
+  proximaFechaVencimiento?: Date | string | null
+  notas?: string | null
+  creadoEn?: Date | string
+  paciente: Prisma.PatientCreateNestedOneWithoutVacunacionesInput
+  administrador?: Prisma.OperatorCreateNestedOneWithoutVacunacionesInput
 }
 
-export type VaccinationUncheckedCreateWithoutClinicalRecordInput = {
+export type VaccinationUncheckedCreateWithoutRegistroClinicoInput = {
   id?: string
-  patientId: string
-  vaccineName: string
-  vaccineType?: string | null
-  batchNumber?: string | null
-  administeredDate: Date | string
-  nextDueDate?: Date | string | null
-  administeredBy?: string | null
-  notes?: string | null
-  createdAt?: Date | string
+  pacienteId: string
+  nombreVacuna: string
+  tipoVacuna?: string | null
+  numeroLote?: string | null
+  fechaAdministracion: Date | string
+  proximaFechaVencimiento?: Date | string | null
+  administradoPor?: string | null
+  notas?: string | null
+  creadoEn?: Date | string
 }
 
-export type VaccinationCreateOrConnectWithoutClinicalRecordInput = {
+export type VaccinationCreateOrConnectWithoutRegistroClinicoInput = {
   where: Prisma.VaccinationWhereUniqueInput
-  create: Prisma.XOR<Prisma.VaccinationCreateWithoutClinicalRecordInput, Prisma.VaccinationUncheckedCreateWithoutClinicalRecordInput>
+  create: Prisma.XOR<Prisma.VaccinationCreateWithoutRegistroClinicoInput, Prisma.VaccinationUncheckedCreateWithoutRegistroClinicoInput>
 }
 
-export type VaccinationCreateManyClinicalRecordInputEnvelope = {
-  data: Prisma.VaccinationCreateManyClinicalRecordInput | Prisma.VaccinationCreateManyClinicalRecordInput[]
+export type VaccinationCreateManyRegistroClinicoInputEnvelope = {
+  data: Prisma.VaccinationCreateManyRegistroClinicoInput | Prisma.VaccinationCreateManyRegistroClinicoInput[]
   skipDuplicates?: boolean
 }
 
-export type VaccinationUpsertWithWhereUniqueWithoutClinicalRecordInput = {
+export type VaccinationUpsertWithWhereUniqueWithoutRegistroClinicoInput = {
   where: Prisma.VaccinationWhereUniqueInput
-  update: Prisma.XOR<Prisma.VaccinationUpdateWithoutClinicalRecordInput, Prisma.VaccinationUncheckedUpdateWithoutClinicalRecordInput>
-  create: Prisma.XOR<Prisma.VaccinationCreateWithoutClinicalRecordInput, Prisma.VaccinationUncheckedCreateWithoutClinicalRecordInput>
+  update: Prisma.XOR<Prisma.VaccinationUpdateWithoutRegistroClinicoInput, Prisma.VaccinationUncheckedUpdateWithoutRegistroClinicoInput>
+  create: Prisma.XOR<Prisma.VaccinationCreateWithoutRegistroClinicoInput, Prisma.VaccinationUncheckedCreateWithoutRegistroClinicoInput>
 }
 
-export type VaccinationUpdateWithWhereUniqueWithoutClinicalRecordInput = {
+export type VaccinationUpdateWithWhereUniqueWithoutRegistroClinicoInput = {
   where: Prisma.VaccinationWhereUniqueInput
-  data: Prisma.XOR<Prisma.VaccinationUpdateWithoutClinicalRecordInput, Prisma.VaccinationUncheckedUpdateWithoutClinicalRecordInput>
+  data: Prisma.XOR<Prisma.VaccinationUpdateWithoutRegistroClinicoInput, Prisma.VaccinationUncheckedUpdateWithoutRegistroClinicoInput>
 }
 
-export type VaccinationUpdateManyWithWhereWithoutClinicalRecordInput = {
+export type VaccinationUpdateManyWithWhereWithoutRegistroClinicoInput = {
   where: Prisma.VaccinationScalarWhereInput
-  data: Prisma.XOR<Prisma.VaccinationUpdateManyMutationInput, Prisma.VaccinationUncheckedUpdateManyWithoutClinicalRecordInput>
+  data: Prisma.XOR<Prisma.VaccinationUpdateManyMutationInput, Prisma.VaccinationUncheckedUpdateManyWithoutRegistroClinicoInput>
 }
 
-export type VaccinationCreateManyAdministratorInput = {
+export type VaccinationCreateManyAdministradorInput = {
   id?: string
-  patientId: string
-  clinicalRecordId?: string | null
-  vaccineName: string
-  vaccineType?: string | null
-  batchNumber?: string | null
-  administeredDate: Date | string
-  nextDueDate?: Date | string | null
-  notes?: string | null
-  createdAt?: Date | string
+  pacienteId: string
+  registroClinicoId?: string | null
+  nombreVacuna: string
+  tipoVacuna?: string | null
+  numeroLote?: string | null
+  fechaAdministracion: Date | string
+  proximaFechaVencimiento?: Date | string | null
+  notas?: string | null
+  creadoEn?: Date | string
 }
 
-export type VaccinationUpdateWithoutAdministratorInput = {
+export type VaccinationUpdateWithoutAdministradorInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  vaccineName?: Prisma.StringFieldUpdateOperationsInput | string
-  vaccineType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  batchNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  administeredDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  nextDueDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  patient?: Prisma.PatientUpdateOneRequiredWithoutVaccinationsNestedInput
-  clinicalRecord?: Prisma.ClinicalRecordUpdateOneWithoutVaccinationsNestedInput
+  nombreVacuna?: Prisma.StringFieldUpdateOperationsInput | string
+  tipoVacuna?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroLote?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaAdministracion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  proximaFechaVencimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  paciente?: Prisma.PatientUpdateOneRequiredWithoutVacunacionesNestedInput
+  registroClinico?: Prisma.ClinicalRecordUpdateOneWithoutVacunacionesNestedInput
 }
 
-export type VaccinationUncheckedUpdateWithoutAdministratorInput = {
+export type VaccinationUncheckedUpdateWithoutAdministradorInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  clinicalRecordId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  vaccineName?: Prisma.StringFieldUpdateOperationsInput | string
-  vaccineType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  batchNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  administeredDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  nextDueDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  registroClinicoId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  nombreVacuna?: Prisma.StringFieldUpdateOperationsInput | string
+  tipoVacuna?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroLote?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaAdministracion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  proximaFechaVencimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type VaccinationUncheckedUpdateManyWithoutAdministratorInput = {
+export type VaccinationUncheckedUpdateManyWithoutAdministradorInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  clinicalRecordId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  vaccineName?: Prisma.StringFieldUpdateOperationsInput | string
-  vaccineType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  batchNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  administeredDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  nextDueDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  registroClinicoId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  nombreVacuna?: Prisma.StringFieldUpdateOperationsInput | string
+  tipoVacuna?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroLote?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaAdministracion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  proximaFechaVencimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type VaccinationCreateManyPatientInput = {
+export type VaccinationCreateManyPacienteInput = {
   id?: string
-  clinicalRecordId?: string | null
-  vaccineName: string
-  vaccineType?: string | null
-  batchNumber?: string | null
-  administeredDate: Date | string
-  nextDueDate?: Date | string | null
-  administeredBy?: string | null
-  notes?: string | null
-  createdAt?: Date | string
+  registroClinicoId?: string | null
+  nombreVacuna: string
+  tipoVacuna?: string | null
+  numeroLote?: string | null
+  fechaAdministracion: Date | string
+  proximaFechaVencimiento?: Date | string | null
+  administradoPor?: string | null
+  notas?: string | null
+  creadoEn?: Date | string
 }
 
-export type VaccinationUpdateWithoutPatientInput = {
+export type VaccinationUpdateWithoutPacienteInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  vaccineName?: Prisma.StringFieldUpdateOperationsInput | string
-  vaccineType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  batchNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  administeredDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  nextDueDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  clinicalRecord?: Prisma.ClinicalRecordUpdateOneWithoutVaccinationsNestedInput
-  administrator?: Prisma.OperatorUpdateOneWithoutVaccinationsNestedInput
+  nombreVacuna?: Prisma.StringFieldUpdateOperationsInput | string
+  tipoVacuna?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroLote?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaAdministracion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  proximaFechaVencimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  registroClinico?: Prisma.ClinicalRecordUpdateOneWithoutVacunacionesNestedInput
+  administrador?: Prisma.OperatorUpdateOneWithoutVacunacionesNestedInput
 }
 
-export type VaccinationUncheckedUpdateWithoutPatientInput = {
+export type VaccinationUncheckedUpdateWithoutPacienteInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  clinicalRecordId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  vaccineName?: Prisma.StringFieldUpdateOperationsInput | string
-  vaccineType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  batchNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  administeredDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  nextDueDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  administeredBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  registroClinicoId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  nombreVacuna?: Prisma.StringFieldUpdateOperationsInput | string
+  tipoVacuna?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroLote?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaAdministracion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  proximaFechaVencimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  administradoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type VaccinationUncheckedUpdateManyWithoutPatientInput = {
+export type VaccinationUncheckedUpdateManyWithoutPacienteInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  clinicalRecordId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  vaccineName?: Prisma.StringFieldUpdateOperationsInput | string
-  vaccineType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  batchNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  administeredDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  nextDueDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  administeredBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  registroClinicoId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  nombreVacuna?: Prisma.StringFieldUpdateOperationsInput | string
+  tipoVacuna?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroLote?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaAdministracion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  proximaFechaVencimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  administradoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type VaccinationCreateManyClinicalRecordInput = {
+export type VaccinationCreateManyRegistroClinicoInput = {
   id?: string
-  patientId: string
-  vaccineName: string
-  vaccineType?: string | null
-  batchNumber?: string | null
-  administeredDate: Date | string
-  nextDueDate?: Date | string | null
-  administeredBy?: string | null
-  notes?: string | null
-  createdAt?: Date | string
+  pacienteId: string
+  nombreVacuna: string
+  tipoVacuna?: string | null
+  numeroLote?: string | null
+  fechaAdministracion: Date | string
+  proximaFechaVencimiento?: Date | string | null
+  administradoPor?: string | null
+  notas?: string | null
+  creadoEn?: Date | string
 }
 
-export type VaccinationUpdateWithoutClinicalRecordInput = {
+export type VaccinationUpdateWithoutRegistroClinicoInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  vaccineName?: Prisma.StringFieldUpdateOperationsInput | string
-  vaccineType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  batchNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  administeredDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  nextDueDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  patient?: Prisma.PatientUpdateOneRequiredWithoutVaccinationsNestedInput
-  administrator?: Prisma.OperatorUpdateOneWithoutVaccinationsNestedInput
+  nombreVacuna?: Prisma.StringFieldUpdateOperationsInput | string
+  tipoVacuna?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroLote?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaAdministracion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  proximaFechaVencimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  paciente?: Prisma.PatientUpdateOneRequiredWithoutVacunacionesNestedInput
+  administrador?: Prisma.OperatorUpdateOneWithoutVacunacionesNestedInput
 }
 
-export type VaccinationUncheckedUpdateWithoutClinicalRecordInput = {
+export type VaccinationUncheckedUpdateWithoutRegistroClinicoInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  vaccineName?: Prisma.StringFieldUpdateOperationsInput | string
-  vaccineType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  batchNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  administeredDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  nextDueDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  administeredBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  nombreVacuna?: Prisma.StringFieldUpdateOperationsInput | string
+  tipoVacuna?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroLote?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaAdministracion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  proximaFechaVencimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  administradoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type VaccinationUncheckedUpdateManyWithoutClinicalRecordInput = {
+export type VaccinationUncheckedUpdateManyWithoutRegistroClinicoInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  vaccineName?: Prisma.StringFieldUpdateOperationsInput | string
-  vaccineType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  batchNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  administeredDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  nextDueDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  administeredBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  nombreVacuna?: Prisma.StringFieldUpdateOperationsInput | string
+  tipoVacuna?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroLote?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaAdministracion?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  proximaFechaVencimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  administradoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 
 
 export type VaccinationSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  patientId?: boolean
-  clinicalRecordId?: boolean
-  vaccineName?: boolean
-  vaccineType?: boolean
-  batchNumber?: boolean
-  administeredDate?: boolean
-  nextDueDate?: boolean
-  administeredBy?: boolean
-  notes?: boolean
-  createdAt?: boolean
-  patient?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
-  clinicalRecord?: boolean | Prisma.Vaccination$clinicalRecordArgs<ExtArgs>
-  administrator?: boolean | Prisma.Vaccination$administratorArgs<ExtArgs>
+  pacienteId?: boolean
+  registroClinicoId?: boolean
+  nombreVacuna?: boolean
+  tipoVacuna?: boolean
+  numeroLote?: boolean
+  fechaAdministracion?: boolean
+  proximaFechaVencimiento?: boolean
+  administradoPor?: boolean
+  notas?: boolean
+  creadoEn?: boolean
+  paciente?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
+  registroClinico?: boolean | Prisma.Vaccination$registroClinicoArgs<ExtArgs>
+  administrador?: boolean | Prisma.Vaccination$administradorArgs<ExtArgs>
 }, ExtArgs["result"]["vaccination"]>
 
 export type VaccinationSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  patientId?: boolean
-  clinicalRecordId?: boolean
-  vaccineName?: boolean
-  vaccineType?: boolean
-  batchNumber?: boolean
-  administeredDate?: boolean
-  nextDueDate?: boolean
-  administeredBy?: boolean
-  notes?: boolean
-  createdAt?: boolean
-  patient?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
-  clinicalRecord?: boolean | Prisma.Vaccination$clinicalRecordArgs<ExtArgs>
-  administrator?: boolean | Prisma.Vaccination$administratorArgs<ExtArgs>
+  pacienteId?: boolean
+  registroClinicoId?: boolean
+  nombreVacuna?: boolean
+  tipoVacuna?: boolean
+  numeroLote?: boolean
+  fechaAdministracion?: boolean
+  proximaFechaVencimiento?: boolean
+  administradoPor?: boolean
+  notas?: boolean
+  creadoEn?: boolean
+  paciente?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
+  registroClinico?: boolean | Prisma.Vaccination$registroClinicoArgs<ExtArgs>
+  administrador?: boolean | Prisma.Vaccination$administradorArgs<ExtArgs>
 }, ExtArgs["result"]["vaccination"]>
 
 export type VaccinationSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  patientId?: boolean
-  clinicalRecordId?: boolean
-  vaccineName?: boolean
-  vaccineType?: boolean
-  batchNumber?: boolean
-  administeredDate?: boolean
-  nextDueDate?: boolean
-  administeredBy?: boolean
-  notes?: boolean
-  createdAt?: boolean
-  patient?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
-  clinicalRecord?: boolean | Prisma.Vaccination$clinicalRecordArgs<ExtArgs>
-  administrator?: boolean | Prisma.Vaccination$administratorArgs<ExtArgs>
+  pacienteId?: boolean
+  registroClinicoId?: boolean
+  nombreVacuna?: boolean
+  tipoVacuna?: boolean
+  numeroLote?: boolean
+  fechaAdministracion?: boolean
+  proximaFechaVencimiento?: boolean
+  administradoPor?: boolean
+  notas?: boolean
+  creadoEn?: boolean
+  paciente?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
+  registroClinico?: boolean | Prisma.Vaccination$registroClinicoArgs<ExtArgs>
+  administrador?: boolean | Prisma.Vaccination$administradorArgs<ExtArgs>
 }, ExtArgs["result"]["vaccination"]>
 
 export type VaccinationSelectScalar = {
   id?: boolean
-  patientId?: boolean
-  clinicalRecordId?: boolean
-  vaccineName?: boolean
-  vaccineType?: boolean
-  batchNumber?: boolean
-  administeredDate?: boolean
-  nextDueDate?: boolean
-  administeredBy?: boolean
-  notes?: boolean
-  createdAt?: boolean
+  pacienteId?: boolean
+  registroClinicoId?: boolean
+  nombreVacuna?: boolean
+  tipoVacuna?: boolean
+  numeroLote?: boolean
+  fechaAdministracion?: boolean
+  proximaFechaVencimiento?: boolean
+  administradoPor?: boolean
+  notas?: boolean
+  creadoEn?: boolean
 }
 
-export type VaccinationOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "patientId" | "clinicalRecordId" | "vaccineName" | "vaccineType" | "batchNumber" | "administeredDate" | "nextDueDate" | "administeredBy" | "notes" | "createdAt", ExtArgs["result"]["vaccination"]>
+export type VaccinationOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "pacienteId" | "registroClinicoId" | "nombreVacuna" | "tipoVacuna" | "numeroLote" | "fechaAdministracion" | "proximaFechaVencimiento" | "administradoPor" | "notas" | "creadoEn", ExtArgs["result"]["vaccination"]>
 export type VaccinationInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  patient?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
-  clinicalRecord?: boolean | Prisma.Vaccination$clinicalRecordArgs<ExtArgs>
-  administrator?: boolean | Prisma.Vaccination$administratorArgs<ExtArgs>
+  paciente?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
+  registroClinico?: boolean | Prisma.Vaccination$registroClinicoArgs<ExtArgs>
+  administrador?: boolean | Prisma.Vaccination$administradorArgs<ExtArgs>
 }
 export type VaccinationIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  patient?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
-  clinicalRecord?: boolean | Prisma.Vaccination$clinicalRecordArgs<ExtArgs>
-  administrator?: boolean | Prisma.Vaccination$administratorArgs<ExtArgs>
+  paciente?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
+  registroClinico?: boolean | Prisma.Vaccination$registroClinicoArgs<ExtArgs>
+  administrador?: boolean | Prisma.Vaccination$administradorArgs<ExtArgs>
 }
 export type VaccinationIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  patient?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
-  clinicalRecord?: boolean | Prisma.Vaccination$clinicalRecordArgs<ExtArgs>
-  administrator?: boolean | Prisma.Vaccination$administratorArgs<ExtArgs>
+  paciente?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
+  registroClinico?: boolean | Prisma.Vaccination$registroClinicoArgs<ExtArgs>
+  administrador?: boolean | Prisma.Vaccination$administradorArgs<ExtArgs>
 }
 
 export type $VaccinationPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Vaccination"
   objects: {
-    patient: Prisma.$PatientPayload<ExtArgs>
-    clinicalRecord: Prisma.$ClinicalRecordPayload<ExtArgs> | null
-    administrator: Prisma.$OperatorPayload<ExtArgs> | null
+    paciente: Prisma.$PatientPayload<ExtArgs>
+    registroClinico: Prisma.$ClinicalRecordPayload<ExtArgs> | null
+    administrador: Prisma.$OperatorPayload<ExtArgs> | null
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
-    patientId: string
-    clinicalRecordId: string | null
-    vaccineName: string
-    vaccineType: string | null
-    batchNumber: string | null
-    administeredDate: Date
-    nextDueDate: Date | null
-    administeredBy: string | null
-    notes: string | null
-    createdAt: Date
+    pacienteId: string
+    registroClinicoId: string | null
+    nombreVacuna: string
+    tipoVacuna: string | null
+    numeroLote: string | null
+    fechaAdministracion: Date
+    proximaFechaVencimiento: Date | null
+    administradoPor: string | null
+    notas: string | null
+    creadoEn: Date
   }, ExtArgs["result"]["vaccination"]>
   composites: {}
 }
@@ -1405,9 +1405,9 @@ readonly fields: VaccinationFieldRefs;
  */
 export interface Prisma__VaccinationClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  patient<T extends Prisma.PatientDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.PatientDefaultArgs<ExtArgs>>): Prisma.Prisma__PatientClient<runtime.Types.Result.GetResult<Prisma.$PatientPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  clinicalRecord<T extends Prisma.Vaccination$clinicalRecordArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Vaccination$clinicalRecordArgs<ExtArgs>>): Prisma.Prisma__ClinicalRecordClient<runtime.Types.Result.GetResult<Prisma.$ClinicalRecordPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-  administrator<T extends Prisma.Vaccination$administratorArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Vaccination$administratorArgs<ExtArgs>>): Prisma.Prisma__OperatorClient<runtime.Types.Result.GetResult<Prisma.$OperatorPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  paciente<T extends Prisma.PatientDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.PatientDefaultArgs<ExtArgs>>): Prisma.Prisma__PatientClient<runtime.Types.Result.GetResult<Prisma.$PatientPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  registroClinico<T extends Prisma.Vaccination$registroClinicoArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Vaccination$registroClinicoArgs<ExtArgs>>): Prisma.Prisma__ClinicalRecordClient<runtime.Types.Result.GetResult<Prisma.$ClinicalRecordPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  administrador<T extends Prisma.Vaccination$administradorArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Vaccination$administradorArgs<ExtArgs>>): Prisma.Prisma__OperatorClient<runtime.Types.Result.GetResult<Prisma.$OperatorPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1438,16 +1438,16 @@ export interface Prisma__VaccinationClient<T, Null = never, ExtArgs extends runt
  */
 export interface VaccinationFieldRefs {
   readonly id: Prisma.FieldRef<"Vaccination", 'String'>
-  readonly patientId: Prisma.FieldRef<"Vaccination", 'String'>
-  readonly clinicalRecordId: Prisma.FieldRef<"Vaccination", 'String'>
-  readonly vaccineName: Prisma.FieldRef<"Vaccination", 'String'>
-  readonly vaccineType: Prisma.FieldRef<"Vaccination", 'String'>
-  readonly batchNumber: Prisma.FieldRef<"Vaccination", 'String'>
-  readonly administeredDate: Prisma.FieldRef<"Vaccination", 'DateTime'>
-  readonly nextDueDate: Prisma.FieldRef<"Vaccination", 'DateTime'>
-  readonly administeredBy: Prisma.FieldRef<"Vaccination", 'String'>
-  readonly notes: Prisma.FieldRef<"Vaccination", 'String'>
-  readonly createdAt: Prisma.FieldRef<"Vaccination", 'DateTime'>
+  readonly pacienteId: Prisma.FieldRef<"Vaccination", 'String'>
+  readonly registroClinicoId: Prisma.FieldRef<"Vaccination", 'String'>
+  readonly nombreVacuna: Prisma.FieldRef<"Vaccination", 'String'>
+  readonly tipoVacuna: Prisma.FieldRef<"Vaccination", 'String'>
+  readonly numeroLote: Prisma.FieldRef<"Vaccination", 'String'>
+  readonly fechaAdministracion: Prisma.FieldRef<"Vaccination", 'DateTime'>
+  readonly proximaFechaVencimiento: Prisma.FieldRef<"Vaccination", 'DateTime'>
+  readonly administradoPor: Prisma.FieldRef<"Vaccination", 'String'>
+  readonly notas: Prisma.FieldRef<"Vaccination", 'String'>
+  readonly creadoEn: Prisma.FieldRef<"Vaccination", 'DateTime'>
 }
     
 
@@ -1844,9 +1844,9 @@ export type VaccinationDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.I
 }
 
 /**
- * Vaccination.clinicalRecord
+ * Vaccination.registroClinico
  */
-export type Vaccination$clinicalRecordArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Vaccination$registroClinicoArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the ClinicalRecord
    */
@@ -1863,9 +1863,9 @@ export type Vaccination$clinicalRecordArgs<ExtArgs extends runtime.Types.Extensi
 }
 
 /**
- * Vaccination.administrator
+ * Vaccination.administrador
  */
-export type Vaccination$administratorArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Vaccination$administradorArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Operator
    */

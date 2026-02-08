@@ -26,76 +26,76 @@ export type AggregateUser = {
 
 export type UserMinAggregateOutputType = {
   id: string | null
-  email: string | null
-  fullName: string | null
-  phone: string | null
-  role: $Enums.UserRole | null
-  veterinaryId: string | null
-  isActive: boolean | null
-  createdAt: Date | null
-  updatedAt: Date | null
+  correo: string | null
+  nombreCompleto: string | null
+  telefono: string | null
+  rol: $Enums.UserRole | null
+  veterinariaId: string | null
+  estaActivo: boolean | null
+  creadoEn: Date | null
+  actualizadoEn: Date | null
 }
 
 export type UserMaxAggregateOutputType = {
   id: string | null
-  email: string | null
-  fullName: string | null
-  phone: string | null
-  role: $Enums.UserRole | null
-  veterinaryId: string | null
-  isActive: boolean | null
-  createdAt: Date | null
-  updatedAt: Date | null
+  correo: string | null
+  nombreCompleto: string | null
+  telefono: string | null
+  rol: $Enums.UserRole | null
+  veterinariaId: string | null
+  estaActivo: boolean | null
+  creadoEn: Date | null
+  actualizadoEn: Date | null
 }
 
 export type UserCountAggregateOutputType = {
   id: number
-  email: number
-  fullName: number
-  phone: number
-  role: number
-  veterinaryId: number
-  isActive: number
-  createdAt: number
-  updatedAt: number
+  correo: number
+  nombreCompleto: number
+  telefono: number
+  rol: number
+  veterinariaId: number
+  estaActivo: number
+  creadoEn: number
+  actualizadoEn: number
   _all: number
 }
 
 
 export type UserMinAggregateInputType = {
   id?: true
-  email?: true
-  fullName?: true
-  phone?: true
-  role?: true
-  veterinaryId?: true
-  isActive?: true
-  createdAt?: true
-  updatedAt?: true
+  correo?: true
+  nombreCompleto?: true
+  telefono?: true
+  rol?: true
+  veterinariaId?: true
+  estaActivo?: true
+  creadoEn?: true
+  actualizadoEn?: true
 }
 
 export type UserMaxAggregateInputType = {
   id?: true
-  email?: true
-  fullName?: true
-  phone?: true
-  role?: true
-  veterinaryId?: true
-  isActive?: true
-  createdAt?: true
-  updatedAt?: true
+  correo?: true
+  nombreCompleto?: true
+  telefono?: true
+  rol?: true
+  veterinariaId?: true
+  estaActivo?: true
+  creadoEn?: true
+  actualizadoEn?: true
 }
 
 export type UserCountAggregateInputType = {
   id?: true
-  email?: true
-  fullName?: true
-  phone?: true
-  role?: true
-  veterinaryId?: true
-  isActive?: true
-  createdAt?: true
-  updatedAt?: true
+  correo?: true
+  nombreCompleto?: true
+  telefono?: true
+  rol?: true
+  veterinariaId?: true
+  estaActivo?: true
+  creadoEn?: true
+  actualizadoEn?: true
   _all?: true
 }
 
@@ -173,14 +173,14 @@ export type UserGroupByArgs<ExtArgs extends runtime.Types.Extensions.InternalArg
 
 export type UserGroupByOutputType = {
   id: string
-  email: string
-  fullName: string
-  phone: string | null
-  role: $Enums.UserRole
-  veterinaryId: string | null
-  isActive: boolean
-  createdAt: Date
-  updatedAt: Date
+  correo: string
+  nombreCompleto: string
+  telefono: string | null
+  rol: $Enums.UserRole
+  veterinariaId: string | null
+  estaActivo: boolean
+  creadoEn: Date
+  actualizadoEn: Date
   _count: UserCountAggregateOutputType | null
   _min: UserMinAggregateOutputType | null
   _max: UserMaxAggregateOutputType | null
@@ -206,65 +206,65 @@ export type UserWhereInput = {
   OR?: Prisma.UserWhereInput[]
   NOT?: Prisma.UserWhereInput | Prisma.UserWhereInput[]
   id?: Prisma.UuidFilter<"User"> | string
-  email?: Prisma.StringFilter<"User"> | string
-  fullName?: Prisma.StringFilter<"User"> | string
-  phone?: Prisma.StringNullableFilter<"User"> | string | null
-  role?: Prisma.EnumUserRoleFilter<"User"> | $Enums.UserRole
-  veterinaryId?: Prisma.UuidNullableFilter<"User"> | string | null
-  isActive?: Prisma.BoolFilter<"User"> | boolean
-  createdAt?: Prisma.DateTimeFilter<"User"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"User"> | Date | string
-  veterinary?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
-  owner?: Prisma.XOR<Prisma.OwnerNullableScalarRelationFilter, Prisma.OwnerWhereInput> | null
-  operator?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
-  createdAppointments?: Prisma.AppointmentListRelationFilter
+  correo?: Prisma.StringFilter<"User"> | string
+  nombreCompleto?: Prisma.StringFilter<"User"> | string
+  telefono?: Prisma.StringNullableFilter<"User"> | string | null
+  rol?: Prisma.EnumUserRoleFilter<"User"> | $Enums.UserRole
+  veterinariaId?: Prisma.UuidNullableFilter<"User"> | string | null
+  estaActivo?: Prisma.BoolFilter<"User"> | boolean
+  creadoEn?: Prisma.DateTimeFilter<"User"> | Date | string
+  actualizadoEn?: Prisma.DateTimeFilter<"User"> | Date | string
+  veterinaria?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
+  propietario?: Prisma.XOR<Prisma.OwnerNullableScalarRelationFilter, Prisma.OwnerWhereInput> | null
+  operador?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
+  citasCreadas?: Prisma.AppointmentListRelationFilter
 }
 
 export type UserOrderByWithRelationInput = {
   id?: Prisma.SortOrder
-  email?: Prisma.SortOrder
-  fullName?: Prisma.SortOrder
-  phone?: Prisma.SortOrderInput | Prisma.SortOrder
-  role?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrderInput | Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
-  veterinary?: Prisma.VeterinaryOrderByWithRelationInput
-  owner?: Prisma.OwnerOrderByWithRelationInput
-  operator?: Prisma.OperatorOrderByWithRelationInput
-  createdAppointments?: Prisma.AppointmentOrderByRelationAggregateInput
+  correo?: Prisma.SortOrder
+  nombreCompleto?: Prisma.SortOrder
+  telefono?: Prisma.SortOrderInput | Prisma.SortOrder
+  rol?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrderInput | Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
+  veterinaria?: Prisma.VeterinaryOrderByWithRelationInput
+  propietario?: Prisma.OwnerOrderByWithRelationInput
+  operador?: Prisma.OperatorOrderByWithRelationInput
+  citasCreadas?: Prisma.AppointmentOrderByRelationAggregateInput
 }
 
 export type UserWhereUniqueInput = Prisma.AtLeast<{
   id?: string
-  email?: string
+  correo?: string
   AND?: Prisma.UserWhereInput | Prisma.UserWhereInput[]
   OR?: Prisma.UserWhereInput[]
   NOT?: Prisma.UserWhereInput | Prisma.UserWhereInput[]
-  fullName?: Prisma.StringFilter<"User"> | string
-  phone?: Prisma.StringNullableFilter<"User"> | string | null
-  role?: Prisma.EnumUserRoleFilter<"User"> | $Enums.UserRole
-  veterinaryId?: Prisma.UuidNullableFilter<"User"> | string | null
-  isActive?: Prisma.BoolFilter<"User"> | boolean
-  createdAt?: Prisma.DateTimeFilter<"User"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"User"> | Date | string
-  veterinary?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
-  owner?: Prisma.XOR<Prisma.OwnerNullableScalarRelationFilter, Prisma.OwnerWhereInput> | null
-  operator?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
-  createdAppointments?: Prisma.AppointmentListRelationFilter
-}, "id" | "email">
+  nombreCompleto?: Prisma.StringFilter<"User"> | string
+  telefono?: Prisma.StringNullableFilter<"User"> | string | null
+  rol?: Prisma.EnumUserRoleFilter<"User"> | $Enums.UserRole
+  veterinariaId?: Prisma.UuidNullableFilter<"User"> | string | null
+  estaActivo?: Prisma.BoolFilter<"User"> | boolean
+  creadoEn?: Prisma.DateTimeFilter<"User"> | Date | string
+  actualizadoEn?: Prisma.DateTimeFilter<"User"> | Date | string
+  veterinaria?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
+  propietario?: Prisma.XOR<Prisma.OwnerNullableScalarRelationFilter, Prisma.OwnerWhereInput> | null
+  operador?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
+  citasCreadas?: Prisma.AppointmentListRelationFilter
+}, "id" | "correo">
 
 export type UserOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
-  email?: Prisma.SortOrder
-  fullName?: Prisma.SortOrder
-  phone?: Prisma.SortOrderInput | Prisma.SortOrder
-  role?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrderInput | Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  correo?: Prisma.SortOrder
+  nombreCompleto?: Prisma.SortOrder
+  telefono?: Prisma.SortOrderInput | Prisma.SortOrder
+  rol?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrderInput | Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
   _count?: Prisma.UserCountOrderByAggregateInput
   _max?: Prisma.UserMaxOrderByAggregateInput
   _min?: Prisma.UserMinOrderByAggregateInput
@@ -275,145 +275,145 @@ export type UserScalarWhereWithAggregatesInput = {
   OR?: Prisma.UserScalarWhereWithAggregatesInput[]
   NOT?: Prisma.UserScalarWhereWithAggregatesInput | Prisma.UserScalarWhereWithAggregatesInput[]
   id?: Prisma.UuidWithAggregatesFilter<"User"> | string
-  email?: Prisma.StringWithAggregatesFilter<"User"> | string
-  fullName?: Prisma.StringWithAggregatesFilter<"User"> | string
-  phone?: Prisma.StringNullableWithAggregatesFilter<"User"> | string | null
-  role?: Prisma.EnumUserRoleWithAggregatesFilter<"User"> | $Enums.UserRole
-  veterinaryId?: Prisma.UuidNullableWithAggregatesFilter<"User"> | string | null
-  isActive?: Prisma.BoolWithAggregatesFilter<"User"> | boolean
-  createdAt?: Prisma.DateTimeWithAggregatesFilter<"User"> | Date | string
-  updatedAt?: Prisma.DateTimeWithAggregatesFilter<"User"> | Date | string
+  correo?: Prisma.StringWithAggregatesFilter<"User"> | string
+  nombreCompleto?: Prisma.StringWithAggregatesFilter<"User"> | string
+  telefono?: Prisma.StringNullableWithAggregatesFilter<"User"> | string | null
+  rol?: Prisma.EnumUserRoleWithAggregatesFilter<"User"> | $Enums.UserRole
+  veterinariaId?: Prisma.UuidNullableWithAggregatesFilter<"User"> | string | null
+  estaActivo?: Prisma.BoolWithAggregatesFilter<"User"> | boolean
+  creadoEn?: Prisma.DateTimeWithAggregatesFilter<"User"> | Date | string
+  actualizadoEn?: Prisma.DateTimeWithAggregatesFilter<"User"> | Date | string
 }
 
 export type UserCreateInput = {
   id: string
-  email: string
-  fullName: string
-  phone?: string | null
-  role?: $Enums.UserRole
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutUsersInput
-  owner?: Prisma.OwnerCreateNestedOneWithoutUserInput
-  operator?: Prisma.OperatorCreateNestedOneWithoutUserInput
-  createdAppointments?: Prisma.AppointmentCreateNestedManyWithoutCreatorInput
+  correo: string
+  nombreCompleto: string
+  telefono?: string | null
+  rol?: $Enums.UserRole
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutUsuariosInput
+  propietario?: Prisma.OwnerCreateNestedOneWithoutUsuarioInput
+  operador?: Prisma.OperatorCreateNestedOneWithoutUsuarioInput
+  citasCreadas?: Prisma.AppointmentCreateNestedManyWithoutCreadorInput
 }
 
 export type UserUncheckedCreateInput = {
   id: string
-  email: string
-  fullName: string
-  phone?: string | null
-  role?: $Enums.UserRole
-  veterinaryId?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  owner?: Prisma.OwnerUncheckedCreateNestedOneWithoutUserInput
-  operator?: Prisma.OperatorUncheckedCreateNestedOneWithoutUserInput
-  createdAppointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutCreatorInput
+  correo: string
+  nombreCompleto: string
+  telefono?: string | null
+  rol?: $Enums.UserRole
+  veterinariaId?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  propietario?: Prisma.OwnerUncheckedCreateNestedOneWithoutUsuarioInput
+  operador?: Prisma.OperatorUncheckedCreateNestedOneWithoutUsuarioInput
+  citasCreadas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutCreadorInput
 }
 
 export type UserUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  fullName?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutUsersNestedInput
-  owner?: Prisma.OwnerUpdateOneWithoutUserNestedInput
-  operator?: Prisma.OperatorUpdateOneWithoutUserNestedInput
-  createdAppointments?: Prisma.AppointmentUpdateManyWithoutCreatorNestedInput
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  nombreCompleto?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rol?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutUsuariosNestedInput
+  propietario?: Prisma.OwnerUpdateOneWithoutUsuarioNestedInput
+  operador?: Prisma.OperatorUpdateOneWithoutUsuarioNestedInput
+  citasCreadas?: Prisma.AppointmentUpdateManyWithoutCreadorNestedInput
 }
 
 export type UserUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  fullName?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  owner?: Prisma.OwnerUncheckedUpdateOneWithoutUserNestedInput
-  operator?: Prisma.OperatorUncheckedUpdateOneWithoutUserNestedInput
-  createdAppointments?: Prisma.AppointmentUncheckedUpdateManyWithoutCreatorNestedInput
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  nombreCompleto?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rol?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  propietario?: Prisma.OwnerUncheckedUpdateOneWithoutUsuarioNestedInput
+  operador?: Prisma.OperatorUncheckedUpdateOneWithoutUsuarioNestedInput
+  citasCreadas?: Prisma.AppointmentUncheckedUpdateManyWithoutCreadorNestedInput
 }
 
 export type UserCreateManyInput = {
   id: string
-  email: string
-  fullName: string
-  phone?: string | null
-  role?: $Enums.UserRole
-  veterinaryId?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
+  correo: string
+  nombreCompleto: string
+  telefono?: string | null
+  rol?: $Enums.UserRole
+  veterinariaId?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
 }
 
 export type UserUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  fullName?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  nombreCompleto?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rol?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type UserUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  fullName?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  nombreCompleto?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rol?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type UserCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  email?: Prisma.SortOrder
-  fullName?: Prisma.SortOrder
-  phone?: Prisma.SortOrder
-  role?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  correo?: Prisma.SortOrder
+  nombreCompleto?: Prisma.SortOrder
+  telefono?: Prisma.SortOrder
+  rol?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
 }
 
 export type UserMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  email?: Prisma.SortOrder
-  fullName?: Prisma.SortOrder
-  phone?: Prisma.SortOrder
-  role?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  correo?: Prisma.SortOrder
+  nombreCompleto?: Prisma.SortOrder
+  telefono?: Prisma.SortOrder
+  rol?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
 }
 
 export type UserMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  email?: Prisma.SortOrder
-  fullName?: Prisma.SortOrder
-  phone?: Prisma.SortOrder
-  role?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  correo?: Prisma.SortOrder
+  nombreCompleto?: Prisma.SortOrder
+  telefono?: Prisma.SortOrder
+  rol?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
 }
 
 export type UserListRelationFilter = {
@@ -456,144 +456,144 @@ export type DateTimeFieldUpdateOperationsInput = {
   set?: Date | string
 }
 
-export type UserCreateNestedManyWithoutVeterinaryInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutVeterinaryInput, Prisma.UserUncheckedCreateWithoutVeterinaryInput> | Prisma.UserCreateWithoutVeterinaryInput[] | Prisma.UserUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutVeterinaryInput | Prisma.UserCreateOrConnectWithoutVeterinaryInput[]
-  createMany?: Prisma.UserCreateManyVeterinaryInputEnvelope
+export type UserCreateNestedManyWithoutVeterinariaInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutVeterinariaInput, Prisma.UserUncheckedCreateWithoutVeterinariaInput> | Prisma.UserCreateWithoutVeterinariaInput[] | Prisma.UserUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutVeterinariaInput | Prisma.UserCreateOrConnectWithoutVeterinariaInput[]
+  createMany?: Prisma.UserCreateManyVeterinariaInputEnvelope
   connect?: Prisma.UserWhereUniqueInput | Prisma.UserWhereUniqueInput[]
 }
 
-export type UserUncheckedCreateNestedManyWithoutVeterinaryInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutVeterinaryInput, Prisma.UserUncheckedCreateWithoutVeterinaryInput> | Prisma.UserCreateWithoutVeterinaryInput[] | Prisma.UserUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutVeterinaryInput | Prisma.UserCreateOrConnectWithoutVeterinaryInput[]
-  createMany?: Prisma.UserCreateManyVeterinaryInputEnvelope
+export type UserUncheckedCreateNestedManyWithoutVeterinariaInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutVeterinariaInput, Prisma.UserUncheckedCreateWithoutVeterinariaInput> | Prisma.UserCreateWithoutVeterinariaInput[] | Prisma.UserUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutVeterinariaInput | Prisma.UserCreateOrConnectWithoutVeterinariaInput[]
+  createMany?: Prisma.UserCreateManyVeterinariaInputEnvelope
   connect?: Prisma.UserWhereUniqueInput | Prisma.UserWhereUniqueInput[]
 }
 
-export type UserUpdateManyWithoutVeterinaryNestedInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutVeterinaryInput, Prisma.UserUncheckedCreateWithoutVeterinaryInput> | Prisma.UserCreateWithoutVeterinaryInput[] | Prisma.UserUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutVeterinaryInput | Prisma.UserCreateOrConnectWithoutVeterinaryInput[]
-  upsert?: Prisma.UserUpsertWithWhereUniqueWithoutVeterinaryInput | Prisma.UserUpsertWithWhereUniqueWithoutVeterinaryInput[]
-  createMany?: Prisma.UserCreateManyVeterinaryInputEnvelope
+export type UserUpdateManyWithoutVeterinariaNestedInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutVeterinariaInput, Prisma.UserUncheckedCreateWithoutVeterinariaInput> | Prisma.UserCreateWithoutVeterinariaInput[] | Prisma.UserUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutVeterinariaInput | Prisma.UserCreateOrConnectWithoutVeterinariaInput[]
+  upsert?: Prisma.UserUpsertWithWhereUniqueWithoutVeterinariaInput | Prisma.UserUpsertWithWhereUniqueWithoutVeterinariaInput[]
+  createMany?: Prisma.UserCreateManyVeterinariaInputEnvelope
   set?: Prisma.UserWhereUniqueInput | Prisma.UserWhereUniqueInput[]
   disconnect?: Prisma.UserWhereUniqueInput | Prisma.UserWhereUniqueInput[]
   delete?: Prisma.UserWhereUniqueInput | Prisma.UserWhereUniqueInput[]
   connect?: Prisma.UserWhereUniqueInput | Prisma.UserWhereUniqueInput[]
-  update?: Prisma.UserUpdateWithWhereUniqueWithoutVeterinaryInput | Prisma.UserUpdateWithWhereUniqueWithoutVeterinaryInput[]
-  updateMany?: Prisma.UserUpdateManyWithWhereWithoutVeterinaryInput | Prisma.UserUpdateManyWithWhereWithoutVeterinaryInput[]
+  update?: Prisma.UserUpdateWithWhereUniqueWithoutVeterinariaInput | Prisma.UserUpdateWithWhereUniqueWithoutVeterinariaInput[]
+  updateMany?: Prisma.UserUpdateManyWithWhereWithoutVeterinariaInput | Prisma.UserUpdateManyWithWhereWithoutVeterinariaInput[]
   deleteMany?: Prisma.UserScalarWhereInput | Prisma.UserScalarWhereInput[]
 }
 
-export type UserUncheckedUpdateManyWithoutVeterinaryNestedInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutVeterinaryInput, Prisma.UserUncheckedCreateWithoutVeterinaryInput> | Prisma.UserCreateWithoutVeterinaryInput[] | Prisma.UserUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutVeterinaryInput | Prisma.UserCreateOrConnectWithoutVeterinaryInput[]
-  upsert?: Prisma.UserUpsertWithWhereUniqueWithoutVeterinaryInput | Prisma.UserUpsertWithWhereUniqueWithoutVeterinaryInput[]
-  createMany?: Prisma.UserCreateManyVeterinaryInputEnvelope
+export type UserUncheckedUpdateManyWithoutVeterinariaNestedInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutVeterinariaInput, Prisma.UserUncheckedCreateWithoutVeterinariaInput> | Prisma.UserCreateWithoutVeterinariaInput[] | Prisma.UserUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutVeterinariaInput | Prisma.UserCreateOrConnectWithoutVeterinariaInput[]
+  upsert?: Prisma.UserUpsertWithWhereUniqueWithoutVeterinariaInput | Prisma.UserUpsertWithWhereUniqueWithoutVeterinariaInput[]
+  createMany?: Prisma.UserCreateManyVeterinariaInputEnvelope
   set?: Prisma.UserWhereUniqueInput | Prisma.UserWhereUniqueInput[]
   disconnect?: Prisma.UserWhereUniqueInput | Prisma.UserWhereUniqueInput[]
   delete?: Prisma.UserWhereUniqueInput | Prisma.UserWhereUniqueInput[]
   connect?: Prisma.UserWhereUniqueInput | Prisma.UserWhereUniqueInput[]
-  update?: Prisma.UserUpdateWithWhereUniqueWithoutVeterinaryInput | Prisma.UserUpdateWithWhereUniqueWithoutVeterinaryInput[]
-  updateMany?: Prisma.UserUpdateManyWithWhereWithoutVeterinaryInput | Prisma.UserUpdateManyWithWhereWithoutVeterinaryInput[]
+  update?: Prisma.UserUpdateWithWhereUniqueWithoutVeterinariaInput | Prisma.UserUpdateWithWhereUniqueWithoutVeterinariaInput[]
+  updateMany?: Prisma.UserUpdateManyWithWhereWithoutVeterinariaInput | Prisma.UserUpdateManyWithWhereWithoutVeterinariaInput[]
   deleteMany?: Prisma.UserScalarWhereInput | Prisma.UserScalarWhereInput[]
 }
 
-export type UserCreateNestedOneWithoutOwnerInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutOwnerInput, Prisma.UserUncheckedCreateWithoutOwnerInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutOwnerInput
+export type UserCreateNestedOneWithoutPropietarioInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutPropietarioInput, Prisma.UserUncheckedCreateWithoutPropietarioInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutPropietarioInput
   connect?: Prisma.UserWhereUniqueInput
 }
 
-export type UserUpdateOneRequiredWithoutOwnerNestedInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutOwnerInput, Prisma.UserUncheckedCreateWithoutOwnerInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutOwnerInput
-  upsert?: Prisma.UserUpsertWithoutOwnerInput
+export type UserUpdateOneRequiredWithoutPropietarioNestedInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutPropietarioInput, Prisma.UserUncheckedCreateWithoutPropietarioInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutPropietarioInput
+  upsert?: Prisma.UserUpsertWithoutPropietarioInput
   connect?: Prisma.UserWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutOwnerInput, Prisma.UserUpdateWithoutOwnerInput>, Prisma.UserUncheckedUpdateWithoutOwnerInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutPropietarioInput, Prisma.UserUpdateWithoutPropietarioInput>, Prisma.UserUncheckedUpdateWithoutPropietarioInput>
 }
 
-export type UserCreateNestedOneWithoutOperatorInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutOperatorInput, Prisma.UserUncheckedCreateWithoutOperatorInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutOperatorInput
-  connect?: Prisma.UserWhereUniqueInput
-}
-
-export type UserUpdateOneRequiredWithoutOperatorNestedInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutOperatorInput, Prisma.UserUncheckedCreateWithoutOperatorInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutOperatorInput
-  upsert?: Prisma.UserUpsertWithoutOperatorInput
-  connect?: Prisma.UserWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutOperatorInput, Prisma.UserUpdateWithoutOperatorInput>, Prisma.UserUncheckedUpdateWithoutOperatorInput>
-}
-
-export type UserCreateNestedOneWithoutCreatedAppointmentsInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutCreatedAppointmentsInput, Prisma.UserUncheckedCreateWithoutCreatedAppointmentsInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutCreatedAppointmentsInput
+export type UserCreateNestedOneWithoutOperadorInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutOperadorInput, Prisma.UserUncheckedCreateWithoutOperadorInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutOperadorInput
   connect?: Prisma.UserWhereUniqueInput
 }
 
-export type UserUpdateOneWithoutCreatedAppointmentsNestedInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutCreatedAppointmentsInput, Prisma.UserUncheckedCreateWithoutCreatedAppointmentsInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutCreatedAppointmentsInput
-  upsert?: Prisma.UserUpsertWithoutCreatedAppointmentsInput
+export type UserUpdateOneRequiredWithoutOperadorNestedInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutOperadorInput, Prisma.UserUncheckedCreateWithoutOperadorInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutOperadorInput
+  upsert?: Prisma.UserUpsertWithoutOperadorInput
+  connect?: Prisma.UserWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutOperadorInput, Prisma.UserUpdateWithoutOperadorInput>, Prisma.UserUncheckedUpdateWithoutOperadorInput>
+}
+
+export type UserCreateNestedOneWithoutCitasCreadasInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutCitasCreadasInput, Prisma.UserUncheckedCreateWithoutCitasCreadasInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutCitasCreadasInput
+  connect?: Prisma.UserWhereUniqueInput
+}
+
+export type UserUpdateOneWithoutCitasCreadasNestedInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutCitasCreadasInput, Prisma.UserUncheckedCreateWithoutCitasCreadasInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutCitasCreadasInput
+  upsert?: Prisma.UserUpsertWithoutCitasCreadasInput
   disconnect?: Prisma.UserWhereInput | boolean
   delete?: Prisma.UserWhereInput | boolean
   connect?: Prisma.UserWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutCreatedAppointmentsInput, Prisma.UserUpdateWithoutCreatedAppointmentsInput>, Prisma.UserUncheckedUpdateWithoutCreatedAppointmentsInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutCitasCreadasInput, Prisma.UserUpdateWithoutCitasCreadasInput>, Prisma.UserUncheckedUpdateWithoutCitasCreadasInput>
 }
 
-export type UserCreateWithoutVeterinaryInput = {
+export type UserCreateWithoutVeterinariaInput = {
   id: string
-  email: string
-  fullName: string
-  phone?: string | null
-  role?: $Enums.UserRole
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  owner?: Prisma.OwnerCreateNestedOneWithoutUserInput
-  operator?: Prisma.OperatorCreateNestedOneWithoutUserInput
-  createdAppointments?: Prisma.AppointmentCreateNestedManyWithoutCreatorInput
+  correo: string
+  nombreCompleto: string
+  telefono?: string | null
+  rol?: $Enums.UserRole
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  propietario?: Prisma.OwnerCreateNestedOneWithoutUsuarioInput
+  operador?: Prisma.OperatorCreateNestedOneWithoutUsuarioInput
+  citasCreadas?: Prisma.AppointmentCreateNestedManyWithoutCreadorInput
 }
 
-export type UserUncheckedCreateWithoutVeterinaryInput = {
+export type UserUncheckedCreateWithoutVeterinariaInput = {
   id: string
-  email: string
-  fullName: string
-  phone?: string | null
-  role?: $Enums.UserRole
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  owner?: Prisma.OwnerUncheckedCreateNestedOneWithoutUserInput
-  operator?: Prisma.OperatorUncheckedCreateNestedOneWithoutUserInput
-  createdAppointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutCreatorInput
+  correo: string
+  nombreCompleto: string
+  telefono?: string | null
+  rol?: $Enums.UserRole
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  propietario?: Prisma.OwnerUncheckedCreateNestedOneWithoutUsuarioInput
+  operador?: Prisma.OperatorUncheckedCreateNestedOneWithoutUsuarioInput
+  citasCreadas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutCreadorInput
 }
 
-export type UserCreateOrConnectWithoutVeterinaryInput = {
+export type UserCreateOrConnectWithoutVeterinariaInput = {
   where: Prisma.UserWhereUniqueInput
-  create: Prisma.XOR<Prisma.UserCreateWithoutVeterinaryInput, Prisma.UserUncheckedCreateWithoutVeterinaryInput>
+  create: Prisma.XOR<Prisma.UserCreateWithoutVeterinariaInput, Prisma.UserUncheckedCreateWithoutVeterinariaInput>
 }
 
-export type UserCreateManyVeterinaryInputEnvelope = {
-  data: Prisma.UserCreateManyVeterinaryInput | Prisma.UserCreateManyVeterinaryInput[]
+export type UserCreateManyVeterinariaInputEnvelope = {
+  data: Prisma.UserCreateManyVeterinariaInput | Prisma.UserCreateManyVeterinariaInput[]
   skipDuplicates?: boolean
 }
 
-export type UserUpsertWithWhereUniqueWithoutVeterinaryInput = {
+export type UserUpsertWithWhereUniqueWithoutVeterinariaInput = {
   where: Prisma.UserWhereUniqueInput
-  update: Prisma.XOR<Prisma.UserUpdateWithoutVeterinaryInput, Prisma.UserUncheckedUpdateWithoutVeterinaryInput>
-  create: Prisma.XOR<Prisma.UserCreateWithoutVeterinaryInput, Prisma.UserUncheckedCreateWithoutVeterinaryInput>
+  update: Prisma.XOR<Prisma.UserUpdateWithoutVeterinariaInput, Prisma.UserUncheckedUpdateWithoutVeterinariaInput>
+  create: Prisma.XOR<Prisma.UserCreateWithoutVeterinariaInput, Prisma.UserUncheckedCreateWithoutVeterinariaInput>
 }
 
-export type UserUpdateWithWhereUniqueWithoutVeterinaryInput = {
+export type UserUpdateWithWhereUniqueWithoutVeterinariaInput = {
   where: Prisma.UserWhereUniqueInput
-  data: Prisma.XOR<Prisma.UserUpdateWithoutVeterinaryInput, Prisma.UserUncheckedUpdateWithoutVeterinaryInput>
+  data: Prisma.XOR<Prisma.UserUpdateWithoutVeterinariaInput, Prisma.UserUncheckedUpdateWithoutVeterinariaInput>
 }
 
-export type UserUpdateManyWithWhereWithoutVeterinaryInput = {
+export type UserUpdateManyWithWhereWithoutVeterinariaInput = {
   where: Prisma.UserScalarWhereInput
-  data: Prisma.XOR<Prisma.UserUpdateManyMutationInput, Prisma.UserUncheckedUpdateManyWithoutVeterinaryInput>
+  data: Prisma.XOR<Prisma.UserUpdateManyMutationInput, Prisma.UserUncheckedUpdateManyWithoutVeterinariaInput>
 }
 
 export type UserScalarWhereInput = {
@@ -601,280 +601,280 @@ export type UserScalarWhereInput = {
   OR?: Prisma.UserScalarWhereInput[]
   NOT?: Prisma.UserScalarWhereInput | Prisma.UserScalarWhereInput[]
   id?: Prisma.UuidFilter<"User"> | string
-  email?: Prisma.StringFilter<"User"> | string
-  fullName?: Prisma.StringFilter<"User"> | string
-  phone?: Prisma.StringNullableFilter<"User"> | string | null
-  role?: Prisma.EnumUserRoleFilter<"User"> | $Enums.UserRole
-  veterinaryId?: Prisma.UuidNullableFilter<"User"> | string | null
-  isActive?: Prisma.BoolFilter<"User"> | boolean
-  createdAt?: Prisma.DateTimeFilter<"User"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"User"> | Date | string
+  correo?: Prisma.StringFilter<"User"> | string
+  nombreCompleto?: Prisma.StringFilter<"User"> | string
+  telefono?: Prisma.StringNullableFilter<"User"> | string | null
+  rol?: Prisma.EnumUserRoleFilter<"User"> | $Enums.UserRole
+  veterinariaId?: Prisma.UuidNullableFilter<"User"> | string | null
+  estaActivo?: Prisma.BoolFilter<"User"> | boolean
+  creadoEn?: Prisma.DateTimeFilter<"User"> | Date | string
+  actualizadoEn?: Prisma.DateTimeFilter<"User"> | Date | string
 }
 
-export type UserCreateWithoutOwnerInput = {
+export type UserCreateWithoutPropietarioInput = {
   id: string
-  email: string
-  fullName: string
-  phone?: string | null
-  role?: $Enums.UserRole
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutUsersInput
-  operator?: Prisma.OperatorCreateNestedOneWithoutUserInput
-  createdAppointments?: Prisma.AppointmentCreateNestedManyWithoutCreatorInput
+  correo: string
+  nombreCompleto: string
+  telefono?: string | null
+  rol?: $Enums.UserRole
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutUsuariosInput
+  operador?: Prisma.OperatorCreateNestedOneWithoutUsuarioInput
+  citasCreadas?: Prisma.AppointmentCreateNestedManyWithoutCreadorInput
 }
 
-export type UserUncheckedCreateWithoutOwnerInput = {
+export type UserUncheckedCreateWithoutPropietarioInput = {
   id: string
-  email: string
-  fullName: string
-  phone?: string | null
-  role?: $Enums.UserRole
-  veterinaryId?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  operator?: Prisma.OperatorUncheckedCreateNestedOneWithoutUserInput
-  createdAppointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutCreatorInput
+  correo: string
+  nombreCompleto: string
+  telefono?: string | null
+  rol?: $Enums.UserRole
+  veterinariaId?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  operador?: Prisma.OperatorUncheckedCreateNestedOneWithoutUsuarioInput
+  citasCreadas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutCreadorInput
 }
 
-export type UserCreateOrConnectWithoutOwnerInput = {
+export type UserCreateOrConnectWithoutPropietarioInput = {
   where: Prisma.UserWhereUniqueInput
-  create: Prisma.XOR<Prisma.UserCreateWithoutOwnerInput, Prisma.UserUncheckedCreateWithoutOwnerInput>
+  create: Prisma.XOR<Prisma.UserCreateWithoutPropietarioInput, Prisma.UserUncheckedCreateWithoutPropietarioInput>
 }
 
-export type UserUpsertWithoutOwnerInput = {
-  update: Prisma.XOR<Prisma.UserUpdateWithoutOwnerInput, Prisma.UserUncheckedUpdateWithoutOwnerInput>
-  create: Prisma.XOR<Prisma.UserCreateWithoutOwnerInput, Prisma.UserUncheckedCreateWithoutOwnerInput>
+export type UserUpsertWithoutPropietarioInput = {
+  update: Prisma.XOR<Prisma.UserUpdateWithoutPropietarioInput, Prisma.UserUncheckedUpdateWithoutPropietarioInput>
+  create: Prisma.XOR<Prisma.UserCreateWithoutPropietarioInput, Prisma.UserUncheckedCreateWithoutPropietarioInput>
   where?: Prisma.UserWhereInput
 }
 
-export type UserUpdateToOneWithWhereWithoutOwnerInput = {
+export type UserUpdateToOneWithWhereWithoutPropietarioInput = {
   where?: Prisma.UserWhereInput
-  data: Prisma.XOR<Prisma.UserUpdateWithoutOwnerInput, Prisma.UserUncheckedUpdateWithoutOwnerInput>
+  data: Prisma.XOR<Prisma.UserUpdateWithoutPropietarioInput, Prisma.UserUncheckedUpdateWithoutPropietarioInput>
 }
 
-export type UserUpdateWithoutOwnerInput = {
+export type UserUpdateWithoutPropietarioInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  fullName?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutUsersNestedInput
-  operator?: Prisma.OperatorUpdateOneWithoutUserNestedInput
-  createdAppointments?: Prisma.AppointmentUpdateManyWithoutCreatorNestedInput
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  nombreCompleto?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rol?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutUsuariosNestedInput
+  operador?: Prisma.OperatorUpdateOneWithoutUsuarioNestedInput
+  citasCreadas?: Prisma.AppointmentUpdateManyWithoutCreadorNestedInput
 }
 
-export type UserUncheckedUpdateWithoutOwnerInput = {
+export type UserUncheckedUpdateWithoutPropietarioInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  fullName?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  operator?: Prisma.OperatorUncheckedUpdateOneWithoutUserNestedInput
-  createdAppointments?: Prisma.AppointmentUncheckedUpdateManyWithoutCreatorNestedInput
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  nombreCompleto?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rol?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  operador?: Prisma.OperatorUncheckedUpdateOneWithoutUsuarioNestedInput
+  citasCreadas?: Prisma.AppointmentUncheckedUpdateManyWithoutCreadorNestedInput
 }
 
-export type UserCreateWithoutOperatorInput = {
+export type UserCreateWithoutOperadorInput = {
   id: string
-  email: string
-  fullName: string
-  phone?: string | null
-  role?: $Enums.UserRole
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutUsersInput
-  owner?: Prisma.OwnerCreateNestedOneWithoutUserInput
-  createdAppointments?: Prisma.AppointmentCreateNestedManyWithoutCreatorInput
+  correo: string
+  nombreCompleto: string
+  telefono?: string | null
+  rol?: $Enums.UserRole
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutUsuariosInput
+  propietario?: Prisma.OwnerCreateNestedOneWithoutUsuarioInput
+  citasCreadas?: Prisma.AppointmentCreateNestedManyWithoutCreadorInput
 }
 
-export type UserUncheckedCreateWithoutOperatorInput = {
+export type UserUncheckedCreateWithoutOperadorInput = {
   id: string
-  email: string
-  fullName: string
-  phone?: string | null
-  role?: $Enums.UserRole
-  veterinaryId?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  owner?: Prisma.OwnerUncheckedCreateNestedOneWithoutUserInput
-  createdAppointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutCreatorInput
+  correo: string
+  nombreCompleto: string
+  telefono?: string | null
+  rol?: $Enums.UserRole
+  veterinariaId?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  propietario?: Prisma.OwnerUncheckedCreateNestedOneWithoutUsuarioInput
+  citasCreadas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutCreadorInput
 }
 
-export type UserCreateOrConnectWithoutOperatorInput = {
+export type UserCreateOrConnectWithoutOperadorInput = {
   where: Prisma.UserWhereUniqueInput
-  create: Prisma.XOR<Prisma.UserCreateWithoutOperatorInput, Prisma.UserUncheckedCreateWithoutOperatorInput>
+  create: Prisma.XOR<Prisma.UserCreateWithoutOperadorInput, Prisma.UserUncheckedCreateWithoutOperadorInput>
 }
 
-export type UserUpsertWithoutOperatorInput = {
-  update: Prisma.XOR<Prisma.UserUpdateWithoutOperatorInput, Prisma.UserUncheckedUpdateWithoutOperatorInput>
-  create: Prisma.XOR<Prisma.UserCreateWithoutOperatorInput, Prisma.UserUncheckedCreateWithoutOperatorInput>
+export type UserUpsertWithoutOperadorInput = {
+  update: Prisma.XOR<Prisma.UserUpdateWithoutOperadorInput, Prisma.UserUncheckedUpdateWithoutOperadorInput>
+  create: Prisma.XOR<Prisma.UserCreateWithoutOperadorInput, Prisma.UserUncheckedCreateWithoutOperadorInput>
   where?: Prisma.UserWhereInput
 }
 
-export type UserUpdateToOneWithWhereWithoutOperatorInput = {
+export type UserUpdateToOneWithWhereWithoutOperadorInput = {
   where?: Prisma.UserWhereInput
-  data: Prisma.XOR<Prisma.UserUpdateWithoutOperatorInput, Prisma.UserUncheckedUpdateWithoutOperatorInput>
+  data: Prisma.XOR<Prisma.UserUpdateWithoutOperadorInput, Prisma.UserUncheckedUpdateWithoutOperadorInput>
 }
 
-export type UserUpdateWithoutOperatorInput = {
+export type UserUpdateWithoutOperadorInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  fullName?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutUsersNestedInput
-  owner?: Prisma.OwnerUpdateOneWithoutUserNestedInput
-  createdAppointments?: Prisma.AppointmentUpdateManyWithoutCreatorNestedInput
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  nombreCompleto?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rol?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutUsuariosNestedInput
+  propietario?: Prisma.OwnerUpdateOneWithoutUsuarioNestedInput
+  citasCreadas?: Prisma.AppointmentUpdateManyWithoutCreadorNestedInput
 }
 
-export type UserUncheckedUpdateWithoutOperatorInput = {
+export type UserUncheckedUpdateWithoutOperadorInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  fullName?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  owner?: Prisma.OwnerUncheckedUpdateOneWithoutUserNestedInput
-  createdAppointments?: Prisma.AppointmentUncheckedUpdateManyWithoutCreatorNestedInput
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  nombreCompleto?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rol?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  propietario?: Prisma.OwnerUncheckedUpdateOneWithoutUsuarioNestedInput
+  citasCreadas?: Prisma.AppointmentUncheckedUpdateManyWithoutCreadorNestedInput
 }
 
-export type UserCreateWithoutCreatedAppointmentsInput = {
+export type UserCreateWithoutCitasCreadasInput = {
   id: string
-  email: string
-  fullName: string
-  phone?: string | null
-  role?: $Enums.UserRole
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutUsersInput
-  owner?: Prisma.OwnerCreateNestedOneWithoutUserInput
-  operator?: Prisma.OperatorCreateNestedOneWithoutUserInput
+  correo: string
+  nombreCompleto: string
+  telefono?: string | null
+  rol?: $Enums.UserRole
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutUsuariosInput
+  propietario?: Prisma.OwnerCreateNestedOneWithoutUsuarioInput
+  operador?: Prisma.OperatorCreateNestedOneWithoutUsuarioInput
 }
 
-export type UserUncheckedCreateWithoutCreatedAppointmentsInput = {
+export type UserUncheckedCreateWithoutCitasCreadasInput = {
   id: string
-  email: string
-  fullName: string
-  phone?: string | null
-  role?: $Enums.UserRole
-  veterinaryId?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  owner?: Prisma.OwnerUncheckedCreateNestedOneWithoutUserInput
-  operator?: Prisma.OperatorUncheckedCreateNestedOneWithoutUserInput
+  correo: string
+  nombreCompleto: string
+  telefono?: string | null
+  rol?: $Enums.UserRole
+  veterinariaId?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  propietario?: Prisma.OwnerUncheckedCreateNestedOneWithoutUsuarioInput
+  operador?: Prisma.OperatorUncheckedCreateNestedOneWithoutUsuarioInput
 }
 
-export type UserCreateOrConnectWithoutCreatedAppointmentsInput = {
+export type UserCreateOrConnectWithoutCitasCreadasInput = {
   where: Prisma.UserWhereUniqueInput
-  create: Prisma.XOR<Prisma.UserCreateWithoutCreatedAppointmentsInput, Prisma.UserUncheckedCreateWithoutCreatedAppointmentsInput>
+  create: Prisma.XOR<Prisma.UserCreateWithoutCitasCreadasInput, Prisma.UserUncheckedCreateWithoutCitasCreadasInput>
 }
 
-export type UserUpsertWithoutCreatedAppointmentsInput = {
-  update: Prisma.XOR<Prisma.UserUpdateWithoutCreatedAppointmentsInput, Prisma.UserUncheckedUpdateWithoutCreatedAppointmentsInput>
-  create: Prisma.XOR<Prisma.UserCreateWithoutCreatedAppointmentsInput, Prisma.UserUncheckedCreateWithoutCreatedAppointmentsInput>
+export type UserUpsertWithoutCitasCreadasInput = {
+  update: Prisma.XOR<Prisma.UserUpdateWithoutCitasCreadasInput, Prisma.UserUncheckedUpdateWithoutCitasCreadasInput>
+  create: Prisma.XOR<Prisma.UserCreateWithoutCitasCreadasInput, Prisma.UserUncheckedCreateWithoutCitasCreadasInput>
   where?: Prisma.UserWhereInput
 }
 
-export type UserUpdateToOneWithWhereWithoutCreatedAppointmentsInput = {
+export type UserUpdateToOneWithWhereWithoutCitasCreadasInput = {
   where?: Prisma.UserWhereInput
-  data: Prisma.XOR<Prisma.UserUpdateWithoutCreatedAppointmentsInput, Prisma.UserUncheckedUpdateWithoutCreatedAppointmentsInput>
+  data: Prisma.XOR<Prisma.UserUpdateWithoutCitasCreadasInput, Prisma.UserUncheckedUpdateWithoutCitasCreadasInput>
 }
 
-export type UserUpdateWithoutCreatedAppointmentsInput = {
+export type UserUpdateWithoutCitasCreadasInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  fullName?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutUsersNestedInput
-  owner?: Prisma.OwnerUpdateOneWithoutUserNestedInput
-  operator?: Prisma.OperatorUpdateOneWithoutUserNestedInput
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  nombreCompleto?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rol?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutUsuariosNestedInput
+  propietario?: Prisma.OwnerUpdateOneWithoutUsuarioNestedInput
+  operador?: Prisma.OperatorUpdateOneWithoutUsuarioNestedInput
 }
 
-export type UserUncheckedUpdateWithoutCreatedAppointmentsInput = {
+export type UserUncheckedUpdateWithoutCitasCreadasInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  fullName?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  owner?: Prisma.OwnerUncheckedUpdateOneWithoutUserNestedInput
-  operator?: Prisma.OperatorUncheckedUpdateOneWithoutUserNestedInput
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  nombreCompleto?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rol?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  propietario?: Prisma.OwnerUncheckedUpdateOneWithoutUsuarioNestedInput
+  operador?: Prisma.OperatorUncheckedUpdateOneWithoutUsuarioNestedInput
 }
 
-export type UserCreateManyVeterinaryInput = {
+export type UserCreateManyVeterinariaInput = {
   id: string
-  email: string
-  fullName: string
-  phone?: string | null
-  role?: $Enums.UserRole
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
+  correo: string
+  nombreCompleto: string
+  telefono?: string | null
+  rol?: $Enums.UserRole
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
 }
 
-export type UserUpdateWithoutVeterinaryInput = {
+export type UserUpdateWithoutVeterinariaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  fullName?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  owner?: Prisma.OwnerUpdateOneWithoutUserNestedInput
-  operator?: Prisma.OperatorUpdateOneWithoutUserNestedInput
-  createdAppointments?: Prisma.AppointmentUpdateManyWithoutCreatorNestedInput
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  nombreCompleto?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rol?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  propietario?: Prisma.OwnerUpdateOneWithoutUsuarioNestedInput
+  operador?: Prisma.OperatorUpdateOneWithoutUsuarioNestedInput
+  citasCreadas?: Prisma.AppointmentUpdateManyWithoutCreadorNestedInput
 }
 
-export type UserUncheckedUpdateWithoutVeterinaryInput = {
+export type UserUncheckedUpdateWithoutVeterinariaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  fullName?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  owner?: Prisma.OwnerUncheckedUpdateOneWithoutUserNestedInput
-  operator?: Prisma.OperatorUncheckedUpdateOneWithoutUserNestedInput
-  createdAppointments?: Prisma.AppointmentUncheckedUpdateManyWithoutCreatorNestedInput
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  nombreCompleto?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rol?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  propietario?: Prisma.OwnerUncheckedUpdateOneWithoutUsuarioNestedInput
+  operador?: Prisma.OperatorUncheckedUpdateOneWithoutUsuarioNestedInput
+  citasCreadas?: Prisma.AppointmentUncheckedUpdateManyWithoutCreadorNestedInput
 }
 
-export type UserUncheckedUpdateManyWithoutVeterinaryInput = {
+export type UserUncheckedUpdateManyWithoutVeterinariaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  fullName?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  role?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  nombreCompleto?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  rol?: Prisma.EnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 
@@ -883,11 +883,11 @@ export type UserUncheckedUpdateManyWithoutVeterinaryInput = {
  */
 
 export type UserCountOutputType = {
-  createdAppointments: number
+  citasCreadas: number
 }
 
 export type UserCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  createdAppointments?: boolean | UserCountOutputTypeCountCreatedAppointmentsArgs
+  citasCreadas?: boolean | UserCountOutputTypeCountCitasCreadasArgs
 }
 
 /**
@@ -903,99 +903,99 @@ export type UserCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.Extensi
 /**
  * UserCountOutputType without action
  */
-export type UserCountOutputTypeCountCreatedAppointmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type UserCountOutputTypeCountCitasCreadasArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.AppointmentWhereInput
 }
 
 
 export type UserSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  email?: boolean
-  fullName?: boolean
-  phone?: boolean
-  role?: boolean
-  veterinaryId?: boolean
-  isActive?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
-  veterinary?: boolean | Prisma.User$veterinaryArgs<ExtArgs>
-  owner?: boolean | Prisma.User$ownerArgs<ExtArgs>
-  operator?: boolean | Prisma.User$operatorArgs<ExtArgs>
-  createdAppointments?: boolean | Prisma.User$createdAppointmentsArgs<ExtArgs>
+  correo?: boolean
+  nombreCompleto?: boolean
+  telefono?: boolean
+  rol?: boolean
+  veterinariaId?: boolean
+  estaActivo?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
+  veterinaria?: boolean | Prisma.User$veterinariaArgs<ExtArgs>
+  propietario?: boolean | Prisma.User$propietarioArgs<ExtArgs>
+  operador?: boolean | Prisma.User$operadorArgs<ExtArgs>
+  citasCreadas?: boolean | Prisma.User$citasCreadasArgs<ExtArgs>
   _count?: boolean | Prisma.UserCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["user"]>
 
 export type UserSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  email?: boolean
-  fullName?: boolean
-  phone?: boolean
-  role?: boolean
-  veterinaryId?: boolean
-  isActive?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
-  veterinary?: boolean | Prisma.User$veterinaryArgs<ExtArgs>
+  correo?: boolean
+  nombreCompleto?: boolean
+  telefono?: boolean
+  rol?: boolean
+  veterinariaId?: boolean
+  estaActivo?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
+  veterinaria?: boolean | Prisma.User$veterinariaArgs<ExtArgs>
 }, ExtArgs["result"]["user"]>
 
 export type UserSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  email?: boolean
-  fullName?: boolean
-  phone?: boolean
-  role?: boolean
-  veterinaryId?: boolean
-  isActive?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
-  veterinary?: boolean | Prisma.User$veterinaryArgs<ExtArgs>
+  correo?: boolean
+  nombreCompleto?: boolean
+  telefono?: boolean
+  rol?: boolean
+  veterinariaId?: boolean
+  estaActivo?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
+  veterinaria?: boolean | Prisma.User$veterinariaArgs<ExtArgs>
 }, ExtArgs["result"]["user"]>
 
 export type UserSelectScalar = {
   id?: boolean
-  email?: boolean
-  fullName?: boolean
-  phone?: boolean
-  role?: boolean
-  veterinaryId?: boolean
-  isActive?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
+  correo?: boolean
+  nombreCompleto?: boolean
+  telefono?: boolean
+  rol?: boolean
+  veterinariaId?: boolean
+  estaActivo?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
 }
 
-export type UserOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "email" | "fullName" | "phone" | "role" | "veterinaryId" | "isActive" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
+export type UserOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "correo" | "nombreCompleto" | "telefono" | "rol" | "veterinariaId" | "estaActivo" | "creadoEn" | "actualizadoEn", ExtArgs["result"]["user"]>
 export type UserInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  veterinary?: boolean | Prisma.User$veterinaryArgs<ExtArgs>
-  owner?: boolean | Prisma.User$ownerArgs<ExtArgs>
-  operator?: boolean | Prisma.User$operatorArgs<ExtArgs>
-  createdAppointments?: boolean | Prisma.User$createdAppointmentsArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.User$veterinariaArgs<ExtArgs>
+  propietario?: boolean | Prisma.User$propietarioArgs<ExtArgs>
+  operador?: boolean | Prisma.User$operadorArgs<ExtArgs>
+  citasCreadas?: boolean | Prisma.User$citasCreadasArgs<ExtArgs>
   _count?: boolean | Prisma.UserCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type UserIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  veterinary?: boolean | Prisma.User$veterinaryArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.User$veterinariaArgs<ExtArgs>
 }
 export type UserIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  veterinary?: boolean | Prisma.User$veterinaryArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.User$veterinariaArgs<ExtArgs>
 }
 
 export type $UserPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "User"
   objects: {
-    veterinary: Prisma.$VeterinaryPayload<ExtArgs> | null
-    owner: Prisma.$OwnerPayload<ExtArgs> | null
-    operator: Prisma.$OperatorPayload<ExtArgs> | null
-    createdAppointments: Prisma.$AppointmentPayload<ExtArgs>[]
+    veterinaria: Prisma.$VeterinaryPayload<ExtArgs> | null
+    propietario: Prisma.$OwnerPayload<ExtArgs> | null
+    operador: Prisma.$OperatorPayload<ExtArgs> | null
+    citasCreadas: Prisma.$AppointmentPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
-    email: string
-    fullName: string
-    phone: string | null
-    role: $Enums.UserRole
-    veterinaryId: string | null
-    isActive: boolean
-    createdAt: Date
-    updatedAt: Date
+    correo: string
+    nombreCompleto: string
+    telefono: string | null
+    rol: $Enums.UserRole
+    veterinariaId: string | null
+    estaActivo: boolean
+    creadoEn: Date
+    actualizadoEn: Date
   }, ExtArgs["result"]["user"]>
   composites: {}
 }
@@ -1390,10 +1390,10 @@ readonly fields: UserFieldRefs;
  */
 export interface Prisma__UserClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  veterinary<T extends Prisma.User$veterinaryArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$veterinaryArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-  owner<T extends Prisma.User$ownerArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$ownerArgs<ExtArgs>>): Prisma.Prisma__OwnerClient<runtime.Types.Result.GetResult<Prisma.$OwnerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-  operator<T extends Prisma.User$operatorArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$operatorArgs<ExtArgs>>): Prisma.Prisma__OperatorClient<runtime.Types.Result.GetResult<Prisma.$OperatorPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-  createdAppointments<T extends Prisma.User$createdAppointmentsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$createdAppointmentsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AppointmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  veterinaria<T extends Prisma.User$veterinariaArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$veterinariaArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  propietario<T extends Prisma.User$propietarioArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$propietarioArgs<ExtArgs>>): Prisma.Prisma__OwnerClient<runtime.Types.Result.GetResult<Prisma.$OwnerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  operador<T extends Prisma.User$operadorArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$operadorArgs<ExtArgs>>): Prisma.Prisma__OperatorClient<runtime.Types.Result.GetResult<Prisma.$OperatorPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  citasCreadas<T extends Prisma.User$citasCreadasArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$citasCreadasArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AppointmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1424,14 +1424,14 @@ export interface Prisma__UserClient<T, Null = never, ExtArgs extends runtime.Typ
  */
 export interface UserFieldRefs {
   readonly id: Prisma.FieldRef<"User", 'String'>
-  readonly email: Prisma.FieldRef<"User", 'String'>
-  readonly fullName: Prisma.FieldRef<"User", 'String'>
-  readonly phone: Prisma.FieldRef<"User", 'String'>
-  readonly role: Prisma.FieldRef<"User", 'UserRole'>
-  readonly veterinaryId: Prisma.FieldRef<"User", 'String'>
-  readonly isActive: Prisma.FieldRef<"User", 'Boolean'>
-  readonly createdAt: Prisma.FieldRef<"User", 'DateTime'>
-  readonly updatedAt: Prisma.FieldRef<"User", 'DateTime'>
+  readonly correo: Prisma.FieldRef<"User", 'String'>
+  readonly nombreCompleto: Prisma.FieldRef<"User", 'String'>
+  readonly telefono: Prisma.FieldRef<"User", 'String'>
+  readonly rol: Prisma.FieldRef<"User", 'UserRole'>
+  readonly veterinariaId: Prisma.FieldRef<"User", 'String'>
+  readonly estaActivo: Prisma.FieldRef<"User", 'Boolean'>
+  readonly creadoEn: Prisma.FieldRef<"User", 'DateTime'>
+  readonly actualizadoEn: Prisma.FieldRef<"User", 'DateTime'>
 }
     
 
@@ -1828,9 +1828,9 @@ export type UserDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.Internal
 }
 
 /**
- * User.veterinary
+ * User.veterinaria
  */
-export type User$veterinaryArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type User$veterinariaArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Veterinary
    */
@@ -1847,9 +1847,9 @@ export type User$veterinaryArgs<ExtArgs extends runtime.Types.Extensions.Interna
 }
 
 /**
- * User.owner
+ * User.propietario
  */
-export type User$ownerArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type User$propietarioArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Owner
    */
@@ -1866,9 +1866,9 @@ export type User$ownerArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs
 }
 
 /**
- * User.operator
+ * User.operador
  */
-export type User$operatorArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type User$operadorArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Operator
    */
@@ -1885,9 +1885,9 @@ export type User$operatorArgs<ExtArgs extends runtime.Types.Extensions.InternalA
 }
 
 /**
- * User.createdAppointments
+ * User.citasCreadas
  */
-export type User$createdAppointmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type User$citasCreadasArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Appointment
    */

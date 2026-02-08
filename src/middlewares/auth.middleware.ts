@@ -50,9 +50,10 @@ export const authenticate = async (
       where: { id: user.id },
       select: {
         id: true,
-        email: true,
-        fullName: true,
-        role: true,
+        correo: true,
+        nombreCompleto: true,
+        rol: true,
+        estaActivo: true,
       },
     });
 
@@ -67,9 +68,10 @@ export const authenticate = async (
     // Agregar el usuario al request con los datos de la BD
     req.user = {
       id: dbUser.id,
-      email: dbUser.email,
-      role: dbUser.role,
-      fullName: dbUser.fullName,
+      email: dbUser.correo,
+      role: dbUser.rol,
+      fullName: dbUser.nombreCompleto,
+      isActive: dbUser.estaActivo,
     };
 
     next();

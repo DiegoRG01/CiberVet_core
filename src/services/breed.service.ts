@@ -11,21 +11,21 @@ export class BreedService {
   async getAllBreeds(includeInactive: boolean = false) {
     try {
       const breeds = await prisma.breed.findMany({
-        where: includeInactive ? undefined : { isActive: true },
+        where: includeInactive ? undefined : { estaActivo: true },
         include: {
-          species: {
+          especie: {
             select: {
               id: true,
-              name: true,
+              nombre: true,
             },
           },
           _count: {
             select: {
-              patients: true,
+              pacientes: true,
             },
           },
         },
-        orderBy: [{ species: { name: "asc" } }, { name: "asc" }],
+        orderBy: [{ especie: { nombre: "asc" } }, { nombre: "asc" }],
       });
 
       return breeds;
@@ -43,15 +43,15 @@ export class BreedService {
       const breed = await prisma.breed.findUnique({
         where: { id: breedId },
         include: {
-          species: {
+          especie: {
             select: {
               id: true,
-              name: true,
+              nombre: true,
             },
           },
           _count: {
             select: {
-              patients: true,
+              pacientes: true,
             },
           },
         },
@@ -81,10 +81,10 @@ export class BreedService {
       const breed = await prisma.breed.create({
         data,
         include: {
-          species: {
+          especie: {
             select: {
               id: true,
-              name: true,
+              nombre: true,
             },
           },
         },
@@ -106,10 +106,10 @@ export class BreedService {
         where: { id: breedId },
         data,
         include: {
-          species: {
+          especie: {
             select: {
               id: true,
-              name: true,
+              nombre: true,
             },
           },
         },
@@ -129,7 +129,7 @@ export class BreedService {
     try {
       const breed = await prisma.breed.update({
         where: { id: breedId },
-        data: { isActive: false },
+        data: { estaActivo: false },
       });
 
       return breed;

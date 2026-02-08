@@ -11,17 +11,17 @@ export class SpeciesService {
   async getAllSpecies(includeInactive: boolean = false) {
     try {
       const species = await prisma.species.findMany({
-        where: includeInactive ? undefined : { isActive: true },
+        where: includeInactive ? undefined : { estaActivo: true },
         include: {
           _count: {
             select: {
-              breeds: true,
-              patients: true,
+              razas: true,
+              pacientes: true,
             },
           },
         },
         orderBy: {
-          name: "asc",
+          nombre: "asc",
         },
       });
 
@@ -40,14 +40,14 @@ export class SpeciesService {
       const species = await prisma.species.findUnique({
         where: { id: speciesId },
         include: {
-          breeds: {
-            where: { isActive: true },
-            orderBy: { name: "asc" },
+          razas: {
+            where: { estaActivo: true },
+            orderBy: { nombre: "asc" },
           },
           _count: {
             select: {
-              breeds: true,
-              patients: true,
+              razas: true,
+              pacientes: true,
             },
           },
         },
@@ -100,7 +100,7 @@ export class SpeciesService {
     try {
       const species = await prisma.species.update({
         where: { id: speciesId },
-        data: { isActive: false },
+        data: { estaActivo: false },
       });
 
       return species;
@@ -120,18 +120,18 @@ export class SpeciesService {
     try {
       const breeds = await prisma.breed.findMany({
         where: {
-          speciesId,
-          ...(includeInactive ? {} : { isActive: true }),
+          especieId: speciesId,
+          ...(includeInactive ? {} : { estaActivo: true }),
         },
         include: {
           _count: {
             select: {
-              patients: true,
+              pacientes: true,
             },
           },
         },
         orderBy: {
-          name: "asc",
+          nombre: "asc",
         },
       });
 

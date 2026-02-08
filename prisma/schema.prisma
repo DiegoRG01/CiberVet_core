@@ -18,18 +18,18 @@ datasource db {
 // =====================================================
 
 enum UserRole {
-  owner
-  operator
+  propietario
+  operador
   admin
 }
 
 enum AppointmentStatus {
-  scheduled
-  confirmed
-  in_progress
-  completed
-  cancelled
-  no_show
+  programada
+  confirmada
+  en_progreso
+  completada
+  cancelada
+  no_asistio
 }
 
 // =====================================================
@@ -38,298 +38,298 @@ enum AppointmentStatus {
 
 model User {
   id                  String       @id @db.Uuid
-  email               String       @unique @db.VarChar(255)
-  fullName            String       @map("full_name") @db.VarChar(255)
-  phone               String?      @db.VarChar(20)
-  role                UserRole     @default(owner)
-  veterinaryId        String?      @map("veterinary_id") @db.Uuid
-  isActive            Boolean      @default(true) @map("is_active")
-  createdAt           DateTime     @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt           DateTime     @updatedAt @map("updated_at") @db.Timestamptz(6)
+  correo              String       @unique @db.VarChar(255)
+  nombreCompleto      String       @db.VarChar(255)
+  telefono            String?      @db.VarChar(20)
+  rol                 UserRole     @default(propietario)
+  veterinariaId       String?      @db.Uuid
+  estaActivo          Boolean      @default(true)
+  creadoEn            DateTime     @default(now()) @db.Timestamptz(6)
+  actualizadoEn       DateTime     @updatedAt @db.Timestamptz(6)
 
-  veterinary          Veterinary?  @relation(fields: [veterinaryId], references: [id])
-  owner               Owner?
-  operator            Operator?
-  createdAppointments Appointment[] @relation("CreatedBy")
+  veterinaria         Veterinary?  @relation(fields: [veterinariaId], references: [id])
+  propietario         Owner?
+  operador            Operator?
+  citasCreadas        Appointment[] @relation("CreatedBy")
 
   @@map("users")
-  @@index([role])
-  @@index([veterinaryId])
+  @@index([rol])
+  @@index([veterinariaId])
 }
 
 model Veterinary {
   id            String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
-  name          String    @db.VarChar(255)
-  email         String    @unique @db.VarChar(255)
-  phone         String?   @db.VarChar(20)
-  address       String?
-  city          String?   @db.VarChar(100)
-  state         String?   @db.VarChar(100)
-  country       String    @default("República Dominicana") @db.VarChar(100)
-  postalCode    String?   @map("postal_code") @db.VarChar(20)
-  logoUrl       String?   @map("logo_url")
-  businessHours Json?     @map("business_hours")
-  isActive      Boolean   @default(true) @map("is_active")
-  createdAt     DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt     DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
+  nombre        String    @db.VarChar(255)
+  correo        String    @unique @db.VarChar(255)
+  telefono      String?   @db.VarChar(20)
+  direccion     String?
+  ciudad        String?   @db.VarChar(100)
+  estado        String?   @db.VarChar(100)
+  pais          String    @default("República Dominicana") @db.VarChar(100)
+  codigoPostal  String?   @db.VarChar(20)
+  urlLogo       String?
+  horarioNegocio Json?
+  estaActivo    Boolean   @default(true)
+  creadoEn      DateTime  @default(now()) @db.Timestamptz(6)
+  actualizadoEn DateTime  @updatedAt @db.Timestamptz(6)
 
-  users          User[]
-  owners         Owner[]
-  operators      Operator[]
-  patients       Patient[]
-  appointments   Appointment[]
-  clinicalRecords ClinicalRecord[]
-  activityLogs   ActivityLog[]
+  usuarios          User[]
+  propietarios      Owner[]
+  operadores        Operator[]
+  pacientes         Patient[]
+  citas             Appointment[]
+  registrosClinico  ClinicalRecord[]
+  registrosActividad ActivityLog[]
 
   @@map("veterinaries")
 }
 
 model Owner {
-  id                    String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
-  userId                String    @unique @map("user_id") @db.Uuid
-  veterinaryId          String?   @map("veterinary_id") @db.Uuid
-  address               String?
-  city                  String?   @db.VarChar(100)
-  emergencyContactName  String?   @map("emergency_contact_name") @db.VarChar(255)
-  emergencyContactPhone String?   @map("emergency_contact_phone") @db.VarChar(20)
-  notes                 String?
-  createdAt             DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt             DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
+  id                           String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  usuarioId                    String    @unique @db.Uuid
+  veterinariaId                String?   @db.Uuid
+  direccion                    String?
+  ciudad                       String?   @db.VarChar(100)
+  nombreContactoEmergencia     String?   @db.VarChar(255)
+  telefonoContactoEmergencia   String?   @db.VarChar(20)
+  notas                        String?
+  creadoEn                     DateTime  @default(now()) @db.Timestamptz(6)
+  actualizadoEn                DateTime  @updatedAt @db.Timestamptz(6)
 
-  user          User          @relation(fields: [userId], references: [id], onDelete: Cascade)
-  veterinary    Veterinary?   @relation(fields: [veterinaryId], references: [id])
-  patients      Patient[]
-  appointments  Appointment[]
-  emailReminders EmailReminder[]
+  usuario            User          @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+  veterinaria        Veterinary?   @relation(fields: [veterinariaId], references: [id])
+  pacientes          Patient[]
+  citas              Appointment[]
+  recordatoriosCorreo EmailReminder[]
 
   @@map("owners")
-  @@index([userId])
+  @@index([usuarioId])
 }
 
 model Operator {
-  id            String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
-  userId        String    @unique @map("user_id") @db.Uuid
-  veterinaryId  String    @map("veterinary_id") @db.Uuid
-  position      String?   @db.VarChar(100)
-  hireDate      DateTime? @map("hire_date") @db.Date
-  isActive      Boolean   @default(true) @map("is_active")
-  permissions   Json?
-  createdAt     DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt     DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
+  id               String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  usuarioId        String    @unique @db.Uuid
+  veterinariaId    String    @db.Uuid
+  posicion         String?   @db.VarChar(100)
+  fechaContratacion DateTime? @db.Date
+  estaActivo       Boolean   @default(true)
+  permisos         Json?
+  creadoEn         DateTime  @default(now()) @db.Timestamptz(6)
+  actualizadoEn    DateTime  @updatedAt @db.Timestamptz(6)
 
-  user            User              @relation(fields: [userId], references: [id], onDelete: Cascade)
-  veterinary      Veterinary        @relation(fields: [veterinaryId], references: [id])
-  appointments    Appointment[]
-  procedures      Procedure[]
-  clinicalRecords ClinicalRecord[]  @relation("RecordedBy")
-  vaccinations    Vaccination[]
+  usuario          User              @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+  veterinaria      Veterinary        @relation(fields: [veterinariaId], references: [id])
+  citas            Appointment[]
+  procedimientos   Procedure[]
+  registrosClinico ClinicalRecord[]  @relation("RecordedBy")
+  vacunaciones     Vaccination[]
 
   @@map("operators")
-  @@index([userId])
+  @@index([usuarioId])
 }
 
 model Species {
   id          String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
-  name        String    @unique @db.VarChar(100)
-  description String?
-  isActive    Boolean   @default(true) @map("is_active")
-  createdAt   DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt   DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
+  nombre      String    @unique @db.VarChar(100)
+  descripcion String?
+  estaActivo  Boolean   @default(true)
+  creadoEn    DateTime  @default(now()) @db.Timestamptz(6)
+  actualizadoEn DateTime @updatedAt @db.Timestamptz(6)
 
-  breeds   Breed[]
-  patients Patient[]
+  razas     Breed[]
+  pacientes Patient[]
 
   @@map("species")
 }
 
 model Breed {
   id          String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
-  speciesId   String   @map("species_id") @db.Uuid
-  name        String   @db.VarChar(100)
-  description String?
-  isActive    Boolean  @default(true) @map("is_active")
-  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt   DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+  especieId   String   @db.Uuid
+  nombre      String   @db.VarChar(100)
+  descripcion String?
+  estaActivo  Boolean  @default(true)
+  creadoEn    DateTime @default(now()) @db.Timestamptz(6)
+  actualizadoEn DateTime @updatedAt @db.Timestamptz(6)
 
-  species  Species   @relation(fields: [speciesId], references: [id])
-  patients Patient[]
+  especie   Species   @relation(fields: [especieId], references: [id])
+  pacientes Patient[]
 
-  @@unique([speciesId, name])
+  @@unique([especieId, nombre])
   @@map("breeds")
-  @@index([speciesId])
+  @@index([especieId])
 }
 
 model Patient {
-  id               String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
-  ownerId          String    @map("owner_id") @db.Uuid
-  veterinaryId     String?   @map("veterinary_id") @db.Uuid
-  name             String    @db.VarChar(255)
-  speciesId        String    @map("species_id") @db.Uuid
-  breedId          String?   @map("breed_id") @db.Uuid
-  color            String?   @db.VarChar(100)
-  birthDate        DateTime? @map("birth_date") @db.Date
-  gender           String?   @db.VarChar(20)
-  weight           Decimal?  @db.Decimal(10, 2)
-  photoUrl         String?   @map("photo_url")
-  microchipNumber  String?   @map("microchip_number") @db.VarChar(50)
-  isNeutered       Boolean   @default(false) @map("is_neutered")
-  allergies        String?
-  specialConditions String?  @map("special_conditions")
-  isActive         Boolean   @default(true) @map("is_active")
-  createdAt        DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt        DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
+  id                  String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  propietarioId       String    @db.Uuid
+  veterinariaId       String?   @db.Uuid
+  nombre              String    @db.VarChar(255)
+  especieId           String    @db.Uuid
+  razaId              String?   @db.Uuid
+  color               String?   @db.VarChar(100)
+  fechaNacimiento     DateTime? @db.Date
+  genero              String?   @db.VarChar(20)
+  peso                Decimal?  @db.Decimal(10, 2)
+  urlFoto             String?
+  numeroMicrochip     String?   @db.VarChar(50)
+  estaCastrado        Boolean   @default(false)
+  alergias            String?
+  condicionesEspeciales String?
+  estaActivo          Boolean   @default(true)
+  creadoEn            DateTime  @default(now()) @db.Timestamptz(6)
+  actualizadoEn       DateTime  @updatedAt @db.Timestamptz(6)
 
-  owner           Owner             @relation(fields: [ownerId], references: [id], onDelete: Cascade)
-  veterinary      Veterinary?       @relation(fields: [veterinaryId], references: [id])
-  species         Species           @relation(fields: [speciesId], references: [id])
-  breed           Breed?            @relation(fields: [breedId], references: [id])
-  appointments    Appointment[]
-  clinicalRecords ClinicalRecord[]
-  vaccinations    Vaccination[]
+  propietario      Owner             @relation(fields: [propietarioId], references: [id], onDelete: Cascade)
+  veterinaria      Veterinary?       @relation(fields: [veterinariaId], references: [id])
+  especie          Species           @relation(fields: [especieId], references: [id])
+  raza             Breed?            @relation(fields: [razaId], references: [id])
+  citas            Appointment[]
+  registrosClinico ClinicalRecord[]
+  vacunaciones     Vaccination[]
 
   @@map("patients")
-  @@index([ownerId])
-  @@index([speciesId])
-  @@index([breedId])
+  @@index([propietarioId])
+  @@index([especieId])
+  @@index([razaId])
 }
 
 model Appointment {
-  id                   String            @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
-  patientId            String            @map("patient_id") @db.Uuid
-  ownerId              String?           @map("owner_id") @db.Uuid
-  veterinaryId         String?           @map("veterinary_id") @db.Uuid
-  operatorId           String?           @map("operator_id") @db.Uuid
-  dateTime             DateTime          @map("date_time") @db.Timestamptz(6)
-  durationMinutes      Int               @default(30) @map("duration_minutes")
-  status               AppointmentStatus @default(scheduled)
-  appointmentType      String?           @map("appointment_type") @db.VarChar(100)
-  reason               String
-  notes                String?
-  googleCalendarEventId String?          @map("google_calendar_event_id") @db.VarChar(255)
-  reminderSent         Boolean           @default(false) @map("reminder_sent")
-  reminderSentAt       DateTime?         @map("reminder_sent_at") @db.Timestamptz(6)
-  cancelledAt          DateTime?         @map("cancelled_at") @db.Timestamptz(6)
-  cancellationReason   String?           @map("cancellation_reason")
-  createdBy            String?           @map("created_by") @db.Uuid
-  createdAt            DateTime          @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt            DateTime          @updatedAt @map("updated_at") @db.Timestamptz(6)
+  id                      String            @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  pacienteId              String            @db.Uuid
+  propietarioId           String?           @db.Uuid
+  veterinariaId           String?           @db.Uuid
+  operadorId              String?           @db.Uuid
+  fechaHora               DateTime          @db.Timestamptz(6)
+  duracionMinutos         Int               @default(30)
+  estado                  AppointmentStatus @default(programada)
+  tipoCita                String?           @db.VarChar(100)
+  motivo                  String
+  notas                   String?
+  idEventoGoogleCalendar  String?           @db.VarChar(255)
+  recordatorioEnviado     Boolean           @default(false)
+  recordatorioEnviadoEn   DateTime?         @db.Timestamptz(6)
+  canceladoEn             DateTime?         @db.Timestamptz(6)
+  motivoCancelacion       String?
+  creadoPor               String?           @db.Uuid
+  creadoEn                DateTime          @default(now()) @db.Timestamptz(6)
+  actualizadoEn           DateTime          @updatedAt @db.Timestamptz(6)
 
-  patient         Patient           @relation(fields: [patientId], references: [id], onDelete: Cascade)
-  owner           Owner?            @relation(fields: [ownerId], references: [id])
-  veterinary      Veterinary?       @relation(fields: [veterinaryId], references: [id])
-  operator        Operator?         @relation(fields: [operatorId], references: [id])
-  creator         User?             @relation("CreatedBy", fields: [createdBy], references: [id])
-  procedures      Procedure[]
-  clinicalRecords ClinicalRecord[]
-  emailReminders  EmailReminder[]
+  paciente           Patient           @relation(fields: [pacienteId], references: [id], onDelete: Cascade)
+  propietario        Owner?            @relation(fields: [propietarioId], references: [id])
+  veterinaria        Veterinary?       @relation(fields: [veterinariaId], references: [id])
+  operador           Operator?         @relation(fields: [operadorId], references: [id])
+  creador            User?             @relation("CreatedBy", fields: [creadoPor], references: [id])
+  procedimientos     Procedure[]
+  registrosClinico   ClinicalRecord[]
+  recordatoriosCorreo EmailReminder[]
 
   @@map("appointments")
-  @@index([patientId])
-  @@index([ownerId])
-  @@index([dateTime])
-  @@index([status])
+  @@index([pacienteId])
+  @@index([propietarioId])
+  @@index([fechaHora])
+  @@index([estado])
 }
 
 model Procedure {
   id              String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
-  appointmentId   String    @map("appointment_id") @db.Uuid
-  name            String    @db.VarChar(255)
-  description     String?
-  cost            Decimal?  @db.Decimal(10, 2)
-  durationMinutes Int?      @map("duration_minutes")
-  performedBy     String?   @map("performed_by") @db.Uuid
-  performedAt     DateTime  @default(now()) @map("performed_at") @db.Timestamptz(6)
-  createdAt       DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  citaId          String    @db.Uuid
+  nombre          String    @db.VarChar(255)
+  descripcion     String?
+  costo           Decimal?  @db.Decimal(10, 2)
+  duracionMinutos Int?
+  realizadoPor    String?   @db.Uuid
+  realizadoEn     DateTime  @default(now()) @db.Timestamptz(6)
+  creadoEn        DateTime  @default(now()) @db.Timestamptz(6)
 
-  appointment Appointment @relation(fields: [appointmentId], references: [id], onDelete: Cascade)
-  performer   Operator?   @relation(fields: [performedBy], references: [id])
+  cita     Appointment @relation(fields: [citaId], references: [id], onDelete: Cascade)
+  ejecutor Operator?   @relation(fields: [realizadoPor], references: [id])
 
   @@map("procedures")
 }
 
 model ClinicalRecord {
-  id             String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
-  patientId      String    @map("patient_id") @db.Uuid
-  appointmentId  String?   @map("appointment_id") @db.Uuid
-  veterinaryId   String?   @map("veterinary_id") @db.Uuid
-  recordedBy     String?   @map("recorded_by") @db.Uuid
-  recordType     String?   @map("record_type") @db.VarChar(50)
-  diagnosis      String?
-  symptoms       String?
-  treatment      String?
-  medications    Json?
-  labResults     Json?     @map("lab_results")
-  images         Json?
-  observations   String?
-  followUpDate   DateTime? @map("follow_up_date") @db.Date
-  createdAt      DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt      DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
+  id                    String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  pacienteId            String    @db.Uuid
+  citaId                String?   @db.Uuid
+  veterinariaId         String?   @db.Uuid
+  registradoPor         String?   @db.Uuid
+  tipoRegistro          String?   @db.VarChar(50)
+  diagnostico           String?
+  sintomas              String?
+  tratamiento           String?
+  medicamentos          Json?
+  resultadosLaboratorio Json?
+  imagenes              Json?
+  observaciones         String?
+  fechaSeguimiento      DateTime? @db.Date
+  creadoEn              DateTime  @default(now()) @db.Timestamptz(6)
+  actualizadoEn         DateTime  @updatedAt @db.Timestamptz(6)
 
-  patient      Patient       @relation(fields: [patientId], references: [id], onDelete: Cascade)
-  appointment  Appointment?  @relation(fields: [appointmentId], references: [id])
-  veterinary   Veterinary?   @relation(fields: [veterinaryId], references: [id])
-  recorder     Operator?     @relation("RecordedBy", fields: [recordedBy], references: [id])
-  vaccinations Vaccination[]
+  paciente     Patient       @relation(fields: [pacienteId], references: [id], onDelete: Cascade)
+  cita         Appointment?  @relation(fields: [citaId], references: [id])
+  veterinaria  Veterinary?   @relation(fields: [veterinariaId], references: [id])
+  registrador  Operator?     @relation("RecordedBy", fields: [registradoPor], references: [id])
+  vacunaciones Vaccination[]
 
   @@map("clinical_records")
-  @@index([patientId])
+  @@index([pacienteId])
 }
 
 model Vaccination {
-  id                String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
-  patientId         String    @map("patient_id") @db.Uuid
-  clinicalRecordId  String?   @map("clinical_record_id") @db.Uuid
-  vaccineName       String    @map("vaccine_name") @db.VarChar(255)
-  vaccineType       String?   @map("vaccine_type") @db.VarChar(100)
-  batchNumber       String?   @map("batch_number") @db.VarChar(100)
-  administeredDate  DateTime  @map("administered_date") @db.Date
-  nextDueDate       DateTime? @map("next_due_date") @db.Date
-  administeredBy    String?   @map("administered_by") @db.Uuid
-  notes             String?
-  createdAt         DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  id                     String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  pacienteId             String    @db.Uuid
+  registroClinicoId      String?   @db.Uuid
+  nombreVacuna           String    @db.VarChar(255)
+  tipoVacuna             String?   @db.VarChar(100)
+  numeroLote             String?   @db.VarChar(100)
+  fechaAdministracion    DateTime  @db.Date
+  proximaFechaVencimiento DateTime? @db.Date
+  administradoPor        String?   @db.Uuid
+  notas                  String?
+  creadoEn               DateTime  @default(now()) @db.Timestamptz(6)
 
-  patient        Patient         @relation(fields: [patientId], references: [id], onDelete: Cascade)
-  clinicalRecord ClinicalRecord? @relation(fields: [clinicalRecordId], references: [id])
-  administrator  Operator?       @relation(fields: [administeredBy], references: [id])
+  paciente        Patient         @relation(fields: [pacienteId], references: [id], onDelete: Cascade)
+  registroClinico ClinicalRecord? @relation(fields: [registroClinicoId], references: [id])
+  administrador   Operator?       @relation(fields: [administradoPor], references: [id])
 
   @@map("vaccinations")
-  @@index([patientId])
+  @@index([pacienteId])
 }
 
 model EmailReminder {
-  id            String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
-  appointmentId String    @map("appointment_id") @db.Uuid
-  ownerId       String?   @map("owner_id") @db.Uuid
-  emailTo       String    @map("email_to") @db.VarChar(255)
-  subject       String?   @db.VarChar(255)
-  body          String?
-  scheduledFor  DateTime  @map("scheduled_for") @db.Timestamptz(6)
-  sentAt        DateTime? @map("sent_at") @db.Timestamptz(6)
-  status        String    @default("pending") @db.VarChar(50)
-  errorMessage  String?   @map("error_message")
-  createdAt     DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  id              String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  citaId          String    @db.Uuid
+  propietarioId   String?   @db.Uuid
+  correoDestino   String    @db.VarChar(255)
+  asunto          String?   @db.VarChar(255)
+  cuerpo          String?
+  programadoPara  DateTime  @db.Timestamptz(6)
+  enviadoEn       DateTime? @db.Timestamptz(6)
+  estado          String    @default("pending") @db.VarChar(50)
+  mensajeError    String?
+  creadoEn        DateTime  @default(now()) @db.Timestamptz(6)
 
-  appointment Appointment @relation(fields: [appointmentId], references: [id], onDelete: Cascade)
-  owner       Owner?      @relation(fields: [ownerId], references: [id])
+  cita        Appointment @relation(fields: [citaId], references: [id], onDelete: Cascade)
+  propietario Owner?      @relation(fields: [propietarioId], references: [id])
 
   @@map("email_reminders")
 }
 
 model ActivityLog {
   id            String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
-  veterinaryId  String?   @map("veterinary_id") @db.Uuid
-  userId        String?   @map("user_id") @db.Uuid
-  actionType    String    @map("action_type") @db.VarChar(50)
-  entityType    String?   @map("entity_type") @db.VarChar(50)
-  entityId      String?   @map("entity_id") @db.Uuid
-  description   String
-  metadata      Json?
-  createdAt     DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  veterinariaId String?   @db.Uuid
+  usuarioId     String?   @db.Uuid
+  tipoAccion    String    @db.VarChar(50)
+  tipoEntidad   String?   @db.VarChar(50)
+  entidadId     String?   @db.Uuid
+  descripcion   String
+  metadatos     Json?
+  creadoEn      DateTime  @default(now()) @db.Timestamptz(6)
 
-  veterinary Veterinary? @relation(fields: [veterinaryId], references: [id])
+  veterinaria Veterinary? @relation(fields: [veterinariaId], references: [id])
 
   @@map("activity_log")
-  @@index([veterinaryId])
-  @@index([userId])
-  @@index([createdAt(sort: Desc)])
+  @@index([veterinariaId])
+  @@index([usuarioId])
+  @@index([creadoEn(sort: Desc)])
 }

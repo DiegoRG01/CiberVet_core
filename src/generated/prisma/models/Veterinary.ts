@@ -26,102 +26,102 @@ export type AggregateVeterinary = {
 
 export type VeterinaryMinAggregateOutputType = {
   id: string | null
-  name: string | null
-  email: string | null
-  phone: string | null
-  address: string | null
-  city: string | null
-  state: string | null
-  country: string | null
-  postalCode: string | null
-  logoUrl: string | null
-  isActive: boolean | null
-  createdAt: Date | null
-  updatedAt: Date | null
+  nombre: string | null
+  correo: string | null
+  telefono: string | null
+  direccion: string | null
+  ciudad: string | null
+  estado: string | null
+  pais: string | null
+  codigoPostal: string | null
+  urlLogo: string | null
+  estaActivo: boolean | null
+  creadoEn: Date | null
+  actualizadoEn: Date | null
 }
 
 export type VeterinaryMaxAggregateOutputType = {
   id: string | null
-  name: string | null
-  email: string | null
-  phone: string | null
-  address: string | null
-  city: string | null
-  state: string | null
-  country: string | null
-  postalCode: string | null
-  logoUrl: string | null
-  isActive: boolean | null
-  createdAt: Date | null
-  updatedAt: Date | null
+  nombre: string | null
+  correo: string | null
+  telefono: string | null
+  direccion: string | null
+  ciudad: string | null
+  estado: string | null
+  pais: string | null
+  codigoPostal: string | null
+  urlLogo: string | null
+  estaActivo: boolean | null
+  creadoEn: Date | null
+  actualizadoEn: Date | null
 }
 
 export type VeterinaryCountAggregateOutputType = {
   id: number
-  name: number
-  email: number
-  phone: number
-  address: number
-  city: number
-  state: number
-  country: number
-  postalCode: number
-  logoUrl: number
-  businessHours: number
-  isActive: number
-  createdAt: number
-  updatedAt: number
+  nombre: number
+  correo: number
+  telefono: number
+  direccion: number
+  ciudad: number
+  estado: number
+  pais: number
+  codigoPostal: number
+  urlLogo: number
+  horarioNegocio: number
+  estaActivo: number
+  creadoEn: number
+  actualizadoEn: number
   _all: number
 }
 
 
 export type VeterinaryMinAggregateInputType = {
   id?: true
-  name?: true
-  email?: true
-  phone?: true
-  address?: true
-  city?: true
-  state?: true
-  country?: true
-  postalCode?: true
-  logoUrl?: true
-  isActive?: true
-  createdAt?: true
-  updatedAt?: true
+  nombre?: true
+  correo?: true
+  telefono?: true
+  direccion?: true
+  ciudad?: true
+  estado?: true
+  pais?: true
+  codigoPostal?: true
+  urlLogo?: true
+  estaActivo?: true
+  creadoEn?: true
+  actualizadoEn?: true
 }
 
 export type VeterinaryMaxAggregateInputType = {
   id?: true
-  name?: true
-  email?: true
-  phone?: true
-  address?: true
-  city?: true
-  state?: true
-  country?: true
-  postalCode?: true
-  logoUrl?: true
-  isActive?: true
-  createdAt?: true
-  updatedAt?: true
+  nombre?: true
+  correo?: true
+  telefono?: true
+  direccion?: true
+  ciudad?: true
+  estado?: true
+  pais?: true
+  codigoPostal?: true
+  urlLogo?: true
+  estaActivo?: true
+  creadoEn?: true
+  actualizadoEn?: true
 }
 
 export type VeterinaryCountAggregateInputType = {
   id?: true
-  name?: true
-  email?: true
-  phone?: true
-  address?: true
-  city?: true
-  state?: true
-  country?: true
-  postalCode?: true
-  logoUrl?: true
-  businessHours?: true
-  isActive?: true
-  createdAt?: true
-  updatedAt?: true
+  nombre?: true
+  correo?: true
+  telefono?: true
+  direccion?: true
+  ciudad?: true
+  estado?: true
+  pais?: true
+  codigoPostal?: true
+  urlLogo?: true
+  horarioNegocio?: true
+  estaActivo?: true
+  creadoEn?: true
+  actualizadoEn?: true
   _all?: true
 }
 
@@ -199,19 +199,19 @@ export type VeterinaryGroupByArgs<ExtArgs extends runtime.Types.Extensions.Inter
 
 export type VeterinaryGroupByOutputType = {
   id: string
-  name: string
-  email: string
-  phone: string | null
-  address: string | null
-  city: string | null
-  state: string | null
-  country: string
-  postalCode: string | null
-  logoUrl: string | null
-  businessHours: runtime.JsonValue | null
-  isActive: boolean
-  createdAt: Date
-  updatedAt: Date
+  nombre: string
+  correo: string
+  telefono: string | null
+  direccion: string | null
+  ciudad: string | null
+  estado: string | null
+  pais: string
+  codigoPostal: string | null
+  urlLogo: string | null
+  horarioNegocio: runtime.JsonValue | null
+  estaActivo: boolean
+  creadoEn: Date
+  actualizadoEn: Date
   _count: VeterinaryCountAggregateOutputType | null
   _min: VeterinaryMinAggregateOutputType | null
   _max: VeterinaryMaxAggregateOutputType | null
@@ -237,94 +237,94 @@ export type VeterinaryWhereInput = {
   OR?: Prisma.VeterinaryWhereInput[]
   NOT?: Prisma.VeterinaryWhereInput | Prisma.VeterinaryWhereInput[]
   id?: Prisma.UuidFilter<"Veterinary"> | string
-  name?: Prisma.StringFilter<"Veterinary"> | string
-  email?: Prisma.StringFilter<"Veterinary"> | string
-  phone?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  address?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  city?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  state?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  country?: Prisma.StringFilter<"Veterinary"> | string
-  postalCode?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  logoUrl?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  businessHours?: Prisma.JsonNullableFilter<"Veterinary">
-  isActive?: Prisma.BoolFilter<"Veterinary"> | boolean
-  createdAt?: Prisma.DateTimeFilter<"Veterinary"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"Veterinary"> | Date | string
-  users?: Prisma.UserListRelationFilter
-  owners?: Prisma.OwnerListRelationFilter
-  operators?: Prisma.OperatorListRelationFilter
-  patients?: Prisma.PatientListRelationFilter
-  appointments?: Prisma.AppointmentListRelationFilter
-  clinicalRecords?: Prisma.ClinicalRecordListRelationFilter
-  activityLogs?: Prisma.ActivityLogListRelationFilter
+  nombre?: Prisma.StringFilter<"Veterinary"> | string
+  correo?: Prisma.StringFilter<"Veterinary"> | string
+  telefono?: Prisma.StringNullableFilter<"Veterinary"> | string | null
+  direccion?: Prisma.StringNullableFilter<"Veterinary"> | string | null
+  ciudad?: Prisma.StringNullableFilter<"Veterinary"> | string | null
+  estado?: Prisma.StringNullableFilter<"Veterinary"> | string | null
+  pais?: Prisma.StringFilter<"Veterinary"> | string
+  codigoPostal?: Prisma.StringNullableFilter<"Veterinary"> | string | null
+  urlLogo?: Prisma.StringNullableFilter<"Veterinary"> | string | null
+  horarioNegocio?: Prisma.JsonNullableFilter<"Veterinary">
+  estaActivo?: Prisma.BoolFilter<"Veterinary"> | boolean
+  creadoEn?: Prisma.DateTimeFilter<"Veterinary"> | Date | string
+  actualizadoEn?: Prisma.DateTimeFilter<"Veterinary"> | Date | string
+  usuarios?: Prisma.UserListRelationFilter
+  propietarios?: Prisma.OwnerListRelationFilter
+  operadores?: Prisma.OperatorListRelationFilter
+  pacientes?: Prisma.PatientListRelationFilter
+  citas?: Prisma.AppointmentListRelationFilter
+  registrosClinico?: Prisma.ClinicalRecordListRelationFilter
+  registrosActividad?: Prisma.ActivityLogListRelationFilter
 }
 
 export type VeterinaryOrderByWithRelationInput = {
   id?: Prisma.SortOrder
-  name?: Prisma.SortOrder
-  email?: Prisma.SortOrder
-  phone?: Prisma.SortOrderInput | Prisma.SortOrder
-  address?: Prisma.SortOrderInput | Prisma.SortOrder
-  city?: Prisma.SortOrderInput | Prisma.SortOrder
-  state?: Prisma.SortOrderInput | Prisma.SortOrder
-  country?: Prisma.SortOrder
-  postalCode?: Prisma.SortOrderInput | Prisma.SortOrder
-  logoUrl?: Prisma.SortOrderInput | Prisma.SortOrder
-  businessHours?: Prisma.SortOrderInput | Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
-  users?: Prisma.UserOrderByRelationAggregateInput
-  owners?: Prisma.OwnerOrderByRelationAggregateInput
-  operators?: Prisma.OperatorOrderByRelationAggregateInput
-  patients?: Prisma.PatientOrderByRelationAggregateInput
-  appointments?: Prisma.AppointmentOrderByRelationAggregateInput
-  clinicalRecords?: Prisma.ClinicalRecordOrderByRelationAggregateInput
-  activityLogs?: Prisma.ActivityLogOrderByRelationAggregateInput
+  nombre?: Prisma.SortOrder
+  correo?: Prisma.SortOrder
+  telefono?: Prisma.SortOrderInput | Prisma.SortOrder
+  direccion?: Prisma.SortOrderInput | Prisma.SortOrder
+  ciudad?: Prisma.SortOrderInput | Prisma.SortOrder
+  estado?: Prisma.SortOrderInput | Prisma.SortOrder
+  pais?: Prisma.SortOrder
+  codigoPostal?: Prisma.SortOrderInput | Prisma.SortOrder
+  urlLogo?: Prisma.SortOrderInput | Prisma.SortOrder
+  horarioNegocio?: Prisma.SortOrderInput | Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
+  usuarios?: Prisma.UserOrderByRelationAggregateInput
+  propietarios?: Prisma.OwnerOrderByRelationAggregateInput
+  operadores?: Prisma.OperatorOrderByRelationAggregateInput
+  pacientes?: Prisma.PatientOrderByRelationAggregateInput
+  citas?: Prisma.AppointmentOrderByRelationAggregateInput
+  registrosClinico?: Prisma.ClinicalRecordOrderByRelationAggregateInput
+  registrosActividad?: Prisma.ActivityLogOrderByRelationAggregateInput
 }
 
 export type VeterinaryWhereUniqueInput = Prisma.AtLeast<{
   id?: string
-  email?: string
+  correo?: string
   AND?: Prisma.VeterinaryWhereInput | Prisma.VeterinaryWhereInput[]
   OR?: Prisma.VeterinaryWhereInput[]
   NOT?: Prisma.VeterinaryWhereInput | Prisma.VeterinaryWhereInput[]
-  name?: Prisma.StringFilter<"Veterinary"> | string
-  phone?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  address?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  city?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  state?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  country?: Prisma.StringFilter<"Veterinary"> | string
-  postalCode?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  logoUrl?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  businessHours?: Prisma.JsonNullableFilter<"Veterinary">
-  isActive?: Prisma.BoolFilter<"Veterinary"> | boolean
-  createdAt?: Prisma.DateTimeFilter<"Veterinary"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"Veterinary"> | Date | string
-  users?: Prisma.UserListRelationFilter
-  owners?: Prisma.OwnerListRelationFilter
-  operators?: Prisma.OperatorListRelationFilter
-  patients?: Prisma.PatientListRelationFilter
-  appointments?: Prisma.AppointmentListRelationFilter
-  clinicalRecords?: Prisma.ClinicalRecordListRelationFilter
-  activityLogs?: Prisma.ActivityLogListRelationFilter
-}, "id" | "email">
+  nombre?: Prisma.StringFilter<"Veterinary"> | string
+  telefono?: Prisma.StringNullableFilter<"Veterinary"> | string | null
+  direccion?: Prisma.StringNullableFilter<"Veterinary"> | string | null
+  ciudad?: Prisma.StringNullableFilter<"Veterinary"> | string | null
+  estado?: Prisma.StringNullableFilter<"Veterinary"> | string | null
+  pais?: Prisma.StringFilter<"Veterinary"> | string
+  codigoPostal?: Prisma.StringNullableFilter<"Veterinary"> | string | null
+  urlLogo?: Prisma.StringNullableFilter<"Veterinary"> | string | null
+  horarioNegocio?: Prisma.JsonNullableFilter<"Veterinary">
+  estaActivo?: Prisma.BoolFilter<"Veterinary"> | boolean
+  creadoEn?: Prisma.DateTimeFilter<"Veterinary"> | Date | string
+  actualizadoEn?: Prisma.DateTimeFilter<"Veterinary"> | Date | string
+  usuarios?: Prisma.UserListRelationFilter
+  propietarios?: Prisma.OwnerListRelationFilter
+  operadores?: Prisma.OperatorListRelationFilter
+  pacientes?: Prisma.PatientListRelationFilter
+  citas?: Prisma.AppointmentListRelationFilter
+  registrosClinico?: Prisma.ClinicalRecordListRelationFilter
+  registrosActividad?: Prisma.ActivityLogListRelationFilter
+}, "id" | "correo">
 
 export type VeterinaryOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
-  name?: Prisma.SortOrder
-  email?: Prisma.SortOrder
-  phone?: Prisma.SortOrderInput | Prisma.SortOrder
-  address?: Prisma.SortOrderInput | Prisma.SortOrder
-  city?: Prisma.SortOrderInput | Prisma.SortOrder
-  state?: Prisma.SortOrderInput | Prisma.SortOrder
-  country?: Prisma.SortOrder
-  postalCode?: Prisma.SortOrderInput | Prisma.SortOrder
-  logoUrl?: Prisma.SortOrderInput | Prisma.SortOrder
-  businessHours?: Prisma.SortOrderInput | Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  nombre?: Prisma.SortOrder
+  correo?: Prisma.SortOrder
+  telefono?: Prisma.SortOrderInput | Prisma.SortOrder
+  direccion?: Prisma.SortOrderInput | Prisma.SortOrder
+  ciudad?: Prisma.SortOrderInput | Prisma.SortOrder
+  estado?: Prisma.SortOrderInput | Prisma.SortOrder
+  pais?: Prisma.SortOrder
+  codigoPostal?: Prisma.SortOrderInput | Prisma.SortOrder
+  urlLogo?: Prisma.SortOrderInput | Prisma.SortOrder
+  horarioNegocio?: Prisma.SortOrderInput | Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
   _count?: Prisma.VeterinaryCountOrderByAggregateInput
   _max?: Prisma.VeterinaryMaxOrderByAggregateInput
   _min?: Prisma.VeterinaryMinOrderByAggregateInput
@@ -335,166 +335,166 @@ export type VeterinaryScalarWhereWithAggregatesInput = {
   OR?: Prisma.VeterinaryScalarWhereWithAggregatesInput[]
   NOT?: Prisma.VeterinaryScalarWhereWithAggregatesInput | Prisma.VeterinaryScalarWhereWithAggregatesInput[]
   id?: Prisma.UuidWithAggregatesFilter<"Veterinary"> | string
-  name?: Prisma.StringWithAggregatesFilter<"Veterinary"> | string
-  email?: Prisma.StringWithAggregatesFilter<"Veterinary"> | string
-  phone?: Prisma.StringNullableWithAggregatesFilter<"Veterinary"> | string | null
-  address?: Prisma.StringNullableWithAggregatesFilter<"Veterinary"> | string | null
-  city?: Prisma.StringNullableWithAggregatesFilter<"Veterinary"> | string | null
-  state?: Prisma.StringNullableWithAggregatesFilter<"Veterinary"> | string | null
-  country?: Prisma.StringWithAggregatesFilter<"Veterinary"> | string
-  postalCode?: Prisma.StringNullableWithAggregatesFilter<"Veterinary"> | string | null
-  logoUrl?: Prisma.StringNullableWithAggregatesFilter<"Veterinary"> | string | null
-  businessHours?: Prisma.JsonNullableWithAggregatesFilter<"Veterinary">
-  isActive?: Prisma.BoolWithAggregatesFilter<"Veterinary"> | boolean
-  createdAt?: Prisma.DateTimeWithAggregatesFilter<"Veterinary"> | Date | string
-  updatedAt?: Prisma.DateTimeWithAggregatesFilter<"Veterinary"> | Date | string
+  nombre?: Prisma.StringWithAggregatesFilter<"Veterinary"> | string
+  correo?: Prisma.StringWithAggregatesFilter<"Veterinary"> | string
+  telefono?: Prisma.StringNullableWithAggregatesFilter<"Veterinary"> | string | null
+  direccion?: Prisma.StringNullableWithAggregatesFilter<"Veterinary"> | string | null
+  ciudad?: Prisma.StringNullableWithAggregatesFilter<"Veterinary"> | string | null
+  estado?: Prisma.StringNullableWithAggregatesFilter<"Veterinary"> | string | null
+  pais?: Prisma.StringWithAggregatesFilter<"Veterinary"> | string
+  codigoPostal?: Prisma.StringNullableWithAggregatesFilter<"Veterinary"> | string | null
+  urlLogo?: Prisma.StringNullableWithAggregatesFilter<"Veterinary"> | string | null
+  horarioNegocio?: Prisma.JsonNullableWithAggregatesFilter<"Veterinary">
+  estaActivo?: Prisma.BoolWithAggregatesFilter<"Veterinary"> | boolean
+  creadoEn?: Prisma.DateTimeWithAggregatesFilter<"Veterinary"> | Date | string
+  actualizadoEn?: Prisma.DateTimeWithAggregatesFilter<"Veterinary"> | Date | string
 }
 
 export type VeterinaryCreateInput = {
   id?: string
-  name: string
-  email: string
-  phone?: string | null
-  address?: string | null
-  city?: string | null
-  state?: string | null
-  country?: string
-  postalCode?: string | null
-  logoUrl?: string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  users?: Prisma.UserCreateNestedManyWithoutVeterinaryInput
-  owners?: Prisma.OwnerCreateNestedManyWithoutVeterinaryInput
-  operators?: Prisma.OperatorCreateNestedManyWithoutVeterinaryInput
-  patients?: Prisma.PatientCreateNestedManyWithoutVeterinaryInput
-  appointments?: Prisma.AppointmentCreateNestedManyWithoutVeterinaryInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutVeterinaryInput
-  activityLogs?: Prisma.ActivityLogCreateNestedManyWithoutVeterinaryInput
+  nombre: string
+  correo: string
+  telefono?: string | null
+  direccion?: string | null
+  ciudad?: string | null
+  estado?: string | null
+  pais?: string
+  codigoPostal?: string | null
+  urlLogo?: string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  usuarios?: Prisma.UserCreateNestedManyWithoutVeterinariaInput
+  propietarios?: Prisma.OwnerCreateNestedManyWithoutVeterinariaInput
+  operadores?: Prisma.OperatorCreateNestedManyWithoutVeterinariaInput
+  pacientes?: Prisma.PatientCreateNestedManyWithoutVeterinariaInput
+  citas?: Prisma.AppointmentCreateNestedManyWithoutVeterinariaInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutVeterinariaInput
+  registrosActividad?: Prisma.ActivityLogCreateNestedManyWithoutVeterinariaInput
 }
 
 export type VeterinaryUncheckedCreateInput = {
   id?: string
-  name: string
-  email: string
-  phone?: string | null
-  address?: string | null
-  city?: string | null
-  state?: string | null
-  country?: string
-  postalCode?: string | null
-  logoUrl?: string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  users?: Prisma.UserUncheckedCreateNestedManyWithoutVeterinaryInput
-  owners?: Prisma.OwnerUncheckedCreateNestedManyWithoutVeterinaryInput
-  operators?: Prisma.OperatorUncheckedCreateNestedManyWithoutVeterinaryInput
-  patients?: Prisma.PatientUncheckedCreateNestedManyWithoutVeterinaryInput
-  appointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutVeterinaryInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutVeterinaryInput
-  activityLogs?: Prisma.ActivityLogUncheckedCreateNestedManyWithoutVeterinaryInput
+  nombre: string
+  correo: string
+  telefono?: string | null
+  direccion?: string | null
+  ciudad?: string | null
+  estado?: string | null
+  pais?: string
+  codigoPostal?: string | null
+  urlLogo?: string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  usuarios?: Prisma.UserUncheckedCreateNestedManyWithoutVeterinariaInput
+  propietarios?: Prisma.OwnerUncheckedCreateNestedManyWithoutVeterinariaInput
+  operadores?: Prisma.OperatorUncheckedCreateNestedManyWithoutVeterinariaInput
+  pacientes?: Prisma.PatientUncheckedCreateNestedManyWithoutVeterinariaInput
+  citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutVeterinariaInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutVeterinariaInput
+  registrosActividad?: Prisma.ActivityLogUncheckedCreateNestedManyWithoutVeterinariaInput
 }
 
 export type VeterinaryUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  country?: Prisma.StringFieldUpdateOperationsInput | string
-  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  users?: Prisma.UserUpdateManyWithoutVeterinaryNestedInput
-  owners?: Prisma.OwnerUpdateManyWithoutVeterinaryNestedInput
-  operators?: Prisma.OperatorUpdateManyWithoutVeterinaryNestedInput
-  patients?: Prisma.PatientUpdateManyWithoutVeterinaryNestedInput
-  appointments?: Prisma.AppointmentUpdateManyWithoutVeterinaryNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutVeterinaryNestedInput
-  activityLogs?: Prisma.ActivityLogUpdateManyWithoutVeterinaryNestedInput
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  direccion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ciudad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estado?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pais?: Prisma.StringFieldUpdateOperationsInput | string
+  codigoPostal?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  urlLogo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuarios?: Prisma.UserUpdateManyWithoutVeterinariaNestedInput
+  propietarios?: Prisma.OwnerUpdateManyWithoutVeterinariaNestedInput
+  operadores?: Prisma.OperatorUpdateManyWithoutVeterinariaNestedInput
+  pacientes?: Prisma.PatientUpdateManyWithoutVeterinariaNestedInput
+  citas?: Prisma.AppointmentUpdateManyWithoutVeterinariaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutVeterinariaNestedInput
+  registrosActividad?: Prisma.ActivityLogUpdateManyWithoutVeterinariaNestedInput
 }
 
 export type VeterinaryUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  country?: Prisma.StringFieldUpdateOperationsInput | string
-  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  users?: Prisma.UserUncheckedUpdateManyWithoutVeterinaryNestedInput
-  owners?: Prisma.OwnerUncheckedUpdateManyWithoutVeterinaryNestedInput
-  operators?: Prisma.OperatorUncheckedUpdateManyWithoutVeterinaryNestedInput
-  patients?: Prisma.PatientUncheckedUpdateManyWithoutVeterinaryNestedInput
-  appointments?: Prisma.AppointmentUncheckedUpdateManyWithoutVeterinaryNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutVeterinaryNestedInput
-  activityLogs?: Prisma.ActivityLogUncheckedUpdateManyWithoutVeterinaryNestedInput
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  direccion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ciudad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estado?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pais?: Prisma.StringFieldUpdateOperationsInput | string
+  codigoPostal?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  urlLogo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuarios?: Prisma.UserUncheckedUpdateManyWithoutVeterinariaNestedInput
+  propietarios?: Prisma.OwnerUncheckedUpdateManyWithoutVeterinariaNestedInput
+  operadores?: Prisma.OperatorUncheckedUpdateManyWithoutVeterinariaNestedInput
+  pacientes?: Prisma.PatientUncheckedUpdateManyWithoutVeterinariaNestedInput
+  citas?: Prisma.AppointmentUncheckedUpdateManyWithoutVeterinariaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutVeterinariaNestedInput
+  registrosActividad?: Prisma.ActivityLogUncheckedUpdateManyWithoutVeterinariaNestedInput
 }
 
 export type VeterinaryCreateManyInput = {
   id?: string
-  name: string
-  email: string
-  phone?: string | null
-  address?: string | null
-  city?: string | null
-  state?: string | null
-  country?: string
-  postalCode?: string | null
-  logoUrl?: string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
+  nombre: string
+  correo: string
+  telefono?: string | null
+  direccion?: string | null
+  ciudad?: string | null
+  estado?: string | null
+  pais?: string
+  codigoPostal?: string | null
+  urlLogo?: string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
 }
 
 export type VeterinaryUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  country?: Prisma.StringFieldUpdateOperationsInput | string
-  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  direccion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ciudad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estado?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pais?: Prisma.StringFieldUpdateOperationsInput | string
+  codigoPostal?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  urlLogo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type VeterinaryUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  country?: Prisma.StringFieldUpdateOperationsInput | string
-  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  direccion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ciudad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estado?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pais?: Prisma.StringFieldUpdateOperationsInput | string
+  codigoPostal?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  urlLogo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type VeterinaryNullableScalarRelationFilter = {
@@ -504,51 +504,51 @@ export type VeterinaryNullableScalarRelationFilter = {
 
 export type VeterinaryCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  name?: Prisma.SortOrder
-  email?: Prisma.SortOrder
-  phone?: Prisma.SortOrder
-  address?: Prisma.SortOrder
-  city?: Prisma.SortOrder
-  state?: Prisma.SortOrder
-  country?: Prisma.SortOrder
-  postalCode?: Prisma.SortOrder
-  logoUrl?: Prisma.SortOrder
-  businessHours?: Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  nombre?: Prisma.SortOrder
+  correo?: Prisma.SortOrder
+  telefono?: Prisma.SortOrder
+  direccion?: Prisma.SortOrder
+  ciudad?: Prisma.SortOrder
+  estado?: Prisma.SortOrder
+  pais?: Prisma.SortOrder
+  codigoPostal?: Prisma.SortOrder
+  urlLogo?: Prisma.SortOrder
+  horarioNegocio?: Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
 }
 
 export type VeterinaryMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  name?: Prisma.SortOrder
-  email?: Prisma.SortOrder
-  phone?: Prisma.SortOrder
-  address?: Prisma.SortOrder
-  city?: Prisma.SortOrder
-  state?: Prisma.SortOrder
-  country?: Prisma.SortOrder
-  postalCode?: Prisma.SortOrder
-  logoUrl?: Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  nombre?: Prisma.SortOrder
+  correo?: Prisma.SortOrder
+  telefono?: Prisma.SortOrder
+  direccion?: Prisma.SortOrder
+  ciudad?: Prisma.SortOrder
+  estado?: Prisma.SortOrder
+  pais?: Prisma.SortOrder
+  codigoPostal?: Prisma.SortOrder
+  urlLogo?: Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
 }
 
 export type VeterinaryMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  name?: Prisma.SortOrder
-  email?: Prisma.SortOrder
-  phone?: Prisma.SortOrder
-  address?: Prisma.SortOrder
-  city?: Prisma.SortOrder
-  state?: Prisma.SortOrder
-  country?: Prisma.SortOrder
-  postalCode?: Prisma.SortOrder
-  logoUrl?: Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  nombre?: Prisma.SortOrder
+  correo?: Prisma.SortOrder
+  telefono?: Prisma.SortOrder
+  direccion?: Prisma.SortOrder
+  ciudad?: Prisma.SortOrder
+  estado?: Prisma.SortOrder
+  pais?: Prisma.SortOrder
+  codigoPostal?: Prisma.SortOrder
+  urlLogo?: Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
 }
 
 export type VeterinaryScalarRelationFilter = {
@@ -556,870 +556,870 @@ export type VeterinaryScalarRelationFilter = {
   isNot?: Prisma.VeterinaryWhereInput
 }
 
-export type VeterinaryCreateNestedOneWithoutUsersInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutUsersInput, Prisma.VeterinaryUncheckedCreateWithoutUsersInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutUsersInput
+export type VeterinaryCreateNestedOneWithoutUsuariosInput = {
+  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutUsuariosInput, Prisma.VeterinaryUncheckedCreateWithoutUsuariosInput>
+  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutUsuariosInput
   connect?: Prisma.VeterinaryWhereUniqueInput
 }
 
-export type VeterinaryUpdateOneWithoutUsersNestedInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutUsersInput, Prisma.VeterinaryUncheckedCreateWithoutUsersInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutUsersInput
-  upsert?: Prisma.VeterinaryUpsertWithoutUsersInput
+export type VeterinaryUpdateOneWithoutUsuariosNestedInput = {
+  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutUsuariosInput, Prisma.VeterinaryUncheckedCreateWithoutUsuariosInput>
+  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutUsuariosInput
+  upsert?: Prisma.VeterinaryUpsertWithoutUsuariosInput
   disconnect?: Prisma.VeterinaryWhereInput | boolean
   delete?: Prisma.VeterinaryWhereInput | boolean
   connect?: Prisma.VeterinaryWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.VeterinaryUpdateToOneWithWhereWithoutUsersInput, Prisma.VeterinaryUpdateWithoutUsersInput>, Prisma.VeterinaryUncheckedUpdateWithoutUsersInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.VeterinaryUpdateToOneWithWhereWithoutUsuariosInput, Prisma.VeterinaryUpdateWithoutUsuariosInput>, Prisma.VeterinaryUncheckedUpdateWithoutUsuariosInput>
 }
 
-export type VeterinaryCreateNestedOneWithoutOwnersInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutOwnersInput, Prisma.VeterinaryUncheckedCreateWithoutOwnersInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutOwnersInput
+export type VeterinaryCreateNestedOneWithoutPropietariosInput = {
+  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutPropietariosInput, Prisma.VeterinaryUncheckedCreateWithoutPropietariosInput>
+  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutPropietariosInput
   connect?: Prisma.VeterinaryWhereUniqueInput
 }
 
-export type VeterinaryUpdateOneWithoutOwnersNestedInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutOwnersInput, Prisma.VeterinaryUncheckedCreateWithoutOwnersInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutOwnersInput
-  upsert?: Prisma.VeterinaryUpsertWithoutOwnersInput
+export type VeterinaryUpdateOneWithoutPropietariosNestedInput = {
+  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutPropietariosInput, Prisma.VeterinaryUncheckedCreateWithoutPropietariosInput>
+  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutPropietariosInput
+  upsert?: Prisma.VeterinaryUpsertWithoutPropietariosInput
   disconnect?: Prisma.VeterinaryWhereInput | boolean
   delete?: Prisma.VeterinaryWhereInput | boolean
   connect?: Prisma.VeterinaryWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.VeterinaryUpdateToOneWithWhereWithoutOwnersInput, Prisma.VeterinaryUpdateWithoutOwnersInput>, Prisma.VeterinaryUncheckedUpdateWithoutOwnersInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.VeterinaryUpdateToOneWithWhereWithoutPropietariosInput, Prisma.VeterinaryUpdateWithoutPropietariosInput>, Prisma.VeterinaryUncheckedUpdateWithoutPropietariosInput>
 }
 
-export type VeterinaryCreateNestedOneWithoutOperatorsInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutOperatorsInput, Prisma.VeterinaryUncheckedCreateWithoutOperatorsInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutOperatorsInput
+export type VeterinaryCreateNestedOneWithoutOperadoresInput = {
+  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutOperadoresInput, Prisma.VeterinaryUncheckedCreateWithoutOperadoresInput>
+  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutOperadoresInput
   connect?: Prisma.VeterinaryWhereUniqueInput
 }
 
-export type VeterinaryUpdateOneRequiredWithoutOperatorsNestedInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutOperatorsInput, Prisma.VeterinaryUncheckedCreateWithoutOperatorsInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutOperatorsInput
-  upsert?: Prisma.VeterinaryUpsertWithoutOperatorsInput
+export type VeterinaryUpdateOneRequiredWithoutOperadoresNestedInput = {
+  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutOperadoresInput, Prisma.VeterinaryUncheckedCreateWithoutOperadoresInput>
+  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutOperadoresInput
+  upsert?: Prisma.VeterinaryUpsertWithoutOperadoresInput
   connect?: Prisma.VeterinaryWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.VeterinaryUpdateToOneWithWhereWithoutOperatorsInput, Prisma.VeterinaryUpdateWithoutOperatorsInput>, Prisma.VeterinaryUncheckedUpdateWithoutOperatorsInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.VeterinaryUpdateToOneWithWhereWithoutOperadoresInput, Prisma.VeterinaryUpdateWithoutOperadoresInput>, Prisma.VeterinaryUncheckedUpdateWithoutOperadoresInput>
 }
 
-export type VeterinaryCreateNestedOneWithoutPatientsInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutPatientsInput, Prisma.VeterinaryUncheckedCreateWithoutPatientsInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutPatientsInput
+export type VeterinaryCreateNestedOneWithoutPacientesInput = {
+  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutPacientesInput, Prisma.VeterinaryUncheckedCreateWithoutPacientesInput>
+  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutPacientesInput
   connect?: Prisma.VeterinaryWhereUniqueInput
 }
 
-export type VeterinaryUpdateOneWithoutPatientsNestedInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutPatientsInput, Prisma.VeterinaryUncheckedCreateWithoutPatientsInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutPatientsInput
-  upsert?: Prisma.VeterinaryUpsertWithoutPatientsInput
+export type VeterinaryUpdateOneWithoutPacientesNestedInput = {
+  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutPacientesInput, Prisma.VeterinaryUncheckedCreateWithoutPacientesInput>
+  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutPacientesInput
+  upsert?: Prisma.VeterinaryUpsertWithoutPacientesInput
   disconnect?: Prisma.VeterinaryWhereInput | boolean
   delete?: Prisma.VeterinaryWhereInput | boolean
   connect?: Prisma.VeterinaryWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.VeterinaryUpdateToOneWithWhereWithoutPatientsInput, Prisma.VeterinaryUpdateWithoutPatientsInput>, Prisma.VeterinaryUncheckedUpdateWithoutPatientsInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.VeterinaryUpdateToOneWithWhereWithoutPacientesInput, Prisma.VeterinaryUpdateWithoutPacientesInput>, Prisma.VeterinaryUncheckedUpdateWithoutPacientesInput>
 }
 
-export type VeterinaryCreateNestedOneWithoutAppointmentsInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutAppointmentsInput, Prisma.VeterinaryUncheckedCreateWithoutAppointmentsInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutAppointmentsInput
+export type VeterinaryCreateNestedOneWithoutCitasInput = {
+  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutCitasInput, Prisma.VeterinaryUncheckedCreateWithoutCitasInput>
+  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutCitasInput
   connect?: Prisma.VeterinaryWhereUniqueInput
 }
 
-export type VeterinaryUpdateOneWithoutAppointmentsNestedInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutAppointmentsInput, Prisma.VeterinaryUncheckedCreateWithoutAppointmentsInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutAppointmentsInput
-  upsert?: Prisma.VeterinaryUpsertWithoutAppointmentsInput
+export type VeterinaryUpdateOneWithoutCitasNestedInput = {
+  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutCitasInput, Prisma.VeterinaryUncheckedCreateWithoutCitasInput>
+  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutCitasInput
+  upsert?: Prisma.VeterinaryUpsertWithoutCitasInput
   disconnect?: Prisma.VeterinaryWhereInput | boolean
   delete?: Prisma.VeterinaryWhereInput | boolean
   connect?: Prisma.VeterinaryWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.VeterinaryUpdateToOneWithWhereWithoutAppointmentsInput, Prisma.VeterinaryUpdateWithoutAppointmentsInput>, Prisma.VeterinaryUncheckedUpdateWithoutAppointmentsInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.VeterinaryUpdateToOneWithWhereWithoutCitasInput, Prisma.VeterinaryUpdateWithoutCitasInput>, Prisma.VeterinaryUncheckedUpdateWithoutCitasInput>
 }
 
-export type VeterinaryCreateNestedOneWithoutClinicalRecordsInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutClinicalRecordsInput, Prisma.VeterinaryUncheckedCreateWithoutClinicalRecordsInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutClinicalRecordsInput
+export type VeterinaryCreateNestedOneWithoutRegistrosClinicoInput = {
+  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutRegistrosClinicoInput, Prisma.VeterinaryUncheckedCreateWithoutRegistrosClinicoInput>
+  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutRegistrosClinicoInput
   connect?: Prisma.VeterinaryWhereUniqueInput
 }
 
-export type VeterinaryUpdateOneWithoutClinicalRecordsNestedInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutClinicalRecordsInput, Prisma.VeterinaryUncheckedCreateWithoutClinicalRecordsInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutClinicalRecordsInput
-  upsert?: Prisma.VeterinaryUpsertWithoutClinicalRecordsInput
+export type VeterinaryUpdateOneWithoutRegistrosClinicoNestedInput = {
+  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutRegistrosClinicoInput, Prisma.VeterinaryUncheckedCreateWithoutRegistrosClinicoInput>
+  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutRegistrosClinicoInput
+  upsert?: Prisma.VeterinaryUpsertWithoutRegistrosClinicoInput
   disconnect?: Prisma.VeterinaryWhereInput | boolean
   delete?: Prisma.VeterinaryWhereInput | boolean
   connect?: Prisma.VeterinaryWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.VeterinaryUpdateToOneWithWhereWithoutClinicalRecordsInput, Prisma.VeterinaryUpdateWithoutClinicalRecordsInput>, Prisma.VeterinaryUncheckedUpdateWithoutClinicalRecordsInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.VeterinaryUpdateToOneWithWhereWithoutRegistrosClinicoInput, Prisma.VeterinaryUpdateWithoutRegistrosClinicoInput>, Prisma.VeterinaryUncheckedUpdateWithoutRegistrosClinicoInput>
 }
 
-export type VeterinaryCreateNestedOneWithoutActivityLogsInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutActivityLogsInput, Prisma.VeterinaryUncheckedCreateWithoutActivityLogsInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutActivityLogsInput
+export type VeterinaryCreateNestedOneWithoutRegistrosActividadInput = {
+  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutRegistrosActividadInput, Prisma.VeterinaryUncheckedCreateWithoutRegistrosActividadInput>
+  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutRegistrosActividadInput
   connect?: Prisma.VeterinaryWhereUniqueInput
 }
 
-export type VeterinaryUpdateOneWithoutActivityLogsNestedInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutActivityLogsInput, Prisma.VeterinaryUncheckedCreateWithoutActivityLogsInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutActivityLogsInput
-  upsert?: Prisma.VeterinaryUpsertWithoutActivityLogsInput
+export type VeterinaryUpdateOneWithoutRegistrosActividadNestedInput = {
+  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutRegistrosActividadInput, Prisma.VeterinaryUncheckedCreateWithoutRegistrosActividadInput>
+  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutRegistrosActividadInput
+  upsert?: Prisma.VeterinaryUpsertWithoutRegistrosActividadInput
   disconnect?: Prisma.VeterinaryWhereInput | boolean
   delete?: Prisma.VeterinaryWhereInput | boolean
   connect?: Prisma.VeterinaryWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.VeterinaryUpdateToOneWithWhereWithoutActivityLogsInput, Prisma.VeterinaryUpdateWithoutActivityLogsInput>, Prisma.VeterinaryUncheckedUpdateWithoutActivityLogsInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.VeterinaryUpdateToOneWithWhereWithoutRegistrosActividadInput, Prisma.VeterinaryUpdateWithoutRegistrosActividadInput>, Prisma.VeterinaryUncheckedUpdateWithoutRegistrosActividadInput>
 }
 
-export type VeterinaryCreateWithoutUsersInput = {
+export type VeterinaryCreateWithoutUsuariosInput = {
   id?: string
-  name: string
-  email: string
-  phone?: string | null
-  address?: string | null
-  city?: string | null
-  state?: string | null
-  country?: string
-  postalCode?: string | null
-  logoUrl?: string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  owners?: Prisma.OwnerCreateNestedManyWithoutVeterinaryInput
-  operators?: Prisma.OperatorCreateNestedManyWithoutVeterinaryInput
-  patients?: Prisma.PatientCreateNestedManyWithoutVeterinaryInput
-  appointments?: Prisma.AppointmentCreateNestedManyWithoutVeterinaryInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutVeterinaryInput
-  activityLogs?: Prisma.ActivityLogCreateNestedManyWithoutVeterinaryInput
+  nombre: string
+  correo: string
+  telefono?: string | null
+  direccion?: string | null
+  ciudad?: string | null
+  estado?: string | null
+  pais?: string
+  codigoPostal?: string | null
+  urlLogo?: string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  propietarios?: Prisma.OwnerCreateNestedManyWithoutVeterinariaInput
+  operadores?: Prisma.OperatorCreateNestedManyWithoutVeterinariaInput
+  pacientes?: Prisma.PatientCreateNestedManyWithoutVeterinariaInput
+  citas?: Prisma.AppointmentCreateNestedManyWithoutVeterinariaInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutVeterinariaInput
+  registrosActividad?: Prisma.ActivityLogCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryUncheckedCreateWithoutUsersInput = {
+export type VeterinaryUncheckedCreateWithoutUsuariosInput = {
   id?: string
-  name: string
-  email: string
-  phone?: string | null
-  address?: string | null
-  city?: string | null
-  state?: string | null
-  country?: string
-  postalCode?: string | null
-  logoUrl?: string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  owners?: Prisma.OwnerUncheckedCreateNestedManyWithoutVeterinaryInput
-  operators?: Prisma.OperatorUncheckedCreateNestedManyWithoutVeterinaryInput
-  patients?: Prisma.PatientUncheckedCreateNestedManyWithoutVeterinaryInput
-  appointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutVeterinaryInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutVeterinaryInput
-  activityLogs?: Prisma.ActivityLogUncheckedCreateNestedManyWithoutVeterinaryInput
+  nombre: string
+  correo: string
+  telefono?: string | null
+  direccion?: string | null
+  ciudad?: string | null
+  estado?: string | null
+  pais?: string
+  codigoPostal?: string | null
+  urlLogo?: string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  propietarios?: Prisma.OwnerUncheckedCreateNestedManyWithoutVeterinariaInput
+  operadores?: Prisma.OperatorUncheckedCreateNestedManyWithoutVeterinariaInput
+  pacientes?: Prisma.PatientUncheckedCreateNestedManyWithoutVeterinariaInput
+  citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutVeterinariaInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutVeterinariaInput
+  registrosActividad?: Prisma.ActivityLogUncheckedCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryCreateOrConnectWithoutUsersInput = {
+export type VeterinaryCreateOrConnectWithoutUsuariosInput = {
   where: Prisma.VeterinaryWhereUniqueInput
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutUsersInput, Prisma.VeterinaryUncheckedCreateWithoutUsersInput>
+  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutUsuariosInput, Prisma.VeterinaryUncheckedCreateWithoutUsuariosInput>
 }
 
-export type VeterinaryUpsertWithoutUsersInput = {
-  update: Prisma.XOR<Prisma.VeterinaryUpdateWithoutUsersInput, Prisma.VeterinaryUncheckedUpdateWithoutUsersInput>
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutUsersInput, Prisma.VeterinaryUncheckedCreateWithoutUsersInput>
+export type VeterinaryUpsertWithoutUsuariosInput = {
+  update: Prisma.XOR<Prisma.VeterinaryUpdateWithoutUsuariosInput, Prisma.VeterinaryUncheckedUpdateWithoutUsuariosInput>
+  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutUsuariosInput, Prisma.VeterinaryUncheckedCreateWithoutUsuariosInput>
   where?: Prisma.VeterinaryWhereInput
 }
 
-export type VeterinaryUpdateToOneWithWhereWithoutUsersInput = {
+export type VeterinaryUpdateToOneWithWhereWithoutUsuariosInput = {
   where?: Prisma.VeterinaryWhereInput
-  data: Prisma.XOR<Prisma.VeterinaryUpdateWithoutUsersInput, Prisma.VeterinaryUncheckedUpdateWithoutUsersInput>
+  data: Prisma.XOR<Prisma.VeterinaryUpdateWithoutUsuariosInput, Prisma.VeterinaryUncheckedUpdateWithoutUsuariosInput>
 }
 
-export type VeterinaryUpdateWithoutUsersInput = {
+export type VeterinaryUpdateWithoutUsuariosInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  country?: Prisma.StringFieldUpdateOperationsInput | string
-  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  owners?: Prisma.OwnerUpdateManyWithoutVeterinaryNestedInput
-  operators?: Prisma.OperatorUpdateManyWithoutVeterinaryNestedInput
-  patients?: Prisma.PatientUpdateManyWithoutVeterinaryNestedInput
-  appointments?: Prisma.AppointmentUpdateManyWithoutVeterinaryNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutVeterinaryNestedInput
-  activityLogs?: Prisma.ActivityLogUpdateManyWithoutVeterinaryNestedInput
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  direccion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ciudad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estado?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pais?: Prisma.StringFieldUpdateOperationsInput | string
+  codigoPostal?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  urlLogo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  propietarios?: Prisma.OwnerUpdateManyWithoutVeterinariaNestedInput
+  operadores?: Prisma.OperatorUpdateManyWithoutVeterinariaNestedInput
+  pacientes?: Prisma.PatientUpdateManyWithoutVeterinariaNestedInput
+  citas?: Prisma.AppointmentUpdateManyWithoutVeterinariaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutVeterinariaNestedInput
+  registrosActividad?: Prisma.ActivityLogUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryUncheckedUpdateWithoutUsersInput = {
+export type VeterinaryUncheckedUpdateWithoutUsuariosInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  country?: Prisma.StringFieldUpdateOperationsInput | string
-  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  owners?: Prisma.OwnerUncheckedUpdateManyWithoutVeterinaryNestedInput
-  operators?: Prisma.OperatorUncheckedUpdateManyWithoutVeterinaryNestedInput
-  patients?: Prisma.PatientUncheckedUpdateManyWithoutVeterinaryNestedInput
-  appointments?: Prisma.AppointmentUncheckedUpdateManyWithoutVeterinaryNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutVeterinaryNestedInput
-  activityLogs?: Prisma.ActivityLogUncheckedUpdateManyWithoutVeterinaryNestedInput
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  direccion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ciudad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estado?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pais?: Prisma.StringFieldUpdateOperationsInput | string
+  codigoPostal?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  urlLogo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  propietarios?: Prisma.OwnerUncheckedUpdateManyWithoutVeterinariaNestedInput
+  operadores?: Prisma.OperatorUncheckedUpdateManyWithoutVeterinariaNestedInput
+  pacientes?: Prisma.PatientUncheckedUpdateManyWithoutVeterinariaNestedInput
+  citas?: Prisma.AppointmentUncheckedUpdateManyWithoutVeterinariaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutVeterinariaNestedInput
+  registrosActividad?: Prisma.ActivityLogUncheckedUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryCreateWithoutOwnersInput = {
+export type VeterinaryCreateWithoutPropietariosInput = {
   id?: string
-  name: string
-  email: string
-  phone?: string | null
-  address?: string | null
-  city?: string | null
-  state?: string | null
-  country?: string
-  postalCode?: string | null
-  logoUrl?: string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  users?: Prisma.UserCreateNestedManyWithoutVeterinaryInput
-  operators?: Prisma.OperatorCreateNestedManyWithoutVeterinaryInput
-  patients?: Prisma.PatientCreateNestedManyWithoutVeterinaryInput
-  appointments?: Prisma.AppointmentCreateNestedManyWithoutVeterinaryInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutVeterinaryInput
-  activityLogs?: Prisma.ActivityLogCreateNestedManyWithoutVeterinaryInput
+  nombre: string
+  correo: string
+  telefono?: string | null
+  direccion?: string | null
+  ciudad?: string | null
+  estado?: string | null
+  pais?: string
+  codigoPostal?: string | null
+  urlLogo?: string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  usuarios?: Prisma.UserCreateNestedManyWithoutVeterinariaInput
+  operadores?: Prisma.OperatorCreateNestedManyWithoutVeterinariaInput
+  pacientes?: Prisma.PatientCreateNestedManyWithoutVeterinariaInput
+  citas?: Prisma.AppointmentCreateNestedManyWithoutVeterinariaInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutVeterinariaInput
+  registrosActividad?: Prisma.ActivityLogCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryUncheckedCreateWithoutOwnersInput = {
+export type VeterinaryUncheckedCreateWithoutPropietariosInput = {
   id?: string
-  name: string
-  email: string
-  phone?: string | null
-  address?: string | null
-  city?: string | null
-  state?: string | null
-  country?: string
-  postalCode?: string | null
-  logoUrl?: string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  users?: Prisma.UserUncheckedCreateNestedManyWithoutVeterinaryInput
-  operators?: Prisma.OperatorUncheckedCreateNestedManyWithoutVeterinaryInput
-  patients?: Prisma.PatientUncheckedCreateNestedManyWithoutVeterinaryInput
-  appointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutVeterinaryInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutVeterinaryInput
-  activityLogs?: Prisma.ActivityLogUncheckedCreateNestedManyWithoutVeterinaryInput
+  nombre: string
+  correo: string
+  telefono?: string | null
+  direccion?: string | null
+  ciudad?: string | null
+  estado?: string | null
+  pais?: string
+  codigoPostal?: string | null
+  urlLogo?: string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  usuarios?: Prisma.UserUncheckedCreateNestedManyWithoutVeterinariaInput
+  operadores?: Prisma.OperatorUncheckedCreateNestedManyWithoutVeterinariaInput
+  pacientes?: Prisma.PatientUncheckedCreateNestedManyWithoutVeterinariaInput
+  citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutVeterinariaInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutVeterinariaInput
+  registrosActividad?: Prisma.ActivityLogUncheckedCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryCreateOrConnectWithoutOwnersInput = {
+export type VeterinaryCreateOrConnectWithoutPropietariosInput = {
   where: Prisma.VeterinaryWhereUniqueInput
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutOwnersInput, Prisma.VeterinaryUncheckedCreateWithoutOwnersInput>
+  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutPropietariosInput, Prisma.VeterinaryUncheckedCreateWithoutPropietariosInput>
 }
 
-export type VeterinaryUpsertWithoutOwnersInput = {
-  update: Prisma.XOR<Prisma.VeterinaryUpdateWithoutOwnersInput, Prisma.VeterinaryUncheckedUpdateWithoutOwnersInput>
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutOwnersInput, Prisma.VeterinaryUncheckedCreateWithoutOwnersInput>
+export type VeterinaryUpsertWithoutPropietariosInput = {
+  update: Prisma.XOR<Prisma.VeterinaryUpdateWithoutPropietariosInput, Prisma.VeterinaryUncheckedUpdateWithoutPropietariosInput>
+  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutPropietariosInput, Prisma.VeterinaryUncheckedCreateWithoutPropietariosInput>
   where?: Prisma.VeterinaryWhereInput
 }
 
-export type VeterinaryUpdateToOneWithWhereWithoutOwnersInput = {
+export type VeterinaryUpdateToOneWithWhereWithoutPropietariosInput = {
   where?: Prisma.VeterinaryWhereInput
-  data: Prisma.XOR<Prisma.VeterinaryUpdateWithoutOwnersInput, Prisma.VeterinaryUncheckedUpdateWithoutOwnersInput>
+  data: Prisma.XOR<Prisma.VeterinaryUpdateWithoutPropietariosInput, Prisma.VeterinaryUncheckedUpdateWithoutPropietariosInput>
 }
 
-export type VeterinaryUpdateWithoutOwnersInput = {
+export type VeterinaryUpdateWithoutPropietariosInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  country?: Prisma.StringFieldUpdateOperationsInput | string
-  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  users?: Prisma.UserUpdateManyWithoutVeterinaryNestedInput
-  operators?: Prisma.OperatorUpdateManyWithoutVeterinaryNestedInput
-  patients?: Prisma.PatientUpdateManyWithoutVeterinaryNestedInput
-  appointments?: Prisma.AppointmentUpdateManyWithoutVeterinaryNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutVeterinaryNestedInput
-  activityLogs?: Prisma.ActivityLogUpdateManyWithoutVeterinaryNestedInput
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  direccion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ciudad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estado?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pais?: Prisma.StringFieldUpdateOperationsInput | string
+  codigoPostal?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  urlLogo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuarios?: Prisma.UserUpdateManyWithoutVeterinariaNestedInput
+  operadores?: Prisma.OperatorUpdateManyWithoutVeterinariaNestedInput
+  pacientes?: Prisma.PatientUpdateManyWithoutVeterinariaNestedInput
+  citas?: Prisma.AppointmentUpdateManyWithoutVeterinariaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutVeterinariaNestedInput
+  registrosActividad?: Prisma.ActivityLogUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryUncheckedUpdateWithoutOwnersInput = {
+export type VeterinaryUncheckedUpdateWithoutPropietariosInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  country?: Prisma.StringFieldUpdateOperationsInput | string
-  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  users?: Prisma.UserUncheckedUpdateManyWithoutVeterinaryNestedInput
-  operators?: Prisma.OperatorUncheckedUpdateManyWithoutVeterinaryNestedInput
-  patients?: Prisma.PatientUncheckedUpdateManyWithoutVeterinaryNestedInput
-  appointments?: Prisma.AppointmentUncheckedUpdateManyWithoutVeterinaryNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutVeterinaryNestedInput
-  activityLogs?: Prisma.ActivityLogUncheckedUpdateManyWithoutVeterinaryNestedInput
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  direccion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ciudad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estado?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pais?: Prisma.StringFieldUpdateOperationsInput | string
+  codigoPostal?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  urlLogo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuarios?: Prisma.UserUncheckedUpdateManyWithoutVeterinariaNestedInput
+  operadores?: Prisma.OperatorUncheckedUpdateManyWithoutVeterinariaNestedInput
+  pacientes?: Prisma.PatientUncheckedUpdateManyWithoutVeterinariaNestedInput
+  citas?: Prisma.AppointmentUncheckedUpdateManyWithoutVeterinariaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutVeterinariaNestedInput
+  registrosActividad?: Prisma.ActivityLogUncheckedUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryCreateWithoutOperatorsInput = {
+export type VeterinaryCreateWithoutOperadoresInput = {
   id?: string
-  name: string
-  email: string
-  phone?: string | null
-  address?: string | null
-  city?: string | null
-  state?: string | null
-  country?: string
-  postalCode?: string | null
-  logoUrl?: string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  users?: Prisma.UserCreateNestedManyWithoutVeterinaryInput
-  owners?: Prisma.OwnerCreateNestedManyWithoutVeterinaryInput
-  patients?: Prisma.PatientCreateNestedManyWithoutVeterinaryInput
-  appointments?: Prisma.AppointmentCreateNestedManyWithoutVeterinaryInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutVeterinaryInput
-  activityLogs?: Prisma.ActivityLogCreateNestedManyWithoutVeterinaryInput
+  nombre: string
+  correo: string
+  telefono?: string | null
+  direccion?: string | null
+  ciudad?: string | null
+  estado?: string | null
+  pais?: string
+  codigoPostal?: string | null
+  urlLogo?: string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  usuarios?: Prisma.UserCreateNestedManyWithoutVeterinariaInput
+  propietarios?: Prisma.OwnerCreateNestedManyWithoutVeterinariaInput
+  pacientes?: Prisma.PatientCreateNestedManyWithoutVeterinariaInput
+  citas?: Prisma.AppointmentCreateNestedManyWithoutVeterinariaInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutVeterinariaInput
+  registrosActividad?: Prisma.ActivityLogCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryUncheckedCreateWithoutOperatorsInput = {
+export type VeterinaryUncheckedCreateWithoutOperadoresInput = {
   id?: string
-  name: string
-  email: string
-  phone?: string | null
-  address?: string | null
-  city?: string | null
-  state?: string | null
-  country?: string
-  postalCode?: string | null
-  logoUrl?: string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  users?: Prisma.UserUncheckedCreateNestedManyWithoutVeterinaryInput
-  owners?: Prisma.OwnerUncheckedCreateNestedManyWithoutVeterinaryInput
-  patients?: Prisma.PatientUncheckedCreateNestedManyWithoutVeterinaryInput
-  appointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutVeterinaryInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutVeterinaryInput
-  activityLogs?: Prisma.ActivityLogUncheckedCreateNestedManyWithoutVeterinaryInput
+  nombre: string
+  correo: string
+  telefono?: string | null
+  direccion?: string | null
+  ciudad?: string | null
+  estado?: string | null
+  pais?: string
+  codigoPostal?: string | null
+  urlLogo?: string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  usuarios?: Prisma.UserUncheckedCreateNestedManyWithoutVeterinariaInput
+  propietarios?: Prisma.OwnerUncheckedCreateNestedManyWithoutVeterinariaInput
+  pacientes?: Prisma.PatientUncheckedCreateNestedManyWithoutVeterinariaInput
+  citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutVeterinariaInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutVeterinariaInput
+  registrosActividad?: Prisma.ActivityLogUncheckedCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryCreateOrConnectWithoutOperatorsInput = {
+export type VeterinaryCreateOrConnectWithoutOperadoresInput = {
   where: Prisma.VeterinaryWhereUniqueInput
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutOperatorsInput, Prisma.VeterinaryUncheckedCreateWithoutOperatorsInput>
+  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutOperadoresInput, Prisma.VeterinaryUncheckedCreateWithoutOperadoresInput>
 }
 
-export type VeterinaryUpsertWithoutOperatorsInput = {
-  update: Prisma.XOR<Prisma.VeterinaryUpdateWithoutOperatorsInput, Prisma.VeterinaryUncheckedUpdateWithoutOperatorsInput>
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutOperatorsInput, Prisma.VeterinaryUncheckedCreateWithoutOperatorsInput>
+export type VeterinaryUpsertWithoutOperadoresInput = {
+  update: Prisma.XOR<Prisma.VeterinaryUpdateWithoutOperadoresInput, Prisma.VeterinaryUncheckedUpdateWithoutOperadoresInput>
+  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutOperadoresInput, Prisma.VeterinaryUncheckedCreateWithoutOperadoresInput>
   where?: Prisma.VeterinaryWhereInput
 }
 
-export type VeterinaryUpdateToOneWithWhereWithoutOperatorsInput = {
+export type VeterinaryUpdateToOneWithWhereWithoutOperadoresInput = {
   where?: Prisma.VeterinaryWhereInput
-  data: Prisma.XOR<Prisma.VeterinaryUpdateWithoutOperatorsInput, Prisma.VeterinaryUncheckedUpdateWithoutOperatorsInput>
+  data: Prisma.XOR<Prisma.VeterinaryUpdateWithoutOperadoresInput, Prisma.VeterinaryUncheckedUpdateWithoutOperadoresInput>
 }
 
-export type VeterinaryUpdateWithoutOperatorsInput = {
+export type VeterinaryUpdateWithoutOperadoresInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  country?: Prisma.StringFieldUpdateOperationsInput | string
-  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  users?: Prisma.UserUpdateManyWithoutVeterinaryNestedInput
-  owners?: Prisma.OwnerUpdateManyWithoutVeterinaryNestedInput
-  patients?: Prisma.PatientUpdateManyWithoutVeterinaryNestedInput
-  appointments?: Prisma.AppointmentUpdateManyWithoutVeterinaryNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutVeterinaryNestedInput
-  activityLogs?: Prisma.ActivityLogUpdateManyWithoutVeterinaryNestedInput
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  direccion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ciudad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estado?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pais?: Prisma.StringFieldUpdateOperationsInput | string
+  codigoPostal?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  urlLogo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuarios?: Prisma.UserUpdateManyWithoutVeterinariaNestedInput
+  propietarios?: Prisma.OwnerUpdateManyWithoutVeterinariaNestedInput
+  pacientes?: Prisma.PatientUpdateManyWithoutVeterinariaNestedInput
+  citas?: Prisma.AppointmentUpdateManyWithoutVeterinariaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutVeterinariaNestedInput
+  registrosActividad?: Prisma.ActivityLogUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryUncheckedUpdateWithoutOperatorsInput = {
+export type VeterinaryUncheckedUpdateWithoutOperadoresInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  country?: Prisma.StringFieldUpdateOperationsInput | string
-  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  users?: Prisma.UserUncheckedUpdateManyWithoutVeterinaryNestedInput
-  owners?: Prisma.OwnerUncheckedUpdateManyWithoutVeterinaryNestedInput
-  patients?: Prisma.PatientUncheckedUpdateManyWithoutVeterinaryNestedInput
-  appointments?: Prisma.AppointmentUncheckedUpdateManyWithoutVeterinaryNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutVeterinaryNestedInput
-  activityLogs?: Prisma.ActivityLogUncheckedUpdateManyWithoutVeterinaryNestedInput
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  direccion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ciudad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estado?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pais?: Prisma.StringFieldUpdateOperationsInput | string
+  codigoPostal?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  urlLogo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuarios?: Prisma.UserUncheckedUpdateManyWithoutVeterinariaNestedInput
+  propietarios?: Prisma.OwnerUncheckedUpdateManyWithoutVeterinariaNestedInput
+  pacientes?: Prisma.PatientUncheckedUpdateManyWithoutVeterinariaNestedInput
+  citas?: Prisma.AppointmentUncheckedUpdateManyWithoutVeterinariaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutVeterinariaNestedInput
+  registrosActividad?: Prisma.ActivityLogUncheckedUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryCreateWithoutPatientsInput = {
+export type VeterinaryCreateWithoutPacientesInput = {
   id?: string
-  name: string
-  email: string
-  phone?: string | null
-  address?: string | null
-  city?: string | null
-  state?: string | null
-  country?: string
-  postalCode?: string | null
-  logoUrl?: string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  users?: Prisma.UserCreateNestedManyWithoutVeterinaryInput
-  owners?: Prisma.OwnerCreateNestedManyWithoutVeterinaryInput
-  operators?: Prisma.OperatorCreateNestedManyWithoutVeterinaryInput
-  appointments?: Prisma.AppointmentCreateNestedManyWithoutVeterinaryInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutVeterinaryInput
-  activityLogs?: Prisma.ActivityLogCreateNestedManyWithoutVeterinaryInput
+  nombre: string
+  correo: string
+  telefono?: string | null
+  direccion?: string | null
+  ciudad?: string | null
+  estado?: string | null
+  pais?: string
+  codigoPostal?: string | null
+  urlLogo?: string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  usuarios?: Prisma.UserCreateNestedManyWithoutVeterinariaInput
+  propietarios?: Prisma.OwnerCreateNestedManyWithoutVeterinariaInput
+  operadores?: Prisma.OperatorCreateNestedManyWithoutVeterinariaInput
+  citas?: Prisma.AppointmentCreateNestedManyWithoutVeterinariaInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutVeterinariaInput
+  registrosActividad?: Prisma.ActivityLogCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryUncheckedCreateWithoutPatientsInput = {
+export type VeterinaryUncheckedCreateWithoutPacientesInput = {
   id?: string
-  name: string
-  email: string
-  phone?: string | null
-  address?: string | null
-  city?: string | null
-  state?: string | null
-  country?: string
-  postalCode?: string | null
-  logoUrl?: string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  users?: Prisma.UserUncheckedCreateNestedManyWithoutVeterinaryInput
-  owners?: Prisma.OwnerUncheckedCreateNestedManyWithoutVeterinaryInput
-  operators?: Prisma.OperatorUncheckedCreateNestedManyWithoutVeterinaryInput
-  appointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutVeterinaryInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutVeterinaryInput
-  activityLogs?: Prisma.ActivityLogUncheckedCreateNestedManyWithoutVeterinaryInput
+  nombre: string
+  correo: string
+  telefono?: string | null
+  direccion?: string | null
+  ciudad?: string | null
+  estado?: string | null
+  pais?: string
+  codigoPostal?: string | null
+  urlLogo?: string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  usuarios?: Prisma.UserUncheckedCreateNestedManyWithoutVeterinariaInput
+  propietarios?: Prisma.OwnerUncheckedCreateNestedManyWithoutVeterinariaInput
+  operadores?: Prisma.OperatorUncheckedCreateNestedManyWithoutVeterinariaInput
+  citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutVeterinariaInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutVeterinariaInput
+  registrosActividad?: Prisma.ActivityLogUncheckedCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryCreateOrConnectWithoutPatientsInput = {
+export type VeterinaryCreateOrConnectWithoutPacientesInput = {
   where: Prisma.VeterinaryWhereUniqueInput
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutPatientsInput, Prisma.VeterinaryUncheckedCreateWithoutPatientsInput>
+  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutPacientesInput, Prisma.VeterinaryUncheckedCreateWithoutPacientesInput>
 }
 
-export type VeterinaryUpsertWithoutPatientsInput = {
-  update: Prisma.XOR<Prisma.VeterinaryUpdateWithoutPatientsInput, Prisma.VeterinaryUncheckedUpdateWithoutPatientsInput>
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutPatientsInput, Prisma.VeterinaryUncheckedCreateWithoutPatientsInput>
+export type VeterinaryUpsertWithoutPacientesInput = {
+  update: Prisma.XOR<Prisma.VeterinaryUpdateWithoutPacientesInput, Prisma.VeterinaryUncheckedUpdateWithoutPacientesInput>
+  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutPacientesInput, Prisma.VeterinaryUncheckedCreateWithoutPacientesInput>
   where?: Prisma.VeterinaryWhereInput
 }
 
-export type VeterinaryUpdateToOneWithWhereWithoutPatientsInput = {
+export type VeterinaryUpdateToOneWithWhereWithoutPacientesInput = {
   where?: Prisma.VeterinaryWhereInput
-  data: Prisma.XOR<Prisma.VeterinaryUpdateWithoutPatientsInput, Prisma.VeterinaryUncheckedUpdateWithoutPatientsInput>
+  data: Prisma.XOR<Prisma.VeterinaryUpdateWithoutPacientesInput, Prisma.VeterinaryUncheckedUpdateWithoutPacientesInput>
 }
 
-export type VeterinaryUpdateWithoutPatientsInput = {
+export type VeterinaryUpdateWithoutPacientesInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  country?: Prisma.StringFieldUpdateOperationsInput | string
-  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  users?: Prisma.UserUpdateManyWithoutVeterinaryNestedInput
-  owners?: Prisma.OwnerUpdateManyWithoutVeterinaryNestedInput
-  operators?: Prisma.OperatorUpdateManyWithoutVeterinaryNestedInput
-  appointments?: Prisma.AppointmentUpdateManyWithoutVeterinaryNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutVeterinaryNestedInput
-  activityLogs?: Prisma.ActivityLogUpdateManyWithoutVeterinaryNestedInput
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  direccion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ciudad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estado?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pais?: Prisma.StringFieldUpdateOperationsInput | string
+  codigoPostal?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  urlLogo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuarios?: Prisma.UserUpdateManyWithoutVeterinariaNestedInput
+  propietarios?: Prisma.OwnerUpdateManyWithoutVeterinariaNestedInput
+  operadores?: Prisma.OperatorUpdateManyWithoutVeterinariaNestedInput
+  citas?: Prisma.AppointmentUpdateManyWithoutVeterinariaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutVeterinariaNestedInput
+  registrosActividad?: Prisma.ActivityLogUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryUncheckedUpdateWithoutPatientsInput = {
+export type VeterinaryUncheckedUpdateWithoutPacientesInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  country?: Prisma.StringFieldUpdateOperationsInput | string
-  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  users?: Prisma.UserUncheckedUpdateManyWithoutVeterinaryNestedInput
-  owners?: Prisma.OwnerUncheckedUpdateManyWithoutVeterinaryNestedInput
-  operators?: Prisma.OperatorUncheckedUpdateManyWithoutVeterinaryNestedInput
-  appointments?: Prisma.AppointmentUncheckedUpdateManyWithoutVeterinaryNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutVeterinaryNestedInput
-  activityLogs?: Prisma.ActivityLogUncheckedUpdateManyWithoutVeterinaryNestedInput
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  direccion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ciudad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estado?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pais?: Prisma.StringFieldUpdateOperationsInput | string
+  codigoPostal?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  urlLogo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuarios?: Prisma.UserUncheckedUpdateManyWithoutVeterinariaNestedInput
+  propietarios?: Prisma.OwnerUncheckedUpdateManyWithoutVeterinariaNestedInput
+  operadores?: Prisma.OperatorUncheckedUpdateManyWithoutVeterinariaNestedInput
+  citas?: Prisma.AppointmentUncheckedUpdateManyWithoutVeterinariaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutVeterinariaNestedInput
+  registrosActividad?: Prisma.ActivityLogUncheckedUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryCreateWithoutAppointmentsInput = {
+export type VeterinaryCreateWithoutCitasInput = {
   id?: string
-  name: string
-  email: string
-  phone?: string | null
-  address?: string | null
-  city?: string | null
-  state?: string | null
-  country?: string
-  postalCode?: string | null
-  logoUrl?: string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  users?: Prisma.UserCreateNestedManyWithoutVeterinaryInput
-  owners?: Prisma.OwnerCreateNestedManyWithoutVeterinaryInput
-  operators?: Prisma.OperatorCreateNestedManyWithoutVeterinaryInput
-  patients?: Prisma.PatientCreateNestedManyWithoutVeterinaryInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutVeterinaryInput
-  activityLogs?: Prisma.ActivityLogCreateNestedManyWithoutVeterinaryInput
+  nombre: string
+  correo: string
+  telefono?: string | null
+  direccion?: string | null
+  ciudad?: string | null
+  estado?: string | null
+  pais?: string
+  codigoPostal?: string | null
+  urlLogo?: string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  usuarios?: Prisma.UserCreateNestedManyWithoutVeterinariaInput
+  propietarios?: Prisma.OwnerCreateNestedManyWithoutVeterinariaInput
+  operadores?: Prisma.OperatorCreateNestedManyWithoutVeterinariaInput
+  pacientes?: Prisma.PatientCreateNestedManyWithoutVeterinariaInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutVeterinariaInput
+  registrosActividad?: Prisma.ActivityLogCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryUncheckedCreateWithoutAppointmentsInput = {
+export type VeterinaryUncheckedCreateWithoutCitasInput = {
   id?: string
-  name: string
-  email: string
-  phone?: string | null
-  address?: string | null
-  city?: string | null
-  state?: string | null
-  country?: string
-  postalCode?: string | null
-  logoUrl?: string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  users?: Prisma.UserUncheckedCreateNestedManyWithoutVeterinaryInput
-  owners?: Prisma.OwnerUncheckedCreateNestedManyWithoutVeterinaryInput
-  operators?: Prisma.OperatorUncheckedCreateNestedManyWithoutVeterinaryInput
-  patients?: Prisma.PatientUncheckedCreateNestedManyWithoutVeterinaryInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutVeterinaryInput
-  activityLogs?: Prisma.ActivityLogUncheckedCreateNestedManyWithoutVeterinaryInput
+  nombre: string
+  correo: string
+  telefono?: string | null
+  direccion?: string | null
+  ciudad?: string | null
+  estado?: string | null
+  pais?: string
+  codigoPostal?: string | null
+  urlLogo?: string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  usuarios?: Prisma.UserUncheckedCreateNestedManyWithoutVeterinariaInput
+  propietarios?: Prisma.OwnerUncheckedCreateNestedManyWithoutVeterinariaInput
+  operadores?: Prisma.OperatorUncheckedCreateNestedManyWithoutVeterinariaInput
+  pacientes?: Prisma.PatientUncheckedCreateNestedManyWithoutVeterinariaInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutVeterinariaInput
+  registrosActividad?: Prisma.ActivityLogUncheckedCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryCreateOrConnectWithoutAppointmentsInput = {
+export type VeterinaryCreateOrConnectWithoutCitasInput = {
   where: Prisma.VeterinaryWhereUniqueInput
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutAppointmentsInput, Prisma.VeterinaryUncheckedCreateWithoutAppointmentsInput>
+  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutCitasInput, Prisma.VeterinaryUncheckedCreateWithoutCitasInput>
 }
 
-export type VeterinaryUpsertWithoutAppointmentsInput = {
-  update: Prisma.XOR<Prisma.VeterinaryUpdateWithoutAppointmentsInput, Prisma.VeterinaryUncheckedUpdateWithoutAppointmentsInput>
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutAppointmentsInput, Prisma.VeterinaryUncheckedCreateWithoutAppointmentsInput>
+export type VeterinaryUpsertWithoutCitasInput = {
+  update: Prisma.XOR<Prisma.VeterinaryUpdateWithoutCitasInput, Prisma.VeterinaryUncheckedUpdateWithoutCitasInput>
+  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutCitasInput, Prisma.VeterinaryUncheckedCreateWithoutCitasInput>
   where?: Prisma.VeterinaryWhereInput
 }
 
-export type VeterinaryUpdateToOneWithWhereWithoutAppointmentsInput = {
+export type VeterinaryUpdateToOneWithWhereWithoutCitasInput = {
   where?: Prisma.VeterinaryWhereInput
-  data: Prisma.XOR<Prisma.VeterinaryUpdateWithoutAppointmentsInput, Prisma.VeterinaryUncheckedUpdateWithoutAppointmentsInput>
+  data: Prisma.XOR<Prisma.VeterinaryUpdateWithoutCitasInput, Prisma.VeterinaryUncheckedUpdateWithoutCitasInput>
 }
 
-export type VeterinaryUpdateWithoutAppointmentsInput = {
+export type VeterinaryUpdateWithoutCitasInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  country?: Prisma.StringFieldUpdateOperationsInput | string
-  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  users?: Prisma.UserUpdateManyWithoutVeterinaryNestedInput
-  owners?: Prisma.OwnerUpdateManyWithoutVeterinaryNestedInput
-  operators?: Prisma.OperatorUpdateManyWithoutVeterinaryNestedInput
-  patients?: Prisma.PatientUpdateManyWithoutVeterinaryNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutVeterinaryNestedInput
-  activityLogs?: Prisma.ActivityLogUpdateManyWithoutVeterinaryNestedInput
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  direccion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ciudad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estado?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pais?: Prisma.StringFieldUpdateOperationsInput | string
+  codigoPostal?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  urlLogo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuarios?: Prisma.UserUpdateManyWithoutVeterinariaNestedInput
+  propietarios?: Prisma.OwnerUpdateManyWithoutVeterinariaNestedInput
+  operadores?: Prisma.OperatorUpdateManyWithoutVeterinariaNestedInput
+  pacientes?: Prisma.PatientUpdateManyWithoutVeterinariaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutVeterinariaNestedInput
+  registrosActividad?: Prisma.ActivityLogUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryUncheckedUpdateWithoutAppointmentsInput = {
+export type VeterinaryUncheckedUpdateWithoutCitasInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  country?: Prisma.StringFieldUpdateOperationsInput | string
-  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  users?: Prisma.UserUncheckedUpdateManyWithoutVeterinaryNestedInput
-  owners?: Prisma.OwnerUncheckedUpdateManyWithoutVeterinaryNestedInput
-  operators?: Prisma.OperatorUncheckedUpdateManyWithoutVeterinaryNestedInput
-  patients?: Prisma.PatientUncheckedUpdateManyWithoutVeterinaryNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutVeterinaryNestedInput
-  activityLogs?: Prisma.ActivityLogUncheckedUpdateManyWithoutVeterinaryNestedInput
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  direccion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ciudad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estado?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pais?: Prisma.StringFieldUpdateOperationsInput | string
+  codigoPostal?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  urlLogo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuarios?: Prisma.UserUncheckedUpdateManyWithoutVeterinariaNestedInput
+  propietarios?: Prisma.OwnerUncheckedUpdateManyWithoutVeterinariaNestedInput
+  operadores?: Prisma.OperatorUncheckedUpdateManyWithoutVeterinariaNestedInput
+  pacientes?: Prisma.PatientUncheckedUpdateManyWithoutVeterinariaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutVeterinariaNestedInput
+  registrosActividad?: Prisma.ActivityLogUncheckedUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryCreateWithoutClinicalRecordsInput = {
+export type VeterinaryCreateWithoutRegistrosClinicoInput = {
   id?: string
-  name: string
-  email: string
-  phone?: string | null
-  address?: string | null
-  city?: string | null
-  state?: string | null
-  country?: string
-  postalCode?: string | null
-  logoUrl?: string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  users?: Prisma.UserCreateNestedManyWithoutVeterinaryInput
-  owners?: Prisma.OwnerCreateNestedManyWithoutVeterinaryInput
-  operators?: Prisma.OperatorCreateNestedManyWithoutVeterinaryInput
-  patients?: Prisma.PatientCreateNestedManyWithoutVeterinaryInput
-  appointments?: Prisma.AppointmentCreateNestedManyWithoutVeterinaryInput
-  activityLogs?: Prisma.ActivityLogCreateNestedManyWithoutVeterinaryInput
+  nombre: string
+  correo: string
+  telefono?: string | null
+  direccion?: string | null
+  ciudad?: string | null
+  estado?: string | null
+  pais?: string
+  codigoPostal?: string | null
+  urlLogo?: string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  usuarios?: Prisma.UserCreateNestedManyWithoutVeterinariaInput
+  propietarios?: Prisma.OwnerCreateNestedManyWithoutVeterinariaInput
+  operadores?: Prisma.OperatorCreateNestedManyWithoutVeterinariaInput
+  pacientes?: Prisma.PatientCreateNestedManyWithoutVeterinariaInput
+  citas?: Prisma.AppointmentCreateNestedManyWithoutVeterinariaInput
+  registrosActividad?: Prisma.ActivityLogCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryUncheckedCreateWithoutClinicalRecordsInput = {
+export type VeterinaryUncheckedCreateWithoutRegistrosClinicoInput = {
   id?: string
-  name: string
-  email: string
-  phone?: string | null
-  address?: string | null
-  city?: string | null
-  state?: string | null
-  country?: string
-  postalCode?: string | null
-  logoUrl?: string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  users?: Prisma.UserUncheckedCreateNestedManyWithoutVeterinaryInput
-  owners?: Prisma.OwnerUncheckedCreateNestedManyWithoutVeterinaryInput
-  operators?: Prisma.OperatorUncheckedCreateNestedManyWithoutVeterinaryInput
-  patients?: Prisma.PatientUncheckedCreateNestedManyWithoutVeterinaryInput
-  appointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutVeterinaryInput
-  activityLogs?: Prisma.ActivityLogUncheckedCreateNestedManyWithoutVeterinaryInput
+  nombre: string
+  correo: string
+  telefono?: string | null
+  direccion?: string | null
+  ciudad?: string | null
+  estado?: string | null
+  pais?: string
+  codigoPostal?: string | null
+  urlLogo?: string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  usuarios?: Prisma.UserUncheckedCreateNestedManyWithoutVeterinariaInput
+  propietarios?: Prisma.OwnerUncheckedCreateNestedManyWithoutVeterinariaInput
+  operadores?: Prisma.OperatorUncheckedCreateNestedManyWithoutVeterinariaInput
+  pacientes?: Prisma.PatientUncheckedCreateNestedManyWithoutVeterinariaInput
+  citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutVeterinariaInput
+  registrosActividad?: Prisma.ActivityLogUncheckedCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryCreateOrConnectWithoutClinicalRecordsInput = {
+export type VeterinaryCreateOrConnectWithoutRegistrosClinicoInput = {
   where: Prisma.VeterinaryWhereUniqueInput
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutClinicalRecordsInput, Prisma.VeterinaryUncheckedCreateWithoutClinicalRecordsInput>
+  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutRegistrosClinicoInput, Prisma.VeterinaryUncheckedCreateWithoutRegistrosClinicoInput>
 }
 
-export type VeterinaryUpsertWithoutClinicalRecordsInput = {
-  update: Prisma.XOR<Prisma.VeterinaryUpdateWithoutClinicalRecordsInput, Prisma.VeterinaryUncheckedUpdateWithoutClinicalRecordsInput>
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutClinicalRecordsInput, Prisma.VeterinaryUncheckedCreateWithoutClinicalRecordsInput>
+export type VeterinaryUpsertWithoutRegistrosClinicoInput = {
+  update: Prisma.XOR<Prisma.VeterinaryUpdateWithoutRegistrosClinicoInput, Prisma.VeterinaryUncheckedUpdateWithoutRegistrosClinicoInput>
+  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutRegistrosClinicoInput, Prisma.VeterinaryUncheckedCreateWithoutRegistrosClinicoInput>
   where?: Prisma.VeterinaryWhereInput
 }
 
-export type VeterinaryUpdateToOneWithWhereWithoutClinicalRecordsInput = {
+export type VeterinaryUpdateToOneWithWhereWithoutRegistrosClinicoInput = {
   where?: Prisma.VeterinaryWhereInput
-  data: Prisma.XOR<Prisma.VeterinaryUpdateWithoutClinicalRecordsInput, Prisma.VeterinaryUncheckedUpdateWithoutClinicalRecordsInput>
+  data: Prisma.XOR<Prisma.VeterinaryUpdateWithoutRegistrosClinicoInput, Prisma.VeterinaryUncheckedUpdateWithoutRegistrosClinicoInput>
 }
 
-export type VeterinaryUpdateWithoutClinicalRecordsInput = {
+export type VeterinaryUpdateWithoutRegistrosClinicoInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  country?: Prisma.StringFieldUpdateOperationsInput | string
-  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  users?: Prisma.UserUpdateManyWithoutVeterinaryNestedInput
-  owners?: Prisma.OwnerUpdateManyWithoutVeterinaryNestedInput
-  operators?: Prisma.OperatorUpdateManyWithoutVeterinaryNestedInput
-  patients?: Prisma.PatientUpdateManyWithoutVeterinaryNestedInput
-  appointments?: Prisma.AppointmentUpdateManyWithoutVeterinaryNestedInput
-  activityLogs?: Prisma.ActivityLogUpdateManyWithoutVeterinaryNestedInput
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  direccion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ciudad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estado?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pais?: Prisma.StringFieldUpdateOperationsInput | string
+  codigoPostal?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  urlLogo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuarios?: Prisma.UserUpdateManyWithoutVeterinariaNestedInput
+  propietarios?: Prisma.OwnerUpdateManyWithoutVeterinariaNestedInput
+  operadores?: Prisma.OperatorUpdateManyWithoutVeterinariaNestedInput
+  pacientes?: Prisma.PatientUpdateManyWithoutVeterinariaNestedInput
+  citas?: Prisma.AppointmentUpdateManyWithoutVeterinariaNestedInput
+  registrosActividad?: Prisma.ActivityLogUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryUncheckedUpdateWithoutClinicalRecordsInput = {
+export type VeterinaryUncheckedUpdateWithoutRegistrosClinicoInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  country?: Prisma.StringFieldUpdateOperationsInput | string
-  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  users?: Prisma.UserUncheckedUpdateManyWithoutVeterinaryNestedInput
-  owners?: Prisma.OwnerUncheckedUpdateManyWithoutVeterinaryNestedInput
-  operators?: Prisma.OperatorUncheckedUpdateManyWithoutVeterinaryNestedInput
-  patients?: Prisma.PatientUncheckedUpdateManyWithoutVeterinaryNestedInput
-  appointments?: Prisma.AppointmentUncheckedUpdateManyWithoutVeterinaryNestedInput
-  activityLogs?: Prisma.ActivityLogUncheckedUpdateManyWithoutVeterinaryNestedInput
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  direccion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ciudad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estado?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pais?: Prisma.StringFieldUpdateOperationsInput | string
+  codigoPostal?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  urlLogo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuarios?: Prisma.UserUncheckedUpdateManyWithoutVeterinariaNestedInput
+  propietarios?: Prisma.OwnerUncheckedUpdateManyWithoutVeterinariaNestedInput
+  operadores?: Prisma.OperatorUncheckedUpdateManyWithoutVeterinariaNestedInput
+  pacientes?: Prisma.PatientUncheckedUpdateManyWithoutVeterinariaNestedInput
+  citas?: Prisma.AppointmentUncheckedUpdateManyWithoutVeterinariaNestedInput
+  registrosActividad?: Prisma.ActivityLogUncheckedUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryCreateWithoutActivityLogsInput = {
+export type VeterinaryCreateWithoutRegistrosActividadInput = {
   id?: string
-  name: string
-  email: string
-  phone?: string | null
-  address?: string | null
-  city?: string | null
-  state?: string | null
-  country?: string
-  postalCode?: string | null
-  logoUrl?: string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  users?: Prisma.UserCreateNestedManyWithoutVeterinaryInput
-  owners?: Prisma.OwnerCreateNestedManyWithoutVeterinaryInput
-  operators?: Prisma.OperatorCreateNestedManyWithoutVeterinaryInput
-  patients?: Prisma.PatientCreateNestedManyWithoutVeterinaryInput
-  appointments?: Prisma.AppointmentCreateNestedManyWithoutVeterinaryInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutVeterinaryInput
+  nombre: string
+  correo: string
+  telefono?: string | null
+  direccion?: string | null
+  ciudad?: string | null
+  estado?: string | null
+  pais?: string
+  codigoPostal?: string | null
+  urlLogo?: string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  usuarios?: Prisma.UserCreateNestedManyWithoutVeterinariaInput
+  propietarios?: Prisma.OwnerCreateNestedManyWithoutVeterinariaInput
+  operadores?: Prisma.OperatorCreateNestedManyWithoutVeterinariaInput
+  pacientes?: Prisma.PatientCreateNestedManyWithoutVeterinariaInput
+  citas?: Prisma.AppointmentCreateNestedManyWithoutVeterinariaInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryUncheckedCreateWithoutActivityLogsInput = {
+export type VeterinaryUncheckedCreateWithoutRegistrosActividadInput = {
   id?: string
-  name: string
-  email: string
-  phone?: string | null
-  address?: string | null
-  city?: string | null
-  state?: string | null
-  country?: string
-  postalCode?: string | null
-  logoUrl?: string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  users?: Prisma.UserUncheckedCreateNestedManyWithoutVeterinaryInput
-  owners?: Prisma.OwnerUncheckedCreateNestedManyWithoutVeterinaryInput
-  operators?: Prisma.OperatorUncheckedCreateNestedManyWithoutVeterinaryInput
-  patients?: Prisma.PatientUncheckedCreateNestedManyWithoutVeterinaryInput
-  appointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutVeterinaryInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutVeterinaryInput
+  nombre: string
+  correo: string
+  telefono?: string | null
+  direccion?: string | null
+  ciudad?: string | null
+  estado?: string | null
+  pais?: string
+  codigoPostal?: string | null
+  urlLogo?: string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  usuarios?: Prisma.UserUncheckedCreateNestedManyWithoutVeterinariaInput
+  propietarios?: Prisma.OwnerUncheckedCreateNestedManyWithoutVeterinariaInput
+  operadores?: Prisma.OperatorUncheckedCreateNestedManyWithoutVeterinariaInput
+  pacientes?: Prisma.PatientUncheckedCreateNestedManyWithoutVeterinariaInput
+  citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutVeterinariaInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryCreateOrConnectWithoutActivityLogsInput = {
+export type VeterinaryCreateOrConnectWithoutRegistrosActividadInput = {
   where: Prisma.VeterinaryWhereUniqueInput
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutActivityLogsInput, Prisma.VeterinaryUncheckedCreateWithoutActivityLogsInput>
+  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutRegistrosActividadInput, Prisma.VeterinaryUncheckedCreateWithoutRegistrosActividadInput>
 }
 
-export type VeterinaryUpsertWithoutActivityLogsInput = {
-  update: Prisma.XOR<Prisma.VeterinaryUpdateWithoutActivityLogsInput, Prisma.VeterinaryUncheckedUpdateWithoutActivityLogsInput>
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutActivityLogsInput, Prisma.VeterinaryUncheckedCreateWithoutActivityLogsInput>
+export type VeterinaryUpsertWithoutRegistrosActividadInput = {
+  update: Prisma.XOR<Prisma.VeterinaryUpdateWithoutRegistrosActividadInput, Prisma.VeterinaryUncheckedUpdateWithoutRegistrosActividadInput>
+  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutRegistrosActividadInput, Prisma.VeterinaryUncheckedCreateWithoutRegistrosActividadInput>
   where?: Prisma.VeterinaryWhereInput
 }
 
-export type VeterinaryUpdateToOneWithWhereWithoutActivityLogsInput = {
+export type VeterinaryUpdateToOneWithWhereWithoutRegistrosActividadInput = {
   where?: Prisma.VeterinaryWhereInput
-  data: Prisma.XOR<Prisma.VeterinaryUpdateWithoutActivityLogsInput, Prisma.VeterinaryUncheckedUpdateWithoutActivityLogsInput>
+  data: Prisma.XOR<Prisma.VeterinaryUpdateWithoutRegistrosActividadInput, Prisma.VeterinaryUncheckedUpdateWithoutRegistrosActividadInput>
 }
 
-export type VeterinaryUpdateWithoutActivityLogsInput = {
+export type VeterinaryUpdateWithoutRegistrosActividadInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  country?: Prisma.StringFieldUpdateOperationsInput | string
-  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  users?: Prisma.UserUpdateManyWithoutVeterinaryNestedInput
-  owners?: Prisma.OwnerUpdateManyWithoutVeterinaryNestedInput
-  operators?: Prisma.OperatorUpdateManyWithoutVeterinaryNestedInput
-  patients?: Prisma.PatientUpdateManyWithoutVeterinaryNestedInput
-  appointments?: Prisma.AppointmentUpdateManyWithoutVeterinaryNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutVeterinaryNestedInput
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  direccion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ciudad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estado?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pais?: Prisma.StringFieldUpdateOperationsInput | string
+  codigoPostal?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  urlLogo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuarios?: Prisma.UserUpdateManyWithoutVeterinariaNestedInput
+  propietarios?: Prisma.OwnerUpdateManyWithoutVeterinariaNestedInput
+  operadores?: Prisma.OperatorUpdateManyWithoutVeterinariaNestedInput
+  pacientes?: Prisma.PatientUpdateManyWithoutVeterinariaNestedInput
+  citas?: Prisma.AppointmentUpdateManyWithoutVeterinariaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryUncheckedUpdateWithoutActivityLogsInput = {
+export type VeterinaryUncheckedUpdateWithoutRegistrosActividadInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  country?: Prisma.StringFieldUpdateOperationsInput | string
-  postalCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  logoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  businessHours?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  users?: Prisma.UserUncheckedUpdateManyWithoutVeterinaryNestedInput
-  owners?: Prisma.OwnerUncheckedUpdateManyWithoutVeterinaryNestedInput
-  operators?: Prisma.OperatorUncheckedUpdateManyWithoutVeterinaryNestedInput
-  patients?: Prisma.PatientUncheckedUpdateManyWithoutVeterinaryNestedInput
-  appointments?: Prisma.AppointmentUncheckedUpdateManyWithoutVeterinaryNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutVeterinaryNestedInput
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  correo?: Prisma.StringFieldUpdateOperationsInput | string
+  telefono?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  direccion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ciudad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estado?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  pais?: Prisma.StringFieldUpdateOperationsInput | string
+  codigoPostal?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  urlLogo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  horarioNegocio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuarios?: Prisma.UserUncheckedUpdateManyWithoutVeterinariaNestedInput
+  propietarios?: Prisma.OwnerUncheckedUpdateManyWithoutVeterinariaNestedInput
+  operadores?: Prisma.OperatorUncheckedUpdateManyWithoutVeterinariaNestedInput
+  pacientes?: Prisma.PatientUncheckedUpdateManyWithoutVeterinariaNestedInput
+  citas?: Prisma.AppointmentUncheckedUpdateManyWithoutVeterinariaNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutVeterinariaNestedInput
 }
 
 
@@ -1428,23 +1428,23 @@ export type VeterinaryUncheckedUpdateWithoutActivityLogsInput = {
  */
 
 export type VeterinaryCountOutputType = {
-  users: number
-  owners: number
-  operators: number
-  patients: number
-  appointments: number
-  clinicalRecords: number
-  activityLogs: number
+  usuarios: number
+  propietarios: number
+  operadores: number
+  pacientes: number
+  citas: number
+  registrosClinico: number
+  registrosActividad: number
 }
 
 export type VeterinaryCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  users?: boolean | VeterinaryCountOutputTypeCountUsersArgs
-  owners?: boolean | VeterinaryCountOutputTypeCountOwnersArgs
-  operators?: boolean | VeterinaryCountOutputTypeCountOperatorsArgs
-  patients?: boolean | VeterinaryCountOutputTypeCountPatientsArgs
-  appointments?: boolean | VeterinaryCountOutputTypeCountAppointmentsArgs
-  clinicalRecords?: boolean | VeterinaryCountOutputTypeCountClinicalRecordsArgs
-  activityLogs?: boolean | VeterinaryCountOutputTypeCountActivityLogsArgs
+  usuarios?: boolean | VeterinaryCountOutputTypeCountUsuariosArgs
+  propietarios?: boolean | VeterinaryCountOutputTypeCountPropietariosArgs
+  operadores?: boolean | VeterinaryCountOutputTypeCountOperadoresArgs
+  pacientes?: boolean | VeterinaryCountOutputTypeCountPacientesArgs
+  citas?: boolean | VeterinaryCountOutputTypeCountCitasArgs
+  registrosClinico?: boolean | VeterinaryCountOutputTypeCountRegistrosClinicoArgs
+  registrosActividad?: boolean | VeterinaryCountOutputTypeCountRegistrosActividadArgs
 }
 
 /**
@@ -1460,138 +1460,138 @@ export type VeterinaryCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.E
 /**
  * VeterinaryCountOutputType without action
  */
-export type VeterinaryCountOutputTypeCountUsersArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type VeterinaryCountOutputTypeCountUsuariosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.UserWhereInput
 }
 
 /**
  * VeterinaryCountOutputType without action
  */
-export type VeterinaryCountOutputTypeCountOwnersArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type VeterinaryCountOutputTypeCountPropietariosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.OwnerWhereInput
 }
 
 /**
  * VeterinaryCountOutputType without action
  */
-export type VeterinaryCountOutputTypeCountOperatorsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type VeterinaryCountOutputTypeCountOperadoresArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.OperatorWhereInput
 }
 
 /**
  * VeterinaryCountOutputType without action
  */
-export type VeterinaryCountOutputTypeCountPatientsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type VeterinaryCountOutputTypeCountPacientesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.PatientWhereInput
 }
 
 /**
  * VeterinaryCountOutputType without action
  */
-export type VeterinaryCountOutputTypeCountAppointmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type VeterinaryCountOutputTypeCountCitasArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.AppointmentWhereInput
 }
 
 /**
  * VeterinaryCountOutputType without action
  */
-export type VeterinaryCountOutputTypeCountClinicalRecordsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type VeterinaryCountOutputTypeCountRegistrosClinicoArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.ClinicalRecordWhereInput
 }
 
 /**
  * VeterinaryCountOutputType without action
  */
-export type VeterinaryCountOutputTypeCountActivityLogsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type VeterinaryCountOutputTypeCountRegistrosActividadArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.ActivityLogWhereInput
 }
 
 
 export type VeterinarySelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  name?: boolean
-  email?: boolean
-  phone?: boolean
-  address?: boolean
-  city?: boolean
-  state?: boolean
-  country?: boolean
-  postalCode?: boolean
-  logoUrl?: boolean
-  businessHours?: boolean
-  isActive?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
-  users?: boolean | Prisma.Veterinary$usersArgs<ExtArgs>
-  owners?: boolean | Prisma.Veterinary$ownersArgs<ExtArgs>
-  operators?: boolean | Prisma.Veterinary$operatorsArgs<ExtArgs>
-  patients?: boolean | Prisma.Veterinary$patientsArgs<ExtArgs>
-  appointments?: boolean | Prisma.Veterinary$appointmentsArgs<ExtArgs>
-  clinicalRecords?: boolean | Prisma.Veterinary$clinicalRecordsArgs<ExtArgs>
-  activityLogs?: boolean | Prisma.Veterinary$activityLogsArgs<ExtArgs>
+  nombre?: boolean
+  correo?: boolean
+  telefono?: boolean
+  direccion?: boolean
+  ciudad?: boolean
+  estado?: boolean
+  pais?: boolean
+  codigoPostal?: boolean
+  urlLogo?: boolean
+  horarioNegocio?: boolean
+  estaActivo?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
+  usuarios?: boolean | Prisma.Veterinary$usuariosArgs<ExtArgs>
+  propietarios?: boolean | Prisma.Veterinary$propietariosArgs<ExtArgs>
+  operadores?: boolean | Prisma.Veterinary$operadoresArgs<ExtArgs>
+  pacientes?: boolean | Prisma.Veterinary$pacientesArgs<ExtArgs>
+  citas?: boolean | Prisma.Veterinary$citasArgs<ExtArgs>
+  registrosClinico?: boolean | Prisma.Veterinary$registrosClinicoArgs<ExtArgs>
+  registrosActividad?: boolean | Prisma.Veterinary$registrosActividadArgs<ExtArgs>
   _count?: boolean | Prisma.VeterinaryCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["veterinary"]>
 
 export type VeterinarySelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  name?: boolean
-  email?: boolean
-  phone?: boolean
-  address?: boolean
-  city?: boolean
-  state?: boolean
-  country?: boolean
-  postalCode?: boolean
-  logoUrl?: boolean
-  businessHours?: boolean
-  isActive?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
+  nombre?: boolean
+  correo?: boolean
+  telefono?: boolean
+  direccion?: boolean
+  ciudad?: boolean
+  estado?: boolean
+  pais?: boolean
+  codigoPostal?: boolean
+  urlLogo?: boolean
+  horarioNegocio?: boolean
+  estaActivo?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
 }, ExtArgs["result"]["veterinary"]>
 
 export type VeterinarySelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  name?: boolean
-  email?: boolean
-  phone?: boolean
-  address?: boolean
-  city?: boolean
-  state?: boolean
-  country?: boolean
-  postalCode?: boolean
-  logoUrl?: boolean
-  businessHours?: boolean
-  isActive?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
+  nombre?: boolean
+  correo?: boolean
+  telefono?: boolean
+  direccion?: boolean
+  ciudad?: boolean
+  estado?: boolean
+  pais?: boolean
+  codigoPostal?: boolean
+  urlLogo?: boolean
+  horarioNegocio?: boolean
+  estaActivo?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
 }, ExtArgs["result"]["veterinary"]>
 
 export type VeterinarySelectScalar = {
   id?: boolean
-  name?: boolean
-  email?: boolean
-  phone?: boolean
-  address?: boolean
-  city?: boolean
-  state?: boolean
-  country?: boolean
-  postalCode?: boolean
-  logoUrl?: boolean
-  businessHours?: boolean
-  isActive?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
+  nombre?: boolean
+  correo?: boolean
+  telefono?: boolean
+  direccion?: boolean
+  ciudad?: boolean
+  estado?: boolean
+  pais?: boolean
+  codigoPostal?: boolean
+  urlLogo?: boolean
+  horarioNegocio?: boolean
+  estaActivo?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
 }
 
-export type VeterinaryOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "email" | "phone" | "address" | "city" | "state" | "country" | "postalCode" | "logoUrl" | "businessHours" | "isActive" | "createdAt" | "updatedAt", ExtArgs["result"]["veterinary"]>
+export type VeterinaryOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "nombre" | "correo" | "telefono" | "direccion" | "ciudad" | "estado" | "pais" | "codigoPostal" | "urlLogo" | "horarioNegocio" | "estaActivo" | "creadoEn" | "actualizadoEn", ExtArgs["result"]["veterinary"]>
 export type VeterinaryInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  users?: boolean | Prisma.Veterinary$usersArgs<ExtArgs>
-  owners?: boolean | Prisma.Veterinary$ownersArgs<ExtArgs>
-  operators?: boolean | Prisma.Veterinary$operatorsArgs<ExtArgs>
-  patients?: boolean | Prisma.Veterinary$patientsArgs<ExtArgs>
-  appointments?: boolean | Prisma.Veterinary$appointmentsArgs<ExtArgs>
-  clinicalRecords?: boolean | Prisma.Veterinary$clinicalRecordsArgs<ExtArgs>
-  activityLogs?: boolean | Prisma.Veterinary$activityLogsArgs<ExtArgs>
+  usuarios?: boolean | Prisma.Veterinary$usuariosArgs<ExtArgs>
+  propietarios?: boolean | Prisma.Veterinary$propietariosArgs<ExtArgs>
+  operadores?: boolean | Prisma.Veterinary$operadoresArgs<ExtArgs>
+  pacientes?: boolean | Prisma.Veterinary$pacientesArgs<ExtArgs>
+  citas?: boolean | Prisma.Veterinary$citasArgs<ExtArgs>
+  registrosClinico?: boolean | Prisma.Veterinary$registrosClinicoArgs<ExtArgs>
+  registrosActividad?: boolean | Prisma.Veterinary$registrosActividadArgs<ExtArgs>
   _count?: boolean | Prisma.VeterinaryCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type VeterinaryIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {}
@@ -1600,29 +1600,29 @@ export type VeterinaryIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.E
 export type $VeterinaryPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Veterinary"
   objects: {
-    users: Prisma.$UserPayload<ExtArgs>[]
-    owners: Prisma.$OwnerPayload<ExtArgs>[]
-    operators: Prisma.$OperatorPayload<ExtArgs>[]
-    patients: Prisma.$PatientPayload<ExtArgs>[]
-    appointments: Prisma.$AppointmentPayload<ExtArgs>[]
-    clinicalRecords: Prisma.$ClinicalRecordPayload<ExtArgs>[]
-    activityLogs: Prisma.$ActivityLogPayload<ExtArgs>[]
+    usuarios: Prisma.$UserPayload<ExtArgs>[]
+    propietarios: Prisma.$OwnerPayload<ExtArgs>[]
+    operadores: Prisma.$OperatorPayload<ExtArgs>[]
+    pacientes: Prisma.$PatientPayload<ExtArgs>[]
+    citas: Prisma.$AppointmentPayload<ExtArgs>[]
+    registrosClinico: Prisma.$ClinicalRecordPayload<ExtArgs>[]
+    registrosActividad: Prisma.$ActivityLogPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
-    name: string
-    email: string
-    phone: string | null
-    address: string | null
-    city: string | null
-    state: string | null
-    country: string
-    postalCode: string | null
-    logoUrl: string | null
-    businessHours: runtime.JsonValue | null
-    isActive: boolean
-    createdAt: Date
-    updatedAt: Date
+    nombre: string
+    correo: string
+    telefono: string | null
+    direccion: string | null
+    ciudad: string | null
+    estado: string | null
+    pais: string
+    codigoPostal: string | null
+    urlLogo: string | null
+    horarioNegocio: runtime.JsonValue | null
+    estaActivo: boolean
+    creadoEn: Date
+    actualizadoEn: Date
   }, ExtArgs["result"]["veterinary"]>
   composites: {}
 }
@@ -2017,13 +2017,13 @@ readonly fields: VeterinaryFieldRefs;
  */
 export interface Prisma__VeterinaryClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  users<T extends Prisma.Veterinary$usersArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Veterinary$usersArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  owners<T extends Prisma.Veterinary$ownersArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Veterinary$ownersArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$OwnerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  operators<T extends Prisma.Veterinary$operatorsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Veterinary$operatorsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$OperatorPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  patients<T extends Prisma.Veterinary$patientsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Veterinary$patientsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$PatientPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  appointments<T extends Prisma.Veterinary$appointmentsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Veterinary$appointmentsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AppointmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  clinicalRecords<T extends Prisma.Veterinary$clinicalRecordsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Veterinary$clinicalRecordsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ClinicalRecordPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  activityLogs<T extends Prisma.Veterinary$activityLogsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Veterinary$activityLogsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ActivityLogPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  usuarios<T extends Prisma.Veterinary$usuariosArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Veterinary$usuariosArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  propietarios<T extends Prisma.Veterinary$propietariosArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Veterinary$propietariosArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$OwnerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  operadores<T extends Prisma.Veterinary$operadoresArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Veterinary$operadoresArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$OperatorPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  pacientes<T extends Prisma.Veterinary$pacientesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Veterinary$pacientesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$PatientPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  citas<T extends Prisma.Veterinary$citasArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Veterinary$citasArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AppointmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  registrosClinico<T extends Prisma.Veterinary$registrosClinicoArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Veterinary$registrosClinicoArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ClinicalRecordPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  registrosActividad<T extends Prisma.Veterinary$registrosActividadArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Veterinary$registrosActividadArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ActivityLogPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2054,19 +2054,19 @@ export interface Prisma__VeterinaryClient<T, Null = never, ExtArgs extends runti
  */
 export interface VeterinaryFieldRefs {
   readonly id: Prisma.FieldRef<"Veterinary", 'String'>
-  readonly name: Prisma.FieldRef<"Veterinary", 'String'>
-  readonly email: Prisma.FieldRef<"Veterinary", 'String'>
-  readonly phone: Prisma.FieldRef<"Veterinary", 'String'>
-  readonly address: Prisma.FieldRef<"Veterinary", 'String'>
-  readonly city: Prisma.FieldRef<"Veterinary", 'String'>
-  readonly state: Prisma.FieldRef<"Veterinary", 'String'>
-  readonly country: Prisma.FieldRef<"Veterinary", 'String'>
-  readonly postalCode: Prisma.FieldRef<"Veterinary", 'String'>
-  readonly logoUrl: Prisma.FieldRef<"Veterinary", 'String'>
-  readonly businessHours: Prisma.FieldRef<"Veterinary", 'Json'>
-  readonly isActive: Prisma.FieldRef<"Veterinary", 'Boolean'>
-  readonly createdAt: Prisma.FieldRef<"Veterinary", 'DateTime'>
-  readonly updatedAt: Prisma.FieldRef<"Veterinary", 'DateTime'>
+  readonly nombre: Prisma.FieldRef<"Veterinary", 'String'>
+  readonly correo: Prisma.FieldRef<"Veterinary", 'String'>
+  readonly telefono: Prisma.FieldRef<"Veterinary", 'String'>
+  readonly direccion: Prisma.FieldRef<"Veterinary", 'String'>
+  readonly ciudad: Prisma.FieldRef<"Veterinary", 'String'>
+  readonly estado: Prisma.FieldRef<"Veterinary", 'String'>
+  readonly pais: Prisma.FieldRef<"Veterinary", 'String'>
+  readonly codigoPostal: Prisma.FieldRef<"Veterinary", 'String'>
+  readonly urlLogo: Prisma.FieldRef<"Veterinary", 'String'>
+  readonly horarioNegocio: Prisma.FieldRef<"Veterinary", 'Json'>
+  readonly estaActivo: Prisma.FieldRef<"Veterinary", 'Boolean'>
+  readonly creadoEn: Prisma.FieldRef<"Veterinary", 'DateTime'>
+  readonly actualizadoEn: Prisma.FieldRef<"Veterinary", 'DateTime'>
 }
     
 
@@ -2455,9 +2455,9 @@ export type VeterinaryDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.In
 }
 
 /**
- * Veterinary.users
+ * Veterinary.usuarios
  */
-export type Veterinary$usersArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Veterinary$usuariosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the User
    */
@@ -2479,9 +2479,9 @@ export type Veterinary$usersArgs<ExtArgs extends runtime.Types.Extensions.Intern
 }
 
 /**
- * Veterinary.owners
+ * Veterinary.propietarios
  */
-export type Veterinary$ownersArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Veterinary$propietariosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Owner
    */
@@ -2503,9 +2503,9 @@ export type Veterinary$ownersArgs<ExtArgs extends runtime.Types.Extensions.Inter
 }
 
 /**
- * Veterinary.operators
+ * Veterinary.operadores
  */
-export type Veterinary$operatorsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Veterinary$operadoresArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Operator
    */
@@ -2527,9 +2527,9 @@ export type Veterinary$operatorsArgs<ExtArgs extends runtime.Types.Extensions.In
 }
 
 /**
- * Veterinary.patients
+ * Veterinary.pacientes
  */
-export type Veterinary$patientsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Veterinary$pacientesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Patient
    */
@@ -2551,9 +2551,9 @@ export type Veterinary$patientsArgs<ExtArgs extends runtime.Types.Extensions.Int
 }
 
 /**
- * Veterinary.appointments
+ * Veterinary.citas
  */
-export type Veterinary$appointmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Veterinary$citasArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Appointment
    */
@@ -2575,9 +2575,9 @@ export type Veterinary$appointmentsArgs<ExtArgs extends runtime.Types.Extensions
 }
 
 /**
- * Veterinary.clinicalRecords
+ * Veterinary.registrosClinico
  */
-export type Veterinary$clinicalRecordsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Veterinary$registrosClinicoArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the ClinicalRecord
    */
@@ -2599,9 +2599,9 @@ export type Veterinary$clinicalRecordsArgs<ExtArgs extends runtime.Types.Extensi
 }
 
 /**
- * Veterinary.activityLogs
+ * Veterinary.registrosActividad
  */
-export type Veterinary$activityLogsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Veterinary$registrosActividadArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the ActivityLog
    */

@@ -26,72 +26,72 @@ export type AggregateOperator = {
 
 export type OperatorMinAggregateOutputType = {
   id: string | null
-  userId: string | null
-  veterinaryId: string | null
-  position: string | null
-  hireDate: Date | null
-  isActive: boolean | null
-  createdAt: Date | null
-  updatedAt: Date | null
+  usuarioId: string | null
+  veterinariaId: string | null
+  posicion: string | null
+  fechaContratacion: Date | null
+  estaActivo: boolean | null
+  creadoEn: Date | null
+  actualizadoEn: Date | null
 }
 
 export type OperatorMaxAggregateOutputType = {
   id: string | null
-  userId: string | null
-  veterinaryId: string | null
-  position: string | null
-  hireDate: Date | null
-  isActive: boolean | null
-  createdAt: Date | null
-  updatedAt: Date | null
+  usuarioId: string | null
+  veterinariaId: string | null
+  posicion: string | null
+  fechaContratacion: Date | null
+  estaActivo: boolean | null
+  creadoEn: Date | null
+  actualizadoEn: Date | null
 }
 
 export type OperatorCountAggregateOutputType = {
   id: number
-  userId: number
-  veterinaryId: number
-  position: number
-  hireDate: number
-  isActive: number
-  permissions: number
-  createdAt: number
-  updatedAt: number
+  usuarioId: number
+  veterinariaId: number
+  posicion: number
+  fechaContratacion: number
+  estaActivo: number
+  permisos: number
+  creadoEn: number
+  actualizadoEn: number
   _all: number
 }
 
 
 export type OperatorMinAggregateInputType = {
   id?: true
-  userId?: true
-  veterinaryId?: true
-  position?: true
-  hireDate?: true
-  isActive?: true
-  createdAt?: true
-  updatedAt?: true
+  usuarioId?: true
+  veterinariaId?: true
+  posicion?: true
+  fechaContratacion?: true
+  estaActivo?: true
+  creadoEn?: true
+  actualizadoEn?: true
 }
 
 export type OperatorMaxAggregateInputType = {
   id?: true
-  userId?: true
-  veterinaryId?: true
-  position?: true
-  hireDate?: true
-  isActive?: true
-  createdAt?: true
-  updatedAt?: true
+  usuarioId?: true
+  veterinariaId?: true
+  posicion?: true
+  fechaContratacion?: true
+  estaActivo?: true
+  creadoEn?: true
+  actualizadoEn?: true
 }
 
 export type OperatorCountAggregateInputType = {
   id?: true
-  userId?: true
-  veterinaryId?: true
-  position?: true
-  hireDate?: true
-  isActive?: true
-  permissions?: true
-  createdAt?: true
-  updatedAt?: true
+  usuarioId?: true
+  veterinariaId?: true
+  posicion?: true
+  fechaContratacion?: true
+  estaActivo?: true
+  permisos?: true
+  creadoEn?: true
+  actualizadoEn?: true
   _all?: true
 }
 
@@ -169,14 +169,14 @@ export type OperatorGroupByArgs<ExtArgs extends runtime.Types.Extensions.Interna
 
 export type OperatorGroupByOutputType = {
   id: string
-  userId: string
-  veterinaryId: string
-  position: string | null
-  hireDate: Date | null
-  isActive: boolean
-  permissions: runtime.JsonValue | null
-  createdAt: Date
-  updatedAt: Date
+  usuarioId: string
+  veterinariaId: string
+  posicion: string | null
+  fechaContratacion: Date | null
+  estaActivo: boolean
+  permisos: runtime.JsonValue | null
+  creadoEn: Date
+  actualizadoEn: Date
   _count: OperatorCountAggregateOutputType | null
   _min: OperatorMinAggregateOutputType | null
   _max: OperatorMaxAggregateOutputType | null
@@ -202,71 +202,71 @@ export type OperatorWhereInput = {
   OR?: Prisma.OperatorWhereInput[]
   NOT?: Prisma.OperatorWhereInput | Prisma.OperatorWhereInput[]
   id?: Prisma.UuidFilter<"Operator"> | string
-  userId?: Prisma.UuidFilter<"Operator"> | string
-  veterinaryId?: Prisma.UuidFilter<"Operator"> | string
-  position?: Prisma.StringNullableFilter<"Operator"> | string | null
-  hireDate?: Prisma.DateTimeNullableFilter<"Operator"> | Date | string | null
-  isActive?: Prisma.BoolFilter<"Operator"> | boolean
-  permissions?: Prisma.JsonNullableFilter<"Operator">
-  createdAt?: Prisma.DateTimeFilter<"Operator"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"Operator"> | Date | string
-  user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
-  veterinary?: Prisma.XOR<Prisma.VeterinaryScalarRelationFilter, Prisma.VeterinaryWhereInput>
-  appointments?: Prisma.AppointmentListRelationFilter
-  procedures?: Prisma.ProcedureListRelationFilter
-  clinicalRecords?: Prisma.ClinicalRecordListRelationFilter
-  vaccinations?: Prisma.VaccinationListRelationFilter
+  usuarioId?: Prisma.UuidFilter<"Operator"> | string
+  veterinariaId?: Prisma.UuidFilter<"Operator"> | string
+  posicion?: Prisma.StringNullableFilter<"Operator"> | string | null
+  fechaContratacion?: Prisma.DateTimeNullableFilter<"Operator"> | Date | string | null
+  estaActivo?: Prisma.BoolFilter<"Operator"> | boolean
+  permisos?: Prisma.JsonNullableFilter<"Operator">
+  creadoEn?: Prisma.DateTimeFilter<"Operator"> | Date | string
+  actualizadoEn?: Prisma.DateTimeFilter<"Operator"> | Date | string
+  usuario?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
+  veterinaria?: Prisma.XOR<Prisma.VeterinaryScalarRelationFilter, Prisma.VeterinaryWhereInput>
+  citas?: Prisma.AppointmentListRelationFilter
+  procedimientos?: Prisma.ProcedureListRelationFilter
+  registrosClinico?: Prisma.ClinicalRecordListRelationFilter
+  vacunaciones?: Prisma.VaccinationListRelationFilter
 }
 
 export type OperatorOrderByWithRelationInput = {
   id?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrder
-  position?: Prisma.SortOrderInput | Prisma.SortOrder
-  hireDate?: Prisma.SortOrderInput | Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  permissions?: Prisma.SortOrderInput | Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
-  user?: Prisma.UserOrderByWithRelationInput
-  veterinary?: Prisma.VeterinaryOrderByWithRelationInput
-  appointments?: Prisma.AppointmentOrderByRelationAggregateInput
-  procedures?: Prisma.ProcedureOrderByRelationAggregateInput
-  clinicalRecords?: Prisma.ClinicalRecordOrderByRelationAggregateInput
-  vaccinations?: Prisma.VaccinationOrderByRelationAggregateInput
+  usuarioId?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrder
+  posicion?: Prisma.SortOrderInput | Prisma.SortOrder
+  fechaContratacion?: Prisma.SortOrderInput | Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  permisos?: Prisma.SortOrderInput | Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
+  usuario?: Prisma.UserOrderByWithRelationInput
+  veterinaria?: Prisma.VeterinaryOrderByWithRelationInput
+  citas?: Prisma.AppointmentOrderByRelationAggregateInput
+  procedimientos?: Prisma.ProcedureOrderByRelationAggregateInput
+  registrosClinico?: Prisma.ClinicalRecordOrderByRelationAggregateInput
+  vacunaciones?: Prisma.VaccinationOrderByRelationAggregateInput
 }
 
 export type OperatorWhereUniqueInput = Prisma.AtLeast<{
   id?: string
-  userId?: string
+  usuarioId?: string
   AND?: Prisma.OperatorWhereInput | Prisma.OperatorWhereInput[]
   OR?: Prisma.OperatorWhereInput[]
   NOT?: Prisma.OperatorWhereInput | Prisma.OperatorWhereInput[]
-  veterinaryId?: Prisma.UuidFilter<"Operator"> | string
-  position?: Prisma.StringNullableFilter<"Operator"> | string | null
-  hireDate?: Prisma.DateTimeNullableFilter<"Operator"> | Date | string | null
-  isActive?: Prisma.BoolFilter<"Operator"> | boolean
-  permissions?: Prisma.JsonNullableFilter<"Operator">
-  createdAt?: Prisma.DateTimeFilter<"Operator"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"Operator"> | Date | string
-  user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
-  veterinary?: Prisma.XOR<Prisma.VeterinaryScalarRelationFilter, Prisma.VeterinaryWhereInput>
-  appointments?: Prisma.AppointmentListRelationFilter
-  procedures?: Prisma.ProcedureListRelationFilter
-  clinicalRecords?: Prisma.ClinicalRecordListRelationFilter
-  vaccinations?: Prisma.VaccinationListRelationFilter
-}, "id" | "userId">
+  veterinariaId?: Prisma.UuidFilter<"Operator"> | string
+  posicion?: Prisma.StringNullableFilter<"Operator"> | string | null
+  fechaContratacion?: Prisma.DateTimeNullableFilter<"Operator"> | Date | string | null
+  estaActivo?: Prisma.BoolFilter<"Operator"> | boolean
+  permisos?: Prisma.JsonNullableFilter<"Operator">
+  creadoEn?: Prisma.DateTimeFilter<"Operator"> | Date | string
+  actualizadoEn?: Prisma.DateTimeFilter<"Operator"> | Date | string
+  usuario?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
+  veterinaria?: Prisma.XOR<Prisma.VeterinaryScalarRelationFilter, Prisma.VeterinaryWhereInput>
+  citas?: Prisma.AppointmentListRelationFilter
+  procedimientos?: Prisma.ProcedureListRelationFilter
+  registrosClinico?: Prisma.ClinicalRecordListRelationFilter
+  vacunaciones?: Prisma.VaccinationListRelationFilter
+}, "id" | "usuarioId">
 
 export type OperatorOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrder
-  position?: Prisma.SortOrderInput | Prisma.SortOrder
-  hireDate?: Prisma.SortOrderInput | Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  permissions?: Prisma.SortOrderInput | Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  usuarioId?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrder
+  posicion?: Prisma.SortOrderInput | Prisma.SortOrder
+  fechaContratacion?: Prisma.SortOrderInput | Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  permisos?: Prisma.SortOrderInput | Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
   _count?: Prisma.OperatorCountOrderByAggregateInput
   _max?: Prisma.OperatorMaxOrderByAggregateInput
   _min?: Prisma.OperatorMinOrderByAggregateInput
@@ -277,112 +277,112 @@ export type OperatorScalarWhereWithAggregatesInput = {
   OR?: Prisma.OperatorScalarWhereWithAggregatesInput[]
   NOT?: Prisma.OperatorScalarWhereWithAggregatesInput | Prisma.OperatorScalarWhereWithAggregatesInput[]
   id?: Prisma.UuidWithAggregatesFilter<"Operator"> | string
-  userId?: Prisma.UuidWithAggregatesFilter<"Operator"> | string
-  veterinaryId?: Prisma.UuidWithAggregatesFilter<"Operator"> | string
-  position?: Prisma.StringNullableWithAggregatesFilter<"Operator"> | string | null
-  hireDate?: Prisma.DateTimeNullableWithAggregatesFilter<"Operator"> | Date | string | null
-  isActive?: Prisma.BoolWithAggregatesFilter<"Operator"> | boolean
-  permissions?: Prisma.JsonNullableWithAggregatesFilter<"Operator">
-  createdAt?: Prisma.DateTimeWithAggregatesFilter<"Operator"> | Date | string
-  updatedAt?: Prisma.DateTimeWithAggregatesFilter<"Operator"> | Date | string
+  usuarioId?: Prisma.UuidWithAggregatesFilter<"Operator"> | string
+  veterinariaId?: Prisma.UuidWithAggregatesFilter<"Operator"> | string
+  posicion?: Prisma.StringNullableWithAggregatesFilter<"Operator"> | string | null
+  fechaContratacion?: Prisma.DateTimeNullableWithAggregatesFilter<"Operator"> | Date | string | null
+  estaActivo?: Prisma.BoolWithAggregatesFilter<"Operator"> | boolean
+  permisos?: Prisma.JsonNullableWithAggregatesFilter<"Operator">
+  creadoEn?: Prisma.DateTimeWithAggregatesFilter<"Operator"> | Date | string
+  actualizadoEn?: Prisma.DateTimeWithAggregatesFilter<"Operator"> | Date | string
 }
 
 export type OperatorCreateInput = {
   id?: string
-  position?: string | null
-  hireDate?: Date | string | null
-  isActive?: boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  user: Prisma.UserCreateNestedOneWithoutOperatorInput
-  veterinary: Prisma.VeterinaryCreateNestedOneWithoutOperatorsInput
-  appointments?: Prisma.AppointmentCreateNestedManyWithoutOperatorInput
-  procedures?: Prisma.ProcedureCreateNestedManyWithoutPerformerInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutRecorderInput
-  vaccinations?: Prisma.VaccinationCreateNestedManyWithoutAdministratorInput
+  posicion?: string | null
+  fechaContratacion?: Date | string | null
+  estaActivo?: boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  usuario: Prisma.UserCreateNestedOneWithoutOperadorInput
+  veterinaria: Prisma.VeterinaryCreateNestedOneWithoutOperadoresInput
+  citas?: Prisma.AppointmentCreateNestedManyWithoutOperadorInput
+  procedimientos?: Prisma.ProcedureCreateNestedManyWithoutEjecutorInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutRegistradorInput
+  vacunaciones?: Prisma.VaccinationCreateNestedManyWithoutAdministradorInput
 }
 
 export type OperatorUncheckedCreateInput = {
   id?: string
-  userId: string
-  veterinaryId: string
-  position?: string | null
-  hireDate?: Date | string | null
-  isActive?: boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  appointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutOperatorInput
-  procedures?: Prisma.ProcedureUncheckedCreateNestedManyWithoutPerformerInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutRecorderInput
-  vaccinations?: Prisma.VaccinationUncheckedCreateNestedManyWithoutAdministratorInput
+  usuarioId: string
+  veterinariaId: string
+  posicion?: string | null
+  fechaContratacion?: Date | string | null
+  estaActivo?: boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutOperadorInput
+  procedimientos?: Prisma.ProcedureUncheckedCreateNestedManyWithoutEjecutorInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutRegistradorInput
+  vacunaciones?: Prisma.VaccinationUncheckedCreateNestedManyWithoutAdministradorInput
 }
 
 export type OperatorUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  position?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  hireDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  user?: Prisma.UserUpdateOneRequiredWithoutOperatorNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneRequiredWithoutOperatorsNestedInput
-  appointments?: Prisma.AppointmentUpdateManyWithoutOperatorNestedInput
-  procedures?: Prisma.ProcedureUpdateManyWithoutPerformerNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutRecorderNestedInput
-  vaccinations?: Prisma.VaccinationUpdateManyWithoutAdministratorNestedInput
+  posicion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaContratacion?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuario?: Prisma.UserUpdateOneRequiredWithoutOperadorNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneRequiredWithoutOperadoresNestedInput
+  citas?: Prisma.AppointmentUpdateManyWithoutOperadorNestedInput
+  procedimientos?: Prisma.ProcedureUpdateManyWithoutEjecutorNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutRegistradorNestedInput
+  vacunaciones?: Prisma.VaccinationUpdateManyWithoutAdministradorNestedInput
 }
 
 export type OperatorUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.StringFieldUpdateOperationsInput | string
-  position?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  hireDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  appointments?: Prisma.AppointmentUncheckedUpdateManyWithoutOperatorNestedInput
-  procedures?: Prisma.ProcedureUncheckedUpdateManyWithoutPerformerNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutRecorderNestedInput
-  vaccinations?: Prisma.VaccinationUncheckedUpdateManyWithoutAdministratorNestedInput
+  usuarioId?: Prisma.StringFieldUpdateOperationsInput | string
+  veterinariaId?: Prisma.StringFieldUpdateOperationsInput | string
+  posicion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaContratacion?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  citas?: Prisma.AppointmentUncheckedUpdateManyWithoutOperadorNestedInput
+  procedimientos?: Prisma.ProcedureUncheckedUpdateManyWithoutEjecutorNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutRegistradorNestedInput
+  vacunaciones?: Prisma.VaccinationUncheckedUpdateManyWithoutAdministradorNestedInput
 }
 
 export type OperatorCreateManyInput = {
   id?: string
-  userId: string
-  veterinaryId: string
-  position?: string | null
-  hireDate?: Date | string | null
-  isActive?: boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Date | string
-  updatedAt?: Date | string
+  usuarioId: string
+  veterinariaId: string
+  posicion?: string | null
+  fechaContratacion?: Date | string | null
+  estaActivo?: boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
 }
 
 export type OperatorUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  position?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  hireDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  posicion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaContratacion?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type OperatorUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.StringFieldUpdateOperationsInput | string
-  position?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  hireDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuarioId?: Prisma.StringFieldUpdateOperationsInput | string
+  veterinariaId?: Prisma.StringFieldUpdateOperationsInput | string
+  posicion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaContratacion?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type OperatorNullableScalarRelationFilter = {
@@ -402,109 +402,109 @@ export type OperatorOrderByRelationAggregateInput = {
 
 export type OperatorCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrder
-  position?: Prisma.SortOrder
-  hireDate?: Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  permissions?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  usuarioId?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrder
+  posicion?: Prisma.SortOrder
+  fechaContratacion?: Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  permisos?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
 }
 
 export type OperatorMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrder
-  position?: Prisma.SortOrder
-  hireDate?: Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  usuarioId?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrder
+  posicion?: Prisma.SortOrder
+  fechaContratacion?: Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
 }
 
 export type OperatorMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrder
-  position?: Prisma.SortOrder
-  hireDate?: Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  usuarioId?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrder
+  posicion?: Prisma.SortOrder
+  fechaContratacion?: Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
 }
 
-export type OperatorCreateNestedOneWithoutUserInput = {
-  create?: Prisma.XOR<Prisma.OperatorCreateWithoutUserInput, Prisma.OperatorUncheckedCreateWithoutUserInput>
-  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutUserInput
+export type OperatorCreateNestedOneWithoutUsuarioInput = {
+  create?: Prisma.XOR<Prisma.OperatorCreateWithoutUsuarioInput, Prisma.OperatorUncheckedCreateWithoutUsuarioInput>
+  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutUsuarioInput
   connect?: Prisma.OperatorWhereUniqueInput
 }
 
-export type OperatorUncheckedCreateNestedOneWithoutUserInput = {
-  create?: Prisma.XOR<Prisma.OperatorCreateWithoutUserInput, Prisma.OperatorUncheckedCreateWithoutUserInput>
-  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutUserInput
+export type OperatorUncheckedCreateNestedOneWithoutUsuarioInput = {
+  create?: Prisma.XOR<Prisma.OperatorCreateWithoutUsuarioInput, Prisma.OperatorUncheckedCreateWithoutUsuarioInput>
+  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutUsuarioInput
   connect?: Prisma.OperatorWhereUniqueInput
 }
 
-export type OperatorUpdateOneWithoutUserNestedInput = {
-  create?: Prisma.XOR<Prisma.OperatorCreateWithoutUserInput, Prisma.OperatorUncheckedCreateWithoutUserInput>
-  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutUserInput
-  upsert?: Prisma.OperatorUpsertWithoutUserInput
+export type OperatorUpdateOneWithoutUsuarioNestedInput = {
+  create?: Prisma.XOR<Prisma.OperatorCreateWithoutUsuarioInput, Prisma.OperatorUncheckedCreateWithoutUsuarioInput>
+  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutUsuarioInput
+  upsert?: Prisma.OperatorUpsertWithoutUsuarioInput
   disconnect?: Prisma.OperatorWhereInput | boolean
   delete?: Prisma.OperatorWhereInput | boolean
   connect?: Prisma.OperatorWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.OperatorUpdateToOneWithWhereWithoutUserInput, Prisma.OperatorUpdateWithoutUserInput>, Prisma.OperatorUncheckedUpdateWithoutUserInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.OperatorUpdateToOneWithWhereWithoutUsuarioInput, Prisma.OperatorUpdateWithoutUsuarioInput>, Prisma.OperatorUncheckedUpdateWithoutUsuarioInput>
 }
 
-export type OperatorUncheckedUpdateOneWithoutUserNestedInput = {
-  create?: Prisma.XOR<Prisma.OperatorCreateWithoutUserInput, Prisma.OperatorUncheckedCreateWithoutUserInput>
-  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutUserInput
-  upsert?: Prisma.OperatorUpsertWithoutUserInput
+export type OperatorUncheckedUpdateOneWithoutUsuarioNestedInput = {
+  create?: Prisma.XOR<Prisma.OperatorCreateWithoutUsuarioInput, Prisma.OperatorUncheckedCreateWithoutUsuarioInput>
+  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutUsuarioInput
+  upsert?: Prisma.OperatorUpsertWithoutUsuarioInput
   disconnect?: Prisma.OperatorWhereInput | boolean
   delete?: Prisma.OperatorWhereInput | boolean
   connect?: Prisma.OperatorWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.OperatorUpdateToOneWithWhereWithoutUserInput, Prisma.OperatorUpdateWithoutUserInput>, Prisma.OperatorUncheckedUpdateWithoutUserInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.OperatorUpdateToOneWithWhereWithoutUsuarioInput, Prisma.OperatorUpdateWithoutUsuarioInput>, Prisma.OperatorUncheckedUpdateWithoutUsuarioInput>
 }
 
-export type OperatorCreateNestedManyWithoutVeterinaryInput = {
-  create?: Prisma.XOR<Prisma.OperatorCreateWithoutVeterinaryInput, Prisma.OperatorUncheckedCreateWithoutVeterinaryInput> | Prisma.OperatorCreateWithoutVeterinaryInput[] | Prisma.OperatorUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutVeterinaryInput | Prisma.OperatorCreateOrConnectWithoutVeterinaryInput[]
-  createMany?: Prisma.OperatorCreateManyVeterinaryInputEnvelope
+export type OperatorCreateNestedManyWithoutVeterinariaInput = {
+  create?: Prisma.XOR<Prisma.OperatorCreateWithoutVeterinariaInput, Prisma.OperatorUncheckedCreateWithoutVeterinariaInput> | Prisma.OperatorCreateWithoutVeterinariaInput[] | Prisma.OperatorUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutVeterinariaInput | Prisma.OperatorCreateOrConnectWithoutVeterinariaInput[]
+  createMany?: Prisma.OperatorCreateManyVeterinariaInputEnvelope
   connect?: Prisma.OperatorWhereUniqueInput | Prisma.OperatorWhereUniqueInput[]
 }
 
-export type OperatorUncheckedCreateNestedManyWithoutVeterinaryInput = {
-  create?: Prisma.XOR<Prisma.OperatorCreateWithoutVeterinaryInput, Prisma.OperatorUncheckedCreateWithoutVeterinaryInput> | Prisma.OperatorCreateWithoutVeterinaryInput[] | Prisma.OperatorUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutVeterinaryInput | Prisma.OperatorCreateOrConnectWithoutVeterinaryInput[]
-  createMany?: Prisma.OperatorCreateManyVeterinaryInputEnvelope
+export type OperatorUncheckedCreateNestedManyWithoutVeterinariaInput = {
+  create?: Prisma.XOR<Prisma.OperatorCreateWithoutVeterinariaInput, Prisma.OperatorUncheckedCreateWithoutVeterinariaInput> | Prisma.OperatorCreateWithoutVeterinariaInput[] | Prisma.OperatorUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutVeterinariaInput | Prisma.OperatorCreateOrConnectWithoutVeterinariaInput[]
+  createMany?: Prisma.OperatorCreateManyVeterinariaInputEnvelope
   connect?: Prisma.OperatorWhereUniqueInput | Prisma.OperatorWhereUniqueInput[]
 }
 
-export type OperatorUpdateManyWithoutVeterinaryNestedInput = {
-  create?: Prisma.XOR<Prisma.OperatorCreateWithoutVeterinaryInput, Prisma.OperatorUncheckedCreateWithoutVeterinaryInput> | Prisma.OperatorCreateWithoutVeterinaryInput[] | Prisma.OperatorUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutVeterinaryInput | Prisma.OperatorCreateOrConnectWithoutVeterinaryInput[]
-  upsert?: Prisma.OperatorUpsertWithWhereUniqueWithoutVeterinaryInput | Prisma.OperatorUpsertWithWhereUniqueWithoutVeterinaryInput[]
-  createMany?: Prisma.OperatorCreateManyVeterinaryInputEnvelope
+export type OperatorUpdateManyWithoutVeterinariaNestedInput = {
+  create?: Prisma.XOR<Prisma.OperatorCreateWithoutVeterinariaInput, Prisma.OperatorUncheckedCreateWithoutVeterinariaInput> | Prisma.OperatorCreateWithoutVeterinariaInput[] | Prisma.OperatorUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutVeterinariaInput | Prisma.OperatorCreateOrConnectWithoutVeterinariaInput[]
+  upsert?: Prisma.OperatorUpsertWithWhereUniqueWithoutVeterinariaInput | Prisma.OperatorUpsertWithWhereUniqueWithoutVeterinariaInput[]
+  createMany?: Prisma.OperatorCreateManyVeterinariaInputEnvelope
   set?: Prisma.OperatorWhereUniqueInput | Prisma.OperatorWhereUniqueInput[]
   disconnect?: Prisma.OperatorWhereUniqueInput | Prisma.OperatorWhereUniqueInput[]
   delete?: Prisma.OperatorWhereUniqueInput | Prisma.OperatorWhereUniqueInput[]
   connect?: Prisma.OperatorWhereUniqueInput | Prisma.OperatorWhereUniqueInput[]
-  update?: Prisma.OperatorUpdateWithWhereUniqueWithoutVeterinaryInput | Prisma.OperatorUpdateWithWhereUniqueWithoutVeterinaryInput[]
-  updateMany?: Prisma.OperatorUpdateManyWithWhereWithoutVeterinaryInput | Prisma.OperatorUpdateManyWithWhereWithoutVeterinaryInput[]
+  update?: Prisma.OperatorUpdateWithWhereUniqueWithoutVeterinariaInput | Prisma.OperatorUpdateWithWhereUniqueWithoutVeterinariaInput[]
+  updateMany?: Prisma.OperatorUpdateManyWithWhereWithoutVeterinariaInput | Prisma.OperatorUpdateManyWithWhereWithoutVeterinariaInput[]
   deleteMany?: Prisma.OperatorScalarWhereInput | Prisma.OperatorScalarWhereInput[]
 }
 
-export type OperatorUncheckedUpdateManyWithoutVeterinaryNestedInput = {
-  create?: Prisma.XOR<Prisma.OperatorCreateWithoutVeterinaryInput, Prisma.OperatorUncheckedCreateWithoutVeterinaryInput> | Prisma.OperatorCreateWithoutVeterinaryInput[] | Prisma.OperatorUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutVeterinaryInput | Prisma.OperatorCreateOrConnectWithoutVeterinaryInput[]
-  upsert?: Prisma.OperatorUpsertWithWhereUniqueWithoutVeterinaryInput | Prisma.OperatorUpsertWithWhereUniqueWithoutVeterinaryInput[]
-  createMany?: Prisma.OperatorCreateManyVeterinaryInputEnvelope
+export type OperatorUncheckedUpdateManyWithoutVeterinariaNestedInput = {
+  create?: Prisma.XOR<Prisma.OperatorCreateWithoutVeterinariaInput, Prisma.OperatorUncheckedCreateWithoutVeterinariaInput> | Prisma.OperatorCreateWithoutVeterinariaInput[] | Prisma.OperatorUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutVeterinariaInput | Prisma.OperatorCreateOrConnectWithoutVeterinariaInput[]
+  upsert?: Prisma.OperatorUpsertWithWhereUniqueWithoutVeterinariaInput | Prisma.OperatorUpsertWithWhereUniqueWithoutVeterinariaInput[]
+  createMany?: Prisma.OperatorCreateManyVeterinariaInputEnvelope
   set?: Prisma.OperatorWhereUniqueInput | Prisma.OperatorWhereUniqueInput[]
   disconnect?: Prisma.OperatorWhereUniqueInput | Prisma.OperatorWhereUniqueInput[]
   delete?: Prisma.OperatorWhereUniqueInput | Prisma.OperatorWhereUniqueInput[]
   connect?: Prisma.OperatorWhereUniqueInput | Prisma.OperatorWhereUniqueInput[]
-  update?: Prisma.OperatorUpdateWithWhereUniqueWithoutVeterinaryInput | Prisma.OperatorUpdateWithWhereUniqueWithoutVeterinaryInput[]
-  updateMany?: Prisma.OperatorUpdateManyWithWhereWithoutVeterinaryInput | Prisma.OperatorUpdateManyWithWhereWithoutVeterinaryInput[]
+  update?: Prisma.OperatorUpdateWithWhereUniqueWithoutVeterinariaInput | Prisma.OperatorUpdateWithWhereUniqueWithoutVeterinariaInput[]
+  updateMany?: Prisma.OperatorUpdateManyWithWhereWithoutVeterinariaInput | Prisma.OperatorUpdateManyWithWhereWithoutVeterinariaInput[]
   deleteMany?: Prisma.OperatorScalarWhereInput | Prisma.OperatorScalarWhereInput[]
 }
 
@@ -512,200 +512,200 @@ export type NullableDateTimeFieldUpdateOperationsInput = {
   set?: Date | string | null
 }
 
-export type OperatorCreateNestedOneWithoutAppointmentsInput = {
-  create?: Prisma.XOR<Prisma.OperatorCreateWithoutAppointmentsInput, Prisma.OperatorUncheckedCreateWithoutAppointmentsInput>
-  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutAppointmentsInput
+export type OperatorCreateNestedOneWithoutCitasInput = {
+  create?: Prisma.XOR<Prisma.OperatorCreateWithoutCitasInput, Prisma.OperatorUncheckedCreateWithoutCitasInput>
+  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutCitasInput
   connect?: Prisma.OperatorWhereUniqueInput
 }
 
-export type OperatorUpdateOneWithoutAppointmentsNestedInput = {
-  create?: Prisma.XOR<Prisma.OperatorCreateWithoutAppointmentsInput, Prisma.OperatorUncheckedCreateWithoutAppointmentsInput>
-  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutAppointmentsInput
-  upsert?: Prisma.OperatorUpsertWithoutAppointmentsInput
+export type OperatorUpdateOneWithoutCitasNestedInput = {
+  create?: Prisma.XOR<Prisma.OperatorCreateWithoutCitasInput, Prisma.OperatorUncheckedCreateWithoutCitasInput>
+  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutCitasInput
+  upsert?: Prisma.OperatorUpsertWithoutCitasInput
   disconnect?: Prisma.OperatorWhereInput | boolean
   delete?: Prisma.OperatorWhereInput | boolean
   connect?: Prisma.OperatorWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.OperatorUpdateToOneWithWhereWithoutAppointmentsInput, Prisma.OperatorUpdateWithoutAppointmentsInput>, Prisma.OperatorUncheckedUpdateWithoutAppointmentsInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.OperatorUpdateToOneWithWhereWithoutCitasInput, Prisma.OperatorUpdateWithoutCitasInput>, Prisma.OperatorUncheckedUpdateWithoutCitasInput>
 }
 
-export type OperatorCreateNestedOneWithoutProceduresInput = {
-  create?: Prisma.XOR<Prisma.OperatorCreateWithoutProceduresInput, Prisma.OperatorUncheckedCreateWithoutProceduresInput>
-  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutProceduresInput
+export type OperatorCreateNestedOneWithoutProcedimientosInput = {
+  create?: Prisma.XOR<Prisma.OperatorCreateWithoutProcedimientosInput, Prisma.OperatorUncheckedCreateWithoutProcedimientosInput>
+  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutProcedimientosInput
   connect?: Prisma.OperatorWhereUniqueInput
 }
 
-export type OperatorUpdateOneWithoutProceduresNestedInput = {
-  create?: Prisma.XOR<Prisma.OperatorCreateWithoutProceduresInput, Prisma.OperatorUncheckedCreateWithoutProceduresInput>
-  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutProceduresInput
-  upsert?: Prisma.OperatorUpsertWithoutProceduresInput
+export type OperatorUpdateOneWithoutProcedimientosNestedInput = {
+  create?: Prisma.XOR<Prisma.OperatorCreateWithoutProcedimientosInput, Prisma.OperatorUncheckedCreateWithoutProcedimientosInput>
+  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutProcedimientosInput
+  upsert?: Prisma.OperatorUpsertWithoutProcedimientosInput
   disconnect?: Prisma.OperatorWhereInput | boolean
   delete?: Prisma.OperatorWhereInput | boolean
   connect?: Prisma.OperatorWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.OperatorUpdateToOneWithWhereWithoutProceduresInput, Prisma.OperatorUpdateWithoutProceduresInput>, Prisma.OperatorUncheckedUpdateWithoutProceduresInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.OperatorUpdateToOneWithWhereWithoutProcedimientosInput, Prisma.OperatorUpdateWithoutProcedimientosInput>, Prisma.OperatorUncheckedUpdateWithoutProcedimientosInput>
 }
 
-export type OperatorCreateNestedOneWithoutClinicalRecordsInput = {
-  create?: Prisma.XOR<Prisma.OperatorCreateWithoutClinicalRecordsInput, Prisma.OperatorUncheckedCreateWithoutClinicalRecordsInput>
-  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutClinicalRecordsInput
+export type OperatorCreateNestedOneWithoutRegistrosClinicoInput = {
+  create?: Prisma.XOR<Prisma.OperatorCreateWithoutRegistrosClinicoInput, Prisma.OperatorUncheckedCreateWithoutRegistrosClinicoInput>
+  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutRegistrosClinicoInput
   connect?: Prisma.OperatorWhereUniqueInput
 }
 
-export type OperatorUpdateOneWithoutClinicalRecordsNestedInput = {
-  create?: Prisma.XOR<Prisma.OperatorCreateWithoutClinicalRecordsInput, Prisma.OperatorUncheckedCreateWithoutClinicalRecordsInput>
-  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutClinicalRecordsInput
-  upsert?: Prisma.OperatorUpsertWithoutClinicalRecordsInput
+export type OperatorUpdateOneWithoutRegistrosClinicoNestedInput = {
+  create?: Prisma.XOR<Prisma.OperatorCreateWithoutRegistrosClinicoInput, Prisma.OperatorUncheckedCreateWithoutRegistrosClinicoInput>
+  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutRegistrosClinicoInput
+  upsert?: Prisma.OperatorUpsertWithoutRegistrosClinicoInput
   disconnect?: Prisma.OperatorWhereInput | boolean
   delete?: Prisma.OperatorWhereInput | boolean
   connect?: Prisma.OperatorWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.OperatorUpdateToOneWithWhereWithoutClinicalRecordsInput, Prisma.OperatorUpdateWithoutClinicalRecordsInput>, Prisma.OperatorUncheckedUpdateWithoutClinicalRecordsInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.OperatorUpdateToOneWithWhereWithoutRegistrosClinicoInput, Prisma.OperatorUpdateWithoutRegistrosClinicoInput>, Prisma.OperatorUncheckedUpdateWithoutRegistrosClinicoInput>
 }
 
-export type OperatorCreateNestedOneWithoutVaccinationsInput = {
-  create?: Prisma.XOR<Prisma.OperatorCreateWithoutVaccinationsInput, Prisma.OperatorUncheckedCreateWithoutVaccinationsInput>
-  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutVaccinationsInput
+export type OperatorCreateNestedOneWithoutVacunacionesInput = {
+  create?: Prisma.XOR<Prisma.OperatorCreateWithoutVacunacionesInput, Prisma.OperatorUncheckedCreateWithoutVacunacionesInput>
+  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutVacunacionesInput
   connect?: Prisma.OperatorWhereUniqueInput
 }
 
-export type OperatorUpdateOneWithoutVaccinationsNestedInput = {
-  create?: Prisma.XOR<Prisma.OperatorCreateWithoutVaccinationsInput, Prisma.OperatorUncheckedCreateWithoutVaccinationsInput>
-  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutVaccinationsInput
-  upsert?: Prisma.OperatorUpsertWithoutVaccinationsInput
+export type OperatorUpdateOneWithoutVacunacionesNestedInput = {
+  create?: Prisma.XOR<Prisma.OperatorCreateWithoutVacunacionesInput, Prisma.OperatorUncheckedCreateWithoutVacunacionesInput>
+  connectOrCreate?: Prisma.OperatorCreateOrConnectWithoutVacunacionesInput
+  upsert?: Prisma.OperatorUpsertWithoutVacunacionesInput
   disconnect?: Prisma.OperatorWhereInput | boolean
   delete?: Prisma.OperatorWhereInput | boolean
   connect?: Prisma.OperatorWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.OperatorUpdateToOneWithWhereWithoutVaccinationsInput, Prisma.OperatorUpdateWithoutVaccinationsInput>, Prisma.OperatorUncheckedUpdateWithoutVaccinationsInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.OperatorUpdateToOneWithWhereWithoutVacunacionesInput, Prisma.OperatorUpdateWithoutVacunacionesInput>, Prisma.OperatorUncheckedUpdateWithoutVacunacionesInput>
 }
 
-export type OperatorCreateWithoutUserInput = {
+export type OperatorCreateWithoutUsuarioInput = {
   id?: string
-  position?: string | null
-  hireDate?: Date | string | null
-  isActive?: boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  veterinary: Prisma.VeterinaryCreateNestedOneWithoutOperatorsInput
-  appointments?: Prisma.AppointmentCreateNestedManyWithoutOperatorInput
-  procedures?: Prisma.ProcedureCreateNestedManyWithoutPerformerInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutRecorderInput
-  vaccinations?: Prisma.VaccinationCreateNestedManyWithoutAdministratorInput
+  posicion?: string | null
+  fechaContratacion?: Date | string | null
+  estaActivo?: boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  veterinaria: Prisma.VeterinaryCreateNestedOneWithoutOperadoresInput
+  citas?: Prisma.AppointmentCreateNestedManyWithoutOperadorInput
+  procedimientos?: Prisma.ProcedureCreateNestedManyWithoutEjecutorInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutRegistradorInput
+  vacunaciones?: Prisma.VaccinationCreateNestedManyWithoutAdministradorInput
 }
 
-export type OperatorUncheckedCreateWithoutUserInput = {
+export type OperatorUncheckedCreateWithoutUsuarioInput = {
   id?: string
-  veterinaryId: string
-  position?: string | null
-  hireDate?: Date | string | null
-  isActive?: boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  appointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutOperatorInput
-  procedures?: Prisma.ProcedureUncheckedCreateNestedManyWithoutPerformerInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutRecorderInput
-  vaccinations?: Prisma.VaccinationUncheckedCreateNestedManyWithoutAdministratorInput
+  veterinariaId: string
+  posicion?: string | null
+  fechaContratacion?: Date | string | null
+  estaActivo?: boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutOperadorInput
+  procedimientos?: Prisma.ProcedureUncheckedCreateNestedManyWithoutEjecutorInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutRegistradorInput
+  vacunaciones?: Prisma.VaccinationUncheckedCreateNestedManyWithoutAdministradorInput
 }
 
-export type OperatorCreateOrConnectWithoutUserInput = {
+export type OperatorCreateOrConnectWithoutUsuarioInput = {
   where: Prisma.OperatorWhereUniqueInput
-  create: Prisma.XOR<Prisma.OperatorCreateWithoutUserInput, Prisma.OperatorUncheckedCreateWithoutUserInput>
+  create: Prisma.XOR<Prisma.OperatorCreateWithoutUsuarioInput, Prisma.OperatorUncheckedCreateWithoutUsuarioInput>
 }
 
-export type OperatorUpsertWithoutUserInput = {
-  update: Prisma.XOR<Prisma.OperatorUpdateWithoutUserInput, Prisma.OperatorUncheckedUpdateWithoutUserInput>
-  create: Prisma.XOR<Prisma.OperatorCreateWithoutUserInput, Prisma.OperatorUncheckedCreateWithoutUserInput>
+export type OperatorUpsertWithoutUsuarioInput = {
+  update: Prisma.XOR<Prisma.OperatorUpdateWithoutUsuarioInput, Prisma.OperatorUncheckedUpdateWithoutUsuarioInput>
+  create: Prisma.XOR<Prisma.OperatorCreateWithoutUsuarioInput, Prisma.OperatorUncheckedCreateWithoutUsuarioInput>
   where?: Prisma.OperatorWhereInput
 }
 
-export type OperatorUpdateToOneWithWhereWithoutUserInput = {
+export type OperatorUpdateToOneWithWhereWithoutUsuarioInput = {
   where?: Prisma.OperatorWhereInput
-  data: Prisma.XOR<Prisma.OperatorUpdateWithoutUserInput, Prisma.OperatorUncheckedUpdateWithoutUserInput>
+  data: Prisma.XOR<Prisma.OperatorUpdateWithoutUsuarioInput, Prisma.OperatorUncheckedUpdateWithoutUsuarioInput>
 }
 
-export type OperatorUpdateWithoutUserInput = {
+export type OperatorUpdateWithoutUsuarioInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  position?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  hireDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  veterinary?: Prisma.VeterinaryUpdateOneRequiredWithoutOperatorsNestedInput
-  appointments?: Prisma.AppointmentUpdateManyWithoutOperatorNestedInput
-  procedures?: Prisma.ProcedureUpdateManyWithoutPerformerNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutRecorderNestedInput
-  vaccinations?: Prisma.VaccinationUpdateManyWithoutAdministratorNestedInput
+  posicion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaContratacion?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  veterinaria?: Prisma.VeterinaryUpdateOneRequiredWithoutOperadoresNestedInput
+  citas?: Prisma.AppointmentUpdateManyWithoutOperadorNestedInput
+  procedimientos?: Prisma.ProcedureUpdateManyWithoutEjecutorNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutRegistradorNestedInput
+  vacunaciones?: Prisma.VaccinationUpdateManyWithoutAdministradorNestedInput
 }
 
-export type OperatorUncheckedUpdateWithoutUserInput = {
+export type OperatorUncheckedUpdateWithoutUsuarioInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.StringFieldUpdateOperationsInput | string
-  position?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  hireDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  appointments?: Prisma.AppointmentUncheckedUpdateManyWithoutOperatorNestedInput
-  procedures?: Prisma.ProcedureUncheckedUpdateManyWithoutPerformerNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutRecorderNestedInput
-  vaccinations?: Prisma.VaccinationUncheckedUpdateManyWithoutAdministratorNestedInput
+  veterinariaId?: Prisma.StringFieldUpdateOperationsInput | string
+  posicion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaContratacion?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  citas?: Prisma.AppointmentUncheckedUpdateManyWithoutOperadorNestedInput
+  procedimientos?: Prisma.ProcedureUncheckedUpdateManyWithoutEjecutorNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutRegistradorNestedInput
+  vacunaciones?: Prisma.VaccinationUncheckedUpdateManyWithoutAdministradorNestedInput
 }
 
-export type OperatorCreateWithoutVeterinaryInput = {
+export type OperatorCreateWithoutVeterinariaInput = {
   id?: string
-  position?: string | null
-  hireDate?: Date | string | null
-  isActive?: boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  user: Prisma.UserCreateNestedOneWithoutOperatorInput
-  appointments?: Prisma.AppointmentCreateNestedManyWithoutOperatorInput
-  procedures?: Prisma.ProcedureCreateNestedManyWithoutPerformerInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutRecorderInput
-  vaccinations?: Prisma.VaccinationCreateNestedManyWithoutAdministratorInput
+  posicion?: string | null
+  fechaContratacion?: Date | string | null
+  estaActivo?: boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  usuario: Prisma.UserCreateNestedOneWithoutOperadorInput
+  citas?: Prisma.AppointmentCreateNestedManyWithoutOperadorInput
+  procedimientos?: Prisma.ProcedureCreateNestedManyWithoutEjecutorInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutRegistradorInput
+  vacunaciones?: Prisma.VaccinationCreateNestedManyWithoutAdministradorInput
 }
 
-export type OperatorUncheckedCreateWithoutVeterinaryInput = {
+export type OperatorUncheckedCreateWithoutVeterinariaInput = {
   id?: string
-  userId: string
-  position?: string | null
-  hireDate?: Date | string | null
-  isActive?: boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  appointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutOperatorInput
-  procedures?: Prisma.ProcedureUncheckedCreateNestedManyWithoutPerformerInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutRecorderInput
-  vaccinations?: Prisma.VaccinationUncheckedCreateNestedManyWithoutAdministratorInput
+  usuarioId: string
+  posicion?: string | null
+  fechaContratacion?: Date | string | null
+  estaActivo?: boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutOperadorInput
+  procedimientos?: Prisma.ProcedureUncheckedCreateNestedManyWithoutEjecutorInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutRegistradorInput
+  vacunaciones?: Prisma.VaccinationUncheckedCreateNestedManyWithoutAdministradorInput
 }
 
-export type OperatorCreateOrConnectWithoutVeterinaryInput = {
+export type OperatorCreateOrConnectWithoutVeterinariaInput = {
   where: Prisma.OperatorWhereUniqueInput
-  create: Prisma.XOR<Prisma.OperatorCreateWithoutVeterinaryInput, Prisma.OperatorUncheckedCreateWithoutVeterinaryInput>
+  create: Prisma.XOR<Prisma.OperatorCreateWithoutVeterinariaInput, Prisma.OperatorUncheckedCreateWithoutVeterinariaInput>
 }
 
-export type OperatorCreateManyVeterinaryInputEnvelope = {
-  data: Prisma.OperatorCreateManyVeterinaryInput | Prisma.OperatorCreateManyVeterinaryInput[]
+export type OperatorCreateManyVeterinariaInputEnvelope = {
+  data: Prisma.OperatorCreateManyVeterinariaInput | Prisma.OperatorCreateManyVeterinariaInput[]
   skipDuplicates?: boolean
 }
 
-export type OperatorUpsertWithWhereUniqueWithoutVeterinaryInput = {
+export type OperatorUpsertWithWhereUniqueWithoutVeterinariaInput = {
   where: Prisma.OperatorWhereUniqueInput
-  update: Prisma.XOR<Prisma.OperatorUpdateWithoutVeterinaryInput, Prisma.OperatorUncheckedUpdateWithoutVeterinaryInput>
-  create: Prisma.XOR<Prisma.OperatorCreateWithoutVeterinaryInput, Prisma.OperatorUncheckedCreateWithoutVeterinaryInput>
+  update: Prisma.XOR<Prisma.OperatorUpdateWithoutVeterinariaInput, Prisma.OperatorUncheckedUpdateWithoutVeterinariaInput>
+  create: Prisma.XOR<Prisma.OperatorCreateWithoutVeterinariaInput, Prisma.OperatorUncheckedCreateWithoutVeterinariaInput>
 }
 
-export type OperatorUpdateWithWhereUniqueWithoutVeterinaryInput = {
+export type OperatorUpdateWithWhereUniqueWithoutVeterinariaInput = {
   where: Prisma.OperatorWhereUniqueInput
-  data: Prisma.XOR<Prisma.OperatorUpdateWithoutVeterinaryInput, Prisma.OperatorUncheckedUpdateWithoutVeterinaryInput>
+  data: Prisma.XOR<Prisma.OperatorUpdateWithoutVeterinariaInput, Prisma.OperatorUncheckedUpdateWithoutVeterinariaInput>
 }
 
-export type OperatorUpdateManyWithWhereWithoutVeterinaryInput = {
+export type OperatorUpdateManyWithWhereWithoutVeterinariaInput = {
   where: Prisma.OperatorScalarWhereInput
-  data: Prisma.XOR<Prisma.OperatorUpdateManyMutationInput, Prisma.OperatorUncheckedUpdateManyWithoutVeterinaryInput>
+  data: Prisma.XOR<Prisma.OperatorUpdateManyMutationInput, Prisma.OperatorUncheckedUpdateManyWithoutVeterinariaInput>
 }
 
 export type OperatorScalarWhereInput = {
@@ -713,370 +713,370 @@ export type OperatorScalarWhereInput = {
   OR?: Prisma.OperatorScalarWhereInput[]
   NOT?: Prisma.OperatorScalarWhereInput | Prisma.OperatorScalarWhereInput[]
   id?: Prisma.UuidFilter<"Operator"> | string
-  userId?: Prisma.UuidFilter<"Operator"> | string
-  veterinaryId?: Prisma.UuidFilter<"Operator"> | string
-  position?: Prisma.StringNullableFilter<"Operator"> | string | null
-  hireDate?: Prisma.DateTimeNullableFilter<"Operator"> | Date | string | null
-  isActive?: Prisma.BoolFilter<"Operator"> | boolean
-  permissions?: Prisma.JsonNullableFilter<"Operator">
-  createdAt?: Prisma.DateTimeFilter<"Operator"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"Operator"> | Date | string
+  usuarioId?: Prisma.UuidFilter<"Operator"> | string
+  veterinariaId?: Prisma.UuidFilter<"Operator"> | string
+  posicion?: Prisma.StringNullableFilter<"Operator"> | string | null
+  fechaContratacion?: Prisma.DateTimeNullableFilter<"Operator"> | Date | string | null
+  estaActivo?: Prisma.BoolFilter<"Operator"> | boolean
+  permisos?: Prisma.JsonNullableFilter<"Operator">
+  creadoEn?: Prisma.DateTimeFilter<"Operator"> | Date | string
+  actualizadoEn?: Prisma.DateTimeFilter<"Operator"> | Date | string
 }
 
-export type OperatorCreateWithoutAppointmentsInput = {
+export type OperatorCreateWithoutCitasInput = {
   id?: string
-  position?: string | null
-  hireDate?: Date | string | null
-  isActive?: boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  user: Prisma.UserCreateNestedOneWithoutOperatorInput
-  veterinary: Prisma.VeterinaryCreateNestedOneWithoutOperatorsInput
-  procedures?: Prisma.ProcedureCreateNestedManyWithoutPerformerInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutRecorderInput
-  vaccinations?: Prisma.VaccinationCreateNestedManyWithoutAdministratorInput
+  posicion?: string | null
+  fechaContratacion?: Date | string | null
+  estaActivo?: boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  usuario: Prisma.UserCreateNestedOneWithoutOperadorInput
+  veterinaria: Prisma.VeterinaryCreateNestedOneWithoutOperadoresInput
+  procedimientos?: Prisma.ProcedureCreateNestedManyWithoutEjecutorInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutRegistradorInput
+  vacunaciones?: Prisma.VaccinationCreateNestedManyWithoutAdministradorInput
 }
 
-export type OperatorUncheckedCreateWithoutAppointmentsInput = {
+export type OperatorUncheckedCreateWithoutCitasInput = {
   id?: string
-  userId: string
-  veterinaryId: string
-  position?: string | null
-  hireDate?: Date | string | null
-  isActive?: boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  procedures?: Prisma.ProcedureUncheckedCreateNestedManyWithoutPerformerInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutRecorderInput
-  vaccinations?: Prisma.VaccinationUncheckedCreateNestedManyWithoutAdministratorInput
+  usuarioId: string
+  veterinariaId: string
+  posicion?: string | null
+  fechaContratacion?: Date | string | null
+  estaActivo?: boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  procedimientos?: Prisma.ProcedureUncheckedCreateNestedManyWithoutEjecutorInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutRegistradorInput
+  vacunaciones?: Prisma.VaccinationUncheckedCreateNestedManyWithoutAdministradorInput
 }
 
-export type OperatorCreateOrConnectWithoutAppointmentsInput = {
+export type OperatorCreateOrConnectWithoutCitasInput = {
   where: Prisma.OperatorWhereUniqueInput
-  create: Prisma.XOR<Prisma.OperatorCreateWithoutAppointmentsInput, Prisma.OperatorUncheckedCreateWithoutAppointmentsInput>
+  create: Prisma.XOR<Prisma.OperatorCreateWithoutCitasInput, Prisma.OperatorUncheckedCreateWithoutCitasInput>
 }
 
-export type OperatorUpsertWithoutAppointmentsInput = {
-  update: Prisma.XOR<Prisma.OperatorUpdateWithoutAppointmentsInput, Prisma.OperatorUncheckedUpdateWithoutAppointmentsInput>
-  create: Prisma.XOR<Prisma.OperatorCreateWithoutAppointmentsInput, Prisma.OperatorUncheckedCreateWithoutAppointmentsInput>
+export type OperatorUpsertWithoutCitasInput = {
+  update: Prisma.XOR<Prisma.OperatorUpdateWithoutCitasInput, Prisma.OperatorUncheckedUpdateWithoutCitasInput>
+  create: Prisma.XOR<Prisma.OperatorCreateWithoutCitasInput, Prisma.OperatorUncheckedCreateWithoutCitasInput>
   where?: Prisma.OperatorWhereInput
 }
 
-export type OperatorUpdateToOneWithWhereWithoutAppointmentsInput = {
+export type OperatorUpdateToOneWithWhereWithoutCitasInput = {
   where?: Prisma.OperatorWhereInput
-  data: Prisma.XOR<Prisma.OperatorUpdateWithoutAppointmentsInput, Prisma.OperatorUncheckedUpdateWithoutAppointmentsInput>
+  data: Prisma.XOR<Prisma.OperatorUpdateWithoutCitasInput, Prisma.OperatorUncheckedUpdateWithoutCitasInput>
 }
 
-export type OperatorUpdateWithoutAppointmentsInput = {
+export type OperatorUpdateWithoutCitasInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  position?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  hireDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  user?: Prisma.UserUpdateOneRequiredWithoutOperatorNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneRequiredWithoutOperatorsNestedInput
-  procedures?: Prisma.ProcedureUpdateManyWithoutPerformerNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutRecorderNestedInput
-  vaccinations?: Prisma.VaccinationUpdateManyWithoutAdministratorNestedInput
+  posicion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaContratacion?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuario?: Prisma.UserUpdateOneRequiredWithoutOperadorNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneRequiredWithoutOperadoresNestedInput
+  procedimientos?: Prisma.ProcedureUpdateManyWithoutEjecutorNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutRegistradorNestedInput
+  vacunaciones?: Prisma.VaccinationUpdateManyWithoutAdministradorNestedInput
 }
 
-export type OperatorUncheckedUpdateWithoutAppointmentsInput = {
+export type OperatorUncheckedUpdateWithoutCitasInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.StringFieldUpdateOperationsInput | string
-  position?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  hireDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  procedures?: Prisma.ProcedureUncheckedUpdateManyWithoutPerformerNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutRecorderNestedInput
-  vaccinations?: Prisma.VaccinationUncheckedUpdateManyWithoutAdministratorNestedInput
+  usuarioId?: Prisma.StringFieldUpdateOperationsInput | string
+  veterinariaId?: Prisma.StringFieldUpdateOperationsInput | string
+  posicion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaContratacion?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  procedimientos?: Prisma.ProcedureUncheckedUpdateManyWithoutEjecutorNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutRegistradorNestedInput
+  vacunaciones?: Prisma.VaccinationUncheckedUpdateManyWithoutAdministradorNestedInput
 }
 
-export type OperatorCreateWithoutProceduresInput = {
+export type OperatorCreateWithoutProcedimientosInput = {
   id?: string
-  position?: string | null
-  hireDate?: Date | string | null
-  isActive?: boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  user: Prisma.UserCreateNestedOneWithoutOperatorInput
-  veterinary: Prisma.VeterinaryCreateNestedOneWithoutOperatorsInput
-  appointments?: Prisma.AppointmentCreateNestedManyWithoutOperatorInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutRecorderInput
-  vaccinations?: Prisma.VaccinationCreateNestedManyWithoutAdministratorInput
+  posicion?: string | null
+  fechaContratacion?: Date | string | null
+  estaActivo?: boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  usuario: Prisma.UserCreateNestedOneWithoutOperadorInput
+  veterinaria: Prisma.VeterinaryCreateNestedOneWithoutOperadoresInput
+  citas?: Prisma.AppointmentCreateNestedManyWithoutOperadorInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutRegistradorInput
+  vacunaciones?: Prisma.VaccinationCreateNestedManyWithoutAdministradorInput
 }
 
-export type OperatorUncheckedCreateWithoutProceduresInput = {
+export type OperatorUncheckedCreateWithoutProcedimientosInput = {
   id?: string
-  userId: string
-  veterinaryId: string
-  position?: string | null
-  hireDate?: Date | string | null
-  isActive?: boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  appointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutOperatorInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutRecorderInput
-  vaccinations?: Prisma.VaccinationUncheckedCreateNestedManyWithoutAdministratorInput
+  usuarioId: string
+  veterinariaId: string
+  posicion?: string | null
+  fechaContratacion?: Date | string | null
+  estaActivo?: boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutOperadorInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutRegistradorInput
+  vacunaciones?: Prisma.VaccinationUncheckedCreateNestedManyWithoutAdministradorInput
 }
 
-export type OperatorCreateOrConnectWithoutProceduresInput = {
+export type OperatorCreateOrConnectWithoutProcedimientosInput = {
   where: Prisma.OperatorWhereUniqueInput
-  create: Prisma.XOR<Prisma.OperatorCreateWithoutProceduresInput, Prisma.OperatorUncheckedCreateWithoutProceduresInput>
+  create: Prisma.XOR<Prisma.OperatorCreateWithoutProcedimientosInput, Prisma.OperatorUncheckedCreateWithoutProcedimientosInput>
 }
 
-export type OperatorUpsertWithoutProceduresInput = {
-  update: Prisma.XOR<Prisma.OperatorUpdateWithoutProceduresInput, Prisma.OperatorUncheckedUpdateWithoutProceduresInput>
-  create: Prisma.XOR<Prisma.OperatorCreateWithoutProceduresInput, Prisma.OperatorUncheckedCreateWithoutProceduresInput>
+export type OperatorUpsertWithoutProcedimientosInput = {
+  update: Prisma.XOR<Prisma.OperatorUpdateWithoutProcedimientosInput, Prisma.OperatorUncheckedUpdateWithoutProcedimientosInput>
+  create: Prisma.XOR<Prisma.OperatorCreateWithoutProcedimientosInput, Prisma.OperatorUncheckedCreateWithoutProcedimientosInput>
   where?: Prisma.OperatorWhereInput
 }
 
-export type OperatorUpdateToOneWithWhereWithoutProceduresInput = {
+export type OperatorUpdateToOneWithWhereWithoutProcedimientosInput = {
   where?: Prisma.OperatorWhereInput
-  data: Prisma.XOR<Prisma.OperatorUpdateWithoutProceduresInput, Prisma.OperatorUncheckedUpdateWithoutProceduresInput>
+  data: Prisma.XOR<Prisma.OperatorUpdateWithoutProcedimientosInput, Prisma.OperatorUncheckedUpdateWithoutProcedimientosInput>
 }
 
-export type OperatorUpdateWithoutProceduresInput = {
+export type OperatorUpdateWithoutProcedimientosInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  position?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  hireDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  user?: Prisma.UserUpdateOneRequiredWithoutOperatorNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneRequiredWithoutOperatorsNestedInput
-  appointments?: Prisma.AppointmentUpdateManyWithoutOperatorNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutRecorderNestedInput
-  vaccinations?: Prisma.VaccinationUpdateManyWithoutAdministratorNestedInput
+  posicion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaContratacion?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuario?: Prisma.UserUpdateOneRequiredWithoutOperadorNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneRequiredWithoutOperadoresNestedInput
+  citas?: Prisma.AppointmentUpdateManyWithoutOperadorNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutRegistradorNestedInput
+  vacunaciones?: Prisma.VaccinationUpdateManyWithoutAdministradorNestedInput
 }
 
-export type OperatorUncheckedUpdateWithoutProceduresInput = {
+export type OperatorUncheckedUpdateWithoutProcedimientosInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.StringFieldUpdateOperationsInput | string
-  position?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  hireDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  appointments?: Prisma.AppointmentUncheckedUpdateManyWithoutOperatorNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutRecorderNestedInput
-  vaccinations?: Prisma.VaccinationUncheckedUpdateManyWithoutAdministratorNestedInput
+  usuarioId?: Prisma.StringFieldUpdateOperationsInput | string
+  veterinariaId?: Prisma.StringFieldUpdateOperationsInput | string
+  posicion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaContratacion?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  citas?: Prisma.AppointmentUncheckedUpdateManyWithoutOperadorNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutRegistradorNestedInput
+  vacunaciones?: Prisma.VaccinationUncheckedUpdateManyWithoutAdministradorNestedInput
 }
 
-export type OperatorCreateWithoutClinicalRecordsInput = {
+export type OperatorCreateWithoutRegistrosClinicoInput = {
   id?: string
-  position?: string | null
-  hireDate?: Date | string | null
-  isActive?: boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  user: Prisma.UserCreateNestedOneWithoutOperatorInput
-  veterinary: Prisma.VeterinaryCreateNestedOneWithoutOperatorsInput
-  appointments?: Prisma.AppointmentCreateNestedManyWithoutOperatorInput
-  procedures?: Prisma.ProcedureCreateNestedManyWithoutPerformerInput
-  vaccinations?: Prisma.VaccinationCreateNestedManyWithoutAdministratorInput
+  posicion?: string | null
+  fechaContratacion?: Date | string | null
+  estaActivo?: boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  usuario: Prisma.UserCreateNestedOneWithoutOperadorInput
+  veterinaria: Prisma.VeterinaryCreateNestedOneWithoutOperadoresInput
+  citas?: Prisma.AppointmentCreateNestedManyWithoutOperadorInput
+  procedimientos?: Prisma.ProcedureCreateNestedManyWithoutEjecutorInput
+  vacunaciones?: Prisma.VaccinationCreateNestedManyWithoutAdministradorInput
 }
 
-export type OperatorUncheckedCreateWithoutClinicalRecordsInput = {
+export type OperatorUncheckedCreateWithoutRegistrosClinicoInput = {
   id?: string
-  userId: string
-  veterinaryId: string
-  position?: string | null
-  hireDate?: Date | string | null
-  isActive?: boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  appointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutOperatorInput
-  procedures?: Prisma.ProcedureUncheckedCreateNestedManyWithoutPerformerInput
-  vaccinations?: Prisma.VaccinationUncheckedCreateNestedManyWithoutAdministratorInput
+  usuarioId: string
+  veterinariaId: string
+  posicion?: string | null
+  fechaContratacion?: Date | string | null
+  estaActivo?: boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutOperadorInput
+  procedimientos?: Prisma.ProcedureUncheckedCreateNestedManyWithoutEjecutorInput
+  vacunaciones?: Prisma.VaccinationUncheckedCreateNestedManyWithoutAdministradorInput
 }
 
-export type OperatorCreateOrConnectWithoutClinicalRecordsInput = {
+export type OperatorCreateOrConnectWithoutRegistrosClinicoInput = {
   where: Prisma.OperatorWhereUniqueInput
-  create: Prisma.XOR<Prisma.OperatorCreateWithoutClinicalRecordsInput, Prisma.OperatorUncheckedCreateWithoutClinicalRecordsInput>
+  create: Prisma.XOR<Prisma.OperatorCreateWithoutRegistrosClinicoInput, Prisma.OperatorUncheckedCreateWithoutRegistrosClinicoInput>
 }
 
-export type OperatorUpsertWithoutClinicalRecordsInput = {
-  update: Prisma.XOR<Prisma.OperatorUpdateWithoutClinicalRecordsInput, Prisma.OperatorUncheckedUpdateWithoutClinicalRecordsInput>
-  create: Prisma.XOR<Prisma.OperatorCreateWithoutClinicalRecordsInput, Prisma.OperatorUncheckedCreateWithoutClinicalRecordsInput>
+export type OperatorUpsertWithoutRegistrosClinicoInput = {
+  update: Prisma.XOR<Prisma.OperatorUpdateWithoutRegistrosClinicoInput, Prisma.OperatorUncheckedUpdateWithoutRegistrosClinicoInput>
+  create: Prisma.XOR<Prisma.OperatorCreateWithoutRegistrosClinicoInput, Prisma.OperatorUncheckedCreateWithoutRegistrosClinicoInput>
   where?: Prisma.OperatorWhereInput
 }
 
-export type OperatorUpdateToOneWithWhereWithoutClinicalRecordsInput = {
+export type OperatorUpdateToOneWithWhereWithoutRegistrosClinicoInput = {
   where?: Prisma.OperatorWhereInput
-  data: Prisma.XOR<Prisma.OperatorUpdateWithoutClinicalRecordsInput, Prisma.OperatorUncheckedUpdateWithoutClinicalRecordsInput>
+  data: Prisma.XOR<Prisma.OperatorUpdateWithoutRegistrosClinicoInput, Prisma.OperatorUncheckedUpdateWithoutRegistrosClinicoInput>
 }
 
-export type OperatorUpdateWithoutClinicalRecordsInput = {
+export type OperatorUpdateWithoutRegistrosClinicoInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  position?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  hireDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  user?: Prisma.UserUpdateOneRequiredWithoutOperatorNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneRequiredWithoutOperatorsNestedInput
-  appointments?: Prisma.AppointmentUpdateManyWithoutOperatorNestedInput
-  procedures?: Prisma.ProcedureUpdateManyWithoutPerformerNestedInput
-  vaccinations?: Prisma.VaccinationUpdateManyWithoutAdministratorNestedInput
+  posicion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaContratacion?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuario?: Prisma.UserUpdateOneRequiredWithoutOperadorNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneRequiredWithoutOperadoresNestedInput
+  citas?: Prisma.AppointmentUpdateManyWithoutOperadorNestedInput
+  procedimientos?: Prisma.ProcedureUpdateManyWithoutEjecutorNestedInput
+  vacunaciones?: Prisma.VaccinationUpdateManyWithoutAdministradorNestedInput
 }
 
-export type OperatorUncheckedUpdateWithoutClinicalRecordsInput = {
+export type OperatorUncheckedUpdateWithoutRegistrosClinicoInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.StringFieldUpdateOperationsInput | string
-  position?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  hireDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  appointments?: Prisma.AppointmentUncheckedUpdateManyWithoutOperatorNestedInput
-  procedures?: Prisma.ProcedureUncheckedUpdateManyWithoutPerformerNestedInput
-  vaccinations?: Prisma.VaccinationUncheckedUpdateManyWithoutAdministratorNestedInput
+  usuarioId?: Prisma.StringFieldUpdateOperationsInput | string
+  veterinariaId?: Prisma.StringFieldUpdateOperationsInput | string
+  posicion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaContratacion?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  citas?: Prisma.AppointmentUncheckedUpdateManyWithoutOperadorNestedInput
+  procedimientos?: Prisma.ProcedureUncheckedUpdateManyWithoutEjecutorNestedInput
+  vacunaciones?: Prisma.VaccinationUncheckedUpdateManyWithoutAdministradorNestedInput
 }
 
-export type OperatorCreateWithoutVaccinationsInput = {
+export type OperatorCreateWithoutVacunacionesInput = {
   id?: string
-  position?: string | null
-  hireDate?: Date | string | null
-  isActive?: boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  user: Prisma.UserCreateNestedOneWithoutOperatorInput
-  veterinary: Prisma.VeterinaryCreateNestedOneWithoutOperatorsInput
-  appointments?: Prisma.AppointmentCreateNestedManyWithoutOperatorInput
-  procedures?: Prisma.ProcedureCreateNestedManyWithoutPerformerInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutRecorderInput
+  posicion?: string | null
+  fechaContratacion?: Date | string | null
+  estaActivo?: boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  usuario: Prisma.UserCreateNestedOneWithoutOperadorInput
+  veterinaria: Prisma.VeterinaryCreateNestedOneWithoutOperadoresInput
+  citas?: Prisma.AppointmentCreateNestedManyWithoutOperadorInput
+  procedimientos?: Prisma.ProcedureCreateNestedManyWithoutEjecutorInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutRegistradorInput
 }
 
-export type OperatorUncheckedCreateWithoutVaccinationsInput = {
+export type OperatorUncheckedCreateWithoutVacunacionesInput = {
   id?: string
-  userId: string
-  veterinaryId: string
-  position?: string | null
-  hireDate?: Date | string | null
-  isActive?: boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  appointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutOperatorInput
-  procedures?: Prisma.ProcedureUncheckedCreateNestedManyWithoutPerformerInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutRecorderInput
+  usuarioId: string
+  veterinariaId: string
+  posicion?: string | null
+  fechaContratacion?: Date | string | null
+  estaActivo?: boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutOperadorInput
+  procedimientos?: Prisma.ProcedureUncheckedCreateNestedManyWithoutEjecutorInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutRegistradorInput
 }
 
-export type OperatorCreateOrConnectWithoutVaccinationsInput = {
+export type OperatorCreateOrConnectWithoutVacunacionesInput = {
   where: Prisma.OperatorWhereUniqueInput
-  create: Prisma.XOR<Prisma.OperatorCreateWithoutVaccinationsInput, Prisma.OperatorUncheckedCreateWithoutVaccinationsInput>
+  create: Prisma.XOR<Prisma.OperatorCreateWithoutVacunacionesInput, Prisma.OperatorUncheckedCreateWithoutVacunacionesInput>
 }
 
-export type OperatorUpsertWithoutVaccinationsInput = {
-  update: Prisma.XOR<Prisma.OperatorUpdateWithoutVaccinationsInput, Prisma.OperatorUncheckedUpdateWithoutVaccinationsInput>
-  create: Prisma.XOR<Prisma.OperatorCreateWithoutVaccinationsInput, Prisma.OperatorUncheckedCreateWithoutVaccinationsInput>
+export type OperatorUpsertWithoutVacunacionesInput = {
+  update: Prisma.XOR<Prisma.OperatorUpdateWithoutVacunacionesInput, Prisma.OperatorUncheckedUpdateWithoutVacunacionesInput>
+  create: Prisma.XOR<Prisma.OperatorCreateWithoutVacunacionesInput, Prisma.OperatorUncheckedCreateWithoutVacunacionesInput>
   where?: Prisma.OperatorWhereInput
 }
 
-export type OperatorUpdateToOneWithWhereWithoutVaccinationsInput = {
+export type OperatorUpdateToOneWithWhereWithoutVacunacionesInput = {
   where?: Prisma.OperatorWhereInput
-  data: Prisma.XOR<Prisma.OperatorUpdateWithoutVaccinationsInput, Prisma.OperatorUncheckedUpdateWithoutVaccinationsInput>
+  data: Prisma.XOR<Prisma.OperatorUpdateWithoutVacunacionesInput, Prisma.OperatorUncheckedUpdateWithoutVacunacionesInput>
 }
 
-export type OperatorUpdateWithoutVaccinationsInput = {
+export type OperatorUpdateWithoutVacunacionesInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  position?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  hireDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  user?: Prisma.UserUpdateOneRequiredWithoutOperatorNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneRequiredWithoutOperatorsNestedInput
-  appointments?: Prisma.AppointmentUpdateManyWithoutOperatorNestedInput
-  procedures?: Prisma.ProcedureUpdateManyWithoutPerformerNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutRecorderNestedInput
+  posicion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaContratacion?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuario?: Prisma.UserUpdateOneRequiredWithoutOperadorNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneRequiredWithoutOperadoresNestedInput
+  citas?: Prisma.AppointmentUpdateManyWithoutOperadorNestedInput
+  procedimientos?: Prisma.ProcedureUpdateManyWithoutEjecutorNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutRegistradorNestedInput
 }
 
-export type OperatorUncheckedUpdateWithoutVaccinationsInput = {
+export type OperatorUncheckedUpdateWithoutVacunacionesInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.StringFieldUpdateOperationsInput | string
-  position?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  hireDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  appointments?: Prisma.AppointmentUncheckedUpdateManyWithoutOperatorNestedInput
-  procedures?: Prisma.ProcedureUncheckedUpdateManyWithoutPerformerNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutRecorderNestedInput
+  usuarioId?: Prisma.StringFieldUpdateOperationsInput | string
+  veterinariaId?: Prisma.StringFieldUpdateOperationsInput | string
+  posicion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaContratacion?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  citas?: Prisma.AppointmentUncheckedUpdateManyWithoutOperadorNestedInput
+  procedimientos?: Prisma.ProcedureUncheckedUpdateManyWithoutEjecutorNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutRegistradorNestedInput
 }
 
-export type OperatorCreateManyVeterinaryInput = {
+export type OperatorCreateManyVeterinariaInput = {
   id?: string
-  userId: string
-  position?: string | null
-  hireDate?: Date | string | null
-  isActive?: boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Date | string
-  updatedAt?: Date | string
+  usuarioId: string
+  posicion?: string | null
+  fechaContratacion?: Date | string | null
+  estaActivo?: boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
 }
 
-export type OperatorUpdateWithoutVeterinaryInput = {
+export type OperatorUpdateWithoutVeterinariaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  position?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  hireDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  user?: Prisma.UserUpdateOneRequiredWithoutOperatorNestedInput
-  appointments?: Prisma.AppointmentUpdateManyWithoutOperatorNestedInput
-  procedures?: Prisma.ProcedureUpdateManyWithoutPerformerNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutRecorderNestedInput
-  vaccinations?: Prisma.VaccinationUpdateManyWithoutAdministratorNestedInput
+  posicion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaContratacion?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuario?: Prisma.UserUpdateOneRequiredWithoutOperadorNestedInput
+  citas?: Prisma.AppointmentUpdateManyWithoutOperadorNestedInput
+  procedimientos?: Prisma.ProcedureUpdateManyWithoutEjecutorNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutRegistradorNestedInput
+  vacunaciones?: Prisma.VaccinationUpdateManyWithoutAdministradorNestedInput
 }
 
-export type OperatorUncheckedUpdateWithoutVeterinaryInput = {
+export type OperatorUncheckedUpdateWithoutVeterinariaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
-  position?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  hireDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  appointments?: Prisma.AppointmentUncheckedUpdateManyWithoutOperatorNestedInput
-  procedures?: Prisma.ProcedureUncheckedUpdateManyWithoutPerformerNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutRecorderNestedInput
-  vaccinations?: Prisma.VaccinationUncheckedUpdateManyWithoutAdministratorNestedInput
+  usuarioId?: Prisma.StringFieldUpdateOperationsInput | string
+  posicion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaContratacion?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  citas?: Prisma.AppointmentUncheckedUpdateManyWithoutOperadorNestedInput
+  procedimientos?: Prisma.ProcedureUncheckedUpdateManyWithoutEjecutorNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutRegistradorNestedInput
+  vacunaciones?: Prisma.VaccinationUncheckedUpdateManyWithoutAdministradorNestedInput
 }
 
-export type OperatorUncheckedUpdateManyWithoutVeterinaryInput = {
+export type OperatorUncheckedUpdateManyWithoutVeterinariaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
-  position?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  hireDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  permissions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuarioId?: Prisma.StringFieldUpdateOperationsInput | string
+  posicion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaContratacion?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  permisos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 
@@ -1085,17 +1085,17 @@ export type OperatorUncheckedUpdateManyWithoutVeterinaryInput = {
  */
 
 export type OperatorCountOutputType = {
-  appointments: number
-  procedures: number
-  clinicalRecords: number
-  vaccinations: number
+  citas: number
+  procedimientos: number
+  registrosClinico: number
+  vacunaciones: number
 }
 
 export type OperatorCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  appointments?: boolean | OperatorCountOutputTypeCountAppointmentsArgs
-  procedures?: boolean | OperatorCountOutputTypeCountProceduresArgs
-  clinicalRecords?: boolean | OperatorCountOutputTypeCountClinicalRecordsArgs
-  vaccinations?: boolean | OperatorCountOutputTypeCountVaccinationsArgs
+  citas?: boolean | OperatorCountOutputTypeCountCitasArgs
+  procedimientos?: boolean | OperatorCountOutputTypeCountProcedimientosArgs
+  registrosClinico?: boolean | OperatorCountOutputTypeCountRegistrosClinicoArgs
+  vacunaciones?: boolean | OperatorCountOutputTypeCountVacunacionesArgs
 }
 
 /**
@@ -1111,130 +1111,130 @@ export type OperatorCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.Ext
 /**
  * OperatorCountOutputType without action
  */
-export type OperatorCountOutputTypeCountAppointmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type OperatorCountOutputTypeCountCitasArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.AppointmentWhereInput
 }
 
 /**
  * OperatorCountOutputType without action
  */
-export type OperatorCountOutputTypeCountProceduresArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type OperatorCountOutputTypeCountProcedimientosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.ProcedureWhereInput
 }
 
 /**
  * OperatorCountOutputType without action
  */
-export type OperatorCountOutputTypeCountClinicalRecordsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type OperatorCountOutputTypeCountRegistrosClinicoArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.ClinicalRecordWhereInput
 }
 
 /**
  * OperatorCountOutputType without action
  */
-export type OperatorCountOutputTypeCountVaccinationsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type OperatorCountOutputTypeCountVacunacionesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.VaccinationWhereInput
 }
 
 
 export type OperatorSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  userId?: boolean
-  veterinaryId?: boolean
-  position?: boolean
-  hireDate?: boolean
-  isActive?: boolean
-  permissions?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
-  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
-  veterinary?: boolean | Prisma.VeterinaryDefaultArgs<ExtArgs>
-  appointments?: boolean | Prisma.Operator$appointmentsArgs<ExtArgs>
-  procedures?: boolean | Prisma.Operator$proceduresArgs<ExtArgs>
-  clinicalRecords?: boolean | Prisma.Operator$clinicalRecordsArgs<ExtArgs>
-  vaccinations?: boolean | Prisma.Operator$vaccinationsArgs<ExtArgs>
+  usuarioId?: boolean
+  veterinariaId?: boolean
+  posicion?: boolean
+  fechaContratacion?: boolean
+  estaActivo?: boolean
+  permisos?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
+  usuario?: boolean | Prisma.UserDefaultArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.VeterinaryDefaultArgs<ExtArgs>
+  citas?: boolean | Prisma.Operator$citasArgs<ExtArgs>
+  procedimientos?: boolean | Prisma.Operator$procedimientosArgs<ExtArgs>
+  registrosClinico?: boolean | Prisma.Operator$registrosClinicoArgs<ExtArgs>
+  vacunaciones?: boolean | Prisma.Operator$vacunacionesArgs<ExtArgs>
   _count?: boolean | Prisma.OperatorCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["operator"]>
 
 export type OperatorSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  userId?: boolean
-  veterinaryId?: boolean
-  position?: boolean
-  hireDate?: boolean
-  isActive?: boolean
-  permissions?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
-  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
-  veterinary?: boolean | Prisma.VeterinaryDefaultArgs<ExtArgs>
+  usuarioId?: boolean
+  veterinariaId?: boolean
+  posicion?: boolean
+  fechaContratacion?: boolean
+  estaActivo?: boolean
+  permisos?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
+  usuario?: boolean | Prisma.UserDefaultArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.VeterinaryDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["operator"]>
 
 export type OperatorSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  userId?: boolean
-  veterinaryId?: boolean
-  position?: boolean
-  hireDate?: boolean
-  isActive?: boolean
-  permissions?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
-  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
-  veterinary?: boolean | Prisma.VeterinaryDefaultArgs<ExtArgs>
+  usuarioId?: boolean
+  veterinariaId?: boolean
+  posicion?: boolean
+  fechaContratacion?: boolean
+  estaActivo?: boolean
+  permisos?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
+  usuario?: boolean | Prisma.UserDefaultArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.VeterinaryDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["operator"]>
 
 export type OperatorSelectScalar = {
   id?: boolean
-  userId?: boolean
-  veterinaryId?: boolean
-  position?: boolean
-  hireDate?: boolean
-  isActive?: boolean
-  permissions?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
+  usuarioId?: boolean
+  veterinariaId?: boolean
+  posicion?: boolean
+  fechaContratacion?: boolean
+  estaActivo?: boolean
+  permisos?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
 }
 
-export type OperatorOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "userId" | "veterinaryId" | "position" | "hireDate" | "isActive" | "permissions" | "createdAt" | "updatedAt", ExtArgs["result"]["operator"]>
+export type OperatorOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "usuarioId" | "veterinariaId" | "posicion" | "fechaContratacion" | "estaActivo" | "permisos" | "creadoEn" | "actualizadoEn", ExtArgs["result"]["operator"]>
 export type OperatorInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
-  veterinary?: boolean | Prisma.VeterinaryDefaultArgs<ExtArgs>
-  appointments?: boolean | Prisma.Operator$appointmentsArgs<ExtArgs>
-  procedures?: boolean | Prisma.Operator$proceduresArgs<ExtArgs>
-  clinicalRecords?: boolean | Prisma.Operator$clinicalRecordsArgs<ExtArgs>
-  vaccinations?: boolean | Prisma.Operator$vaccinationsArgs<ExtArgs>
+  usuario?: boolean | Prisma.UserDefaultArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.VeterinaryDefaultArgs<ExtArgs>
+  citas?: boolean | Prisma.Operator$citasArgs<ExtArgs>
+  procedimientos?: boolean | Prisma.Operator$procedimientosArgs<ExtArgs>
+  registrosClinico?: boolean | Prisma.Operator$registrosClinicoArgs<ExtArgs>
+  vacunaciones?: boolean | Prisma.Operator$vacunacionesArgs<ExtArgs>
   _count?: boolean | Prisma.OperatorCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type OperatorIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
-  veterinary?: boolean | Prisma.VeterinaryDefaultArgs<ExtArgs>
+  usuario?: boolean | Prisma.UserDefaultArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.VeterinaryDefaultArgs<ExtArgs>
 }
 export type OperatorIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
-  veterinary?: boolean | Prisma.VeterinaryDefaultArgs<ExtArgs>
+  usuario?: boolean | Prisma.UserDefaultArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.VeterinaryDefaultArgs<ExtArgs>
 }
 
 export type $OperatorPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Operator"
   objects: {
-    user: Prisma.$UserPayload<ExtArgs>
-    veterinary: Prisma.$VeterinaryPayload<ExtArgs>
-    appointments: Prisma.$AppointmentPayload<ExtArgs>[]
-    procedures: Prisma.$ProcedurePayload<ExtArgs>[]
-    clinicalRecords: Prisma.$ClinicalRecordPayload<ExtArgs>[]
-    vaccinations: Prisma.$VaccinationPayload<ExtArgs>[]
+    usuario: Prisma.$UserPayload<ExtArgs>
+    veterinaria: Prisma.$VeterinaryPayload<ExtArgs>
+    citas: Prisma.$AppointmentPayload<ExtArgs>[]
+    procedimientos: Prisma.$ProcedurePayload<ExtArgs>[]
+    registrosClinico: Prisma.$ClinicalRecordPayload<ExtArgs>[]
+    vacunaciones: Prisma.$VaccinationPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
-    userId: string
-    veterinaryId: string
-    position: string | null
-    hireDate: Date | null
-    isActive: boolean
-    permissions: runtime.JsonValue | null
-    createdAt: Date
-    updatedAt: Date
+    usuarioId: string
+    veterinariaId: string
+    posicion: string | null
+    fechaContratacion: Date | null
+    estaActivo: boolean
+    permisos: runtime.JsonValue | null
+    creadoEn: Date
+    actualizadoEn: Date
   }, ExtArgs["result"]["operator"]>
   composites: {}
 }
@@ -1629,12 +1629,12 @@ readonly fields: OperatorFieldRefs;
  */
 export interface Prisma__OperatorClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  user<T extends Prisma.UserDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.UserDefaultArgs<ExtArgs>>): Prisma.Prisma__UserClient<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  veterinary<T extends Prisma.VeterinaryDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.VeterinaryDefaultArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  appointments<T extends Prisma.Operator$appointmentsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Operator$appointmentsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AppointmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  procedures<T extends Prisma.Operator$proceduresArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Operator$proceduresArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ProcedurePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  clinicalRecords<T extends Prisma.Operator$clinicalRecordsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Operator$clinicalRecordsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ClinicalRecordPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  vaccinations<T extends Prisma.Operator$vaccinationsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Operator$vaccinationsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$VaccinationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  usuario<T extends Prisma.UserDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.UserDefaultArgs<ExtArgs>>): Prisma.Prisma__UserClient<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  veterinaria<T extends Prisma.VeterinaryDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.VeterinaryDefaultArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  citas<T extends Prisma.Operator$citasArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Operator$citasArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AppointmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  procedimientos<T extends Prisma.Operator$procedimientosArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Operator$procedimientosArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ProcedurePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  registrosClinico<T extends Prisma.Operator$registrosClinicoArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Operator$registrosClinicoArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ClinicalRecordPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  vacunaciones<T extends Prisma.Operator$vacunacionesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Operator$vacunacionesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$VaccinationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1665,14 +1665,14 @@ export interface Prisma__OperatorClient<T, Null = never, ExtArgs extends runtime
  */
 export interface OperatorFieldRefs {
   readonly id: Prisma.FieldRef<"Operator", 'String'>
-  readonly userId: Prisma.FieldRef<"Operator", 'String'>
-  readonly veterinaryId: Prisma.FieldRef<"Operator", 'String'>
-  readonly position: Prisma.FieldRef<"Operator", 'String'>
-  readonly hireDate: Prisma.FieldRef<"Operator", 'DateTime'>
-  readonly isActive: Prisma.FieldRef<"Operator", 'Boolean'>
-  readonly permissions: Prisma.FieldRef<"Operator", 'Json'>
-  readonly createdAt: Prisma.FieldRef<"Operator", 'DateTime'>
-  readonly updatedAt: Prisma.FieldRef<"Operator", 'DateTime'>
+  readonly usuarioId: Prisma.FieldRef<"Operator", 'String'>
+  readonly veterinariaId: Prisma.FieldRef<"Operator", 'String'>
+  readonly posicion: Prisma.FieldRef<"Operator", 'String'>
+  readonly fechaContratacion: Prisma.FieldRef<"Operator", 'DateTime'>
+  readonly estaActivo: Prisma.FieldRef<"Operator", 'Boolean'>
+  readonly permisos: Prisma.FieldRef<"Operator", 'Json'>
+  readonly creadoEn: Prisma.FieldRef<"Operator", 'DateTime'>
+  readonly actualizadoEn: Prisma.FieldRef<"Operator", 'DateTime'>
 }
     
 
@@ -2069,9 +2069,9 @@ export type OperatorDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.Inte
 }
 
 /**
- * Operator.appointments
+ * Operator.citas
  */
-export type Operator$appointmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Operator$citasArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Appointment
    */
@@ -2093,9 +2093,9 @@ export type Operator$appointmentsArgs<ExtArgs extends runtime.Types.Extensions.I
 }
 
 /**
- * Operator.procedures
+ * Operator.procedimientos
  */
-export type Operator$proceduresArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Operator$procedimientosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Procedure
    */
@@ -2117,9 +2117,9 @@ export type Operator$proceduresArgs<ExtArgs extends runtime.Types.Extensions.Int
 }
 
 /**
- * Operator.clinicalRecords
+ * Operator.registrosClinico
  */
-export type Operator$clinicalRecordsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Operator$registrosClinicoArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the ClinicalRecord
    */
@@ -2141,9 +2141,9 @@ export type Operator$clinicalRecordsArgs<ExtArgs extends runtime.Types.Extension
 }
 
 /**
- * Operator.vaccinations
+ * Operator.vacunaciones
  */
-export type Operator$vaccinationsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Operator$vacunacionesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Vaccination
    */

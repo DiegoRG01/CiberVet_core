@@ -11,7 +11,7 @@ export class AuthService {
     try {
       // 1. Verificar si el usuario ya existe en la BD
       const existingUser = await prisma.user.findUnique({
-        where: { email: data.email },
+        where: { correo: data.email },
       });
 
       if (existingUser) {
@@ -42,17 +42,17 @@ export class AuthService {
       const dbUser = await prisma.user.create({
         data: {
           id: authData.user.id,
-          email: data.email,
-          fullName: data.name,
-          role: data.role,
+          correo: data.email,
+          nombreCompleto: data.name,
+          rol: data.role,
         },
       });
 
       // 4. Crear registro específico según el rol
-      if (data.role === "owner") {
+      if (data.role === "propietario") {
         await prisma.owner.create({
           data: {
-            userId: dbUser.id,
+            usuarioId: dbUser.id,
           },
         });
       }
@@ -65,7 +65,7 @@ export class AuthService {
 
       console.log("Registro exitoso:", {
         userId: dbUser.id,
-        email: dbUser.email,
+        email: dbUser.correo,
         emailConfirmed,
         hasSession,
       });
@@ -74,12 +74,12 @@ export class AuthService {
       return {
         user: {
           id: dbUser.id,
-          email: dbUser.email,
-          fullName: dbUser.fullName,
-          phone: dbUser.phone,
-          role: dbUser.role,
-          veterinaryId: dbUser.veterinaryId,
-          isActive: dbUser.isActive,
+          email: dbUser.correo,
+          fullName: dbUser.nombreCompleto,
+          phone: dbUser.telefono,
+          role: dbUser.rol,
+          veterinaryId: dbUser.veterinariaId,
+          isActive: dbUser.estaActivo,
         },
         session: hasSession
           ? {
@@ -137,12 +137,12 @@ export class AuthService {
       return {
         user: {
           id: dbUser.id,
-          email: dbUser.email,
-          fullName: dbUser.fullName,
-          phone: dbUser.phone,
-          role: dbUser.role,
-          veterinaryId: dbUser.veterinaryId,
-          isActive: dbUser.isActive,
+          email: dbUser.correo,
+          fullName: dbUser.nombreCompleto,
+          phone: dbUser.telefono,
+          role: dbUser.rol,
+          veterinaryId: dbUser.veterinariaId,
+          isActive: dbUser.estaActivo,
         },
         session: {
           access_token: authData.session.access_token,
@@ -182,12 +182,12 @@ export class AuthService {
       return {
         user: {
           id: dbUser.id,
-          email: dbUser.email,
-          fullName: dbUser.fullName,
-          phone: dbUser.phone,
-          role: dbUser.role,
-          veterinaryId: dbUser.veterinaryId,
-          isActive: dbUser.isActive,
+          email: dbUser.correo,
+          fullName: dbUser.nombreCompleto,
+          phone: dbUser.telefono,
+          role: dbUser.rol,
+          veterinaryId: dbUser.veterinariaId,
+          isActive: dbUser.estaActivo,
         },
         session: {
           access_token: authData.session.access_token,
@@ -226,10 +226,10 @@ export class AuthService {
         where: { id: userId },
         select: {
           id: true,
-          email: true,
-          fullName: true,
-          role: true,
-          createdAt: true,
+          correo: true,
+          nombreCompleto: true,
+          rol: true,
+          creadoEn: true,
         },
       });
 
@@ -239,7 +239,7 @@ export class AuthService {
 
       return {
         ...user,
-        name: user.fullName,
+        name: user.nombreCompleto,
       };
     } catch (error) {
       console.error("Error en AuthService.getCurrentUser:", error);

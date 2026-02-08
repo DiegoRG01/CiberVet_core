@@ -26,88 +26,88 @@ export type AggregateEmailReminder = {
 
 export type EmailReminderMinAggregateOutputType = {
   id: string | null
-  appointmentId: string | null
-  ownerId: string | null
-  emailTo: string | null
-  subject: string | null
-  body: string | null
-  scheduledFor: Date | null
-  sentAt: Date | null
-  status: string | null
-  errorMessage: string | null
-  createdAt: Date | null
+  citaId: string | null
+  propietarioId: string | null
+  correoDestino: string | null
+  asunto: string | null
+  cuerpo: string | null
+  programadoPara: Date | null
+  enviadoEn: Date | null
+  estado: string | null
+  mensajeError: string | null
+  creadoEn: Date | null
 }
 
 export type EmailReminderMaxAggregateOutputType = {
   id: string | null
-  appointmentId: string | null
-  ownerId: string | null
-  emailTo: string | null
-  subject: string | null
-  body: string | null
-  scheduledFor: Date | null
-  sentAt: Date | null
-  status: string | null
-  errorMessage: string | null
-  createdAt: Date | null
+  citaId: string | null
+  propietarioId: string | null
+  correoDestino: string | null
+  asunto: string | null
+  cuerpo: string | null
+  programadoPara: Date | null
+  enviadoEn: Date | null
+  estado: string | null
+  mensajeError: string | null
+  creadoEn: Date | null
 }
 
 export type EmailReminderCountAggregateOutputType = {
   id: number
-  appointmentId: number
-  ownerId: number
-  emailTo: number
-  subject: number
-  body: number
-  scheduledFor: number
-  sentAt: number
-  status: number
-  errorMessage: number
-  createdAt: number
+  citaId: number
+  propietarioId: number
+  correoDestino: number
+  asunto: number
+  cuerpo: number
+  programadoPara: number
+  enviadoEn: number
+  estado: number
+  mensajeError: number
+  creadoEn: number
   _all: number
 }
 
 
 export type EmailReminderMinAggregateInputType = {
   id?: true
-  appointmentId?: true
-  ownerId?: true
-  emailTo?: true
-  subject?: true
-  body?: true
-  scheduledFor?: true
-  sentAt?: true
-  status?: true
-  errorMessage?: true
-  createdAt?: true
+  citaId?: true
+  propietarioId?: true
+  correoDestino?: true
+  asunto?: true
+  cuerpo?: true
+  programadoPara?: true
+  enviadoEn?: true
+  estado?: true
+  mensajeError?: true
+  creadoEn?: true
 }
 
 export type EmailReminderMaxAggregateInputType = {
   id?: true
-  appointmentId?: true
-  ownerId?: true
-  emailTo?: true
-  subject?: true
-  body?: true
-  scheduledFor?: true
-  sentAt?: true
-  status?: true
-  errorMessage?: true
-  createdAt?: true
+  citaId?: true
+  propietarioId?: true
+  correoDestino?: true
+  asunto?: true
+  cuerpo?: true
+  programadoPara?: true
+  enviadoEn?: true
+  estado?: true
+  mensajeError?: true
+  creadoEn?: true
 }
 
 export type EmailReminderCountAggregateInputType = {
   id?: true
-  appointmentId?: true
-  ownerId?: true
-  emailTo?: true
-  subject?: true
-  body?: true
-  scheduledFor?: true
-  sentAt?: true
-  status?: true
-  errorMessage?: true
-  createdAt?: true
+  citaId?: true
+  propietarioId?: true
+  correoDestino?: true
+  asunto?: true
+  cuerpo?: true
+  programadoPara?: true
+  enviadoEn?: true
+  estado?: true
+  mensajeError?: true
+  creadoEn?: true
   _all?: true
 }
 
@@ -185,16 +185,16 @@ export type EmailReminderGroupByArgs<ExtArgs extends runtime.Types.Extensions.In
 
 export type EmailReminderGroupByOutputType = {
   id: string
-  appointmentId: string
-  ownerId: string | null
-  emailTo: string
-  subject: string | null
-  body: string | null
-  scheduledFor: Date
-  sentAt: Date | null
-  status: string
-  errorMessage: string | null
-  createdAt: Date
+  citaId: string
+  propietarioId: string | null
+  correoDestino: string
+  asunto: string | null
+  cuerpo: string | null
+  programadoPara: Date
+  enviadoEn: Date | null
+  estado: string
+  mensajeError: string | null
+  creadoEn: Date
   _count: EmailReminderCountAggregateOutputType | null
   _min: EmailReminderMinAggregateOutputType | null
   _max: EmailReminderMaxAggregateOutputType | null
@@ -220,34 +220,34 @@ export type EmailReminderWhereInput = {
   OR?: Prisma.EmailReminderWhereInput[]
   NOT?: Prisma.EmailReminderWhereInput | Prisma.EmailReminderWhereInput[]
   id?: Prisma.UuidFilter<"EmailReminder"> | string
-  appointmentId?: Prisma.UuidFilter<"EmailReminder"> | string
-  ownerId?: Prisma.UuidNullableFilter<"EmailReminder"> | string | null
-  emailTo?: Prisma.StringFilter<"EmailReminder"> | string
-  subject?: Prisma.StringNullableFilter<"EmailReminder"> | string | null
-  body?: Prisma.StringNullableFilter<"EmailReminder"> | string | null
-  scheduledFor?: Prisma.DateTimeFilter<"EmailReminder"> | Date | string
-  sentAt?: Prisma.DateTimeNullableFilter<"EmailReminder"> | Date | string | null
-  status?: Prisma.StringFilter<"EmailReminder"> | string
-  errorMessage?: Prisma.StringNullableFilter<"EmailReminder"> | string | null
-  createdAt?: Prisma.DateTimeFilter<"EmailReminder"> | Date | string
-  appointment?: Prisma.XOR<Prisma.AppointmentScalarRelationFilter, Prisma.AppointmentWhereInput>
-  owner?: Prisma.XOR<Prisma.OwnerNullableScalarRelationFilter, Prisma.OwnerWhereInput> | null
+  citaId?: Prisma.UuidFilter<"EmailReminder"> | string
+  propietarioId?: Prisma.UuidNullableFilter<"EmailReminder"> | string | null
+  correoDestino?: Prisma.StringFilter<"EmailReminder"> | string
+  asunto?: Prisma.StringNullableFilter<"EmailReminder"> | string | null
+  cuerpo?: Prisma.StringNullableFilter<"EmailReminder"> | string | null
+  programadoPara?: Prisma.DateTimeFilter<"EmailReminder"> | Date | string
+  enviadoEn?: Prisma.DateTimeNullableFilter<"EmailReminder"> | Date | string | null
+  estado?: Prisma.StringFilter<"EmailReminder"> | string
+  mensajeError?: Prisma.StringNullableFilter<"EmailReminder"> | string | null
+  creadoEn?: Prisma.DateTimeFilter<"EmailReminder"> | Date | string
+  cita?: Prisma.XOR<Prisma.AppointmentScalarRelationFilter, Prisma.AppointmentWhereInput>
+  propietario?: Prisma.XOR<Prisma.OwnerNullableScalarRelationFilter, Prisma.OwnerWhereInput> | null
 }
 
 export type EmailReminderOrderByWithRelationInput = {
   id?: Prisma.SortOrder
-  appointmentId?: Prisma.SortOrder
-  ownerId?: Prisma.SortOrderInput | Prisma.SortOrder
-  emailTo?: Prisma.SortOrder
-  subject?: Prisma.SortOrderInput | Prisma.SortOrder
-  body?: Prisma.SortOrderInput | Prisma.SortOrder
-  scheduledFor?: Prisma.SortOrder
-  sentAt?: Prisma.SortOrderInput | Prisma.SortOrder
-  status?: Prisma.SortOrder
-  errorMessage?: Prisma.SortOrderInput | Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  appointment?: Prisma.AppointmentOrderByWithRelationInput
-  owner?: Prisma.OwnerOrderByWithRelationInput
+  citaId?: Prisma.SortOrder
+  propietarioId?: Prisma.SortOrderInput | Prisma.SortOrder
+  correoDestino?: Prisma.SortOrder
+  asunto?: Prisma.SortOrderInput | Prisma.SortOrder
+  cuerpo?: Prisma.SortOrderInput | Prisma.SortOrder
+  programadoPara?: Prisma.SortOrder
+  enviadoEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  estado?: Prisma.SortOrder
+  mensajeError?: Prisma.SortOrderInput | Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  cita?: Prisma.AppointmentOrderByWithRelationInput
+  propietario?: Prisma.OwnerOrderByWithRelationInput
 }
 
 export type EmailReminderWhereUniqueInput = Prisma.AtLeast<{
@@ -255,32 +255,32 @@ export type EmailReminderWhereUniqueInput = Prisma.AtLeast<{
   AND?: Prisma.EmailReminderWhereInput | Prisma.EmailReminderWhereInput[]
   OR?: Prisma.EmailReminderWhereInput[]
   NOT?: Prisma.EmailReminderWhereInput | Prisma.EmailReminderWhereInput[]
-  appointmentId?: Prisma.UuidFilter<"EmailReminder"> | string
-  ownerId?: Prisma.UuidNullableFilter<"EmailReminder"> | string | null
-  emailTo?: Prisma.StringFilter<"EmailReminder"> | string
-  subject?: Prisma.StringNullableFilter<"EmailReminder"> | string | null
-  body?: Prisma.StringNullableFilter<"EmailReminder"> | string | null
-  scheduledFor?: Prisma.DateTimeFilter<"EmailReminder"> | Date | string
-  sentAt?: Prisma.DateTimeNullableFilter<"EmailReminder"> | Date | string | null
-  status?: Prisma.StringFilter<"EmailReminder"> | string
-  errorMessage?: Prisma.StringNullableFilter<"EmailReminder"> | string | null
-  createdAt?: Prisma.DateTimeFilter<"EmailReminder"> | Date | string
-  appointment?: Prisma.XOR<Prisma.AppointmentScalarRelationFilter, Prisma.AppointmentWhereInput>
-  owner?: Prisma.XOR<Prisma.OwnerNullableScalarRelationFilter, Prisma.OwnerWhereInput> | null
+  citaId?: Prisma.UuidFilter<"EmailReminder"> | string
+  propietarioId?: Prisma.UuidNullableFilter<"EmailReminder"> | string | null
+  correoDestino?: Prisma.StringFilter<"EmailReminder"> | string
+  asunto?: Prisma.StringNullableFilter<"EmailReminder"> | string | null
+  cuerpo?: Prisma.StringNullableFilter<"EmailReminder"> | string | null
+  programadoPara?: Prisma.DateTimeFilter<"EmailReminder"> | Date | string
+  enviadoEn?: Prisma.DateTimeNullableFilter<"EmailReminder"> | Date | string | null
+  estado?: Prisma.StringFilter<"EmailReminder"> | string
+  mensajeError?: Prisma.StringNullableFilter<"EmailReminder"> | string | null
+  creadoEn?: Prisma.DateTimeFilter<"EmailReminder"> | Date | string
+  cita?: Prisma.XOR<Prisma.AppointmentScalarRelationFilter, Prisma.AppointmentWhereInput>
+  propietario?: Prisma.XOR<Prisma.OwnerNullableScalarRelationFilter, Prisma.OwnerWhereInput> | null
 }, "id">
 
 export type EmailReminderOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
-  appointmentId?: Prisma.SortOrder
-  ownerId?: Prisma.SortOrderInput | Prisma.SortOrder
-  emailTo?: Prisma.SortOrder
-  subject?: Prisma.SortOrderInput | Prisma.SortOrder
-  body?: Prisma.SortOrderInput | Prisma.SortOrder
-  scheduledFor?: Prisma.SortOrder
-  sentAt?: Prisma.SortOrderInput | Prisma.SortOrder
-  status?: Prisma.SortOrder
-  errorMessage?: Prisma.SortOrderInput | Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
+  citaId?: Prisma.SortOrder
+  propietarioId?: Prisma.SortOrderInput | Prisma.SortOrder
+  correoDestino?: Prisma.SortOrder
+  asunto?: Prisma.SortOrderInput | Prisma.SortOrder
+  cuerpo?: Prisma.SortOrderInput | Prisma.SortOrder
+  programadoPara?: Prisma.SortOrder
+  enviadoEn?: Prisma.SortOrderInput | Prisma.SortOrder
+  estado?: Prisma.SortOrder
+  mensajeError?: Prisma.SortOrderInput | Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
   _count?: Prisma.EmailReminderCountOrderByAggregateInput
   _max?: Prisma.EmailReminderMaxOrderByAggregateInput
   _min?: Prisma.EmailReminderMinOrderByAggregateInput
@@ -291,112 +291,112 @@ export type EmailReminderScalarWhereWithAggregatesInput = {
   OR?: Prisma.EmailReminderScalarWhereWithAggregatesInput[]
   NOT?: Prisma.EmailReminderScalarWhereWithAggregatesInput | Prisma.EmailReminderScalarWhereWithAggregatesInput[]
   id?: Prisma.UuidWithAggregatesFilter<"EmailReminder"> | string
-  appointmentId?: Prisma.UuidWithAggregatesFilter<"EmailReminder"> | string
-  ownerId?: Prisma.UuidNullableWithAggregatesFilter<"EmailReminder"> | string | null
-  emailTo?: Prisma.StringWithAggregatesFilter<"EmailReminder"> | string
-  subject?: Prisma.StringNullableWithAggregatesFilter<"EmailReminder"> | string | null
-  body?: Prisma.StringNullableWithAggregatesFilter<"EmailReminder"> | string | null
-  scheduledFor?: Prisma.DateTimeWithAggregatesFilter<"EmailReminder"> | Date | string
-  sentAt?: Prisma.DateTimeNullableWithAggregatesFilter<"EmailReminder"> | Date | string | null
-  status?: Prisma.StringWithAggregatesFilter<"EmailReminder"> | string
-  errorMessage?: Prisma.StringNullableWithAggregatesFilter<"EmailReminder"> | string | null
-  createdAt?: Prisma.DateTimeWithAggregatesFilter<"EmailReminder"> | Date | string
+  citaId?: Prisma.UuidWithAggregatesFilter<"EmailReminder"> | string
+  propietarioId?: Prisma.UuidNullableWithAggregatesFilter<"EmailReminder"> | string | null
+  correoDestino?: Prisma.StringWithAggregatesFilter<"EmailReminder"> | string
+  asunto?: Prisma.StringNullableWithAggregatesFilter<"EmailReminder"> | string | null
+  cuerpo?: Prisma.StringNullableWithAggregatesFilter<"EmailReminder"> | string | null
+  programadoPara?: Prisma.DateTimeWithAggregatesFilter<"EmailReminder"> | Date | string
+  enviadoEn?: Prisma.DateTimeNullableWithAggregatesFilter<"EmailReminder"> | Date | string | null
+  estado?: Prisma.StringWithAggregatesFilter<"EmailReminder"> | string
+  mensajeError?: Prisma.StringNullableWithAggregatesFilter<"EmailReminder"> | string | null
+  creadoEn?: Prisma.DateTimeWithAggregatesFilter<"EmailReminder"> | Date | string
 }
 
 export type EmailReminderCreateInput = {
   id?: string
-  emailTo: string
-  subject?: string | null
-  body?: string | null
-  scheduledFor: Date | string
-  sentAt?: Date | string | null
-  status?: string
-  errorMessage?: string | null
-  createdAt?: Date | string
-  appointment: Prisma.AppointmentCreateNestedOneWithoutEmailRemindersInput
-  owner?: Prisma.OwnerCreateNestedOneWithoutEmailRemindersInput
+  correoDestino: string
+  asunto?: string | null
+  cuerpo?: string | null
+  programadoPara: Date | string
+  enviadoEn?: Date | string | null
+  estado?: string
+  mensajeError?: string | null
+  creadoEn?: Date | string
+  cita: Prisma.AppointmentCreateNestedOneWithoutRecordatoriosCorreoInput
+  propietario?: Prisma.OwnerCreateNestedOneWithoutRecordatoriosCorreoInput
 }
 
 export type EmailReminderUncheckedCreateInput = {
   id?: string
-  appointmentId: string
-  ownerId?: string | null
-  emailTo: string
-  subject?: string | null
-  body?: string | null
-  scheduledFor: Date | string
-  sentAt?: Date | string | null
-  status?: string
-  errorMessage?: string | null
-  createdAt?: Date | string
+  citaId: string
+  propietarioId?: string | null
+  correoDestino: string
+  asunto?: string | null
+  cuerpo?: string | null
+  programadoPara: Date | string
+  enviadoEn?: Date | string | null
+  estado?: string
+  mensajeError?: string | null
+  creadoEn?: Date | string
 }
 
 export type EmailReminderUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  emailTo?: Prisma.StringFieldUpdateOperationsInput | string
-  subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  body?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  scheduledFor?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  status?: Prisma.StringFieldUpdateOperationsInput | string
-  errorMessage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  appointment?: Prisma.AppointmentUpdateOneRequiredWithoutEmailRemindersNestedInput
-  owner?: Prisma.OwnerUpdateOneWithoutEmailRemindersNestedInput
+  correoDestino?: Prisma.StringFieldUpdateOperationsInput | string
+  asunto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  cuerpo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  programadoPara?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  enviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estado?: Prisma.StringFieldUpdateOperationsInput | string
+  mensajeError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  cita?: Prisma.AppointmentUpdateOneRequiredWithoutRecordatoriosCorreoNestedInput
+  propietario?: Prisma.OwnerUpdateOneWithoutRecordatoriosCorreoNestedInput
 }
 
 export type EmailReminderUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  appointmentId?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  emailTo?: Prisma.StringFieldUpdateOperationsInput | string
-  subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  body?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  scheduledFor?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  status?: Prisma.StringFieldUpdateOperationsInput | string
-  errorMessage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  citaId?: Prisma.StringFieldUpdateOperationsInput | string
+  propietarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  correoDestino?: Prisma.StringFieldUpdateOperationsInput | string
+  asunto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  cuerpo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  programadoPara?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  enviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estado?: Prisma.StringFieldUpdateOperationsInput | string
+  mensajeError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type EmailReminderCreateManyInput = {
   id?: string
-  appointmentId: string
-  ownerId?: string | null
-  emailTo: string
-  subject?: string | null
-  body?: string | null
-  scheduledFor: Date | string
-  sentAt?: Date | string | null
-  status?: string
-  errorMessage?: string | null
-  createdAt?: Date | string
+  citaId: string
+  propietarioId?: string | null
+  correoDestino: string
+  asunto?: string | null
+  cuerpo?: string | null
+  programadoPara: Date | string
+  enviadoEn?: Date | string | null
+  estado?: string
+  mensajeError?: string | null
+  creadoEn?: Date | string
 }
 
 export type EmailReminderUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  emailTo?: Prisma.StringFieldUpdateOperationsInput | string
-  subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  body?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  scheduledFor?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  status?: Prisma.StringFieldUpdateOperationsInput | string
-  errorMessage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  correoDestino?: Prisma.StringFieldUpdateOperationsInput | string
+  asunto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  cuerpo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  programadoPara?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  enviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estado?: Prisma.StringFieldUpdateOperationsInput | string
+  mensajeError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type EmailReminderUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  appointmentId?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  emailTo?: Prisma.StringFieldUpdateOperationsInput | string
-  subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  body?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  scheduledFor?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  status?: Prisma.StringFieldUpdateOperationsInput | string
-  errorMessage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  citaId?: Prisma.StringFieldUpdateOperationsInput | string
+  propietarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  correoDestino?: Prisma.StringFieldUpdateOperationsInput | string
+  asunto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  cuerpo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  programadoPara?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  enviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estado?: Prisma.StringFieldUpdateOperationsInput | string
+  mensajeError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type EmailReminderListRelationFilter = {
@@ -411,180 +411,180 @@ export type EmailReminderOrderByRelationAggregateInput = {
 
 export type EmailReminderCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  appointmentId?: Prisma.SortOrder
-  ownerId?: Prisma.SortOrder
-  emailTo?: Prisma.SortOrder
-  subject?: Prisma.SortOrder
-  body?: Prisma.SortOrder
-  scheduledFor?: Prisma.SortOrder
-  sentAt?: Prisma.SortOrder
-  status?: Prisma.SortOrder
-  errorMessage?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
+  citaId?: Prisma.SortOrder
+  propietarioId?: Prisma.SortOrder
+  correoDestino?: Prisma.SortOrder
+  asunto?: Prisma.SortOrder
+  cuerpo?: Prisma.SortOrder
+  programadoPara?: Prisma.SortOrder
+  enviadoEn?: Prisma.SortOrder
+  estado?: Prisma.SortOrder
+  mensajeError?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
 }
 
 export type EmailReminderMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  appointmentId?: Prisma.SortOrder
-  ownerId?: Prisma.SortOrder
-  emailTo?: Prisma.SortOrder
-  subject?: Prisma.SortOrder
-  body?: Prisma.SortOrder
-  scheduledFor?: Prisma.SortOrder
-  sentAt?: Prisma.SortOrder
-  status?: Prisma.SortOrder
-  errorMessage?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
+  citaId?: Prisma.SortOrder
+  propietarioId?: Prisma.SortOrder
+  correoDestino?: Prisma.SortOrder
+  asunto?: Prisma.SortOrder
+  cuerpo?: Prisma.SortOrder
+  programadoPara?: Prisma.SortOrder
+  enviadoEn?: Prisma.SortOrder
+  estado?: Prisma.SortOrder
+  mensajeError?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
 }
 
 export type EmailReminderMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  appointmentId?: Prisma.SortOrder
-  ownerId?: Prisma.SortOrder
-  emailTo?: Prisma.SortOrder
-  subject?: Prisma.SortOrder
-  body?: Prisma.SortOrder
-  scheduledFor?: Prisma.SortOrder
-  sentAt?: Prisma.SortOrder
-  status?: Prisma.SortOrder
-  errorMessage?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
+  citaId?: Prisma.SortOrder
+  propietarioId?: Prisma.SortOrder
+  correoDestino?: Prisma.SortOrder
+  asunto?: Prisma.SortOrder
+  cuerpo?: Prisma.SortOrder
+  programadoPara?: Prisma.SortOrder
+  enviadoEn?: Prisma.SortOrder
+  estado?: Prisma.SortOrder
+  mensajeError?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
 }
 
-export type EmailReminderCreateNestedManyWithoutOwnerInput = {
-  create?: Prisma.XOR<Prisma.EmailReminderCreateWithoutOwnerInput, Prisma.EmailReminderUncheckedCreateWithoutOwnerInput> | Prisma.EmailReminderCreateWithoutOwnerInput[] | Prisma.EmailReminderUncheckedCreateWithoutOwnerInput[]
-  connectOrCreate?: Prisma.EmailReminderCreateOrConnectWithoutOwnerInput | Prisma.EmailReminderCreateOrConnectWithoutOwnerInput[]
-  createMany?: Prisma.EmailReminderCreateManyOwnerInputEnvelope
+export type EmailReminderCreateNestedManyWithoutPropietarioInput = {
+  create?: Prisma.XOR<Prisma.EmailReminderCreateWithoutPropietarioInput, Prisma.EmailReminderUncheckedCreateWithoutPropietarioInput> | Prisma.EmailReminderCreateWithoutPropietarioInput[] | Prisma.EmailReminderUncheckedCreateWithoutPropietarioInput[]
+  connectOrCreate?: Prisma.EmailReminderCreateOrConnectWithoutPropietarioInput | Prisma.EmailReminderCreateOrConnectWithoutPropietarioInput[]
+  createMany?: Prisma.EmailReminderCreateManyPropietarioInputEnvelope
   connect?: Prisma.EmailReminderWhereUniqueInput | Prisma.EmailReminderWhereUniqueInput[]
 }
 
-export type EmailReminderUncheckedCreateNestedManyWithoutOwnerInput = {
-  create?: Prisma.XOR<Prisma.EmailReminderCreateWithoutOwnerInput, Prisma.EmailReminderUncheckedCreateWithoutOwnerInput> | Prisma.EmailReminderCreateWithoutOwnerInput[] | Prisma.EmailReminderUncheckedCreateWithoutOwnerInput[]
-  connectOrCreate?: Prisma.EmailReminderCreateOrConnectWithoutOwnerInput | Prisma.EmailReminderCreateOrConnectWithoutOwnerInput[]
-  createMany?: Prisma.EmailReminderCreateManyOwnerInputEnvelope
+export type EmailReminderUncheckedCreateNestedManyWithoutPropietarioInput = {
+  create?: Prisma.XOR<Prisma.EmailReminderCreateWithoutPropietarioInput, Prisma.EmailReminderUncheckedCreateWithoutPropietarioInput> | Prisma.EmailReminderCreateWithoutPropietarioInput[] | Prisma.EmailReminderUncheckedCreateWithoutPropietarioInput[]
+  connectOrCreate?: Prisma.EmailReminderCreateOrConnectWithoutPropietarioInput | Prisma.EmailReminderCreateOrConnectWithoutPropietarioInput[]
+  createMany?: Prisma.EmailReminderCreateManyPropietarioInputEnvelope
   connect?: Prisma.EmailReminderWhereUniqueInput | Prisma.EmailReminderWhereUniqueInput[]
 }
 
-export type EmailReminderUpdateManyWithoutOwnerNestedInput = {
-  create?: Prisma.XOR<Prisma.EmailReminderCreateWithoutOwnerInput, Prisma.EmailReminderUncheckedCreateWithoutOwnerInput> | Prisma.EmailReminderCreateWithoutOwnerInput[] | Prisma.EmailReminderUncheckedCreateWithoutOwnerInput[]
-  connectOrCreate?: Prisma.EmailReminderCreateOrConnectWithoutOwnerInput | Prisma.EmailReminderCreateOrConnectWithoutOwnerInput[]
-  upsert?: Prisma.EmailReminderUpsertWithWhereUniqueWithoutOwnerInput | Prisma.EmailReminderUpsertWithWhereUniqueWithoutOwnerInput[]
-  createMany?: Prisma.EmailReminderCreateManyOwnerInputEnvelope
+export type EmailReminderUpdateManyWithoutPropietarioNestedInput = {
+  create?: Prisma.XOR<Prisma.EmailReminderCreateWithoutPropietarioInput, Prisma.EmailReminderUncheckedCreateWithoutPropietarioInput> | Prisma.EmailReminderCreateWithoutPropietarioInput[] | Prisma.EmailReminderUncheckedCreateWithoutPropietarioInput[]
+  connectOrCreate?: Prisma.EmailReminderCreateOrConnectWithoutPropietarioInput | Prisma.EmailReminderCreateOrConnectWithoutPropietarioInput[]
+  upsert?: Prisma.EmailReminderUpsertWithWhereUniqueWithoutPropietarioInput | Prisma.EmailReminderUpsertWithWhereUniqueWithoutPropietarioInput[]
+  createMany?: Prisma.EmailReminderCreateManyPropietarioInputEnvelope
   set?: Prisma.EmailReminderWhereUniqueInput | Prisma.EmailReminderWhereUniqueInput[]
   disconnect?: Prisma.EmailReminderWhereUniqueInput | Prisma.EmailReminderWhereUniqueInput[]
   delete?: Prisma.EmailReminderWhereUniqueInput | Prisma.EmailReminderWhereUniqueInput[]
   connect?: Prisma.EmailReminderWhereUniqueInput | Prisma.EmailReminderWhereUniqueInput[]
-  update?: Prisma.EmailReminderUpdateWithWhereUniqueWithoutOwnerInput | Prisma.EmailReminderUpdateWithWhereUniqueWithoutOwnerInput[]
-  updateMany?: Prisma.EmailReminderUpdateManyWithWhereWithoutOwnerInput | Prisma.EmailReminderUpdateManyWithWhereWithoutOwnerInput[]
+  update?: Prisma.EmailReminderUpdateWithWhereUniqueWithoutPropietarioInput | Prisma.EmailReminderUpdateWithWhereUniqueWithoutPropietarioInput[]
+  updateMany?: Prisma.EmailReminderUpdateManyWithWhereWithoutPropietarioInput | Prisma.EmailReminderUpdateManyWithWhereWithoutPropietarioInput[]
   deleteMany?: Prisma.EmailReminderScalarWhereInput | Prisma.EmailReminderScalarWhereInput[]
 }
 
-export type EmailReminderUncheckedUpdateManyWithoutOwnerNestedInput = {
-  create?: Prisma.XOR<Prisma.EmailReminderCreateWithoutOwnerInput, Prisma.EmailReminderUncheckedCreateWithoutOwnerInput> | Prisma.EmailReminderCreateWithoutOwnerInput[] | Prisma.EmailReminderUncheckedCreateWithoutOwnerInput[]
-  connectOrCreate?: Prisma.EmailReminderCreateOrConnectWithoutOwnerInput | Prisma.EmailReminderCreateOrConnectWithoutOwnerInput[]
-  upsert?: Prisma.EmailReminderUpsertWithWhereUniqueWithoutOwnerInput | Prisma.EmailReminderUpsertWithWhereUniqueWithoutOwnerInput[]
-  createMany?: Prisma.EmailReminderCreateManyOwnerInputEnvelope
+export type EmailReminderUncheckedUpdateManyWithoutPropietarioNestedInput = {
+  create?: Prisma.XOR<Prisma.EmailReminderCreateWithoutPropietarioInput, Prisma.EmailReminderUncheckedCreateWithoutPropietarioInput> | Prisma.EmailReminderCreateWithoutPropietarioInput[] | Prisma.EmailReminderUncheckedCreateWithoutPropietarioInput[]
+  connectOrCreate?: Prisma.EmailReminderCreateOrConnectWithoutPropietarioInput | Prisma.EmailReminderCreateOrConnectWithoutPropietarioInput[]
+  upsert?: Prisma.EmailReminderUpsertWithWhereUniqueWithoutPropietarioInput | Prisma.EmailReminderUpsertWithWhereUniqueWithoutPropietarioInput[]
+  createMany?: Prisma.EmailReminderCreateManyPropietarioInputEnvelope
   set?: Prisma.EmailReminderWhereUniqueInput | Prisma.EmailReminderWhereUniqueInput[]
   disconnect?: Prisma.EmailReminderWhereUniqueInput | Prisma.EmailReminderWhereUniqueInput[]
   delete?: Prisma.EmailReminderWhereUniqueInput | Prisma.EmailReminderWhereUniqueInput[]
   connect?: Prisma.EmailReminderWhereUniqueInput | Prisma.EmailReminderWhereUniqueInput[]
-  update?: Prisma.EmailReminderUpdateWithWhereUniqueWithoutOwnerInput | Prisma.EmailReminderUpdateWithWhereUniqueWithoutOwnerInput[]
-  updateMany?: Prisma.EmailReminderUpdateManyWithWhereWithoutOwnerInput | Prisma.EmailReminderUpdateManyWithWhereWithoutOwnerInput[]
+  update?: Prisma.EmailReminderUpdateWithWhereUniqueWithoutPropietarioInput | Prisma.EmailReminderUpdateWithWhereUniqueWithoutPropietarioInput[]
+  updateMany?: Prisma.EmailReminderUpdateManyWithWhereWithoutPropietarioInput | Prisma.EmailReminderUpdateManyWithWhereWithoutPropietarioInput[]
   deleteMany?: Prisma.EmailReminderScalarWhereInput | Prisma.EmailReminderScalarWhereInput[]
 }
 
-export type EmailReminderCreateNestedManyWithoutAppointmentInput = {
-  create?: Prisma.XOR<Prisma.EmailReminderCreateWithoutAppointmentInput, Prisma.EmailReminderUncheckedCreateWithoutAppointmentInput> | Prisma.EmailReminderCreateWithoutAppointmentInput[] | Prisma.EmailReminderUncheckedCreateWithoutAppointmentInput[]
-  connectOrCreate?: Prisma.EmailReminderCreateOrConnectWithoutAppointmentInput | Prisma.EmailReminderCreateOrConnectWithoutAppointmentInput[]
-  createMany?: Prisma.EmailReminderCreateManyAppointmentInputEnvelope
+export type EmailReminderCreateNestedManyWithoutCitaInput = {
+  create?: Prisma.XOR<Prisma.EmailReminderCreateWithoutCitaInput, Prisma.EmailReminderUncheckedCreateWithoutCitaInput> | Prisma.EmailReminderCreateWithoutCitaInput[] | Prisma.EmailReminderUncheckedCreateWithoutCitaInput[]
+  connectOrCreate?: Prisma.EmailReminderCreateOrConnectWithoutCitaInput | Prisma.EmailReminderCreateOrConnectWithoutCitaInput[]
+  createMany?: Prisma.EmailReminderCreateManyCitaInputEnvelope
   connect?: Prisma.EmailReminderWhereUniqueInput | Prisma.EmailReminderWhereUniqueInput[]
 }
 
-export type EmailReminderUncheckedCreateNestedManyWithoutAppointmentInput = {
-  create?: Prisma.XOR<Prisma.EmailReminderCreateWithoutAppointmentInput, Prisma.EmailReminderUncheckedCreateWithoutAppointmentInput> | Prisma.EmailReminderCreateWithoutAppointmentInput[] | Prisma.EmailReminderUncheckedCreateWithoutAppointmentInput[]
-  connectOrCreate?: Prisma.EmailReminderCreateOrConnectWithoutAppointmentInput | Prisma.EmailReminderCreateOrConnectWithoutAppointmentInput[]
-  createMany?: Prisma.EmailReminderCreateManyAppointmentInputEnvelope
+export type EmailReminderUncheckedCreateNestedManyWithoutCitaInput = {
+  create?: Prisma.XOR<Prisma.EmailReminderCreateWithoutCitaInput, Prisma.EmailReminderUncheckedCreateWithoutCitaInput> | Prisma.EmailReminderCreateWithoutCitaInput[] | Prisma.EmailReminderUncheckedCreateWithoutCitaInput[]
+  connectOrCreate?: Prisma.EmailReminderCreateOrConnectWithoutCitaInput | Prisma.EmailReminderCreateOrConnectWithoutCitaInput[]
+  createMany?: Prisma.EmailReminderCreateManyCitaInputEnvelope
   connect?: Prisma.EmailReminderWhereUniqueInput | Prisma.EmailReminderWhereUniqueInput[]
 }
 
-export type EmailReminderUpdateManyWithoutAppointmentNestedInput = {
-  create?: Prisma.XOR<Prisma.EmailReminderCreateWithoutAppointmentInput, Prisma.EmailReminderUncheckedCreateWithoutAppointmentInput> | Prisma.EmailReminderCreateWithoutAppointmentInput[] | Prisma.EmailReminderUncheckedCreateWithoutAppointmentInput[]
-  connectOrCreate?: Prisma.EmailReminderCreateOrConnectWithoutAppointmentInput | Prisma.EmailReminderCreateOrConnectWithoutAppointmentInput[]
-  upsert?: Prisma.EmailReminderUpsertWithWhereUniqueWithoutAppointmentInput | Prisma.EmailReminderUpsertWithWhereUniqueWithoutAppointmentInput[]
-  createMany?: Prisma.EmailReminderCreateManyAppointmentInputEnvelope
+export type EmailReminderUpdateManyWithoutCitaNestedInput = {
+  create?: Prisma.XOR<Prisma.EmailReminderCreateWithoutCitaInput, Prisma.EmailReminderUncheckedCreateWithoutCitaInput> | Prisma.EmailReminderCreateWithoutCitaInput[] | Prisma.EmailReminderUncheckedCreateWithoutCitaInput[]
+  connectOrCreate?: Prisma.EmailReminderCreateOrConnectWithoutCitaInput | Prisma.EmailReminderCreateOrConnectWithoutCitaInput[]
+  upsert?: Prisma.EmailReminderUpsertWithWhereUniqueWithoutCitaInput | Prisma.EmailReminderUpsertWithWhereUniqueWithoutCitaInput[]
+  createMany?: Prisma.EmailReminderCreateManyCitaInputEnvelope
   set?: Prisma.EmailReminderWhereUniqueInput | Prisma.EmailReminderWhereUniqueInput[]
   disconnect?: Prisma.EmailReminderWhereUniqueInput | Prisma.EmailReminderWhereUniqueInput[]
   delete?: Prisma.EmailReminderWhereUniqueInput | Prisma.EmailReminderWhereUniqueInput[]
   connect?: Prisma.EmailReminderWhereUniqueInput | Prisma.EmailReminderWhereUniqueInput[]
-  update?: Prisma.EmailReminderUpdateWithWhereUniqueWithoutAppointmentInput | Prisma.EmailReminderUpdateWithWhereUniqueWithoutAppointmentInput[]
-  updateMany?: Prisma.EmailReminderUpdateManyWithWhereWithoutAppointmentInput | Prisma.EmailReminderUpdateManyWithWhereWithoutAppointmentInput[]
+  update?: Prisma.EmailReminderUpdateWithWhereUniqueWithoutCitaInput | Prisma.EmailReminderUpdateWithWhereUniqueWithoutCitaInput[]
+  updateMany?: Prisma.EmailReminderUpdateManyWithWhereWithoutCitaInput | Prisma.EmailReminderUpdateManyWithWhereWithoutCitaInput[]
   deleteMany?: Prisma.EmailReminderScalarWhereInput | Prisma.EmailReminderScalarWhereInput[]
 }
 
-export type EmailReminderUncheckedUpdateManyWithoutAppointmentNestedInput = {
-  create?: Prisma.XOR<Prisma.EmailReminderCreateWithoutAppointmentInput, Prisma.EmailReminderUncheckedCreateWithoutAppointmentInput> | Prisma.EmailReminderCreateWithoutAppointmentInput[] | Prisma.EmailReminderUncheckedCreateWithoutAppointmentInput[]
-  connectOrCreate?: Prisma.EmailReminderCreateOrConnectWithoutAppointmentInput | Prisma.EmailReminderCreateOrConnectWithoutAppointmentInput[]
-  upsert?: Prisma.EmailReminderUpsertWithWhereUniqueWithoutAppointmentInput | Prisma.EmailReminderUpsertWithWhereUniqueWithoutAppointmentInput[]
-  createMany?: Prisma.EmailReminderCreateManyAppointmentInputEnvelope
+export type EmailReminderUncheckedUpdateManyWithoutCitaNestedInput = {
+  create?: Prisma.XOR<Prisma.EmailReminderCreateWithoutCitaInput, Prisma.EmailReminderUncheckedCreateWithoutCitaInput> | Prisma.EmailReminderCreateWithoutCitaInput[] | Prisma.EmailReminderUncheckedCreateWithoutCitaInput[]
+  connectOrCreate?: Prisma.EmailReminderCreateOrConnectWithoutCitaInput | Prisma.EmailReminderCreateOrConnectWithoutCitaInput[]
+  upsert?: Prisma.EmailReminderUpsertWithWhereUniqueWithoutCitaInput | Prisma.EmailReminderUpsertWithWhereUniqueWithoutCitaInput[]
+  createMany?: Prisma.EmailReminderCreateManyCitaInputEnvelope
   set?: Prisma.EmailReminderWhereUniqueInput | Prisma.EmailReminderWhereUniqueInput[]
   disconnect?: Prisma.EmailReminderWhereUniqueInput | Prisma.EmailReminderWhereUniqueInput[]
   delete?: Prisma.EmailReminderWhereUniqueInput | Prisma.EmailReminderWhereUniqueInput[]
   connect?: Prisma.EmailReminderWhereUniqueInput | Prisma.EmailReminderWhereUniqueInput[]
-  update?: Prisma.EmailReminderUpdateWithWhereUniqueWithoutAppointmentInput | Prisma.EmailReminderUpdateWithWhereUniqueWithoutAppointmentInput[]
-  updateMany?: Prisma.EmailReminderUpdateManyWithWhereWithoutAppointmentInput | Prisma.EmailReminderUpdateManyWithWhereWithoutAppointmentInput[]
+  update?: Prisma.EmailReminderUpdateWithWhereUniqueWithoutCitaInput | Prisma.EmailReminderUpdateWithWhereUniqueWithoutCitaInput[]
+  updateMany?: Prisma.EmailReminderUpdateManyWithWhereWithoutCitaInput | Prisma.EmailReminderUpdateManyWithWhereWithoutCitaInput[]
   deleteMany?: Prisma.EmailReminderScalarWhereInput | Prisma.EmailReminderScalarWhereInput[]
 }
 
-export type EmailReminderCreateWithoutOwnerInput = {
+export type EmailReminderCreateWithoutPropietarioInput = {
   id?: string
-  emailTo: string
-  subject?: string | null
-  body?: string | null
-  scheduledFor: Date | string
-  sentAt?: Date | string | null
-  status?: string
-  errorMessage?: string | null
-  createdAt?: Date | string
-  appointment: Prisma.AppointmentCreateNestedOneWithoutEmailRemindersInput
+  correoDestino: string
+  asunto?: string | null
+  cuerpo?: string | null
+  programadoPara: Date | string
+  enviadoEn?: Date | string | null
+  estado?: string
+  mensajeError?: string | null
+  creadoEn?: Date | string
+  cita: Prisma.AppointmentCreateNestedOneWithoutRecordatoriosCorreoInput
 }
 
-export type EmailReminderUncheckedCreateWithoutOwnerInput = {
+export type EmailReminderUncheckedCreateWithoutPropietarioInput = {
   id?: string
-  appointmentId: string
-  emailTo: string
-  subject?: string | null
-  body?: string | null
-  scheduledFor: Date | string
-  sentAt?: Date | string | null
-  status?: string
-  errorMessage?: string | null
-  createdAt?: Date | string
+  citaId: string
+  correoDestino: string
+  asunto?: string | null
+  cuerpo?: string | null
+  programadoPara: Date | string
+  enviadoEn?: Date | string | null
+  estado?: string
+  mensajeError?: string | null
+  creadoEn?: Date | string
 }
 
-export type EmailReminderCreateOrConnectWithoutOwnerInput = {
+export type EmailReminderCreateOrConnectWithoutPropietarioInput = {
   where: Prisma.EmailReminderWhereUniqueInput
-  create: Prisma.XOR<Prisma.EmailReminderCreateWithoutOwnerInput, Prisma.EmailReminderUncheckedCreateWithoutOwnerInput>
+  create: Prisma.XOR<Prisma.EmailReminderCreateWithoutPropietarioInput, Prisma.EmailReminderUncheckedCreateWithoutPropietarioInput>
 }
 
-export type EmailReminderCreateManyOwnerInputEnvelope = {
-  data: Prisma.EmailReminderCreateManyOwnerInput | Prisma.EmailReminderCreateManyOwnerInput[]
+export type EmailReminderCreateManyPropietarioInputEnvelope = {
+  data: Prisma.EmailReminderCreateManyPropietarioInput | Prisma.EmailReminderCreateManyPropietarioInput[]
   skipDuplicates?: boolean
 }
 
-export type EmailReminderUpsertWithWhereUniqueWithoutOwnerInput = {
+export type EmailReminderUpsertWithWhereUniqueWithoutPropietarioInput = {
   where: Prisma.EmailReminderWhereUniqueInput
-  update: Prisma.XOR<Prisma.EmailReminderUpdateWithoutOwnerInput, Prisma.EmailReminderUncheckedUpdateWithoutOwnerInput>
-  create: Prisma.XOR<Prisma.EmailReminderCreateWithoutOwnerInput, Prisma.EmailReminderUncheckedCreateWithoutOwnerInput>
+  update: Prisma.XOR<Prisma.EmailReminderUpdateWithoutPropietarioInput, Prisma.EmailReminderUncheckedUpdateWithoutPropietarioInput>
+  create: Prisma.XOR<Prisma.EmailReminderCreateWithoutPropietarioInput, Prisma.EmailReminderUncheckedCreateWithoutPropietarioInput>
 }
 
-export type EmailReminderUpdateWithWhereUniqueWithoutOwnerInput = {
+export type EmailReminderUpdateWithWhereUniqueWithoutPropietarioInput = {
   where: Prisma.EmailReminderWhereUniqueInput
-  data: Prisma.XOR<Prisma.EmailReminderUpdateWithoutOwnerInput, Prisma.EmailReminderUncheckedUpdateWithoutOwnerInput>
+  data: Prisma.XOR<Prisma.EmailReminderUpdateWithoutPropietarioInput, Prisma.EmailReminderUncheckedUpdateWithoutPropietarioInput>
 }
 
-export type EmailReminderUpdateManyWithWhereWithoutOwnerInput = {
+export type EmailReminderUpdateManyWithWhereWithoutPropietarioInput = {
   where: Prisma.EmailReminderScalarWhereInput
-  data: Prisma.XOR<Prisma.EmailReminderUpdateManyMutationInput, Prisma.EmailReminderUncheckedUpdateManyWithoutOwnerInput>
+  data: Prisma.XOR<Prisma.EmailReminderUpdateManyMutationInput, Prisma.EmailReminderUncheckedUpdateManyWithoutPropietarioInput>
 }
 
 export type EmailReminderScalarWhereInput = {
@@ -592,270 +592,270 @@ export type EmailReminderScalarWhereInput = {
   OR?: Prisma.EmailReminderScalarWhereInput[]
   NOT?: Prisma.EmailReminderScalarWhereInput | Prisma.EmailReminderScalarWhereInput[]
   id?: Prisma.UuidFilter<"EmailReminder"> | string
-  appointmentId?: Prisma.UuidFilter<"EmailReminder"> | string
-  ownerId?: Prisma.UuidNullableFilter<"EmailReminder"> | string | null
-  emailTo?: Prisma.StringFilter<"EmailReminder"> | string
-  subject?: Prisma.StringNullableFilter<"EmailReminder"> | string | null
-  body?: Prisma.StringNullableFilter<"EmailReminder"> | string | null
-  scheduledFor?: Prisma.DateTimeFilter<"EmailReminder"> | Date | string
-  sentAt?: Prisma.DateTimeNullableFilter<"EmailReminder"> | Date | string | null
-  status?: Prisma.StringFilter<"EmailReminder"> | string
-  errorMessage?: Prisma.StringNullableFilter<"EmailReminder"> | string | null
-  createdAt?: Prisma.DateTimeFilter<"EmailReminder"> | Date | string
+  citaId?: Prisma.UuidFilter<"EmailReminder"> | string
+  propietarioId?: Prisma.UuidNullableFilter<"EmailReminder"> | string | null
+  correoDestino?: Prisma.StringFilter<"EmailReminder"> | string
+  asunto?: Prisma.StringNullableFilter<"EmailReminder"> | string | null
+  cuerpo?: Prisma.StringNullableFilter<"EmailReminder"> | string | null
+  programadoPara?: Prisma.DateTimeFilter<"EmailReminder"> | Date | string
+  enviadoEn?: Prisma.DateTimeNullableFilter<"EmailReminder"> | Date | string | null
+  estado?: Prisma.StringFilter<"EmailReminder"> | string
+  mensajeError?: Prisma.StringNullableFilter<"EmailReminder"> | string | null
+  creadoEn?: Prisma.DateTimeFilter<"EmailReminder"> | Date | string
 }
 
-export type EmailReminderCreateWithoutAppointmentInput = {
+export type EmailReminderCreateWithoutCitaInput = {
   id?: string
-  emailTo: string
-  subject?: string | null
-  body?: string | null
-  scheduledFor: Date | string
-  sentAt?: Date | string | null
-  status?: string
-  errorMessage?: string | null
-  createdAt?: Date | string
-  owner?: Prisma.OwnerCreateNestedOneWithoutEmailRemindersInput
+  correoDestino: string
+  asunto?: string | null
+  cuerpo?: string | null
+  programadoPara: Date | string
+  enviadoEn?: Date | string | null
+  estado?: string
+  mensajeError?: string | null
+  creadoEn?: Date | string
+  propietario?: Prisma.OwnerCreateNestedOneWithoutRecordatoriosCorreoInput
 }
 
-export type EmailReminderUncheckedCreateWithoutAppointmentInput = {
+export type EmailReminderUncheckedCreateWithoutCitaInput = {
   id?: string
-  ownerId?: string | null
-  emailTo: string
-  subject?: string | null
-  body?: string | null
-  scheduledFor: Date | string
-  sentAt?: Date | string | null
-  status?: string
-  errorMessage?: string | null
-  createdAt?: Date | string
+  propietarioId?: string | null
+  correoDestino: string
+  asunto?: string | null
+  cuerpo?: string | null
+  programadoPara: Date | string
+  enviadoEn?: Date | string | null
+  estado?: string
+  mensajeError?: string | null
+  creadoEn?: Date | string
 }
 
-export type EmailReminderCreateOrConnectWithoutAppointmentInput = {
+export type EmailReminderCreateOrConnectWithoutCitaInput = {
   where: Prisma.EmailReminderWhereUniqueInput
-  create: Prisma.XOR<Prisma.EmailReminderCreateWithoutAppointmentInput, Prisma.EmailReminderUncheckedCreateWithoutAppointmentInput>
+  create: Prisma.XOR<Prisma.EmailReminderCreateWithoutCitaInput, Prisma.EmailReminderUncheckedCreateWithoutCitaInput>
 }
 
-export type EmailReminderCreateManyAppointmentInputEnvelope = {
-  data: Prisma.EmailReminderCreateManyAppointmentInput | Prisma.EmailReminderCreateManyAppointmentInput[]
+export type EmailReminderCreateManyCitaInputEnvelope = {
+  data: Prisma.EmailReminderCreateManyCitaInput | Prisma.EmailReminderCreateManyCitaInput[]
   skipDuplicates?: boolean
 }
 
-export type EmailReminderUpsertWithWhereUniqueWithoutAppointmentInput = {
+export type EmailReminderUpsertWithWhereUniqueWithoutCitaInput = {
   where: Prisma.EmailReminderWhereUniqueInput
-  update: Prisma.XOR<Prisma.EmailReminderUpdateWithoutAppointmentInput, Prisma.EmailReminderUncheckedUpdateWithoutAppointmentInput>
-  create: Prisma.XOR<Prisma.EmailReminderCreateWithoutAppointmentInput, Prisma.EmailReminderUncheckedCreateWithoutAppointmentInput>
+  update: Prisma.XOR<Prisma.EmailReminderUpdateWithoutCitaInput, Prisma.EmailReminderUncheckedUpdateWithoutCitaInput>
+  create: Prisma.XOR<Prisma.EmailReminderCreateWithoutCitaInput, Prisma.EmailReminderUncheckedCreateWithoutCitaInput>
 }
 
-export type EmailReminderUpdateWithWhereUniqueWithoutAppointmentInput = {
+export type EmailReminderUpdateWithWhereUniqueWithoutCitaInput = {
   where: Prisma.EmailReminderWhereUniqueInput
-  data: Prisma.XOR<Prisma.EmailReminderUpdateWithoutAppointmentInput, Prisma.EmailReminderUncheckedUpdateWithoutAppointmentInput>
+  data: Prisma.XOR<Prisma.EmailReminderUpdateWithoutCitaInput, Prisma.EmailReminderUncheckedUpdateWithoutCitaInput>
 }
 
-export type EmailReminderUpdateManyWithWhereWithoutAppointmentInput = {
+export type EmailReminderUpdateManyWithWhereWithoutCitaInput = {
   where: Prisma.EmailReminderScalarWhereInput
-  data: Prisma.XOR<Prisma.EmailReminderUpdateManyMutationInput, Prisma.EmailReminderUncheckedUpdateManyWithoutAppointmentInput>
+  data: Prisma.XOR<Prisma.EmailReminderUpdateManyMutationInput, Prisma.EmailReminderUncheckedUpdateManyWithoutCitaInput>
 }
 
-export type EmailReminderCreateManyOwnerInput = {
+export type EmailReminderCreateManyPropietarioInput = {
   id?: string
-  appointmentId: string
-  emailTo: string
-  subject?: string | null
-  body?: string | null
-  scheduledFor: Date | string
-  sentAt?: Date | string | null
-  status?: string
-  errorMessage?: string | null
-  createdAt?: Date | string
+  citaId: string
+  correoDestino: string
+  asunto?: string | null
+  cuerpo?: string | null
+  programadoPara: Date | string
+  enviadoEn?: Date | string | null
+  estado?: string
+  mensajeError?: string | null
+  creadoEn?: Date | string
 }
 
-export type EmailReminderUpdateWithoutOwnerInput = {
+export type EmailReminderUpdateWithoutPropietarioInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  emailTo?: Prisma.StringFieldUpdateOperationsInput | string
-  subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  body?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  scheduledFor?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  status?: Prisma.StringFieldUpdateOperationsInput | string
-  errorMessage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  appointment?: Prisma.AppointmentUpdateOneRequiredWithoutEmailRemindersNestedInput
+  correoDestino?: Prisma.StringFieldUpdateOperationsInput | string
+  asunto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  cuerpo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  programadoPara?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  enviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estado?: Prisma.StringFieldUpdateOperationsInput | string
+  mensajeError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  cita?: Prisma.AppointmentUpdateOneRequiredWithoutRecordatoriosCorreoNestedInput
 }
 
-export type EmailReminderUncheckedUpdateWithoutOwnerInput = {
+export type EmailReminderUncheckedUpdateWithoutPropietarioInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  appointmentId?: Prisma.StringFieldUpdateOperationsInput | string
-  emailTo?: Prisma.StringFieldUpdateOperationsInput | string
-  subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  body?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  scheduledFor?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  status?: Prisma.StringFieldUpdateOperationsInput | string
-  errorMessage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  citaId?: Prisma.StringFieldUpdateOperationsInput | string
+  correoDestino?: Prisma.StringFieldUpdateOperationsInput | string
+  asunto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  cuerpo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  programadoPara?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  enviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estado?: Prisma.StringFieldUpdateOperationsInput | string
+  mensajeError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type EmailReminderUncheckedUpdateManyWithoutOwnerInput = {
+export type EmailReminderUncheckedUpdateManyWithoutPropietarioInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  appointmentId?: Prisma.StringFieldUpdateOperationsInput | string
-  emailTo?: Prisma.StringFieldUpdateOperationsInput | string
-  subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  body?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  scheduledFor?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  status?: Prisma.StringFieldUpdateOperationsInput | string
-  errorMessage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  citaId?: Prisma.StringFieldUpdateOperationsInput | string
+  correoDestino?: Prisma.StringFieldUpdateOperationsInput | string
+  asunto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  cuerpo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  programadoPara?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  enviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estado?: Prisma.StringFieldUpdateOperationsInput | string
+  mensajeError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type EmailReminderCreateManyAppointmentInput = {
+export type EmailReminderCreateManyCitaInput = {
   id?: string
-  ownerId?: string | null
-  emailTo: string
-  subject?: string | null
-  body?: string | null
-  scheduledFor: Date | string
-  sentAt?: Date | string | null
-  status?: string
-  errorMessage?: string | null
-  createdAt?: Date | string
+  propietarioId?: string | null
+  correoDestino: string
+  asunto?: string | null
+  cuerpo?: string | null
+  programadoPara: Date | string
+  enviadoEn?: Date | string | null
+  estado?: string
+  mensajeError?: string | null
+  creadoEn?: Date | string
 }
 
-export type EmailReminderUpdateWithoutAppointmentInput = {
+export type EmailReminderUpdateWithoutCitaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  emailTo?: Prisma.StringFieldUpdateOperationsInput | string
-  subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  body?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  scheduledFor?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  status?: Prisma.StringFieldUpdateOperationsInput | string
-  errorMessage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  owner?: Prisma.OwnerUpdateOneWithoutEmailRemindersNestedInput
+  correoDestino?: Prisma.StringFieldUpdateOperationsInput | string
+  asunto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  cuerpo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  programadoPara?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  enviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estado?: Prisma.StringFieldUpdateOperationsInput | string
+  mensajeError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  propietario?: Prisma.OwnerUpdateOneWithoutRecordatoriosCorreoNestedInput
 }
 
-export type EmailReminderUncheckedUpdateWithoutAppointmentInput = {
+export type EmailReminderUncheckedUpdateWithoutCitaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  emailTo?: Prisma.StringFieldUpdateOperationsInput | string
-  subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  body?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  scheduledFor?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  status?: Prisma.StringFieldUpdateOperationsInput | string
-  errorMessage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  propietarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  correoDestino?: Prisma.StringFieldUpdateOperationsInput | string
+  asunto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  cuerpo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  programadoPara?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  enviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estado?: Prisma.StringFieldUpdateOperationsInput | string
+  mensajeError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type EmailReminderUncheckedUpdateManyWithoutAppointmentInput = {
+export type EmailReminderUncheckedUpdateManyWithoutCitaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  emailTo?: Prisma.StringFieldUpdateOperationsInput | string
-  subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  body?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  scheduledFor?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  status?: Prisma.StringFieldUpdateOperationsInput | string
-  errorMessage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  propietarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  correoDestino?: Prisma.StringFieldUpdateOperationsInput | string
+  asunto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  cuerpo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  programadoPara?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  enviadoEn?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  estado?: Prisma.StringFieldUpdateOperationsInput | string
+  mensajeError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 
 
 export type EmailReminderSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  appointmentId?: boolean
-  ownerId?: boolean
-  emailTo?: boolean
-  subject?: boolean
-  body?: boolean
-  scheduledFor?: boolean
-  sentAt?: boolean
-  status?: boolean
-  errorMessage?: boolean
-  createdAt?: boolean
-  appointment?: boolean | Prisma.AppointmentDefaultArgs<ExtArgs>
-  owner?: boolean | Prisma.EmailReminder$ownerArgs<ExtArgs>
+  citaId?: boolean
+  propietarioId?: boolean
+  correoDestino?: boolean
+  asunto?: boolean
+  cuerpo?: boolean
+  programadoPara?: boolean
+  enviadoEn?: boolean
+  estado?: boolean
+  mensajeError?: boolean
+  creadoEn?: boolean
+  cita?: boolean | Prisma.AppointmentDefaultArgs<ExtArgs>
+  propietario?: boolean | Prisma.EmailReminder$propietarioArgs<ExtArgs>
 }, ExtArgs["result"]["emailReminder"]>
 
 export type EmailReminderSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  appointmentId?: boolean
-  ownerId?: boolean
-  emailTo?: boolean
-  subject?: boolean
-  body?: boolean
-  scheduledFor?: boolean
-  sentAt?: boolean
-  status?: boolean
-  errorMessage?: boolean
-  createdAt?: boolean
-  appointment?: boolean | Prisma.AppointmentDefaultArgs<ExtArgs>
-  owner?: boolean | Prisma.EmailReminder$ownerArgs<ExtArgs>
+  citaId?: boolean
+  propietarioId?: boolean
+  correoDestino?: boolean
+  asunto?: boolean
+  cuerpo?: boolean
+  programadoPara?: boolean
+  enviadoEn?: boolean
+  estado?: boolean
+  mensajeError?: boolean
+  creadoEn?: boolean
+  cita?: boolean | Prisma.AppointmentDefaultArgs<ExtArgs>
+  propietario?: boolean | Prisma.EmailReminder$propietarioArgs<ExtArgs>
 }, ExtArgs["result"]["emailReminder"]>
 
 export type EmailReminderSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  appointmentId?: boolean
-  ownerId?: boolean
-  emailTo?: boolean
-  subject?: boolean
-  body?: boolean
-  scheduledFor?: boolean
-  sentAt?: boolean
-  status?: boolean
-  errorMessage?: boolean
-  createdAt?: boolean
-  appointment?: boolean | Prisma.AppointmentDefaultArgs<ExtArgs>
-  owner?: boolean | Prisma.EmailReminder$ownerArgs<ExtArgs>
+  citaId?: boolean
+  propietarioId?: boolean
+  correoDestino?: boolean
+  asunto?: boolean
+  cuerpo?: boolean
+  programadoPara?: boolean
+  enviadoEn?: boolean
+  estado?: boolean
+  mensajeError?: boolean
+  creadoEn?: boolean
+  cita?: boolean | Prisma.AppointmentDefaultArgs<ExtArgs>
+  propietario?: boolean | Prisma.EmailReminder$propietarioArgs<ExtArgs>
 }, ExtArgs["result"]["emailReminder"]>
 
 export type EmailReminderSelectScalar = {
   id?: boolean
-  appointmentId?: boolean
-  ownerId?: boolean
-  emailTo?: boolean
-  subject?: boolean
-  body?: boolean
-  scheduledFor?: boolean
-  sentAt?: boolean
-  status?: boolean
-  errorMessage?: boolean
-  createdAt?: boolean
+  citaId?: boolean
+  propietarioId?: boolean
+  correoDestino?: boolean
+  asunto?: boolean
+  cuerpo?: boolean
+  programadoPara?: boolean
+  enviadoEn?: boolean
+  estado?: boolean
+  mensajeError?: boolean
+  creadoEn?: boolean
 }
 
-export type EmailReminderOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "appointmentId" | "ownerId" | "emailTo" | "subject" | "body" | "scheduledFor" | "sentAt" | "status" | "errorMessage" | "createdAt", ExtArgs["result"]["emailReminder"]>
+export type EmailReminderOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "citaId" | "propietarioId" | "correoDestino" | "asunto" | "cuerpo" | "programadoPara" | "enviadoEn" | "estado" | "mensajeError" | "creadoEn", ExtArgs["result"]["emailReminder"]>
 export type EmailReminderInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  appointment?: boolean | Prisma.AppointmentDefaultArgs<ExtArgs>
-  owner?: boolean | Prisma.EmailReminder$ownerArgs<ExtArgs>
+  cita?: boolean | Prisma.AppointmentDefaultArgs<ExtArgs>
+  propietario?: boolean | Prisma.EmailReminder$propietarioArgs<ExtArgs>
 }
 export type EmailReminderIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  appointment?: boolean | Prisma.AppointmentDefaultArgs<ExtArgs>
-  owner?: boolean | Prisma.EmailReminder$ownerArgs<ExtArgs>
+  cita?: boolean | Prisma.AppointmentDefaultArgs<ExtArgs>
+  propietario?: boolean | Prisma.EmailReminder$propietarioArgs<ExtArgs>
 }
 export type EmailReminderIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  appointment?: boolean | Prisma.AppointmentDefaultArgs<ExtArgs>
-  owner?: boolean | Prisma.EmailReminder$ownerArgs<ExtArgs>
+  cita?: boolean | Prisma.AppointmentDefaultArgs<ExtArgs>
+  propietario?: boolean | Prisma.EmailReminder$propietarioArgs<ExtArgs>
 }
 
 export type $EmailReminderPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "EmailReminder"
   objects: {
-    appointment: Prisma.$AppointmentPayload<ExtArgs>
-    owner: Prisma.$OwnerPayload<ExtArgs> | null
+    cita: Prisma.$AppointmentPayload<ExtArgs>
+    propietario: Prisma.$OwnerPayload<ExtArgs> | null
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
-    appointmentId: string
-    ownerId: string | null
-    emailTo: string
-    subject: string | null
-    body: string | null
-    scheduledFor: Date
-    sentAt: Date | null
-    status: string
-    errorMessage: string | null
-    createdAt: Date
+    citaId: string
+    propietarioId: string | null
+    correoDestino: string
+    asunto: string | null
+    cuerpo: string | null
+    programadoPara: Date
+    enviadoEn: Date | null
+    estado: string
+    mensajeError: string | null
+    creadoEn: Date
   }, ExtArgs["result"]["emailReminder"]>
   composites: {}
 }
@@ -1250,8 +1250,8 @@ readonly fields: EmailReminderFieldRefs;
  */
 export interface Prisma__EmailReminderClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  appointment<T extends Prisma.AppointmentDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.AppointmentDefaultArgs<ExtArgs>>): Prisma.Prisma__AppointmentClient<runtime.Types.Result.GetResult<Prisma.$AppointmentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  owner<T extends Prisma.EmailReminder$ownerArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.EmailReminder$ownerArgs<ExtArgs>>): Prisma.Prisma__OwnerClient<runtime.Types.Result.GetResult<Prisma.$OwnerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  cita<T extends Prisma.AppointmentDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.AppointmentDefaultArgs<ExtArgs>>): Prisma.Prisma__AppointmentClient<runtime.Types.Result.GetResult<Prisma.$AppointmentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  propietario<T extends Prisma.EmailReminder$propietarioArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.EmailReminder$propietarioArgs<ExtArgs>>): Prisma.Prisma__OwnerClient<runtime.Types.Result.GetResult<Prisma.$OwnerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1282,16 +1282,16 @@ export interface Prisma__EmailReminderClient<T, Null = never, ExtArgs extends ru
  */
 export interface EmailReminderFieldRefs {
   readonly id: Prisma.FieldRef<"EmailReminder", 'String'>
-  readonly appointmentId: Prisma.FieldRef<"EmailReminder", 'String'>
-  readonly ownerId: Prisma.FieldRef<"EmailReminder", 'String'>
-  readonly emailTo: Prisma.FieldRef<"EmailReminder", 'String'>
-  readonly subject: Prisma.FieldRef<"EmailReminder", 'String'>
-  readonly body: Prisma.FieldRef<"EmailReminder", 'String'>
-  readonly scheduledFor: Prisma.FieldRef<"EmailReminder", 'DateTime'>
-  readonly sentAt: Prisma.FieldRef<"EmailReminder", 'DateTime'>
-  readonly status: Prisma.FieldRef<"EmailReminder", 'String'>
-  readonly errorMessage: Prisma.FieldRef<"EmailReminder", 'String'>
-  readonly createdAt: Prisma.FieldRef<"EmailReminder", 'DateTime'>
+  readonly citaId: Prisma.FieldRef<"EmailReminder", 'String'>
+  readonly propietarioId: Prisma.FieldRef<"EmailReminder", 'String'>
+  readonly correoDestino: Prisma.FieldRef<"EmailReminder", 'String'>
+  readonly asunto: Prisma.FieldRef<"EmailReminder", 'String'>
+  readonly cuerpo: Prisma.FieldRef<"EmailReminder", 'String'>
+  readonly programadoPara: Prisma.FieldRef<"EmailReminder", 'DateTime'>
+  readonly enviadoEn: Prisma.FieldRef<"EmailReminder", 'DateTime'>
+  readonly estado: Prisma.FieldRef<"EmailReminder", 'String'>
+  readonly mensajeError: Prisma.FieldRef<"EmailReminder", 'String'>
+  readonly creadoEn: Prisma.FieldRef<"EmailReminder", 'DateTime'>
 }
     
 
@@ -1688,9 +1688,9 @@ export type EmailReminderDeleteManyArgs<ExtArgs extends runtime.Types.Extensions
 }
 
 /**
- * EmailReminder.owner
+ * EmailReminder.propietario
  */
-export type EmailReminder$ownerArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type EmailReminder$propietarioArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Owner
    */

@@ -27,147 +27,147 @@ export type AggregatePatient = {
 }
 
 export type PatientAvgAggregateOutputType = {
-  weight: runtime.Decimal | null
+  peso: runtime.Decimal | null
 }
 
 export type PatientSumAggregateOutputType = {
-  weight: runtime.Decimal | null
+  peso: runtime.Decimal | null
 }
 
 export type PatientMinAggregateOutputType = {
   id: string | null
-  ownerId: string | null
-  veterinaryId: string | null
-  name: string | null
-  speciesId: string | null
-  breedId: string | null
+  propietarioId: string | null
+  veterinariaId: string | null
+  nombre: string | null
+  especieId: string | null
+  razaId: string | null
   color: string | null
-  birthDate: Date | null
-  gender: string | null
-  weight: runtime.Decimal | null
-  photoUrl: string | null
-  microchipNumber: string | null
-  isNeutered: boolean | null
-  allergies: string | null
-  specialConditions: string | null
-  isActive: boolean | null
-  createdAt: Date | null
-  updatedAt: Date | null
+  fechaNacimiento: Date | null
+  genero: string | null
+  peso: runtime.Decimal | null
+  urlFoto: string | null
+  numeroMicrochip: string | null
+  estaCastrado: boolean | null
+  alergias: string | null
+  condicionesEspeciales: string | null
+  estaActivo: boolean | null
+  creadoEn: Date | null
+  actualizadoEn: Date | null
 }
 
 export type PatientMaxAggregateOutputType = {
   id: string | null
-  ownerId: string | null
-  veterinaryId: string | null
-  name: string | null
-  speciesId: string | null
-  breedId: string | null
+  propietarioId: string | null
+  veterinariaId: string | null
+  nombre: string | null
+  especieId: string | null
+  razaId: string | null
   color: string | null
-  birthDate: Date | null
-  gender: string | null
-  weight: runtime.Decimal | null
-  photoUrl: string | null
-  microchipNumber: string | null
-  isNeutered: boolean | null
-  allergies: string | null
-  specialConditions: string | null
-  isActive: boolean | null
-  createdAt: Date | null
-  updatedAt: Date | null
+  fechaNacimiento: Date | null
+  genero: string | null
+  peso: runtime.Decimal | null
+  urlFoto: string | null
+  numeroMicrochip: string | null
+  estaCastrado: boolean | null
+  alergias: string | null
+  condicionesEspeciales: string | null
+  estaActivo: boolean | null
+  creadoEn: Date | null
+  actualizadoEn: Date | null
 }
 
 export type PatientCountAggregateOutputType = {
   id: number
-  ownerId: number
-  veterinaryId: number
-  name: number
-  speciesId: number
-  breedId: number
+  propietarioId: number
+  veterinariaId: number
+  nombre: number
+  especieId: number
+  razaId: number
   color: number
-  birthDate: number
-  gender: number
-  weight: number
-  photoUrl: number
-  microchipNumber: number
-  isNeutered: number
-  allergies: number
-  specialConditions: number
-  isActive: number
-  createdAt: number
-  updatedAt: number
+  fechaNacimiento: number
+  genero: number
+  peso: number
+  urlFoto: number
+  numeroMicrochip: number
+  estaCastrado: number
+  alergias: number
+  condicionesEspeciales: number
+  estaActivo: number
+  creadoEn: number
+  actualizadoEn: number
   _all: number
 }
 
 
 export type PatientAvgAggregateInputType = {
-  weight?: true
+  peso?: true
 }
 
 export type PatientSumAggregateInputType = {
-  weight?: true
+  peso?: true
 }
 
 export type PatientMinAggregateInputType = {
   id?: true
-  ownerId?: true
-  veterinaryId?: true
-  name?: true
-  speciesId?: true
-  breedId?: true
+  propietarioId?: true
+  veterinariaId?: true
+  nombre?: true
+  especieId?: true
+  razaId?: true
   color?: true
-  birthDate?: true
-  gender?: true
-  weight?: true
-  photoUrl?: true
-  microchipNumber?: true
-  isNeutered?: true
-  allergies?: true
-  specialConditions?: true
-  isActive?: true
-  createdAt?: true
-  updatedAt?: true
+  fechaNacimiento?: true
+  genero?: true
+  peso?: true
+  urlFoto?: true
+  numeroMicrochip?: true
+  estaCastrado?: true
+  alergias?: true
+  condicionesEspeciales?: true
+  estaActivo?: true
+  creadoEn?: true
+  actualizadoEn?: true
 }
 
 export type PatientMaxAggregateInputType = {
   id?: true
-  ownerId?: true
-  veterinaryId?: true
-  name?: true
-  speciesId?: true
-  breedId?: true
+  propietarioId?: true
+  veterinariaId?: true
+  nombre?: true
+  especieId?: true
+  razaId?: true
   color?: true
-  birthDate?: true
-  gender?: true
-  weight?: true
-  photoUrl?: true
-  microchipNumber?: true
-  isNeutered?: true
-  allergies?: true
-  specialConditions?: true
-  isActive?: true
-  createdAt?: true
-  updatedAt?: true
+  fechaNacimiento?: true
+  genero?: true
+  peso?: true
+  urlFoto?: true
+  numeroMicrochip?: true
+  estaCastrado?: true
+  alergias?: true
+  condicionesEspeciales?: true
+  estaActivo?: true
+  creadoEn?: true
+  actualizadoEn?: true
 }
 
 export type PatientCountAggregateInputType = {
   id?: true
-  ownerId?: true
-  veterinaryId?: true
-  name?: true
-  speciesId?: true
-  breedId?: true
+  propietarioId?: true
+  veterinariaId?: true
+  nombre?: true
+  especieId?: true
+  razaId?: true
   color?: true
-  birthDate?: true
-  gender?: true
-  weight?: true
-  photoUrl?: true
-  microchipNumber?: true
-  isNeutered?: true
-  allergies?: true
-  specialConditions?: true
-  isActive?: true
-  createdAt?: true
-  updatedAt?: true
+  fechaNacimiento?: true
+  genero?: true
+  peso?: true
+  urlFoto?: true
+  numeroMicrochip?: true
+  estaCastrado?: true
+  alergias?: true
+  condicionesEspeciales?: true
+  estaActivo?: true
+  creadoEn?: true
+  actualizadoEn?: true
   _all?: true
 }
 
@@ -259,23 +259,23 @@ export type PatientGroupByArgs<ExtArgs extends runtime.Types.Extensions.Internal
 
 export type PatientGroupByOutputType = {
   id: string
-  ownerId: string
-  veterinaryId: string | null
-  name: string
-  speciesId: string
-  breedId: string | null
+  propietarioId: string
+  veterinariaId: string | null
+  nombre: string
+  especieId: string
+  razaId: string | null
   color: string | null
-  birthDate: Date | null
-  gender: string | null
-  weight: runtime.Decimal | null
-  photoUrl: string | null
-  microchipNumber: string | null
-  isNeutered: boolean
-  allergies: string | null
-  specialConditions: string | null
-  isActive: boolean
-  createdAt: Date
-  updatedAt: Date
+  fechaNacimiento: Date | null
+  genero: string | null
+  peso: runtime.Decimal | null
+  urlFoto: string | null
+  numeroMicrochip: string | null
+  estaCastrado: boolean
+  alergias: string | null
+  condicionesEspeciales: string | null
+  estaActivo: boolean
+  creadoEn: Date
+  actualizadoEn: Date
   _count: PatientCountAggregateOutputType | null
   _avg: PatientAvgAggregateOutputType | null
   _sum: PatientSumAggregateOutputType | null
@@ -303,58 +303,58 @@ export type PatientWhereInput = {
   OR?: Prisma.PatientWhereInput[]
   NOT?: Prisma.PatientWhereInput | Prisma.PatientWhereInput[]
   id?: Prisma.UuidFilter<"Patient"> | string
-  ownerId?: Prisma.UuidFilter<"Patient"> | string
-  veterinaryId?: Prisma.UuidNullableFilter<"Patient"> | string | null
-  name?: Prisma.StringFilter<"Patient"> | string
-  speciesId?: Prisma.UuidFilter<"Patient"> | string
-  breedId?: Prisma.UuidNullableFilter<"Patient"> | string | null
+  propietarioId?: Prisma.UuidFilter<"Patient"> | string
+  veterinariaId?: Prisma.UuidNullableFilter<"Patient"> | string | null
+  nombre?: Prisma.StringFilter<"Patient"> | string
+  especieId?: Prisma.UuidFilter<"Patient"> | string
+  razaId?: Prisma.UuidNullableFilter<"Patient"> | string | null
   color?: Prisma.StringNullableFilter<"Patient"> | string | null
-  birthDate?: Prisma.DateTimeNullableFilter<"Patient"> | Date | string | null
-  gender?: Prisma.StringNullableFilter<"Patient"> | string | null
-  weight?: Prisma.DecimalNullableFilter<"Patient"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.StringNullableFilter<"Patient"> | string | null
-  microchipNumber?: Prisma.StringNullableFilter<"Patient"> | string | null
-  isNeutered?: Prisma.BoolFilter<"Patient"> | boolean
-  allergies?: Prisma.StringNullableFilter<"Patient"> | string | null
-  specialConditions?: Prisma.StringNullableFilter<"Patient"> | string | null
-  isActive?: Prisma.BoolFilter<"Patient"> | boolean
-  createdAt?: Prisma.DateTimeFilter<"Patient"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"Patient"> | Date | string
-  owner?: Prisma.XOR<Prisma.OwnerScalarRelationFilter, Prisma.OwnerWhereInput>
-  veterinary?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
-  species?: Prisma.XOR<Prisma.SpeciesScalarRelationFilter, Prisma.SpeciesWhereInput>
-  breed?: Prisma.XOR<Prisma.BreedNullableScalarRelationFilter, Prisma.BreedWhereInput> | null
-  appointments?: Prisma.AppointmentListRelationFilter
-  clinicalRecords?: Prisma.ClinicalRecordListRelationFilter
-  vaccinations?: Prisma.VaccinationListRelationFilter
+  fechaNacimiento?: Prisma.DateTimeNullableFilter<"Patient"> | Date | string | null
+  genero?: Prisma.StringNullableFilter<"Patient"> | string | null
+  peso?: Prisma.DecimalNullableFilter<"Patient"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.StringNullableFilter<"Patient"> | string | null
+  numeroMicrochip?: Prisma.StringNullableFilter<"Patient"> | string | null
+  estaCastrado?: Prisma.BoolFilter<"Patient"> | boolean
+  alergias?: Prisma.StringNullableFilter<"Patient"> | string | null
+  condicionesEspeciales?: Prisma.StringNullableFilter<"Patient"> | string | null
+  estaActivo?: Prisma.BoolFilter<"Patient"> | boolean
+  creadoEn?: Prisma.DateTimeFilter<"Patient"> | Date | string
+  actualizadoEn?: Prisma.DateTimeFilter<"Patient"> | Date | string
+  propietario?: Prisma.XOR<Prisma.OwnerScalarRelationFilter, Prisma.OwnerWhereInput>
+  veterinaria?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
+  especie?: Prisma.XOR<Prisma.SpeciesScalarRelationFilter, Prisma.SpeciesWhereInput>
+  raza?: Prisma.XOR<Prisma.BreedNullableScalarRelationFilter, Prisma.BreedWhereInput> | null
+  citas?: Prisma.AppointmentListRelationFilter
+  registrosClinico?: Prisma.ClinicalRecordListRelationFilter
+  vacunaciones?: Prisma.VaccinationListRelationFilter
 }
 
 export type PatientOrderByWithRelationInput = {
   id?: Prisma.SortOrder
-  ownerId?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrderInput | Prisma.SortOrder
-  name?: Prisma.SortOrder
-  speciesId?: Prisma.SortOrder
-  breedId?: Prisma.SortOrderInput | Prisma.SortOrder
+  propietarioId?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrderInput | Prisma.SortOrder
+  nombre?: Prisma.SortOrder
+  especieId?: Prisma.SortOrder
+  razaId?: Prisma.SortOrderInput | Prisma.SortOrder
   color?: Prisma.SortOrderInput | Prisma.SortOrder
-  birthDate?: Prisma.SortOrderInput | Prisma.SortOrder
-  gender?: Prisma.SortOrderInput | Prisma.SortOrder
-  weight?: Prisma.SortOrderInput | Prisma.SortOrder
-  photoUrl?: Prisma.SortOrderInput | Prisma.SortOrder
-  microchipNumber?: Prisma.SortOrderInput | Prisma.SortOrder
-  isNeutered?: Prisma.SortOrder
-  allergies?: Prisma.SortOrderInput | Prisma.SortOrder
-  specialConditions?: Prisma.SortOrderInput | Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
-  owner?: Prisma.OwnerOrderByWithRelationInput
-  veterinary?: Prisma.VeterinaryOrderByWithRelationInput
-  species?: Prisma.SpeciesOrderByWithRelationInput
-  breed?: Prisma.BreedOrderByWithRelationInput
-  appointments?: Prisma.AppointmentOrderByRelationAggregateInput
-  clinicalRecords?: Prisma.ClinicalRecordOrderByRelationAggregateInput
-  vaccinations?: Prisma.VaccinationOrderByRelationAggregateInput
+  fechaNacimiento?: Prisma.SortOrderInput | Prisma.SortOrder
+  genero?: Prisma.SortOrderInput | Prisma.SortOrder
+  peso?: Prisma.SortOrderInput | Prisma.SortOrder
+  urlFoto?: Prisma.SortOrderInput | Prisma.SortOrder
+  numeroMicrochip?: Prisma.SortOrderInput | Prisma.SortOrder
+  estaCastrado?: Prisma.SortOrder
+  alergias?: Prisma.SortOrderInput | Prisma.SortOrder
+  condicionesEspeciales?: Prisma.SortOrderInput | Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
+  propietario?: Prisma.OwnerOrderByWithRelationInput
+  veterinaria?: Prisma.VeterinaryOrderByWithRelationInput
+  especie?: Prisma.SpeciesOrderByWithRelationInput
+  raza?: Prisma.BreedOrderByWithRelationInput
+  citas?: Prisma.AppointmentOrderByRelationAggregateInput
+  registrosClinico?: Prisma.ClinicalRecordOrderByRelationAggregateInput
+  vacunaciones?: Prisma.VaccinationOrderByRelationAggregateInput
 }
 
 export type PatientWhereUniqueInput = Prisma.AtLeast<{
@@ -362,51 +362,51 @@ export type PatientWhereUniqueInput = Prisma.AtLeast<{
   AND?: Prisma.PatientWhereInput | Prisma.PatientWhereInput[]
   OR?: Prisma.PatientWhereInput[]
   NOT?: Prisma.PatientWhereInput | Prisma.PatientWhereInput[]
-  ownerId?: Prisma.UuidFilter<"Patient"> | string
-  veterinaryId?: Prisma.UuidNullableFilter<"Patient"> | string | null
-  name?: Prisma.StringFilter<"Patient"> | string
-  speciesId?: Prisma.UuidFilter<"Patient"> | string
-  breedId?: Prisma.UuidNullableFilter<"Patient"> | string | null
+  propietarioId?: Prisma.UuidFilter<"Patient"> | string
+  veterinariaId?: Prisma.UuidNullableFilter<"Patient"> | string | null
+  nombre?: Prisma.StringFilter<"Patient"> | string
+  especieId?: Prisma.UuidFilter<"Patient"> | string
+  razaId?: Prisma.UuidNullableFilter<"Patient"> | string | null
   color?: Prisma.StringNullableFilter<"Patient"> | string | null
-  birthDate?: Prisma.DateTimeNullableFilter<"Patient"> | Date | string | null
-  gender?: Prisma.StringNullableFilter<"Patient"> | string | null
-  weight?: Prisma.DecimalNullableFilter<"Patient"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.StringNullableFilter<"Patient"> | string | null
-  microchipNumber?: Prisma.StringNullableFilter<"Patient"> | string | null
-  isNeutered?: Prisma.BoolFilter<"Patient"> | boolean
-  allergies?: Prisma.StringNullableFilter<"Patient"> | string | null
-  specialConditions?: Prisma.StringNullableFilter<"Patient"> | string | null
-  isActive?: Prisma.BoolFilter<"Patient"> | boolean
-  createdAt?: Prisma.DateTimeFilter<"Patient"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"Patient"> | Date | string
-  owner?: Prisma.XOR<Prisma.OwnerScalarRelationFilter, Prisma.OwnerWhereInput>
-  veterinary?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
-  species?: Prisma.XOR<Prisma.SpeciesScalarRelationFilter, Prisma.SpeciesWhereInput>
-  breed?: Prisma.XOR<Prisma.BreedNullableScalarRelationFilter, Prisma.BreedWhereInput> | null
-  appointments?: Prisma.AppointmentListRelationFilter
-  clinicalRecords?: Prisma.ClinicalRecordListRelationFilter
-  vaccinations?: Prisma.VaccinationListRelationFilter
+  fechaNacimiento?: Prisma.DateTimeNullableFilter<"Patient"> | Date | string | null
+  genero?: Prisma.StringNullableFilter<"Patient"> | string | null
+  peso?: Prisma.DecimalNullableFilter<"Patient"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.StringNullableFilter<"Patient"> | string | null
+  numeroMicrochip?: Prisma.StringNullableFilter<"Patient"> | string | null
+  estaCastrado?: Prisma.BoolFilter<"Patient"> | boolean
+  alergias?: Prisma.StringNullableFilter<"Patient"> | string | null
+  condicionesEspeciales?: Prisma.StringNullableFilter<"Patient"> | string | null
+  estaActivo?: Prisma.BoolFilter<"Patient"> | boolean
+  creadoEn?: Prisma.DateTimeFilter<"Patient"> | Date | string
+  actualizadoEn?: Prisma.DateTimeFilter<"Patient"> | Date | string
+  propietario?: Prisma.XOR<Prisma.OwnerScalarRelationFilter, Prisma.OwnerWhereInput>
+  veterinaria?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
+  especie?: Prisma.XOR<Prisma.SpeciesScalarRelationFilter, Prisma.SpeciesWhereInput>
+  raza?: Prisma.XOR<Prisma.BreedNullableScalarRelationFilter, Prisma.BreedWhereInput> | null
+  citas?: Prisma.AppointmentListRelationFilter
+  registrosClinico?: Prisma.ClinicalRecordListRelationFilter
+  vacunaciones?: Prisma.VaccinationListRelationFilter
 }, "id">
 
 export type PatientOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
-  ownerId?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrderInput | Prisma.SortOrder
-  name?: Prisma.SortOrder
-  speciesId?: Prisma.SortOrder
-  breedId?: Prisma.SortOrderInput | Prisma.SortOrder
+  propietarioId?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrderInput | Prisma.SortOrder
+  nombre?: Prisma.SortOrder
+  especieId?: Prisma.SortOrder
+  razaId?: Prisma.SortOrderInput | Prisma.SortOrder
   color?: Prisma.SortOrderInput | Prisma.SortOrder
-  birthDate?: Prisma.SortOrderInput | Prisma.SortOrder
-  gender?: Prisma.SortOrderInput | Prisma.SortOrder
-  weight?: Prisma.SortOrderInput | Prisma.SortOrder
-  photoUrl?: Prisma.SortOrderInput | Prisma.SortOrder
-  microchipNumber?: Prisma.SortOrderInput | Prisma.SortOrder
-  isNeutered?: Prisma.SortOrder
-  allergies?: Prisma.SortOrderInput | Prisma.SortOrder
-  specialConditions?: Prisma.SortOrderInput | Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  fechaNacimiento?: Prisma.SortOrderInput | Prisma.SortOrder
+  genero?: Prisma.SortOrderInput | Prisma.SortOrder
+  peso?: Prisma.SortOrderInput | Prisma.SortOrder
+  urlFoto?: Prisma.SortOrderInput | Prisma.SortOrder
+  numeroMicrochip?: Prisma.SortOrderInput | Prisma.SortOrder
+  estaCastrado?: Prisma.SortOrder
+  alergias?: Prisma.SortOrderInput | Prisma.SortOrder
+  condicionesEspeciales?: Prisma.SortOrderInput | Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
   _count?: Prisma.PatientCountOrderByAggregateInput
   _avg?: Prisma.PatientAvgOrderByAggregateInput
   _max?: Prisma.PatientMaxOrderByAggregateInput
@@ -419,178 +419,178 @@ export type PatientScalarWhereWithAggregatesInput = {
   OR?: Prisma.PatientScalarWhereWithAggregatesInput[]
   NOT?: Prisma.PatientScalarWhereWithAggregatesInput | Prisma.PatientScalarWhereWithAggregatesInput[]
   id?: Prisma.UuidWithAggregatesFilter<"Patient"> | string
-  ownerId?: Prisma.UuidWithAggregatesFilter<"Patient"> | string
-  veterinaryId?: Prisma.UuidNullableWithAggregatesFilter<"Patient"> | string | null
-  name?: Prisma.StringWithAggregatesFilter<"Patient"> | string
-  speciesId?: Prisma.UuidWithAggregatesFilter<"Patient"> | string
-  breedId?: Prisma.UuidNullableWithAggregatesFilter<"Patient"> | string | null
+  propietarioId?: Prisma.UuidWithAggregatesFilter<"Patient"> | string
+  veterinariaId?: Prisma.UuidNullableWithAggregatesFilter<"Patient"> | string | null
+  nombre?: Prisma.StringWithAggregatesFilter<"Patient"> | string
+  especieId?: Prisma.UuidWithAggregatesFilter<"Patient"> | string
+  razaId?: Prisma.UuidNullableWithAggregatesFilter<"Patient"> | string | null
   color?: Prisma.StringNullableWithAggregatesFilter<"Patient"> | string | null
-  birthDate?: Prisma.DateTimeNullableWithAggregatesFilter<"Patient"> | Date | string | null
-  gender?: Prisma.StringNullableWithAggregatesFilter<"Patient"> | string | null
-  weight?: Prisma.DecimalNullableWithAggregatesFilter<"Patient"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.StringNullableWithAggregatesFilter<"Patient"> | string | null
-  microchipNumber?: Prisma.StringNullableWithAggregatesFilter<"Patient"> | string | null
-  isNeutered?: Prisma.BoolWithAggregatesFilter<"Patient"> | boolean
-  allergies?: Prisma.StringNullableWithAggregatesFilter<"Patient"> | string | null
-  specialConditions?: Prisma.StringNullableWithAggregatesFilter<"Patient"> | string | null
-  isActive?: Prisma.BoolWithAggregatesFilter<"Patient"> | boolean
-  createdAt?: Prisma.DateTimeWithAggregatesFilter<"Patient"> | Date | string
-  updatedAt?: Prisma.DateTimeWithAggregatesFilter<"Patient"> | Date | string
+  fechaNacimiento?: Prisma.DateTimeNullableWithAggregatesFilter<"Patient"> | Date | string | null
+  genero?: Prisma.StringNullableWithAggregatesFilter<"Patient"> | string | null
+  peso?: Prisma.DecimalNullableWithAggregatesFilter<"Patient"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.StringNullableWithAggregatesFilter<"Patient"> | string | null
+  numeroMicrochip?: Prisma.StringNullableWithAggregatesFilter<"Patient"> | string | null
+  estaCastrado?: Prisma.BoolWithAggregatesFilter<"Patient"> | boolean
+  alergias?: Prisma.StringNullableWithAggregatesFilter<"Patient"> | string | null
+  condicionesEspeciales?: Prisma.StringNullableWithAggregatesFilter<"Patient"> | string | null
+  estaActivo?: Prisma.BoolWithAggregatesFilter<"Patient"> | boolean
+  creadoEn?: Prisma.DateTimeWithAggregatesFilter<"Patient"> | Date | string
+  actualizadoEn?: Prisma.DateTimeWithAggregatesFilter<"Patient"> | Date | string
 }
 
 export type PatientCreateInput = {
   id?: string
-  name: string
+  nombre: string
   color?: string | null
-  birthDate?: Date | string | null
-  gender?: string | null
-  weight?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: string | null
-  microchipNumber?: string | null
-  isNeutered?: boolean
-  allergies?: string | null
-  specialConditions?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  owner: Prisma.OwnerCreateNestedOneWithoutPatientsInput
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutPatientsInput
-  species: Prisma.SpeciesCreateNestedOneWithoutPatientsInput
-  breed?: Prisma.BreedCreateNestedOneWithoutPatientsInput
-  appointments?: Prisma.AppointmentCreateNestedManyWithoutPatientInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutPatientInput
-  vaccinations?: Prisma.VaccinationCreateNestedManyWithoutPatientInput
+  fechaNacimiento?: Date | string | null
+  genero?: string | null
+  peso?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: string | null
+  numeroMicrochip?: string | null
+  estaCastrado?: boolean
+  alergias?: string | null
+  condicionesEspeciales?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  propietario: Prisma.OwnerCreateNestedOneWithoutPacientesInput
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutPacientesInput
+  especie: Prisma.SpeciesCreateNestedOneWithoutPacientesInput
+  raza?: Prisma.BreedCreateNestedOneWithoutPacientesInput
+  citas?: Prisma.AppointmentCreateNestedManyWithoutPacienteInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutPacienteInput
+  vacunaciones?: Prisma.VaccinationCreateNestedManyWithoutPacienteInput
 }
 
 export type PatientUncheckedCreateInput = {
   id?: string
-  ownerId: string
-  veterinaryId?: string | null
-  name: string
-  speciesId: string
-  breedId?: string | null
+  propietarioId: string
+  veterinariaId?: string | null
+  nombre: string
+  especieId: string
+  razaId?: string | null
   color?: string | null
-  birthDate?: Date | string | null
-  gender?: string | null
-  weight?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: string | null
-  microchipNumber?: string | null
-  isNeutered?: boolean
-  allergies?: string | null
-  specialConditions?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  appointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutPatientInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutPatientInput
-  vaccinations?: Prisma.VaccinationUncheckedCreateNestedManyWithoutPatientInput
+  fechaNacimiento?: Date | string | null
+  genero?: string | null
+  peso?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: string | null
+  numeroMicrochip?: string | null
+  estaCastrado?: boolean
+  alergias?: string | null
+  condicionesEspeciales?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutPacienteInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutPacienteInput
+  vacunaciones?: Prisma.VaccinationUncheckedCreateNestedManyWithoutPacienteInput
 }
 
 export type PatientUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
   color?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  birthDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  gender?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  weight?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  microchipNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isNeutered?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  allergies?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  specialConditions?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  owner?: Prisma.OwnerUpdateOneRequiredWithoutPatientsNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutPatientsNestedInput
-  species?: Prisma.SpeciesUpdateOneRequiredWithoutPatientsNestedInput
-  breed?: Prisma.BreedUpdateOneWithoutPatientsNestedInput
-  appointments?: Prisma.AppointmentUpdateManyWithoutPatientNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutPatientNestedInput
-  vaccinations?: Prisma.VaccinationUpdateManyWithoutPatientNestedInput
+  fechaNacimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  genero?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  peso?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroMicrochip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaCastrado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  alergias?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  condicionesEspeciales?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  propietario?: Prisma.OwnerUpdateOneRequiredWithoutPacientesNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutPacientesNestedInput
+  especie?: Prisma.SpeciesUpdateOneRequiredWithoutPacientesNestedInput
+  raza?: Prisma.BreedUpdateOneWithoutPacientesNestedInput
+  citas?: Prisma.AppointmentUpdateManyWithoutPacienteNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutPacienteNestedInput
+  vacunaciones?: Prisma.VaccinationUpdateManyWithoutPacienteNestedInput
 }
 
 export type PatientUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  speciesId?: Prisma.StringFieldUpdateOperationsInput | string
-  breedId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  propietarioId?: Prisma.StringFieldUpdateOperationsInput | string
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  especieId?: Prisma.StringFieldUpdateOperationsInput | string
+  razaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   color?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  birthDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  gender?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  weight?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  microchipNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isNeutered?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  allergies?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  specialConditions?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  appointments?: Prisma.AppointmentUncheckedUpdateManyWithoutPatientNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutPatientNestedInput
-  vaccinations?: Prisma.VaccinationUncheckedUpdateManyWithoutPatientNestedInput
+  fechaNacimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  genero?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  peso?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroMicrochip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaCastrado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  alergias?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  condicionesEspeciales?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  citas?: Prisma.AppointmentUncheckedUpdateManyWithoutPacienteNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutPacienteNestedInput
+  vacunaciones?: Prisma.VaccinationUncheckedUpdateManyWithoutPacienteNestedInput
 }
 
 export type PatientCreateManyInput = {
   id?: string
-  ownerId: string
-  veterinaryId?: string | null
-  name: string
-  speciesId: string
-  breedId?: string | null
+  propietarioId: string
+  veterinariaId?: string | null
+  nombre: string
+  especieId: string
+  razaId?: string | null
   color?: string | null
-  birthDate?: Date | string | null
-  gender?: string | null
-  weight?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: string | null
-  microchipNumber?: string | null
-  isNeutered?: boolean
-  allergies?: string | null
-  specialConditions?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
+  fechaNacimiento?: Date | string | null
+  genero?: string | null
+  peso?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: string | null
+  numeroMicrochip?: string | null
+  estaCastrado?: boolean
+  alergias?: string | null
+  condicionesEspeciales?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
 }
 
 export type PatientUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
   color?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  birthDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  gender?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  weight?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  microchipNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isNeutered?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  allergies?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  specialConditions?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fechaNacimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  genero?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  peso?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroMicrochip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaCastrado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  alergias?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  condicionesEspeciales?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type PatientUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  speciesId?: Prisma.StringFieldUpdateOperationsInput | string
-  breedId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  propietarioId?: Prisma.StringFieldUpdateOperationsInput | string
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  especieId?: Prisma.StringFieldUpdateOperationsInput | string
+  razaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   color?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  birthDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  gender?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  weight?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  microchipNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isNeutered?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  allergies?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  specialConditions?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fechaNacimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  genero?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  peso?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroMicrochip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaCastrado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  alergias?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  condicionesEspeciales?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type PatientListRelationFilter = {
@@ -605,73 +605,73 @@ export type PatientOrderByRelationAggregateInput = {
 
 export type PatientCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  ownerId?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrder
-  name?: Prisma.SortOrder
-  speciesId?: Prisma.SortOrder
-  breedId?: Prisma.SortOrder
+  propietarioId?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrder
+  nombre?: Prisma.SortOrder
+  especieId?: Prisma.SortOrder
+  razaId?: Prisma.SortOrder
   color?: Prisma.SortOrder
-  birthDate?: Prisma.SortOrder
-  gender?: Prisma.SortOrder
-  weight?: Prisma.SortOrder
-  photoUrl?: Prisma.SortOrder
-  microchipNumber?: Prisma.SortOrder
-  isNeutered?: Prisma.SortOrder
-  allergies?: Prisma.SortOrder
-  specialConditions?: Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  fechaNacimiento?: Prisma.SortOrder
+  genero?: Prisma.SortOrder
+  peso?: Prisma.SortOrder
+  urlFoto?: Prisma.SortOrder
+  numeroMicrochip?: Prisma.SortOrder
+  estaCastrado?: Prisma.SortOrder
+  alergias?: Prisma.SortOrder
+  condicionesEspeciales?: Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
 }
 
 export type PatientAvgOrderByAggregateInput = {
-  weight?: Prisma.SortOrder
+  peso?: Prisma.SortOrder
 }
 
 export type PatientMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  ownerId?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrder
-  name?: Prisma.SortOrder
-  speciesId?: Prisma.SortOrder
-  breedId?: Prisma.SortOrder
+  propietarioId?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrder
+  nombre?: Prisma.SortOrder
+  especieId?: Prisma.SortOrder
+  razaId?: Prisma.SortOrder
   color?: Prisma.SortOrder
-  birthDate?: Prisma.SortOrder
-  gender?: Prisma.SortOrder
-  weight?: Prisma.SortOrder
-  photoUrl?: Prisma.SortOrder
-  microchipNumber?: Prisma.SortOrder
-  isNeutered?: Prisma.SortOrder
-  allergies?: Prisma.SortOrder
-  specialConditions?: Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  fechaNacimiento?: Prisma.SortOrder
+  genero?: Prisma.SortOrder
+  peso?: Prisma.SortOrder
+  urlFoto?: Prisma.SortOrder
+  numeroMicrochip?: Prisma.SortOrder
+  estaCastrado?: Prisma.SortOrder
+  alergias?: Prisma.SortOrder
+  condicionesEspeciales?: Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
 }
 
 export type PatientMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  ownerId?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrder
-  name?: Prisma.SortOrder
-  speciesId?: Prisma.SortOrder
-  breedId?: Prisma.SortOrder
+  propietarioId?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrder
+  nombre?: Prisma.SortOrder
+  especieId?: Prisma.SortOrder
+  razaId?: Prisma.SortOrder
   color?: Prisma.SortOrder
-  birthDate?: Prisma.SortOrder
-  gender?: Prisma.SortOrder
-  weight?: Prisma.SortOrder
-  photoUrl?: Prisma.SortOrder
-  microchipNumber?: Prisma.SortOrder
-  isNeutered?: Prisma.SortOrder
-  allergies?: Prisma.SortOrder
-  specialConditions?: Prisma.SortOrder
-  isActive?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  fechaNacimiento?: Prisma.SortOrder
+  genero?: Prisma.SortOrder
+  peso?: Prisma.SortOrder
+  urlFoto?: Prisma.SortOrder
+  numeroMicrochip?: Prisma.SortOrder
+  estaCastrado?: Prisma.SortOrder
+  alergias?: Prisma.SortOrder
+  condicionesEspeciales?: Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
 }
 
 export type PatientSumOrderByAggregateInput = {
-  weight?: Prisma.SortOrder
+  peso?: Prisma.SortOrder
 }
 
 export type PatientScalarRelationFilter = {
@@ -679,171 +679,171 @@ export type PatientScalarRelationFilter = {
   isNot?: Prisma.PatientWhereInput
 }
 
-export type PatientCreateNestedManyWithoutVeterinaryInput = {
-  create?: Prisma.XOR<Prisma.PatientCreateWithoutVeterinaryInput, Prisma.PatientUncheckedCreateWithoutVeterinaryInput> | Prisma.PatientCreateWithoutVeterinaryInput[] | Prisma.PatientUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutVeterinaryInput | Prisma.PatientCreateOrConnectWithoutVeterinaryInput[]
-  createMany?: Prisma.PatientCreateManyVeterinaryInputEnvelope
+export type PatientCreateNestedManyWithoutVeterinariaInput = {
+  create?: Prisma.XOR<Prisma.PatientCreateWithoutVeterinariaInput, Prisma.PatientUncheckedCreateWithoutVeterinariaInput> | Prisma.PatientCreateWithoutVeterinariaInput[] | Prisma.PatientUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutVeterinariaInput | Prisma.PatientCreateOrConnectWithoutVeterinariaInput[]
+  createMany?: Prisma.PatientCreateManyVeterinariaInputEnvelope
   connect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
 }
 
-export type PatientUncheckedCreateNestedManyWithoutVeterinaryInput = {
-  create?: Prisma.XOR<Prisma.PatientCreateWithoutVeterinaryInput, Prisma.PatientUncheckedCreateWithoutVeterinaryInput> | Prisma.PatientCreateWithoutVeterinaryInput[] | Prisma.PatientUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutVeterinaryInput | Prisma.PatientCreateOrConnectWithoutVeterinaryInput[]
-  createMany?: Prisma.PatientCreateManyVeterinaryInputEnvelope
+export type PatientUncheckedCreateNestedManyWithoutVeterinariaInput = {
+  create?: Prisma.XOR<Prisma.PatientCreateWithoutVeterinariaInput, Prisma.PatientUncheckedCreateWithoutVeterinariaInput> | Prisma.PatientCreateWithoutVeterinariaInput[] | Prisma.PatientUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutVeterinariaInput | Prisma.PatientCreateOrConnectWithoutVeterinariaInput[]
+  createMany?: Prisma.PatientCreateManyVeterinariaInputEnvelope
   connect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
 }
 
-export type PatientUpdateManyWithoutVeterinaryNestedInput = {
-  create?: Prisma.XOR<Prisma.PatientCreateWithoutVeterinaryInput, Prisma.PatientUncheckedCreateWithoutVeterinaryInput> | Prisma.PatientCreateWithoutVeterinaryInput[] | Prisma.PatientUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutVeterinaryInput | Prisma.PatientCreateOrConnectWithoutVeterinaryInput[]
-  upsert?: Prisma.PatientUpsertWithWhereUniqueWithoutVeterinaryInput | Prisma.PatientUpsertWithWhereUniqueWithoutVeterinaryInput[]
-  createMany?: Prisma.PatientCreateManyVeterinaryInputEnvelope
+export type PatientUpdateManyWithoutVeterinariaNestedInput = {
+  create?: Prisma.XOR<Prisma.PatientCreateWithoutVeterinariaInput, Prisma.PatientUncheckedCreateWithoutVeterinariaInput> | Prisma.PatientCreateWithoutVeterinariaInput[] | Prisma.PatientUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutVeterinariaInput | Prisma.PatientCreateOrConnectWithoutVeterinariaInput[]
+  upsert?: Prisma.PatientUpsertWithWhereUniqueWithoutVeterinariaInput | Prisma.PatientUpsertWithWhereUniqueWithoutVeterinariaInput[]
+  createMany?: Prisma.PatientCreateManyVeterinariaInputEnvelope
   set?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   disconnect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   delete?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   connect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
-  update?: Prisma.PatientUpdateWithWhereUniqueWithoutVeterinaryInput | Prisma.PatientUpdateWithWhereUniqueWithoutVeterinaryInput[]
-  updateMany?: Prisma.PatientUpdateManyWithWhereWithoutVeterinaryInput | Prisma.PatientUpdateManyWithWhereWithoutVeterinaryInput[]
+  update?: Prisma.PatientUpdateWithWhereUniqueWithoutVeterinariaInput | Prisma.PatientUpdateWithWhereUniqueWithoutVeterinariaInput[]
+  updateMany?: Prisma.PatientUpdateManyWithWhereWithoutVeterinariaInput | Prisma.PatientUpdateManyWithWhereWithoutVeterinariaInput[]
   deleteMany?: Prisma.PatientScalarWhereInput | Prisma.PatientScalarWhereInput[]
 }
 
-export type PatientUncheckedUpdateManyWithoutVeterinaryNestedInput = {
-  create?: Prisma.XOR<Prisma.PatientCreateWithoutVeterinaryInput, Prisma.PatientUncheckedCreateWithoutVeterinaryInput> | Prisma.PatientCreateWithoutVeterinaryInput[] | Prisma.PatientUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutVeterinaryInput | Prisma.PatientCreateOrConnectWithoutVeterinaryInput[]
-  upsert?: Prisma.PatientUpsertWithWhereUniqueWithoutVeterinaryInput | Prisma.PatientUpsertWithWhereUniqueWithoutVeterinaryInput[]
-  createMany?: Prisma.PatientCreateManyVeterinaryInputEnvelope
+export type PatientUncheckedUpdateManyWithoutVeterinariaNestedInput = {
+  create?: Prisma.XOR<Prisma.PatientCreateWithoutVeterinariaInput, Prisma.PatientUncheckedCreateWithoutVeterinariaInput> | Prisma.PatientCreateWithoutVeterinariaInput[] | Prisma.PatientUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutVeterinariaInput | Prisma.PatientCreateOrConnectWithoutVeterinariaInput[]
+  upsert?: Prisma.PatientUpsertWithWhereUniqueWithoutVeterinariaInput | Prisma.PatientUpsertWithWhereUniqueWithoutVeterinariaInput[]
+  createMany?: Prisma.PatientCreateManyVeterinariaInputEnvelope
   set?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   disconnect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   delete?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   connect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
-  update?: Prisma.PatientUpdateWithWhereUniqueWithoutVeterinaryInput | Prisma.PatientUpdateWithWhereUniqueWithoutVeterinaryInput[]
-  updateMany?: Prisma.PatientUpdateManyWithWhereWithoutVeterinaryInput | Prisma.PatientUpdateManyWithWhereWithoutVeterinaryInput[]
+  update?: Prisma.PatientUpdateWithWhereUniqueWithoutVeterinariaInput | Prisma.PatientUpdateWithWhereUniqueWithoutVeterinariaInput[]
+  updateMany?: Prisma.PatientUpdateManyWithWhereWithoutVeterinariaInput | Prisma.PatientUpdateManyWithWhereWithoutVeterinariaInput[]
   deleteMany?: Prisma.PatientScalarWhereInput | Prisma.PatientScalarWhereInput[]
 }
 
-export type PatientCreateNestedManyWithoutOwnerInput = {
-  create?: Prisma.XOR<Prisma.PatientCreateWithoutOwnerInput, Prisma.PatientUncheckedCreateWithoutOwnerInput> | Prisma.PatientCreateWithoutOwnerInput[] | Prisma.PatientUncheckedCreateWithoutOwnerInput[]
-  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutOwnerInput | Prisma.PatientCreateOrConnectWithoutOwnerInput[]
-  createMany?: Prisma.PatientCreateManyOwnerInputEnvelope
+export type PatientCreateNestedManyWithoutPropietarioInput = {
+  create?: Prisma.XOR<Prisma.PatientCreateWithoutPropietarioInput, Prisma.PatientUncheckedCreateWithoutPropietarioInput> | Prisma.PatientCreateWithoutPropietarioInput[] | Prisma.PatientUncheckedCreateWithoutPropietarioInput[]
+  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutPropietarioInput | Prisma.PatientCreateOrConnectWithoutPropietarioInput[]
+  createMany?: Prisma.PatientCreateManyPropietarioInputEnvelope
   connect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
 }
 
-export type PatientUncheckedCreateNestedManyWithoutOwnerInput = {
-  create?: Prisma.XOR<Prisma.PatientCreateWithoutOwnerInput, Prisma.PatientUncheckedCreateWithoutOwnerInput> | Prisma.PatientCreateWithoutOwnerInput[] | Prisma.PatientUncheckedCreateWithoutOwnerInput[]
-  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutOwnerInput | Prisma.PatientCreateOrConnectWithoutOwnerInput[]
-  createMany?: Prisma.PatientCreateManyOwnerInputEnvelope
+export type PatientUncheckedCreateNestedManyWithoutPropietarioInput = {
+  create?: Prisma.XOR<Prisma.PatientCreateWithoutPropietarioInput, Prisma.PatientUncheckedCreateWithoutPropietarioInput> | Prisma.PatientCreateWithoutPropietarioInput[] | Prisma.PatientUncheckedCreateWithoutPropietarioInput[]
+  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutPropietarioInput | Prisma.PatientCreateOrConnectWithoutPropietarioInput[]
+  createMany?: Prisma.PatientCreateManyPropietarioInputEnvelope
   connect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
 }
 
-export type PatientUpdateManyWithoutOwnerNestedInput = {
-  create?: Prisma.XOR<Prisma.PatientCreateWithoutOwnerInput, Prisma.PatientUncheckedCreateWithoutOwnerInput> | Prisma.PatientCreateWithoutOwnerInput[] | Prisma.PatientUncheckedCreateWithoutOwnerInput[]
-  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutOwnerInput | Prisma.PatientCreateOrConnectWithoutOwnerInput[]
-  upsert?: Prisma.PatientUpsertWithWhereUniqueWithoutOwnerInput | Prisma.PatientUpsertWithWhereUniqueWithoutOwnerInput[]
-  createMany?: Prisma.PatientCreateManyOwnerInputEnvelope
+export type PatientUpdateManyWithoutPropietarioNestedInput = {
+  create?: Prisma.XOR<Prisma.PatientCreateWithoutPropietarioInput, Prisma.PatientUncheckedCreateWithoutPropietarioInput> | Prisma.PatientCreateWithoutPropietarioInput[] | Prisma.PatientUncheckedCreateWithoutPropietarioInput[]
+  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutPropietarioInput | Prisma.PatientCreateOrConnectWithoutPropietarioInput[]
+  upsert?: Prisma.PatientUpsertWithWhereUniqueWithoutPropietarioInput | Prisma.PatientUpsertWithWhereUniqueWithoutPropietarioInput[]
+  createMany?: Prisma.PatientCreateManyPropietarioInputEnvelope
   set?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   disconnect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   delete?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   connect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
-  update?: Prisma.PatientUpdateWithWhereUniqueWithoutOwnerInput | Prisma.PatientUpdateWithWhereUniqueWithoutOwnerInput[]
-  updateMany?: Prisma.PatientUpdateManyWithWhereWithoutOwnerInput | Prisma.PatientUpdateManyWithWhereWithoutOwnerInput[]
+  update?: Prisma.PatientUpdateWithWhereUniqueWithoutPropietarioInput | Prisma.PatientUpdateWithWhereUniqueWithoutPropietarioInput[]
+  updateMany?: Prisma.PatientUpdateManyWithWhereWithoutPropietarioInput | Prisma.PatientUpdateManyWithWhereWithoutPropietarioInput[]
   deleteMany?: Prisma.PatientScalarWhereInput | Prisma.PatientScalarWhereInput[]
 }
 
-export type PatientUncheckedUpdateManyWithoutOwnerNestedInput = {
-  create?: Prisma.XOR<Prisma.PatientCreateWithoutOwnerInput, Prisma.PatientUncheckedCreateWithoutOwnerInput> | Prisma.PatientCreateWithoutOwnerInput[] | Prisma.PatientUncheckedCreateWithoutOwnerInput[]
-  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutOwnerInput | Prisma.PatientCreateOrConnectWithoutOwnerInput[]
-  upsert?: Prisma.PatientUpsertWithWhereUniqueWithoutOwnerInput | Prisma.PatientUpsertWithWhereUniqueWithoutOwnerInput[]
-  createMany?: Prisma.PatientCreateManyOwnerInputEnvelope
+export type PatientUncheckedUpdateManyWithoutPropietarioNestedInput = {
+  create?: Prisma.XOR<Prisma.PatientCreateWithoutPropietarioInput, Prisma.PatientUncheckedCreateWithoutPropietarioInput> | Prisma.PatientCreateWithoutPropietarioInput[] | Prisma.PatientUncheckedCreateWithoutPropietarioInput[]
+  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutPropietarioInput | Prisma.PatientCreateOrConnectWithoutPropietarioInput[]
+  upsert?: Prisma.PatientUpsertWithWhereUniqueWithoutPropietarioInput | Prisma.PatientUpsertWithWhereUniqueWithoutPropietarioInput[]
+  createMany?: Prisma.PatientCreateManyPropietarioInputEnvelope
   set?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   disconnect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   delete?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   connect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
-  update?: Prisma.PatientUpdateWithWhereUniqueWithoutOwnerInput | Prisma.PatientUpdateWithWhereUniqueWithoutOwnerInput[]
-  updateMany?: Prisma.PatientUpdateManyWithWhereWithoutOwnerInput | Prisma.PatientUpdateManyWithWhereWithoutOwnerInput[]
+  update?: Prisma.PatientUpdateWithWhereUniqueWithoutPropietarioInput | Prisma.PatientUpdateWithWhereUniqueWithoutPropietarioInput[]
+  updateMany?: Prisma.PatientUpdateManyWithWhereWithoutPropietarioInput | Prisma.PatientUpdateManyWithWhereWithoutPropietarioInput[]
   deleteMany?: Prisma.PatientScalarWhereInput | Prisma.PatientScalarWhereInput[]
 }
 
-export type PatientCreateNestedManyWithoutSpeciesInput = {
-  create?: Prisma.XOR<Prisma.PatientCreateWithoutSpeciesInput, Prisma.PatientUncheckedCreateWithoutSpeciesInput> | Prisma.PatientCreateWithoutSpeciesInput[] | Prisma.PatientUncheckedCreateWithoutSpeciesInput[]
-  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutSpeciesInput | Prisma.PatientCreateOrConnectWithoutSpeciesInput[]
-  createMany?: Prisma.PatientCreateManySpeciesInputEnvelope
+export type PatientCreateNestedManyWithoutEspecieInput = {
+  create?: Prisma.XOR<Prisma.PatientCreateWithoutEspecieInput, Prisma.PatientUncheckedCreateWithoutEspecieInput> | Prisma.PatientCreateWithoutEspecieInput[] | Prisma.PatientUncheckedCreateWithoutEspecieInput[]
+  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutEspecieInput | Prisma.PatientCreateOrConnectWithoutEspecieInput[]
+  createMany?: Prisma.PatientCreateManyEspecieInputEnvelope
   connect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
 }
 
-export type PatientUncheckedCreateNestedManyWithoutSpeciesInput = {
-  create?: Prisma.XOR<Prisma.PatientCreateWithoutSpeciesInput, Prisma.PatientUncheckedCreateWithoutSpeciesInput> | Prisma.PatientCreateWithoutSpeciesInput[] | Prisma.PatientUncheckedCreateWithoutSpeciesInput[]
-  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutSpeciesInput | Prisma.PatientCreateOrConnectWithoutSpeciesInput[]
-  createMany?: Prisma.PatientCreateManySpeciesInputEnvelope
+export type PatientUncheckedCreateNestedManyWithoutEspecieInput = {
+  create?: Prisma.XOR<Prisma.PatientCreateWithoutEspecieInput, Prisma.PatientUncheckedCreateWithoutEspecieInput> | Prisma.PatientCreateWithoutEspecieInput[] | Prisma.PatientUncheckedCreateWithoutEspecieInput[]
+  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutEspecieInput | Prisma.PatientCreateOrConnectWithoutEspecieInput[]
+  createMany?: Prisma.PatientCreateManyEspecieInputEnvelope
   connect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
 }
 
-export type PatientUpdateManyWithoutSpeciesNestedInput = {
-  create?: Prisma.XOR<Prisma.PatientCreateWithoutSpeciesInput, Prisma.PatientUncheckedCreateWithoutSpeciesInput> | Prisma.PatientCreateWithoutSpeciesInput[] | Prisma.PatientUncheckedCreateWithoutSpeciesInput[]
-  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutSpeciesInput | Prisma.PatientCreateOrConnectWithoutSpeciesInput[]
-  upsert?: Prisma.PatientUpsertWithWhereUniqueWithoutSpeciesInput | Prisma.PatientUpsertWithWhereUniqueWithoutSpeciesInput[]
-  createMany?: Prisma.PatientCreateManySpeciesInputEnvelope
+export type PatientUpdateManyWithoutEspecieNestedInput = {
+  create?: Prisma.XOR<Prisma.PatientCreateWithoutEspecieInput, Prisma.PatientUncheckedCreateWithoutEspecieInput> | Prisma.PatientCreateWithoutEspecieInput[] | Prisma.PatientUncheckedCreateWithoutEspecieInput[]
+  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutEspecieInput | Prisma.PatientCreateOrConnectWithoutEspecieInput[]
+  upsert?: Prisma.PatientUpsertWithWhereUniqueWithoutEspecieInput | Prisma.PatientUpsertWithWhereUniqueWithoutEspecieInput[]
+  createMany?: Prisma.PatientCreateManyEspecieInputEnvelope
   set?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   disconnect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   delete?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   connect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
-  update?: Prisma.PatientUpdateWithWhereUniqueWithoutSpeciesInput | Prisma.PatientUpdateWithWhereUniqueWithoutSpeciesInput[]
-  updateMany?: Prisma.PatientUpdateManyWithWhereWithoutSpeciesInput | Prisma.PatientUpdateManyWithWhereWithoutSpeciesInput[]
+  update?: Prisma.PatientUpdateWithWhereUniqueWithoutEspecieInput | Prisma.PatientUpdateWithWhereUniqueWithoutEspecieInput[]
+  updateMany?: Prisma.PatientUpdateManyWithWhereWithoutEspecieInput | Prisma.PatientUpdateManyWithWhereWithoutEspecieInput[]
   deleteMany?: Prisma.PatientScalarWhereInput | Prisma.PatientScalarWhereInput[]
 }
 
-export type PatientUncheckedUpdateManyWithoutSpeciesNestedInput = {
-  create?: Prisma.XOR<Prisma.PatientCreateWithoutSpeciesInput, Prisma.PatientUncheckedCreateWithoutSpeciesInput> | Prisma.PatientCreateWithoutSpeciesInput[] | Prisma.PatientUncheckedCreateWithoutSpeciesInput[]
-  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutSpeciesInput | Prisma.PatientCreateOrConnectWithoutSpeciesInput[]
-  upsert?: Prisma.PatientUpsertWithWhereUniqueWithoutSpeciesInput | Prisma.PatientUpsertWithWhereUniqueWithoutSpeciesInput[]
-  createMany?: Prisma.PatientCreateManySpeciesInputEnvelope
+export type PatientUncheckedUpdateManyWithoutEspecieNestedInput = {
+  create?: Prisma.XOR<Prisma.PatientCreateWithoutEspecieInput, Prisma.PatientUncheckedCreateWithoutEspecieInput> | Prisma.PatientCreateWithoutEspecieInput[] | Prisma.PatientUncheckedCreateWithoutEspecieInput[]
+  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutEspecieInput | Prisma.PatientCreateOrConnectWithoutEspecieInput[]
+  upsert?: Prisma.PatientUpsertWithWhereUniqueWithoutEspecieInput | Prisma.PatientUpsertWithWhereUniqueWithoutEspecieInput[]
+  createMany?: Prisma.PatientCreateManyEspecieInputEnvelope
   set?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   disconnect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   delete?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   connect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
-  update?: Prisma.PatientUpdateWithWhereUniqueWithoutSpeciesInput | Prisma.PatientUpdateWithWhereUniqueWithoutSpeciesInput[]
-  updateMany?: Prisma.PatientUpdateManyWithWhereWithoutSpeciesInput | Prisma.PatientUpdateManyWithWhereWithoutSpeciesInput[]
+  update?: Prisma.PatientUpdateWithWhereUniqueWithoutEspecieInput | Prisma.PatientUpdateWithWhereUniqueWithoutEspecieInput[]
+  updateMany?: Prisma.PatientUpdateManyWithWhereWithoutEspecieInput | Prisma.PatientUpdateManyWithWhereWithoutEspecieInput[]
   deleteMany?: Prisma.PatientScalarWhereInput | Prisma.PatientScalarWhereInput[]
 }
 
-export type PatientCreateNestedManyWithoutBreedInput = {
-  create?: Prisma.XOR<Prisma.PatientCreateWithoutBreedInput, Prisma.PatientUncheckedCreateWithoutBreedInput> | Prisma.PatientCreateWithoutBreedInput[] | Prisma.PatientUncheckedCreateWithoutBreedInput[]
-  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutBreedInput | Prisma.PatientCreateOrConnectWithoutBreedInput[]
-  createMany?: Prisma.PatientCreateManyBreedInputEnvelope
+export type PatientCreateNestedManyWithoutRazaInput = {
+  create?: Prisma.XOR<Prisma.PatientCreateWithoutRazaInput, Prisma.PatientUncheckedCreateWithoutRazaInput> | Prisma.PatientCreateWithoutRazaInput[] | Prisma.PatientUncheckedCreateWithoutRazaInput[]
+  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutRazaInput | Prisma.PatientCreateOrConnectWithoutRazaInput[]
+  createMany?: Prisma.PatientCreateManyRazaInputEnvelope
   connect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
 }
 
-export type PatientUncheckedCreateNestedManyWithoutBreedInput = {
-  create?: Prisma.XOR<Prisma.PatientCreateWithoutBreedInput, Prisma.PatientUncheckedCreateWithoutBreedInput> | Prisma.PatientCreateWithoutBreedInput[] | Prisma.PatientUncheckedCreateWithoutBreedInput[]
-  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutBreedInput | Prisma.PatientCreateOrConnectWithoutBreedInput[]
-  createMany?: Prisma.PatientCreateManyBreedInputEnvelope
+export type PatientUncheckedCreateNestedManyWithoutRazaInput = {
+  create?: Prisma.XOR<Prisma.PatientCreateWithoutRazaInput, Prisma.PatientUncheckedCreateWithoutRazaInput> | Prisma.PatientCreateWithoutRazaInput[] | Prisma.PatientUncheckedCreateWithoutRazaInput[]
+  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutRazaInput | Prisma.PatientCreateOrConnectWithoutRazaInput[]
+  createMany?: Prisma.PatientCreateManyRazaInputEnvelope
   connect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
 }
 
-export type PatientUpdateManyWithoutBreedNestedInput = {
-  create?: Prisma.XOR<Prisma.PatientCreateWithoutBreedInput, Prisma.PatientUncheckedCreateWithoutBreedInput> | Prisma.PatientCreateWithoutBreedInput[] | Prisma.PatientUncheckedCreateWithoutBreedInput[]
-  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutBreedInput | Prisma.PatientCreateOrConnectWithoutBreedInput[]
-  upsert?: Prisma.PatientUpsertWithWhereUniqueWithoutBreedInput | Prisma.PatientUpsertWithWhereUniqueWithoutBreedInput[]
-  createMany?: Prisma.PatientCreateManyBreedInputEnvelope
+export type PatientUpdateManyWithoutRazaNestedInput = {
+  create?: Prisma.XOR<Prisma.PatientCreateWithoutRazaInput, Prisma.PatientUncheckedCreateWithoutRazaInput> | Prisma.PatientCreateWithoutRazaInput[] | Prisma.PatientUncheckedCreateWithoutRazaInput[]
+  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutRazaInput | Prisma.PatientCreateOrConnectWithoutRazaInput[]
+  upsert?: Prisma.PatientUpsertWithWhereUniqueWithoutRazaInput | Prisma.PatientUpsertWithWhereUniqueWithoutRazaInput[]
+  createMany?: Prisma.PatientCreateManyRazaInputEnvelope
   set?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   disconnect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   delete?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   connect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
-  update?: Prisma.PatientUpdateWithWhereUniqueWithoutBreedInput | Prisma.PatientUpdateWithWhereUniqueWithoutBreedInput[]
-  updateMany?: Prisma.PatientUpdateManyWithWhereWithoutBreedInput | Prisma.PatientUpdateManyWithWhereWithoutBreedInput[]
+  update?: Prisma.PatientUpdateWithWhereUniqueWithoutRazaInput | Prisma.PatientUpdateWithWhereUniqueWithoutRazaInput[]
+  updateMany?: Prisma.PatientUpdateManyWithWhereWithoutRazaInput | Prisma.PatientUpdateManyWithWhereWithoutRazaInput[]
   deleteMany?: Prisma.PatientScalarWhereInput | Prisma.PatientScalarWhereInput[]
 }
 
-export type PatientUncheckedUpdateManyWithoutBreedNestedInput = {
-  create?: Prisma.XOR<Prisma.PatientCreateWithoutBreedInput, Prisma.PatientUncheckedCreateWithoutBreedInput> | Prisma.PatientCreateWithoutBreedInput[] | Prisma.PatientUncheckedCreateWithoutBreedInput[]
-  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutBreedInput | Prisma.PatientCreateOrConnectWithoutBreedInput[]
-  upsert?: Prisma.PatientUpsertWithWhereUniqueWithoutBreedInput | Prisma.PatientUpsertWithWhereUniqueWithoutBreedInput[]
-  createMany?: Prisma.PatientCreateManyBreedInputEnvelope
+export type PatientUncheckedUpdateManyWithoutRazaNestedInput = {
+  create?: Prisma.XOR<Prisma.PatientCreateWithoutRazaInput, Prisma.PatientUncheckedCreateWithoutRazaInput> | Prisma.PatientCreateWithoutRazaInput[] | Prisma.PatientUncheckedCreateWithoutRazaInput[]
+  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutRazaInput | Prisma.PatientCreateOrConnectWithoutRazaInput[]
+  upsert?: Prisma.PatientUpsertWithWhereUniqueWithoutRazaInput | Prisma.PatientUpsertWithWhereUniqueWithoutRazaInput[]
+  createMany?: Prisma.PatientCreateManyRazaInputEnvelope
   set?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   disconnect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   delete?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
   connect?: Prisma.PatientWhereUniqueInput | Prisma.PatientWhereUniqueInput[]
-  update?: Prisma.PatientUpdateWithWhereUniqueWithoutBreedInput | Prisma.PatientUpdateWithWhereUniqueWithoutBreedInput[]
-  updateMany?: Prisma.PatientUpdateManyWithWhereWithoutBreedInput | Prisma.PatientUpdateManyWithWhereWithoutBreedInput[]
+  update?: Prisma.PatientUpdateWithWhereUniqueWithoutRazaInput | Prisma.PatientUpdateWithWhereUniqueWithoutRazaInput[]
+  updateMany?: Prisma.PatientUpdateManyWithWhereWithoutRazaInput | Prisma.PatientUpdateManyWithWhereWithoutRazaInput[]
   deleteMany?: Prisma.PatientScalarWhereInput | Prisma.PatientScalarWhereInput[]
 }
 
@@ -855,118 +855,118 @@ export type NullableDecimalFieldUpdateOperationsInput = {
   divide?: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
-export type PatientCreateNestedOneWithoutAppointmentsInput = {
-  create?: Prisma.XOR<Prisma.PatientCreateWithoutAppointmentsInput, Prisma.PatientUncheckedCreateWithoutAppointmentsInput>
-  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutAppointmentsInput
+export type PatientCreateNestedOneWithoutCitasInput = {
+  create?: Prisma.XOR<Prisma.PatientCreateWithoutCitasInput, Prisma.PatientUncheckedCreateWithoutCitasInput>
+  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutCitasInput
   connect?: Prisma.PatientWhereUniqueInput
 }
 
-export type PatientUpdateOneRequiredWithoutAppointmentsNestedInput = {
-  create?: Prisma.XOR<Prisma.PatientCreateWithoutAppointmentsInput, Prisma.PatientUncheckedCreateWithoutAppointmentsInput>
-  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutAppointmentsInput
-  upsert?: Prisma.PatientUpsertWithoutAppointmentsInput
+export type PatientUpdateOneRequiredWithoutCitasNestedInput = {
+  create?: Prisma.XOR<Prisma.PatientCreateWithoutCitasInput, Prisma.PatientUncheckedCreateWithoutCitasInput>
+  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutCitasInput
+  upsert?: Prisma.PatientUpsertWithoutCitasInput
   connect?: Prisma.PatientWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.PatientUpdateToOneWithWhereWithoutAppointmentsInput, Prisma.PatientUpdateWithoutAppointmentsInput>, Prisma.PatientUncheckedUpdateWithoutAppointmentsInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.PatientUpdateToOneWithWhereWithoutCitasInput, Prisma.PatientUpdateWithoutCitasInput>, Prisma.PatientUncheckedUpdateWithoutCitasInput>
 }
 
-export type PatientCreateNestedOneWithoutClinicalRecordsInput = {
-  create?: Prisma.XOR<Prisma.PatientCreateWithoutClinicalRecordsInput, Prisma.PatientUncheckedCreateWithoutClinicalRecordsInput>
-  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutClinicalRecordsInput
-  connect?: Prisma.PatientWhereUniqueInput
-}
-
-export type PatientUpdateOneRequiredWithoutClinicalRecordsNestedInput = {
-  create?: Prisma.XOR<Prisma.PatientCreateWithoutClinicalRecordsInput, Prisma.PatientUncheckedCreateWithoutClinicalRecordsInput>
-  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutClinicalRecordsInput
-  upsert?: Prisma.PatientUpsertWithoutClinicalRecordsInput
-  connect?: Prisma.PatientWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.PatientUpdateToOneWithWhereWithoutClinicalRecordsInput, Prisma.PatientUpdateWithoutClinicalRecordsInput>, Prisma.PatientUncheckedUpdateWithoutClinicalRecordsInput>
-}
-
-export type PatientCreateNestedOneWithoutVaccinationsInput = {
-  create?: Prisma.XOR<Prisma.PatientCreateWithoutVaccinationsInput, Prisma.PatientUncheckedCreateWithoutVaccinationsInput>
-  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutVaccinationsInput
+export type PatientCreateNestedOneWithoutRegistrosClinicoInput = {
+  create?: Prisma.XOR<Prisma.PatientCreateWithoutRegistrosClinicoInput, Prisma.PatientUncheckedCreateWithoutRegistrosClinicoInput>
+  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutRegistrosClinicoInput
   connect?: Prisma.PatientWhereUniqueInput
 }
 
-export type PatientUpdateOneRequiredWithoutVaccinationsNestedInput = {
-  create?: Prisma.XOR<Prisma.PatientCreateWithoutVaccinationsInput, Prisma.PatientUncheckedCreateWithoutVaccinationsInput>
-  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutVaccinationsInput
-  upsert?: Prisma.PatientUpsertWithoutVaccinationsInput
+export type PatientUpdateOneRequiredWithoutRegistrosClinicoNestedInput = {
+  create?: Prisma.XOR<Prisma.PatientCreateWithoutRegistrosClinicoInput, Prisma.PatientUncheckedCreateWithoutRegistrosClinicoInput>
+  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutRegistrosClinicoInput
+  upsert?: Prisma.PatientUpsertWithoutRegistrosClinicoInput
   connect?: Prisma.PatientWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.PatientUpdateToOneWithWhereWithoutVaccinationsInput, Prisma.PatientUpdateWithoutVaccinationsInput>, Prisma.PatientUncheckedUpdateWithoutVaccinationsInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.PatientUpdateToOneWithWhereWithoutRegistrosClinicoInput, Prisma.PatientUpdateWithoutRegistrosClinicoInput>, Prisma.PatientUncheckedUpdateWithoutRegistrosClinicoInput>
 }
 
-export type PatientCreateWithoutVeterinaryInput = {
+export type PatientCreateNestedOneWithoutVacunacionesInput = {
+  create?: Prisma.XOR<Prisma.PatientCreateWithoutVacunacionesInput, Prisma.PatientUncheckedCreateWithoutVacunacionesInput>
+  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutVacunacionesInput
+  connect?: Prisma.PatientWhereUniqueInput
+}
+
+export type PatientUpdateOneRequiredWithoutVacunacionesNestedInput = {
+  create?: Prisma.XOR<Prisma.PatientCreateWithoutVacunacionesInput, Prisma.PatientUncheckedCreateWithoutVacunacionesInput>
+  connectOrCreate?: Prisma.PatientCreateOrConnectWithoutVacunacionesInput
+  upsert?: Prisma.PatientUpsertWithoutVacunacionesInput
+  connect?: Prisma.PatientWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.PatientUpdateToOneWithWhereWithoutVacunacionesInput, Prisma.PatientUpdateWithoutVacunacionesInput>, Prisma.PatientUncheckedUpdateWithoutVacunacionesInput>
+}
+
+export type PatientCreateWithoutVeterinariaInput = {
   id?: string
-  name: string
+  nombre: string
   color?: string | null
-  birthDate?: Date | string | null
-  gender?: string | null
-  weight?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: string | null
-  microchipNumber?: string | null
-  isNeutered?: boolean
-  allergies?: string | null
-  specialConditions?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  owner: Prisma.OwnerCreateNestedOneWithoutPatientsInput
-  species: Prisma.SpeciesCreateNestedOneWithoutPatientsInput
-  breed?: Prisma.BreedCreateNestedOneWithoutPatientsInput
-  appointments?: Prisma.AppointmentCreateNestedManyWithoutPatientInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutPatientInput
-  vaccinations?: Prisma.VaccinationCreateNestedManyWithoutPatientInput
+  fechaNacimiento?: Date | string | null
+  genero?: string | null
+  peso?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: string | null
+  numeroMicrochip?: string | null
+  estaCastrado?: boolean
+  alergias?: string | null
+  condicionesEspeciales?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  propietario: Prisma.OwnerCreateNestedOneWithoutPacientesInput
+  especie: Prisma.SpeciesCreateNestedOneWithoutPacientesInput
+  raza?: Prisma.BreedCreateNestedOneWithoutPacientesInput
+  citas?: Prisma.AppointmentCreateNestedManyWithoutPacienteInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutPacienteInput
+  vacunaciones?: Prisma.VaccinationCreateNestedManyWithoutPacienteInput
 }
 
-export type PatientUncheckedCreateWithoutVeterinaryInput = {
+export type PatientUncheckedCreateWithoutVeterinariaInput = {
   id?: string
-  ownerId: string
-  name: string
-  speciesId: string
-  breedId?: string | null
+  propietarioId: string
+  nombre: string
+  especieId: string
+  razaId?: string | null
   color?: string | null
-  birthDate?: Date | string | null
-  gender?: string | null
-  weight?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: string | null
-  microchipNumber?: string | null
-  isNeutered?: boolean
-  allergies?: string | null
-  specialConditions?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  appointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutPatientInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutPatientInput
-  vaccinations?: Prisma.VaccinationUncheckedCreateNestedManyWithoutPatientInput
+  fechaNacimiento?: Date | string | null
+  genero?: string | null
+  peso?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: string | null
+  numeroMicrochip?: string | null
+  estaCastrado?: boolean
+  alergias?: string | null
+  condicionesEspeciales?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutPacienteInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutPacienteInput
+  vacunaciones?: Prisma.VaccinationUncheckedCreateNestedManyWithoutPacienteInput
 }
 
-export type PatientCreateOrConnectWithoutVeterinaryInput = {
+export type PatientCreateOrConnectWithoutVeterinariaInput = {
   where: Prisma.PatientWhereUniqueInput
-  create: Prisma.XOR<Prisma.PatientCreateWithoutVeterinaryInput, Prisma.PatientUncheckedCreateWithoutVeterinaryInput>
+  create: Prisma.XOR<Prisma.PatientCreateWithoutVeterinariaInput, Prisma.PatientUncheckedCreateWithoutVeterinariaInput>
 }
 
-export type PatientCreateManyVeterinaryInputEnvelope = {
-  data: Prisma.PatientCreateManyVeterinaryInput | Prisma.PatientCreateManyVeterinaryInput[]
+export type PatientCreateManyVeterinariaInputEnvelope = {
+  data: Prisma.PatientCreateManyVeterinariaInput | Prisma.PatientCreateManyVeterinariaInput[]
   skipDuplicates?: boolean
 }
 
-export type PatientUpsertWithWhereUniqueWithoutVeterinaryInput = {
+export type PatientUpsertWithWhereUniqueWithoutVeterinariaInput = {
   where: Prisma.PatientWhereUniqueInput
-  update: Prisma.XOR<Prisma.PatientUpdateWithoutVeterinaryInput, Prisma.PatientUncheckedUpdateWithoutVeterinaryInput>
-  create: Prisma.XOR<Prisma.PatientCreateWithoutVeterinaryInput, Prisma.PatientUncheckedCreateWithoutVeterinaryInput>
+  update: Prisma.XOR<Prisma.PatientUpdateWithoutVeterinariaInput, Prisma.PatientUncheckedUpdateWithoutVeterinariaInput>
+  create: Prisma.XOR<Prisma.PatientCreateWithoutVeterinariaInput, Prisma.PatientUncheckedCreateWithoutVeterinariaInput>
 }
 
-export type PatientUpdateWithWhereUniqueWithoutVeterinaryInput = {
+export type PatientUpdateWithWhereUniqueWithoutVeterinariaInput = {
   where: Prisma.PatientWhereUniqueInput
-  data: Prisma.XOR<Prisma.PatientUpdateWithoutVeterinaryInput, Prisma.PatientUncheckedUpdateWithoutVeterinaryInput>
+  data: Prisma.XOR<Prisma.PatientUpdateWithoutVeterinariaInput, Prisma.PatientUncheckedUpdateWithoutVeterinariaInput>
 }
 
-export type PatientUpdateManyWithWhereWithoutVeterinaryInput = {
+export type PatientUpdateManyWithWhereWithoutVeterinariaInput = {
   where: Prisma.PatientScalarWhereInput
-  data: Prisma.XOR<Prisma.PatientUpdateManyMutationInput, Prisma.PatientUncheckedUpdateManyWithoutVeterinaryInput>
+  data: Prisma.XOR<Prisma.PatientUpdateManyMutationInput, Prisma.PatientUncheckedUpdateManyWithoutVeterinariaInput>
 }
 
 export type PatientScalarWhereInput = {
@@ -974,907 +974,907 @@ export type PatientScalarWhereInput = {
   OR?: Prisma.PatientScalarWhereInput[]
   NOT?: Prisma.PatientScalarWhereInput | Prisma.PatientScalarWhereInput[]
   id?: Prisma.UuidFilter<"Patient"> | string
-  ownerId?: Prisma.UuidFilter<"Patient"> | string
-  veterinaryId?: Prisma.UuidNullableFilter<"Patient"> | string | null
-  name?: Prisma.StringFilter<"Patient"> | string
-  speciesId?: Prisma.UuidFilter<"Patient"> | string
-  breedId?: Prisma.UuidNullableFilter<"Patient"> | string | null
+  propietarioId?: Prisma.UuidFilter<"Patient"> | string
+  veterinariaId?: Prisma.UuidNullableFilter<"Patient"> | string | null
+  nombre?: Prisma.StringFilter<"Patient"> | string
+  especieId?: Prisma.UuidFilter<"Patient"> | string
+  razaId?: Prisma.UuidNullableFilter<"Patient"> | string | null
   color?: Prisma.StringNullableFilter<"Patient"> | string | null
-  birthDate?: Prisma.DateTimeNullableFilter<"Patient"> | Date | string | null
-  gender?: Prisma.StringNullableFilter<"Patient"> | string | null
-  weight?: Prisma.DecimalNullableFilter<"Patient"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.StringNullableFilter<"Patient"> | string | null
-  microchipNumber?: Prisma.StringNullableFilter<"Patient"> | string | null
-  isNeutered?: Prisma.BoolFilter<"Patient"> | boolean
-  allergies?: Prisma.StringNullableFilter<"Patient"> | string | null
-  specialConditions?: Prisma.StringNullableFilter<"Patient"> | string | null
-  isActive?: Prisma.BoolFilter<"Patient"> | boolean
-  createdAt?: Prisma.DateTimeFilter<"Patient"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"Patient"> | Date | string
+  fechaNacimiento?: Prisma.DateTimeNullableFilter<"Patient"> | Date | string | null
+  genero?: Prisma.StringNullableFilter<"Patient"> | string | null
+  peso?: Prisma.DecimalNullableFilter<"Patient"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.StringNullableFilter<"Patient"> | string | null
+  numeroMicrochip?: Prisma.StringNullableFilter<"Patient"> | string | null
+  estaCastrado?: Prisma.BoolFilter<"Patient"> | boolean
+  alergias?: Prisma.StringNullableFilter<"Patient"> | string | null
+  condicionesEspeciales?: Prisma.StringNullableFilter<"Patient"> | string | null
+  estaActivo?: Prisma.BoolFilter<"Patient"> | boolean
+  creadoEn?: Prisma.DateTimeFilter<"Patient"> | Date | string
+  actualizadoEn?: Prisma.DateTimeFilter<"Patient"> | Date | string
 }
 
-export type PatientCreateWithoutOwnerInput = {
+export type PatientCreateWithoutPropietarioInput = {
   id?: string
-  name: string
+  nombre: string
   color?: string | null
-  birthDate?: Date | string | null
-  gender?: string | null
-  weight?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: string | null
-  microchipNumber?: string | null
-  isNeutered?: boolean
-  allergies?: string | null
-  specialConditions?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutPatientsInput
-  species: Prisma.SpeciesCreateNestedOneWithoutPatientsInput
-  breed?: Prisma.BreedCreateNestedOneWithoutPatientsInput
-  appointments?: Prisma.AppointmentCreateNestedManyWithoutPatientInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutPatientInput
-  vaccinations?: Prisma.VaccinationCreateNestedManyWithoutPatientInput
+  fechaNacimiento?: Date | string | null
+  genero?: string | null
+  peso?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: string | null
+  numeroMicrochip?: string | null
+  estaCastrado?: boolean
+  alergias?: string | null
+  condicionesEspeciales?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutPacientesInput
+  especie: Prisma.SpeciesCreateNestedOneWithoutPacientesInput
+  raza?: Prisma.BreedCreateNestedOneWithoutPacientesInput
+  citas?: Prisma.AppointmentCreateNestedManyWithoutPacienteInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutPacienteInput
+  vacunaciones?: Prisma.VaccinationCreateNestedManyWithoutPacienteInput
 }
 
-export type PatientUncheckedCreateWithoutOwnerInput = {
+export type PatientUncheckedCreateWithoutPropietarioInput = {
   id?: string
-  veterinaryId?: string | null
-  name: string
-  speciesId: string
-  breedId?: string | null
+  veterinariaId?: string | null
+  nombre: string
+  especieId: string
+  razaId?: string | null
   color?: string | null
-  birthDate?: Date | string | null
-  gender?: string | null
-  weight?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: string | null
-  microchipNumber?: string | null
-  isNeutered?: boolean
-  allergies?: string | null
-  specialConditions?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  appointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutPatientInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutPatientInput
-  vaccinations?: Prisma.VaccinationUncheckedCreateNestedManyWithoutPatientInput
+  fechaNacimiento?: Date | string | null
+  genero?: string | null
+  peso?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: string | null
+  numeroMicrochip?: string | null
+  estaCastrado?: boolean
+  alergias?: string | null
+  condicionesEspeciales?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutPacienteInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutPacienteInput
+  vacunaciones?: Prisma.VaccinationUncheckedCreateNestedManyWithoutPacienteInput
 }
 
-export type PatientCreateOrConnectWithoutOwnerInput = {
+export type PatientCreateOrConnectWithoutPropietarioInput = {
   where: Prisma.PatientWhereUniqueInput
-  create: Prisma.XOR<Prisma.PatientCreateWithoutOwnerInput, Prisma.PatientUncheckedCreateWithoutOwnerInput>
+  create: Prisma.XOR<Prisma.PatientCreateWithoutPropietarioInput, Prisma.PatientUncheckedCreateWithoutPropietarioInput>
 }
 
-export type PatientCreateManyOwnerInputEnvelope = {
-  data: Prisma.PatientCreateManyOwnerInput | Prisma.PatientCreateManyOwnerInput[]
+export type PatientCreateManyPropietarioInputEnvelope = {
+  data: Prisma.PatientCreateManyPropietarioInput | Prisma.PatientCreateManyPropietarioInput[]
   skipDuplicates?: boolean
 }
 
-export type PatientUpsertWithWhereUniqueWithoutOwnerInput = {
+export type PatientUpsertWithWhereUniqueWithoutPropietarioInput = {
   where: Prisma.PatientWhereUniqueInput
-  update: Prisma.XOR<Prisma.PatientUpdateWithoutOwnerInput, Prisma.PatientUncheckedUpdateWithoutOwnerInput>
-  create: Prisma.XOR<Prisma.PatientCreateWithoutOwnerInput, Prisma.PatientUncheckedCreateWithoutOwnerInput>
+  update: Prisma.XOR<Prisma.PatientUpdateWithoutPropietarioInput, Prisma.PatientUncheckedUpdateWithoutPropietarioInput>
+  create: Prisma.XOR<Prisma.PatientCreateWithoutPropietarioInput, Prisma.PatientUncheckedCreateWithoutPropietarioInput>
 }
 
-export type PatientUpdateWithWhereUniqueWithoutOwnerInput = {
+export type PatientUpdateWithWhereUniqueWithoutPropietarioInput = {
   where: Prisma.PatientWhereUniqueInput
-  data: Prisma.XOR<Prisma.PatientUpdateWithoutOwnerInput, Prisma.PatientUncheckedUpdateWithoutOwnerInput>
+  data: Prisma.XOR<Prisma.PatientUpdateWithoutPropietarioInput, Prisma.PatientUncheckedUpdateWithoutPropietarioInput>
 }
 
-export type PatientUpdateManyWithWhereWithoutOwnerInput = {
+export type PatientUpdateManyWithWhereWithoutPropietarioInput = {
   where: Prisma.PatientScalarWhereInput
-  data: Prisma.XOR<Prisma.PatientUpdateManyMutationInput, Prisma.PatientUncheckedUpdateManyWithoutOwnerInput>
+  data: Prisma.XOR<Prisma.PatientUpdateManyMutationInput, Prisma.PatientUncheckedUpdateManyWithoutPropietarioInput>
 }
 
-export type PatientCreateWithoutSpeciesInput = {
+export type PatientCreateWithoutEspecieInput = {
   id?: string
-  name: string
+  nombre: string
   color?: string | null
-  birthDate?: Date | string | null
-  gender?: string | null
-  weight?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: string | null
-  microchipNumber?: string | null
-  isNeutered?: boolean
-  allergies?: string | null
-  specialConditions?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  owner: Prisma.OwnerCreateNestedOneWithoutPatientsInput
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutPatientsInput
-  breed?: Prisma.BreedCreateNestedOneWithoutPatientsInput
-  appointments?: Prisma.AppointmentCreateNestedManyWithoutPatientInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutPatientInput
-  vaccinations?: Prisma.VaccinationCreateNestedManyWithoutPatientInput
+  fechaNacimiento?: Date | string | null
+  genero?: string | null
+  peso?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: string | null
+  numeroMicrochip?: string | null
+  estaCastrado?: boolean
+  alergias?: string | null
+  condicionesEspeciales?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  propietario: Prisma.OwnerCreateNestedOneWithoutPacientesInput
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutPacientesInput
+  raza?: Prisma.BreedCreateNestedOneWithoutPacientesInput
+  citas?: Prisma.AppointmentCreateNestedManyWithoutPacienteInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutPacienteInput
+  vacunaciones?: Prisma.VaccinationCreateNestedManyWithoutPacienteInput
 }
 
-export type PatientUncheckedCreateWithoutSpeciesInput = {
+export type PatientUncheckedCreateWithoutEspecieInput = {
   id?: string
-  ownerId: string
-  veterinaryId?: string | null
-  name: string
-  breedId?: string | null
+  propietarioId: string
+  veterinariaId?: string | null
+  nombre: string
+  razaId?: string | null
   color?: string | null
-  birthDate?: Date | string | null
-  gender?: string | null
-  weight?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: string | null
-  microchipNumber?: string | null
-  isNeutered?: boolean
-  allergies?: string | null
-  specialConditions?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  appointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutPatientInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutPatientInput
-  vaccinations?: Prisma.VaccinationUncheckedCreateNestedManyWithoutPatientInput
+  fechaNacimiento?: Date | string | null
+  genero?: string | null
+  peso?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: string | null
+  numeroMicrochip?: string | null
+  estaCastrado?: boolean
+  alergias?: string | null
+  condicionesEspeciales?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutPacienteInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutPacienteInput
+  vacunaciones?: Prisma.VaccinationUncheckedCreateNestedManyWithoutPacienteInput
 }
 
-export type PatientCreateOrConnectWithoutSpeciesInput = {
+export type PatientCreateOrConnectWithoutEspecieInput = {
   where: Prisma.PatientWhereUniqueInput
-  create: Prisma.XOR<Prisma.PatientCreateWithoutSpeciesInput, Prisma.PatientUncheckedCreateWithoutSpeciesInput>
+  create: Prisma.XOR<Prisma.PatientCreateWithoutEspecieInput, Prisma.PatientUncheckedCreateWithoutEspecieInput>
 }
 
-export type PatientCreateManySpeciesInputEnvelope = {
-  data: Prisma.PatientCreateManySpeciesInput | Prisma.PatientCreateManySpeciesInput[]
+export type PatientCreateManyEspecieInputEnvelope = {
+  data: Prisma.PatientCreateManyEspecieInput | Prisma.PatientCreateManyEspecieInput[]
   skipDuplicates?: boolean
 }
 
-export type PatientUpsertWithWhereUniqueWithoutSpeciesInput = {
+export type PatientUpsertWithWhereUniqueWithoutEspecieInput = {
   where: Prisma.PatientWhereUniqueInput
-  update: Prisma.XOR<Prisma.PatientUpdateWithoutSpeciesInput, Prisma.PatientUncheckedUpdateWithoutSpeciesInput>
-  create: Prisma.XOR<Prisma.PatientCreateWithoutSpeciesInput, Prisma.PatientUncheckedCreateWithoutSpeciesInput>
+  update: Prisma.XOR<Prisma.PatientUpdateWithoutEspecieInput, Prisma.PatientUncheckedUpdateWithoutEspecieInput>
+  create: Prisma.XOR<Prisma.PatientCreateWithoutEspecieInput, Prisma.PatientUncheckedCreateWithoutEspecieInput>
 }
 
-export type PatientUpdateWithWhereUniqueWithoutSpeciesInput = {
+export type PatientUpdateWithWhereUniqueWithoutEspecieInput = {
   where: Prisma.PatientWhereUniqueInput
-  data: Prisma.XOR<Prisma.PatientUpdateWithoutSpeciesInput, Prisma.PatientUncheckedUpdateWithoutSpeciesInput>
+  data: Prisma.XOR<Prisma.PatientUpdateWithoutEspecieInput, Prisma.PatientUncheckedUpdateWithoutEspecieInput>
 }
 
-export type PatientUpdateManyWithWhereWithoutSpeciesInput = {
+export type PatientUpdateManyWithWhereWithoutEspecieInput = {
   where: Prisma.PatientScalarWhereInput
-  data: Prisma.XOR<Prisma.PatientUpdateManyMutationInput, Prisma.PatientUncheckedUpdateManyWithoutSpeciesInput>
+  data: Prisma.XOR<Prisma.PatientUpdateManyMutationInput, Prisma.PatientUncheckedUpdateManyWithoutEspecieInput>
 }
 
-export type PatientCreateWithoutBreedInput = {
+export type PatientCreateWithoutRazaInput = {
   id?: string
-  name: string
+  nombre: string
   color?: string | null
-  birthDate?: Date | string | null
-  gender?: string | null
-  weight?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: string | null
-  microchipNumber?: string | null
-  isNeutered?: boolean
-  allergies?: string | null
-  specialConditions?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  owner: Prisma.OwnerCreateNestedOneWithoutPatientsInput
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutPatientsInput
-  species: Prisma.SpeciesCreateNestedOneWithoutPatientsInput
-  appointments?: Prisma.AppointmentCreateNestedManyWithoutPatientInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutPatientInput
-  vaccinations?: Prisma.VaccinationCreateNestedManyWithoutPatientInput
+  fechaNacimiento?: Date | string | null
+  genero?: string | null
+  peso?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: string | null
+  numeroMicrochip?: string | null
+  estaCastrado?: boolean
+  alergias?: string | null
+  condicionesEspeciales?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  propietario: Prisma.OwnerCreateNestedOneWithoutPacientesInput
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutPacientesInput
+  especie: Prisma.SpeciesCreateNestedOneWithoutPacientesInput
+  citas?: Prisma.AppointmentCreateNestedManyWithoutPacienteInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutPacienteInput
+  vacunaciones?: Prisma.VaccinationCreateNestedManyWithoutPacienteInput
 }
 
-export type PatientUncheckedCreateWithoutBreedInput = {
+export type PatientUncheckedCreateWithoutRazaInput = {
   id?: string
-  ownerId: string
-  veterinaryId?: string | null
-  name: string
-  speciesId: string
+  propietarioId: string
+  veterinariaId?: string | null
+  nombre: string
+  especieId: string
   color?: string | null
-  birthDate?: Date | string | null
-  gender?: string | null
-  weight?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: string | null
-  microchipNumber?: string | null
-  isNeutered?: boolean
-  allergies?: string | null
-  specialConditions?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  appointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutPatientInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutPatientInput
-  vaccinations?: Prisma.VaccinationUncheckedCreateNestedManyWithoutPatientInput
+  fechaNacimiento?: Date | string | null
+  genero?: string | null
+  peso?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: string | null
+  numeroMicrochip?: string | null
+  estaCastrado?: boolean
+  alergias?: string | null
+  condicionesEspeciales?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutPacienteInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutPacienteInput
+  vacunaciones?: Prisma.VaccinationUncheckedCreateNestedManyWithoutPacienteInput
 }
 
-export type PatientCreateOrConnectWithoutBreedInput = {
+export type PatientCreateOrConnectWithoutRazaInput = {
   where: Prisma.PatientWhereUniqueInput
-  create: Prisma.XOR<Prisma.PatientCreateWithoutBreedInput, Prisma.PatientUncheckedCreateWithoutBreedInput>
+  create: Prisma.XOR<Prisma.PatientCreateWithoutRazaInput, Prisma.PatientUncheckedCreateWithoutRazaInput>
 }
 
-export type PatientCreateManyBreedInputEnvelope = {
-  data: Prisma.PatientCreateManyBreedInput | Prisma.PatientCreateManyBreedInput[]
+export type PatientCreateManyRazaInputEnvelope = {
+  data: Prisma.PatientCreateManyRazaInput | Prisma.PatientCreateManyRazaInput[]
   skipDuplicates?: boolean
 }
 
-export type PatientUpsertWithWhereUniqueWithoutBreedInput = {
+export type PatientUpsertWithWhereUniqueWithoutRazaInput = {
   where: Prisma.PatientWhereUniqueInput
-  update: Prisma.XOR<Prisma.PatientUpdateWithoutBreedInput, Prisma.PatientUncheckedUpdateWithoutBreedInput>
-  create: Prisma.XOR<Prisma.PatientCreateWithoutBreedInput, Prisma.PatientUncheckedCreateWithoutBreedInput>
+  update: Prisma.XOR<Prisma.PatientUpdateWithoutRazaInput, Prisma.PatientUncheckedUpdateWithoutRazaInput>
+  create: Prisma.XOR<Prisma.PatientCreateWithoutRazaInput, Prisma.PatientUncheckedCreateWithoutRazaInput>
 }
 
-export type PatientUpdateWithWhereUniqueWithoutBreedInput = {
+export type PatientUpdateWithWhereUniqueWithoutRazaInput = {
   where: Prisma.PatientWhereUniqueInput
-  data: Prisma.XOR<Prisma.PatientUpdateWithoutBreedInput, Prisma.PatientUncheckedUpdateWithoutBreedInput>
+  data: Prisma.XOR<Prisma.PatientUpdateWithoutRazaInput, Prisma.PatientUncheckedUpdateWithoutRazaInput>
 }
 
-export type PatientUpdateManyWithWhereWithoutBreedInput = {
+export type PatientUpdateManyWithWhereWithoutRazaInput = {
   where: Prisma.PatientScalarWhereInput
-  data: Prisma.XOR<Prisma.PatientUpdateManyMutationInput, Prisma.PatientUncheckedUpdateManyWithoutBreedInput>
+  data: Prisma.XOR<Prisma.PatientUpdateManyMutationInput, Prisma.PatientUncheckedUpdateManyWithoutRazaInput>
 }
 
-export type PatientCreateWithoutAppointmentsInput = {
+export type PatientCreateWithoutCitasInput = {
   id?: string
-  name: string
+  nombre: string
   color?: string | null
-  birthDate?: Date | string | null
-  gender?: string | null
-  weight?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: string | null
-  microchipNumber?: string | null
-  isNeutered?: boolean
-  allergies?: string | null
-  specialConditions?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  owner: Prisma.OwnerCreateNestedOneWithoutPatientsInput
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutPatientsInput
-  species: Prisma.SpeciesCreateNestedOneWithoutPatientsInput
-  breed?: Prisma.BreedCreateNestedOneWithoutPatientsInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutPatientInput
-  vaccinations?: Prisma.VaccinationCreateNestedManyWithoutPatientInput
+  fechaNacimiento?: Date | string | null
+  genero?: string | null
+  peso?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: string | null
+  numeroMicrochip?: string | null
+  estaCastrado?: boolean
+  alergias?: string | null
+  condicionesEspeciales?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  propietario: Prisma.OwnerCreateNestedOneWithoutPacientesInput
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutPacientesInput
+  especie: Prisma.SpeciesCreateNestedOneWithoutPacientesInput
+  raza?: Prisma.BreedCreateNestedOneWithoutPacientesInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutPacienteInput
+  vacunaciones?: Prisma.VaccinationCreateNestedManyWithoutPacienteInput
 }
 
-export type PatientUncheckedCreateWithoutAppointmentsInput = {
+export type PatientUncheckedCreateWithoutCitasInput = {
   id?: string
-  ownerId: string
-  veterinaryId?: string | null
-  name: string
-  speciesId: string
-  breedId?: string | null
+  propietarioId: string
+  veterinariaId?: string | null
+  nombre: string
+  especieId: string
+  razaId?: string | null
   color?: string | null
-  birthDate?: Date | string | null
-  gender?: string | null
-  weight?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: string | null
-  microchipNumber?: string | null
-  isNeutered?: boolean
-  allergies?: string | null
-  specialConditions?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutPatientInput
-  vaccinations?: Prisma.VaccinationUncheckedCreateNestedManyWithoutPatientInput
+  fechaNacimiento?: Date | string | null
+  genero?: string | null
+  peso?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: string | null
+  numeroMicrochip?: string | null
+  estaCastrado?: boolean
+  alergias?: string | null
+  condicionesEspeciales?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutPacienteInput
+  vacunaciones?: Prisma.VaccinationUncheckedCreateNestedManyWithoutPacienteInput
 }
 
-export type PatientCreateOrConnectWithoutAppointmentsInput = {
+export type PatientCreateOrConnectWithoutCitasInput = {
   where: Prisma.PatientWhereUniqueInput
-  create: Prisma.XOR<Prisma.PatientCreateWithoutAppointmentsInput, Prisma.PatientUncheckedCreateWithoutAppointmentsInput>
+  create: Prisma.XOR<Prisma.PatientCreateWithoutCitasInput, Prisma.PatientUncheckedCreateWithoutCitasInput>
 }
 
-export type PatientUpsertWithoutAppointmentsInput = {
-  update: Prisma.XOR<Prisma.PatientUpdateWithoutAppointmentsInput, Prisma.PatientUncheckedUpdateWithoutAppointmentsInput>
-  create: Prisma.XOR<Prisma.PatientCreateWithoutAppointmentsInput, Prisma.PatientUncheckedCreateWithoutAppointmentsInput>
+export type PatientUpsertWithoutCitasInput = {
+  update: Prisma.XOR<Prisma.PatientUpdateWithoutCitasInput, Prisma.PatientUncheckedUpdateWithoutCitasInput>
+  create: Prisma.XOR<Prisma.PatientCreateWithoutCitasInput, Prisma.PatientUncheckedCreateWithoutCitasInput>
   where?: Prisma.PatientWhereInput
 }
 
-export type PatientUpdateToOneWithWhereWithoutAppointmentsInput = {
+export type PatientUpdateToOneWithWhereWithoutCitasInput = {
   where?: Prisma.PatientWhereInput
-  data: Prisma.XOR<Prisma.PatientUpdateWithoutAppointmentsInput, Prisma.PatientUncheckedUpdateWithoutAppointmentsInput>
+  data: Prisma.XOR<Prisma.PatientUpdateWithoutCitasInput, Prisma.PatientUncheckedUpdateWithoutCitasInput>
 }
 
-export type PatientUpdateWithoutAppointmentsInput = {
+export type PatientUpdateWithoutCitasInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
   color?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  birthDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  gender?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  weight?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  microchipNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isNeutered?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  allergies?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  specialConditions?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  owner?: Prisma.OwnerUpdateOneRequiredWithoutPatientsNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutPatientsNestedInput
-  species?: Prisma.SpeciesUpdateOneRequiredWithoutPatientsNestedInput
-  breed?: Prisma.BreedUpdateOneWithoutPatientsNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutPatientNestedInput
-  vaccinations?: Prisma.VaccinationUpdateManyWithoutPatientNestedInput
+  fechaNacimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  genero?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  peso?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroMicrochip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaCastrado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  alergias?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  condicionesEspeciales?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  propietario?: Prisma.OwnerUpdateOneRequiredWithoutPacientesNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutPacientesNestedInput
+  especie?: Prisma.SpeciesUpdateOneRequiredWithoutPacientesNestedInput
+  raza?: Prisma.BreedUpdateOneWithoutPacientesNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutPacienteNestedInput
+  vacunaciones?: Prisma.VaccinationUpdateManyWithoutPacienteNestedInput
 }
 
-export type PatientUncheckedUpdateWithoutAppointmentsInput = {
+export type PatientUncheckedUpdateWithoutCitasInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  speciesId?: Prisma.StringFieldUpdateOperationsInput | string
-  breedId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  propietarioId?: Prisma.StringFieldUpdateOperationsInput | string
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  especieId?: Prisma.StringFieldUpdateOperationsInput | string
+  razaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   color?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  birthDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  gender?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  weight?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  microchipNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isNeutered?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  allergies?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  specialConditions?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutPatientNestedInput
-  vaccinations?: Prisma.VaccinationUncheckedUpdateManyWithoutPatientNestedInput
+  fechaNacimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  genero?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  peso?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroMicrochip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaCastrado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  alergias?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  condicionesEspeciales?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutPacienteNestedInput
+  vacunaciones?: Prisma.VaccinationUncheckedUpdateManyWithoutPacienteNestedInput
 }
 
-export type PatientCreateWithoutClinicalRecordsInput = {
+export type PatientCreateWithoutRegistrosClinicoInput = {
   id?: string
-  name: string
+  nombre: string
   color?: string | null
-  birthDate?: Date | string | null
-  gender?: string | null
-  weight?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: string | null
-  microchipNumber?: string | null
-  isNeutered?: boolean
-  allergies?: string | null
-  specialConditions?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  owner: Prisma.OwnerCreateNestedOneWithoutPatientsInput
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutPatientsInput
-  species: Prisma.SpeciesCreateNestedOneWithoutPatientsInput
-  breed?: Prisma.BreedCreateNestedOneWithoutPatientsInput
-  appointments?: Prisma.AppointmentCreateNestedManyWithoutPatientInput
-  vaccinations?: Prisma.VaccinationCreateNestedManyWithoutPatientInput
+  fechaNacimiento?: Date | string | null
+  genero?: string | null
+  peso?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: string | null
+  numeroMicrochip?: string | null
+  estaCastrado?: boolean
+  alergias?: string | null
+  condicionesEspeciales?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  propietario: Prisma.OwnerCreateNestedOneWithoutPacientesInput
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutPacientesInput
+  especie: Prisma.SpeciesCreateNestedOneWithoutPacientesInput
+  raza?: Prisma.BreedCreateNestedOneWithoutPacientesInput
+  citas?: Prisma.AppointmentCreateNestedManyWithoutPacienteInput
+  vacunaciones?: Prisma.VaccinationCreateNestedManyWithoutPacienteInput
 }
 
-export type PatientUncheckedCreateWithoutClinicalRecordsInput = {
+export type PatientUncheckedCreateWithoutRegistrosClinicoInput = {
   id?: string
-  ownerId: string
-  veterinaryId?: string | null
-  name: string
-  speciesId: string
-  breedId?: string | null
+  propietarioId: string
+  veterinariaId?: string | null
+  nombre: string
+  especieId: string
+  razaId?: string | null
   color?: string | null
-  birthDate?: Date | string | null
-  gender?: string | null
-  weight?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: string | null
-  microchipNumber?: string | null
-  isNeutered?: boolean
-  allergies?: string | null
-  specialConditions?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  appointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutPatientInput
-  vaccinations?: Prisma.VaccinationUncheckedCreateNestedManyWithoutPatientInput
+  fechaNacimiento?: Date | string | null
+  genero?: string | null
+  peso?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: string | null
+  numeroMicrochip?: string | null
+  estaCastrado?: boolean
+  alergias?: string | null
+  condicionesEspeciales?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutPacienteInput
+  vacunaciones?: Prisma.VaccinationUncheckedCreateNestedManyWithoutPacienteInput
 }
 
-export type PatientCreateOrConnectWithoutClinicalRecordsInput = {
+export type PatientCreateOrConnectWithoutRegistrosClinicoInput = {
   where: Prisma.PatientWhereUniqueInput
-  create: Prisma.XOR<Prisma.PatientCreateWithoutClinicalRecordsInput, Prisma.PatientUncheckedCreateWithoutClinicalRecordsInput>
+  create: Prisma.XOR<Prisma.PatientCreateWithoutRegistrosClinicoInput, Prisma.PatientUncheckedCreateWithoutRegistrosClinicoInput>
 }
 
-export type PatientUpsertWithoutClinicalRecordsInput = {
-  update: Prisma.XOR<Prisma.PatientUpdateWithoutClinicalRecordsInput, Prisma.PatientUncheckedUpdateWithoutClinicalRecordsInput>
-  create: Prisma.XOR<Prisma.PatientCreateWithoutClinicalRecordsInput, Prisma.PatientUncheckedCreateWithoutClinicalRecordsInput>
+export type PatientUpsertWithoutRegistrosClinicoInput = {
+  update: Prisma.XOR<Prisma.PatientUpdateWithoutRegistrosClinicoInput, Prisma.PatientUncheckedUpdateWithoutRegistrosClinicoInput>
+  create: Prisma.XOR<Prisma.PatientCreateWithoutRegistrosClinicoInput, Prisma.PatientUncheckedCreateWithoutRegistrosClinicoInput>
   where?: Prisma.PatientWhereInput
 }
 
-export type PatientUpdateToOneWithWhereWithoutClinicalRecordsInput = {
+export type PatientUpdateToOneWithWhereWithoutRegistrosClinicoInput = {
   where?: Prisma.PatientWhereInput
-  data: Prisma.XOR<Prisma.PatientUpdateWithoutClinicalRecordsInput, Prisma.PatientUncheckedUpdateWithoutClinicalRecordsInput>
+  data: Prisma.XOR<Prisma.PatientUpdateWithoutRegistrosClinicoInput, Prisma.PatientUncheckedUpdateWithoutRegistrosClinicoInput>
 }
 
-export type PatientUpdateWithoutClinicalRecordsInput = {
+export type PatientUpdateWithoutRegistrosClinicoInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
   color?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  birthDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  gender?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  weight?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  microchipNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isNeutered?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  allergies?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  specialConditions?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  owner?: Prisma.OwnerUpdateOneRequiredWithoutPatientsNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutPatientsNestedInput
-  species?: Prisma.SpeciesUpdateOneRequiredWithoutPatientsNestedInput
-  breed?: Prisma.BreedUpdateOneWithoutPatientsNestedInput
-  appointments?: Prisma.AppointmentUpdateManyWithoutPatientNestedInput
-  vaccinations?: Prisma.VaccinationUpdateManyWithoutPatientNestedInput
+  fechaNacimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  genero?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  peso?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroMicrochip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaCastrado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  alergias?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  condicionesEspeciales?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  propietario?: Prisma.OwnerUpdateOneRequiredWithoutPacientesNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutPacientesNestedInput
+  especie?: Prisma.SpeciesUpdateOneRequiredWithoutPacientesNestedInput
+  raza?: Prisma.BreedUpdateOneWithoutPacientesNestedInput
+  citas?: Prisma.AppointmentUpdateManyWithoutPacienteNestedInput
+  vacunaciones?: Prisma.VaccinationUpdateManyWithoutPacienteNestedInput
 }
 
-export type PatientUncheckedUpdateWithoutClinicalRecordsInput = {
+export type PatientUncheckedUpdateWithoutRegistrosClinicoInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  speciesId?: Prisma.StringFieldUpdateOperationsInput | string
-  breedId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  propietarioId?: Prisma.StringFieldUpdateOperationsInput | string
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  especieId?: Prisma.StringFieldUpdateOperationsInput | string
+  razaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   color?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  birthDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  gender?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  weight?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  microchipNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isNeutered?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  allergies?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  specialConditions?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  appointments?: Prisma.AppointmentUncheckedUpdateManyWithoutPatientNestedInput
-  vaccinations?: Prisma.VaccinationUncheckedUpdateManyWithoutPatientNestedInput
+  fechaNacimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  genero?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  peso?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroMicrochip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaCastrado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  alergias?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  condicionesEspeciales?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  citas?: Prisma.AppointmentUncheckedUpdateManyWithoutPacienteNestedInput
+  vacunaciones?: Prisma.VaccinationUncheckedUpdateManyWithoutPacienteNestedInput
 }
 
-export type PatientCreateWithoutVaccinationsInput = {
+export type PatientCreateWithoutVacunacionesInput = {
   id?: string
-  name: string
+  nombre: string
   color?: string | null
-  birthDate?: Date | string | null
-  gender?: string | null
-  weight?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: string | null
-  microchipNumber?: string | null
-  isNeutered?: boolean
-  allergies?: string | null
-  specialConditions?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  owner: Prisma.OwnerCreateNestedOneWithoutPatientsInput
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutPatientsInput
-  species: Prisma.SpeciesCreateNestedOneWithoutPatientsInput
-  breed?: Prisma.BreedCreateNestedOneWithoutPatientsInput
-  appointments?: Prisma.AppointmentCreateNestedManyWithoutPatientInput
-  clinicalRecords?: Prisma.ClinicalRecordCreateNestedManyWithoutPatientInput
+  fechaNacimiento?: Date | string | null
+  genero?: string | null
+  peso?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: string | null
+  numeroMicrochip?: string | null
+  estaCastrado?: boolean
+  alergias?: string | null
+  condicionesEspeciales?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  propietario: Prisma.OwnerCreateNestedOneWithoutPacientesInput
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutPacientesInput
+  especie: Prisma.SpeciesCreateNestedOneWithoutPacientesInput
+  raza?: Prisma.BreedCreateNestedOneWithoutPacientesInput
+  citas?: Prisma.AppointmentCreateNestedManyWithoutPacienteInput
+  registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutPacienteInput
 }
 
-export type PatientUncheckedCreateWithoutVaccinationsInput = {
+export type PatientUncheckedCreateWithoutVacunacionesInput = {
   id?: string
-  ownerId: string
-  veterinaryId?: string | null
-  name: string
-  speciesId: string
-  breedId?: string | null
+  propietarioId: string
+  veterinariaId?: string | null
+  nombre: string
+  especieId: string
+  razaId?: string | null
   color?: string | null
-  birthDate?: Date | string | null
-  gender?: string | null
-  weight?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: string | null
-  microchipNumber?: string | null
-  isNeutered?: boolean
-  allergies?: string | null
-  specialConditions?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  appointments?: Prisma.AppointmentUncheckedCreateNestedManyWithoutPatientInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutPatientInput
+  fechaNacimiento?: Date | string | null
+  genero?: string | null
+  peso?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: string | null
+  numeroMicrochip?: string | null
+  estaCastrado?: boolean
+  alergias?: string | null
+  condicionesEspeciales?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutPacienteInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutPacienteInput
 }
 
-export type PatientCreateOrConnectWithoutVaccinationsInput = {
+export type PatientCreateOrConnectWithoutVacunacionesInput = {
   where: Prisma.PatientWhereUniqueInput
-  create: Prisma.XOR<Prisma.PatientCreateWithoutVaccinationsInput, Prisma.PatientUncheckedCreateWithoutVaccinationsInput>
+  create: Prisma.XOR<Prisma.PatientCreateWithoutVacunacionesInput, Prisma.PatientUncheckedCreateWithoutVacunacionesInput>
 }
 
-export type PatientUpsertWithoutVaccinationsInput = {
-  update: Prisma.XOR<Prisma.PatientUpdateWithoutVaccinationsInput, Prisma.PatientUncheckedUpdateWithoutVaccinationsInput>
-  create: Prisma.XOR<Prisma.PatientCreateWithoutVaccinationsInput, Prisma.PatientUncheckedCreateWithoutVaccinationsInput>
+export type PatientUpsertWithoutVacunacionesInput = {
+  update: Prisma.XOR<Prisma.PatientUpdateWithoutVacunacionesInput, Prisma.PatientUncheckedUpdateWithoutVacunacionesInput>
+  create: Prisma.XOR<Prisma.PatientCreateWithoutVacunacionesInput, Prisma.PatientUncheckedCreateWithoutVacunacionesInput>
   where?: Prisma.PatientWhereInput
 }
 
-export type PatientUpdateToOneWithWhereWithoutVaccinationsInput = {
+export type PatientUpdateToOneWithWhereWithoutVacunacionesInput = {
   where?: Prisma.PatientWhereInput
-  data: Prisma.XOR<Prisma.PatientUpdateWithoutVaccinationsInput, Prisma.PatientUncheckedUpdateWithoutVaccinationsInput>
+  data: Prisma.XOR<Prisma.PatientUpdateWithoutVacunacionesInput, Prisma.PatientUncheckedUpdateWithoutVacunacionesInput>
 }
 
-export type PatientUpdateWithoutVaccinationsInput = {
+export type PatientUpdateWithoutVacunacionesInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
   color?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  birthDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  gender?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  weight?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  microchipNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isNeutered?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  allergies?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  specialConditions?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  owner?: Prisma.OwnerUpdateOneRequiredWithoutPatientsNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutPatientsNestedInput
-  species?: Prisma.SpeciesUpdateOneRequiredWithoutPatientsNestedInput
-  breed?: Prisma.BreedUpdateOneWithoutPatientsNestedInput
-  appointments?: Prisma.AppointmentUpdateManyWithoutPatientNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutPatientNestedInput
+  fechaNacimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  genero?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  peso?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroMicrochip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaCastrado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  alergias?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  condicionesEspeciales?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  propietario?: Prisma.OwnerUpdateOneRequiredWithoutPacientesNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutPacientesNestedInput
+  especie?: Prisma.SpeciesUpdateOneRequiredWithoutPacientesNestedInput
+  raza?: Prisma.BreedUpdateOneWithoutPacientesNestedInput
+  citas?: Prisma.AppointmentUpdateManyWithoutPacienteNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutPacienteNestedInput
 }
 
-export type PatientUncheckedUpdateWithoutVaccinationsInput = {
+export type PatientUncheckedUpdateWithoutVacunacionesInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  speciesId?: Prisma.StringFieldUpdateOperationsInput | string
-  breedId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  propietarioId?: Prisma.StringFieldUpdateOperationsInput | string
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  especieId?: Prisma.StringFieldUpdateOperationsInput | string
+  razaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   color?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  birthDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  gender?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  weight?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  microchipNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isNeutered?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  allergies?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  specialConditions?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  appointments?: Prisma.AppointmentUncheckedUpdateManyWithoutPatientNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutPatientNestedInput
+  fechaNacimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  genero?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  peso?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroMicrochip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaCastrado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  alergias?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  condicionesEspeciales?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  citas?: Prisma.AppointmentUncheckedUpdateManyWithoutPacienteNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutPacienteNestedInput
 }
 
-export type PatientCreateManyVeterinaryInput = {
+export type PatientCreateManyVeterinariaInput = {
   id?: string
-  ownerId: string
-  name: string
-  speciesId: string
-  breedId?: string | null
+  propietarioId: string
+  nombre: string
+  especieId: string
+  razaId?: string | null
   color?: string | null
-  birthDate?: Date | string | null
-  gender?: string | null
-  weight?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: string | null
-  microchipNumber?: string | null
-  isNeutered?: boolean
-  allergies?: string | null
-  specialConditions?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
+  fechaNacimiento?: Date | string | null
+  genero?: string | null
+  peso?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: string | null
+  numeroMicrochip?: string | null
+  estaCastrado?: boolean
+  alergias?: string | null
+  condicionesEspeciales?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
 }
 
-export type PatientUpdateWithoutVeterinaryInput = {
+export type PatientUpdateWithoutVeterinariaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
   color?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  birthDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  gender?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  weight?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  microchipNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isNeutered?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  allergies?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  specialConditions?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  owner?: Prisma.OwnerUpdateOneRequiredWithoutPatientsNestedInput
-  species?: Prisma.SpeciesUpdateOneRequiredWithoutPatientsNestedInput
-  breed?: Prisma.BreedUpdateOneWithoutPatientsNestedInput
-  appointments?: Prisma.AppointmentUpdateManyWithoutPatientNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutPatientNestedInput
-  vaccinations?: Prisma.VaccinationUpdateManyWithoutPatientNestedInput
+  fechaNacimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  genero?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  peso?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroMicrochip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaCastrado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  alergias?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  condicionesEspeciales?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  propietario?: Prisma.OwnerUpdateOneRequiredWithoutPacientesNestedInput
+  especie?: Prisma.SpeciesUpdateOneRequiredWithoutPacientesNestedInput
+  raza?: Prisma.BreedUpdateOneWithoutPacientesNestedInput
+  citas?: Prisma.AppointmentUpdateManyWithoutPacienteNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutPacienteNestedInput
+  vacunaciones?: Prisma.VaccinationUpdateManyWithoutPacienteNestedInput
 }
 
-export type PatientUncheckedUpdateWithoutVeterinaryInput = {
+export type PatientUncheckedUpdateWithoutVeterinariaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  speciesId?: Prisma.StringFieldUpdateOperationsInput | string
-  breedId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  propietarioId?: Prisma.StringFieldUpdateOperationsInput | string
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  especieId?: Prisma.StringFieldUpdateOperationsInput | string
+  razaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   color?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  birthDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  gender?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  weight?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  microchipNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isNeutered?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  allergies?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  specialConditions?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  appointments?: Prisma.AppointmentUncheckedUpdateManyWithoutPatientNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutPatientNestedInput
-  vaccinations?: Prisma.VaccinationUncheckedUpdateManyWithoutPatientNestedInput
+  fechaNacimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  genero?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  peso?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroMicrochip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaCastrado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  alergias?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  condicionesEspeciales?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  citas?: Prisma.AppointmentUncheckedUpdateManyWithoutPacienteNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutPacienteNestedInput
+  vacunaciones?: Prisma.VaccinationUncheckedUpdateManyWithoutPacienteNestedInput
 }
 
-export type PatientUncheckedUpdateManyWithoutVeterinaryInput = {
+export type PatientUncheckedUpdateManyWithoutVeterinariaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  speciesId?: Prisma.StringFieldUpdateOperationsInput | string
-  breedId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  propietarioId?: Prisma.StringFieldUpdateOperationsInput | string
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  especieId?: Prisma.StringFieldUpdateOperationsInput | string
+  razaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   color?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  birthDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  gender?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  weight?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  microchipNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isNeutered?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  allergies?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  specialConditions?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fechaNacimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  genero?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  peso?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroMicrochip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaCastrado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  alergias?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  condicionesEspeciales?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type PatientCreateManyOwnerInput = {
+export type PatientCreateManyPropietarioInput = {
   id?: string
-  veterinaryId?: string | null
-  name: string
-  speciesId: string
-  breedId?: string | null
+  veterinariaId?: string | null
+  nombre: string
+  especieId: string
+  razaId?: string | null
   color?: string | null
-  birthDate?: Date | string | null
-  gender?: string | null
-  weight?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: string | null
-  microchipNumber?: string | null
-  isNeutered?: boolean
-  allergies?: string | null
-  specialConditions?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
+  fechaNacimiento?: Date | string | null
+  genero?: string | null
+  peso?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: string | null
+  numeroMicrochip?: string | null
+  estaCastrado?: boolean
+  alergias?: string | null
+  condicionesEspeciales?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
 }
 
-export type PatientUpdateWithoutOwnerInput = {
+export type PatientUpdateWithoutPropietarioInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
   color?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  birthDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  gender?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  weight?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  microchipNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isNeutered?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  allergies?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  specialConditions?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutPatientsNestedInput
-  species?: Prisma.SpeciesUpdateOneRequiredWithoutPatientsNestedInput
-  breed?: Prisma.BreedUpdateOneWithoutPatientsNestedInput
-  appointments?: Prisma.AppointmentUpdateManyWithoutPatientNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutPatientNestedInput
-  vaccinations?: Prisma.VaccinationUpdateManyWithoutPatientNestedInput
+  fechaNacimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  genero?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  peso?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroMicrochip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaCastrado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  alergias?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  condicionesEspeciales?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutPacientesNestedInput
+  especie?: Prisma.SpeciesUpdateOneRequiredWithoutPacientesNestedInput
+  raza?: Prisma.BreedUpdateOneWithoutPacientesNestedInput
+  citas?: Prisma.AppointmentUpdateManyWithoutPacienteNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutPacienteNestedInput
+  vacunaciones?: Prisma.VaccinationUpdateManyWithoutPacienteNestedInput
 }
 
-export type PatientUncheckedUpdateWithoutOwnerInput = {
+export type PatientUncheckedUpdateWithoutPropietarioInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  speciesId?: Prisma.StringFieldUpdateOperationsInput | string
-  breedId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  especieId?: Prisma.StringFieldUpdateOperationsInput | string
+  razaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   color?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  birthDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  gender?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  weight?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  microchipNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isNeutered?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  allergies?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  specialConditions?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  appointments?: Prisma.AppointmentUncheckedUpdateManyWithoutPatientNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutPatientNestedInput
-  vaccinations?: Prisma.VaccinationUncheckedUpdateManyWithoutPatientNestedInput
+  fechaNacimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  genero?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  peso?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroMicrochip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaCastrado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  alergias?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  condicionesEspeciales?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  citas?: Prisma.AppointmentUncheckedUpdateManyWithoutPacienteNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutPacienteNestedInput
+  vacunaciones?: Prisma.VaccinationUncheckedUpdateManyWithoutPacienteNestedInput
 }
 
-export type PatientUncheckedUpdateManyWithoutOwnerInput = {
+export type PatientUncheckedUpdateManyWithoutPropietarioInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  speciesId?: Prisma.StringFieldUpdateOperationsInput | string
-  breedId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  especieId?: Prisma.StringFieldUpdateOperationsInput | string
+  razaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   color?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  birthDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  gender?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  weight?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  microchipNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isNeutered?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  allergies?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  specialConditions?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fechaNacimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  genero?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  peso?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroMicrochip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaCastrado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  alergias?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  condicionesEspeciales?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type PatientCreateManySpeciesInput = {
+export type PatientCreateManyEspecieInput = {
   id?: string
-  ownerId: string
-  veterinaryId?: string | null
-  name: string
-  breedId?: string | null
+  propietarioId: string
+  veterinariaId?: string | null
+  nombre: string
+  razaId?: string | null
   color?: string | null
-  birthDate?: Date | string | null
-  gender?: string | null
-  weight?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: string | null
-  microchipNumber?: string | null
-  isNeutered?: boolean
-  allergies?: string | null
-  specialConditions?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
+  fechaNacimiento?: Date | string | null
+  genero?: string | null
+  peso?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: string | null
+  numeroMicrochip?: string | null
+  estaCastrado?: boolean
+  alergias?: string | null
+  condicionesEspeciales?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
 }
 
-export type PatientUpdateWithoutSpeciesInput = {
+export type PatientUpdateWithoutEspecieInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
   color?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  birthDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  gender?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  weight?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  microchipNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isNeutered?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  allergies?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  specialConditions?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  owner?: Prisma.OwnerUpdateOneRequiredWithoutPatientsNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutPatientsNestedInput
-  breed?: Prisma.BreedUpdateOneWithoutPatientsNestedInput
-  appointments?: Prisma.AppointmentUpdateManyWithoutPatientNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutPatientNestedInput
-  vaccinations?: Prisma.VaccinationUpdateManyWithoutPatientNestedInput
+  fechaNacimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  genero?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  peso?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroMicrochip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaCastrado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  alergias?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  condicionesEspeciales?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  propietario?: Prisma.OwnerUpdateOneRequiredWithoutPacientesNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutPacientesNestedInput
+  raza?: Prisma.BreedUpdateOneWithoutPacientesNestedInput
+  citas?: Prisma.AppointmentUpdateManyWithoutPacienteNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutPacienteNestedInput
+  vacunaciones?: Prisma.VaccinationUpdateManyWithoutPacienteNestedInput
 }
 
-export type PatientUncheckedUpdateWithoutSpeciesInput = {
+export type PatientUncheckedUpdateWithoutEspecieInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  breedId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  propietarioId?: Prisma.StringFieldUpdateOperationsInput | string
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  razaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   color?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  birthDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  gender?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  weight?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  microchipNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isNeutered?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  allergies?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  specialConditions?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  appointments?: Prisma.AppointmentUncheckedUpdateManyWithoutPatientNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutPatientNestedInput
-  vaccinations?: Prisma.VaccinationUncheckedUpdateManyWithoutPatientNestedInput
+  fechaNacimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  genero?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  peso?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroMicrochip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaCastrado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  alergias?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  condicionesEspeciales?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  citas?: Prisma.AppointmentUncheckedUpdateManyWithoutPacienteNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutPacienteNestedInput
+  vacunaciones?: Prisma.VaccinationUncheckedUpdateManyWithoutPacienteNestedInput
 }
 
-export type PatientUncheckedUpdateManyWithoutSpeciesInput = {
+export type PatientUncheckedUpdateManyWithoutEspecieInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  breedId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  propietarioId?: Prisma.StringFieldUpdateOperationsInput | string
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  razaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   color?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  birthDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  gender?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  weight?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  microchipNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isNeutered?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  allergies?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  specialConditions?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fechaNacimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  genero?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  peso?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroMicrochip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaCastrado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  alergias?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  condicionesEspeciales?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type PatientCreateManyBreedInput = {
+export type PatientCreateManyRazaInput = {
   id?: string
-  ownerId: string
-  veterinaryId?: string | null
-  name: string
-  speciesId: string
+  propietarioId: string
+  veterinariaId?: string | null
+  nombre: string
+  especieId: string
   color?: string | null
-  birthDate?: Date | string | null
-  gender?: string | null
-  weight?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: string | null
-  microchipNumber?: string | null
-  isNeutered?: boolean
-  allergies?: string | null
-  specialConditions?: string | null
-  isActive?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
+  fechaNacimiento?: Date | string | null
+  genero?: string | null
+  peso?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: string | null
+  numeroMicrochip?: string | null
+  estaCastrado?: boolean
+  alergias?: string | null
+  condicionesEspeciales?: string | null
+  estaActivo?: boolean
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
 }
 
-export type PatientUpdateWithoutBreedInput = {
+export type PatientUpdateWithoutRazaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
   color?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  birthDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  gender?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  weight?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  microchipNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isNeutered?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  allergies?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  specialConditions?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  owner?: Prisma.OwnerUpdateOneRequiredWithoutPatientsNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutPatientsNestedInput
-  species?: Prisma.SpeciesUpdateOneRequiredWithoutPatientsNestedInput
-  appointments?: Prisma.AppointmentUpdateManyWithoutPatientNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUpdateManyWithoutPatientNestedInput
-  vaccinations?: Prisma.VaccinationUpdateManyWithoutPatientNestedInput
+  fechaNacimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  genero?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  peso?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroMicrochip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaCastrado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  alergias?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  condicionesEspeciales?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  propietario?: Prisma.OwnerUpdateOneRequiredWithoutPacientesNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutPacientesNestedInput
+  especie?: Prisma.SpeciesUpdateOneRequiredWithoutPacientesNestedInput
+  citas?: Prisma.AppointmentUpdateManyWithoutPacienteNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutPacienteNestedInput
+  vacunaciones?: Prisma.VaccinationUpdateManyWithoutPacienteNestedInput
 }
 
-export type PatientUncheckedUpdateWithoutBreedInput = {
+export type PatientUncheckedUpdateWithoutRazaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  speciesId?: Prisma.StringFieldUpdateOperationsInput | string
+  propietarioId?: Prisma.StringFieldUpdateOperationsInput | string
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  especieId?: Prisma.StringFieldUpdateOperationsInput | string
   color?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  birthDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  gender?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  weight?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  microchipNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isNeutered?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  allergies?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  specialConditions?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  appointments?: Prisma.AppointmentUncheckedUpdateManyWithoutPatientNestedInput
-  clinicalRecords?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutPatientNestedInput
-  vaccinations?: Prisma.VaccinationUncheckedUpdateManyWithoutPatientNestedInput
+  fechaNacimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  genero?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  peso?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroMicrochip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaCastrado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  alergias?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  condicionesEspeciales?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  citas?: Prisma.AppointmentUncheckedUpdateManyWithoutPacienteNestedInput
+  registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutPacienteNestedInput
+  vacunaciones?: Prisma.VaccinationUncheckedUpdateManyWithoutPacienteNestedInput
 }
 
-export type PatientUncheckedUpdateManyWithoutBreedInput = {
+export type PatientUncheckedUpdateManyWithoutRazaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  speciesId?: Prisma.StringFieldUpdateOperationsInput | string
+  propietarioId?: Prisma.StringFieldUpdateOperationsInput | string
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  nombre?: Prisma.StringFieldUpdateOperationsInput | string
+  especieId?: Prisma.StringFieldUpdateOperationsInput | string
   color?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  birthDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  gender?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  weight?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  photoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  microchipNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isNeutered?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  allergies?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  specialConditions?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  fechaNacimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  genero?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  peso?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  urlFoto?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  numeroMicrochip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaCastrado?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  alergias?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  condicionesEspeciales?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 
@@ -1883,15 +1883,15 @@ export type PatientUncheckedUpdateManyWithoutBreedInput = {
  */
 
 export type PatientCountOutputType = {
-  appointments: number
-  clinicalRecords: number
-  vaccinations: number
+  citas: number
+  registrosClinico: number
+  vacunaciones: number
 }
 
 export type PatientCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  appointments?: boolean | PatientCountOutputTypeCountAppointmentsArgs
-  clinicalRecords?: boolean | PatientCountOutputTypeCountClinicalRecordsArgs
-  vaccinations?: boolean | PatientCountOutputTypeCountVaccinationsArgs
+  citas?: boolean | PatientCountOutputTypeCountCitasArgs
+  registrosClinico?: boolean | PatientCountOutputTypeCountRegistrosClinicoArgs
+  vacunaciones?: boolean | PatientCountOutputTypeCountVacunacionesArgs
 }
 
 /**
@@ -1907,179 +1907,179 @@ export type PatientCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.Exte
 /**
  * PatientCountOutputType without action
  */
-export type PatientCountOutputTypeCountAppointmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type PatientCountOutputTypeCountCitasArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.AppointmentWhereInput
 }
 
 /**
  * PatientCountOutputType without action
  */
-export type PatientCountOutputTypeCountClinicalRecordsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type PatientCountOutputTypeCountRegistrosClinicoArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.ClinicalRecordWhereInput
 }
 
 /**
  * PatientCountOutputType without action
  */
-export type PatientCountOutputTypeCountVaccinationsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type PatientCountOutputTypeCountVacunacionesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.VaccinationWhereInput
 }
 
 
 export type PatientSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  ownerId?: boolean
-  veterinaryId?: boolean
-  name?: boolean
-  speciesId?: boolean
-  breedId?: boolean
+  propietarioId?: boolean
+  veterinariaId?: boolean
+  nombre?: boolean
+  especieId?: boolean
+  razaId?: boolean
   color?: boolean
-  birthDate?: boolean
-  gender?: boolean
-  weight?: boolean
-  photoUrl?: boolean
-  microchipNumber?: boolean
-  isNeutered?: boolean
-  allergies?: boolean
-  specialConditions?: boolean
-  isActive?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
-  owner?: boolean | Prisma.OwnerDefaultArgs<ExtArgs>
-  veterinary?: boolean | Prisma.Patient$veterinaryArgs<ExtArgs>
-  species?: boolean | Prisma.SpeciesDefaultArgs<ExtArgs>
-  breed?: boolean | Prisma.Patient$breedArgs<ExtArgs>
-  appointments?: boolean | Prisma.Patient$appointmentsArgs<ExtArgs>
-  clinicalRecords?: boolean | Prisma.Patient$clinicalRecordsArgs<ExtArgs>
-  vaccinations?: boolean | Prisma.Patient$vaccinationsArgs<ExtArgs>
+  fechaNacimiento?: boolean
+  genero?: boolean
+  peso?: boolean
+  urlFoto?: boolean
+  numeroMicrochip?: boolean
+  estaCastrado?: boolean
+  alergias?: boolean
+  condicionesEspeciales?: boolean
+  estaActivo?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
+  propietario?: boolean | Prisma.OwnerDefaultArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.Patient$veterinariaArgs<ExtArgs>
+  especie?: boolean | Prisma.SpeciesDefaultArgs<ExtArgs>
+  raza?: boolean | Prisma.Patient$razaArgs<ExtArgs>
+  citas?: boolean | Prisma.Patient$citasArgs<ExtArgs>
+  registrosClinico?: boolean | Prisma.Patient$registrosClinicoArgs<ExtArgs>
+  vacunaciones?: boolean | Prisma.Patient$vacunacionesArgs<ExtArgs>
   _count?: boolean | Prisma.PatientCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["patient"]>
 
 export type PatientSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  ownerId?: boolean
-  veterinaryId?: boolean
-  name?: boolean
-  speciesId?: boolean
-  breedId?: boolean
+  propietarioId?: boolean
+  veterinariaId?: boolean
+  nombre?: boolean
+  especieId?: boolean
+  razaId?: boolean
   color?: boolean
-  birthDate?: boolean
-  gender?: boolean
-  weight?: boolean
-  photoUrl?: boolean
-  microchipNumber?: boolean
-  isNeutered?: boolean
-  allergies?: boolean
-  specialConditions?: boolean
-  isActive?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
-  owner?: boolean | Prisma.OwnerDefaultArgs<ExtArgs>
-  veterinary?: boolean | Prisma.Patient$veterinaryArgs<ExtArgs>
-  species?: boolean | Prisma.SpeciesDefaultArgs<ExtArgs>
-  breed?: boolean | Prisma.Patient$breedArgs<ExtArgs>
+  fechaNacimiento?: boolean
+  genero?: boolean
+  peso?: boolean
+  urlFoto?: boolean
+  numeroMicrochip?: boolean
+  estaCastrado?: boolean
+  alergias?: boolean
+  condicionesEspeciales?: boolean
+  estaActivo?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
+  propietario?: boolean | Prisma.OwnerDefaultArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.Patient$veterinariaArgs<ExtArgs>
+  especie?: boolean | Prisma.SpeciesDefaultArgs<ExtArgs>
+  raza?: boolean | Prisma.Patient$razaArgs<ExtArgs>
 }, ExtArgs["result"]["patient"]>
 
 export type PatientSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  ownerId?: boolean
-  veterinaryId?: boolean
-  name?: boolean
-  speciesId?: boolean
-  breedId?: boolean
+  propietarioId?: boolean
+  veterinariaId?: boolean
+  nombre?: boolean
+  especieId?: boolean
+  razaId?: boolean
   color?: boolean
-  birthDate?: boolean
-  gender?: boolean
-  weight?: boolean
-  photoUrl?: boolean
-  microchipNumber?: boolean
-  isNeutered?: boolean
-  allergies?: boolean
-  specialConditions?: boolean
-  isActive?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
-  owner?: boolean | Prisma.OwnerDefaultArgs<ExtArgs>
-  veterinary?: boolean | Prisma.Patient$veterinaryArgs<ExtArgs>
-  species?: boolean | Prisma.SpeciesDefaultArgs<ExtArgs>
-  breed?: boolean | Prisma.Patient$breedArgs<ExtArgs>
+  fechaNacimiento?: boolean
+  genero?: boolean
+  peso?: boolean
+  urlFoto?: boolean
+  numeroMicrochip?: boolean
+  estaCastrado?: boolean
+  alergias?: boolean
+  condicionesEspeciales?: boolean
+  estaActivo?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
+  propietario?: boolean | Prisma.OwnerDefaultArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.Patient$veterinariaArgs<ExtArgs>
+  especie?: boolean | Prisma.SpeciesDefaultArgs<ExtArgs>
+  raza?: boolean | Prisma.Patient$razaArgs<ExtArgs>
 }, ExtArgs["result"]["patient"]>
 
 export type PatientSelectScalar = {
   id?: boolean
-  ownerId?: boolean
-  veterinaryId?: boolean
-  name?: boolean
-  speciesId?: boolean
-  breedId?: boolean
+  propietarioId?: boolean
+  veterinariaId?: boolean
+  nombre?: boolean
+  especieId?: boolean
+  razaId?: boolean
   color?: boolean
-  birthDate?: boolean
-  gender?: boolean
-  weight?: boolean
-  photoUrl?: boolean
-  microchipNumber?: boolean
-  isNeutered?: boolean
-  allergies?: boolean
-  specialConditions?: boolean
-  isActive?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
+  fechaNacimiento?: boolean
+  genero?: boolean
+  peso?: boolean
+  urlFoto?: boolean
+  numeroMicrochip?: boolean
+  estaCastrado?: boolean
+  alergias?: boolean
+  condicionesEspeciales?: boolean
+  estaActivo?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
 }
 
-export type PatientOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "ownerId" | "veterinaryId" | "name" | "speciesId" | "breedId" | "color" | "birthDate" | "gender" | "weight" | "photoUrl" | "microchipNumber" | "isNeutered" | "allergies" | "specialConditions" | "isActive" | "createdAt" | "updatedAt", ExtArgs["result"]["patient"]>
+export type PatientOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "propietarioId" | "veterinariaId" | "nombre" | "especieId" | "razaId" | "color" | "fechaNacimiento" | "genero" | "peso" | "urlFoto" | "numeroMicrochip" | "estaCastrado" | "alergias" | "condicionesEspeciales" | "estaActivo" | "creadoEn" | "actualizadoEn", ExtArgs["result"]["patient"]>
 export type PatientInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  owner?: boolean | Prisma.OwnerDefaultArgs<ExtArgs>
-  veterinary?: boolean | Prisma.Patient$veterinaryArgs<ExtArgs>
-  species?: boolean | Prisma.SpeciesDefaultArgs<ExtArgs>
-  breed?: boolean | Prisma.Patient$breedArgs<ExtArgs>
-  appointments?: boolean | Prisma.Patient$appointmentsArgs<ExtArgs>
-  clinicalRecords?: boolean | Prisma.Patient$clinicalRecordsArgs<ExtArgs>
-  vaccinations?: boolean | Prisma.Patient$vaccinationsArgs<ExtArgs>
+  propietario?: boolean | Prisma.OwnerDefaultArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.Patient$veterinariaArgs<ExtArgs>
+  especie?: boolean | Prisma.SpeciesDefaultArgs<ExtArgs>
+  raza?: boolean | Prisma.Patient$razaArgs<ExtArgs>
+  citas?: boolean | Prisma.Patient$citasArgs<ExtArgs>
+  registrosClinico?: boolean | Prisma.Patient$registrosClinicoArgs<ExtArgs>
+  vacunaciones?: boolean | Prisma.Patient$vacunacionesArgs<ExtArgs>
   _count?: boolean | Prisma.PatientCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type PatientIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  owner?: boolean | Prisma.OwnerDefaultArgs<ExtArgs>
-  veterinary?: boolean | Prisma.Patient$veterinaryArgs<ExtArgs>
-  species?: boolean | Prisma.SpeciesDefaultArgs<ExtArgs>
-  breed?: boolean | Prisma.Patient$breedArgs<ExtArgs>
+  propietario?: boolean | Prisma.OwnerDefaultArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.Patient$veterinariaArgs<ExtArgs>
+  especie?: boolean | Prisma.SpeciesDefaultArgs<ExtArgs>
+  raza?: boolean | Prisma.Patient$razaArgs<ExtArgs>
 }
 export type PatientIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  owner?: boolean | Prisma.OwnerDefaultArgs<ExtArgs>
-  veterinary?: boolean | Prisma.Patient$veterinaryArgs<ExtArgs>
-  species?: boolean | Prisma.SpeciesDefaultArgs<ExtArgs>
-  breed?: boolean | Prisma.Patient$breedArgs<ExtArgs>
+  propietario?: boolean | Prisma.OwnerDefaultArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.Patient$veterinariaArgs<ExtArgs>
+  especie?: boolean | Prisma.SpeciesDefaultArgs<ExtArgs>
+  raza?: boolean | Prisma.Patient$razaArgs<ExtArgs>
 }
 
 export type $PatientPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Patient"
   objects: {
-    owner: Prisma.$OwnerPayload<ExtArgs>
-    veterinary: Prisma.$VeterinaryPayload<ExtArgs> | null
-    species: Prisma.$SpeciesPayload<ExtArgs>
-    breed: Prisma.$BreedPayload<ExtArgs> | null
-    appointments: Prisma.$AppointmentPayload<ExtArgs>[]
-    clinicalRecords: Prisma.$ClinicalRecordPayload<ExtArgs>[]
-    vaccinations: Prisma.$VaccinationPayload<ExtArgs>[]
+    propietario: Prisma.$OwnerPayload<ExtArgs>
+    veterinaria: Prisma.$VeterinaryPayload<ExtArgs> | null
+    especie: Prisma.$SpeciesPayload<ExtArgs>
+    raza: Prisma.$BreedPayload<ExtArgs> | null
+    citas: Prisma.$AppointmentPayload<ExtArgs>[]
+    registrosClinico: Prisma.$ClinicalRecordPayload<ExtArgs>[]
+    vacunaciones: Prisma.$VaccinationPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
-    ownerId: string
-    veterinaryId: string | null
-    name: string
-    speciesId: string
-    breedId: string | null
+    propietarioId: string
+    veterinariaId: string | null
+    nombre: string
+    especieId: string
+    razaId: string | null
     color: string | null
-    birthDate: Date | null
-    gender: string | null
-    weight: runtime.Decimal | null
-    photoUrl: string | null
-    microchipNumber: string | null
-    isNeutered: boolean
-    allergies: string | null
-    specialConditions: string | null
-    isActive: boolean
-    createdAt: Date
-    updatedAt: Date
+    fechaNacimiento: Date | null
+    genero: string | null
+    peso: runtime.Decimal | null
+    urlFoto: string | null
+    numeroMicrochip: string | null
+    estaCastrado: boolean
+    alergias: string | null
+    condicionesEspeciales: string | null
+    estaActivo: boolean
+    creadoEn: Date
+    actualizadoEn: Date
   }, ExtArgs["result"]["patient"]>
   composites: {}
 }
@@ -2474,13 +2474,13 @@ readonly fields: PatientFieldRefs;
  */
 export interface Prisma__PatientClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  owner<T extends Prisma.OwnerDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.OwnerDefaultArgs<ExtArgs>>): Prisma.Prisma__OwnerClient<runtime.Types.Result.GetResult<Prisma.$OwnerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  veterinary<T extends Prisma.Patient$veterinaryArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Patient$veterinaryArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-  species<T extends Prisma.SpeciesDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.SpeciesDefaultArgs<ExtArgs>>): Prisma.Prisma__SpeciesClient<runtime.Types.Result.GetResult<Prisma.$SpeciesPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  breed<T extends Prisma.Patient$breedArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Patient$breedArgs<ExtArgs>>): Prisma.Prisma__BreedClient<runtime.Types.Result.GetResult<Prisma.$BreedPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-  appointments<T extends Prisma.Patient$appointmentsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Patient$appointmentsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AppointmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  clinicalRecords<T extends Prisma.Patient$clinicalRecordsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Patient$clinicalRecordsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ClinicalRecordPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  vaccinations<T extends Prisma.Patient$vaccinationsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Patient$vaccinationsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$VaccinationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  propietario<T extends Prisma.OwnerDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.OwnerDefaultArgs<ExtArgs>>): Prisma.Prisma__OwnerClient<runtime.Types.Result.GetResult<Prisma.$OwnerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  veterinaria<T extends Prisma.Patient$veterinariaArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Patient$veterinariaArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  especie<T extends Prisma.SpeciesDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.SpeciesDefaultArgs<ExtArgs>>): Prisma.Prisma__SpeciesClient<runtime.Types.Result.GetResult<Prisma.$SpeciesPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  raza<T extends Prisma.Patient$razaArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Patient$razaArgs<ExtArgs>>): Prisma.Prisma__BreedClient<runtime.Types.Result.GetResult<Prisma.$BreedPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  citas<T extends Prisma.Patient$citasArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Patient$citasArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AppointmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  registrosClinico<T extends Prisma.Patient$registrosClinicoArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Patient$registrosClinicoArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ClinicalRecordPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  vacunaciones<T extends Prisma.Patient$vacunacionesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Patient$vacunacionesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$VaccinationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2511,23 +2511,23 @@ export interface Prisma__PatientClient<T, Null = never, ExtArgs extends runtime.
  */
 export interface PatientFieldRefs {
   readonly id: Prisma.FieldRef<"Patient", 'String'>
-  readonly ownerId: Prisma.FieldRef<"Patient", 'String'>
-  readonly veterinaryId: Prisma.FieldRef<"Patient", 'String'>
-  readonly name: Prisma.FieldRef<"Patient", 'String'>
-  readonly speciesId: Prisma.FieldRef<"Patient", 'String'>
-  readonly breedId: Prisma.FieldRef<"Patient", 'String'>
+  readonly propietarioId: Prisma.FieldRef<"Patient", 'String'>
+  readonly veterinariaId: Prisma.FieldRef<"Patient", 'String'>
+  readonly nombre: Prisma.FieldRef<"Patient", 'String'>
+  readonly especieId: Prisma.FieldRef<"Patient", 'String'>
+  readonly razaId: Prisma.FieldRef<"Patient", 'String'>
   readonly color: Prisma.FieldRef<"Patient", 'String'>
-  readonly birthDate: Prisma.FieldRef<"Patient", 'DateTime'>
-  readonly gender: Prisma.FieldRef<"Patient", 'String'>
-  readonly weight: Prisma.FieldRef<"Patient", 'Decimal'>
-  readonly photoUrl: Prisma.FieldRef<"Patient", 'String'>
-  readonly microchipNumber: Prisma.FieldRef<"Patient", 'String'>
-  readonly isNeutered: Prisma.FieldRef<"Patient", 'Boolean'>
-  readonly allergies: Prisma.FieldRef<"Patient", 'String'>
-  readonly specialConditions: Prisma.FieldRef<"Patient", 'String'>
-  readonly isActive: Prisma.FieldRef<"Patient", 'Boolean'>
-  readonly createdAt: Prisma.FieldRef<"Patient", 'DateTime'>
-  readonly updatedAt: Prisma.FieldRef<"Patient", 'DateTime'>
+  readonly fechaNacimiento: Prisma.FieldRef<"Patient", 'DateTime'>
+  readonly genero: Prisma.FieldRef<"Patient", 'String'>
+  readonly peso: Prisma.FieldRef<"Patient", 'Decimal'>
+  readonly urlFoto: Prisma.FieldRef<"Patient", 'String'>
+  readonly numeroMicrochip: Prisma.FieldRef<"Patient", 'String'>
+  readonly estaCastrado: Prisma.FieldRef<"Patient", 'Boolean'>
+  readonly alergias: Prisma.FieldRef<"Patient", 'String'>
+  readonly condicionesEspeciales: Prisma.FieldRef<"Patient", 'String'>
+  readonly estaActivo: Prisma.FieldRef<"Patient", 'Boolean'>
+  readonly creadoEn: Prisma.FieldRef<"Patient", 'DateTime'>
+  readonly actualizadoEn: Prisma.FieldRef<"Patient", 'DateTime'>
 }
     
 
@@ -2924,9 +2924,9 @@ export type PatientDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.Inter
 }
 
 /**
- * Patient.veterinary
+ * Patient.veterinaria
  */
-export type Patient$veterinaryArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Patient$veterinariaArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Veterinary
    */
@@ -2943,9 +2943,9 @@ export type Patient$veterinaryArgs<ExtArgs extends runtime.Types.Extensions.Inte
 }
 
 /**
- * Patient.breed
+ * Patient.raza
  */
-export type Patient$breedArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Patient$razaArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Breed
    */
@@ -2962,9 +2962,9 @@ export type Patient$breedArgs<ExtArgs extends runtime.Types.Extensions.InternalA
 }
 
 /**
- * Patient.appointments
+ * Patient.citas
  */
-export type Patient$appointmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Patient$citasArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Appointment
    */
@@ -2986,9 +2986,9 @@ export type Patient$appointmentsArgs<ExtArgs extends runtime.Types.Extensions.In
 }
 
 /**
- * Patient.clinicalRecords
+ * Patient.registrosClinico
  */
-export type Patient$clinicalRecordsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Patient$registrosClinicoArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the ClinicalRecord
    */
@@ -3010,9 +3010,9 @@ export type Patient$clinicalRecordsArgs<ExtArgs extends runtime.Types.Extensions
 }
 
 /**
- * Patient.vaccinations
+ * Patient.vacunaciones
  */
-export type Patient$vaccinationsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Patient$vacunacionesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Vaccination
    */
