@@ -26,72 +26,72 @@ export type AggregateActivityLog = {
 
 export type ActivityLogMinAggregateOutputType = {
   id: string | null
-  veterinaryId: string | null
-  userId: string | null
-  actionType: string | null
-  entityType: string | null
-  entityId: string | null
-  description: string | null
-  createdAt: Date | null
+  veterinariaId: string | null
+  usuarioId: string | null
+  tipoAccion: string | null
+  tipoEntidad: string | null
+  entidadId: string | null
+  descripcion: string | null
+  creadoEn: Date | null
 }
 
 export type ActivityLogMaxAggregateOutputType = {
   id: string | null
-  veterinaryId: string | null
-  userId: string | null
-  actionType: string | null
-  entityType: string | null
-  entityId: string | null
-  description: string | null
-  createdAt: Date | null
+  veterinariaId: string | null
+  usuarioId: string | null
+  tipoAccion: string | null
+  tipoEntidad: string | null
+  entidadId: string | null
+  descripcion: string | null
+  creadoEn: Date | null
 }
 
 export type ActivityLogCountAggregateOutputType = {
   id: number
-  veterinaryId: number
-  userId: number
-  actionType: number
-  entityType: number
-  entityId: number
-  description: number
-  metadata: number
-  createdAt: number
+  veterinariaId: number
+  usuarioId: number
+  tipoAccion: number
+  tipoEntidad: number
+  entidadId: number
+  descripcion: number
+  metadatos: number
+  creadoEn: number
   _all: number
 }
 
 
 export type ActivityLogMinAggregateInputType = {
   id?: true
-  veterinaryId?: true
-  userId?: true
-  actionType?: true
-  entityType?: true
-  entityId?: true
-  description?: true
-  createdAt?: true
+  veterinariaId?: true
+  usuarioId?: true
+  tipoAccion?: true
+  tipoEntidad?: true
+  entidadId?: true
+  descripcion?: true
+  creadoEn?: true
 }
 
 export type ActivityLogMaxAggregateInputType = {
   id?: true
-  veterinaryId?: true
-  userId?: true
-  actionType?: true
-  entityType?: true
-  entityId?: true
-  description?: true
-  createdAt?: true
+  veterinariaId?: true
+  usuarioId?: true
+  tipoAccion?: true
+  tipoEntidad?: true
+  entidadId?: true
+  descripcion?: true
+  creadoEn?: true
 }
 
 export type ActivityLogCountAggregateInputType = {
   id?: true
-  veterinaryId?: true
-  userId?: true
-  actionType?: true
-  entityType?: true
-  entityId?: true
-  description?: true
-  metadata?: true
-  createdAt?: true
+  veterinariaId?: true
+  usuarioId?: true
+  tipoAccion?: true
+  tipoEntidad?: true
+  entidadId?: true
+  descripcion?: true
+  metadatos?: true
+  creadoEn?: true
   _all?: true
 }
 
@@ -169,14 +169,14 @@ export type ActivityLogGroupByArgs<ExtArgs extends runtime.Types.Extensions.Inte
 
 export type ActivityLogGroupByOutputType = {
   id: string
-  veterinaryId: string | null
-  userId: string | null
-  actionType: string
-  entityType: string | null
-  entityId: string | null
-  description: string
-  metadata: runtime.JsonValue | null
-  createdAt: Date
+  veterinariaId: string | null
+  usuarioId: string | null
+  tipoAccion: string
+  tipoEntidad: string | null
+  entidadId: string | null
+  descripcion: string
+  metadatos: runtime.JsonValue | null
+  creadoEn: Date
   _count: ActivityLogCountAggregateOutputType | null
   _min: ActivityLogMinAggregateOutputType | null
   _max: ActivityLogMaxAggregateOutputType | null
@@ -202,28 +202,28 @@ export type ActivityLogWhereInput = {
   OR?: Prisma.ActivityLogWhereInput[]
   NOT?: Prisma.ActivityLogWhereInput | Prisma.ActivityLogWhereInput[]
   id?: Prisma.UuidFilter<"ActivityLog"> | string
-  veterinaryId?: Prisma.UuidNullableFilter<"ActivityLog"> | string | null
-  userId?: Prisma.UuidNullableFilter<"ActivityLog"> | string | null
-  actionType?: Prisma.StringFilter<"ActivityLog"> | string
-  entityType?: Prisma.StringNullableFilter<"ActivityLog"> | string | null
-  entityId?: Prisma.UuidNullableFilter<"ActivityLog"> | string | null
-  description?: Prisma.StringFilter<"ActivityLog"> | string
-  metadata?: Prisma.JsonNullableFilter<"ActivityLog">
-  createdAt?: Prisma.DateTimeFilter<"ActivityLog"> | Date | string
-  veterinary?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
+  veterinariaId?: Prisma.UuidNullableFilter<"ActivityLog"> | string | null
+  usuarioId?: Prisma.UuidNullableFilter<"ActivityLog"> | string | null
+  tipoAccion?: Prisma.StringFilter<"ActivityLog"> | string
+  tipoEntidad?: Prisma.StringNullableFilter<"ActivityLog"> | string | null
+  entidadId?: Prisma.UuidNullableFilter<"ActivityLog"> | string | null
+  descripcion?: Prisma.StringFilter<"ActivityLog"> | string
+  metadatos?: Prisma.JsonNullableFilter<"ActivityLog">
+  creadoEn?: Prisma.DateTimeFilter<"ActivityLog"> | Date | string
+  veterinaria?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
 }
 
 export type ActivityLogOrderByWithRelationInput = {
   id?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrderInput | Prisma.SortOrder
-  userId?: Prisma.SortOrderInput | Prisma.SortOrder
-  actionType?: Prisma.SortOrder
-  entityType?: Prisma.SortOrderInput | Prisma.SortOrder
-  entityId?: Prisma.SortOrderInput | Prisma.SortOrder
-  description?: Prisma.SortOrder
-  metadata?: Prisma.SortOrderInput | Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  veterinary?: Prisma.VeterinaryOrderByWithRelationInput
+  veterinariaId?: Prisma.SortOrderInput | Prisma.SortOrder
+  usuarioId?: Prisma.SortOrderInput | Prisma.SortOrder
+  tipoAccion?: Prisma.SortOrder
+  tipoEntidad?: Prisma.SortOrderInput | Prisma.SortOrder
+  entidadId?: Prisma.SortOrderInput | Prisma.SortOrder
+  descripcion?: Prisma.SortOrder
+  metadatos?: Prisma.SortOrderInput | Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  veterinaria?: Prisma.VeterinaryOrderByWithRelationInput
 }
 
 export type ActivityLogWhereUniqueInput = Prisma.AtLeast<{
@@ -231,27 +231,27 @@ export type ActivityLogWhereUniqueInput = Prisma.AtLeast<{
   AND?: Prisma.ActivityLogWhereInput | Prisma.ActivityLogWhereInput[]
   OR?: Prisma.ActivityLogWhereInput[]
   NOT?: Prisma.ActivityLogWhereInput | Prisma.ActivityLogWhereInput[]
-  veterinaryId?: Prisma.UuidNullableFilter<"ActivityLog"> | string | null
-  userId?: Prisma.UuidNullableFilter<"ActivityLog"> | string | null
-  actionType?: Prisma.StringFilter<"ActivityLog"> | string
-  entityType?: Prisma.StringNullableFilter<"ActivityLog"> | string | null
-  entityId?: Prisma.UuidNullableFilter<"ActivityLog"> | string | null
-  description?: Prisma.StringFilter<"ActivityLog"> | string
-  metadata?: Prisma.JsonNullableFilter<"ActivityLog">
-  createdAt?: Prisma.DateTimeFilter<"ActivityLog"> | Date | string
-  veterinary?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
+  veterinariaId?: Prisma.UuidNullableFilter<"ActivityLog"> | string | null
+  usuarioId?: Prisma.UuidNullableFilter<"ActivityLog"> | string | null
+  tipoAccion?: Prisma.StringFilter<"ActivityLog"> | string
+  tipoEntidad?: Prisma.StringNullableFilter<"ActivityLog"> | string | null
+  entidadId?: Prisma.UuidNullableFilter<"ActivityLog"> | string | null
+  descripcion?: Prisma.StringFilter<"ActivityLog"> | string
+  metadatos?: Prisma.JsonNullableFilter<"ActivityLog">
+  creadoEn?: Prisma.DateTimeFilter<"ActivityLog"> | Date | string
+  veterinaria?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
 }, "id">
 
 export type ActivityLogOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrderInput | Prisma.SortOrder
-  userId?: Prisma.SortOrderInput | Prisma.SortOrder
-  actionType?: Prisma.SortOrder
-  entityType?: Prisma.SortOrderInput | Prisma.SortOrder
-  entityId?: Prisma.SortOrderInput | Prisma.SortOrder
-  description?: Prisma.SortOrder
-  metadata?: Prisma.SortOrderInput | Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrderInput | Prisma.SortOrder
+  usuarioId?: Prisma.SortOrderInput | Prisma.SortOrder
+  tipoAccion?: Prisma.SortOrder
+  tipoEntidad?: Prisma.SortOrderInput | Prisma.SortOrder
+  entidadId?: Prisma.SortOrderInput | Prisma.SortOrder
+  descripcion?: Prisma.SortOrder
+  metadatos?: Prisma.SortOrderInput | Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
   _count?: Prisma.ActivityLogCountOrderByAggregateInput
   _max?: Prisma.ActivityLogMaxOrderByAggregateInput
   _min?: Prisma.ActivityLogMinOrderByAggregateInput
@@ -262,97 +262,97 @@ export type ActivityLogScalarWhereWithAggregatesInput = {
   OR?: Prisma.ActivityLogScalarWhereWithAggregatesInput[]
   NOT?: Prisma.ActivityLogScalarWhereWithAggregatesInput | Prisma.ActivityLogScalarWhereWithAggregatesInput[]
   id?: Prisma.UuidWithAggregatesFilter<"ActivityLog"> | string
-  veterinaryId?: Prisma.UuidNullableWithAggregatesFilter<"ActivityLog"> | string | null
-  userId?: Prisma.UuidNullableWithAggregatesFilter<"ActivityLog"> | string | null
-  actionType?: Prisma.StringWithAggregatesFilter<"ActivityLog"> | string
-  entityType?: Prisma.StringNullableWithAggregatesFilter<"ActivityLog"> | string | null
-  entityId?: Prisma.UuidNullableWithAggregatesFilter<"ActivityLog"> | string | null
-  description?: Prisma.StringWithAggregatesFilter<"ActivityLog"> | string
-  metadata?: Prisma.JsonNullableWithAggregatesFilter<"ActivityLog">
-  createdAt?: Prisma.DateTimeWithAggregatesFilter<"ActivityLog"> | Date | string
+  veterinariaId?: Prisma.UuidNullableWithAggregatesFilter<"ActivityLog"> | string | null
+  usuarioId?: Prisma.UuidNullableWithAggregatesFilter<"ActivityLog"> | string | null
+  tipoAccion?: Prisma.StringWithAggregatesFilter<"ActivityLog"> | string
+  tipoEntidad?: Prisma.StringNullableWithAggregatesFilter<"ActivityLog"> | string | null
+  entidadId?: Prisma.UuidNullableWithAggregatesFilter<"ActivityLog"> | string | null
+  descripcion?: Prisma.StringWithAggregatesFilter<"ActivityLog"> | string
+  metadatos?: Prisma.JsonNullableWithAggregatesFilter<"ActivityLog">
+  creadoEn?: Prisma.DateTimeWithAggregatesFilter<"ActivityLog"> | Date | string
 }
 
 export type ActivityLogCreateInput = {
   id?: string
-  userId?: string | null
-  actionType: string
-  entityType?: string | null
-  entityId?: string | null
-  description: string
-  metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Date | string
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutActivityLogsInput
+  usuarioId?: string | null
+  tipoAccion: string
+  tipoEntidad?: string | null
+  entidadId?: string | null
+  descripcion: string
+  metadatos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Date | string
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutRegistrosActividadInput
 }
 
 export type ActivityLogUncheckedCreateInput = {
   id?: string
-  veterinaryId?: string | null
-  userId?: string | null
-  actionType: string
-  entityType?: string | null
-  entityId?: string | null
-  description: string
-  metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Date | string
+  veterinariaId?: string | null
+  usuarioId?: string | null
+  tipoAccion: string
+  tipoEntidad?: string | null
+  entidadId?: string | null
+  descripcion: string
+  metadatos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Date | string
 }
 
 export type ActivityLogUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  actionType?: Prisma.StringFieldUpdateOperationsInput | string
-  entityType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  entityId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  description?: Prisma.StringFieldUpdateOperationsInput | string
-  metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutActivityLogsNestedInput
+  usuarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tipoAccion?: Prisma.StringFieldUpdateOperationsInput | string
+  tipoEntidad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  entidadId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  descripcion?: Prisma.StringFieldUpdateOperationsInput | string
+  metadatos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutRegistrosActividadNestedInput
 }
 
 export type ActivityLogUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  userId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  actionType?: Prisma.StringFieldUpdateOperationsInput | string
-  entityType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  entityId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  description?: Prisma.StringFieldUpdateOperationsInput | string
-  metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  usuarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tipoAccion?: Prisma.StringFieldUpdateOperationsInput | string
+  tipoEntidad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  entidadId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  descripcion?: Prisma.StringFieldUpdateOperationsInput | string
+  metadatos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type ActivityLogCreateManyInput = {
   id?: string
-  veterinaryId?: string | null
-  userId?: string | null
-  actionType: string
-  entityType?: string | null
-  entityId?: string | null
-  description: string
-  metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Date | string
+  veterinariaId?: string | null
+  usuarioId?: string | null
+  tipoAccion: string
+  tipoEntidad?: string | null
+  entidadId?: string | null
+  descripcion: string
+  metadatos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Date | string
 }
 
 export type ActivityLogUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  actionType?: Prisma.StringFieldUpdateOperationsInput | string
-  entityType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  entityId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  description?: Prisma.StringFieldUpdateOperationsInput | string
-  metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tipoAccion?: Prisma.StringFieldUpdateOperationsInput | string
+  tipoEntidad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  entidadId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  descripcion?: Prisma.StringFieldUpdateOperationsInput | string
+  metadatos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type ActivityLogUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  userId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  actionType?: Prisma.StringFieldUpdateOperationsInput | string
-  entityType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  entityId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  description?: Prisma.StringFieldUpdateOperationsInput | string
-  metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  usuarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tipoAccion?: Prisma.StringFieldUpdateOperationsInput | string
+  tipoEntidad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  entidadId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  descripcion?: Prisma.StringFieldUpdateOperationsInput | string
+  metadatos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type ActivityLogListRelationFilter = {
@@ -367,126 +367,126 @@ export type ActivityLogOrderByRelationAggregateInput = {
 
 export type ActivityLogCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
-  actionType?: Prisma.SortOrder
-  entityType?: Prisma.SortOrder
-  entityId?: Prisma.SortOrder
-  description?: Prisma.SortOrder
-  metadata?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrder
+  usuarioId?: Prisma.SortOrder
+  tipoAccion?: Prisma.SortOrder
+  tipoEntidad?: Prisma.SortOrder
+  entidadId?: Prisma.SortOrder
+  descripcion?: Prisma.SortOrder
+  metadatos?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
 }
 
 export type ActivityLogMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
-  actionType?: Prisma.SortOrder
-  entityType?: Prisma.SortOrder
-  entityId?: Prisma.SortOrder
-  description?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrder
+  usuarioId?: Prisma.SortOrder
+  tipoAccion?: Prisma.SortOrder
+  tipoEntidad?: Prisma.SortOrder
+  entidadId?: Prisma.SortOrder
+  descripcion?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
 }
 
 export type ActivityLogMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrder
-  userId?: Prisma.SortOrder
-  actionType?: Prisma.SortOrder
-  entityType?: Prisma.SortOrder
-  entityId?: Prisma.SortOrder
-  description?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrder
+  usuarioId?: Prisma.SortOrder
+  tipoAccion?: Prisma.SortOrder
+  tipoEntidad?: Prisma.SortOrder
+  entidadId?: Prisma.SortOrder
+  descripcion?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
 }
 
-export type ActivityLogCreateNestedManyWithoutVeterinaryInput = {
-  create?: Prisma.XOR<Prisma.ActivityLogCreateWithoutVeterinaryInput, Prisma.ActivityLogUncheckedCreateWithoutVeterinaryInput> | Prisma.ActivityLogCreateWithoutVeterinaryInput[] | Prisma.ActivityLogUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.ActivityLogCreateOrConnectWithoutVeterinaryInput | Prisma.ActivityLogCreateOrConnectWithoutVeterinaryInput[]
-  createMany?: Prisma.ActivityLogCreateManyVeterinaryInputEnvelope
+export type ActivityLogCreateNestedManyWithoutVeterinariaInput = {
+  create?: Prisma.XOR<Prisma.ActivityLogCreateWithoutVeterinariaInput, Prisma.ActivityLogUncheckedCreateWithoutVeterinariaInput> | Prisma.ActivityLogCreateWithoutVeterinariaInput[] | Prisma.ActivityLogUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.ActivityLogCreateOrConnectWithoutVeterinariaInput | Prisma.ActivityLogCreateOrConnectWithoutVeterinariaInput[]
+  createMany?: Prisma.ActivityLogCreateManyVeterinariaInputEnvelope
   connect?: Prisma.ActivityLogWhereUniqueInput | Prisma.ActivityLogWhereUniqueInput[]
 }
 
-export type ActivityLogUncheckedCreateNestedManyWithoutVeterinaryInput = {
-  create?: Prisma.XOR<Prisma.ActivityLogCreateWithoutVeterinaryInput, Prisma.ActivityLogUncheckedCreateWithoutVeterinaryInput> | Prisma.ActivityLogCreateWithoutVeterinaryInput[] | Prisma.ActivityLogUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.ActivityLogCreateOrConnectWithoutVeterinaryInput | Prisma.ActivityLogCreateOrConnectWithoutVeterinaryInput[]
-  createMany?: Prisma.ActivityLogCreateManyVeterinaryInputEnvelope
+export type ActivityLogUncheckedCreateNestedManyWithoutVeterinariaInput = {
+  create?: Prisma.XOR<Prisma.ActivityLogCreateWithoutVeterinariaInput, Prisma.ActivityLogUncheckedCreateWithoutVeterinariaInput> | Prisma.ActivityLogCreateWithoutVeterinariaInput[] | Prisma.ActivityLogUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.ActivityLogCreateOrConnectWithoutVeterinariaInput | Prisma.ActivityLogCreateOrConnectWithoutVeterinariaInput[]
+  createMany?: Prisma.ActivityLogCreateManyVeterinariaInputEnvelope
   connect?: Prisma.ActivityLogWhereUniqueInput | Prisma.ActivityLogWhereUniqueInput[]
 }
 
-export type ActivityLogUpdateManyWithoutVeterinaryNestedInput = {
-  create?: Prisma.XOR<Prisma.ActivityLogCreateWithoutVeterinaryInput, Prisma.ActivityLogUncheckedCreateWithoutVeterinaryInput> | Prisma.ActivityLogCreateWithoutVeterinaryInput[] | Prisma.ActivityLogUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.ActivityLogCreateOrConnectWithoutVeterinaryInput | Prisma.ActivityLogCreateOrConnectWithoutVeterinaryInput[]
-  upsert?: Prisma.ActivityLogUpsertWithWhereUniqueWithoutVeterinaryInput | Prisma.ActivityLogUpsertWithWhereUniqueWithoutVeterinaryInput[]
-  createMany?: Prisma.ActivityLogCreateManyVeterinaryInputEnvelope
+export type ActivityLogUpdateManyWithoutVeterinariaNestedInput = {
+  create?: Prisma.XOR<Prisma.ActivityLogCreateWithoutVeterinariaInput, Prisma.ActivityLogUncheckedCreateWithoutVeterinariaInput> | Prisma.ActivityLogCreateWithoutVeterinariaInput[] | Prisma.ActivityLogUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.ActivityLogCreateOrConnectWithoutVeterinariaInput | Prisma.ActivityLogCreateOrConnectWithoutVeterinariaInput[]
+  upsert?: Prisma.ActivityLogUpsertWithWhereUniqueWithoutVeterinariaInput | Prisma.ActivityLogUpsertWithWhereUniqueWithoutVeterinariaInput[]
+  createMany?: Prisma.ActivityLogCreateManyVeterinariaInputEnvelope
   set?: Prisma.ActivityLogWhereUniqueInput | Prisma.ActivityLogWhereUniqueInput[]
   disconnect?: Prisma.ActivityLogWhereUniqueInput | Prisma.ActivityLogWhereUniqueInput[]
   delete?: Prisma.ActivityLogWhereUniqueInput | Prisma.ActivityLogWhereUniqueInput[]
   connect?: Prisma.ActivityLogWhereUniqueInput | Prisma.ActivityLogWhereUniqueInput[]
-  update?: Prisma.ActivityLogUpdateWithWhereUniqueWithoutVeterinaryInput | Prisma.ActivityLogUpdateWithWhereUniqueWithoutVeterinaryInput[]
-  updateMany?: Prisma.ActivityLogUpdateManyWithWhereWithoutVeterinaryInput | Prisma.ActivityLogUpdateManyWithWhereWithoutVeterinaryInput[]
+  update?: Prisma.ActivityLogUpdateWithWhereUniqueWithoutVeterinariaInput | Prisma.ActivityLogUpdateWithWhereUniqueWithoutVeterinariaInput[]
+  updateMany?: Prisma.ActivityLogUpdateManyWithWhereWithoutVeterinariaInput | Prisma.ActivityLogUpdateManyWithWhereWithoutVeterinariaInput[]
   deleteMany?: Prisma.ActivityLogScalarWhereInput | Prisma.ActivityLogScalarWhereInput[]
 }
 
-export type ActivityLogUncheckedUpdateManyWithoutVeterinaryNestedInput = {
-  create?: Prisma.XOR<Prisma.ActivityLogCreateWithoutVeterinaryInput, Prisma.ActivityLogUncheckedCreateWithoutVeterinaryInput> | Prisma.ActivityLogCreateWithoutVeterinaryInput[] | Prisma.ActivityLogUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.ActivityLogCreateOrConnectWithoutVeterinaryInput | Prisma.ActivityLogCreateOrConnectWithoutVeterinaryInput[]
-  upsert?: Prisma.ActivityLogUpsertWithWhereUniqueWithoutVeterinaryInput | Prisma.ActivityLogUpsertWithWhereUniqueWithoutVeterinaryInput[]
-  createMany?: Prisma.ActivityLogCreateManyVeterinaryInputEnvelope
+export type ActivityLogUncheckedUpdateManyWithoutVeterinariaNestedInput = {
+  create?: Prisma.XOR<Prisma.ActivityLogCreateWithoutVeterinariaInput, Prisma.ActivityLogUncheckedCreateWithoutVeterinariaInput> | Prisma.ActivityLogCreateWithoutVeterinariaInput[] | Prisma.ActivityLogUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.ActivityLogCreateOrConnectWithoutVeterinariaInput | Prisma.ActivityLogCreateOrConnectWithoutVeterinariaInput[]
+  upsert?: Prisma.ActivityLogUpsertWithWhereUniqueWithoutVeterinariaInput | Prisma.ActivityLogUpsertWithWhereUniqueWithoutVeterinariaInput[]
+  createMany?: Prisma.ActivityLogCreateManyVeterinariaInputEnvelope
   set?: Prisma.ActivityLogWhereUniqueInput | Prisma.ActivityLogWhereUniqueInput[]
   disconnect?: Prisma.ActivityLogWhereUniqueInput | Prisma.ActivityLogWhereUniqueInput[]
   delete?: Prisma.ActivityLogWhereUniqueInput | Prisma.ActivityLogWhereUniqueInput[]
   connect?: Prisma.ActivityLogWhereUniqueInput | Prisma.ActivityLogWhereUniqueInput[]
-  update?: Prisma.ActivityLogUpdateWithWhereUniqueWithoutVeterinaryInput | Prisma.ActivityLogUpdateWithWhereUniqueWithoutVeterinaryInput[]
-  updateMany?: Prisma.ActivityLogUpdateManyWithWhereWithoutVeterinaryInput | Prisma.ActivityLogUpdateManyWithWhereWithoutVeterinaryInput[]
+  update?: Prisma.ActivityLogUpdateWithWhereUniqueWithoutVeterinariaInput | Prisma.ActivityLogUpdateWithWhereUniqueWithoutVeterinariaInput[]
+  updateMany?: Prisma.ActivityLogUpdateManyWithWhereWithoutVeterinariaInput | Prisma.ActivityLogUpdateManyWithWhereWithoutVeterinariaInput[]
   deleteMany?: Prisma.ActivityLogScalarWhereInput | Prisma.ActivityLogScalarWhereInput[]
 }
 
-export type ActivityLogCreateWithoutVeterinaryInput = {
+export type ActivityLogCreateWithoutVeterinariaInput = {
   id?: string
-  userId?: string | null
-  actionType: string
-  entityType?: string | null
-  entityId?: string | null
-  description: string
-  metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Date | string
+  usuarioId?: string | null
+  tipoAccion: string
+  tipoEntidad?: string | null
+  entidadId?: string | null
+  descripcion: string
+  metadatos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Date | string
 }
 
-export type ActivityLogUncheckedCreateWithoutVeterinaryInput = {
+export type ActivityLogUncheckedCreateWithoutVeterinariaInput = {
   id?: string
-  userId?: string | null
-  actionType: string
-  entityType?: string | null
-  entityId?: string | null
-  description: string
-  metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Date | string
+  usuarioId?: string | null
+  tipoAccion: string
+  tipoEntidad?: string | null
+  entidadId?: string | null
+  descripcion: string
+  metadatos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Date | string
 }
 
-export type ActivityLogCreateOrConnectWithoutVeterinaryInput = {
+export type ActivityLogCreateOrConnectWithoutVeterinariaInput = {
   where: Prisma.ActivityLogWhereUniqueInput
-  create: Prisma.XOR<Prisma.ActivityLogCreateWithoutVeterinaryInput, Prisma.ActivityLogUncheckedCreateWithoutVeterinaryInput>
+  create: Prisma.XOR<Prisma.ActivityLogCreateWithoutVeterinariaInput, Prisma.ActivityLogUncheckedCreateWithoutVeterinariaInput>
 }
 
-export type ActivityLogCreateManyVeterinaryInputEnvelope = {
-  data: Prisma.ActivityLogCreateManyVeterinaryInput | Prisma.ActivityLogCreateManyVeterinaryInput[]
+export type ActivityLogCreateManyVeterinariaInputEnvelope = {
+  data: Prisma.ActivityLogCreateManyVeterinariaInput | Prisma.ActivityLogCreateManyVeterinariaInput[]
   skipDuplicates?: boolean
 }
 
-export type ActivityLogUpsertWithWhereUniqueWithoutVeterinaryInput = {
+export type ActivityLogUpsertWithWhereUniqueWithoutVeterinariaInput = {
   where: Prisma.ActivityLogWhereUniqueInput
-  update: Prisma.XOR<Prisma.ActivityLogUpdateWithoutVeterinaryInput, Prisma.ActivityLogUncheckedUpdateWithoutVeterinaryInput>
-  create: Prisma.XOR<Prisma.ActivityLogCreateWithoutVeterinaryInput, Prisma.ActivityLogUncheckedCreateWithoutVeterinaryInput>
+  update: Prisma.XOR<Prisma.ActivityLogUpdateWithoutVeterinariaInput, Prisma.ActivityLogUncheckedUpdateWithoutVeterinariaInput>
+  create: Prisma.XOR<Prisma.ActivityLogCreateWithoutVeterinariaInput, Prisma.ActivityLogUncheckedCreateWithoutVeterinariaInput>
 }
 
-export type ActivityLogUpdateWithWhereUniqueWithoutVeterinaryInput = {
+export type ActivityLogUpdateWithWhereUniqueWithoutVeterinariaInput = {
   where: Prisma.ActivityLogWhereUniqueInput
-  data: Prisma.XOR<Prisma.ActivityLogUpdateWithoutVeterinaryInput, Prisma.ActivityLogUncheckedUpdateWithoutVeterinaryInput>
+  data: Prisma.XOR<Prisma.ActivityLogUpdateWithoutVeterinariaInput, Prisma.ActivityLogUncheckedUpdateWithoutVeterinariaInput>
 }
 
-export type ActivityLogUpdateManyWithWhereWithoutVeterinaryInput = {
+export type ActivityLogUpdateManyWithWhereWithoutVeterinariaInput = {
   where: Prisma.ActivityLogScalarWhereInput
-  data: Prisma.XOR<Prisma.ActivityLogUpdateManyMutationInput, Prisma.ActivityLogUncheckedUpdateManyWithoutVeterinaryInput>
+  data: Prisma.XOR<Prisma.ActivityLogUpdateManyMutationInput, Prisma.ActivityLogUncheckedUpdateManyWithoutVeterinariaInput>
 }
 
 export type ActivityLogScalarWhereInput = {
@@ -494,139 +494,139 @@ export type ActivityLogScalarWhereInput = {
   OR?: Prisma.ActivityLogScalarWhereInput[]
   NOT?: Prisma.ActivityLogScalarWhereInput | Prisma.ActivityLogScalarWhereInput[]
   id?: Prisma.UuidFilter<"ActivityLog"> | string
-  veterinaryId?: Prisma.UuidNullableFilter<"ActivityLog"> | string | null
-  userId?: Prisma.UuidNullableFilter<"ActivityLog"> | string | null
-  actionType?: Prisma.StringFilter<"ActivityLog"> | string
-  entityType?: Prisma.StringNullableFilter<"ActivityLog"> | string | null
-  entityId?: Prisma.UuidNullableFilter<"ActivityLog"> | string | null
-  description?: Prisma.StringFilter<"ActivityLog"> | string
-  metadata?: Prisma.JsonNullableFilter<"ActivityLog">
-  createdAt?: Prisma.DateTimeFilter<"ActivityLog"> | Date | string
+  veterinariaId?: Prisma.UuidNullableFilter<"ActivityLog"> | string | null
+  usuarioId?: Prisma.UuidNullableFilter<"ActivityLog"> | string | null
+  tipoAccion?: Prisma.StringFilter<"ActivityLog"> | string
+  tipoEntidad?: Prisma.StringNullableFilter<"ActivityLog"> | string | null
+  entidadId?: Prisma.UuidNullableFilter<"ActivityLog"> | string | null
+  descripcion?: Prisma.StringFilter<"ActivityLog"> | string
+  metadatos?: Prisma.JsonNullableFilter<"ActivityLog">
+  creadoEn?: Prisma.DateTimeFilter<"ActivityLog"> | Date | string
 }
 
-export type ActivityLogCreateManyVeterinaryInput = {
+export type ActivityLogCreateManyVeterinariaInput = {
   id?: string
-  userId?: string | null
-  actionType: string
-  entityType?: string | null
-  entityId?: string | null
-  description: string
-  metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Date | string
+  usuarioId?: string | null
+  tipoAccion: string
+  tipoEntidad?: string | null
+  entidadId?: string | null
+  descripcion: string
+  metadatos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Date | string
 }
 
-export type ActivityLogUpdateWithoutVeterinaryInput = {
+export type ActivityLogUpdateWithoutVeterinariaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  actionType?: Prisma.StringFieldUpdateOperationsInput | string
-  entityType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  entityId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  description?: Prisma.StringFieldUpdateOperationsInput | string
-  metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tipoAccion?: Prisma.StringFieldUpdateOperationsInput | string
+  tipoEntidad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  entidadId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  descripcion?: Prisma.StringFieldUpdateOperationsInput | string
+  metadatos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type ActivityLogUncheckedUpdateWithoutVeterinaryInput = {
+export type ActivityLogUncheckedUpdateWithoutVeterinariaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  actionType?: Prisma.StringFieldUpdateOperationsInput | string
-  entityType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  entityId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  description?: Prisma.StringFieldUpdateOperationsInput | string
-  metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tipoAccion?: Prisma.StringFieldUpdateOperationsInput | string
+  tipoEntidad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  entidadId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  descripcion?: Prisma.StringFieldUpdateOperationsInput | string
+  metadatos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type ActivityLogUncheckedUpdateManyWithoutVeterinaryInput = {
+export type ActivityLogUncheckedUpdateManyWithoutVeterinariaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  actionType?: Prisma.StringFieldUpdateOperationsInput | string
-  entityType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  entityId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  description?: Prisma.StringFieldUpdateOperationsInput | string
-  metadata?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  usuarioId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tipoAccion?: Prisma.StringFieldUpdateOperationsInput | string
+  tipoEntidad?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  entidadId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  descripcion?: Prisma.StringFieldUpdateOperationsInput | string
+  metadatos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 
 
 export type ActivityLogSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  veterinaryId?: boolean
-  userId?: boolean
-  actionType?: boolean
-  entityType?: boolean
-  entityId?: boolean
-  description?: boolean
-  metadata?: boolean
-  createdAt?: boolean
-  veterinary?: boolean | Prisma.ActivityLog$veterinaryArgs<ExtArgs>
+  veterinariaId?: boolean
+  usuarioId?: boolean
+  tipoAccion?: boolean
+  tipoEntidad?: boolean
+  entidadId?: boolean
+  descripcion?: boolean
+  metadatos?: boolean
+  creadoEn?: boolean
+  veterinaria?: boolean | Prisma.ActivityLog$veterinariaArgs<ExtArgs>
 }, ExtArgs["result"]["activityLog"]>
 
 export type ActivityLogSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  veterinaryId?: boolean
-  userId?: boolean
-  actionType?: boolean
-  entityType?: boolean
-  entityId?: boolean
-  description?: boolean
-  metadata?: boolean
-  createdAt?: boolean
-  veterinary?: boolean | Prisma.ActivityLog$veterinaryArgs<ExtArgs>
+  veterinariaId?: boolean
+  usuarioId?: boolean
+  tipoAccion?: boolean
+  tipoEntidad?: boolean
+  entidadId?: boolean
+  descripcion?: boolean
+  metadatos?: boolean
+  creadoEn?: boolean
+  veterinaria?: boolean | Prisma.ActivityLog$veterinariaArgs<ExtArgs>
 }, ExtArgs["result"]["activityLog"]>
 
 export type ActivityLogSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  veterinaryId?: boolean
-  userId?: boolean
-  actionType?: boolean
-  entityType?: boolean
-  entityId?: boolean
-  description?: boolean
-  metadata?: boolean
-  createdAt?: boolean
-  veterinary?: boolean | Prisma.ActivityLog$veterinaryArgs<ExtArgs>
+  veterinariaId?: boolean
+  usuarioId?: boolean
+  tipoAccion?: boolean
+  tipoEntidad?: boolean
+  entidadId?: boolean
+  descripcion?: boolean
+  metadatos?: boolean
+  creadoEn?: boolean
+  veterinaria?: boolean | Prisma.ActivityLog$veterinariaArgs<ExtArgs>
 }, ExtArgs["result"]["activityLog"]>
 
 export type ActivityLogSelectScalar = {
   id?: boolean
-  veterinaryId?: boolean
-  userId?: boolean
-  actionType?: boolean
-  entityType?: boolean
-  entityId?: boolean
-  description?: boolean
-  metadata?: boolean
-  createdAt?: boolean
+  veterinariaId?: boolean
+  usuarioId?: boolean
+  tipoAccion?: boolean
+  tipoEntidad?: boolean
+  entidadId?: boolean
+  descripcion?: boolean
+  metadatos?: boolean
+  creadoEn?: boolean
 }
 
-export type ActivityLogOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "veterinaryId" | "userId" | "actionType" | "entityType" | "entityId" | "description" | "metadata" | "createdAt", ExtArgs["result"]["activityLog"]>
+export type ActivityLogOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "veterinariaId" | "usuarioId" | "tipoAccion" | "tipoEntidad" | "entidadId" | "descripcion" | "metadatos" | "creadoEn", ExtArgs["result"]["activityLog"]>
 export type ActivityLogInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  veterinary?: boolean | Prisma.ActivityLog$veterinaryArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.ActivityLog$veterinariaArgs<ExtArgs>
 }
 export type ActivityLogIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  veterinary?: boolean | Prisma.ActivityLog$veterinaryArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.ActivityLog$veterinariaArgs<ExtArgs>
 }
 export type ActivityLogIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  veterinary?: boolean | Prisma.ActivityLog$veterinaryArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.ActivityLog$veterinariaArgs<ExtArgs>
 }
 
 export type $ActivityLogPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "ActivityLog"
   objects: {
-    veterinary: Prisma.$VeterinaryPayload<ExtArgs> | null
+    veterinaria: Prisma.$VeterinaryPayload<ExtArgs> | null
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
-    veterinaryId: string | null
-    userId: string | null
-    actionType: string
-    entityType: string | null
-    entityId: string | null
-    description: string
-    metadata: runtime.JsonValue | null
-    createdAt: Date
+    veterinariaId: string | null
+    usuarioId: string | null
+    tipoAccion: string
+    tipoEntidad: string | null
+    entidadId: string | null
+    descripcion: string
+    metadatos: runtime.JsonValue | null
+    creadoEn: Date
   }, ExtArgs["result"]["activityLog"]>
   composites: {}
 }
@@ -1021,7 +1021,7 @@ readonly fields: ActivityLogFieldRefs;
  */
 export interface Prisma__ActivityLogClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  veterinary<T extends Prisma.ActivityLog$veterinaryArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ActivityLog$veterinaryArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  veterinaria<T extends Prisma.ActivityLog$veterinariaArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ActivityLog$veterinariaArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1052,14 +1052,14 @@ export interface Prisma__ActivityLogClient<T, Null = never, ExtArgs extends runt
  */
 export interface ActivityLogFieldRefs {
   readonly id: Prisma.FieldRef<"ActivityLog", 'String'>
-  readonly veterinaryId: Prisma.FieldRef<"ActivityLog", 'String'>
-  readonly userId: Prisma.FieldRef<"ActivityLog", 'String'>
-  readonly actionType: Prisma.FieldRef<"ActivityLog", 'String'>
-  readonly entityType: Prisma.FieldRef<"ActivityLog", 'String'>
-  readonly entityId: Prisma.FieldRef<"ActivityLog", 'String'>
-  readonly description: Prisma.FieldRef<"ActivityLog", 'String'>
-  readonly metadata: Prisma.FieldRef<"ActivityLog", 'Json'>
-  readonly createdAt: Prisma.FieldRef<"ActivityLog", 'DateTime'>
+  readonly veterinariaId: Prisma.FieldRef<"ActivityLog", 'String'>
+  readonly usuarioId: Prisma.FieldRef<"ActivityLog", 'String'>
+  readonly tipoAccion: Prisma.FieldRef<"ActivityLog", 'String'>
+  readonly tipoEntidad: Prisma.FieldRef<"ActivityLog", 'String'>
+  readonly entidadId: Prisma.FieldRef<"ActivityLog", 'String'>
+  readonly descripcion: Prisma.FieldRef<"ActivityLog", 'String'>
+  readonly metadatos: Prisma.FieldRef<"ActivityLog", 'Json'>
+  readonly creadoEn: Prisma.FieldRef<"ActivityLog", 'DateTime'>
 }
     
 
@@ -1456,9 +1456,9 @@ export type ActivityLogDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.I
 }
 
 /**
- * ActivityLog.veterinary
+ * ActivityLog.veterinaria
  */
-export type ActivityLog$veterinaryArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type ActivityLog$veterinariaArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Veterinary
    */

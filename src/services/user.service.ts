@@ -10,16 +10,16 @@ export class UserService {
       const users = await prisma.user.findMany({
         select: {
           id: true,
-          email: true,
-          fullName: true,
-          phone: true,
-          role: true,
-          isActive: true,
-          createdAt: true,
-          updatedAt: true,
+          correo: true,
+          nombreCompleto: true,
+          telefono: true,
+          rol: true,
+          estaActivo: true,
+          creadoEn: true,
+          actualizadoEn: true,
         },
         orderBy: {
-          createdAt: "desc",
+          creadoEn: "desc",
         },
       });
 
@@ -39,13 +39,13 @@ export class UserService {
         where: { id: userId },
         select: {
           id: true,
-          email: true,
-          fullName: true,
-          phone: true,
-          role: true,
-          isActive: true,
-          createdAt: true,
-          updatedAt: true,
+          correo: true,
+          nombreCompleto: true,
+          telefono: true,
+          rol: true,
+          estaActivo: true,
+          creadoEn: true,
+          actualizadoEn: true,
         },
       });
 
@@ -62,10 +62,10 @@ export class UserService {
   async updateUser(
     userId: string,
     data: {
-      fullName?: string;
-      phone?: string;
-      role?: UserRole;
-      isActive?: boolean;
+      nombreCompleto?: string;
+      telefono?: string;
+      rol?: UserRole;
+      estaActivo?: boolean;
     },
   ) {
     try {
@@ -74,13 +74,13 @@ export class UserService {
         data,
         select: {
           id: true,
-          email: true,
-          fullName: true,
-          phone: true,
-          role: true,
-          isActive: true,
-          createdAt: true,
-          updatedAt: true,
+          correo: true,
+          nombreCompleto: true,
+          telefono: true,
+          rol: true,
+          estaActivo: true,
+          creadoEn: true,
+          actualizadoEn: true,
         },
       });
 
@@ -99,7 +99,7 @@ export class UserService {
       const user = await prisma.user.update({
         where: { id: userId },
         data: {
-          isActive: false,
+          estaActivo: false,
         },
       });
 

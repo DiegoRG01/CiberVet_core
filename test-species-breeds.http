@@ -1,0 +1,144 @@
+### Variables
+@baseUrl = http://localhost:3000/api
+@token = tu_token_aqui
+
+### ================================================
+### SPECIES - Especies
+### ================================================
+
+### 1. Obtener todas las especies
+GET {{baseUrl}}/species
+Authorization: Bearer {{token}}
+
+### 2. Obtener todas las especies (incluyendo inactivas) - Solo Admin
+GET {{baseUrl}}/species?includeInactive=true
+Authorization: Bearer {{token}}
+
+### 3. Obtener una especie por ID
+GET {{baseUrl}}/species/uuid-de-especie
+Authorization: Bearer {{token}}
+
+### 4. Obtener razas de una especie
+GET {{baseUrl}}/species/uuid-de-especie/breeds
+Authorization: Bearer {{token}}
+
+### 5. Crear una nueva especie - Solo Admin
+POST {{baseUrl}}/species
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "Tortuga",
+  "description": "Testudines",
+  "isActive": true
+}
+
+### 6. Actualizar una especie - Solo Admin
+PUT {{baseUrl}}/species/uuid-de-especie
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "Tortuga",
+  "description": "Testudines - Actualizado",
+  "isActive": true
+}
+
+### 7. Eliminar (desactivar) una especie - Solo Admin
+DELETE {{baseUrl}}/species/uuid-de-especie
+Authorization: Bearer {{token}}
+
+### ================================================
+### BREEDS - Razas
+### ================================================
+
+### 1. Obtener todas las razas
+GET {{baseUrl}}/breeds
+Authorization: Bearer {{token}}
+
+### 2. Obtener todas las razas (incluyendo inactivas) - Solo Admin
+GET {{baseUrl}}/breeds?includeInactive=true
+Authorization: Bearer {{token}}
+
+### 3. Obtener una raza por ID
+GET {{baseUrl}}/breeds/uuid-de-raza
+Authorization: Bearer {{token}}
+
+### 4. Crear una nueva raza - Solo Admin
+POST {{baseUrl}}/breeds
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "speciesId": "uuid-de-especie",
+  "name": "Pitbull",
+  "description": "American Pit Bull Terrier",
+  "isActive": true
+}
+
+### 5. Actualizar una raza - Solo Admin
+PUT {{baseUrl}}/breeds/uuid-de-raza
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "Pitbull Americano",
+  "description": "American Pit Bull Terrier - Actualizado",
+  "isActive": true
+}
+
+### 6. Eliminar (desactivar) una raza - Solo Admin
+DELETE {{baseUrl}}/breeds/uuid-de-raza
+Authorization: Bearer {{token}}
+
+### ================================================
+### TESTS DE VALIDACIÓN
+### ================================================
+
+### Error: Crear especie sin nombre
+POST {{baseUrl}}/species
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "description": "Sin nombre"
+}
+
+### Error: Crear especie con nombre duplicado
+POST {{baseUrl}}/species
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "Perro",
+  "description": "Ya existe"
+}
+
+### Error: Crear raza sin speciesId
+POST {{baseUrl}}/breeds
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "Raza sin especie"
+}
+
+### Error: Crear raza con speciesId inválido
+POST {{baseUrl}}/breeds
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "speciesId": "uuid-invalido",
+  "name": "Raza con especie inválida"
+}
+
+### Error: Crear raza con nombre duplicado en la misma especie
+POST {{baseUrl}}/breeds
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "speciesId": "uuid-de-especie-perro",
+  "name": "Labrador Retriever"
+}

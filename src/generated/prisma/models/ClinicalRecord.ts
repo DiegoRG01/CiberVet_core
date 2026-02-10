@@ -26,106 +26,106 @@ export type AggregateClinicalRecord = {
 
 export type ClinicalRecordMinAggregateOutputType = {
   id: string | null
-  patientId: string | null
-  appointmentId: string | null
-  veterinaryId: string | null
-  recordedBy: string | null
-  recordType: string | null
-  diagnosis: string | null
-  symptoms: string | null
-  treatment: string | null
-  observations: string | null
-  followUpDate: Date | null
-  createdAt: Date | null
-  updatedAt: Date | null
+  pacienteId: string | null
+  citaId: string | null
+  veterinariaId: string | null
+  registradoPor: string | null
+  tipoRegistro: string | null
+  diagnostico: string | null
+  sintomas: string | null
+  tratamiento: string | null
+  observaciones: string | null
+  fechaSeguimiento: Date | null
+  creadoEn: Date | null
+  actualizadoEn: Date | null
 }
 
 export type ClinicalRecordMaxAggregateOutputType = {
   id: string | null
-  patientId: string | null
-  appointmentId: string | null
-  veterinaryId: string | null
-  recordedBy: string | null
-  recordType: string | null
-  diagnosis: string | null
-  symptoms: string | null
-  treatment: string | null
-  observations: string | null
-  followUpDate: Date | null
-  createdAt: Date | null
-  updatedAt: Date | null
+  pacienteId: string | null
+  citaId: string | null
+  veterinariaId: string | null
+  registradoPor: string | null
+  tipoRegistro: string | null
+  diagnostico: string | null
+  sintomas: string | null
+  tratamiento: string | null
+  observaciones: string | null
+  fechaSeguimiento: Date | null
+  creadoEn: Date | null
+  actualizadoEn: Date | null
 }
 
 export type ClinicalRecordCountAggregateOutputType = {
   id: number
-  patientId: number
-  appointmentId: number
-  veterinaryId: number
-  recordedBy: number
-  recordType: number
-  diagnosis: number
-  symptoms: number
-  treatment: number
-  medications: number
-  labResults: number
-  images: number
-  observations: number
-  followUpDate: number
-  createdAt: number
-  updatedAt: number
+  pacienteId: number
+  citaId: number
+  veterinariaId: number
+  registradoPor: number
+  tipoRegistro: number
+  diagnostico: number
+  sintomas: number
+  tratamiento: number
+  medicamentos: number
+  resultadosLaboratorio: number
+  imagenes: number
+  observaciones: number
+  fechaSeguimiento: number
+  creadoEn: number
+  actualizadoEn: number
   _all: number
 }
 
 
 export type ClinicalRecordMinAggregateInputType = {
   id?: true
-  patientId?: true
-  appointmentId?: true
-  veterinaryId?: true
-  recordedBy?: true
-  recordType?: true
-  diagnosis?: true
-  symptoms?: true
-  treatment?: true
-  observations?: true
-  followUpDate?: true
-  createdAt?: true
-  updatedAt?: true
+  pacienteId?: true
+  citaId?: true
+  veterinariaId?: true
+  registradoPor?: true
+  tipoRegistro?: true
+  diagnostico?: true
+  sintomas?: true
+  tratamiento?: true
+  observaciones?: true
+  fechaSeguimiento?: true
+  creadoEn?: true
+  actualizadoEn?: true
 }
 
 export type ClinicalRecordMaxAggregateInputType = {
   id?: true
-  patientId?: true
-  appointmentId?: true
-  veterinaryId?: true
-  recordedBy?: true
-  recordType?: true
-  diagnosis?: true
-  symptoms?: true
-  treatment?: true
-  observations?: true
-  followUpDate?: true
-  createdAt?: true
-  updatedAt?: true
+  pacienteId?: true
+  citaId?: true
+  veterinariaId?: true
+  registradoPor?: true
+  tipoRegistro?: true
+  diagnostico?: true
+  sintomas?: true
+  tratamiento?: true
+  observaciones?: true
+  fechaSeguimiento?: true
+  creadoEn?: true
+  actualizadoEn?: true
 }
 
 export type ClinicalRecordCountAggregateInputType = {
   id?: true
-  patientId?: true
-  appointmentId?: true
-  veterinaryId?: true
-  recordedBy?: true
-  recordType?: true
-  diagnosis?: true
-  symptoms?: true
-  treatment?: true
-  medications?: true
-  labResults?: true
-  images?: true
-  observations?: true
-  followUpDate?: true
-  createdAt?: true
-  updatedAt?: true
+  pacienteId?: true
+  citaId?: true
+  veterinariaId?: true
+  registradoPor?: true
+  tipoRegistro?: true
+  diagnostico?: true
+  sintomas?: true
+  tratamiento?: true
+  medicamentos?: true
+  resultadosLaboratorio?: true
+  imagenes?: true
+  observaciones?: true
+  fechaSeguimiento?: true
+  creadoEn?: true
+  actualizadoEn?: true
   _all?: true
 }
 
@@ -203,21 +203,21 @@ export type ClinicalRecordGroupByArgs<ExtArgs extends runtime.Types.Extensions.I
 
 export type ClinicalRecordGroupByOutputType = {
   id: string
-  patientId: string
-  appointmentId: string | null
-  veterinaryId: string | null
-  recordedBy: string | null
-  recordType: string | null
-  diagnosis: string | null
-  symptoms: string | null
-  treatment: string | null
-  medications: runtime.JsonValue | null
-  labResults: runtime.JsonValue | null
-  images: runtime.JsonValue | null
-  observations: string | null
-  followUpDate: Date | null
-  createdAt: Date
-  updatedAt: Date
+  pacienteId: string
+  citaId: string | null
+  veterinariaId: string | null
+  registradoPor: string | null
+  tipoRegistro: string | null
+  diagnostico: string | null
+  sintomas: string | null
+  tratamiento: string | null
+  medicamentos: runtime.JsonValue | null
+  resultadosLaboratorio: runtime.JsonValue | null
+  imagenes: runtime.JsonValue | null
+  observaciones: string | null
+  fechaSeguimiento: Date | null
+  creadoEn: Date
+  actualizadoEn: Date
   _count: ClinicalRecordCountAggregateOutputType | null
   _min: ClinicalRecordMinAggregateOutputType | null
   _max: ClinicalRecordMaxAggregateOutputType | null
@@ -243,50 +243,50 @@ export type ClinicalRecordWhereInput = {
   OR?: Prisma.ClinicalRecordWhereInput[]
   NOT?: Prisma.ClinicalRecordWhereInput | Prisma.ClinicalRecordWhereInput[]
   id?: Prisma.UuidFilter<"ClinicalRecord"> | string
-  patientId?: Prisma.UuidFilter<"ClinicalRecord"> | string
-  appointmentId?: Prisma.UuidNullableFilter<"ClinicalRecord"> | string | null
-  veterinaryId?: Prisma.UuidNullableFilter<"ClinicalRecord"> | string | null
-  recordedBy?: Prisma.UuidNullableFilter<"ClinicalRecord"> | string | null
-  recordType?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
-  diagnosis?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
-  symptoms?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
-  treatment?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
-  medications?: Prisma.JsonNullableFilter<"ClinicalRecord">
-  labResults?: Prisma.JsonNullableFilter<"ClinicalRecord">
-  images?: Prisma.JsonNullableFilter<"ClinicalRecord">
-  observations?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
-  followUpDate?: Prisma.DateTimeNullableFilter<"ClinicalRecord"> | Date | string | null
-  createdAt?: Prisma.DateTimeFilter<"ClinicalRecord"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"ClinicalRecord"> | Date | string
-  patient?: Prisma.XOR<Prisma.PatientScalarRelationFilter, Prisma.PatientWhereInput>
-  appointment?: Prisma.XOR<Prisma.AppointmentNullableScalarRelationFilter, Prisma.AppointmentWhereInput> | null
-  veterinary?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
-  recorder?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
-  vaccinations?: Prisma.VaccinationListRelationFilter
+  pacienteId?: Prisma.UuidFilter<"ClinicalRecord"> | string
+  citaId?: Prisma.UuidNullableFilter<"ClinicalRecord"> | string | null
+  veterinariaId?: Prisma.UuidNullableFilter<"ClinicalRecord"> | string | null
+  registradoPor?: Prisma.UuidNullableFilter<"ClinicalRecord"> | string | null
+  tipoRegistro?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
+  diagnostico?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
+  sintomas?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
+  tratamiento?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
+  medicamentos?: Prisma.JsonNullableFilter<"ClinicalRecord">
+  resultadosLaboratorio?: Prisma.JsonNullableFilter<"ClinicalRecord">
+  imagenes?: Prisma.JsonNullableFilter<"ClinicalRecord">
+  observaciones?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
+  fechaSeguimiento?: Prisma.DateTimeNullableFilter<"ClinicalRecord"> | Date | string | null
+  creadoEn?: Prisma.DateTimeFilter<"ClinicalRecord"> | Date | string
+  actualizadoEn?: Prisma.DateTimeFilter<"ClinicalRecord"> | Date | string
+  paciente?: Prisma.XOR<Prisma.PatientScalarRelationFilter, Prisma.PatientWhereInput>
+  cita?: Prisma.XOR<Prisma.AppointmentNullableScalarRelationFilter, Prisma.AppointmentWhereInput> | null
+  veterinaria?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
+  registrador?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
+  vacunaciones?: Prisma.VaccinationListRelationFilter
 }
 
 export type ClinicalRecordOrderByWithRelationInput = {
   id?: Prisma.SortOrder
-  patientId?: Prisma.SortOrder
-  appointmentId?: Prisma.SortOrderInput | Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrderInput | Prisma.SortOrder
-  recordedBy?: Prisma.SortOrderInput | Prisma.SortOrder
-  recordType?: Prisma.SortOrderInput | Prisma.SortOrder
-  diagnosis?: Prisma.SortOrderInput | Prisma.SortOrder
-  symptoms?: Prisma.SortOrderInput | Prisma.SortOrder
-  treatment?: Prisma.SortOrderInput | Prisma.SortOrder
-  medications?: Prisma.SortOrderInput | Prisma.SortOrder
-  labResults?: Prisma.SortOrderInput | Prisma.SortOrder
-  images?: Prisma.SortOrderInput | Prisma.SortOrder
-  observations?: Prisma.SortOrderInput | Prisma.SortOrder
-  followUpDate?: Prisma.SortOrderInput | Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
-  patient?: Prisma.PatientOrderByWithRelationInput
-  appointment?: Prisma.AppointmentOrderByWithRelationInput
-  veterinary?: Prisma.VeterinaryOrderByWithRelationInput
-  recorder?: Prisma.OperatorOrderByWithRelationInput
-  vaccinations?: Prisma.VaccinationOrderByRelationAggregateInput
+  pacienteId?: Prisma.SortOrder
+  citaId?: Prisma.SortOrderInput | Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrderInput | Prisma.SortOrder
+  registradoPor?: Prisma.SortOrderInput | Prisma.SortOrder
+  tipoRegistro?: Prisma.SortOrderInput | Prisma.SortOrder
+  diagnostico?: Prisma.SortOrderInput | Prisma.SortOrder
+  sintomas?: Prisma.SortOrderInput | Prisma.SortOrder
+  tratamiento?: Prisma.SortOrderInput | Prisma.SortOrder
+  medicamentos?: Prisma.SortOrderInput | Prisma.SortOrder
+  resultadosLaboratorio?: Prisma.SortOrderInput | Prisma.SortOrder
+  imagenes?: Prisma.SortOrderInput | Prisma.SortOrder
+  observaciones?: Prisma.SortOrderInput | Prisma.SortOrder
+  fechaSeguimiento?: Prisma.SortOrderInput | Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
+  paciente?: Prisma.PatientOrderByWithRelationInput
+  cita?: Prisma.AppointmentOrderByWithRelationInput
+  veterinaria?: Prisma.VeterinaryOrderByWithRelationInput
+  registrador?: Prisma.OperatorOrderByWithRelationInput
+  vacunaciones?: Prisma.VaccinationOrderByRelationAggregateInput
 }
 
 export type ClinicalRecordWhereUniqueInput = Prisma.AtLeast<{
@@ -294,45 +294,45 @@ export type ClinicalRecordWhereUniqueInput = Prisma.AtLeast<{
   AND?: Prisma.ClinicalRecordWhereInput | Prisma.ClinicalRecordWhereInput[]
   OR?: Prisma.ClinicalRecordWhereInput[]
   NOT?: Prisma.ClinicalRecordWhereInput | Prisma.ClinicalRecordWhereInput[]
-  patientId?: Prisma.UuidFilter<"ClinicalRecord"> | string
-  appointmentId?: Prisma.UuidNullableFilter<"ClinicalRecord"> | string | null
-  veterinaryId?: Prisma.UuidNullableFilter<"ClinicalRecord"> | string | null
-  recordedBy?: Prisma.UuidNullableFilter<"ClinicalRecord"> | string | null
-  recordType?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
-  diagnosis?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
-  symptoms?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
-  treatment?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
-  medications?: Prisma.JsonNullableFilter<"ClinicalRecord">
-  labResults?: Prisma.JsonNullableFilter<"ClinicalRecord">
-  images?: Prisma.JsonNullableFilter<"ClinicalRecord">
-  observations?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
-  followUpDate?: Prisma.DateTimeNullableFilter<"ClinicalRecord"> | Date | string | null
-  createdAt?: Prisma.DateTimeFilter<"ClinicalRecord"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"ClinicalRecord"> | Date | string
-  patient?: Prisma.XOR<Prisma.PatientScalarRelationFilter, Prisma.PatientWhereInput>
-  appointment?: Prisma.XOR<Prisma.AppointmentNullableScalarRelationFilter, Prisma.AppointmentWhereInput> | null
-  veterinary?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
-  recorder?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
-  vaccinations?: Prisma.VaccinationListRelationFilter
+  pacienteId?: Prisma.UuidFilter<"ClinicalRecord"> | string
+  citaId?: Prisma.UuidNullableFilter<"ClinicalRecord"> | string | null
+  veterinariaId?: Prisma.UuidNullableFilter<"ClinicalRecord"> | string | null
+  registradoPor?: Prisma.UuidNullableFilter<"ClinicalRecord"> | string | null
+  tipoRegistro?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
+  diagnostico?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
+  sintomas?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
+  tratamiento?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
+  medicamentos?: Prisma.JsonNullableFilter<"ClinicalRecord">
+  resultadosLaboratorio?: Prisma.JsonNullableFilter<"ClinicalRecord">
+  imagenes?: Prisma.JsonNullableFilter<"ClinicalRecord">
+  observaciones?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
+  fechaSeguimiento?: Prisma.DateTimeNullableFilter<"ClinicalRecord"> | Date | string | null
+  creadoEn?: Prisma.DateTimeFilter<"ClinicalRecord"> | Date | string
+  actualizadoEn?: Prisma.DateTimeFilter<"ClinicalRecord"> | Date | string
+  paciente?: Prisma.XOR<Prisma.PatientScalarRelationFilter, Prisma.PatientWhereInput>
+  cita?: Prisma.XOR<Prisma.AppointmentNullableScalarRelationFilter, Prisma.AppointmentWhereInput> | null
+  veterinaria?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
+  registrador?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
+  vacunaciones?: Prisma.VaccinationListRelationFilter
 }, "id">
 
 export type ClinicalRecordOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
-  patientId?: Prisma.SortOrder
-  appointmentId?: Prisma.SortOrderInput | Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrderInput | Prisma.SortOrder
-  recordedBy?: Prisma.SortOrderInput | Prisma.SortOrder
-  recordType?: Prisma.SortOrderInput | Prisma.SortOrder
-  diagnosis?: Prisma.SortOrderInput | Prisma.SortOrder
-  symptoms?: Prisma.SortOrderInput | Prisma.SortOrder
-  treatment?: Prisma.SortOrderInput | Prisma.SortOrder
-  medications?: Prisma.SortOrderInput | Prisma.SortOrder
-  labResults?: Prisma.SortOrderInput | Prisma.SortOrder
-  images?: Prisma.SortOrderInput | Prisma.SortOrder
-  observations?: Prisma.SortOrderInput | Prisma.SortOrder
-  followUpDate?: Prisma.SortOrderInput | Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  pacienteId?: Prisma.SortOrder
+  citaId?: Prisma.SortOrderInput | Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrderInput | Prisma.SortOrder
+  registradoPor?: Prisma.SortOrderInput | Prisma.SortOrder
+  tipoRegistro?: Prisma.SortOrderInput | Prisma.SortOrder
+  diagnostico?: Prisma.SortOrderInput | Prisma.SortOrder
+  sintomas?: Prisma.SortOrderInput | Prisma.SortOrder
+  tratamiento?: Prisma.SortOrderInput | Prisma.SortOrder
+  medicamentos?: Prisma.SortOrderInput | Prisma.SortOrder
+  resultadosLaboratorio?: Prisma.SortOrderInput | Prisma.SortOrder
+  imagenes?: Prisma.SortOrderInput | Prisma.SortOrder
+  observaciones?: Prisma.SortOrderInput | Prisma.SortOrder
+  fechaSeguimiento?: Prisma.SortOrderInput | Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
   _count?: Prisma.ClinicalRecordCountOrderByAggregateInput
   _max?: Prisma.ClinicalRecordMaxOrderByAggregateInput
   _min?: Prisma.ClinicalRecordMinOrderByAggregateInput
@@ -343,154 +343,154 @@ export type ClinicalRecordScalarWhereWithAggregatesInput = {
   OR?: Prisma.ClinicalRecordScalarWhereWithAggregatesInput[]
   NOT?: Prisma.ClinicalRecordScalarWhereWithAggregatesInput | Prisma.ClinicalRecordScalarWhereWithAggregatesInput[]
   id?: Prisma.UuidWithAggregatesFilter<"ClinicalRecord"> | string
-  patientId?: Prisma.UuidWithAggregatesFilter<"ClinicalRecord"> | string
-  appointmentId?: Prisma.UuidNullableWithAggregatesFilter<"ClinicalRecord"> | string | null
-  veterinaryId?: Prisma.UuidNullableWithAggregatesFilter<"ClinicalRecord"> | string | null
-  recordedBy?: Prisma.UuidNullableWithAggregatesFilter<"ClinicalRecord"> | string | null
-  recordType?: Prisma.StringNullableWithAggregatesFilter<"ClinicalRecord"> | string | null
-  diagnosis?: Prisma.StringNullableWithAggregatesFilter<"ClinicalRecord"> | string | null
-  symptoms?: Prisma.StringNullableWithAggregatesFilter<"ClinicalRecord"> | string | null
-  treatment?: Prisma.StringNullableWithAggregatesFilter<"ClinicalRecord"> | string | null
-  medications?: Prisma.JsonNullableWithAggregatesFilter<"ClinicalRecord">
-  labResults?: Prisma.JsonNullableWithAggregatesFilter<"ClinicalRecord">
-  images?: Prisma.JsonNullableWithAggregatesFilter<"ClinicalRecord">
-  observations?: Prisma.StringNullableWithAggregatesFilter<"ClinicalRecord"> | string | null
-  followUpDate?: Prisma.DateTimeNullableWithAggregatesFilter<"ClinicalRecord"> | Date | string | null
-  createdAt?: Prisma.DateTimeWithAggregatesFilter<"ClinicalRecord"> | Date | string
-  updatedAt?: Prisma.DateTimeWithAggregatesFilter<"ClinicalRecord"> | Date | string
+  pacienteId?: Prisma.UuidWithAggregatesFilter<"ClinicalRecord"> | string
+  citaId?: Prisma.UuidNullableWithAggregatesFilter<"ClinicalRecord"> | string | null
+  veterinariaId?: Prisma.UuidNullableWithAggregatesFilter<"ClinicalRecord"> | string | null
+  registradoPor?: Prisma.UuidNullableWithAggregatesFilter<"ClinicalRecord"> | string | null
+  tipoRegistro?: Prisma.StringNullableWithAggregatesFilter<"ClinicalRecord"> | string | null
+  diagnostico?: Prisma.StringNullableWithAggregatesFilter<"ClinicalRecord"> | string | null
+  sintomas?: Prisma.StringNullableWithAggregatesFilter<"ClinicalRecord"> | string | null
+  tratamiento?: Prisma.StringNullableWithAggregatesFilter<"ClinicalRecord"> | string | null
+  medicamentos?: Prisma.JsonNullableWithAggregatesFilter<"ClinicalRecord">
+  resultadosLaboratorio?: Prisma.JsonNullableWithAggregatesFilter<"ClinicalRecord">
+  imagenes?: Prisma.JsonNullableWithAggregatesFilter<"ClinicalRecord">
+  observaciones?: Prisma.StringNullableWithAggregatesFilter<"ClinicalRecord"> | string | null
+  fechaSeguimiento?: Prisma.DateTimeNullableWithAggregatesFilter<"ClinicalRecord"> | Date | string | null
+  creadoEn?: Prisma.DateTimeWithAggregatesFilter<"ClinicalRecord"> | Date | string
+  actualizadoEn?: Prisma.DateTimeWithAggregatesFilter<"ClinicalRecord"> | Date | string
 }
 
 export type ClinicalRecordCreateInput = {
   id?: string
-  recordType?: string | null
-  diagnosis?: string | null
-  symptoms?: string | null
-  treatment?: string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: string | null
-  followUpDate?: Date | string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  patient: Prisma.PatientCreateNestedOneWithoutClinicalRecordsInput
-  appointment?: Prisma.AppointmentCreateNestedOneWithoutClinicalRecordsInput
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutClinicalRecordsInput
-  recorder?: Prisma.OperatorCreateNestedOneWithoutClinicalRecordsInput
-  vaccinations?: Prisma.VaccinationCreateNestedManyWithoutClinicalRecordInput
+  tipoRegistro?: string | null
+  diagnostico?: string | null
+  sintomas?: string | null
+  tratamiento?: string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: string | null
+  fechaSeguimiento?: Date | string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  paciente: Prisma.PatientCreateNestedOneWithoutRegistrosClinicoInput
+  cita?: Prisma.AppointmentCreateNestedOneWithoutRegistrosClinicoInput
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutRegistrosClinicoInput
+  registrador?: Prisma.OperatorCreateNestedOneWithoutRegistrosClinicoInput
+  vacunaciones?: Prisma.VaccinationCreateNestedManyWithoutRegistroClinicoInput
 }
 
 export type ClinicalRecordUncheckedCreateInput = {
   id?: string
-  patientId: string
-  appointmentId?: string | null
-  veterinaryId?: string | null
-  recordedBy?: string | null
-  recordType?: string | null
-  diagnosis?: string | null
-  symptoms?: string | null
-  treatment?: string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: string | null
-  followUpDate?: Date | string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  vaccinations?: Prisma.VaccinationUncheckedCreateNestedManyWithoutClinicalRecordInput
+  pacienteId: string
+  citaId?: string | null
+  veterinariaId?: string | null
+  registradoPor?: string | null
+  tipoRegistro?: string | null
+  diagnostico?: string | null
+  sintomas?: string | null
+  tratamiento?: string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: string | null
+  fechaSeguimiento?: Date | string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  vacunaciones?: Prisma.VaccinationUncheckedCreateNestedManyWithoutRegistroClinicoInput
 }
 
 export type ClinicalRecordUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  recordType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  diagnosis?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  treatment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  followUpDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  patient?: Prisma.PatientUpdateOneRequiredWithoutClinicalRecordsNestedInput
-  appointment?: Prisma.AppointmentUpdateOneWithoutClinicalRecordsNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutClinicalRecordsNestedInput
-  recorder?: Prisma.OperatorUpdateOneWithoutClinicalRecordsNestedInput
-  vaccinations?: Prisma.VaccinationUpdateManyWithoutClinicalRecordNestedInput
+  tipoRegistro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnostico?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sintomas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tratamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaSeguimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  paciente?: Prisma.PatientUpdateOneRequiredWithoutRegistrosClinicoNestedInput
+  cita?: Prisma.AppointmentUpdateOneWithoutRegistrosClinicoNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutRegistrosClinicoNestedInput
+  registrador?: Prisma.OperatorUpdateOneWithoutRegistrosClinicoNestedInput
+  vacunaciones?: Prisma.VaccinationUpdateManyWithoutRegistroClinicoNestedInput
 }
 
 export type ClinicalRecordUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  appointmentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  recordedBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  recordType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  diagnosis?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  treatment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  followUpDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  vaccinations?: Prisma.VaccinationUncheckedUpdateManyWithoutClinicalRecordNestedInput
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  citaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  registradoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tipoRegistro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnostico?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sintomas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tratamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaSeguimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  vacunaciones?: Prisma.VaccinationUncheckedUpdateManyWithoutRegistroClinicoNestedInput
 }
 
 export type ClinicalRecordCreateManyInput = {
   id?: string
-  patientId: string
-  appointmentId?: string | null
-  veterinaryId?: string | null
-  recordedBy?: string | null
-  recordType?: string | null
-  diagnosis?: string | null
-  symptoms?: string | null
-  treatment?: string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: string | null
-  followUpDate?: Date | string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
+  pacienteId: string
+  citaId?: string | null
+  veterinariaId?: string | null
+  registradoPor?: string | null
+  tipoRegistro?: string | null
+  diagnostico?: string | null
+  sintomas?: string | null
+  tratamiento?: string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: string | null
+  fechaSeguimiento?: Date | string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
 }
 
 export type ClinicalRecordUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  recordType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  diagnosis?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  treatment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  followUpDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  tipoRegistro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnostico?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sintomas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tratamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaSeguimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type ClinicalRecordUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  appointmentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  recordedBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  recordType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  diagnosis?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  treatment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  followUpDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  citaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  registradoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tipoRegistro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnostico?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sintomas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tratamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaSeguimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type ClinicalRecordListRelationFilter = {
@@ -505,53 +505,53 @@ export type ClinicalRecordOrderByRelationAggregateInput = {
 
 export type ClinicalRecordCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  patientId?: Prisma.SortOrder
-  appointmentId?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrder
-  recordedBy?: Prisma.SortOrder
-  recordType?: Prisma.SortOrder
-  diagnosis?: Prisma.SortOrder
-  symptoms?: Prisma.SortOrder
-  treatment?: Prisma.SortOrder
-  medications?: Prisma.SortOrder
-  labResults?: Prisma.SortOrder
-  images?: Prisma.SortOrder
-  observations?: Prisma.SortOrder
-  followUpDate?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  pacienteId?: Prisma.SortOrder
+  citaId?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrder
+  registradoPor?: Prisma.SortOrder
+  tipoRegistro?: Prisma.SortOrder
+  diagnostico?: Prisma.SortOrder
+  sintomas?: Prisma.SortOrder
+  tratamiento?: Prisma.SortOrder
+  medicamentos?: Prisma.SortOrder
+  resultadosLaboratorio?: Prisma.SortOrder
+  imagenes?: Prisma.SortOrder
+  observaciones?: Prisma.SortOrder
+  fechaSeguimiento?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
 }
 
 export type ClinicalRecordMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  patientId?: Prisma.SortOrder
-  appointmentId?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrder
-  recordedBy?: Prisma.SortOrder
-  recordType?: Prisma.SortOrder
-  diagnosis?: Prisma.SortOrder
-  symptoms?: Prisma.SortOrder
-  treatment?: Prisma.SortOrder
-  observations?: Prisma.SortOrder
-  followUpDate?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  pacienteId?: Prisma.SortOrder
+  citaId?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrder
+  registradoPor?: Prisma.SortOrder
+  tipoRegistro?: Prisma.SortOrder
+  diagnostico?: Prisma.SortOrder
+  sintomas?: Prisma.SortOrder
+  tratamiento?: Prisma.SortOrder
+  observaciones?: Prisma.SortOrder
+  fechaSeguimiento?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
 }
 
 export type ClinicalRecordMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  patientId?: Prisma.SortOrder
-  appointmentId?: Prisma.SortOrder
-  veterinaryId?: Prisma.SortOrder
-  recordedBy?: Prisma.SortOrder
-  recordType?: Prisma.SortOrder
-  diagnosis?: Prisma.SortOrder
-  symptoms?: Prisma.SortOrder
-  treatment?: Prisma.SortOrder
-  observations?: Prisma.SortOrder
-  followUpDate?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
+  pacienteId?: Prisma.SortOrder
+  citaId?: Prisma.SortOrder
+  veterinariaId?: Prisma.SortOrder
+  registradoPor?: Prisma.SortOrder
+  tipoRegistro?: Prisma.SortOrder
+  diagnostico?: Prisma.SortOrder
+  sintomas?: Prisma.SortOrder
+  tratamiento?: Prisma.SortOrder
+  observaciones?: Prisma.SortOrder
+  fechaSeguimiento?: Prisma.SortOrder
+  creadoEn?: Prisma.SortOrder
+  actualizadoEn?: Prisma.SortOrder
 }
 
 export type ClinicalRecordNullableScalarRelationFilter = {
@@ -559,252 +559,252 @@ export type ClinicalRecordNullableScalarRelationFilter = {
   isNot?: Prisma.ClinicalRecordWhereInput | null
 }
 
-export type ClinicalRecordCreateNestedManyWithoutVeterinaryInput = {
-  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutVeterinaryInput, Prisma.ClinicalRecordUncheckedCreateWithoutVeterinaryInput> | Prisma.ClinicalRecordCreateWithoutVeterinaryInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutVeterinaryInput | Prisma.ClinicalRecordCreateOrConnectWithoutVeterinaryInput[]
-  createMany?: Prisma.ClinicalRecordCreateManyVeterinaryInputEnvelope
+export type ClinicalRecordCreateNestedManyWithoutVeterinariaInput = {
+  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutVeterinariaInput, Prisma.ClinicalRecordUncheckedCreateWithoutVeterinariaInput> | Prisma.ClinicalRecordCreateWithoutVeterinariaInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutVeterinariaInput | Prisma.ClinicalRecordCreateOrConnectWithoutVeterinariaInput[]
+  createMany?: Prisma.ClinicalRecordCreateManyVeterinariaInputEnvelope
   connect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
 }
 
-export type ClinicalRecordUncheckedCreateNestedManyWithoutVeterinaryInput = {
-  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutVeterinaryInput, Prisma.ClinicalRecordUncheckedCreateWithoutVeterinaryInput> | Prisma.ClinicalRecordCreateWithoutVeterinaryInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutVeterinaryInput | Prisma.ClinicalRecordCreateOrConnectWithoutVeterinaryInput[]
-  createMany?: Prisma.ClinicalRecordCreateManyVeterinaryInputEnvelope
+export type ClinicalRecordUncheckedCreateNestedManyWithoutVeterinariaInput = {
+  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutVeterinariaInput, Prisma.ClinicalRecordUncheckedCreateWithoutVeterinariaInput> | Prisma.ClinicalRecordCreateWithoutVeterinariaInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutVeterinariaInput | Prisma.ClinicalRecordCreateOrConnectWithoutVeterinariaInput[]
+  createMany?: Prisma.ClinicalRecordCreateManyVeterinariaInputEnvelope
   connect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
 }
 
-export type ClinicalRecordUpdateManyWithoutVeterinaryNestedInput = {
-  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutVeterinaryInput, Prisma.ClinicalRecordUncheckedCreateWithoutVeterinaryInput> | Prisma.ClinicalRecordCreateWithoutVeterinaryInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutVeterinaryInput | Prisma.ClinicalRecordCreateOrConnectWithoutVeterinaryInput[]
-  upsert?: Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutVeterinaryInput | Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutVeterinaryInput[]
-  createMany?: Prisma.ClinicalRecordCreateManyVeterinaryInputEnvelope
+export type ClinicalRecordUpdateManyWithoutVeterinariaNestedInput = {
+  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutVeterinariaInput, Prisma.ClinicalRecordUncheckedCreateWithoutVeterinariaInput> | Prisma.ClinicalRecordCreateWithoutVeterinariaInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutVeterinariaInput | Prisma.ClinicalRecordCreateOrConnectWithoutVeterinariaInput[]
+  upsert?: Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutVeterinariaInput | Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutVeterinariaInput[]
+  createMany?: Prisma.ClinicalRecordCreateManyVeterinariaInputEnvelope
   set?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   disconnect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   delete?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   connect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
-  update?: Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutVeterinaryInput | Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutVeterinaryInput[]
-  updateMany?: Prisma.ClinicalRecordUpdateManyWithWhereWithoutVeterinaryInput | Prisma.ClinicalRecordUpdateManyWithWhereWithoutVeterinaryInput[]
+  update?: Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutVeterinariaInput | Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutVeterinariaInput[]
+  updateMany?: Prisma.ClinicalRecordUpdateManyWithWhereWithoutVeterinariaInput | Prisma.ClinicalRecordUpdateManyWithWhereWithoutVeterinariaInput[]
   deleteMany?: Prisma.ClinicalRecordScalarWhereInput | Prisma.ClinicalRecordScalarWhereInput[]
 }
 
-export type ClinicalRecordUncheckedUpdateManyWithoutVeterinaryNestedInput = {
-  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutVeterinaryInput, Prisma.ClinicalRecordUncheckedCreateWithoutVeterinaryInput> | Prisma.ClinicalRecordCreateWithoutVeterinaryInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutVeterinaryInput[]
-  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutVeterinaryInput | Prisma.ClinicalRecordCreateOrConnectWithoutVeterinaryInput[]
-  upsert?: Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutVeterinaryInput | Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutVeterinaryInput[]
-  createMany?: Prisma.ClinicalRecordCreateManyVeterinaryInputEnvelope
+export type ClinicalRecordUncheckedUpdateManyWithoutVeterinariaNestedInput = {
+  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutVeterinariaInput, Prisma.ClinicalRecordUncheckedCreateWithoutVeterinariaInput> | Prisma.ClinicalRecordCreateWithoutVeterinariaInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutVeterinariaInput[]
+  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutVeterinariaInput | Prisma.ClinicalRecordCreateOrConnectWithoutVeterinariaInput[]
+  upsert?: Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutVeterinariaInput | Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutVeterinariaInput[]
+  createMany?: Prisma.ClinicalRecordCreateManyVeterinariaInputEnvelope
   set?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   disconnect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   delete?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   connect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
-  update?: Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutVeterinaryInput | Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutVeterinaryInput[]
-  updateMany?: Prisma.ClinicalRecordUpdateManyWithWhereWithoutVeterinaryInput | Prisma.ClinicalRecordUpdateManyWithWhereWithoutVeterinaryInput[]
+  update?: Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutVeterinariaInput | Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutVeterinariaInput[]
+  updateMany?: Prisma.ClinicalRecordUpdateManyWithWhereWithoutVeterinariaInput | Prisma.ClinicalRecordUpdateManyWithWhereWithoutVeterinariaInput[]
   deleteMany?: Prisma.ClinicalRecordScalarWhereInput | Prisma.ClinicalRecordScalarWhereInput[]
 }
 
-export type ClinicalRecordCreateNestedManyWithoutRecorderInput = {
-  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutRecorderInput, Prisma.ClinicalRecordUncheckedCreateWithoutRecorderInput> | Prisma.ClinicalRecordCreateWithoutRecorderInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutRecorderInput[]
-  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutRecorderInput | Prisma.ClinicalRecordCreateOrConnectWithoutRecorderInput[]
-  createMany?: Prisma.ClinicalRecordCreateManyRecorderInputEnvelope
+export type ClinicalRecordCreateNestedManyWithoutRegistradorInput = {
+  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutRegistradorInput, Prisma.ClinicalRecordUncheckedCreateWithoutRegistradorInput> | Prisma.ClinicalRecordCreateWithoutRegistradorInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutRegistradorInput[]
+  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutRegistradorInput | Prisma.ClinicalRecordCreateOrConnectWithoutRegistradorInput[]
+  createMany?: Prisma.ClinicalRecordCreateManyRegistradorInputEnvelope
   connect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
 }
 
-export type ClinicalRecordUncheckedCreateNestedManyWithoutRecorderInput = {
-  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutRecorderInput, Prisma.ClinicalRecordUncheckedCreateWithoutRecorderInput> | Prisma.ClinicalRecordCreateWithoutRecorderInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutRecorderInput[]
-  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutRecorderInput | Prisma.ClinicalRecordCreateOrConnectWithoutRecorderInput[]
-  createMany?: Prisma.ClinicalRecordCreateManyRecorderInputEnvelope
+export type ClinicalRecordUncheckedCreateNestedManyWithoutRegistradorInput = {
+  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutRegistradorInput, Prisma.ClinicalRecordUncheckedCreateWithoutRegistradorInput> | Prisma.ClinicalRecordCreateWithoutRegistradorInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutRegistradorInput[]
+  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutRegistradorInput | Prisma.ClinicalRecordCreateOrConnectWithoutRegistradorInput[]
+  createMany?: Prisma.ClinicalRecordCreateManyRegistradorInputEnvelope
   connect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
 }
 
-export type ClinicalRecordUpdateManyWithoutRecorderNestedInput = {
-  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutRecorderInput, Prisma.ClinicalRecordUncheckedCreateWithoutRecorderInput> | Prisma.ClinicalRecordCreateWithoutRecorderInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutRecorderInput[]
-  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutRecorderInput | Prisma.ClinicalRecordCreateOrConnectWithoutRecorderInput[]
-  upsert?: Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutRecorderInput | Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutRecorderInput[]
-  createMany?: Prisma.ClinicalRecordCreateManyRecorderInputEnvelope
+export type ClinicalRecordUpdateManyWithoutRegistradorNestedInput = {
+  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutRegistradorInput, Prisma.ClinicalRecordUncheckedCreateWithoutRegistradorInput> | Prisma.ClinicalRecordCreateWithoutRegistradorInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutRegistradorInput[]
+  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutRegistradorInput | Prisma.ClinicalRecordCreateOrConnectWithoutRegistradorInput[]
+  upsert?: Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutRegistradorInput | Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutRegistradorInput[]
+  createMany?: Prisma.ClinicalRecordCreateManyRegistradorInputEnvelope
   set?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   disconnect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   delete?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   connect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
-  update?: Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutRecorderInput | Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutRecorderInput[]
-  updateMany?: Prisma.ClinicalRecordUpdateManyWithWhereWithoutRecorderInput | Prisma.ClinicalRecordUpdateManyWithWhereWithoutRecorderInput[]
+  update?: Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutRegistradorInput | Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutRegistradorInput[]
+  updateMany?: Prisma.ClinicalRecordUpdateManyWithWhereWithoutRegistradorInput | Prisma.ClinicalRecordUpdateManyWithWhereWithoutRegistradorInput[]
   deleteMany?: Prisma.ClinicalRecordScalarWhereInput | Prisma.ClinicalRecordScalarWhereInput[]
 }
 
-export type ClinicalRecordUncheckedUpdateManyWithoutRecorderNestedInput = {
-  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutRecorderInput, Prisma.ClinicalRecordUncheckedCreateWithoutRecorderInput> | Prisma.ClinicalRecordCreateWithoutRecorderInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutRecorderInput[]
-  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutRecorderInput | Prisma.ClinicalRecordCreateOrConnectWithoutRecorderInput[]
-  upsert?: Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutRecorderInput | Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutRecorderInput[]
-  createMany?: Prisma.ClinicalRecordCreateManyRecorderInputEnvelope
+export type ClinicalRecordUncheckedUpdateManyWithoutRegistradorNestedInput = {
+  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutRegistradorInput, Prisma.ClinicalRecordUncheckedCreateWithoutRegistradorInput> | Prisma.ClinicalRecordCreateWithoutRegistradorInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutRegistradorInput[]
+  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutRegistradorInput | Prisma.ClinicalRecordCreateOrConnectWithoutRegistradorInput[]
+  upsert?: Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutRegistradorInput | Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutRegistradorInput[]
+  createMany?: Prisma.ClinicalRecordCreateManyRegistradorInputEnvelope
   set?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   disconnect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   delete?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   connect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
-  update?: Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutRecorderInput | Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutRecorderInput[]
-  updateMany?: Prisma.ClinicalRecordUpdateManyWithWhereWithoutRecorderInput | Prisma.ClinicalRecordUpdateManyWithWhereWithoutRecorderInput[]
+  update?: Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutRegistradorInput | Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutRegistradorInput[]
+  updateMany?: Prisma.ClinicalRecordUpdateManyWithWhereWithoutRegistradorInput | Prisma.ClinicalRecordUpdateManyWithWhereWithoutRegistradorInput[]
   deleteMany?: Prisma.ClinicalRecordScalarWhereInput | Prisma.ClinicalRecordScalarWhereInput[]
 }
 
-export type ClinicalRecordCreateNestedManyWithoutPatientInput = {
-  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutPatientInput, Prisma.ClinicalRecordUncheckedCreateWithoutPatientInput> | Prisma.ClinicalRecordCreateWithoutPatientInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutPatientInput[]
-  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutPatientInput | Prisma.ClinicalRecordCreateOrConnectWithoutPatientInput[]
-  createMany?: Prisma.ClinicalRecordCreateManyPatientInputEnvelope
+export type ClinicalRecordCreateNestedManyWithoutPacienteInput = {
+  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutPacienteInput, Prisma.ClinicalRecordUncheckedCreateWithoutPacienteInput> | Prisma.ClinicalRecordCreateWithoutPacienteInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutPacienteInput[]
+  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutPacienteInput | Prisma.ClinicalRecordCreateOrConnectWithoutPacienteInput[]
+  createMany?: Prisma.ClinicalRecordCreateManyPacienteInputEnvelope
   connect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
 }
 
-export type ClinicalRecordUncheckedCreateNestedManyWithoutPatientInput = {
-  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutPatientInput, Prisma.ClinicalRecordUncheckedCreateWithoutPatientInput> | Prisma.ClinicalRecordCreateWithoutPatientInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutPatientInput[]
-  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutPatientInput | Prisma.ClinicalRecordCreateOrConnectWithoutPatientInput[]
-  createMany?: Prisma.ClinicalRecordCreateManyPatientInputEnvelope
+export type ClinicalRecordUncheckedCreateNestedManyWithoutPacienteInput = {
+  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutPacienteInput, Prisma.ClinicalRecordUncheckedCreateWithoutPacienteInput> | Prisma.ClinicalRecordCreateWithoutPacienteInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutPacienteInput[]
+  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutPacienteInput | Prisma.ClinicalRecordCreateOrConnectWithoutPacienteInput[]
+  createMany?: Prisma.ClinicalRecordCreateManyPacienteInputEnvelope
   connect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
 }
 
-export type ClinicalRecordUpdateManyWithoutPatientNestedInput = {
-  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutPatientInput, Prisma.ClinicalRecordUncheckedCreateWithoutPatientInput> | Prisma.ClinicalRecordCreateWithoutPatientInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutPatientInput[]
-  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutPatientInput | Prisma.ClinicalRecordCreateOrConnectWithoutPatientInput[]
-  upsert?: Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutPatientInput | Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutPatientInput[]
-  createMany?: Prisma.ClinicalRecordCreateManyPatientInputEnvelope
+export type ClinicalRecordUpdateManyWithoutPacienteNestedInput = {
+  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutPacienteInput, Prisma.ClinicalRecordUncheckedCreateWithoutPacienteInput> | Prisma.ClinicalRecordCreateWithoutPacienteInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutPacienteInput[]
+  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutPacienteInput | Prisma.ClinicalRecordCreateOrConnectWithoutPacienteInput[]
+  upsert?: Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutPacienteInput | Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutPacienteInput[]
+  createMany?: Prisma.ClinicalRecordCreateManyPacienteInputEnvelope
   set?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   disconnect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   delete?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   connect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
-  update?: Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutPatientInput | Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutPatientInput[]
-  updateMany?: Prisma.ClinicalRecordUpdateManyWithWhereWithoutPatientInput | Prisma.ClinicalRecordUpdateManyWithWhereWithoutPatientInput[]
+  update?: Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutPacienteInput | Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutPacienteInput[]
+  updateMany?: Prisma.ClinicalRecordUpdateManyWithWhereWithoutPacienteInput | Prisma.ClinicalRecordUpdateManyWithWhereWithoutPacienteInput[]
   deleteMany?: Prisma.ClinicalRecordScalarWhereInput | Prisma.ClinicalRecordScalarWhereInput[]
 }
 
-export type ClinicalRecordUncheckedUpdateManyWithoutPatientNestedInput = {
-  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutPatientInput, Prisma.ClinicalRecordUncheckedCreateWithoutPatientInput> | Prisma.ClinicalRecordCreateWithoutPatientInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutPatientInput[]
-  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutPatientInput | Prisma.ClinicalRecordCreateOrConnectWithoutPatientInput[]
-  upsert?: Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutPatientInput | Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutPatientInput[]
-  createMany?: Prisma.ClinicalRecordCreateManyPatientInputEnvelope
+export type ClinicalRecordUncheckedUpdateManyWithoutPacienteNestedInput = {
+  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutPacienteInput, Prisma.ClinicalRecordUncheckedCreateWithoutPacienteInput> | Prisma.ClinicalRecordCreateWithoutPacienteInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutPacienteInput[]
+  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutPacienteInput | Prisma.ClinicalRecordCreateOrConnectWithoutPacienteInput[]
+  upsert?: Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutPacienteInput | Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutPacienteInput[]
+  createMany?: Prisma.ClinicalRecordCreateManyPacienteInputEnvelope
   set?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   disconnect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   delete?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   connect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
-  update?: Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutPatientInput | Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutPatientInput[]
-  updateMany?: Prisma.ClinicalRecordUpdateManyWithWhereWithoutPatientInput | Prisma.ClinicalRecordUpdateManyWithWhereWithoutPatientInput[]
+  update?: Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutPacienteInput | Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutPacienteInput[]
+  updateMany?: Prisma.ClinicalRecordUpdateManyWithWhereWithoutPacienteInput | Prisma.ClinicalRecordUpdateManyWithWhereWithoutPacienteInput[]
   deleteMany?: Prisma.ClinicalRecordScalarWhereInput | Prisma.ClinicalRecordScalarWhereInput[]
 }
 
-export type ClinicalRecordCreateNestedManyWithoutAppointmentInput = {
-  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutAppointmentInput, Prisma.ClinicalRecordUncheckedCreateWithoutAppointmentInput> | Prisma.ClinicalRecordCreateWithoutAppointmentInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutAppointmentInput[]
-  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutAppointmentInput | Prisma.ClinicalRecordCreateOrConnectWithoutAppointmentInput[]
-  createMany?: Prisma.ClinicalRecordCreateManyAppointmentInputEnvelope
+export type ClinicalRecordCreateNestedManyWithoutCitaInput = {
+  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutCitaInput, Prisma.ClinicalRecordUncheckedCreateWithoutCitaInput> | Prisma.ClinicalRecordCreateWithoutCitaInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutCitaInput[]
+  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutCitaInput | Prisma.ClinicalRecordCreateOrConnectWithoutCitaInput[]
+  createMany?: Prisma.ClinicalRecordCreateManyCitaInputEnvelope
   connect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
 }
 
-export type ClinicalRecordUncheckedCreateNestedManyWithoutAppointmentInput = {
-  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutAppointmentInput, Prisma.ClinicalRecordUncheckedCreateWithoutAppointmentInput> | Prisma.ClinicalRecordCreateWithoutAppointmentInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutAppointmentInput[]
-  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutAppointmentInput | Prisma.ClinicalRecordCreateOrConnectWithoutAppointmentInput[]
-  createMany?: Prisma.ClinicalRecordCreateManyAppointmentInputEnvelope
+export type ClinicalRecordUncheckedCreateNestedManyWithoutCitaInput = {
+  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutCitaInput, Prisma.ClinicalRecordUncheckedCreateWithoutCitaInput> | Prisma.ClinicalRecordCreateWithoutCitaInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutCitaInput[]
+  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutCitaInput | Prisma.ClinicalRecordCreateOrConnectWithoutCitaInput[]
+  createMany?: Prisma.ClinicalRecordCreateManyCitaInputEnvelope
   connect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
 }
 
-export type ClinicalRecordUpdateManyWithoutAppointmentNestedInput = {
-  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutAppointmentInput, Prisma.ClinicalRecordUncheckedCreateWithoutAppointmentInput> | Prisma.ClinicalRecordCreateWithoutAppointmentInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutAppointmentInput[]
-  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutAppointmentInput | Prisma.ClinicalRecordCreateOrConnectWithoutAppointmentInput[]
-  upsert?: Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutAppointmentInput | Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutAppointmentInput[]
-  createMany?: Prisma.ClinicalRecordCreateManyAppointmentInputEnvelope
+export type ClinicalRecordUpdateManyWithoutCitaNestedInput = {
+  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutCitaInput, Prisma.ClinicalRecordUncheckedCreateWithoutCitaInput> | Prisma.ClinicalRecordCreateWithoutCitaInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutCitaInput[]
+  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutCitaInput | Prisma.ClinicalRecordCreateOrConnectWithoutCitaInput[]
+  upsert?: Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutCitaInput | Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutCitaInput[]
+  createMany?: Prisma.ClinicalRecordCreateManyCitaInputEnvelope
   set?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   disconnect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   delete?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   connect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
-  update?: Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutAppointmentInput | Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutAppointmentInput[]
-  updateMany?: Prisma.ClinicalRecordUpdateManyWithWhereWithoutAppointmentInput | Prisma.ClinicalRecordUpdateManyWithWhereWithoutAppointmentInput[]
+  update?: Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutCitaInput | Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutCitaInput[]
+  updateMany?: Prisma.ClinicalRecordUpdateManyWithWhereWithoutCitaInput | Prisma.ClinicalRecordUpdateManyWithWhereWithoutCitaInput[]
   deleteMany?: Prisma.ClinicalRecordScalarWhereInput | Prisma.ClinicalRecordScalarWhereInput[]
 }
 
-export type ClinicalRecordUncheckedUpdateManyWithoutAppointmentNestedInput = {
-  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutAppointmentInput, Prisma.ClinicalRecordUncheckedCreateWithoutAppointmentInput> | Prisma.ClinicalRecordCreateWithoutAppointmentInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutAppointmentInput[]
-  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutAppointmentInput | Prisma.ClinicalRecordCreateOrConnectWithoutAppointmentInput[]
-  upsert?: Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutAppointmentInput | Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutAppointmentInput[]
-  createMany?: Prisma.ClinicalRecordCreateManyAppointmentInputEnvelope
+export type ClinicalRecordUncheckedUpdateManyWithoutCitaNestedInput = {
+  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutCitaInput, Prisma.ClinicalRecordUncheckedCreateWithoutCitaInput> | Prisma.ClinicalRecordCreateWithoutCitaInput[] | Prisma.ClinicalRecordUncheckedCreateWithoutCitaInput[]
+  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutCitaInput | Prisma.ClinicalRecordCreateOrConnectWithoutCitaInput[]
+  upsert?: Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutCitaInput | Prisma.ClinicalRecordUpsertWithWhereUniqueWithoutCitaInput[]
+  createMany?: Prisma.ClinicalRecordCreateManyCitaInputEnvelope
   set?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   disconnect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   delete?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
   connect?: Prisma.ClinicalRecordWhereUniqueInput | Prisma.ClinicalRecordWhereUniqueInput[]
-  update?: Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutAppointmentInput | Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutAppointmentInput[]
-  updateMany?: Prisma.ClinicalRecordUpdateManyWithWhereWithoutAppointmentInput | Prisma.ClinicalRecordUpdateManyWithWhereWithoutAppointmentInput[]
+  update?: Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutCitaInput | Prisma.ClinicalRecordUpdateWithWhereUniqueWithoutCitaInput[]
+  updateMany?: Prisma.ClinicalRecordUpdateManyWithWhereWithoutCitaInput | Prisma.ClinicalRecordUpdateManyWithWhereWithoutCitaInput[]
   deleteMany?: Prisma.ClinicalRecordScalarWhereInput | Prisma.ClinicalRecordScalarWhereInput[]
 }
 
-export type ClinicalRecordCreateNestedOneWithoutVaccinationsInput = {
-  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutVaccinationsInput, Prisma.ClinicalRecordUncheckedCreateWithoutVaccinationsInput>
-  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutVaccinationsInput
+export type ClinicalRecordCreateNestedOneWithoutVacunacionesInput = {
+  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutVacunacionesInput, Prisma.ClinicalRecordUncheckedCreateWithoutVacunacionesInput>
+  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutVacunacionesInput
   connect?: Prisma.ClinicalRecordWhereUniqueInput
 }
 
-export type ClinicalRecordUpdateOneWithoutVaccinationsNestedInput = {
-  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutVaccinationsInput, Prisma.ClinicalRecordUncheckedCreateWithoutVaccinationsInput>
-  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutVaccinationsInput
-  upsert?: Prisma.ClinicalRecordUpsertWithoutVaccinationsInput
+export type ClinicalRecordUpdateOneWithoutVacunacionesNestedInput = {
+  create?: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutVacunacionesInput, Prisma.ClinicalRecordUncheckedCreateWithoutVacunacionesInput>
+  connectOrCreate?: Prisma.ClinicalRecordCreateOrConnectWithoutVacunacionesInput
+  upsert?: Prisma.ClinicalRecordUpsertWithoutVacunacionesInput
   disconnect?: Prisma.ClinicalRecordWhereInput | boolean
   delete?: Prisma.ClinicalRecordWhereInput | boolean
   connect?: Prisma.ClinicalRecordWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.ClinicalRecordUpdateToOneWithWhereWithoutVaccinationsInput, Prisma.ClinicalRecordUpdateWithoutVaccinationsInput>, Prisma.ClinicalRecordUncheckedUpdateWithoutVaccinationsInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.ClinicalRecordUpdateToOneWithWhereWithoutVacunacionesInput, Prisma.ClinicalRecordUpdateWithoutVacunacionesInput>, Prisma.ClinicalRecordUncheckedUpdateWithoutVacunacionesInput>
 }
 
-export type ClinicalRecordCreateWithoutVeterinaryInput = {
+export type ClinicalRecordCreateWithoutVeterinariaInput = {
   id?: string
-  recordType?: string | null
-  diagnosis?: string | null
-  symptoms?: string | null
-  treatment?: string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: string | null
-  followUpDate?: Date | string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  patient: Prisma.PatientCreateNestedOneWithoutClinicalRecordsInput
-  appointment?: Prisma.AppointmentCreateNestedOneWithoutClinicalRecordsInput
-  recorder?: Prisma.OperatorCreateNestedOneWithoutClinicalRecordsInput
-  vaccinations?: Prisma.VaccinationCreateNestedManyWithoutClinicalRecordInput
+  tipoRegistro?: string | null
+  diagnostico?: string | null
+  sintomas?: string | null
+  tratamiento?: string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: string | null
+  fechaSeguimiento?: Date | string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  paciente: Prisma.PatientCreateNestedOneWithoutRegistrosClinicoInput
+  cita?: Prisma.AppointmentCreateNestedOneWithoutRegistrosClinicoInput
+  registrador?: Prisma.OperatorCreateNestedOneWithoutRegistrosClinicoInput
+  vacunaciones?: Prisma.VaccinationCreateNestedManyWithoutRegistroClinicoInput
 }
 
-export type ClinicalRecordUncheckedCreateWithoutVeterinaryInput = {
+export type ClinicalRecordUncheckedCreateWithoutVeterinariaInput = {
   id?: string
-  patientId: string
-  appointmentId?: string | null
-  recordedBy?: string | null
-  recordType?: string | null
-  diagnosis?: string | null
-  symptoms?: string | null
-  treatment?: string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: string | null
-  followUpDate?: Date | string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  vaccinations?: Prisma.VaccinationUncheckedCreateNestedManyWithoutClinicalRecordInput
+  pacienteId: string
+  citaId?: string | null
+  registradoPor?: string | null
+  tipoRegistro?: string | null
+  diagnostico?: string | null
+  sintomas?: string | null
+  tratamiento?: string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: string | null
+  fechaSeguimiento?: Date | string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  vacunaciones?: Prisma.VaccinationUncheckedCreateNestedManyWithoutRegistroClinicoInput
 }
 
-export type ClinicalRecordCreateOrConnectWithoutVeterinaryInput = {
+export type ClinicalRecordCreateOrConnectWithoutVeterinariaInput = {
   where: Prisma.ClinicalRecordWhereUniqueInput
-  create: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutVeterinaryInput, Prisma.ClinicalRecordUncheckedCreateWithoutVeterinaryInput>
+  create: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutVeterinariaInput, Prisma.ClinicalRecordUncheckedCreateWithoutVeterinariaInput>
 }
 
-export type ClinicalRecordCreateManyVeterinaryInputEnvelope = {
-  data: Prisma.ClinicalRecordCreateManyVeterinaryInput | Prisma.ClinicalRecordCreateManyVeterinaryInput[]
+export type ClinicalRecordCreateManyVeterinariaInputEnvelope = {
+  data: Prisma.ClinicalRecordCreateManyVeterinariaInput | Prisma.ClinicalRecordCreateManyVeterinariaInput[]
   skipDuplicates?: boolean
 }
 
-export type ClinicalRecordUpsertWithWhereUniqueWithoutVeterinaryInput = {
+export type ClinicalRecordUpsertWithWhereUniqueWithoutVeterinariaInput = {
   where: Prisma.ClinicalRecordWhereUniqueInput
-  update: Prisma.XOR<Prisma.ClinicalRecordUpdateWithoutVeterinaryInput, Prisma.ClinicalRecordUncheckedUpdateWithoutVeterinaryInput>
-  create: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutVeterinaryInput, Prisma.ClinicalRecordUncheckedCreateWithoutVeterinaryInput>
+  update: Prisma.XOR<Prisma.ClinicalRecordUpdateWithoutVeterinariaInput, Prisma.ClinicalRecordUncheckedUpdateWithoutVeterinariaInput>
+  create: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutVeterinariaInput, Prisma.ClinicalRecordUncheckedCreateWithoutVeterinariaInput>
 }
 
-export type ClinicalRecordUpdateWithWhereUniqueWithoutVeterinaryInput = {
+export type ClinicalRecordUpdateWithWhereUniqueWithoutVeterinariaInput = {
   where: Prisma.ClinicalRecordWhereUniqueInput
-  data: Prisma.XOR<Prisma.ClinicalRecordUpdateWithoutVeterinaryInput, Prisma.ClinicalRecordUncheckedUpdateWithoutVeterinaryInput>
+  data: Prisma.XOR<Prisma.ClinicalRecordUpdateWithoutVeterinariaInput, Prisma.ClinicalRecordUncheckedUpdateWithoutVeterinariaInput>
 }
 
-export type ClinicalRecordUpdateManyWithWhereWithoutVeterinaryInput = {
+export type ClinicalRecordUpdateManyWithWhereWithoutVeterinariaInput = {
   where: Prisma.ClinicalRecordScalarWhereInput
-  data: Prisma.XOR<Prisma.ClinicalRecordUpdateManyMutationInput, Prisma.ClinicalRecordUncheckedUpdateManyWithoutVeterinaryInput>
+  data: Prisma.XOR<Prisma.ClinicalRecordUpdateManyMutationInput, Prisma.ClinicalRecordUncheckedUpdateManyWithoutVeterinariaInput>
 }
 
 export type ClinicalRecordScalarWhereInput = {
@@ -812,601 +812,601 @@ export type ClinicalRecordScalarWhereInput = {
   OR?: Prisma.ClinicalRecordScalarWhereInput[]
   NOT?: Prisma.ClinicalRecordScalarWhereInput | Prisma.ClinicalRecordScalarWhereInput[]
   id?: Prisma.UuidFilter<"ClinicalRecord"> | string
-  patientId?: Prisma.UuidFilter<"ClinicalRecord"> | string
-  appointmentId?: Prisma.UuidNullableFilter<"ClinicalRecord"> | string | null
-  veterinaryId?: Prisma.UuidNullableFilter<"ClinicalRecord"> | string | null
-  recordedBy?: Prisma.UuidNullableFilter<"ClinicalRecord"> | string | null
-  recordType?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
-  diagnosis?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
-  symptoms?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
-  treatment?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
-  medications?: Prisma.JsonNullableFilter<"ClinicalRecord">
-  labResults?: Prisma.JsonNullableFilter<"ClinicalRecord">
-  images?: Prisma.JsonNullableFilter<"ClinicalRecord">
-  observations?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
-  followUpDate?: Prisma.DateTimeNullableFilter<"ClinicalRecord"> | Date | string | null
-  createdAt?: Prisma.DateTimeFilter<"ClinicalRecord"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"ClinicalRecord"> | Date | string
+  pacienteId?: Prisma.UuidFilter<"ClinicalRecord"> | string
+  citaId?: Prisma.UuidNullableFilter<"ClinicalRecord"> | string | null
+  veterinariaId?: Prisma.UuidNullableFilter<"ClinicalRecord"> | string | null
+  registradoPor?: Prisma.UuidNullableFilter<"ClinicalRecord"> | string | null
+  tipoRegistro?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
+  diagnostico?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
+  sintomas?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
+  tratamiento?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
+  medicamentos?: Prisma.JsonNullableFilter<"ClinicalRecord">
+  resultadosLaboratorio?: Prisma.JsonNullableFilter<"ClinicalRecord">
+  imagenes?: Prisma.JsonNullableFilter<"ClinicalRecord">
+  observaciones?: Prisma.StringNullableFilter<"ClinicalRecord"> | string | null
+  fechaSeguimiento?: Prisma.DateTimeNullableFilter<"ClinicalRecord"> | Date | string | null
+  creadoEn?: Prisma.DateTimeFilter<"ClinicalRecord"> | Date | string
+  actualizadoEn?: Prisma.DateTimeFilter<"ClinicalRecord"> | Date | string
 }
 
-export type ClinicalRecordCreateWithoutRecorderInput = {
+export type ClinicalRecordCreateWithoutRegistradorInput = {
   id?: string
-  recordType?: string | null
-  diagnosis?: string | null
-  symptoms?: string | null
-  treatment?: string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: string | null
-  followUpDate?: Date | string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  patient: Prisma.PatientCreateNestedOneWithoutClinicalRecordsInput
-  appointment?: Prisma.AppointmentCreateNestedOneWithoutClinicalRecordsInput
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutClinicalRecordsInput
-  vaccinations?: Prisma.VaccinationCreateNestedManyWithoutClinicalRecordInput
+  tipoRegistro?: string | null
+  diagnostico?: string | null
+  sintomas?: string | null
+  tratamiento?: string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: string | null
+  fechaSeguimiento?: Date | string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  paciente: Prisma.PatientCreateNestedOneWithoutRegistrosClinicoInput
+  cita?: Prisma.AppointmentCreateNestedOneWithoutRegistrosClinicoInput
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutRegistrosClinicoInput
+  vacunaciones?: Prisma.VaccinationCreateNestedManyWithoutRegistroClinicoInput
 }
 
-export type ClinicalRecordUncheckedCreateWithoutRecorderInput = {
+export type ClinicalRecordUncheckedCreateWithoutRegistradorInput = {
   id?: string
-  patientId: string
-  appointmentId?: string | null
-  veterinaryId?: string | null
-  recordType?: string | null
-  diagnosis?: string | null
-  symptoms?: string | null
-  treatment?: string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: string | null
-  followUpDate?: Date | string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  vaccinations?: Prisma.VaccinationUncheckedCreateNestedManyWithoutClinicalRecordInput
+  pacienteId: string
+  citaId?: string | null
+  veterinariaId?: string | null
+  tipoRegistro?: string | null
+  diagnostico?: string | null
+  sintomas?: string | null
+  tratamiento?: string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: string | null
+  fechaSeguimiento?: Date | string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  vacunaciones?: Prisma.VaccinationUncheckedCreateNestedManyWithoutRegistroClinicoInput
 }
 
-export type ClinicalRecordCreateOrConnectWithoutRecorderInput = {
+export type ClinicalRecordCreateOrConnectWithoutRegistradorInput = {
   where: Prisma.ClinicalRecordWhereUniqueInput
-  create: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutRecorderInput, Prisma.ClinicalRecordUncheckedCreateWithoutRecorderInput>
+  create: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutRegistradorInput, Prisma.ClinicalRecordUncheckedCreateWithoutRegistradorInput>
 }
 
-export type ClinicalRecordCreateManyRecorderInputEnvelope = {
-  data: Prisma.ClinicalRecordCreateManyRecorderInput | Prisma.ClinicalRecordCreateManyRecorderInput[]
+export type ClinicalRecordCreateManyRegistradorInputEnvelope = {
+  data: Prisma.ClinicalRecordCreateManyRegistradorInput | Prisma.ClinicalRecordCreateManyRegistradorInput[]
   skipDuplicates?: boolean
 }
 
-export type ClinicalRecordUpsertWithWhereUniqueWithoutRecorderInput = {
+export type ClinicalRecordUpsertWithWhereUniqueWithoutRegistradorInput = {
   where: Prisma.ClinicalRecordWhereUniqueInput
-  update: Prisma.XOR<Prisma.ClinicalRecordUpdateWithoutRecorderInput, Prisma.ClinicalRecordUncheckedUpdateWithoutRecorderInput>
-  create: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutRecorderInput, Prisma.ClinicalRecordUncheckedCreateWithoutRecorderInput>
+  update: Prisma.XOR<Prisma.ClinicalRecordUpdateWithoutRegistradorInput, Prisma.ClinicalRecordUncheckedUpdateWithoutRegistradorInput>
+  create: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutRegistradorInput, Prisma.ClinicalRecordUncheckedCreateWithoutRegistradorInput>
 }
 
-export type ClinicalRecordUpdateWithWhereUniqueWithoutRecorderInput = {
+export type ClinicalRecordUpdateWithWhereUniqueWithoutRegistradorInput = {
   where: Prisma.ClinicalRecordWhereUniqueInput
-  data: Prisma.XOR<Prisma.ClinicalRecordUpdateWithoutRecorderInput, Prisma.ClinicalRecordUncheckedUpdateWithoutRecorderInput>
+  data: Prisma.XOR<Prisma.ClinicalRecordUpdateWithoutRegistradorInput, Prisma.ClinicalRecordUncheckedUpdateWithoutRegistradorInput>
 }
 
-export type ClinicalRecordUpdateManyWithWhereWithoutRecorderInput = {
+export type ClinicalRecordUpdateManyWithWhereWithoutRegistradorInput = {
   where: Prisma.ClinicalRecordScalarWhereInput
-  data: Prisma.XOR<Prisma.ClinicalRecordUpdateManyMutationInput, Prisma.ClinicalRecordUncheckedUpdateManyWithoutRecorderInput>
+  data: Prisma.XOR<Prisma.ClinicalRecordUpdateManyMutationInput, Prisma.ClinicalRecordUncheckedUpdateManyWithoutRegistradorInput>
 }
 
-export type ClinicalRecordCreateWithoutPatientInput = {
+export type ClinicalRecordCreateWithoutPacienteInput = {
   id?: string
-  recordType?: string | null
-  diagnosis?: string | null
-  symptoms?: string | null
-  treatment?: string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: string | null
-  followUpDate?: Date | string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  appointment?: Prisma.AppointmentCreateNestedOneWithoutClinicalRecordsInput
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutClinicalRecordsInput
-  recorder?: Prisma.OperatorCreateNestedOneWithoutClinicalRecordsInput
-  vaccinations?: Prisma.VaccinationCreateNestedManyWithoutClinicalRecordInput
+  tipoRegistro?: string | null
+  diagnostico?: string | null
+  sintomas?: string | null
+  tratamiento?: string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: string | null
+  fechaSeguimiento?: Date | string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  cita?: Prisma.AppointmentCreateNestedOneWithoutRegistrosClinicoInput
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutRegistrosClinicoInput
+  registrador?: Prisma.OperatorCreateNestedOneWithoutRegistrosClinicoInput
+  vacunaciones?: Prisma.VaccinationCreateNestedManyWithoutRegistroClinicoInput
 }
 
-export type ClinicalRecordUncheckedCreateWithoutPatientInput = {
+export type ClinicalRecordUncheckedCreateWithoutPacienteInput = {
   id?: string
-  appointmentId?: string | null
-  veterinaryId?: string | null
-  recordedBy?: string | null
-  recordType?: string | null
-  diagnosis?: string | null
-  symptoms?: string | null
-  treatment?: string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: string | null
-  followUpDate?: Date | string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  vaccinations?: Prisma.VaccinationUncheckedCreateNestedManyWithoutClinicalRecordInput
+  citaId?: string | null
+  veterinariaId?: string | null
+  registradoPor?: string | null
+  tipoRegistro?: string | null
+  diagnostico?: string | null
+  sintomas?: string | null
+  tratamiento?: string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: string | null
+  fechaSeguimiento?: Date | string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  vacunaciones?: Prisma.VaccinationUncheckedCreateNestedManyWithoutRegistroClinicoInput
 }
 
-export type ClinicalRecordCreateOrConnectWithoutPatientInput = {
+export type ClinicalRecordCreateOrConnectWithoutPacienteInput = {
   where: Prisma.ClinicalRecordWhereUniqueInput
-  create: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutPatientInput, Prisma.ClinicalRecordUncheckedCreateWithoutPatientInput>
+  create: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutPacienteInput, Prisma.ClinicalRecordUncheckedCreateWithoutPacienteInput>
 }
 
-export type ClinicalRecordCreateManyPatientInputEnvelope = {
-  data: Prisma.ClinicalRecordCreateManyPatientInput | Prisma.ClinicalRecordCreateManyPatientInput[]
+export type ClinicalRecordCreateManyPacienteInputEnvelope = {
+  data: Prisma.ClinicalRecordCreateManyPacienteInput | Prisma.ClinicalRecordCreateManyPacienteInput[]
   skipDuplicates?: boolean
 }
 
-export type ClinicalRecordUpsertWithWhereUniqueWithoutPatientInput = {
+export type ClinicalRecordUpsertWithWhereUniqueWithoutPacienteInput = {
   where: Prisma.ClinicalRecordWhereUniqueInput
-  update: Prisma.XOR<Prisma.ClinicalRecordUpdateWithoutPatientInput, Prisma.ClinicalRecordUncheckedUpdateWithoutPatientInput>
-  create: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutPatientInput, Prisma.ClinicalRecordUncheckedCreateWithoutPatientInput>
+  update: Prisma.XOR<Prisma.ClinicalRecordUpdateWithoutPacienteInput, Prisma.ClinicalRecordUncheckedUpdateWithoutPacienteInput>
+  create: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutPacienteInput, Prisma.ClinicalRecordUncheckedCreateWithoutPacienteInput>
 }
 
-export type ClinicalRecordUpdateWithWhereUniqueWithoutPatientInput = {
+export type ClinicalRecordUpdateWithWhereUniqueWithoutPacienteInput = {
   where: Prisma.ClinicalRecordWhereUniqueInput
-  data: Prisma.XOR<Prisma.ClinicalRecordUpdateWithoutPatientInput, Prisma.ClinicalRecordUncheckedUpdateWithoutPatientInput>
+  data: Prisma.XOR<Prisma.ClinicalRecordUpdateWithoutPacienteInput, Prisma.ClinicalRecordUncheckedUpdateWithoutPacienteInput>
 }
 
-export type ClinicalRecordUpdateManyWithWhereWithoutPatientInput = {
+export type ClinicalRecordUpdateManyWithWhereWithoutPacienteInput = {
   where: Prisma.ClinicalRecordScalarWhereInput
-  data: Prisma.XOR<Prisma.ClinicalRecordUpdateManyMutationInput, Prisma.ClinicalRecordUncheckedUpdateManyWithoutPatientInput>
+  data: Prisma.XOR<Prisma.ClinicalRecordUpdateManyMutationInput, Prisma.ClinicalRecordUncheckedUpdateManyWithoutPacienteInput>
 }
 
-export type ClinicalRecordCreateWithoutAppointmentInput = {
+export type ClinicalRecordCreateWithoutCitaInput = {
   id?: string
-  recordType?: string | null
-  diagnosis?: string | null
-  symptoms?: string | null
-  treatment?: string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: string | null
-  followUpDate?: Date | string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  patient: Prisma.PatientCreateNestedOneWithoutClinicalRecordsInput
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutClinicalRecordsInput
-  recorder?: Prisma.OperatorCreateNestedOneWithoutClinicalRecordsInput
-  vaccinations?: Prisma.VaccinationCreateNestedManyWithoutClinicalRecordInput
+  tipoRegistro?: string | null
+  diagnostico?: string | null
+  sintomas?: string | null
+  tratamiento?: string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: string | null
+  fechaSeguimiento?: Date | string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  paciente: Prisma.PatientCreateNestedOneWithoutRegistrosClinicoInput
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutRegistrosClinicoInput
+  registrador?: Prisma.OperatorCreateNestedOneWithoutRegistrosClinicoInput
+  vacunaciones?: Prisma.VaccinationCreateNestedManyWithoutRegistroClinicoInput
 }
 
-export type ClinicalRecordUncheckedCreateWithoutAppointmentInput = {
+export type ClinicalRecordUncheckedCreateWithoutCitaInput = {
   id?: string
-  patientId: string
-  veterinaryId?: string | null
-  recordedBy?: string | null
-  recordType?: string | null
-  diagnosis?: string | null
-  symptoms?: string | null
-  treatment?: string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: string | null
-  followUpDate?: Date | string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  vaccinations?: Prisma.VaccinationUncheckedCreateNestedManyWithoutClinicalRecordInput
+  pacienteId: string
+  veterinariaId?: string | null
+  registradoPor?: string | null
+  tipoRegistro?: string | null
+  diagnostico?: string | null
+  sintomas?: string | null
+  tratamiento?: string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: string | null
+  fechaSeguimiento?: Date | string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  vacunaciones?: Prisma.VaccinationUncheckedCreateNestedManyWithoutRegistroClinicoInput
 }
 
-export type ClinicalRecordCreateOrConnectWithoutAppointmentInput = {
+export type ClinicalRecordCreateOrConnectWithoutCitaInput = {
   where: Prisma.ClinicalRecordWhereUniqueInput
-  create: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutAppointmentInput, Prisma.ClinicalRecordUncheckedCreateWithoutAppointmentInput>
+  create: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutCitaInput, Prisma.ClinicalRecordUncheckedCreateWithoutCitaInput>
 }
 
-export type ClinicalRecordCreateManyAppointmentInputEnvelope = {
-  data: Prisma.ClinicalRecordCreateManyAppointmentInput | Prisma.ClinicalRecordCreateManyAppointmentInput[]
+export type ClinicalRecordCreateManyCitaInputEnvelope = {
+  data: Prisma.ClinicalRecordCreateManyCitaInput | Prisma.ClinicalRecordCreateManyCitaInput[]
   skipDuplicates?: boolean
 }
 
-export type ClinicalRecordUpsertWithWhereUniqueWithoutAppointmentInput = {
+export type ClinicalRecordUpsertWithWhereUniqueWithoutCitaInput = {
   where: Prisma.ClinicalRecordWhereUniqueInput
-  update: Prisma.XOR<Prisma.ClinicalRecordUpdateWithoutAppointmentInput, Prisma.ClinicalRecordUncheckedUpdateWithoutAppointmentInput>
-  create: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutAppointmentInput, Prisma.ClinicalRecordUncheckedCreateWithoutAppointmentInput>
+  update: Prisma.XOR<Prisma.ClinicalRecordUpdateWithoutCitaInput, Prisma.ClinicalRecordUncheckedUpdateWithoutCitaInput>
+  create: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutCitaInput, Prisma.ClinicalRecordUncheckedCreateWithoutCitaInput>
 }
 
-export type ClinicalRecordUpdateWithWhereUniqueWithoutAppointmentInput = {
+export type ClinicalRecordUpdateWithWhereUniqueWithoutCitaInput = {
   where: Prisma.ClinicalRecordWhereUniqueInput
-  data: Prisma.XOR<Prisma.ClinicalRecordUpdateWithoutAppointmentInput, Prisma.ClinicalRecordUncheckedUpdateWithoutAppointmentInput>
+  data: Prisma.XOR<Prisma.ClinicalRecordUpdateWithoutCitaInput, Prisma.ClinicalRecordUncheckedUpdateWithoutCitaInput>
 }
 
-export type ClinicalRecordUpdateManyWithWhereWithoutAppointmentInput = {
+export type ClinicalRecordUpdateManyWithWhereWithoutCitaInput = {
   where: Prisma.ClinicalRecordScalarWhereInput
-  data: Prisma.XOR<Prisma.ClinicalRecordUpdateManyMutationInput, Prisma.ClinicalRecordUncheckedUpdateManyWithoutAppointmentInput>
+  data: Prisma.XOR<Prisma.ClinicalRecordUpdateManyMutationInput, Prisma.ClinicalRecordUncheckedUpdateManyWithoutCitaInput>
 }
 
-export type ClinicalRecordCreateWithoutVaccinationsInput = {
+export type ClinicalRecordCreateWithoutVacunacionesInput = {
   id?: string
-  recordType?: string | null
-  diagnosis?: string | null
-  symptoms?: string | null
-  treatment?: string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: string | null
-  followUpDate?: Date | string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  patient: Prisma.PatientCreateNestedOneWithoutClinicalRecordsInput
-  appointment?: Prisma.AppointmentCreateNestedOneWithoutClinicalRecordsInput
-  veterinary?: Prisma.VeterinaryCreateNestedOneWithoutClinicalRecordsInput
-  recorder?: Prisma.OperatorCreateNestedOneWithoutClinicalRecordsInput
+  tipoRegistro?: string | null
+  diagnostico?: string | null
+  sintomas?: string | null
+  tratamiento?: string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: string | null
+  fechaSeguimiento?: Date | string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
+  paciente: Prisma.PatientCreateNestedOneWithoutRegistrosClinicoInput
+  cita?: Prisma.AppointmentCreateNestedOneWithoutRegistrosClinicoInput
+  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutRegistrosClinicoInput
+  registrador?: Prisma.OperatorCreateNestedOneWithoutRegistrosClinicoInput
 }
 
-export type ClinicalRecordUncheckedCreateWithoutVaccinationsInput = {
+export type ClinicalRecordUncheckedCreateWithoutVacunacionesInput = {
   id?: string
-  patientId: string
-  appointmentId?: string | null
-  veterinaryId?: string | null
-  recordedBy?: string | null
-  recordType?: string | null
-  diagnosis?: string | null
-  symptoms?: string | null
-  treatment?: string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: string | null
-  followUpDate?: Date | string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
+  pacienteId: string
+  citaId?: string | null
+  veterinariaId?: string | null
+  registradoPor?: string | null
+  tipoRegistro?: string | null
+  diagnostico?: string | null
+  sintomas?: string | null
+  tratamiento?: string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: string | null
+  fechaSeguimiento?: Date | string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
 }
 
-export type ClinicalRecordCreateOrConnectWithoutVaccinationsInput = {
+export type ClinicalRecordCreateOrConnectWithoutVacunacionesInput = {
   where: Prisma.ClinicalRecordWhereUniqueInput
-  create: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutVaccinationsInput, Prisma.ClinicalRecordUncheckedCreateWithoutVaccinationsInput>
+  create: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutVacunacionesInput, Prisma.ClinicalRecordUncheckedCreateWithoutVacunacionesInput>
 }
 
-export type ClinicalRecordUpsertWithoutVaccinationsInput = {
-  update: Prisma.XOR<Prisma.ClinicalRecordUpdateWithoutVaccinationsInput, Prisma.ClinicalRecordUncheckedUpdateWithoutVaccinationsInput>
-  create: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutVaccinationsInput, Prisma.ClinicalRecordUncheckedCreateWithoutVaccinationsInput>
+export type ClinicalRecordUpsertWithoutVacunacionesInput = {
+  update: Prisma.XOR<Prisma.ClinicalRecordUpdateWithoutVacunacionesInput, Prisma.ClinicalRecordUncheckedUpdateWithoutVacunacionesInput>
+  create: Prisma.XOR<Prisma.ClinicalRecordCreateWithoutVacunacionesInput, Prisma.ClinicalRecordUncheckedCreateWithoutVacunacionesInput>
   where?: Prisma.ClinicalRecordWhereInput
 }
 
-export type ClinicalRecordUpdateToOneWithWhereWithoutVaccinationsInput = {
+export type ClinicalRecordUpdateToOneWithWhereWithoutVacunacionesInput = {
   where?: Prisma.ClinicalRecordWhereInput
-  data: Prisma.XOR<Prisma.ClinicalRecordUpdateWithoutVaccinationsInput, Prisma.ClinicalRecordUncheckedUpdateWithoutVaccinationsInput>
+  data: Prisma.XOR<Prisma.ClinicalRecordUpdateWithoutVacunacionesInput, Prisma.ClinicalRecordUncheckedUpdateWithoutVacunacionesInput>
 }
 
-export type ClinicalRecordUpdateWithoutVaccinationsInput = {
+export type ClinicalRecordUpdateWithoutVacunacionesInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  recordType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  diagnosis?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  treatment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  followUpDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  patient?: Prisma.PatientUpdateOneRequiredWithoutClinicalRecordsNestedInput
-  appointment?: Prisma.AppointmentUpdateOneWithoutClinicalRecordsNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutClinicalRecordsNestedInput
-  recorder?: Prisma.OperatorUpdateOneWithoutClinicalRecordsNestedInput
+  tipoRegistro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnostico?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sintomas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tratamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaSeguimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  paciente?: Prisma.PatientUpdateOneRequiredWithoutRegistrosClinicoNestedInput
+  cita?: Prisma.AppointmentUpdateOneWithoutRegistrosClinicoNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutRegistrosClinicoNestedInput
+  registrador?: Prisma.OperatorUpdateOneWithoutRegistrosClinicoNestedInput
 }
 
-export type ClinicalRecordUncheckedUpdateWithoutVaccinationsInput = {
+export type ClinicalRecordUncheckedUpdateWithoutVacunacionesInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  appointmentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  recordedBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  recordType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  diagnosis?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  treatment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  followUpDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  citaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  registradoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tipoRegistro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnostico?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sintomas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tratamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaSeguimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type ClinicalRecordCreateManyVeterinaryInput = {
+export type ClinicalRecordCreateManyVeterinariaInput = {
   id?: string
-  patientId: string
-  appointmentId?: string | null
-  recordedBy?: string | null
-  recordType?: string | null
-  diagnosis?: string | null
-  symptoms?: string | null
-  treatment?: string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: string | null
-  followUpDate?: Date | string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
+  pacienteId: string
+  citaId?: string | null
+  registradoPor?: string | null
+  tipoRegistro?: string | null
+  diagnostico?: string | null
+  sintomas?: string | null
+  tratamiento?: string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: string | null
+  fechaSeguimiento?: Date | string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
 }
 
-export type ClinicalRecordUpdateWithoutVeterinaryInput = {
+export type ClinicalRecordUpdateWithoutVeterinariaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  recordType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  diagnosis?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  treatment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  followUpDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  patient?: Prisma.PatientUpdateOneRequiredWithoutClinicalRecordsNestedInput
-  appointment?: Prisma.AppointmentUpdateOneWithoutClinicalRecordsNestedInput
-  recorder?: Prisma.OperatorUpdateOneWithoutClinicalRecordsNestedInput
-  vaccinations?: Prisma.VaccinationUpdateManyWithoutClinicalRecordNestedInput
+  tipoRegistro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnostico?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sintomas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tratamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaSeguimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  paciente?: Prisma.PatientUpdateOneRequiredWithoutRegistrosClinicoNestedInput
+  cita?: Prisma.AppointmentUpdateOneWithoutRegistrosClinicoNestedInput
+  registrador?: Prisma.OperatorUpdateOneWithoutRegistrosClinicoNestedInput
+  vacunaciones?: Prisma.VaccinationUpdateManyWithoutRegistroClinicoNestedInput
 }
 
-export type ClinicalRecordUncheckedUpdateWithoutVeterinaryInput = {
+export type ClinicalRecordUncheckedUpdateWithoutVeterinariaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  appointmentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  recordedBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  recordType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  diagnosis?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  treatment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  followUpDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  vaccinations?: Prisma.VaccinationUncheckedUpdateManyWithoutClinicalRecordNestedInput
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  citaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  registradoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tipoRegistro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnostico?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sintomas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tratamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaSeguimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  vacunaciones?: Prisma.VaccinationUncheckedUpdateManyWithoutRegistroClinicoNestedInput
 }
 
-export type ClinicalRecordUncheckedUpdateManyWithoutVeterinaryInput = {
+export type ClinicalRecordUncheckedUpdateManyWithoutVeterinariaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  appointmentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  recordedBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  recordType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  diagnosis?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  treatment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  followUpDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  citaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  registradoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tipoRegistro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnostico?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sintomas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tratamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaSeguimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type ClinicalRecordCreateManyRecorderInput = {
+export type ClinicalRecordCreateManyRegistradorInput = {
   id?: string
-  patientId: string
-  appointmentId?: string | null
-  veterinaryId?: string | null
-  recordType?: string | null
-  diagnosis?: string | null
-  symptoms?: string | null
-  treatment?: string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: string | null
-  followUpDate?: Date | string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
+  pacienteId: string
+  citaId?: string | null
+  veterinariaId?: string | null
+  tipoRegistro?: string | null
+  diagnostico?: string | null
+  sintomas?: string | null
+  tratamiento?: string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: string | null
+  fechaSeguimiento?: Date | string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
 }
 
-export type ClinicalRecordUpdateWithoutRecorderInput = {
+export type ClinicalRecordUpdateWithoutRegistradorInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  recordType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  diagnosis?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  treatment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  followUpDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  patient?: Prisma.PatientUpdateOneRequiredWithoutClinicalRecordsNestedInput
-  appointment?: Prisma.AppointmentUpdateOneWithoutClinicalRecordsNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutClinicalRecordsNestedInput
-  vaccinations?: Prisma.VaccinationUpdateManyWithoutClinicalRecordNestedInput
+  tipoRegistro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnostico?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sintomas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tratamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaSeguimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  paciente?: Prisma.PatientUpdateOneRequiredWithoutRegistrosClinicoNestedInput
+  cita?: Prisma.AppointmentUpdateOneWithoutRegistrosClinicoNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutRegistrosClinicoNestedInput
+  vacunaciones?: Prisma.VaccinationUpdateManyWithoutRegistroClinicoNestedInput
 }
 
-export type ClinicalRecordUncheckedUpdateWithoutRecorderInput = {
+export type ClinicalRecordUncheckedUpdateWithoutRegistradorInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  appointmentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  recordType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  diagnosis?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  treatment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  followUpDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  vaccinations?: Prisma.VaccinationUncheckedUpdateManyWithoutClinicalRecordNestedInput
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  citaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tipoRegistro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnostico?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sintomas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tratamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaSeguimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  vacunaciones?: Prisma.VaccinationUncheckedUpdateManyWithoutRegistroClinicoNestedInput
 }
 
-export type ClinicalRecordUncheckedUpdateManyWithoutRecorderInput = {
+export type ClinicalRecordUncheckedUpdateManyWithoutRegistradorInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  appointmentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  recordType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  diagnosis?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  treatment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  followUpDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  citaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tipoRegistro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnostico?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sintomas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tratamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaSeguimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type ClinicalRecordCreateManyPatientInput = {
+export type ClinicalRecordCreateManyPacienteInput = {
   id?: string
-  appointmentId?: string | null
-  veterinaryId?: string | null
-  recordedBy?: string | null
-  recordType?: string | null
-  diagnosis?: string | null
-  symptoms?: string | null
-  treatment?: string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: string | null
-  followUpDate?: Date | string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
+  citaId?: string | null
+  veterinariaId?: string | null
+  registradoPor?: string | null
+  tipoRegistro?: string | null
+  diagnostico?: string | null
+  sintomas?: string | null
+  tratamiento?: string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: string | null
+  fechaSeguimiento?: Date | string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
 }
 
-export type ClinicalRecordUpdateWithoutPatientInput = {
+export type ClinicalRecordUpdateWithoutPacienteInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  recordType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  diagnosis?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  treatment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  followUpDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  appointment?: Prisma.AppointmentUpdateOneWithoutClinicalRecordsNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutClinicalRecordsNestedInput
-  recorder?: Prisma.OperatorUpdateOneWithoutClinicalRecordsNestedInput
-  vaccinations?: Prisma.VaccinationUpdateManyWithoutClinicalRecordNestedInput
+  tipoRegistro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnostico?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sintomas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tratamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaSeguimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  cita?: Prisma.AppointmentUpdateOneWithoutRegistrosClinicoNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutRegistrosClinicoNestedInput
+  registrador?: Prisma.OperatorUpdateOneWithoutRegistrosClinicoNestedInput
+  vacunaciones?: Prisma.VaccinationUpdateManyWithoutRegistroClinicoNestedInput
 }
 
-export type ClinicalRecordUncheckedUpdateWithoutPatientInput = {
+export type ClinicalRecordUncheckedUpdateWithoutPacienteInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  appointmentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  recordedBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  recordType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  diagnosis?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  treatment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  followUpDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  vaccinations?: Prisma.VaccinationUncheckedUpdateManyWithoutClinicalRecordNestedInput
+  citaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  registradoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tipoRegistro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnostico?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sintomas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tratamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaSeguimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  vacunaciones?: Prisma.VaccinationUncheckedUpdateManyWithoutRegistroClinicoNestedInput
 }
 
-export type ClinicalRecordUncheckedUpdateManyWithoutPatientInput = {
+export type ClinicalRecordUncheckedUpdateManyWithoutPacienteInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  appointmentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  recordedBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  recordType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  diagnosis?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  treatment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  followUpDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  citaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  registradoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tipoRegistro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnostico?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sintomas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tratamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaSeguimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type ClinicalRecordCreateManyAppointmentInput = {
+export type ClinicalRecordCreateManyCitaInput = {
   id?: string
-  patientId: string
-  veterinaryId?: string | null
-  recordedBy?: string | null
-  recordType?: string | null
-  diagnosis?: string | null
-  symptoms?: string | null
-  treatment?: string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: string | null
-  followUpDate?: Date | string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
+  pacienteId: string
+  veterinariaId?: string | null
+  registradoPor?: string | null
+  tipoRegistro?: string | null
+  diagnostico?: string | null
+  sintomas?: string | null
+  tratamiento?: string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: string | null
+  fechaSeguimiento?: Date | string | null
+  creadoEn?: Date | string
+  actualizadoEn?: Date | string
 }
 
-export type ClinicalRecordUpdateWithoutAppointmentInput = {
+export type ClinicalRecordUpdateWithoutCitaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  recordType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  diagnosis?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  treatment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  followUpDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  patient?: Prisma.PatientUpdateOneRequiredWithoutClinicalRecordsNestedInput
-  veterinary?: Prisma.VeterinaryUpdateOneWithoutClinicalRecordsNestedInput
-  recorder?: Prisma.OperatorUpdateOneWithoutClinicalRecordsNestedInput
-  vaccinations?: Prisma.VaccinationUpdateManyWithoutClinicalRecordNestedInput
+  tipoRegistro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnostico?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sintomas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tratamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaSeguimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  paciente?: Prisma.PatientUpdateOneRequiredWithoutRegistrosClinicoNestedInput
+  veterinaria?: Prisma.VeterinaryUpdateOneWithoutRegistrosClinicoNestedInput
+  registrador?: Prisma.OperatorUpdateOneWithoutRegistrosClinicoNestedInput
+  vacunaciones?: Prisma.VaccinationUpdateManyWithoutRegistroClinicoNestedInput
 }
 
-export type ClinicalRecordUncheckedUpdateWithoutAppointmentInput = {
+export type ClinicalRecordUncheckedUpdateWithoutCitaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  recordedBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  recordType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  diagnosis?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  treatment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  followUpDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  vaccinations?: Prisma.VaccinationUncheckedUpdateManyWithoutClinicalRecordNestedInput
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  registradoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tipoRegistro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnostico?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sintomas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tratamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaSeguimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  vacunaciones?: Prisma.VaccinationUncheckedUpdateManyWithoutRegistroClinicoNestedInput
 }
 
-export type ClinicalRecordUncheckedUpdateManyWithoutAppointmentInput = {
+export type ClinicalRecordUncheckedUpdateManyWithoutCitaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  patientId?: Prisma.StringFieldUpdateOperationsInput | string
-  veterinaryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  recordedBy?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  recordType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  diagnosis?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  treatment?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  medications?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  labResults?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  images?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  observations?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  followUpDate?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pacienteId?: Prisma.StringFieldUpdateOperationsInput | string
+  veterinariaId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  registradoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tipoRegistro?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  diagnostico?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sintomas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  tratamiento?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  medicamentos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  resultadosLaboratorio?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  imagenes?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  observaciones?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  fechaSeguimiento?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 
@@ -1415,11 +1415,11 @@ export type ClinicalRecordUncheckedUpdateManyWithoutAppointmentInput = {
  */
 
 export type ClinicalRecordCountOutputType = {
-  vaccinations: number
+  vacunaciones: number
 }
 
 export type ClinicalRecordCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  vaccinations?: boolean | ClinicalRecordCountOutputTypeCountVaccinationsArgs
+  vacunaciones?: boolean | ClinicalRecordCountOutputTypeCountVacunacionesArgs
 }
 
 /**
@@ -1435,149 +1435,149 @@ export type ClinicalRecordCountOutputTypeDefaultArgs<ExtArgs extends runtime.Typ
 /**
  * ClinicalRecordCountOutputType without action
  */
-export type ClinicalRecordCountOutputTypeCountVaccinationsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type ClinicalRecordCountOutputTypeCountVacunacionesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.VaccinationWhereInput
 }
 
 
 export type ClinicalRecordSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  patientId?: boolean
-  appointmentId?: boolean
-  veterinaryId?: boolean
-  recordedBy?: boolean
-  recordType?: boolean
-  diagnosis?: boolean
-  symptoms?: boolean
-  treatment?: boolean
-  medications?: boolean
-  labResults?: boolean
-  images?: boolean
-  observations?: boolean
-  followUpDate?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
-  patient?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
-  appointment?: boolean | Prisma.ClinicalRecord$appointmentArgs<ExtArgs>
-  veterinary?: boolean | Prisma.ClinicalRecord$veterinaryArgs<ExtArgs>
-  recorder?: boolean | Prisma.ClinicalRecord$recorderArgs<ExtArgs>
-  vaccinations?: boolean | Prisma.ClinicalRecord$vaccinationsArgs<ExtArgs>
+  pacienteId?: boolean
+  citaId?: boolean
+  veterinariaId?: boolean
+  registradoPor?: boolean
+  tipoRegistro?: boolean
+  diagnostico?: boolean
+  sintomas?: boolean
+  tratamiento?: boolean
+  medicamentos?: boolean
+  resultadosLaboratorio?: boolean
+  imagenes?: boolean
+  observaciones?: boolean
+  fechaSeguimiento?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
+  paciente?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
+  cita?: boolean | Prisma.ClinicalRecord$citaArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.ClinicalRecord$veterinariaArgs<ExtArgs>
+  registrador?: boolean | Prisma.ClinicalRecord$registradorArgs<ExtArgs>
+  vacunaciones?: boolean | Prisma.ClinicalRecord$vacunacionesArgs<ExtArgs>
   _count?: boolean | Prisma.ClinicalRecordCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["clinicalRecord"]>
 
 export type ClinicalRecordSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  patientId?: boolean
-  appointmentId?: boolean
-  veterinaryId?: boolean
-  recordedBy?: boolean
-  recordType?: boolean
-  diagnosis?: boolean
-  symptoms?: boolean
-  treatment?: boolean
-  medications?: boolean
-  labResults?: boolean
-  images?: boolean
-  observations?: boolean
-  followUpDate?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
-  patient?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
-  appointment?: boolean | Prisma.ClinicalRecord$appointmentArgs<ExtArgs>
-  veterinary?: boolean | Prisma.ClinicalRecord$veterinaryArgs<ExtArgs>
-  recorder?: boolean | Prisma.ClinicalRecord$recorderArgs<ExtArgs>
+  pacienteId?: boolean
+  citaId?: boolean
+  veterinariaId?: boolean
+  registradoPor?: boolean
+  tipoRegistro?: boolean
+  diagnostico?: boolean
+  sintomas?: boolean
+  tratamiento?: boolean
+  medicamentos?: boolean
+  resultadosLaboratorio?: boolean
+  imagenes?: boolean
+  observaciones?: boolean
+  fechaSeguimiento?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
+  paciente?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
+  cita?: boolean | Prisma.ClinicalRecord$citaArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.ClinicalRecord$veterinariaArgs<ExtArgs>
+  registrador?: boolean | Prisma.ClinicalRecord$registradorArgs<ExtArgs>
 }, ExtArgs["result"]["clinicalRecord"]>
 
 export type ClinicalRecordSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  patientId?: boolean
-  appointmentId?: boolean
-  veterinaryId?: boolean
-  recordedBy?: boolean
-  recordType?: boolean
-  diagnosis?: boolean
-  symptoms?: boolean
-  treatment?: boolean
-  medications?: boolean
-  labResults?: boolean
-  images?: boolean
-  observations?: boolean
-  followUpDate?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
-  patient?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
-  appointment?: boolean | Prisma.ClinicalRecord$appointmentArgs<ExtArgs>
-  veterinary?: boolean | Prisma.ClinicalRecord$veterinaryArgs<ExtArgs>
-  recorder?: boolean | Prisma.ClinicalRecord$recorderArgs<ExtArgs>
+  pacienteId?: boolean
+  citaId?: boolean
+  veterinariaId?: boolean
+  registradoPor?: boolean
+  tipoRegistro?: boolean
+  diagnostico?: boolean
+  sintomas?: boolean
+  tratamiento?: boolean
+  medicamentos?: boolean
+  resultadosLaboratorio?: boolean
+  imagenes?: boolean
+  observaciones?: boolean
+  fechaSeguimiento?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
+  paciente?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
+  cita?: boolean | Prisma.ClinicalRecord$citaArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.ClinicalRecord$veterinariaArgs<ExtArgs>
+  registrador?: boolean | Prisma.ClinicalRecord$registradorArgs<ExtArgs>
 }, ExtArgs["result"]["clinicalRecord"]>
 
 export type ClinicalRecordSelectScalar = {
   id?: boolean
-  patientId?: boolean
-  appointmentId?: boolean
-  veterinaryId?: boolean
-  recordedBy?: boolean
-  recordType?: boolean
-  diagnosis?: boolean
-  symptoms?: boolean
-  treatment?: boolean
-  medications?: boolean
-  labResults?: boolean
-  images?: boolean
-  observations?: boolean
-  followUpDate?: boolean
-  createdAt?: boolean
-  updatedAt?: boolean
+  pacienteId?: boolean
+  citaId?: boolean
+  veterinariaId?: boolean
+  registradoPor?: boolean
+  tipoRegistro?: boolean
+  diagnostico?: boolean
+  sintomas?: boolean
+  tratamiento?: boolean
+  medicamentos?: boolean
+  resultadosLaboratorio?: boolean
+  imagenes?: boolean
+  observaciones?: boolean
+  fechaSeguimiento?: boolean
+  creadoEn?: boolean
+  actualizadoEn?: boolean
 }
 
-export type ClinicalRecordOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "patientId" | "appointmentId" | "veterinaryId" | "recordedBy" | "recordType" | "diagnosis" | "symptoms" | "treatment" | "medications" | "labResults" | "images" | "observations" | "followUpDate" | "createdAt" | "updatedAt", ExtArgs["result"]["clinicalRecord"]>
+export type ClinicalRecordOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "pacienteId" | "citaId" | "veterinariaId" | "registradoPor" | "tipoRegistro" | "diagnostico" | "sintomas" | "tratamiento" | "medicamentos" | "resultadosLaboratorio" | "imagenes" | "observaciones" | "fechaSeguimiento" | "creadoEn" | "actualizadoEn", ExtArgs["result"]["clinicalRecord"]>
 export type ClinicalRecordInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  patient?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
-  appointment?: boolean | Prisma.ClinicalRecord$appointmentArgs<ExtArgs>
-  veterinary?: boolean | Prisma.ClinicalRecord$veterinaryArgs<ExtArgs>
-  recorder?: boolean | Prisma.ClinicalRecord$recorderArgs<ExtArgs>
-  vaccinations?: boolean | Prisma.ClinicalRecord$vaccinationsArgs<ExtArgs>
+  paciente?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
+  cita?: boolean | Prisma.ClinicalRecord$citaArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.ClinicalRecord$veterinariaArgs<ExtArgs>
+  registrador?: boolean | Prisma.ClinicalRecord$registradorArgs<ExtArgs>
+  vacunaciones?: boolean | Prisma.ClinicalRecord$vacunacionesArgs<ExtArgs>
   _count?: boolean | Prisma.ClinicalRecordCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type ClinicalRecordIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  patient?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
-  appointment?: boolean | Prisma.ClinicalRecord$appointmentArgs<ExtArgs>
-  veterinary?: boolean | Prisma.ClinicalRecord$veterinaryArgs<ExtArgs>
-  recorder?: boolean | Prisma.ClinicalRecord$recorderArgs<ExtArgs>
+  paciente?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
+  cita?: boolean | Prisma.ClinicalRecord$citaArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.ClinicalRecord$veterinariaArgs<ExtArgs>
+  registrador?: boolean | Prisma.ClinicalRecord$registradorArgs<ExtArgs>
 }
 export type ClinicalRecordIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  patient?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
-  appointment?: boolean | Prisma.ClinicalRecord$appointmentArgs<ExtArgs>
-  veterinary?: boolean | Prisma.ClinicalRecord$veterinaryArgs<ExtArgs>
-  recorder?: boolean | Prisma.ClinicalRecord$recorderArgs<ExtArgs>
+  paciente?: boolean | Prisma.PatientDefaultArgs<ExtArgs>
+  cita?: boolean | Prisma.ClinicalRecord$citaArgs<ExtArgs>
+  veterinaria?: boolean | Prisma.ClinicalRecord$veterinariaArgs<ExtArgs>
+  registrador?: boolean | Prisma.ClinicalRecord$registradorArgs<ExtArgs>
 }
 
 export type $ClinicalRecordPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "ClinicalRecord"
   objects: {
-    patient: Prisma.$PatientPayload<ExtArgs>
-    appointment: Prisma.$AppointmentPayload<ExtArgs> | null
-    veterinary: Prisma.$VeterinaryPayload<ExtArgs> | null
-    recorder: Prisma.$OperatorPayload<ExtArgs> | null
-    vaccinations: Prisma.$VaccinationPayload<ExtArgs>[]
+    paciente: Prisma.$PatientPayload<ExtArgs>
+    cita: Prisma.$AppointmentPayload<ExtArgs> | null
+    veterinaria: Prisma.$VeterinaryPayload<ExtArgs> | null
+    registrador: Prisma.$OperatorPayload<ExtArgs> | null
+    vacunaciones: Prisma.$VaccinationPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
-    patientId: string
-    appointmentId: string | null
-    veterinaryId: string | null
-    recordedBy: string | null
-    recordType: string | null
-    diagnosis: string | null
-    symptoms: string | null
-    treatment: string | null
-    medications: runtime.JsonValue | null
-    labResults: runtime.JsonValue | null
-    images: runtime.JsonValue | null
-    observations: string | null
-    followUpDate: Date | null
-    createdAt: Date
-    updatedAt: Date
+    pacienteId: string
+    citaId: string | null
+    veterinariaId: string | null
+    registradoPor: string | null
+    tipoRegistro: string | null
+    diagnostico: string | null
+    sintomas: string | null
+    tratamiento: string | null
+    medicamentos: runtime.JsonValue | null
+    resultadosLaboratorio: runtime.JsonValue | null
+    imagenes: runtime.JsonValue | null
+    observaciones: string | null
+    fechaSeguimiento: Date | null
+    creadoEn: Date
+    actualizadoEn: Date
   }, ExtArgs["result"]["clinicalRecord"]>
   composites: {}
 }
@@ -1972,11 +1972,11 @@ readonly fields: ClinicalRecordFieldRefs;
  */
 export interface Prisma__ClinicalRecordClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  patient<T extends Prisma.PatientDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.PatientDefaultArgs<ExtArgs>>): Prisma.Prisma__PatientClient<runtime.Types.Result.GetResult<Prisma.$PatientPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  appointment<T extends Prisma.ClinicalRecord$appointmentArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ClinicalRecord$appointmentArgs<ExtArgs>>): Prisma.Prisma__AppointmentClient<runtime.Types.Result.GetResult<Prisma.$AppointmentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-  veterinary<T extends Prisma.ClinicalRecord$veterinaryArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ClinicalRecord$veterinaryArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-  recorder<T extends Prisma.ClinicalRecord$recorderArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ClinicalRecord$recorderArgs<ExtArgs>>): Prisma.Prisma__OperatorClient<runtime.Types.Result.GetResult<Prisma.$OperatorPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-  vaccinations<T extends Prisma.ClinicalRecord$vaccinationsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ClinicalRecord$vaccinationsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$VaccinationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  paciente<T extends Prisma.PatientDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.PatientDefaultArgs<ExtArgs>>): Prisma.Prisma__PatientClient<runtime.Types.Result.GetResult<Prisma.$PatientPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  cita<T extends Prisma.ClinicalRecord$citaArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ClinicalRecord$citaArgs<ExtArgs>>): Prisma.Prisma__AppointmentClient<runtime.Types.Result.GetResult<Prisma.$AppointmentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  veterinaria<T extends Prisma.ClinicalRecord$veterinariaArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ClinicalRecord$veterinariaArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  registrador<T extends Prisma.ClinicalRecord$registradorArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ClinicalRecord$registradorArgs<ExtArgs>>): Prisma.Prisma__OperatorClient<runtime.Types.Result.GetResult<Prisma.$OperatorPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  vacunaciones<T extends Prisma.ClinicalRecord$vacunacionesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ClinicalRecord$vacunacionesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$VaccinationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2007,21 +2007,21 @@ export interface Prisma__ClinicalRecordClient<T, Null = never, ExtArgs extends r
  */
 export interface ClinicalRecordFieldRefs {
   readonly id: Prisma.FieldRef<"ClinicalRecord", 'String'>
-  readonly patientId: Prisma.FieldRef<"ClinicalRecord", 'String'>
-  readonly appointmentId: Prisma.FieldRef<"ClinicalRecord", 'String'>
-  readonly veterinaryId: Prisma.FieldRef<"ClinicalRecord", 'String'>
-  readonly recordedBy: Prisma.FieldRef<"ClinicalRecord", 'String'>
-  readonly recordType: Prisma.FieldRef<"ClinicalRecord", 'String'>
-  readonly diagnosis: Prisma.FieldRef<"ClinicalRecord", 'String'>
-  readonly symptoms: Prisma.FieldRef<"ClinicalRecord", 'String'>
-  readonly treatment: Prisma.FieldRef<"ClinicalRecord", 'String'>
-  readonly medications: Prisma.FieldRef<"ClinicalRecord", 'Json'>
-  readonly labResults: Prisma.FieldRef<"ClinicalRecord", 'Json'>
-  readonly images: Prisma.FieldRef<"ClinicalRecord", 'Json'>
-  readonly observations: Prisma.FieldRef<"ClinicalRecord", 'String'>
-  readonly followUpDate: Prisma.FieldRef<"ClinicalRecord", 'DateTime'>
-  readonly createdAt: Prisma.FieldRef<"ClinicalRecord", 'DateTime'>
-  readonly updatedAt: Prisma.FieldRef<"ClinicalRecord", 'DateTime'>
+  readonly pacienteId: Prisma.FieldRef<"ClinicalRecord", 'String'>
+  readonly citaId: Prisma.FieldRef<"ClinicalRecord", 'String'>
+  readonly veterinariaId: Prisma.FieldRef<"ClinicalRecord", 'String'>
+  readonly registradoPor: Prisma.FieldRef<"ClinicalRecord", 'String'>
+  readonly tipoRegistro: Prisma.FieldRef<"ClinicalRecord", 'String'>
+  readonly diagnostico: Prisma.FieldRef<"ClinicalRecord", 'String'>
+  readonly sintomas: Prisma.FieldRef<"ClinicalRecord", 'String'>
+  readonly tratamiento: Prisma.FieldRef<"ClinicalRecord", 'String'>
+  readonly medicamentos: Prisma.FieldRef<"ClinicalRecord", 'Json'>
+  readonly resultadosLaboratorio: Prisma.FieldRef<"ClinicalRecord", 'Json'>
+  readonly imagenes: Prisma.FieldRef<"ClinicalRecord", 'Json'>
+  readonly observaciones: Prisma.FieldRef<"ClinicalRecord", 'String'>
+  readonly fechaSeguimiento: Prisma.FieldRef<"ClinicalRecord", 'DateTime'>
+  readonly creadoEn: Prisma.FieldRef<"ClinicalRecord", 'DateTime'>
+  readonly actualizadoEn: Prisma.FieldRef<"ClinicalRecord", 'DateTime'>
 }
     
 
@@ -2418,9 +2418,9 @@ export type ClinicalRecordDeleteManyArgs<ExtArgs extends runtime.Types.Extension
 }
 
 /**
- * ClinicalRecord.appointment
+ * ClinicalRecord.cita
  */
-export type ClinicalRecord$appointmentArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type ClinicalRecord$citaArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Appointment
    */
@@ -2437,9 +2437,9 @@ export type ClinicalRecord$appointmentArgs<ExtArgs extends runtime.Types.Extensi
 }
 
 /**
- * ClinicalRecord.veterinary
+ * ClinicalRecord.veterinaria
  */
-export type ClinicalRecord$veterinaryArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type ClinicalRecord$veterinariaArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Veterinary
    */
@@ -2456,9 +2456,9 @@ export type ClinicalRecord$veterinaryArgs<ExtArgs extends runtime.Types.Extensio
 }
 
 /**
- * ClinicalRecord.recorder
+ * ClinicalRecord.registrador
  */
-export type ClinicalRecord$recorderArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type ClinicalRecord$registradorArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Operator
    */
@@ -2475,9 +2475,9 @@ export type ClinicalRecord$recorderArgs<ExtArgs extends runtime.Types.Extensions
 }
 
 /**
- * ClinicalRecord.vaccinations
+ * ClinicalRecord.vacunaciones
  */
-export type ClinicalRecord$vaccinationsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type ClinicalRecord$vacunacionesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Vaccination
    */

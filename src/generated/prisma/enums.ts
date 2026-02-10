@@ -10,8 +10,8 @@
 */
 
 export const UserRole = {
-  owner: 'owner',
-  operator: 'operator',
+  propietario: 'propietario',
+  operador: 'operador',
   admin: 'admin'
 } as const
 
@@ -19,12 +19,12 @@ export type UserRole = (typeof UserRole)[keyof typeof UserRole]
 
 
 export const AppointmentStatus = {
-  scheduled: 'scheduled',
-  confirmed: 'confirmed',
-  in_progress: 'in_progress',
-  completed: 'completed',
-  cancelled: 'cancelled',
-  no_show: 'no_show'
+  programada: 'programada',
+  confirmada: 'confirmada',
+  en_progreso: 'en_progreso',
+  completada: 'completada',
+  cancelada: 'cancelada',
+  no_asistio: 'no_asistio'
 } as const
 
 export type AppointmentStatus = (typeof AppointmentStatus)[keyof typeof AppointmentStatus]

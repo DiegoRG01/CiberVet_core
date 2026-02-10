@@ -55,6 +55,8 @@ export const ModelName = {
   Veterinary: 'Veterinary',
   Owner: 'Owner',
   Operator: 'Operator',
+  Species: 'Species',
+  Breed: 'Breed',
   Patient: 'Patient',
   Appointment: 'Appointment',
   Procedure: 'Procedure',
@@ -82,14 +84,14 @@ export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof
 
 export const UserScalarFieldEnum = {
   id: 'id',
-  email: 'email',
-  fullName: 'fullName',
-  phone: 'phone',
-  role: 'role',
-  veterinaryId: 'veterinaryId',
-  isActive: 'isActive',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  correo: 'correo',
+  nombreCompleto: 'nombreCompleto',
+  telefono: 'telefono',
+  rol: 'rol',
+  veterinariaId: 'veterinariaId',
+  estaActivo: 'estaActivo',
+  creadoEn: 'creadoEn',
+  actualizadoEn: 'actualizadoEn'
 } as const
 
 export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
@@ -97,19 +99,19 @@ export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof User
 
 export const VeterinaryScalarFieldEnum = {
   id: 'id',
-  name: 'name',
-  email: 'email',
-  phone: 'phone',
-  address: 'address',
-  city: 'city',
-  state: 'state',
-  country: 'country',
-  postalCode: 'postalCode',
-  logoUrl: 'logoUrl',
-  businessHours: 'businessHours',
-  isActive: 'isActive',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  nombre: 'nombre',
+  correo: 'correo',
+  telefono: 'telefono',
+  direccion: 'direccion',
+  ciudad: 'ciudad',
+  estado: 'estado',
+  pais: 'pais',
+  codigoPostal: 'codigoPostal',
+  urlLogo: 'urlLogo',
+  horarioNegocio: 'horarioNegocio',
+  estaActivo: 'estaActivo',
+  creadoEn: 'creadoEn',
+  actualizadoEn: 'actualizadoEn'
 } as const
 
 export type VeterinaryScalarFieldEnum = (typeof VeterinaryScalarFieldEnum)[keyof typeof VeterinaryScalarFieldEnum]
@@ -117,15 +119,15 @@ export type VeterinaryScalarFieldEnum = (typeof VeterinaryScalarFieldEnum)[keyof
 
 export const OwnerScalarFieldEnum = {
   id: 'id',
-  userId: 'userId',
-  veterinaryId: 'veterinaryId',
-  address: 'address',
-  city: 'city',
-  emergencyContactName: 'emergencyContactName',
-  emergencyContactPhone: 'emergencyContactPhone',
-  notes: 'notes',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  usuarioId: 'usuarioId',
+  veterinariaId: 'veterinariaId',
+  direccion: 'direccion',
+  ciudad: 'ciudad',
+  nombreContactoEmergencia: 'nombreContactoEmergencia',
+  telefonoContactoEmergencia: 'telefonoContactoEmergencia',
+  notas: 'notas',
+  creadoEn: 'creadoEn',
+  actualizadoEn: 'actualizadoEn'
 } as const
 
 export type OwnerScalarFieldEnum = (typeof OwnerScalarFieldEnum)[keyof typeof OwnerScalarFieldEnum]
@@ -133,38 +135,63 @@ export type OwnerScalarFieldEnum = (typeof OwnerScalarFieldEnum)[keyof typeof Ow
 
 export const OperatorScalarFieldEnum = {
   id: 'id',
-  userId: 'userId',
-  veterinaryId: 'veterinaryId',
-  position: 'position',
-  hireDate: 'hireDate',
-  isActive: 'isActive',
-  permissions: 'permissions',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  usuarioId: 'usuarioId',
+  veterinariaId: 'veterinariaId',
+  posicion: 'posicion',
+  fechaContratacion: 'fechaContratacion',
+  estaActivo: 'estaActivo',
+  permisos: 'permisos',
+  creadoEn: 'creadoEn',
+  actualizadoEn: 'actualizadoEn'
 } as const
 
 export type OperatorScalarFieldEnum = (typeof OperatorScalarFieldEnum)[keyof typeof OperatorScalarFieldEnum]
 
 
+export const SpeciesScalarFieldEnum = {
+  id: 'id',
+  nombre: 'nombre',
+  descripcion: 'descripcion',
+  estaActivo: 'estaActivo',
+  creadoEn: 'creadoEn',
+  actualizadoEn: 'actualizadoEn'
+} as const
+
+export type SpeciesScalarFieldEnum = (typeof SpeciesScalarFieldEnum)[keyof typeof SpeciesScalarFieldEnum]
+
+
+export const BreedScalarFieldEnum = {
+  id: 'id',
+  especieId: 'especieId',
+  nombre: 'nombre',
+  descripcion: 'descripcion',
+  estaActivo: 'estaActivo',
+  creadoEn: 'creadoEn',
+  actualizadoEn: 'actualizadoEn'
+} as const
+
+export type BreedScalarFieldEnum = (typeof BreedScalarFieldEnum)[keyof typeof BreedScalarFieldEnum]
+
+
 export const PatientScalarFieldEnum = {
   id: 'id',
-  ownerId: 'ownerId',
-  veterinaryId: 'veterinaryId',
-  name: 'name',
-  species: 'species',
-  breed: 'breed',
+  propietarioId: 'propietarioId',
+  veterinariaId: 'veterinariaId',
+  nombre: 'nombre',
+  especieId: 'especieId',
+  razaId: 'razaId',
   color: 'color',
-  birthDate: 'birthDate',
-  gender: 'gender',
-  weight: 'weight',
-  photoUrl: 'photoUrl',
-  microchipNumber: 'microchipNumber',
-  isNeutered: 'isNeutered',
-  allergies: 'allergies',
-  specialConditions: 'specialConditions',
-  isActive: 'isActive',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  fechaNacimiento: 'fechaNacimiento',
+  genero: 'genero',
+  peso: 'peso',
+  urlFoto: 'urlFoto',
+  numeroMicrochip: 'numeroMicrochip',
+  estaCastrado: 'estaCastrado',
+  alergias: 'alergias',
+  condicionesEspeciales: 'condicionesEspeciales',
+  estaActivo: 'estaActivo',
+  creadoEn: 'creadoEn',
+  actualizadoEn: 'actualizadoEn'
 } as const
 
 export type PatientScalarFieldEnum = (typeof PatientScalarFieldEnum)[keyof typeof PatientScalarFieldEnum]
@@ -172,24 +199,24 @@ export type PatientScalarFieldEnum = (typeof PatientScalarFieldEnum)[keyof typeo
 
 export const AppointmentScalarFieldEnum = {
   id: 'id',
-  patientId: 'patientId',
-  ownerId: 'ownerId',
-  veterinaryId: 'veterinaryId',
-  operatorId: 'operatorId',
-  dateTime: 'dateTime',
-  durationMinutes: 'durationMinutes',
-  status: 'status',
-  appointmentType: 'appointmentType',
-  reason: 'reason',
-  notes: 'notes',
-  googleCalendarEventId: 'googleCalendarEventId',
-  reminderSent: 'reminderSent',
-  reminderSentAt: 'reminderSentAt',
-  cancelledAt: 'cancelledAt',
-  cancellationReason: 'cancellationReason',
-  createdBy: 'createdBy',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  pacienteId: 'pacienteId',
+  propietarioId: 'propietarioId',
+  veterinariaId: 'veterinariaId',
+  operadorId: 'operadorId',
+  fechaHora: 'fechaHora',
+  duracionMinutos: 'duracionMinutos',
+  estado: 'estado',
+  tipoCita: 'tipoCita',
+  motivo: 'motivo',
+  notas: 'notas',
+  idEventoGoogleCalendar: 'idEventoGoogleCalendar',
+  recordatorioEnviado: 'recordatorioEnviado',
+  recordatorioEnviadoEn: 'recordatorioEnviadoEn',
+  canceladoEn: 'canceladoEn',
+  motivoCancelacion: 'motivoCancelacion',
+  creadoPor: 'creadoPor',
+  creadoEn: 'creadoEn',
+  actualizadoEn: 'actualizadoEn'
 } as const
 
 export type AppointmentScalarFieldEnum = (typeof AppointmentScalarFieldEnum)[keyof typeof AppointmentScalarFieldEnum]
@@ -197,14 +224,14 @@ export type AppointmentScalarFieldEnum = (typeof AppointmentScalarFieldEnum)[key
 
 export const ProcedureScalarFieldEnum = {
   id: 'id',
-  appointmentId: 'appointmentId',
-  name: 'name',
-  description: 'description',
-  cost: 'cost',
-  durationMinutes: 'durationMinutes',
-  performedBy: 'performedBy',
-  performedAt: 'performedAt',
-  createdAt: 'createdAt'
+  citaId: 'citaId',
+  nombre: 'nombre',
+  descripcion: 'descripcion',
+  costo: 'costo',
+  duracionMinutos: 'duracionMinutos',
+  realizadoPor: 'realizadoPor',
+  realizadoEn: 'realizadoEn',
+  creadoEn: 'creadoEn'
 } as const
 
 export type ProcedureScalarFieldEnum = (typeof ProcedureScalarFieldEnum)[keyof typeof ProcedureScalarFieldEnum]
@@ -212,21 +239,21 @@ export type ProcedureScalarFieldEnum = (typeof ProcedureScalarFieldEnum)[keyof t
 
 export const ClinicalRecordScalarFieldEnum = {
   id: 'id',
-  patientId: 'patientId',
-  appointmentId: 'appointmentId',
-  veterinaryId: 'veterinaryId',
-  recordedBy: 'recordedBy',
-  recordType: 'recordType',
-  diagnosis: 'diagnosis',
-  symptoms: 'symptoms',
-  treatment: 'treatment',
-  medications: 'medications',
-  labResults: 'labResults',
-  images: 'images',
-  observations: 'observations',
-  followUpDate: 'followUpDate',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  pacienteId: 'pacienteId',
+  citaId: 'citaId',
+  veterinariaId: 'veterinariaId',
+  registradoPor: 'registradoPor',
+  tipoRegistro: 'tipoRegistro',
+  diagnostico: 'diagnostico',
+  sintomas: 'sintomas',
+  tratamiento: 'tratamiento',
+  medicamentos: 'medicamentos',
+  resultadosLaboratorio: 'resultadosLaboratorio',
+  imagenes: 'imagenes',
+  observaciones: 'observaciones',
+  fechaSeguimiento: 'fechaSeguimiento',
+  creadoEn: 'creadoEn',
+  actualizadoEn: 'actualizadoEn'
 } as const
 
 export type ClinicalRecordScalarFieldEnum = (typeof ClinicalRecordScalarFieldEnum)[keyof typeof ClinicalRecordScalarFieldEnum]
@@ -234,16 +261,16 @@ export type ClinicalRecordScalarFieldEnum = (typeof ClinicalRecordScalarFieldEnu
 
 export const VaccinationScalarFieldEnum = {
   id: 'id',
-  patientId: 'patientId',
-  clinicalRecordId: 'clinicalRecordId',
-  vaccineName: 'vaccineName',
-  vaccineType: 'vaccineType',
-  batchNumber: 'batchNumber',
-  administeredDate: 'administeredDate',
-  nextDueDate: 'nextDueDate',
-  administeredBy: 'administeredBy',
-  notes: 'notes',
-  createdAt: 'createdAt'
+  pacienteId: 'pacienteId',
+  registroClinicoId: 'registroClinicoId',
+  nombreVacuna: 'nombreVacuna',
+  tipoVacuna: 'tipoVacuna',
+  numeroLote: 'numeroLote',
+  fechaAdministracion: 'fechaAdministracion',
+  proximaFechaVencimiento: 'proximaFechaVencimiento',
+  administradoPor: 'administradoPor',
+  notas: 'notas',
+  creadoEn: 'creadoEn'
 } as const
 
 export type VaccinationScalarFieldEnum = (typeof VaccinationScalarFieldEnum)[keyof typeof VaccinationScalarFieldEnum]
@@ -251,16 +278,16 @@ export type VaccinationScalarFieldEnum = (typeof VaccinationScalarFieldEnum)[key
 
 export const EmailReminderScalarFieldEnum = {
   id: 'id',
-  appointmentId: 'appointmentId',
-  ownerId: 'ownerId',
-  emailTo: 'emailTo',
-  subject: 'subject',
-  body: 'body',
-  scheduledFor: 'scheduledFor',
-  sentAt: 'sentAt',
-  status: 'status',
-  errorMessage: 'errorMessage',
-  createdAt: 'createdAt'
+  citaId: 'citaId',
+  propietarioId: 'propietarioId',
+  correoDestino: 'correoDestino',
+  asunto: 'asunto',
+  cuerpo: 'cuerpo',
+  programadoPara: 'programadoPara',
+  enviadoEn: 'enviadoEn',
+  estado: 'estado',
+  mensajeError: 'mensajeError',
+  creadoEn: 'creadoEn'
 } as const
 
 export type EmailReminderScalarFieldEnum = (typeof EmailReminderScalarFieldEnum)[keyof typeof EmailReminderScalarFieldEnum]
@@ -268,14 +295,14 @@ export type EmailReminderScalarFieldEnum = (typeof EmailReminderScalarFieldEnum)
 
 export const ActivityLogScalarFieldEnum = {
   id: 'id',
-  veterinaryId: 'veterinaryId',
-  userId: 'userId',
-  actionType: 'actionType',
-  entityType: 'entityType',
-  entityId: 'entityId',
-  description: 'description',
-  metadata: 'metadata',
-  createdAt: 'createdAt'
+  veterinariaId: 'veterinariaId',
+  usuarioId: 'usuarioId',
+  tipoAccion: 'tipoAccion',
+  tipoEntidad: 'tipoEntidad',
+  entidadId: 'entidadId',
+  descripcion: 'descripcion',
+  metadatos: 'metadatos',
+  creadoEn: 'creadoEn'
 } as const
 
 export type ActivityLogScalarFieldEnum = (typeof ActivityLogScalarFieldEnum)[keyof typeof ActivityLogScalarFieldEnum]

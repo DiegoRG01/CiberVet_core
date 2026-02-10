@@ -58,6 +58,16 @@ export type Owner = Prisma.OwnerModel
  */
 export type Operator = Prisma.OperatorModel
 /**
+ * Model Species
+ * 
+ */
+export type Species = Prisma.SpeciesModel
+/**
+ * Model Breed
+ * 
+ */
+export type Breed = Prisma.BreedModel
+/**
  * Model Patient
  * 
  */
