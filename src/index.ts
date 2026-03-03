@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import routes from "./routes";
 import { errorHandler } from "./middlewares/errorHandler";
 
+
 // Cargar variables de entorno
 dotenv.config();
 

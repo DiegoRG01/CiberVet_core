@@ -40,7 +40,7 @@ router.get(
 router.post(
   "/",
   authenticate,
-  authorize("operator", "admin"),
+  authorize("operator", "admin", "propietario"),
   validateRequest(createAppointmentSchema),
   appointmentController.createAppointment.bind(appointmentController)
 );

@@ -4,6 +4,7 @@ import userRoutes from "./user.routes";
 import speciesRoutes from "./species.routes";
 import breedRoutes from "./breed.routes";
 import appointmentRoutes from "./appointment.routes";
+import patientRoutes from "./patient.routes";
 
 const router: Router = Router();
 
@@ -12,6 +13,9 @@ router.use("/auth", authRoutes);
 
 // Rutas de usuarios
 router.use("/users", userRoutes);
+
+// Rutas de pacientes
+router.use("/patients", patientRoutes);
 
 // Rutas de especies
 router.use("/species", speciesRoutes);

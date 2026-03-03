@@ -13,12 +13,13 @@ export class AppointmentController {
       // Validar que el status sea válido si se proporciona
       if (status) {
         const validStatuses: AppointmentStatus[] = [
-          "scheduled",
-          "confirmed",
-          "in_progress",
-          "completed",
-          "cancelled",
-          "no_show",
+          "Programada",
+          "Confirmada",
+          "En Progreso",
+          "Completada",
+          "Cancelada",
+          "No Asistió",
+
         ];
         if (!validStatuses.includes(status)) {
           res.status(400).json({

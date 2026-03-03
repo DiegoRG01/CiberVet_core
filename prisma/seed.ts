@@ -234,7 +234,7 @@ async function main() {
       correo: "maria@example.com",
       nombreCompleto: "María García",
       telefono: "809-555-0001",
-      rol: "propietario" as const,
+      rol: "admin" as const,
     },
     {
       id: "3cbb9ba5-578d-46fc-9cf9-f3841614cfc9",
