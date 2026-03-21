@@ -63,7 +63,7 @@ export class UserService {
     userId: string,
     data: {
       nombreCompleto?: string;
-      telefono?: string;
+      telefono?: string | null;
       rol?: UserRole;
       estaActivo?: boolean;
     },

@@ -2,6 +2,13 @@ import { supabase } from "../config/supabase";
 import { prisma } from "../config/prisma";
 import { RegisterDTO, LoginDTO } from "../models/schemas/auth.schema";
 import { AuthResponse } from "../models/dto/auth.dto";
+import { UserRole } from "../generated/prisma/enums";
+
+const AUTH_TO_DB_ROLE_MAP: Record<RegisterDTO["role"], UserRole> = {
+  owner: "propietario",
+  operator: "operador",
+  admin: "admin",
+};
 
 export class AuthService {
   /**
@@ -9,6 +16,8 @@ export class AuthService {
    */
   async register(data: RegisterDTO): Promise<AuthResponse> {
     try {
+      const dbRole = AUTH_TO_DB_ROLE_MAP[data.role];
+
       // 1. Verificar si el usuario ya existe en la BD
       const existingUser = await prisma.user.findUnique({
         where: { correo: data.email },
@@ -44,12 +53,12 @@ export class AuthService {
           id: authData.user.id,
           correo: data.email,
           nombreCompleto: data.name,
-          rol: data.role,
+          rol: dbRole,
         },
       });
 
       // 4. Crear registro específico según el rol
-      if (data.role === "propietario") {
+      if (dbRole === "propietario") {
         await prisma.owner.create({
           data: {
             usuarioId: dbUser.id,
