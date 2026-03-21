@@ -92,6 +92,37 @@ export class UserService {
   }
 
   /**
+   * Obtener todos los propietarios (para selectores)
+   */
+  async getOwners() {
+    try {
+      const owners = await prisma.owner.findMany({
+        where: {
+          usuario: { estaActivo: true },
+        },
+        select: {
+          id: true,
+          usuario: {
+            select: {
+              id: true,
+              nombreCompleto: true,
+              correo: true,
+            },
+          },
+        },
+        orderBy: {
+          usuario: { nombreCompleto: "asc" },
+        },
+      });
+
+      return owners;
+    } catch (error) {
+      console.error("Error en UserService.getOwners:", error);
+      throw error;
+    }
+  }
+
+  /**
    * Eliminar (desactivar) un usuario
    */
   async deleteUser(userId: string) {

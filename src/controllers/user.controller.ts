@@ -3,6 +3,27 @@ import { userService } from "../services/user.service";
 
 export class UserController {
   /**
+   * Obtener lista de propietarios (para selectores)
+   */
+  async getOwners(req: Request, res: Response) {
+    try {
+      const owners = await userService.getOwners();
+
+      res.status(200).json({
+        success: true,
+        data: owners,
+      });
+    } catch (error: any) {
+      console.error("Error en UserController.getOwners:", error);
+      res.status(500).json({
+        success: false,
+        error: "Error del servidor",
+        message: error.message || "Error al obtener propietarios",
+      });
+    }
+  }
+
+  /**
    * Obtener todos los usuarios
    */
   async getAllUsers(req: Request, res: Response) {

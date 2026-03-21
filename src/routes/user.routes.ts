@@ -5,6 +5,18 @@ import { authenticate, authorize } from "../middlewares/auth.middleware";
 const router: Router = Router();
 
 /**
+ * @route   GET /api/users/owners
+ * @desc    Obtener lista de propietarios (para selectores en formularios)
+ * @access  Private (admin, operador)
+ */
+router.get(
+  "/owners",
+  authenticate,
+  authorize("admin", "operador"),
+  userController.getOwners.bind(userController),
+);
+
+/**
  * @route   GET /api/users
  * @desc    Obtener todos los usuarios
  * @access  Private (admin, operator)
