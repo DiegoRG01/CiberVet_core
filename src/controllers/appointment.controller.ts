@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { appointmentService } from "../services/appointment.service";
 import { AppointmentStatus } from "../generated/prisma/enums";
+import { prisma } from "../config/prisma";
 
 export class AppointmentController {
   /**
@@ -10,7 +11,6 @@ export class AppointmentController {
     try {
       const status = req.query.status as AppointmentStatus | undefined;
 
-      // Validar que el status sea válido si se proporciona
       if (status) {
         const validStatuses: AppointmentStatus[] = [
           "scheduled",
@@ -30,7 +30,21 @@ export class AppointmentController {
         }
       }
 
-      const appointments = await appointmentService.getAllAppointments(status);
+      // Si el usuario es propietario, filtrar solo sus citas
+      let propietarioId: string | undefined;
+      if (req.user?.role === "propietario") {
+        const owner = await prisma.owner.findUnique({
+          where: { usuarioId: req.user.id },
+          select: { id: true },
+        });
+        if (!owner) {
+          res.status(200).json({ success: true, data: [] });
+          return;
+        }
+        propietarioId = owner.id;
+      }
+
+      const appointments = await appointmentService.getAllAppointments(status as any, propietarioId);
 
       res.status(200).json({
         success: true,

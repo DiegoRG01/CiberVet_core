@@ -5,10 +5,14 @@ export class AppointmentService {
   /**
    * Obtener todas las citas con filtros opcionales
    */
-  async getAllAppointments(estado?: AppointmentStatus) {
+  async getAllAppointments(estado?: AppointmentStatus, propietarioId?: string) {
     try {
+      const where: Record<string, unknown> = {};
+      if (estado) where.estado = estado;
+      if (propietarioId) where.propietarioId = propietarioId;
+
       const appointments = await prisma.appointment.findMany({
-        where: estado ? { estado } : undefined,
+        where: Object.keys(where).length ? where : undefined,
         include: {
           paciente: {
             select: {
