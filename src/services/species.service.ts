@@ -66,7 +66,11 @@ export class SpeciesService {
   async createSpecies(data: CreateSpeciesDTO) {
     try {
       const species = await prisma.species.create({
-        data,
+        data: {
+          nombre: data.name,
+          descripcion: data.description,
+          estaActivo: data.isActive ?? true,
+        },
       });
 
       return species;
@@ -83,7 +87,13 @@ export class SpeciesService {
     try {
       const species = await prisma.species.update({
         where: { id: speciesId },
-        data,
+        data: {
+          ...(data.name !== undefined && { nombre: data.name }),
+          ...(data.description !== undefined && {
+            descripcion: data.description,
+          }),
+          ...(data.isActive !== undefined && { estaActivo: data.isActive }),
+        },
       });
 
       return species;

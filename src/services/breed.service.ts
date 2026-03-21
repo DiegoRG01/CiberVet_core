@@ -79,7 +79,12 @@ export class BreedService {
       }
 
       const breed = await prisma.breed.create({
-        data,
+        data: {
+          especieId: data.speciesId,
+          nombre: data.name,
+          descripcion: data.description,
+          estaActivo: data.isActive ?? true,
+        },
         include: {
           especie: {
             select: {
@@ -104,7 +109,13 @@ export class BreedService {
     try {
       const breed = await prisma.breed.update({
         where: { id: breedId },
-        data,
+        data: {
+          ...(data.name !== undefined && { nombre: data.name }),
+          ...(data.description !== undefined && {
+            descripcion: data.description,
+          }),
+          ...(data.isActive !== undefined && { estaActivo: data.isActive }),
+        },
         include: {
           especie: {
             select: {
