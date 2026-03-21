@@ -71,6 +71,14 @@ export class SpeciesService {
           descripcion: data.description,
           estaActivo: data.isActive ?? true,
         },
+        include: {
+          _count: {
+            select: {
+              razas: true,
+              pacientes: true,
+            },
+          },
+        },
       });
 
       return species;
@@ -80,9 +88,6 @@ export class SpeciesService {
     }
   }
 
-  /**
-   * Actualizar una especie
-   */
   async updateSpecies(speciesId: string, data: UpdateSpeciesDTO) {
     try {
       const species = await prisma.species.update({
@@ -94,6 +99,14 @@ export class SpeciesService {
           }),
           ...(data.isActive !== undefined && { estaActivo: data.isActive }),
         },
+        include: {
+          _count: {
+            select: {
+              razas: true,
+              pacientes: true,
+            },
+          },
+        },
       });
 
       return species;
@@ -103,15 +116,18 @@ export class SpeciesService {
     }
   }
 
-  /**
-   * Eliminar (desactivar) una especie
-   */
   async deleteSpecies(speciesId: string) {
     try {
-      const species = await prisma.species.update({
-        where: { id: speciesId },
-        data: { estaActivo: false },
-      });
+      const [, species] = await prisma.$transaction([
+        prisma.breed.updateMany({
+          where: { especieId: speciesId, estaActivo: true },
+          data: { estaActivo: false },
+        }),
+        prisma.species.update({
+          where: { id: speciesId },
+          data: { estaActivo: false },
+        }),
+      ]);
 
       return species;
     } catch (error) {
@@ -134,6 +150,12 @@ export class SpeciesService {
           ...(includeInactive ? {} : { estaActivo: true }),
         },
         include: {
+          especie: {
+            select: {
+              id: true,
+              nombre: true,
+            },
+          },
           _count: {
             select: {
               pacientes: true,
