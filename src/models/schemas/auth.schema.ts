@@ -23,6 +23,10 @@ export const registerSchema = z.object({
       errorMap: () => ({ message: "El rol debe ser owner, operator o admin" }),
     })
     .default("owner"),
+  phone: z
+    .string()
+    .max(20, "El teléfono no puede tener más de 20 caracteres")
+    .optional(),
 });
 
 export const loginSchema = z.object({

@@ -54,6 +54,7 @@ export class AuthService {
           correo: data.email,
           nombreCompleto: data.name,
           rol: dbRole,
+          ...(data.phone && { telefono: data.phone }),
         },
       });
 
