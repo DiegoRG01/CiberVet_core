@@ -9,9 +9,9 @@
  * 🟢 You can import this file directly.
  */
 export type * from './models/User'
-export type * from './models/Veterinary'
+export type * from './models/Business'
 export type * from './models/Owner'
-export type * from './models/Operator'
+export type * from './models/Veterinarian'
 export type * from './models/Species'
 export type * from './models/Breed'
 export type * from './models/Patient'

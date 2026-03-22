@@ -1,5 +1,6 @@
 import { prisma } from "../config/prisma";
 import { CreatePatientDTO, UpdatePatientDTO } from "../models/schemas/patient.schema";
+import { logActivity, ACCIONES, ENTIDADES } from "../utils/activityLogger";
 
 const PATIENT_INCLUDE = {
   especie: { select: { id: true, nombre: true } },
@@ -118,7 +119,7 @@ export class PatientService {
         }
       }
 
-      return await prisma.patient.create({
+      const patient = await prisma.patient.create({
         data: {
           propietarioId: data.ownerId,
           especieId: data.speciesId,
@@ -135,6 +136,16 @@ export class PatientService {
         },
         include: PATIENT_INCLUDE,
       });
+
+      logActivity({
+        tipoAccion: ACCIONES.CREACION,
+        tipoEntidad: ENTIDADES.PACIENTE,
+        entidadId: patient.id,
+        descripcion: `Nuevo paciente registrado: ${patient.nombre}`,
+        veterinariaId: patient.veterinariaId,
+      });
+
+      return patient;
     } catch (error) {
       console.error("Error en PatientService.createPatient:", error);
       throw error;
@@ -199,10 +210,20 @@ export class PatientService {
 
   async deactivatePatient(patientId: string) {
     try {
-      return await prisma.patient.update({
+      const patient = await prisma.patient.update({
         where: { id: patientId },
         data: { estaActivo: false },
       });
+
+      logActivity({
+        tipoAccion: ACCIONES.DESACTIVACION,
+        tipoEntidad: ENTIDADES.PACIENTE,
+        entidadId: patient.id,
+        descripcion: `Paciente desactivado: ${patient.nombre}`,
+        veterinariaId: patient.veterinariaId,
+      });
+
+      return patient;
     } catch (error) {
       console.error("Error en PatientService.deactivatePatient:", error);
       throw error;

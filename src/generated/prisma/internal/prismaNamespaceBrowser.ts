@@ -52,9 +52,9 @@ export const AnyNull = runtime.AnyNull
 
 export const ModelName = {
   User: 'User',
-  Veterinary: 'Veterinary',
+  Business: 'Business',
   Owner: 'Owner',
-  Operator: 'Operator',
+  Veterinarian: 'Veterinarian',
   Species: 'Species',
   Breed: 'Breed',
   Patient: 'Patient',
@@ -98,7 +98,7 @@ export const UserScalarFieldEnum = {
 export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
 
 
-export const VeterinaryScalarFieldEnum = {
+export const BusinessScalarFieldEnum = {
   id: 'id',
   nombre: 'nombre',
   correo: 'correo',
@@ -115,7 +115,7 @@ export const VeterinaryScalarFieldEnum = {
   actualizadoEn: 'actualizadoEn'
 } as const
 
-export type VeterinaryScalarFieldEnum = (typeof VeterinaryScalarFieldEnum)[keyof typeof VeterinaryScalarFieldEnum]
+export type BusinessScalarFieldEnum = (typeof BusinessScalarFieldEnum)[keyof typeof BusinessScalarFieldEnum]
 
 
 export const OwnerScalarFieldEnum = {
@@ -134,7 +134,7 @@ export const OwnerScalarFieldEnum = {
 export type OwnerScalarFieldEnum = (typeof OwnerScalarFieldEnum)[keyof typeof OwnerScalarFieldEnum]
 
 
-export const OperatorScalarFieldEnum = {
+export const VeterinarianScalarFieldEnum = {
   id: 'id',
   usuarioId: 'usuarioId',
   veterinariaId: 'veterinariaId',
@@ -146,7 +146,7 @@ export const OperatorScalarFieldEnum = {
   actualizadoEn: 'actualizadoEn'
 } as const
 
-export type OperatorScalarFieldEnum = (typeof OperatorScalarFieldEnum)[keyof typeof OperatorScalarFieldEnum]
+export type VeterinarianScalarFieldEnum = (typeof VeterinarianScalarFieldEnum)[keyof typeof VeterinarianScalarFieldEnum]
 
 
 export const SpeciesScalarFieldEnum = {

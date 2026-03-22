@@ -214,9 +214,9 @@ export type UserWhereInput = {
   estaActivo?: Prisma.BoolFilter<"User"> | boolean
   creadoEn?: Prisma.DateTimeFilter<"User"> | Date | string
   actualizadoEn?: Prisma.DateTimeFilter<"User"> | Date | string
-  veterinaria?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
+  veterinaria?: Prisma.XOR<Prisma.BusinessNullableScalarRelationFilter, Prisma.BusinessWhereInput> | null
   propietario?: Prisma.XOR<Prisma.OwnerNullableScalarRelationFilter, Prisma.OwnerWhereInput> | null
-  operador?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
+  veterinarian?: Prisma.XOR<Prisma.VeterinarianNullableScalarRelationFilter, Prisma.VeterinarianWhereInput> | null
   citasCreadas?: Prisma.AppointmentListRelationFilter
 }
 
@@ -230,9 +230,9 @@ export type UserOrderByWithRelationInput = {
   estaActivo?: Prisma.SortOrder
   creadoEn?: Prisma.SortOrder
   actualizadoEn?: Prisma.SortOrder
-  veterinaria?: Prisma.VeterinaryOrderByWithRelationInput
+  veterinaria?: Prisma.BusinessOrderByWithRelationInput
   propietario?: Prisma.OwnerOrderByWithRelationInput
-  operador?: Prisma.OperatorOrderByWithRelationInput
+  veterinarian?: Prisma.VeterinarianOrderByWithRelationInput
   citasCreadas?: Prisma.AppointmentOrderByRelationAggregateInput
 }
 
@@ -249,9 +249,9 @@ export type UserWhereUniqueInput = Prisma.AtLeast<{
   estaActivo?: Prisma.BoolFilter<"User"> | boolean
   creadoEn?: Prisma.DateTimeFilter<"User"> | Date | string
   actualizadoEn?: Prisma.DateTimeFilter<"User"> | Date | string
-  veterinaria?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
+  veterinaria?: Prisma.XOR<Prisma.BusinessNullableScalarRelationFilter, Prisma.BusinessWhereInput> | null
   propietario?: Prisma.XOR<Prisma.OwnerNullableScalarRelationFilter, Prisma.OwnerWhereInput> | null
-  operador?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
+  veterinarian?: Prisma.XOR<Prisma.VeterinarianNullableScalarRelationFilter, Prisma.VeterinarianWhereInput> | null
   citasCreadas?: Prisma.AppointmentListRelationFilter
 }, "id" | "correo">
 
@@ -294,9 +294,9 @@ export type UserCreateInput = {
   estaActivo?: boolean
   creadoEn?: Date | string
   actualizadoEn?: Date | string
-  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutUsuariosInput
+  veterinaria?: Prisma.BusinessCreateNestedOneWithoutUsuariosInput
   propietario?: Prisma.OwnerCreateNestedOneWithoutUsuarioInput
-  operador?: Prisma.OperatorCreateNestedOneWithoutUsuarioInput
+  veterinarian?: Prisma.VeterinarianCreateNestedOneWithoutUsuarioInput
   citasCreadas?: Prisma.AppointmentCreateNestedManyWithoutCreadorInput
 }
 
@@ -311,7 +311,7 @@ export type UserUncheckedCreateInput = {
   creadoEn?: Date | string
   actualizadoEn?: Date | string
   propietario?: Prisma.OwnerUncheckedCreateNestedOneWithoutUsuarioInput
-  operador?: Prisma.OperatorUncheckedCreateNestedOneWithoutUsuarioInput
+  veterinarian?: Prisma.VeterinarianUncheckedCreateNestedOneWithoutUsuarioInput
   citasCreadas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutCreadorInput
 }
 
@@ -324,9 +324,9 @@ export type UserUpdateInput = {
   estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  veterinaria?: Prisma.VeterinaryUpdateOneWithoutUsuariosNestedInput
+  veterinaria?: Prisma.BusinessUpdateOneWithoutUsuariosNestedInput
   propietario?: Prisma.OwnerUpdateOneWithoutUsuarioNestedInput
-  operador?: Prisma.OperatorUpdateOneWithoutUsuarioNestedInput
+  veterinarian?: Prisma.VeterinarianUpdateOneWithoutUsuarioNestedInput
   citasCreadas?: Prisma.AppointmentUpdateManyWithoutCreadorNestedInput
 }
 
@@ -341,7 +341,7 @@ export type UserUncheckedUpdateInput = {
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   propietario?: Prisma.OwnerUncheckedUpdateOneWithoutUsuarioNestedInput
-  operador?: Prisma.OperatorUncheckedUpdateOneWithoutUsuarioNestedInput
+  veterinarian?: Prisma.VeterinarianUncheckedUpdateOneWithoutUsuarioNestedInput
   citasCreadas?: Prisma.AppointmentUncheckedUpdateManyWithoutCreadorNestedInput
 }
 
@@ -512,18 +512,18 @@ export type UserUpdateOneRequiredWithoutPropietarioNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutPropietarioInput, Prisma.UserUpdateWithoutPropietarioInput>, Prisma.UserUncheckedUpdateWithoutPropietarioInput>
 }
 
-export type UserCreateNestedOneWithoutOperadorInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutOperadorInput, Prisma.UserUncheckedCreateWithoutOperadorInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutOperadorInput
+export type UserCreateNestedOneWithoutVeterinarianInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutVeterinarianInput, Prisma.UserUncheckedCreateWithoutVeterinarianInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutVeterinarianInput
   connect?: Prisma.UserWhereUniqueInput
 }
 
-export type UserUpdateOneRequiredWithoutOperadorNestedInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutOperadorInput, Prisma.UserUncheckedCreateWithoutOperadorInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutOperadorInput
-  upsert?: Prisma.UserUpsertWithoutOperadorInput
+export type UserUpdateOneRequiredWithoutVeterinarianNestedInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutVeterinarianInput, Prisma.UserUncheckedCreateWithoutVeterinarianInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutVeterinarianInput
+  upsert?: Prisma.UserUpsertWithoutVeterinarianInput
   connect?: Prisma.UserWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutOperadorInput, Prisma.UserUpdateWithoutOperadorInput>, Prisma.UserUncheckedUpdateWithoutOperadorInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutVeterinarianInput, Prisma.UserUpdateWithoutVeterinarianInput>, Prisma.UserUncheckedUpdateWithoutVeterinarianInput>
 }
 
 export type UserCreateNestedOneWithoutCitasCreadasInput = {
@@ -552,7 +552,7 @@ export type UserCreateWithoutVeterinariaInput = {
   creadoEn?: Date | string
   actualizadoEn?: Date | string
   propietario?: Prisma.OwnerCreateNestedOneWithoutUsuarioInput
-  operador?: Prisma.OperatorCreateNestedOneWithoutUsuarioInput
+  veterinarian?: Prisma.VeterinarianCreateNestedOneWithoutUsuarioInput
   citasCreadas?: Prisma.AppointmentCreateNestedManyWithoutCreadorInput
 }
 
@@ -566,7 +566,7 @@ export type UserUncheckedCreateWithoutVeterinariaInput = {
   creadoEn?: Date | string
   actualizadoEn?: Date | string
   propietario?: Prisma.OwnerUncheckedCreateNestedOneWithoutUsuarioInput
-  operador?: Prisma.OperatorUncheckedCreateNestedOneWithoutUsuarioInput
+  veterinarian?: Prisma.VeterinarianUncheckedCreateNestedOneWithoutUsuarioInput
   citasCreadas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutCreadorInput
 }
 
@@ -620,8 +620,8 @@ export type UserCreateWithoutPropietarioInput = {
   estaActivo?: boolean
   creadoEn?: Date | string
   actualizadoEn?: Date | string
-  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutUsuariosInput
-  operador?: Prisma.OperatorCreateNestedOneWithoutUsuarioInput
+  veterinaria?: Prisma.BusinessCreateNestedOneWithoutUsuariosInput
+  veterinarian?: Prisma.VeterinarianCreateNestedOneWithoutUsuarioInput
   citasCreadas?: Prisma.AppointmentCreateNestedManyWithoutCreadorInput
 }
 
@@ -635,7 +635,7 @@ export type UserUncheckedCreateWithoutPropietarioInput = {
   estaActivo?: boolean
   creadoEn?: Date | string
   actualizadoEn?: Date | string
-  operador?: Prisma.OperatorUncheckedCreateNestedOneWithoutUsuarioInput
+  veterinarian?: Prisma.VeterinarianUncheckedCreateNestedOneWithoutUsuarioInput
   citasCreadas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutCreadorInput
 }
 
@@ -664,8 +664,8 @@ export type UserUpdateWithoutPropietarioInput = {
   estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  veterinaria?: Prisma.VeterinaryUpdateOneWithoutUsuariosNestedInput
-  operador?: Prisma.OperatorUpdateOneWithoutUsuarioNestedInput
+  veterinaria?: Prisma.BusinessUpdateOneWithoutUsuariosNestedInput
+  veterinarian?: Prisma.VeterinarianUpdateOneWithoutUsuarioNestedInput
   citasCreadas?: Prisma.AppointmentUpdateManyWithoutCreadorNestedInput
 }
 
@@ -679,11 +679,11 @@ export type UserUncheckedUpdateWithoutPropietarioInput = {
   estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  operador?: Prisma.OperatorUncheckedUpdateOneWithoutUsuarioNestedInput
+  veterinarian?: Prisma.VeterinarianUncheckedUpdateOneWithoutUsuarioNestedInput
   citasCreadas?: Prisma.AppointmentUncheckedUpdateManyWithoutCreadorNestedInput
 }
 
-export type UserCreateWithoutOperadorInput = {
+export type UserCreateWithoutVeterinarianInput = {
   id: string
   correo: string
   nombreCompleto: string
@@ -692,12 +692,12 @@ export type UserCreateWithoutOperadorInput = {
   estaActivo?: boolean
   creadoEn?: Date | string
   actualizadoEn?: Date | string
-  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutUsuariosInput
+  veterinaria?: Prisma.BusinessCreateNestedOneWithoutUsuariosInput
   propietario?: Prisma.OwnerCreateNestedOneWithoutUsuarioInput
   citasCreadas?: Prisma.AppointmentCreateNestedManyWithoutCreadorInput
 }
 
-export type UserUncheckedCreateWithoutOperadorInput = {
+export type UserUncheckedCreateWithoutVeterinarianInput = {
   id: string
   correo: string
   nombreCompleto: string
@@ -711,23 +711,23 @@ export type UserUncheckedCreateWithoutOperadorInput = {
   citasCreadas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutCreadorInput
 }
 
-export type UserCreateOrConnectWithoutOperadorInput = {
+export type UserCreateOrConnectWithoutVeterinarianInput = {
   where: Prisma.UserWhereUniqueInput
-  create: Prisma.XOR<Prisma.UserCreateWithoutOperadorInput, Prisma.UserUncheckedCreateWithoutOperadorInput>
+  create: Prisma.XOR<Prisma.UserCreateWithoutVeterinarianInput, Prisma.UserUncheckedCreateWithoutVeterinarianInput>
 }
 
-export type UserUpsertWithoutOperadorInput = {
-  update: Prisma.XOR<Prisma.UserUpdateWithoutOperadorInput, Prisma.UserUncheckedUpdateWithoutOperadorInput>
-  create: Prisma.XOR<Prisma.UserCreateWithoutOperadorInput, Prisma.UserUncheckedCreateWithoutOperadorInput>
+export type UserUpsertWithoutVeterinarianInput = {
+  update: Prisma.XOR<Prisma.UserUpdateWithoutVeterinarianInput, Prisma.UserUncheckedUpdateWithoutVeterinarianInput>
+  create: Prisma.XOR<Prisma.UserCreateWithoutVeterinarianInput, Prisma.UserUncheckedCreateWithoutVeterinarianInput>
   where?: Prisma.UserWhereInput
 }
 
-export type UserUpdateToOneWithWhereWithoutOperadorInput = {
+export type UserUpdateToOneWithWhereWithoutVeterinarianInput = {
   where?: Prisma.UserWhereInput
-  data: Prisma.XOR<Prisma.UserUpdateWithoutOperadorInput, Prisma.UserUncheckedUpdateWithoutOperadorInput>
+  data: Prisma.XOR<Prisma.UserUpdateWithoutVeterinarianInput, Prisma.UserUncheckedUpdateWithoutVeterinarianInput>
 }
 
-export type UserUpdateWithoutOperadorInput = {
+export type UserUpdateWithoutVeterinarianInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   correo?: Prisma.StringFieldUpdateOperationsInput | string
   nombreCompleto?: Prisma.StringFieldUpdateOperationsInput | string
@@ -736,12 +736,12 @@ export type UserUpdateWithoutOperadorInput = {
   estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  veterinaria?: Prisma.VeterinaryUpdateOneWithoutUsuariosNestedInput
+  veterinaria?: Prisma.BusinessUpdateOneWithoutUsuariosNestedInput
   propietario?: Prisma.OwnerUpdateOneWithoutUsuarioNestedInput
   citasCreadas?: Prisma.AppointmentUpdateManyWithoutCreadorNestedInput
 }
 
-export type UserUncheckedUpdateWithoutOperadorInput = {
+export type UserUncheckedUpdateWithoutVeterinarianInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   correo?: Prisma.StringFieldUpdateOperationsInput | string
   nombreCompleto?: Prisma.StringFieldUpdateOperationsInput | string
@@ -764,9 +764,9 @@ export type UserCreateWithoutCitasCreadasInput = {
   estaActivo?: boolean
   creadoEn?: Date | string
   actualizadoEn?: Date | string
-  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutUsuariosInput
+  veterinaria?: Prisma.BusinessCreateNestedOneWithoutUsuariosInput
   propietario?: Prisma.OwnerCreateNestedOneWithoutUsuarioInput
-  operador?: Prisma.OperatorCreateNestedOneWithoutUsuarioInput
+  veterinarian?: Prisma.VeterinarianCreateNestedOneWithoutUsuarioInput
 }
 
 export type UserUncheckedCreateWithoutCitasCreadasInput = {
@@ -780,7 +780,7 @@ export type UserUncheckedCreateWithoutCitasCreadasInput = {
   creadoEn?: Date | string
   actualizadoEn?: Date | string
   propietario?: Prisma.OwnerUncheckedCreateNestedOneWithoutUsuarioInput
-  operador?: Prisma.OperatorUncheckedCreateNestedOneWithoutUsuarioInput
+  veterinarian?: Prisma.VeterinarianUncheckedCreateNestedOneWithoutUsuarioInput
 }
 
 export type UserCreateOrConnectWithoutCitasCreadasInput = {
@@ -808,9 +808,9 @@ export type UserUpdateWithoutCitasCreadasInput = {
   estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  veterinaria?: Prisma.VeterinaryUpdateOneWithoutUsuariosNestedInput
+  veterinaria?: Prisma.BusinessUpdateOneWithoutUsuariosNestedInput
   propietario?: Prisma.OwnerUpdateOneWithoutUsuarioNestedInput
-  operador?: Prisma.OperatorUpdateOneWithoutUsuarioNestedInput
+  veterinarian?: Prisma.VeterinarianUpdateOneWithoutUsuarioNestedInput
 }
 
 export type UserUncheckedUpdateWithoutCitasCreadasInput = {
@@ -824,7 +824,7 @@ export type UserUncheckedUpdateWithoutCitasCreadasInput = {
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   propietario?: Prisma.OwnerUncheckedUpdateOneWithoutUsuarioNestedInput
-  operador?: Prisma.OperatorUncheckedUpdateOneWithoutUsuarioNestedInput
+  veterinarian?: Prisma.VeterinarianUncheckedUpdateOneWithoutUsuarioNestedInput
 }
 
 export type UserCreateManyVeterinariaInput = {
@@ -848,7 +848,7 @@ export type UserUpdateWithoutVeterinariaInput = {
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   propietario?: Prisma.OwnerUpdateOneWithoutUsuarioNestedInput
-  operador?: Prisma.OperatorUpdateOneWithoutUsuarioNestedInput
+  veterinarian?: Prisma.VeterinarianUpdateOneWithoutUsuarioNestedInput
   citasCreadas?: Prisma.AppointmentUpdateManyWithoutCreadorNestedInput
 }
 
@@ -862,7 +862,7 @@ export type UserUncheckedUpdateWithoutVeterinariaInput = {
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   propietario?: Prisma.OwnerUncheckedUpdateOneWithoutUsuarioNestedInput
-  operador?: Prisma.OperatorUncheckedUpdateOneWithoutUsuarioNestedInput
+  veterinarian?: Prisma.VeterinarianUncheckedUpdateOneWithoutUsuarioNestedInput
   citasCreadas?: Prisma.AppointmentUncheckedUpdateManyWithoutCreadorNestedInput
 }
 
@@ -920,7 +920,7 @@ export type UserSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = r
   actualizadoEn?: boolean
   veterinaria?: boolean | Prisma.User$veterinariaArgs<ExtArgs>
   propietario?: boolean | Prisma.User$propietarioArgs<ExtArgs>
-  operador?: boolean | Prisma.User$operadorArgs<ExtArgs>
+  veterinarian?: boolean | Prisma.User$veterinarianArgs<ExtArgs>
   citasCreadas?: boolean | Prisma.User$citasCreadasArgs<ExtArgs>
   _count?: boolean | Prisma.UserCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["user"]>
@@ -967,7 +967,7 @@ export type UserOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = run
 export type UserInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   veterinaria?: boolean | Prisma.User$veterinariaArgs<ExtArgs>
   propietario?: boolean | Prisma.User$propietarioArgs<ExtArgs>
-  operador?: boolean | Prisma.User$operadorArgs<ExtArgs>
+  veterinarian?: boolean | Prisma.User$veterinarianArgs<ExtArgs>
   citasCreadas?: boolean | Prisma.User$citasCreadasArgs<ExtArgs>
   _count?: boolean | Prisma.UserCountOutputTypeDefaultArgs<ExtArgs>
 }
@@ -981,9 +981,9 @@ export type UserIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensi
 export type $UserPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "User"
   objects: {
-    veterinaria: Prisma.$VeterinaryPayload<ExtArgs> | null
+    veterinaria: Prisma.$BusinessPayload<ExtArgs> | null
     propietario: Prisma.$OwnerPayload<ExtArgs> | null
-    operador: Prisma.$OperatorPayload<ExtArgs> | null
+    veterinarian: Prisma.$VeterinarianPayload<ExtArgs> | null
     citasCreadas: Prisma.$AppointmentPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
@@ -1390,9 +1390,9 @@ readonly fields: UserFieldRefs;
  */
 export interface Prisma__UserClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  veterinaria<T extends Prisma.User$veterinariaArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$veterinariaArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  veterinaria<T extends Prisma.User$veterinariaArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$veterinariaArgs<ExtArgs>>): Prisma.Prisma__BusinessClient<runtime.Types.Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   propietario<T extends Prisma.User$propietarioArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$propietarioArgs<ExtArgs>>): Prisma.Prisma__OwnerClient<runtime.Types.Result.GetResult<Prisma.$OwnerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-  operador<T extends Prisma.User$operadorArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$operadorArgs<ExtArgs>>): Prisma.Prisma__OperatorClient<runtime.Types.Result.GetResult<Prisma.$OperatorPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  veterinarian<T extends Prisma.User$veterinarianArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$veterinarianArgs<ExtArgs>>): Prisma.Prisma__VeterinarianClient<runtime.Types.Result.GetResult<Prisma.$VeterinarianPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   citasCreadas<T extends Prisma.User$citasCreadasArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$citasCreadasArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AppointmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -1832,18 +1832,18 @@ export type UserDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.Internal
  */
 export type User$veterinariaArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Veterinary
+   * Select specific fields to fetch from the Business
    */
-  select?: Prisma.VeterinarySelect<ExtArgs> | null
+  select?: Prisma.BusinessSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Veterinary
+   * Omit specific fields from the Business
    */
-  omit?: Prisma.VeterinaryOmit<ExtArgs> | null
+  omit?: Prisma.BusinessOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.VeterinaryInclude<ExtArgs> | null
-  where?: Prisma.VeterinaryWhereInput
+  include?: Prisma.BusinessInclude<ExtArgs> | null
+  where?: Prisma.BusinessWhereInput
 }
 
 /**
@@ -1866,22 +1866,22 @@ export type User$propietarioArgs<ExtArgs extends runtime.Types.Extensions.Intern
 }
 
 /**
- * User.operador
+ * User.veterinarian
  */
-export type User$operadorArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type User$veterinarianArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Operator
+   * Select specific fields to fetch from the Veterinarian
    */
-  select?: Prisma.OperatorSelect<ExtArgs> | null
+  select?: Prisma.VeterinarianSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Operator
+   * Omit specific fields from the Veterinarian
    */
-  omit?: Prisma.OperatorOmit<ExtArgs> | null
+  omit?: Prisma.VeterinarianOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.OperatorInclude<ExtArgs> | null
-  where?: Prisma.OperatorWhereInput
+  include?: Prisma.VeterinarianInclude<ExtArgs> | null
+  where?: Prisma.VeterinarianWhereInput
 }
 
 /**

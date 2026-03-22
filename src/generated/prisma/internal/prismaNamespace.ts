@@ -385,9 +385,9 @@ type FieldRefInputType<Model, FieldType> = Model extends never ? never : FieldRe
 
 export const ModelName = {
   User: 'User',
-  Veterinary: 'Veterinary',
+  Business: 'Business',
   Owner: 'Owner',
-  Operator: 'Operator',
+  Veterinarian: 'Veterinarian',
   Species: 'Species',
   Breed: 'Breed',
   Patient: 'Patient',
@@ -413,7 +413,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "user" | "veterinary" | "owner" | "operator" | "species" | "breed" | "patient" | "appointment" | "procedure" | "procedureCita" | "clinicalRecord" | "vaccination" | "emailReminder" | "activityLog"
+    modelProps: "user" | "business" | "owner" | "veterinarian" | "species" | "breed" | "patient" | "appointment" | "procedure" | "procedureCita" | "clinicalRecord" | "vaccination" | "emailReminder" | "activityLog"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -491,77 +491,77 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         }
       }
     }
-    Veterinary: {
-      payload: Prisma.$VeterinaryPayload<ExtArgs>
-      fields: Prisma.VeterinaryFieldRefs
+    Business: {
+      payload: Prisma.$BusinessPayload<ExtArgs>
+      fields: Prisma.BusinessFieldRefs
       operations: {
         findUnique: {
-          args: Prisma.VeterinaryFindUniqueArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$VeterinaryPayload> | null
+          args: Prisma.BusinessFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$BusinessPayload> | null
         }
         findUniqueOrThrow: {
-          args: Prisma.VeterinaryFindUniqueOrThrowArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$VeterinaryPayload>
+          args: Prisma.BusinessFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$BusinessPayload>
         }
         findFirst: {
-          args: Prisma.VeterinaryFindFirstArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$VeterinaryPayload> | null
+          args: Prisma.BusinessFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$BusinessPayload> | null
         }
         findFirstOrThrow: {
-          args: Prisma.VeterinaryFindFirstOrThrowArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$VeterinaryPayload>
+          args: Prisma.BusinessFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$BusinessPayload>
         }
         findMany: {
-          args: Prisma.VeterinaryFindManyArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$VeterinaryPayload>[]
+          args: Prisma.BusinessFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$BusinessPayload>[]
         }
         create: {
-          args: Prisma.VeterinaryCreateArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$VeterinaryPayload>
+          args: Prisma.BusinessCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$BusinessPayload>
         }
         createMany: {
-          args: Prisma.VeterinaryCreateManyArgs<ExtArgs>
+          args: Prisma.BusinessCreateManyArgs<ExtArgs>
           result: BatchPayload
         }
         createManyAndReturn: {
-          args: Prisma.VeterinaryCreateManyAndReturnArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$VeterinaryPayload>[]
+          args: Prisma.BusinessCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$BusinessPayload>[]
         }
         delete: {
-          args: Prisma.VeterinaryDeleteArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$VeterinaryPayload>
+          args: Prisma.BusinessDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$BusinessPayload>
         }
         update: {
-          args: Prisma.VeterinaryUpdateArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$VeterinaryPayload>
+          args: Prisma.BusinessUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$BusinessPayload>
         }
         deleteMany: {
-          args: Prisma.VeterinaryDeleteManyArgs<ExtArgs>
+          args: Prisma.BusinessDeleteManyArgs<ExtArgs>
           result: BatchPayload
         }
         updateMany: {
-          args: Prisma.VeterinaryUpdateManyArgs<ExtArgs>
+          args: Prisma.BusinessUpdateManyArgs<ExtArgs>
           result: BatchPayload
         }
         updateManyAndReturn: {
-          args: Prisma.VeterinaryUpdateManyAndReturnArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$VeterinaryPayload>[]
+          args: Prisma.BusinessUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$BusinessPayload>[]
         }
         upsert: {
-          args: Prisma.VeterinaryUpsertArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$VeterinaryPayload>
+          args: Prisma.BusinessUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$BusinessPayload>
         }
         aggregate: {
-          args: Prisma.VeterinaryAggregateArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.AggregateVeterinary>
+          args: Prisma.BusinessAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateBusiness>
         }
         groupBy: {
-          args: Prisma.VeterinaryGroupByArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.VeterinaryGroupByOutputType>[]
+          args: Prisma.BusinessGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.BusinessGroupByOutputType>[]
         }
         count: {
-          args: Prisma.VeterinaryCountArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.VeterinaryCountAggregateOutputType> | number
+          args: Prisma.BusinessCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.BusinessCountAggregateOutputType> | number
         }
       }
     }
@@ -639,77 +639,77 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         }
       }
     }
-    Operator: {
-      payload: Prisma.$OperatorPayload<ExtArgs>
-      fields: Prisma.OperatorFieldRefs
+    Veterinarian: {
+      payload: Prisma.$VeterinarianPayload<ExtArgs>
+      fields: Prisma.VeterinarianFieldRefs
       operations: {
         findUnique: {
-          args: Prisma.OperatorFindUniqueArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$OperatorPayload> | null
+          args: Prisma.VeterinarianFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$VeterinarianPayload> | null
         }
         findUniqueOrThrow: {
-          args: Prisma.OperatorFindUniqueOrThrowArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$OperatorPayload>
+          args: Prisma.VeterinarianFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$VeterinarianPayload>
         }
         findFirst: {
-          args: Prisma.OperatorFindFirstArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$OperatorPayload> | null
+          args: Prisma.VeterinarianFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$VeterinarianPayload> | null
         }
         findFirstOrThrow: {
-          args: Prisma.OperatorFindFirstOrThrowArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$OperatorPayload>
+          args: Prisma.VeterinarianFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$VeterinarianPayload>
         }
         findMany: {
-          args: Prisma.OperatorFindManyArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$OperatorPayload>[]
+          args: Prisma.VeterinarianFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$VeterinarianPayload>[]
         }
         create: {
-          args: Prisma.OperatorCreateArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$OperatorPayload>
+          args: Prisma.VeterinarianCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$VeterinarianPayload>
         }
         createMany: {
-          args: Prisma.OperatorCreateManyArgs<ExtArgs>
+          args: Prisma.VeterinarianCreateManyArgs<ExtArgs>
           result: BatchPayload
         }
         createManyAndReturn: {
-          args: Prisma.OperatorCreateManyAndReturnArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$OperatorPayload>[]
+          args: Prisma.VeterinarianCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$VeterinarianPayload>[]
         }
         delete: {
-          args: Prisma.OperatorDeleteArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$OperatorPayload>
+          args: Prisma.VeterinarianDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$VeterinarianPayload>
         }
         update: {
-          args: Prisma.OperatorUpdateArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$OperatorPayload>
+          args: Prisma.VeterinarianUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$VeterinarianPayload>
         }
         deleteMany: {
-          args: Prisma.OperatorDeleteManyArgs<ExtArgs>
+          args: Prisma.VeterinarianDeleteManyArgs<ExtArgs>
           result: BatchPayload
         }
         updateMany: {
-          args: Prisma.OperatorUpdateManyArgs<ExtArgs>
+          args: Prisma.VeterinarianUpdateManyArgs<ExtArgs>
           result: BatchPayload
         }
         updateManyAndReturn: {
-          args: Prisma.OperatorUpdateManyAndReturnArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$OperatorPayload>[]
+          args: Prisma.VeterinarianUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$VeterinarianPayload>[]
         }
         upsert: {
-          args: Prisma.OperatorUpsertArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$OperatorPayload>
+          args: Prisma.VeterinarianUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$VeterinarianPayload>
         }
         aggregate: {
-          args: Prisma.OperatorAggregateArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.AggregateOperator>
+          args: Prisma.VeterinarianAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateVeterinarian>
         }
         groupBy: {
-          args: Prisma.OperatorGroupByArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.OperatorGroupByOutputType>[]
+          args: Prisma.VeterinarianGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.VeterinarianGroupByOutputType>[]
         }
         count: {
-          args: Prisma.OperatorCountArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.OperatorCountAggregateOutputType> | number
+          args: Prisma.VeterinarianCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.VeterinarianCountAggregateOutputType> | number
         }
       }
     }
@@ -1507,7 +1507,7 @@ export const UserScalarFieldEnum = {
 export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
 
 
-export const VeterinaryScalarFieldEnum = {
+export const BusinessScalarFieldEnum = {
   id: 'id',
   nombre: 'nombre',
   correo: 'correo',
@@ -1524,7 +1524,7 @@ export const VeterinaryScalarFieldEnum = {
   actualizadoEn: 'actualizadoEn'
 } as const
 
-export type VeterinaryScalarFieldEnum = (typeof VeterinaryScalarFieldEnum)[keyof typeof VeterinaryScalarFieldEnum]
+export type BusinessScalarFieldEnum = (typeof BusinessScalarFieldEnum)[keyof typeof BusinessScalarFieldEnum]
 
 
 export const OwnerScalarFieldEnum = {
@@ -1543,7 +1543,7 @@ export const OwnerScalarFieldEnum = {
 export type OwnerScalarFieldEnum = (typeof OwnerScalarFieldEnum)[keyof typeof OwnerScalarFieldEnum]
 
 
-export const OperatorScalarFieldEnum = {
+export const VeterinarianScalarFieldEnum = {
   id: 'id',
   usuarioId: 'usuarioId',
   veterinariaId: 'veterinariaId',
@@ -1555,7 +1555,7 @@ export const OperatorScalarFieldEnum = {
   actualizadoEn: 'actualizadoEn'
 } as const
 
-export type OperatorScalarFieldEnum = (typeof OperatorScalarFieldEnum)[keyof typeof OperatorScalarFieldEnum]
+export type VeterinarianScalarFieldEnum = (typeof VeterinarianScalarFieldEnum)[keyof typeof VeterinarianScalarFieldEnum]
 
 
 export const SpeciesScalarFieldEnum = {
@@ -1988,9 +1988,9 @@ export type PrismaClientOptions = ({
 }
 export type GlobalOmitConfig = {
   user?: Prisma.UserOmit
-  veterinary?: Prisma.VeterinaryOmit
+  business?: Prisma.BusinessOmit
   owner?: Prisma.OwnerOmit
-  operator?: Prisma.OperatorOmit
+  veterinarian?: Prisma.VeterinarianOmit
   species?: Prisma.SpeciesOmit
   breed?: Prisma.BreedOmit
   patient?: Prisma.PatientOmit

@@ -1,5 +1,6 @@
 import { prisma } from "../config/prisma";
 import { CreateOwnerDTO, UpdateOwnerDTO } from "../models/schemas/owner.schema";
+import { logActivity, ACCIONES, ENTIDADES } from "../utils/activityLogger";
 
 const OWNER_INCLUDE = {
   usuario: {
@@ -74,7 +75,7 @@ export class OwnerService {
       const existing = await prisma.owner.findUnique({ where: { usuarioId: data.usuarioId } });
       if (existing) throw new Error("Ya existe un propietario vinculado a ese usuario");
 
-      return await prisma.owner.create({
+      const owner = await prisma.owner.create({
         data: {
           usuarioId: data.usuarioId,
           veterinariaId: data.veterinariaId,
@@ -86,6 +87,16 @@ export class OwnerService {
         },
         include: OWNER_DETAIL_INCLUDE,
       });
+
+      logActivity({
+        tipoAccion: ACCIONES.CREACION,
+        tipoEntidad: ENTIDADES.PROPIETARIO,
+        entidadId: owner.id,
+        descripcion: `Nuevo propietario registrado: ${owner.usuario.nombreCompleto}`,
+        veterinariaId: owner.veterinariaId,
+      });
+
+      return owner;
     } catch (error) {
       console.error("Error en OwnerService.createOwner:", error);
       throw error;
