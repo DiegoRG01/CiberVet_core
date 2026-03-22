@@ -38,40 +38,31 @@ export type ProcedureSumAggregateOutputType = {
 
 export type ProcedureMinAggregateOutputType = {
   id: string | null
-  citaId: string | null
   nombre: string | null
   descripcion: string | null
   costo: runtime.Decimal | null
   duracionMinutos: number | null
-  realizadoPor: string | null
   estaActivo: boolean | null
-  realizadoEn: Date | null
   creadoEn: Date | null
 }
 
 export type ProcedureMaxAggregateOutputType = {
   id: string | null
-  citaId: string | null
   nombre: string | null
   descripcion: string | null
   costo: runtime.Decimal | null
   duracionMinutos: number | null
-  realizadoPor: string | null
   estaActivo: boolean | null
-  realizadoEn: Date | null
   creadoEn: Date | null
 }
 
 export type ProcedureCountAggregateOutputType = {
   id: number
-  citaId: number
   nombre: number
   descripcion: number
   costo: number
   duracionMinutos: number
-  realizadoPor: number
   estaActivo: number
-  realizadoEn: number
   creadoEn: number
   _all: number
 }
@@ -89,40 +80,31 @@ export type ProcedureSumAggregateInputType = {
 
 export type ProcedureMinAggregateInputType = {
   id?: true
-  citaId?: true
   nombre?: true
   descripcion?: true
   costo?: true
   duracionMinutos?: true
-  realizadoPor?: true
   estaActivo?: true
-  realizadoEn?: true
   creadoEn?: true
 }
 
 export type ProcedureMaxAggregateInputType = {
   id?: true
-  citaId?: true
   nombre?: true
   descripcion?: true
   costo?: true
   duracionMinutos?: true
-  realizadoPor?: true
   estaActivo?: true
-  realizadoEn?: true
   creadoEn?: true
 }
 
 export type ProcedureCountAggregateInputType = {
   id?: true
-  citaId?: true
   nombre?: true
   descripcion?: true
   costo?: true
   duracionMinutos?: true
-  realizadoPor?: true
   estaActivo?: true
-  realizadoEn?: true
   creadoEn?: true
   _all?: true
 }
@@ -215,14 +197,11 @@ export type ProcedureGroupByArgs<ExtArgs extends runtime.Types.Extensions.Intern
 
 export type ProcedureGroupByOutputType = {
   id: string
-  citaId: string
   nombre: string
   descripcion: string | null
   costo: runtime.Decimal | null
   duracionMinutos: number | null
-  realizadoPor: string | null
   estaActivo: boolean
-  realizadoEn: Date
   creadoEn: Date
   _count: ProcedureCountAggregateOutputType | null
   _avg: ProcedureAvgAggregateOutputType | null
@@ -251,32 +230,24 @@ export type ProcedureWhereInput = {
   OR?: Prisma.ProcedureWhereInput[]
   NOT?: Prisma.ProcedureWhereInput | Prisma.ProcedureWhereInput[]
   id?: Prisma.UuidFilter<"Procedure"> | string
-  citaId?: Prisma.UuidFilter<"Procedure"> | string
   nombre?: Prisma.StringFilter<"Procedure"> | string
   descripcion?: Prisma.StringNullableFilter<"Procedure"> | string | null
   costo?: Prisma.DecimalNullableFilter<"Procedure"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: Prisma.IntNullableFilter<"Procedure"> | number | null
-  realizadoPor?: Prisma.UuidNullableFilter<"Procedure"> | string | null
   estaActivo?: Prisma.BoolFilter<"Procedure"> | boolean
-  realizadoEn?: Prisma.DateTimeFilter<"Procedure"> | Date | string
   creadoEn?: Prisma.DateTimeFilter<"Procedure"> | Date | string
-  cita?: Prisma.XOR<Prisma.AppointmentScalarRelationFilter, Prisma.AppointmentWhereInput>
-  ejecutor?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
+  citaProcedimientos?: Prisma.ProcedureCitaListRelationFilter
 }
 
 export type ProcedureOrderByWithRelationInput = {
   id?: Prisma.SortOrder
-  citaId?: Prisma.SortOrder
   nombre?: Prisma.SortOrder
   descripcion?: Prisma.SortOrderInput | Prisma.SortOrder
   costo?: Prisma.SortOrderInput | Prisma.SortOrder
   duracionMinutos?: Prisma.SortOrderInput | Prisma.SortOrder
-  realizadoPor?: Prisma.SortOrderInput | Prisma.SortOrder
   estaActivo?: Prisma.SortOrder
-  realizadoEn?: Prisma.SortOrder
   creadoEn?: Prisma.SortOrder
-  cita?: Prisma.AppointmentOrderByWithRelationInput
-  ejecutor?: Prisma.OperatorOrderByWithRelationInput
+  citaProcedimientos?: Prisma.ProcedureCitaOrderByRelationAggregateInput
 }
 
 export type ProcedureWhereUniqueInput = Prisma.AtLeast<{
@@ -284,29 +255,22 @@ export type ProcedureWhereUniqueInput = Prisma.AtLeast<{
   AND?: Prisma.ProcedureWhereInput | Prisma.ProcedureWhereInput[]
   OR?: Prisma.ProcedureWhereInput[]
   NOT?: Prisma.ProcedureWhereInput | Prisma.ProcedureWhereInput[]
-  citaId?: Prisma.UuidFilter<"Procedure"> | string
   nombre?: Prisma.StringFilter<"Procedure"> | string
   descripcion?: Prisma.StringNullableFilter<"Procedure"> | string | null
   costo?: Prisma.DecimalNullableFilter<"Procedure"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: Prisma.IntNullableFilter<"Procedure"> | number | null
-  realizadoPor?: Prisma.UuidNullableFilter<"Procedure"> | string | null
   estaActivo?: Prisma.BoolFilter<"Procedure"> | boolean
-  realizadoEn?: Prisma.DateTimeFilter<"Procedure"> | Date | string
   creadoEn?: Prisma.DateTimeFilter<"Procedure"> | Date | string
-  cita?: Prisma.XOR<Prisma.AppointmentScalarRelationFilter, Prisma.AppointmentWhereInput>
-  ejecutor?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
+  citaProcedimientos?: Prisma.ProcedureCitaListRelationFilter
 }, "id">
 
 export type ProcedureOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
-  citaId?: Prisma.SortOrder
   nombre?: Prisma.SortOrder
   descripcion?: Prisma.SortOrderInput | Prisma.SortOrder
   costo?: Prisma.SortOrderInput | Prisma.SortOrder
   duracionMinutos?: Prisma.SortOrderInput | Prisma.SortOrder
-  realizadoPor?: Prisma.SortOrderInput | Prisma.SortOrder
   estaActivo?: Prisma.SortOrder
-  realizadoEn?: Prisma.SortOrder
   creadoEn?: Prisma.SortOrder
   _count?: Prisma.ProcedureCountOrderByAggregateInput
   _avg?: Prisma.ProcedureAvgOrderByAggregateInput
@@ -320,14 +284,11 @@ export type ProcedureScalarWhereWithAggregatesInput = {
   OR?: Prisma.ProcedureScalarWhereWithAggregatesInput[]
   NOT?: Prisma.ProcedureScalarWhereWithAggregatesInput | Prisma.ProcedureScalarWhereWithAggregatesInput[]
   id?: Prisma.UuidWithAggregatesFilter<"Procedure"> | string
-  citaId?: Prisma.UuidWithAggregatesFilter<"Procedure"> | string
   nombre?: Prisma.StringWithAggregatesFilter<"Procedure"> | string
   descripcion?: Prisma.StringNullableWithAggregatesFilter<"Procedure"> | string | null
   costo?: Prisma.DecimalNullableWithAggregatesFilter<"Procedure"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: Prisma.IntNullableWithAggregatesFilter<"Procedure"> | number | null
-  realizadoPor?: Prisma.UuidNullableWithAggregatesFilter<"Procedure"> | string | null
   estaActivo?: Prisma.BoolWithAggregatesFilter<"Procedure"> | boolean
-  realizadoEn?: Prisma.DateTimeWithAggregatesFilter<"Procedure"> | Date | string
   creadoEn?: Prisma.DateTimeWithAggregatesFilter<"Procedure"> | Date | string
 }
 
@@ -338,23 +299,19 @@ export type ProcedureCreateInput = {
   costo?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: number | null
   estaActivo?: boolean
-  realizadoEn?: Date | string
   creadoEn?: Date | string
-  cita: Prisma.AppointmentCreateNestedOneWithoutProcedimientosInput
-  ejecutor?: Prisma.OperatorCreateNestedOneWithoutProcedimientosInput
+  citaProcedimientos?: Prisma.ProcedureCitaCreateNestedManyWithoutProcedimientoInput
 }
 
 export type ProcedureUncheckedCreateInput = {
   id?: string
-  citaId: string
   nombre: string
   descripcion?: string | null
   costo?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: number | null
-  realizadoPor?: string | null
   estaActivo?: boolean
-  realizadoEn?: Date | string
   creadoEn?: Date | string
+  citaProcedimientos?: Prisma.ProcedureCitaUncheckedCreateNestedManyWithoutProcedimientoInput
 }
 
 export type ProcedureUpdateInput = {
@@ -364,35 +321,28 @@ export type ProcedureUpdateInput = {
   costo?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  realizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  cita?: Prisma.AppointmentUpdateOneRequiredWithoutProcedimientosNestedInput
-  ejecutor?: Prisma.OperatorUpdateOneWithoutProcedimientosNestedInput
+  citaProcedimientos?: Prisma.ProcedureCitaUpdateManyWithoutProcedimientoNestedInput
 }
 
 export type ProcedureUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  citaId?: Prisma.StringFieldUpdateOperationsInput | string
   nombre?: Prisma.StringFieldUpdateOperationsInput | string
   descripcion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   costo?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
-  realizadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  realizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  citaProcedimientos?: Prisma.ProcedureCitaUncheckedUpdateManyWithoutProcedimientoNestedInput
 }
 
 export type ProcedureCreateManyInput = {
   id?: string
-  citaId: string
   nombre: string
   descripcion?: string | null
   costo?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: number | null
-  realizadoPor?: string | null
   estaActivo?: boolean
-  realizadoEn?: Date | string
   creadoEn?: Date | string
 }
 
@@ -403,43 +353,26 @@ export type ProcedureUpdateManyMutationInput = {
   costo?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  realizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type ProcedureUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  citaId?: Prisma.StringFieldUpdateOperationsInput | string
   nombre?: Prisma.StringFieldUpdateOperationsInput | string
   descripcion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   costo?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
-  realizadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  realizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-}
-
-export type ProcedureListRelationFilter = {
-  every?: Prisma.ProcedureWhereInput
-  some?: Prisma.ProcedureWhereInput
-  none?: Prisma.ProcedureWhereInput
-}
-
-export type ProcedureOrderByRelationAggregateInput = {
-  _count?: Prisma.SortOrder
 }
 
 export type ProcedureCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  citaId?: Prisma.SortOrder
   nombre?: Prisma.SortOrder
   descripcion?: Prisma.SortOrder
   costo?: Prisma.SortOrder
   duracionMinutos?: Prisma.SortOrder
-  realizadoPor?: Prisma.SortOrder
   estaActivo?: Prisma.SortOrder
-  realizadoEn?: Prisma.SortOrder
   creadoEn?: Prisma.SortOrder
 }
 
@@ -450,27 +383,21 @@ export type ProcedureAvgOrderByAggregateInput = {
 
 export type ProcedureMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  citaId?: Prisma.SortOrder
   nombre?: Prisma.SortOrder
   descripcion?: Prisma.SortOrder
   costo?: Prisma.SortOrder
   duracionMinutos?: Prisma.SortOrder
-  realizadoPor?: Prisma.SortOrder
   estaActivo?: Prisma.SortOrder
-  realizadoEn?: Prisma.SortOrder
   creadoEn?: Prisma.SortOrder
 }
 
 export type ProcedureMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  citaId?: Prisma.SortOrder
   nombre?: Prisma.SortOrder
   descripcion?: Prisma.SortOrder
   costo?: Prisma.SortOrder
   duracionMinutos?: Prisma.SortOrder
-  realizadoPor?: Prisma.SortOrder
   estaActivo?: Prisma.SortOrder
-  realizadoEn?: Prisma.SortOrder
   creadoEn?: Prisma.SortOrder
 }
 
@@ -479,88 +406,9 @@ export type ProcedureSumOrderByAggregateInput = {
   duracionMinutos?: Prisma.SortOrder
 }
 
-export type ProcedureCreateNestedManyWithoutEjecutorInput = {
-  create?: Prisma.XOR<Prisma.ProcedureCreateWithoutEjecutorInput, Prisma.ProcedureUncheckedCreateWithoutEjecutorInput> | Prisma.ProcedureCreateWithoutEjecutorInput[] | Prisma.ProcedureUncheckedCreateWithoutEjecutorInput[]
-  connectOrCreate?: Prisma.ProcedureCreateOrConnectWithoutEjecutorInput | Prisma.ProcedureCreateOrConnectWithoutEjecutorInput[]
-  createMany?: Prisma.ProcedureCreateManyEjecutorInputEnvelope
-  connect?: Prisma.ProcedureWhereUniqueInput | Prisma.ProcedureWhereUniqueInput[]
-}
-
-export type ProcedureUncheckedCreateNestedManyWithoutEjecutorInput = {
-  create?: Prisma.XOR<Prisma.ProcedureCreateWithoutEjecutorInput, Prisma.ProcedureUncheckedCreateWithoutEjecutorInput> | Prisma.ProcedureCreateWithoutEjecutorInput[] | Prisma.ProcedureUncheckedCreateWithoutEjecutorInput[]
-  connectOrCreate?: Prisma.ProcedureCreateOrConnectWithoutEjecutorInput | Prisma.ProcedureCreateOrConnectWithoutEjecutorInput[]
-  createMany?: Prisma.ProcedureCreateManyEjecutorInputEnvelope
-  connect?: Prisma.ProcedureWhereUniqueInput | Prisma.ProcedureWhereUniqueInput[]
-}
-
-export type ProcedureUpdateManyWithoutEjecutorNestedInput = {
-  create?: Prisma.XOR<Prisma.ProcedureCreateWithoutEjecutorInput, Prisma.ProcedureUncheckedCreateWithoutEjecutorInput> | Prisma.ProcedureCreateWithoutEjecutorInput[] | Prisma.ProcedureUncheckedCreateWithoutEjecutorInput[]
-  connectOrCreate?: Prisma.ProcedureCreateOrConnectWithoutEjecutorInput | Prisma.ProcedureCreateOrConnectWithoutEjecutorInput[]
-  upsert?: Prisma.ProcedureUpsertWithWhereUniqueWithoutEjecutorInput | Prisma.ProcedureUpsertWithWhereUniqueWithoutEjecutorInput[]
-  createMany?: Prisma.ProcedureCreateManyEjecutorInputEnvelope
-  set?: Prisma.ProcedureWhereUniqueInput | Prisma.ProcedureWhereUniqueInput[]
-  disconnect?: Prisma.ProcedureWhereUniqueInput | Prisma.ProcedureWhereUniqueInput[]
-  delete?: Prisma.ProcedureWhereUniqueInput | Prisma.ProcedureWhereUniqueInput[]
-  connect?: Prisma.ProcedureWhereUniqueInput | Prisma.ProcedureWhereUniqueInput[]
-  update?: Prisma.ProcedureUpdateWithWhereUniqueWithoutEjecutorInput | Prisma.ProcedureUpdateWithWhereUniqueWithoutEjecutorInput[]
-  updateMany?: Prisma.ProcedureUpdateManyWithWhereWithoutEjecutorInput | Prisma.ProcedureUpdateManyWithWhereWithoutEjecutorInput[]
-  deleteMany?: Prisma.ProcedureScalarWhereInput | Prisma.ProcedureScalarWhereInput[]
-}
-
-export type ProcedureUncheckedUpdateManyWithoutEjecutorNestedInput = {
-  create?: Prisma.XOR<Prisma.ProcedureCreateWithoutEjecutorInput, Prisma.ProcedureUncheckedCreateWithoutEjecutorInput> | Prisma.ProcedureCreateWithoutEjecutorInput[] | Prisma.ProcedureUncheckedCreateWithoutEjecutorInput[]
-  connectOrCreate?: Prisma.ProcedureCreateOrConnectWithoutEjecutorInput | Prisma.ProcedureCreateOrConnectWithoutEjecutorInput[]
-  upsert?: Prisma.ProcedureUpsertWithWhereUniqueWithoutEjecutorInput | Prisma.ProcedureUpsertWithWhereUniqueWithoutEjecutorInput[]
-  createMany?: Prisma.ProcedureCreateManyEjecutorInputEnvelope
-  set?: Prisma.ProcedureWhereUniqueInput | Prisma.ProcedureWhereUniqueInput[]
-  disconnect?: Prisma.ProcedureWhereUniqueInput | Prisma.ProcedureWhereUniqueInput[]
-  delete?: Prisma.ProcedureWhereUniqueInput | Prisma.ProcedureWhereUniqueInput[]
-  connect?: Prisma.ProcedureWhereUniqueInput | Prisma.ProcedureWhereUniqueInput[]
-  update?: Prisma.ProcedureUpdateWithWhereUniqueWithoutEjecutorInput | Prisma.ProcedureUpdateWithWhereUniqueWithoutEjecutorInput[]
-  updateMany?: Prisma.ProcedureUpdateManyWithWhereWithoutEjecutorInput | Prisma.ProcedureUpdateManyWithWhereWithoutEjecutorInput[]
-  deleteMany?: Prisma.ProcedureScalarWhereInput | Prisma.ProcedureScalarWhereInput[]
-}
-
-export type ProcedureCreateNestedManyWithoutCitaInput = {
-  create?: Prisma.XOR<Prisma.ProcedureCreateWithoutCitaInput, Prisma.ProcedureUncheckedCreateWithoutCitaInput> | Prisma.ProcedureCreateWithoutCitaInput[] | Prisma.ProcedureUncheckedCreateWithoutCitaInput[]
-  connectOrCreate?: Prisma.ProcedureCreateOrConnectWithoutCitaInput | Prisma.ProcedureCreateOrConnectWithoutCitaInput[]
-  createMany?: Prisma.ProcedureCreateManyCitaInputEnvelope
-  connect?: Prisma.ProcedureWhereUniqueInput | Prisma.ProcedureWhereUniqueInput[]
-}
-
-export type ProcedureUncheckedCreateNestedManyWithoutCitaInput = {
-  create?: Prisma.XOR<Prisma.ProcedureCreateWithoutCitaInput, Prisma.ProcedureUncheckedCreateWithoutCitaInput> | Prisma.ProcedureCreateWithoutCitaInput[] | Prisma.ProcedureUncheckedCreateWithoutCitaInput[]
-  connectOrCreate?: Prisma.ProcedureCreateOrConnectWithoutCitaInput | Prisma.ProcedureCreateOrConnectWithoutCitaInput[]
-  createMany?: Prisma.ProcedureCreateManyCitaInputEnvelope
-  connect?: Prisma.ProcedureWhereUniqueInput | Prisma.ProcedureWhereUniqueInput[]
-}
-
-export type ProcedureUpdateManyWithoutCitaNestedInput = {
-  create?: Prisma.XOR<Prisma.ProcedureCreateWithoutCitaInput, Prisma.ProcedureUncheckedCreateWithoutCitaInput> | Prisma.ProcedureCreateWithoutCitaInput[] | Prisma.ProcedureUncheckedCreateWithoutCitaInput[]
-  connectOrCreate?: Prisma.ProcedureCreateOrConnectWithoutCitaInput | Prisma.ProcedureCreateOrConnectWithoutCitaInput[]
-  upsert?: Prisma.ProcedureUpsertWithWhereUniqueWithoutCitaInput | Prisma.ProcedureUpsertWithWhereUniqueWithoutCitaInput[]
-  createMany?: Prisma.ProcedureCreateManyCitaInputEnvelope
-  set?: Prisma.ProcedureWhereUniqueInput | Prisma.ProcedureWhereUniqueInput[]
-  disconnect?: Prisma.ProcedureWhereUniqueInput | Prisma.ProcedureWhereUniqueInput[]
-  delete?: Prisma.ProcedureWhereUniqueInput | Prisma.ProcedureWhereUniqueInput[]
-  connect?: Prisma.ProcedureWhereUniqueInput | Prisma.ProcedureWhereUniqueInput[]
-  update?: Prisma.ProcedureUpdateWithWhereUniqueWithoutCitaInput | Prisma.ProcedureUpdateWithWhereUniqueWithoutCitaInput[]
-  updateMany?: Prisma.ProcedureUpdateManyWithWhereWithoutCitaInput | Prisma.ProcedureUpdateManyWithWhereWithoutCitaInput[]
-  deleteMany?: Prisma.ProcedureScalarWhereInput | Prisma.ProcedureScalarWhereInput[]
-}
-
-export type ProcedureUncheckedUpdateManyWithoutCitaNestedInput = {
-  create?: Prisma.XOR<Prisma.ProcedureCreateWithoutCitaInput, Prisma.ProcedureUncheckedCreateWithoutCitaInput> | Prisma.ProcedureCreateWithoutCitaInput[] | Prisma.ProcedureUncheckedCreateWithoutCitaInput[]
-  connectOrCreate?: Prisma.ProcedureCreateOrConnectWithoutCitaInput | Prisma.ProcedureCreateOrConnectWithoutCitaInput[]
-  upsert?: Prisma.ProcedureUpsertWithWhereUniqueWithoutCitaInput | Prisma.ProcedureUpsertWithWhereUniqueWithoutCitaInput[]
-  createMany?: Prisma.ProcedureCreateManyCitaInputEnvelope
-  set?: Prisma.ProcedureWhereUniqueInput | Prisma.ProcedureWhereUniqueInput[]
-  disconnect?: Prisma.ProcedureWhereUniqueInput | Prisma.ProcedureWhereUniqueInput[]
-  delete?: Prisma.ProcedureWhereUniqueInput | Prisma.ProcedureWhereUniqueInput[]
-  connect?: Prisma.ProcedureWhereUniqueInput | Prisma.ProcedureWhereUniqueInput[]
-  update?: Prisma.ProcedureUpdateWithWhereUniqueWithoutCitaInput | Prisma.ProcedureUpdateWithWhereUniqueWithoutCitaInput[]
-  updateMany?: Prisma.ProcedureUpdateManyWithWhereWithoutCitaInput | Prisma.ProcedureUpdateManyWithWhereWithoutCitaInput[]
-  deleteMany?: Prisma.ProcedureScalarWhereInput | Prisma.ProcedureScalarWhereInput[]
+export type ProcedureScalarRelationFilter = {
+  is?: Prisma.ProcedureWhereInput
+  isNot?: Prisma.ProcedureWhereInput
 }
 
 export type NullableIntFieldUpdateOperationsInput = {
@@ -571,308 +419,169 @@ export type NullableIntFieldUpdateOperationsInput = {
   divide?: number
 }
 
-export type ProcedureCreateWithoutEjecutorInput = {
+export type ProcedureCreateNestedOneWithoutCitaProcedimientosInput = {
+  create?: Prisma.XOR<Prisma.ProcedureCreateWithoutCitaProcedimientosInput, Prisma.ProcedureUncheckedCreateWithoutCitaProcedimientosInput>
+  connectOrCreate?: Prisma.ProcedureCreateOrConnectWithoutCitaProcedimientosInput
+  connect?: Prisma.ProcedureWhereUniqueInput
+}
+
+export type ProcedureUpdateOneRequiredWithoutCitaProcedimientosNestedInput = {
+  create?: Prisma.XOR<Prisma.ProcedureCreateWithoutCitaProcedimientosInput, Prisma.ProcedureUncheckedCreateWithoutCitaProcedimientosInput>
+  connectOrCreate?: Prisma.ProcedureCreateOrConnectWithoutCitaProcedimientosInput
+  upsert?: Prisma.ProcedureUpsertWithoutCitaProcedimientosInput
+  connect?: Prisma.ProcedureWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.ProcedureUpdateToOneWithWhereWithoutCitaProcedimientosInput, Prisma.ProcedureUpdateWithoutCitaProcedimientosInput>, Prisma.ProcedureUncheckedUpdateWithoutCitaProcedimientosInput>
+}
+
+export type ProcedureCreateWithoutCitaProcedimientosInput = {
   id?: string
   nombre: string
   descripcion?: string | null
   costo?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: number | null
   estaActivo?: boolean
-  realizadoEn?: Date | string
-  creadoEn?: Date | string
-  cita: Prisma.AppointmentCreateNestedOneWithoutProcedimientosInput
-}
-
-export type ProcedureUncheckedCreateWithoutEjecutorInput = {
-  id?: string
-  citaId: string
-  nombre: string
-  descripcion?: string | null
-  costo?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  duracionMinutos?: number | null
-  estaActivo?: boolean
-  realizadoEn?: Date | string
   creadoEn?: Date | string
 }
 
-export type ProcedureCreateOrConnectWithoutEjecutorInput = {
-  where: Prisma.ProcedureWhereUniqueInput
-  create: Prisma.XOR<Prisma.ProcedureCreateWithoutEjecutorInput, Prisma.ProcedureUncheckedCreateWithoutEjecutorInput>
-}
-
-export type ProcedureCreateManyEjecutorInputEnvelope = {
-  data: Prisma.ProcedureCreateManyEjecutorInput | Prisma.ProcedureCreateManyEjecutorInput[]
-  skipDuplicates?: boolean
-}
-
-export type ProcedureUpsertWithWhereUniqueWithoutEjecutorInput = {
-  where: Prisma.ProcedureWhereUniqueInput
-  update: Prisma.XOR<Prisma.ProcedureUpdateWithoutEjecutorInput, Prisma.ProcedureUncheckedUpdateWithoutEjecutorInput>
-  create: Prisma.XOR<Prisma.ProcedureCreateWithoutEjecutorInput, Prisma.ProcedureUncheckedCreateWithoutEjecutorInput>
-}
-
-export type ProcedureUpdateWithWhereUniqueWithoutEjecutorInput = {
-  where: Prisma.ProcedureWhereUniqueInput
-  data: Prisma.XOR<Prisma.ProcedureUpdateWithoutEjecutorInput, Prisma.ProcedureUncheckedUpdateWithoutEjecutorInput>
-}
-
-export type ProcedureUpdateManyWithWhereWithoutEjecutorInput = {
-  where: Prisma.ProcedureScalarWhereInput
-  data: Prisma.XOR<Prisma.ProcedureUpdateManyMutationInput, Prisma.ProcedureUncheckedUpdateManyWithoutEjecutorInput>
-}
-
-export type ProcedureScalarWhereInput = {
-  AND?: Prisma.ProcedureScalarWhereInput | Prisma.ProcedureScalarWhereInput[]
-  OR?: Prisma.ProcedureScalarWhereInput[]
-  NOT?: Prisma.ProcedureScalarWhereInput | Prisma.ProcedureScalarWhereInput[]
-  id?: Prisma.UuidFilter<"Procedure"> | string
-  citaId?: Prisma.UuidFilter<"Procedure"> | string
-  nombre?: Prisma.StringFilter<"Procedure"> | string
-  descripcion?: Prisma.StringNullableFilter<"Procedure"> | string | null
-  costo?: Prisma.DecimalNullableFilter<"Procedure"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  duracionMinutos?: Prisma.IntNullableFilter<"Procedure"> | number | null
-  realizadoPor?: Prisma.UuidNullableFilter<"Procedure"> | string | null
-  estaActivo?: Prisma.BoolFilter<"Procedure"> | boolean
-  realizadoEn?: Prisma.DateTimeFilter<"Procedure"> | Date | string
-  creadoEn?: Prisma.DateTimeFilter<"Procedure"> | Date | string
-}
-
-export type ProcedureCreateWithoutCitaInput = {
+export type ProcedureUncheckedCreateWithoutCitaProcedimientosInput = {
   id?: string
   nombre: string
   descripcion?: string | null
   costo?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: number | null
   estaActivo?: boolean
-  realizadoEn?: Date | string
-  creadoEn?: Date | string
-  ejecutor?: Prisma.OperatorCreateNestedOneWithoutProcedimientosInput
-}
-
-export type ProcedureUncheckedCreateWithoutCitaInput = {
-  id?: string
-  nombre: string
-  descripcion?: string | null
-  costo?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  duracionMinutos?: number | null
-  realizadoPor?: string | null
-  estaActivo?: boolean
-  realizadoEn?: Date | string
   creadoEn?: Date | string
 }
 
-export type ProcedureCreateOrConnectWithoutCitaInput = {
+export type ProcedureCreateOrConnectWithoutCitaProcedimientosInput = {
   where: Prisma.ProcedureWhereUniqueInput
-  create: Prisma.XOR<Prisma.ProcedureCreateWithoutCitaInput, Prisma.ProcedureUncheckedCreateWithoutCitaInput>
+  create: Prisma.XOR<Prisma.ProcedureCreateWithoutCitaProcedimientosInput, Prisma.ProcedureUncheckedCreateWithoutCitaProcedimientosInput>
 }
 
-export type ProcedureCreateManyCitaInputEnvelope = {
-  data: Prisma.ProcedureCreateManyCitaInput | Prisma.ProcedureCreateManyCitaInput[]
-  skipDuplicates?: boolean
+export type ProcedureUpsertWithoutCitaProcedimientosInput = {
+  update: Prisma.XOR<Prisma.ProcedureUpdateWithoutCitaProcedimientosInput, Prisma.ProcedureUncheckedUpdateWithoutCitaProcedimientosInput>
+  create: Prisma.XOR<Prisma.ProcedureCreateWithoutCitaProcedimientosInput, Prisma.ProcedureUncheckedCreateWithoutCitaProcedimientosInput>
+  where?: Prisma.ProcedureWhereInput
 }
 
-export type ProcedureUpsertWithWhereUniqueWithoutCitaInput = {
-  where: Prisma.ProcedureWhereUniqueInput
-  update: Prisma.XOR<Prisma.ProcedureUpdateWithoutCitaInput, Prisma.ProcedureUncheckedUpdateWithoutCitaInput>
-  create: Prisma.XOR<Prisma.ProcedureCreateWithoutCitaInput, Prisma.ProcedureUncheckedCreateWithoutCitaInput>
+export type ProcedureUpdateToOneWithWhereWithoutCitaProcedimientosInput = {
+  where?: Prisma.ProcedureWhereInput
+  data: Prisma.XOR<Prisma.ProcedureUpdateWithoutCitaProcedimientosInput, Prisma.ProcedureUncheckedUpdateWithoutCitaProcedimientosInput>
 }
 
-export type ProcedureUpdateWithWhereUniqueWithoutCitaInput = {
-  where: Prisma.ProcedureWhereUniqueInput
-  data: Prisma.XOR<Prisma.ProcedureUpdateWithoutCitaInput, Prisma.ProcedureUncheckedUpdateWithoutCitaInput>
-}
-
-export type ProcedureUpdateManyWithWhereWithoutCitaInput = {
-  where: Prisma.ProcedureScalarWhereInput
-  data: Prisma.XOR<Prisma.ProcedureUpdateManyMutationInput, Prisma.ProcedureUncheckedUpdateManyWithoutCitaInput>
-}
-
-export type ProcedureCreateManyEjecutorInput = {
-  id?: string
-  citaId: string
-  nombre: string
-  descripcion?: string | null
-  costo?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  duracionMinutos?: number | null
-  estaActivo?: boolean
-  realizadoEn?: Date | string
-  creadoEn?: Date | string
-}
-
-export type ProcedureUpdateWithoutEjecutorInput = {
+export type ProcedureUpdateWithoutCitaProcedimientosInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   nombre?: Prisma.StringFieldUpdateOperationsInput | string
   descripcion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   costo?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  realizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  cita?: Prisma.AppointmentUpdateOneRequiredWithoutProcedimientosNestedInput
-}
-
-export type ProcedureUncheckedUpdateWithoutEjecutorInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  citaId?: Prisma.StringFieldUpdateOperationsInput | string
-  nombre?: Prisma.StringFieldUpdateOperationsInput | string
-  descripcion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  costo?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  duracionMinutos?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
-  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  realizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type ProcedureUncheckedUpdateManyWithoutEjecutorInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  citaId?: Prisma.StringFieldUpdateOperationsInput | string
-  nombre?: Prisma.StringFieldUpdateOperationsInput | string
-  descripcion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  costo?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  duracionMinutos?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
-  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  realizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-}
-
-export type ProcedureCreateManyCitaInput = {
-  id?: string
-  nombre: string
-  descripcion?: string | null
-  costo?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  duracionMinutos?: number | null
-  realizadoPor?: string | null
-  estaActivo?: boolean
-  realizadoEn?: Date | string
-  creadoEn?: Date | string
-}
-
-export type ProcedureUpdateWithoutCitaInput = {
+export type ProcedureUncheckedUpdateWithoutCitaProcedimientosInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   nombre?: Prisma.StringFieldUpdateOperationsInput | string
   descripcion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   costo?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  realizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  ejecutor?: Prisma.OperatorUpdateOneWithoutProcedimientosNestedInput
-}
-
-export type ProcedureUncheckedUpdateWithoutCitaInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  nombre?: Prisma.StringFieldUpdateOperationsInput | string
-  descripcion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  costo?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  duracionMinutos?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
-  realizadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  realizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type ProcedureUncheckedUpdateManyWithoutCitaInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  nombre?: Prisma.StringFieldUpdateOperationsInput | string
-  descripcion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  costo?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  duracionMinutos?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
-  realizadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  realizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+
+/**
+ * Count Type ProcedureCountOutputType
+ */
+
+export type ProcedureCountOutputType = {
+  citaProcedimientos: number
 }
 
+export type ProcedureCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  citaProcedimientos?: boolean | ProcedureCountOutputTypeCountCitaProcedimientosArgs
+}
+
+/**
+ * ProcedureCountOutputType without action
+ */
+export type ProcedureCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the ProcedureCountOutputType
+   */
+  select?: Prisma.ProcedureCountOutputTypeSelect<ExtArgs> | null
+}
+
+/**
+ * ProcedureCountOutputType without action
+ */
+export type ProcedureCountOutputTypeCountCitaProcedimientosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.ProcedureCitaWhereInput
+}
 
 
 export type ProcedureSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  citaId?: boolean
   nombre?: boolean
   descripcion?: boolean
   costo?: boolean
   duracionMinutos?: boolean
-  realizadoPor?: boolean
   estaActivo?: boolean
-  realizadoEn?: boolean
   creadoEn?: boolean
-  cita?: boolean | Prisma.AppointmentDefaultArgs<ExtArgs>
-  ejecutor?: boolean | Prisma.Procedure$ejecutorArgs<ExtArgs>
+  citaProcedimientos?: boolean | Prisma.Procedure$citaProcedimientosArgs<ExtArgs>
+  _count?: boolean | Prisma.ProcedureCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["procedure"]>
 
 export type ProcedureSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  citaId?: boolean
   nombre?: boolean
   descripcion?: boolean
   costo?: boolean
   duracionMinutos?: boolean
-  realizadoPor?: boolean
   estaActivo?: boolean
-  realizadoEn?: boolean
   creadoEn?: boolean
-  cita?: boolean | Prisma.AppointmentDefaultArgs<ExtArgs>
-  ejecutor?: boolean | Prisma.Procedure$ejecutorArgs<ExtArgs>
 }, ExtArgs["result"]["procedure"]>
 
 export type ProcedureSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  citaId?: boolean
   nombre?: boolean
   descripcion?: boolean
   costo?: boolean
   duracionMinutos?: boolean
-  realizadoPor?: boolean
   estaActivo?: boolean
-  realizadoEn?: boolean
   creadoEn?: boolean
-  cita?: boolean | Prisma.AppointmentDefaultArgs<ExtArgs>
-  ejecutor?: boolean | Prisma.Procedure$ejecutorArgs<ExtArgs>
 }, ExtArgs["result"]["procedure"]>
 
 export type ProcedureSelectScalar = {
   id?: boolean
-  citaId?: boolean
   nombre?: boolean
   descripcion?: boolean
   costo?: boolean
   duracionMinutos?: boolean
-  realizadoPor?: boolean
   estaActivo?: boolean
-  realizadoEn?: boolean
   creadoEn?: boolean
 }
 
-export type ProcedureOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "citaId" | "nombre" | "descripcion" | "costo" | "duracionMinutos" | "realizadoPor" | "estaActivo" | "realizadoEn" | "creadoEn", ExtArgs["result"]["procedure"]>
+export type ProcedureOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "nombre" | "descripcion" | "costo" | "duracionMinutos" | "estaActivo" | "creadoEn", ExtArgs["result"]["procedure"]>
 export type ProcedureInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  cita?: boolean | Prisma.AppointmentDefaultArgs<ExtArgs>
-  ejecutor?: boolean | Prisma.Procedure$ejecutorArgs<ExtArgs>
+  citaProcedimientos?: boolean | Prisma.Procedure$citaProcedimientosArgs<ExtArgs>
+  _count?: boolean | Prisma.ProcedureCountOutputTypeDefaultArgs<ExtArgs>
 }
-export type ProcedureIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  cita?: boolean | Prisma.AppointmentDefaultArgs<ExtArgs>
-  ejecutor?: boolean | Prisma.Procedure$ejecutorArgs<ExtArgs>
-}
-export type ProcedureIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  cita?: boolean | Prisma.AppointmentDefaultArgs<ExtArgs>
-  ejecutor?: boolean | Prisma.Procedure$ejecutorArgs<ExtArgs>
-}
+export type ProcedureIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {}
+export type ProcedureIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {}
 
 export type $ProcedurePayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Procedure"
   objects: {
-    cita: Prisma.$AppointmentPayload<ExtArgs>
-    ejecutor: Prisma.$OperatorPayload<ExtArgs> | null
+    citaProcedimientos: Prisma.$ProcedureCitaPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
-    citaId: string
     nombre: string
     descripcion: string | null
     costo: runtime.Decimal | null
     duracionMinutos: number | null
-    realizadoPor: string | null
     estaActivo: boolean
-    realizadoEn: Date
     creadoEn: Date
   }, ExtArgs["result"]["procedure"]>
   composites: {}
@@ -1268,8 +977,7 @@ readonly fields: ProcedureFieldRefs;
  */
 export interface Prisma__ProcedureClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  cita<T extends Prisma.AppointmentDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.AppointmentDefaultArgs<ExtArgs>>): Prisma.Prisma__AppointmentClient<runtime.Types.Result.GetResult<Prisma.$AppointmentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  ejecutor<T extends Prisma.Procedure$ejecutorArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Procedure$ejecutorArgs<ExtArgs>>): Prisma.Prisma__OperatorClient<runtime.Types.Result.GetResult<Prisma.$OperatorPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  citaProcedimientos<T extends Prisma.Procedure$citaProcedimientosArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Procedure$citaProcedimientosArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ProcedureCitaPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1300,14 +1008,11 @@ export interface Prisma__ProcedureClient<T, Null = never, ExtArgs extends runtim
  */
 export interface ProcedureFieldRefs {
   readonly id: Prisma.FieldRef<"Procedure", 'String'>
-  readonly citaId: Prisma.FieldRef<"Procedure", 'String'>
   readonly nombre: Prisma.FieldRef<"Procedure", 'String'>
   readonly descripcion: Prisma.FieldRef<"Procedure", 'String'>
   readonly costo: Prisma.FieldRef<"Procedure", 'Decimal'>
   readonly duracionMinutos: Prisma.FieldRef<"Procedure", 'Int'>
-  readonly realizadoPor: Prisma.FieldRef<"Procedure", 'String'>
   readonly estaActivo: Prisma.FieldRef<"Procedure", 'Boolean'>
-  readonly realizadoEn: Prisma.FieldRef<"Procedure", 'DateTime'>
   readonly creadoEn: Prisma.FieldRef<"Procedure", 'DateTime'>
 }
     
@@ -1558,10 +1263,6 @@ export type ProcedureCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Exten
    */
   data: Prisma.ProcedureCreateManyInput | Prisma.ProcedureCreateManyInput[]
   skipDuplicates?: boolean
-  /**
-   * Choose, which related nodes to fetch as well
-   */
-  include?: Prisma.ProcedureIncludeCreateManyAndReturn<ExtArgs> | null
 }
 
 /**
@@ -1632,10 +1333,6 @@ export type ProcedureUpdateManyAndReturnArgs<ExtArgs extends runtime.Types.Exten
    * Limit how many Procedures to update.
    */
   limit?: number
-  /**
-   * Choose, which related nodes to fetch as well
-   */
-  include?: Prisma.ProcedureIncludeUpdateManyAndReturn<ExtArgs> | null
 }
 
 /**
@@ -1705,22 +1402,27 @@ export type ProcedureDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.Int
 }
 
 /**
- * Procedure.ejecutor
+ * Procedure.citaProcedimientos
  */
-export type Procedure$ejecutorArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Procedure$citaProcedimientosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Operator
+   * Select specific fields to fetch from the ProcedureCita
    */
-  select?: Prisma.OperatorSelect<ExtArgs> | null
+  select?: Prisma.ProcedureCitaSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Operator
+   * Omit specific fields from the ProcedureCita
    */
-  omit?: Prisma.OperatorOmit<ExtArgs> | null
+  omit?: Prisma.ProcedureCitaOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.OperatorInclude<ExtArgs> | null
-  where?: Prisma.OperatorWhereInput
+  include?: Prisma.ProcedureCitaInclude<ExtArgs> | null
+  where?: Prisma.ProcedureCitaWhereInput
+  orderBy?: Prisma.ProcedureCitaOrderByWithRelationInput | Prisma.ProcedureCitaOrderByWithRelationInput[]
+  cursor?: Prisma.ProcedureCitaWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.ProcedureCitaScalarFieldEnum | Prisma.ProcedureCitaScalarFieldEnum[]
 }
 
 /**

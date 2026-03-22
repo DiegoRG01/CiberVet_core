@@ -7,6 +7,7 @@ import appointmentRoutes from "./appointment.routes";
 import patientRoutes from "./patient.routes";
 import ownerRoutes from "./owner.routes";
 import procedureRoutes from "./procedure.routes";
+import procedureCitaRoutes from "./procedure-cita.routes";
 
 const router: Router = Router();
 
@@ -18,6 +19,7 @@ router.use("/breeds", breedRoutes);
 router.use("/appointments", appointmentRoutes);
 router.use("/patients", patientRoutes);
 router.use("/procedures", procedureRoutes);
+router.use("/procedure-citas", procedureCitaRoutes);
 
 export default router;
 

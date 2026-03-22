@@ -25,7 +25,7 @@ const PATIENT_DETAIL_INCLUDE = {
     orderBy: { fechaHora: "desc" as const },
     include: {
       procedimientos: {
-        orderBy: { realizadoEn: "desc" as const },
+        orderBy: { creadoEn: "desc" as const },
       },
       operador: {
         select: {

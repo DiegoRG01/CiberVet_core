@@ -60,6 +60,7 @@ export const ModelName = {
   Patient: 'Patient',
   Appointment: 'Appointment',
   Procedure: 'Procedure',
+  ProcedureCita: 'ProcedureCita',
   ClinicalRecord: 'ClinicalRecord',
   Vaccination: 'Vaccination',
   EmailReminder: 'EmailReminder',
@@ -224,18 +225,26 @@ export type AppointmentScalarFieldEnum = (typeof AppointmentScalarFieldEnum)[key
 
 export const ProcedureScalarFieldEnum = {
   id: 'id',
-  citaId: 'citaId',
   nombre: 'nombre',
   descripcion: 'descripcion',
   costo: 'costo',
   duracionMinutos: 'duracionMinutos',
-  realizadoPor: 'realizadoPor',
   estaActivo: 'estaActivo',
-  realizadoEn: 'realizadoEn',
   creadoEn: 'creadoEn'
 } as const
 
 export type ProcedureScalarFieldEnum = (typeof ProcedureScalarFieldEnum)[keyof typeof ProcedureScalarFieldEnum]
+
+
+export const ProcedureCitaScalarFieldEnum = {
+  id: 'id',
+  procedimientoId: 'procedimientoId',
+  citaId: 'citaId',
+  realizadoPor: 'realizadoPor',
+  creadoEn: 'creadoEn'
+} as const
+
+export type ProcedureCitaScalarFieldEnum = (typeof ProcedureCitaScalarFieldEnum)[keyof typeof ProcedureCitaScalarFieldEnum]
 
 
 export const ClinicalRecordScalarFieldEnum = {

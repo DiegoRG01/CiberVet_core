@@ -14,7 +14,7 @@ export class ProcedureController {
 
   async getById(req: Request, res: Response) {
     try {
-      const { id } = req.params;
+      const id = req.params.id as string;
       const procedure = await procedureService.getProcedureById(id);
       if (!procedure) {
         res.status(404).json({ success: false, message: "Procedimiento no encontrado" });
@@ -37,7 +37,7 @@ export class ProcedureController {
 
   async update(req: Request, res: Response) {
     try {
-      const { id } = req.params;
+      const id = req.params.id as string;
       const existing = await procedureService.getProcedureById(id);
       if (!existing) {
         res.status(404).json({ success: false, message: "Procedimiento no encontrado" });
@@ -52,7 +52,7 @@ export class ProcedureController {
 
   async toggleActive(req: Request, res: Response) {
     try {
-      const { id } = req.params;
+      const id = req.params.id as string;
       const existing = await procedureService.getProcedureById(id);
       if (!existing) {
         res.status(404).json({ success: false, message: "Procedimiento no encontrado" });

@@ -120,7 +120,7 @@ model Operator {
   usuario          User              @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
   veterinaria      Veterinary        @relation(fields: [veterinariaId], references: [id])
   citas            Appointment[]
-  procedimientos   Procedure[]
+  procedimientos   ProcedureCita[]
   registrosClinico ClinicalRecord[]  @relation("RecordedBy")
   vacunaciones     Vaccination[]
 
@@ -219,7 +219,7 @@ model Appointment {
   veterinaria        Veterinary?       @relation(fields: [veterinariaId], references: [id])
   operador           Operator?         @relation(fields: [operadorId], references: [id])
   creador            User?             @relation("CreatedBy", fields: [creadoPor], references: [id])
-  procedimientos     Procedure[]
+  procedimientos     ProcedureCita[]
   registrosClinico   ClinicalRecord[]
   recordatoriosCorreo EmailReminder[]
 
@@ -232,20 +232,30 @@ model Appointment {
 
 model Procedure {
   id              String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
-  citaId          String    @db.Uuid
   nombre          String    @db.VarChar(255)
   descripcion     String?
   costo           Decimal?  @db.Decimal(10, 2)
   duracionMinutos Int?
-  realizadoPor    String?   @db.Uuid
   estaActivo      Boolean   @default(true)
-  realizadoEn     DateTime  @default(now()) @db.Timestamptz(6)
   creadoEn        DateTime  @default(now()) @db.Timestamptz(6)
 
-  cita     Appointment @relation(fields: [citaId], references: [id], onDelete: Cascade)
-  ejecutor Operator?   @relation(fields: [realizadoPor], references: [id])
+  citaProcedimientos ProcedureCita[]
 
   @@map("procedures")
+}
+
+model ProcedureCita {
+  id               String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  procedimientoId  String   @db.Uuid
+  citaId           String   @db.Uuid
+  realizadoPor     String?  @db.Uuid
+  creadoEn         DateTime @default(now()) @db.Timestamptz(6)
+
+  procedimiento Procedure   @relation(fields: [procedimientoId], references: [id], onDelete: Cascade)
+  cita          Appointment @relation(fields: [citaId], references: [id], onDelete: Cascade)
+  ejecutor      Operator?   @relation(fields: [realizadoPor], references: [id])
+
+  @@map("procedures_cita")
 }
 
 model ClinicalRecord {

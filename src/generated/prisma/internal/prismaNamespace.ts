@@ -393,6 +393,7 @@ export const ModelName = {
   Patient: 'Patient',
   Appointment: 'Appointment',
   Procedure: 'Procedure',
+  ProcedureCita: 'ProcedureCita',
   ClinicalRecord: 'ClinicalRecord',
   Vaccination: 'Vaccination',
   EmailReminder: 'EmailReminder',
@@ -412,7 +413,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "user" | "veterinary" | "owner" | "operator" | "species" | "breed" | "patient" | "appointment" | "procedure" | "clinicalRecord" | "vaccination" | "emailReminder" | "activityLog"
+    modelProps: "user" | "veterinary" | "owner" | "operator" | "species" | "breed" | "patient" | "appointment" | "procedure" | "procedureCita" | "clinicalRecord" | "vaccination" | "emailReminder" | "activityLog"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -1082,6 +1083,80 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         }
       }
     }
+    ProcedureCita: {
+      payload: Prisma.$ProcedureCitaPayload<ExtArgs>
+      fields: Prisma.ProcedureCitaFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.ProcedureCitaFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProcedureCitaPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.ProcedureCitaFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProcedureCitaPayload>
+        }
+        findFirst: {
+          args: Prisma.ProcedureCitaFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProcedureCitaPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.ProcedureCitaFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProcedureCitaPayload>
+        }
+        findMany: {
+          args: Prisma.ProcedureCitaFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProcedureCitaPayload>[]
+        }
+        create: {
+          args: Prisma.ProcedureCitaCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProcedureCitaPayload>
+        }
+        createMany: {
+          args: Prisma.ProcedureCitaCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.ProcedureCitaCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProcedureCitaPayload>[]
+        }
+        delete: {
+          args: Prisma.ProcedureCitaDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProcedureCitaPayload>
+        }
+        update: {
+          args: Prisma.ProcedureCitaUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProcedureCitaPayload>
+        }
+        deleteMany: {
+          args: Prisma.ProcedureCitaDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.ProcedureCitaUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.ProcedureCitaUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProcedureCitaPayload>[]
+        }
+        upsert: {
+          args: Prisma.ProcedureCitaUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProcedureCitaPayload>
+        }
+        aggregate: {
+          args: Prisma.ProcedureCitaAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateProcedureCita>
+        }
+        groupBy: {
+          args: Prisma.ProcedureCitaGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.ProcedureCitaGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.ProcedureCitaCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.ProcedureCitaCountAggregateOutputType> | number
+        }
+      }
+    }
     ClinicalRecord: {
       payload: Prisma.$ClinicalRecordPayload<ExtArgs>
       fields: Prisma.ClinicalRecordFieldRefs
@@ -1559,18 +1634,26 @@ export type AppointmentScalarFieldEnum = (typeof AppointmentScalarFieldEnum)[key
 
 export const ProcedureScalarFieldEnum = {
   id: 'id',
-  citaId: 'citaId',
   nombre: 'nombre',
   descripcion: 'descripcion',
   costo: 'costo',
   duracionMinutos: 'duracionMinutos',
-  realizadoPor: 'realizadoPor',
   estaActivo: 'estaActivo',
-  realizadoEn: 'realizadoEn',
   creadoEn: 'creadoEn'
 } as const
 
 export type ProcedureScalarFieldEnum = (typeof ProcedureScalarFieldEnum)[keyof typeof ProcedureScalarFieldEnum]
+
+
+export const ProcedureCitaScalarFieldEnum = {
+  id: 'id',
+  procedimientoId: 'procedimientoId',
+  citaId: 'citaId',
+  realizadoPor: 'realizadoPor',
+  creadoEn: 'creadoEn'
+} as const
+
+export type ProcedureCitaScalarFieldEnum = (typeof ProcedureCitaScalarFieldEnum)[keyof typeof ProcedureCitaScalarFieldEnum]
 
 
 export const ClinicalRecordScalarFieldEnum = {
@@ -1913,6 +1996,7 @@ export type GlobalOmitConfig = {
   patient?: Prisma.PatientOmit
   appointment?: Prisma.AppointmentOmit
   procedure?: Prisma.ProcedureOmit
+  procedureCita?: Prisma.ProcedureCitaOmit
   clinicalRecord?: Prisma.ClinicalRecordOmit
   vaccination?: Prisma.VaccinationOmit
   emailReminder?: Prisma.EmailReminderOmit
