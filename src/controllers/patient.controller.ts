@@ -28,7 +28,7 @@ export class PatientController {
 
   async getPatientById(req: Request, res: Response) {
     try {
-      const { id } = req.params;
+      const id = req.params.id as string;
       const user = req.user!;
 
       const patient = await patientService.getPatientById(id);
@@ -126,7 +126,7 @@ export class PatientController {
 
   async updatePatient(req: Request, res: Response) {
     try {
-      const { id } = req.params;
+      const id = req.params.id as string;
       const user = req.user!;
 
       // Verificar que el propietario solo edite sus propios pacientes
@@ -197,7 +197,7 @@ export class PatientController {
 
   async deactivatePatient(req: Request, res: Response) {
     try {
-      const { id } = req.params;
+      const id = req.params.id as string;
 
       await patientService.deactivatePatient(id);
 

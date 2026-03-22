@@ -210,7 +210,7 @@ export type ActivityLogWhereInput = {
   descripcion?: Prisma.StringFilter<"ActivityLog"> | string
   metadatos?: Prisma.JsonNullableFilter<"ActivityLog">
   creadoEn?: Prisma.DateTimeFilter<"ActivityLog"> | Date | string
-  veterinaria?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
+  veterinaria?: Prisma.XOR<Prisma.BusinessNullableScalarRelationFilter, Prisma.BusinessWhereInput> | null
 }
 
 export type ActivityLogOrderByWithRelationInput = {
@@ -223,7 +223,7 @@ export type ActivityLogOrderByWithRelationInput = {
   descripcion?: Prisma.SortOrder
   metadatos?: Prisma.SortOrderInput | Prisma.SortOrder
   creadoEn?: Prisma.SortOrder
-  veterinaria?: Prisma.VeterinaryOrderByWithRelationInput
+  veterinaria?: Prisma.BusinessOrderByWithRelationInput
 }
 
 export type ActivityLogWhereUniqueInput = Prisma.AtLeast<{
@@ -239,7 +239,7 @@ export type ActivityLogWhereUniqueInput = Prisma.AtLeast<{
   descripcion?: Prisma.StringFilter<"ActivityLog"> | string
   metadatos?: Prisma.JsonNullableFilter<"ActivityLog">
   creadoEn?: Prisma.DateTimeFilter<"ActivityLog"> | Date | string
-  veterinaria?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
+  veterinaria?: Prisma.XOR<Prisma.BusinessNullableScalarRelationFilter, Prisma.BusinessWhereInput> | null
 }, "id">
 
 export type ActivityLogOrderByWithAggregationInput = {
@@ -281,7 +281,7 @@ export type ActivityLogCreateInput = {
   descripcion: string
   metadatos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
   creadoEn?: Date | string
-  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutRegistrosActividadInput
+  veterinaria?: Prisma.BusinessCreateNestedOneWithoutRegistrosActividadInput
 }
 
 export type ActivityLogUncheckedCreateInput = {
@@ -305,7 +305,7 @@ export type ActivityLogUpdateInput = {
   descripcion?: Prisma.StringFieldUpdateOperationsInput | string
   metadatos?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  veterinaria?: Prisma.VeterinaryUpdateOneWithoutRegistrosActividadNestedInput
+  veterinaria?: Prisma.BusinessUpdateOneWithoutRegistrosActividadNestedInput
 }
 
 export type ActivityLogUncheckedUpdateInput = {
@@ -615,7 +615,7 @@ export type ActivityLogIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.
 export type $ActivityLogPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "ActivityLog"
   objects: {
-    veterinaria: Prisma.$VeterinaryPayload<ExtArgs> | null
+    veterinaria: Prisma.$BusinessPayload<ExtArgs> | null
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -1021,7 +1021,7 @@ readonly fields: ActivityLogFieldRefs;
  */
 export interface Prisma__ActivityLogClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  veterinaria<T extends Prisma.ActivityLog$veterinariaArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ActivityLog$veterinariaArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  veterinaria<T extends Prisma.ActivityLog$veterinariaArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ActivityLog$veterinariaArgs<ExtArgs>>): Prisma.Prisma__BusinessClient<runtime.Types.Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1460,18 +1460,18 @@ export type ActivityLogDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.I
  */
 export type ActivityLog$veterinariaArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Veterinary
+   * Select specific fields to fetch from the Business
    */
-  select?: Prisma.VeterinarySelect<ExtArgs> | null
+  select?: Prisma.BusinessSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Veterinary
+   * Omit specific fields from the Business
    */
-  omit?: Prisma.VeterinaryOmit<ExtArgs> | null
+  omit?: Prisma.BusinessOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.VeterinaryInclude<ExtArgs> | null
-  where?: Prisma.VeterinaryWhereInput
+  include?: Prisma.BusinessInclude<ExtArgs> | null
+  where?: Prisma.BusinessWhereInput
 }
 
 /**

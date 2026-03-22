@@ -184,7 +184,7 @@ export type ProcedureCitaWhereInput = {
   creadoEn?: Prisma.DateTimeFilter<"ProcedureCita"> | Date | string
   procedimiento?: Prisma.XOR<Prisma.ProcedureScalarRelationFilter, Prisma.ProcedureWhereInput>
   cita?: Prisma.XOR<Prisma.AppointmentScalarRelationFilter, Prisma.AppointmentWhereInput>
-  ejecutor?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
+  ejecutor?: Prisma.XOR<Prisma.VeterinarianNullableScalarRelationFilter, Prisma.VeterinarianWhereInput> | null
 }
 
 export type ProcedureCitaOrderByWithRelationInput = {
@@ -195,7 +195,7 @@ export type ProcedureCitaOrderByWithRelationInput = {
   creadoEn?: Prisma.SortOrder
   procedimiento?: Prisma.ProcedureOrderByWithRelationInput
   cita?: Prisma.AppointmentOrderByWithRelationInput
-  ejecutor?: Prisma.OperatorOrderByWithRelationInput
+  ejecutor?: Prisma.VeterinarianOrderByWithRelationInput
 }
 
 export type ProcedureCitaWhereUniqueInput = Prisma.AtLeast<{
@@ -209,7 +209,7 @@ export type ProcedureCitaWhereUniqueInput = Prisma.AtLeast<{
   creadoEn?: Prisma.DateTimeFilter<"ProcedureCita"> | Date | string
   procedimiento?: Prisma.XOR<Prisma.ProcedureScalarRelationFilter, Prisma.ProcedureWhereInput>
   cita?: Prisma.XOR<Prisma.AppointmentScalarRelationFilter, Prisma.AppointmentWhereInput>
-  ejecutor?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
+  ejecutor?: Prisma.XOR<Prisma.VeterinarianNullableScalarRelationFilter, Prisma.VeterinarianWhereInput> | null
 }, "id">
 
 export type ProcedureCitaOrderByWithAggregationInput = {
@@ -239,7 +239,7 @@ export type ProcedureCitaCreateInput = {
   creadoEn?: Date | string
   procedimiento: Prisma.ProcedureCreateNestedOneWithoutCitaProcedimientosInput
   cita: Prisma.AppointmentCreateNestedOneWithoutProcedimientosInput
-  ejecutor?: Prisma.OperatorCreateNestedOneWithoutProcedimientosInput
+  ejecutor?: Prisma.VeterinarianCreateNestedOneWithoutProcedimientosInput
 }
 
 export type ProcedureCitaUncheckedCreateInput = {
@@ -255,7 +255,7 @@ export type ProcedureCitaUpdateInput = {
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   procedimiento?: Prisma.ProcedureUpdateOneRequiredWithoutCitaProcedimientosNestedInput
   cita?: Prisma.AppointmentUpdateOneRequiredWithoutProcedimientosNestedInput
-  ejecutor?: Prisma.OperatorUpdateOneWithoutProcedimientosNestedInput
+  ejecutor?: Prisma.VeterinarianUpdateOneWithoutProcedimientosNestedInput
 }
 
 export type ProcedureCitaUncheckedUpdateInput = {
@@ -502,7 +502,7 @@ export type ProcedureCitaCreateWithoutCitaInput = {
   id?: string
   creadoEn?: Date | string
   procedimiento: Prisma.ProcedureCreateNestedOneWithoutCitaProcedimientosInput
-  ejecutor?: Prisma.OperatorCreateNestedOneWithoutProcedimientosInput
+  ejecutor?: Prisma.VeterinarianCreateNestedOneWithoutProcedimientosInput
 }
 
 export type ProcedureCitaUncheckedCreateWithoutCitaInput = {
@@ -542,7 +542,7 @@ export type ProcedureCitaCreateWithoutProcedimientoInput = {
   id?: string
   creadoEn?: Date | string
   cita: Prisma.AppointmentCreateNestedOneWithoutProcedimientosInput
-  ejecutor?: Prisma.OperatorCreateNestedOneWithoutProcedimientosInput
+  ejecutor?: Prisma.VeterinarianCreateNestedOneWithoutProcedimientosInput
 }
 
 export type ProcedureCitaUncheckedCreateWithoutProcedimientoInput = {
@@ -617,7 +617,7 @@ export type ProcedureCitaUpdateWithoutCitaInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   procedimiento?: Prisma.ProcedureUpdateOneRequiredWithoutCitaProcedimientosNestedInput
-  ejecutor?: Prisma.OperatorUpdateOneWithoutProcedimientosNestedInput
+  ejecutor?: Prisma.VeterinarianUpdateOneWithoutProcedimientosNestedInput
 }
 
 export type ProcedureCitaUncheckedUpdateWithoutCitaInput = {
@@ -645,7 +645,7 @@ export type ProcedureCitaUpdateWithoutProcedimientoInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   cita?: Prisma.AppointmentUpdateOneRequiredWithoutProcedimientosNestedInput
-  ejecutor?: Prisma.OperatorUpdateOneWithoutProcedimientosNestedInput
+  ejecutor?: Prisma.VeterinarianUpdateOneWithoutProcedimientosNestedInput
 }
 
 export type ProcedureCitaUncheckedUpdateWithoutProcedimientoInput = {
@@ -727,7 +727,7 @@ export type $ProcedureCitaPayload<ExtArgs extends runtime.Types.Extensions.Inter
   objects: {
     procedimiento: Prisma.$ProcedurePayload<ExtArgs>
     cita: Prisma.$AppointmentPayload<ExtArgs>
-    ejecutor: Prisma.$OperatorPayload<ExtArgs> | null
+    ejecutor: Prisma.$VeterinarianPayload<ExtArgs> | null
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -1131,7 +1131,7 @@ export interface Prisma__ProcedureCitaClient<T, Null = never, ExtArgs extends ru
   readonly [Symbol.toStringTag]: "PrismaPromise"
   procedimiento<T extends Prisma.ProcedureDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ProcedureDefaultArgs<ExtArgs>>): Prisma.Prisma__ProcedureClient<runtime.Types.Result.GetResult<Prisma.$ProcedurePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   cita<T extends Prisma.AppointmentDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.AppointmentDefaultArgs<ExtArgs>>): Prisma.Prisma__AppointmentClient<runtime.Types.Result.GetResult<Prisma.$AppointmentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  ejecutor<T extends Prisma.ProcedureCita$ejecutorArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ProcedureCita$ejecutorArgs<ExtArgs>>): Prisma.Prisma__OperatorClient<runtime.Types.Result.GetResult<Prisma.$OperatorPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  ejecutor<T extends Prisma.ProcedureCita$ejecutorArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ProcedureCita$ejecutorArgs<ExtArgs>>): Prisma.Prisma__VeterinarianClient<runtime.Types.Result.GetResult<Prisma.$VeterinarianPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1566,18 +1566,18 @@ export type ProcedureCitaDeleteManyArgs<ExtArgs extends runtime.Types.Extensions
  */
 export type ProcedureCita$ejecutorArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Operator
+   * Select specific fields to fetch from the Veterinarian
    */
-  select?: Prisma.OperatorSelect<ExtArgs> | null
+  select?: Prisma.VeterinarianSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Operator
+   * Omit specific fields from the Veterinarian
    */
-  omit?: Prisma.OperatorOmit<ExtArgs> | null
+  omit?: Prisma.VeterinarianOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.OperatorInclude<ExtArgs> | null
-  where?: Prisma.OperatorWhereInput
+  include?: Prisma.VeterinarianInclude<ExtArgs> | null
+  where?: Prisma.VeterinarianWhereInput
 }
 
 /**

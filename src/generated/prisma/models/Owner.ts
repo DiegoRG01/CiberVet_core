@@ -223,7 +223,7 @@ export type OwnerWhereInput = {
   creadoEn?: Prisma.DateTimeFilter<"Owner"> | Date | string
   actualizadoEn?: Prisma.DateTimeFilter<"Owner"> | Date | string
   usuario?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
-  veterinaria?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
+  veterinaria?: Prisma.XOR<Prisma.BusinessNullableScalarRelationFilter, Prisma.BusinessWhereInput> | null
   pacientes?: Prisma.PatientListRelationFilter
   citas?: Prisma.AppointmentListRelationFilter
   recordatoriosCorreo?: Prisma.EmailReminderListRelationFilter
@@ -241,7 +241,7 @@ export type OwnerOrderByWithRelationInput = {
   creadoEn?: Prisma.SortOrder
   actualizadoEn?: Prisma.SortOrder
   usuario?: Prisma.UserOrderByWithRelationInput
-  veterinaria?: Prisma.VeterinaryOrderByWithRelationInput
+  veterinaria?: Prisma.BusinessOrderByWithRelationInput
   pacientes?: Prisma.PatientOrderByRelationAggregateInput
   citas?: Prisma.AppointmentOrderByRelationAggregateInput
   recordatoriosCorreo?: Prisma.EmailReminderOrderByRelationAggregateInput
@@ -262,7 +262,7 @@ export type OwnerWhereUniqueInput = Prisma.AtLeast<{
   creadoEn?: Prisma.DateTimeFilter<"Owner"> | Date | string
   actualizadoEn?: Prisma.DateTimeFilter<"Owner"> | Date | string
   usuario?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
-  veterinaria?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
+  veterinaria?: Prisma.XOR<Prisma.BusinessNullableScalarRelationFilter, Prisma.BusinessWhereInput> | null
   pacientes?: Prisma.PatientListRelationFilter
   citas?: Prisma.AppointmentListRelationFilter
   recordatoriosCorreo?: Prisma.EmailReminderListRelationFilter
@@ -310,7 +310,7 @@ export type OwnerCreateInput = {
   creadoEn?: Date | string
   actualizadoEn?: Date | string
   usuario: Prisma.UserCreateNestedOneWithoutPropietarioInput
-  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutPropietariosInput
+  veterinaria?: Prisma.BusinessCreateNestedOneWithoutPropietariosInput
   pacientes?: Prisma.PatientCreateNestedManyWithoutPropietarioInput
   citas?: Prisma.AppointmentCreateNestedManyWithoutPropietarioInput
   recordatoriosCorreo?: Prisma.EmailReminderCreateNestedManyWithoutPropietarioInput
@@ -342,7 +342,7 @@ export type OwnerUpdateInput = {
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   usuario?: Prisma.UserUpdateOneRequiredWithoutPropietarioNestedInput
-  veterinaria?: Prisma.VeterinaryUpdateOneWithoutPropietariosNestedInput
+  veterinaria?: Prisma.BusinessUpdateOneWithoutPropietariosNestedInput
   pacientes?: Prisma.PatientUpdateManyWithoutPropietarioNestedInput
   citas?: Prisma.AppointmentUpdateManyWithoutPropietarioNestedInput
   recordatoriosCorreo?: Prisma.EmailReminderUpdateManyWithoutPropietarioNestedInput
@@ -589,7 +589,7 @@ export type OwnerCreateWithoutUsuarioInput = {
   notas?: string | null
   creadoEn?: Date | string
   actualizadoEn?: Date | string
-  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutPropietariosInput
+  veterinaria?: Prisma.BusinessCreateNestedOneWithoutPropietariosInput
   pacientes?: Prisma.PatientCreateNestedManyWithoutPropietarioInput
   citas?: Prisma.AppointmentCreateNestedManyWithoutPropietarioInput
   recordatoriosCorreo?: Prisma.EmailReminderCreateNestedManyWithoutPropietarioInput
@@ -635,7 +635,7 @@ export type OwnerUpdateWithoutUsuarioInput = {
   notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  veterinaria?: Prisma.VeterinaryUpdateOneWithoutPropietariosNestedInput
+  veterinaria?: Prisma.BusinessUpdateOneWithoutPropietariosNestedInput
   pacientes?: Prisma.PatientUpdateManyWithoutPropietarioNestedInput
   citas?: Prisma.AppointmentUpdateManyWithoutPropietarioNestedInput
   recordatoriosCorreo?: Prisma.EmailReminderUpdateManyWithoutPropietarioNestedInput
@@ -738,7 +738,7 @@ export type OwnerCreateWithoutPacientesInput = {
   creadoEn?: Date | string
   actualizadoEn?: Date | string
   usuario: Prisma.UserCreateNestedOneWithoutPropietarioInput
-  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutPropietariosInput
+  veterinaria?: Prisma.BusinessCreateNestedOneWithoutPropietariosInput
   citas?: Prisma.AppointmentCreateNestedManyWithoutPropietarioInput
   recordatoriosCorreo?: Prisma.EmailReminderCreateNestedManyWithoutPropietarioInput
 }
@@ -784,7 +784,7 @@ export type OwnerUpdateWithoutPacientesInput = {
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   usuario?: Prisma.UserUpdateOneRequiredWithoutPropietarioNestedInput
-  veterinaria?: Prisma.VeterinaryUpdateOneWithoutPropietariosNestedInput
+  veterinaria?: Prisma.BusinessUpdateOneWithoutPropietariosNestedInput
   citas?: Prisma.AppointmentUpdateManyWithoutPropietarioNestedInput
   recordatoriosCorreo?: Prisma.EmailReminderUpdateManyWithoutPropietarioNestedInput
 }
@@ -814,7 +814,7 @@ export type OwnerCreateWithoutCitasInput = {
   creadoEn?: Date | string
   actualizadoEn?: Date | string
   usuario: Prisma.UserCreateNestedOneWithoutPropietarioInput
-  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutPropietariosInput
+  veterinaria?: Prisma.BusinessCreateNestedOneWithoutPropietariosInput
   pacientes?: Prisma.PatientCreateNestedManyWithoutPropietarioInput
   recordatoriosCorreo?: Prisma.EmailReminderCreateNestedManyWithoutPropietarioInput
 }
@@ -860,7 +860,7 @@ export type OwnerUpdateWithoutCitasInput = {
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   usuario?: Prisma.UserUpdateOneRequiredWithoutPropietarioNestedInput
-  veterinaria?: Prisma.VeterinaryUpdateOneWithoutPropietariosNestedInput
+  veterinaria?: Prisma.BusinessUpdateOneWithoutPropietariosNestedInput
   pacientes?: Prisma.PatientUpdateManyWithoutPropietarioNestedInput
   recordatoriosCorreo?: Prisma.EmailReminderUpdateManyWithoutPropietarioNestedInput
 }
@@ -890,7 +890,7 @@ export type OwnerCreateWithoutRecordatoriosCorreoInput = {
   creadoEn?: Date | string
   actualizadoEn?: Date | string
   usuario: Prisma.UserCreateNestedOneWithoutPropietarioInput
-  veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutPropietariosInput
+  veterinaria?: Prisma.BusinessCreateNestedOneWithoutPropietariosInput
   pacientes?: Prisma.PatientCreateNestedManyWithoutPropietarioInput
   citas?: Prisma.AppointmentCreateNestedManyWithoutPropietarioInput
 }
@@ -936,7 +936,7 @@ export type OwnerUpdateWithoutRecordatoriosCorreoInput = {
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   usuario?: Prisma.UserUpdateOneRequiredWithoutPropietarioNestedInput
-  veterinaria?: Prisma.VeterinaryUpdateOneWithoutPropietariosNestedInput
+  veterinaria?: Prisma.BusinessUpdateOneWithoutPropietariosNestedInput
   pacientes?: Prisma.PatientUpdateManyWithoutPropietarioNestedInput
   citas?: Prisma.AppointmentUpdateManyWithoutPropietarioNestedInput
 }
@@ -1143,7 +1143,7 @@ export type $OwnerPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs 
   name: "Owner"
   objects: {
     usuario: Prisma.$UserPayload<ExtArgs>
-    veterinaria: Prisma.$VeterinaryPayload<ExtArgs> | null
+    veterinaria: Prisma.$BusinessPayload<ExtArgs> | null
     pacientes: Prisma.$PatientPayload<ExtArgs>[]
     citas: Prisma.$AppointmentPayload<ExtArgs>[]
     recordatoriosCorreo: Prisma.$EmailReminderPayload<ExtArgs>[]
@@ -1554,7 +1554,7 @@ readonly fields: OwnerFieldRefs;
 export interface Prisma__OwnerClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
   usuario<T extends Prisma.UserDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.UserDefaultArgs<ExtArgs>>): Prisma.Prisma__UserClient<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  veterinaria<T extends Prisma.Owner$veterinariaArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Owner$veterinariaArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  veterinaria<T extends Prisma.Owner$veterinariaArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Owner$veterinariaArgs<ExtArgs>>): Prisma.Prisma__BusinessClient<runtime.Types.Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   pacientes<T extends Prisma.Owner$pacientesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Owner$pacientesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$PatientPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   citas<T extends Prisma.Owner$citasArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Owner$citasArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AppointmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   recordatoriosCorreo<T extends Prisma.Owner$recordatoriosCorreoArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Owner$recordatoriosCorreoArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$EmailReminderPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
@@ -1997,18 +1997,18 @@ export type OwnerDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.Interna
  */
 export type Owner$veterinariaArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Veterinary
+   * Select specific fields to fetch from the Business
    */
-  select?: Prisma.VeterinarySelect<ExtArgs> | null
+  select?: Prisma.BusinessSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Veterinary
+   * Omit specific fields from the Business
    */
-  omit?: Prisma.VeterinaryOmit<ExtArgs> | null
+  omit?: Prisma.BusinessOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.VeterinaryInclude<ExtArgs> | null
-  where?: Prisma.VeterinaryWhereInput
+  include?: Prisma.BusinessInclude<ExtArgs> | null
+  where?: Prisma.BusinessWhereInput
 }
 
 /**

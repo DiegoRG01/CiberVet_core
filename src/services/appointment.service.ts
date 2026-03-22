@@ -1,5 +1,6 @@
 import { prisma } from "../config/prisma";
 import { AppointmentStatus } from "../generated/prisma/enums";
+import { logActivity, ACCIONES, ENTIDADES } from "../utils/activityLogger";
 
 export class AppointmentService {
   /**
@@ -207,6 +208,14 @@ export class AppointmentService {
         },
       });
 
+      logActivity({
+        tipoAccion: ACCIONES.CREACION,
+        tipoEntidad: ENTIDADES.CITA,
+        entidadId: appointment.id,
+        descripcion: `Nueva cita programada para: ${appointment.paciente.nombre}`,
+        veterinariaId: data.veterinariaId,
+      });
+
       return appointment;
     } catch (error) {
       console.error("Error en AppointmentService.createAppointment:", error);
@@ -271,6 +280,17 @@ export class AppointmentService {
           canceladoEn: new Date(),
           motivoCancelacion: reason,
         },
+        include: {
+          paciente: { select: { nombre: true } },
+        },
+      });
+
+      logActivity({
+        tipoAccion: ACCIONES.CANCELACION,
+        tipoEntidad: ENTIDADES.CITA,
+        entidadId: appointment.id,
+        descripcion: `Cita cancelada: ${appointment.paciente.nombre}`,
+        veterinariaId: appointment.veterinariaId,
       });
 
       return appointment;

@@ -197,8 +197,8 @@ async function main() {
   // DATOS DE PRUEBA PARA CITAS
   // ============================================
 
-  console.log("\n🏥 Creando veterinaria de prueba...");
-  const veterinary = await prisma.veterinary.upsert({
+  console.log("\n🏥 Creando clínica de prueba...");
+  const business = await prisma.business.upsert({
     where: { correo: "clinica@cibervet.com" },
     update: {},
     create: {
@@ -212,7 +212,60 @@ async function main() {
       codigoPostal: "10101",
     },
   });
-  console.log(`✅ Veterinaria creada: ${veterinary.nombre}`);
+  console.log(`✅ Clínica creada: ${business.nombre}`);
+
+  // ============================================
+  // VETERINARIOS DE PRUEBA
+  // ============================================
+
+  console.log("\n🩺 Creando veterinarios de prueba...");
+
+  const vetUsersData = [
+    {
+      id: "a1b2c3d4-0001-4000-8000-000000000001",
+      correo: "dr.martinez@cibervet.com",
+      nombreCompleto: "Dr. Carlos Martínez",
+      telefono: "809-555-1001",
+      rol: "operador" as const,
+      veterinariaId: business.id,
+    },
+    {
+      id: "a1b2c3d4-0002-4000-8000-000000000002",
+      correo: "dra.lopez@cibervet.com",
+      nombreCompleto: "Dra. Sofía López",
+      telefono: "809-555-1002",
+      rol: "operador" as const,
+      veterinariaId: business.id,
+    },
+    {
+      id: "a1b2c3d4-0003-4000-8000-000000000003",
+      correo: "dr.reyes@cibervet.com",
+      nombreCompleto: "Dr. Andrés Reyes",
+      telefono: "809-555-1003",
+      rol: "operador" as const,
+      veterinariaId: business.id,
+    },
+  ];
+
+  for (const vetUser of vetUsersData) {
+    await prisma.user.upsert({
+      where: { id: vetUser.id },
+      update: {},
+      create: vetUser,
+    });
+
+    await prisma.veterinarian.upsert({
+      where: { usuarioId: vetUser.id },
+      update: {},
+      create: {
+        usuarioId: vetUser.id,
+        veterinariaId: business.id,
+        posicion: "Veterinario",
+        fechaContratacion: new Date("2024-01-15"),
+      },
+    });
+  }
+  console.log(`✅ ${vetUsersData.length} veterinarios creados`);
 
   // Obtener razas para los pacientes
   const labradorBreed = await prisma.breed.findFirst({
@@ -291,7 +344,7 @@ async function main() {
       },
       create: {
         usuarioId: ownerData.usuarioId,
-        veterinariaId: veterinary.id,
+        veterinariaId: business.id,
         direccion: ownerData.direccion,
         ciudad: ownerData.ciudad,
       },
@@ -323,7 +376,7 @@ async function main() {
         data: {
           nombre: "Max",
           propietarioId: owners[0].id,
-          veterinariaId: veterinary.id,
+          veterinariaId: business.id,
           especieId: dogSpecies.id,
           razaId: labradorBreed.id,
           genero: "Macho",
@@ -350,7 +403,7 @@ async function main() {
         data: {
           nombre: "Luna",
           propietarioId: owners[1].id,
-          veterinariaId: veterinary.id,
+          veterinariaId: business.id,
           especieId: catSpecies.id,
           razaId: persaBreed.id,
           genero: "Hembra",
@@ -377,7 +430,7 @@ async function main() {
         data: {
           nombre: "Rocky",
           propietarioId: owners[2].id,
-          veterinariaId: veterinary.id,
+          veterinariaId: business.id,
           especieId: dogSpecies.id,
           razaId: beagleBreed.id,
           genero: "Macho",
@@ -407,7 +460,7 @@ async function main() {
     {
       pacienteId: patients[0]?.id,
       propietarioId: owners[0]?.id,
-      veterinariaId: veterinary.id,
+      veterinariaId: business.id,
       fechaHora: new Date(today.setHours(9, 0, 0, 0)),
       duracionMinutos: 30,
       estado: "programada" as const,
@@ -419,7 +472,7 @@ async function main() {
     {
       pacienteId: patients[1]?.id,
       propietarioId: owners[1]?.id,
-      veterinariaId: veterinary.id,
+      veterinariaId: business.id,
       fechaHora: new Date(today.setHours(11, 0, 0, 0)),
       duracionMinutos: 45,
       estado: "confirmada" as const,
@@ -431,7 +484,7 @@ async function main() {
     {
       pacienteId: patients[2]?.id,
       propietarioId: owners[2]?.id,
-      veterinariaId: veterinary.id,
+      veterinariaId: business.id,
       fechaHora: new Date(today.setHours(14, 0, 0, 0)),
       duracionMinutos: 60,
       estado: "en_progreso" as const,
@@ -443,7 +496,7 @@ async function main() {
     {
       pacienteId: patients[0]?.id,
       propietarioId: owners[0]?.id,
-      veterinariaId: veterinary.id,
+      veterinariaId: business.id,
       fechaHora: new Date(yesterday.setHours(10, 0, 0, 0)),
       duracionMinutos: 30,
       estado: "completada" as const,
@@ -455,7 +508,7 @@ async function main() {
     {
       pacienteId: patients[1]?.id,
       propietarioId: owners[1]?.id,
-      veterinariaId: veterinary.id,
+      veterinariaId: business.id,
       fechaHora: new Date(yesterday.setHours(15, 0, 0, 0)),
       duracionMinutos: 30,
       estado: "cancelada" as const,
@@ -469,7 +522,7 @@ async function main() {
     {
       pacienteId: patients[2]?.id,
       propietarioId: owners[2]?.id,
-      veterinariaId: veterinary.id,
+      veterinariaId: business.id,
       fechaHora: new Date(tomorrow.setHours(8, 0, 0, 0)),
       duracionMinutos: 30,
       estado: "programada" as const,
@@ -481,7 +534,7 @@ async function main() {
     {
       pacienteId: patients[0]?.id,
       propietarioId: owners[0]?.id,
-      veterinariaId: veterinary.id,
+      veterinariaId: business.id,
       fechaHora: new Date(nextWeek.setHours(10, 30, 0, 0)),
       duracionMinutos: 45,
       estado: "programada" as const,
@@ -504,6 +557,7 @@ async function main() {
   console.log("\n✨ Seed completado exitosamente!");
   console.log("\n📊 Resumen:");
   console.log(`   - ${species.length} especies`);
+  console.log(`   - ${vetUsersData.length} veterinarios`);
   console.log(`   - ${owners.length} dueños`);
   console.log(`   - ${patients.length} pacientes`);
   console.log(`   - ${appointmentsData.length} citas`);

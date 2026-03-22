@@ -4,7 +4,7 @@
 // biome-ignore-all lint: generated file
 // @ts-nocheck 
 /*
- * This file exports the `Veterinary` model and its related types.
+ * This file exports the `Business` model and its related types.
  *
  * 🟢 You can import this file directly.
  */
@@ -13,18 +13,18 @@ import type * as $Enums from "../enums"
 import type * as Prisma from "../internal/prismaNamespace"
 
 /**
- * Model Veterinary
+ * Model Business
  * 
  */
-export type VeterinaryModel = runtime.Types.Result.DefaultSelection<Prisma.$VeterinaryPayload>
+export type BusinessModel = runtime.Types.Result.DefaultSelection<Prisma.$BusinessPayload>
 
-export type AggregateVeterinary = {
-  _count: VeterinaryCountAggregateOutputType | null
-  _min: VeterinaryMinAggregateOutputType | null
-  _max: VeterinaryMaxAggregateOutputType | null
+export type AggregateBusiness = {
+  _count: BusinessCountAggregateOutputType | null
+  _min: BusinessMinAggregateOutputType | null
+  _max: BusinessMaxAggregateOutputType | null
 }
 
-export type VeterinaryMinAggregateOutputType = {
+export type BusinessMinAggregateOutputType = {
   id: string | null
   nombre: string | null
   correo: string | null
@@ -40,7 +40,7 @@ export type VeterinaryMinAggregateOutputType = {
   actualizadoEn: Date | null
 }
 
-export type VeterinaryMaxAggregateOutputType = {
+export type BusinessMaxAggregateOutputType = {
   id: string | null
   nombre: string | null
   correo: string | null
@@ -56,7 +56,7 @@ export type VeterinaryMaxAggregateOutputType = {
   actualizadoEn: Date | null
 }
 
-export type VeterinaryCountAggregateOutputType = {
+export type BusinessCountAggregateOutputType = {
   id: number
   nombre: number
   correo: number
@@ -75,7 +75,7 @@ export type VeterinaryCountAggregateOutputType = {
 }
 
 
-export type VeterinaryMinAggregateInputType = {
+export type BusinessMinAggregateInputType = {
   id?: true
   nombre?: true
   correo?: true
@@ -91,7 +91,7 @@ export type VeterinaryMinAggregateInputType = {
   actualizadoEn?: true
 }
 
-export type VeterinaryMaxAggregateInputType = {
+export type BusinessMaxAggregateInputType = {
   id?: true
   nombre?: true
   correo?: true
@@ -107,7 +107,7 @@ export type VeterinaryMaxAggregateInputType = {
   actualizadoEn?: true
 }
 
-export type VeterinaryCountAggregateInputType = {
+export type BusinessCountAggregateInputType = {
   id?: true
   nombre?: true
   correo?: true
@@ -125,79 +125,79 @@ export type VeterinaryCountAggregateInputType = {
   _all?: true
 }
 
-export type VeterinaryAggregateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type BusinessAggregateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Filter which Veterinary to aggregate.
+   * Filter which Business to aggregate.
    */
-  where?: Prisma.VeterinaryWhereInput
+  where?: Prisma.BusinessWhereInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
    * 
-   * Determine the order of Veterinaries to fetch.
+   * Determine the order of Businesses to fetch.
    */
-  orderBy?: Prisma.VeterinaryOrderByWithRelationInput | Prisma.VeterinaryOrderByWithRelationInput[]
+  orderBy?: Prisma.BusinessOrderByWithRelationInput | Prisma.BusinessOrderByWithRelationInput[]
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
    * 
    * Sets the start position
    */
-  cursor?: Prisma.VeterinaryWhereUniqueInput
+  cursor?: Prisma.BusinessWhereUniqueInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Take `±n` Veterinaries from the position of the cursor.
+   * Take `±n` Businesses from the position of the cursor.
    */
   take?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Skip the first `n` Veterinaries.
+   * Skip the first `n` Businesses.
    */
   skip?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
    * 
-   * Count returned Veterinaries
+   * Count returned Businesses
   **/
-  _count?: true | VeterinaryCountAggregateInputType
+  _count?: true | BusinessCountAggregateInputType
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
    * 
    * Select which fields to find the minimum value
   **/
-  _min?: VeterinaryMinAggregateInputType
+  _min?: BusinessMinAggregateInputType
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
    * 
    * Select which fields to find the maximum value
   **/
-  _max?: VeterinaryMaxAggregateInputType
+  _max?: BusinessMaxAggregateInputType
 }
 
-export type GetVeterinaryAggregateType<T extends VeterinaryAggregateArgs> = {
-      [P in keyof T & keyof AggregateVeterinary]: P extends '_count' | 'count'
+export type GetBusinessAggregateType<T extends BusinessAggregateArgs> = {
+      [P in keyof T & keyof AggregateBusiness]: P extends '_count' | 'count'
     ? T[P] extends true
       ? number
-      : Prisma.GetScalarType<T[P], AggregateVeterinary[P]>
-    : Prisma.GetScalarType<T[P], AggregateVeterinary[P]>
+      : Prisma.GetScalarType<T[P], AggregateBusiness[P]>
+    : Prisma.GetScalarType<T[P], AggregateBusiness[P]>
 }
 
 
 
 
-export type VeterinaryGroupByArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.VeterinaryWhereInput
-  orderBy?: Prisma.VeterinaryOrderByWithAggregationInput | Prisma.VeterinaryOrderByWithAggregationInput[]
-  by: Prisma.VeterinaryScalarFieldEnum[] | Prisma.VeterinaryScalarFieldEnum
-  having?: Prisma.VeterinaryScalarWhereWithAggregatesInput
+export type BusinessGroupByArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.BusinessWhereInput
+  orderBy?: Prisma.BusinessOrderByWithAggregationInput | Prisma.BusinessOrderByWithAggregationInput[]
+  by: Prisma.BusinessScalarFieldEnum[] | Prisma.BusinessScalarFieldEnum
+  having?: Prisma.BusinessScalarWhereWithAggregatesInput
   take?: number
   skip?: number
-  _count?: VeterinaryCountAggregateInputType | true
-  _min?: VeterinaryMinAggregateInputType
-  _max?: VeterinaryMaxAggregateInputType
+  _count?: BusinessCountAggregateInputType | true
+  _min?: BusinessMinAggregateInputType
+  _max?: BusinessMaxAggregateInputType
 }
 
-export type VeterinaryGroupByOutputType = {
+export type BusinessGroupByOutputType = {
   id: string
   nombre: string
   correo: string
@@ -212,54 +212,54 @@ export type VeterinaryGroupByOutputType = {
   estaActivo: boolean
   creadoEn: Date
   actualizadoEn: Date
-  _count: VeterinaryCountAggregateOutputType | null
-  _min: VeterinaryMinAggregateOutputType | null
-  _max: VeterinaryMaxAggregateOutputType | null
+  _count: BusinessCountAggregateOutputType | null
+  _min: BusinessMinAggregateOutputType | null
+  _max: BusinessMaxAggregateOutputType | null
 }
 
-type GetVeterinaryGroupByPayload<T extends VeterinaryGroupByArgs> = Prisma.PrismaPromise<
+type GetBusinessGroupByPayload<T extends BusinessGroupByArgs> = Prisma.PrismaPromise<
   Array<
-    Prisma.PickEnumerable<VeterinaryGroupByOutputType, T['by']> &
+    Prisma.PickEnumerable<BusinessGroupByOutputType, T['by']> &
       {
-        [P in ((keyof T) & (keyof VeterinaryGroupByOutputType))]: P extends '_count'
+        [P in ((keyof T) & (keyof BusinessGroupByOutputType))]: P extends '_count'
           ? T[P] extends boolean
             ? number
-            : Prisma.GetScalarType<T[P], VeterinaryGroupByOutputType[P]>
-          : Prisma.GetScalarType<T[P], VeterinaryGroupByOutputType[P]>
+            : Prisma.GetScalarType<T[P], BusinessGroupByOutputType[P]>
+          : Prisma.GetScalarType<T[P], BusinessGroupByOutputType[P]>
       }
     >
   >
 
 
 
-export type VeterinaryWhereInput = {
-  AND?: Prisma.VeterinaryWhereInput | Prisma.VeterinaryWhereInput[]
-  OR?: Prisma.VeterinaryWhereInput[]
-  NOT?: Prisma.VeterinaryWhereInput | Prisma.VeterinaryWhereInput[]
-  id?: Prisma.UuidFilter<"Veterinary"> | string
-  nombre?: Prisma.StringFilter<"Veterinary"> | string
-  correo?: Prisma.StringFilter<"Veterinary"> | string
-  telefono?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  direccion?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  ciudad?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  estado?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  pais?: Prisma.StringFilter<"Veterinary"> | string
-  codigoPostal?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  urlLogo?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  horarioNegocio?: Prisma.JsonNullableFilter<"Veterinary">
-  estaActivo?: Prisma.BoolFilter<"Veterinary"> | boolean
-  creadoEn?: Prisma.DateTimeFilter<"Veterinary"> | Date | string
-  actualizadoEn?: Prisma.DateTimeFilter<"Veterinary"> | Date | string
+export type BusinessWhereInput = {
+  AND?: Prisma.BusinessWhereInput | Prisma.BusinessWhereInput[]
+  OR?: Prisma.BusinessWhereInput[]
+  NOT?: Prisma.BusinessWhereInput | Prisma.BusinessWhereInput[]
+  id?: Prisma.UuidFilter<"Business"> | string
+  nombre?: Prisma.StringFilter<"Business"> | string
+  correo?: Prisma.StringFilter<"Business"> | string
+  telefono?: Prisma.StringNullableFilter<"Business"> | string | null
+  direccion?: Prisma.StringNullableFilter<"Business"> | string | null
+  ciudad?: Prisma.StringNullableFilter<"Business"> | string | null
+  estado?: Prisma.StringNullableFilter<"Business"> | string | null
+  pais?: Prisma.StringFilter<"Business"> | string
+  codigoPostal?: Prisma.StringNullableFilter<"Business"> | string | null
+  urlLogo?: Prisma.StringNullableFilter<"Business"> | string | null
+  horarioNegocio?: Prisma.JsonNullableFilter<"Business">
+  estaActivo?: Prisma.BoolFilter<"Business"> | boolean
+  creadoEn?: Prisma.DateTimeFilter<"Business"> | Date | string
+  actualizadoEn?: Prisma.DateTimeFilter<"Business"> | Date | string
   usuarios?: Prisma.UserListRelationFilter
   propietarios?: Prisma.OwnerListRelationFilter
-  operadores?: Prisma.OperatorListRelationFilter
+  veterinarios?: Prisma.VeterinarianListRelationFilter
   pacientes?: Prisma.PatientListRelationFilter
   citas?: Prisma.AppointmentListRelationFilter
   registrosClinico?: Prisma.ClinicalRecordListRelationFilter
   registrosActividad?: Prisma.ActivityLogListRelationFilter
 }
 
-export type VeterinaryOrderByWithRelationInput = {
+export type BusinessOrderByWithRelationInput = {
   id?: Prisma.SortOrder
   nombre?: Prisma.SortOrder
   correo?: Prisma.SortOrder
@@ -276,41 +276,41 @@ export type VeterinaryOrderByWithRelationInput = {
   actualizadoEn?: Prisma.SortOrder
   usuarios?: Prisma.UserOrderByRelationAggregateInput
   propietarios?: Prisma.OwnerOrderByRelationAggregateInput
-  operadores?: Prisma.OperatorOrderByRelationAggregateInput
+  veterinarios?: Prisma.VeterinarianOrderByRelationAggregateInput
   pacientes?: Prisma.PatientOrderByRelationAggregateInput
   citas?: Prisma.AppointmentOrderByRelationAggregateInput
   registrosClinico?: Prisma.ClinicalRecordOrderByRelationAggregateInput
   registrosActividad?: Prisma.ActivityLogOrderByRelationAggregateInput
 }
 
-export type VeterinaryWhereUniqueInput = Prisma.AtLeast<{
+export type BusinessWhereUniqueInput = Prisma.AtLeast<{
   id?: string
   correo?: string
-  AND?: Prisma.VeterinaryWhereInput | Prisma.VeterinaryWhereInput[]
-  OR?: Prisma.VeterinaryWhereInput[]
-  NOT?: Prisma.VeterinaryWhereInput | Prisma.VeterinaryWhereInput[]
-  nombre?: Prisma.StringFilter<"Veterinary"> | string
-  telefono?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  direccion?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  ciudad?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  estado?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  pais?: Prisma.StringFilter<"Veterinary"> | string
-  codigoPostal?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  urlLogo?: Prisma.StringNullableFilter<"Veterinary"> | string | null
-  horarioNegocio?: Prisma.JsonNullableFilter<"Veterinary">
-  estaActivo?: Prisma.BoolFilter<"Veterinary"> | boolean
-  creadoEn?: Prisma.DateTimeFilter<"Veterinary"> | Date | string
-  actualizadoEn?: Prisma.DateTimeFilter<"Veterinary"> | Date | string
+  AND?: Prisma.BusinessWhereInput | Prisma.BusinessWhereInput[]
+  OR?: Prisma.BusinessWhereInput[]
+  NOT?: Prisma.BusinessWhereInput | Prisma.BusinessWhereInput[]
+  nombre?: Prisma.StringFilter<"Business"> | string
+  telefono?: Prisma.StringNullableFilter<"Business"> | string | null
+  direccion?: Prisma.StringNullableFilter<"Business"> | string | null
+  ciudad?: Prisma.StringNullableFilter<"Business"> | string | null
+  estado?: Prisma.StringNullableFilter<"Business"> | string | null
+  pais?: Prisma.StringFilter<"Business"> | string
+  codigoPostal?: Prisma.StringNullableFilter<"Business"> | string | null
+  urlLogo?: Prisma.StringNullableFilter<"Business"> | string | null
+  horarioNegocio?: Prisma.JsonNullableFilter<"Business">
+  estaActivo?: Prisma.BoolFilter<"Business"> | boolean
+  creadoEn?: Prisma.DateTimeFilter<"Business"> | Date | string
+  actualizadoEn?: Prisma.DateTimeFilter<"Business"> | Date | string
   usuarios?: Prisma.UserListRelationFilter
   propietarios?: Prisma.OwnerListRelationFilter
-  operadores?: Prisma.OperatorListRelationFilter
+  veterinarios?: Prisma.VeterinarianListRelationFilter
   pacientes?: Prisma.PatientListRelationFilter
   citas?: Prisma.AppointmentListRelationFilter
   registrosClinico?: Prisma.ClinicalRecordListRelationFilter
   registrosActividad?: Prisma.ActivityLogListRelationFilter
 }, "id" | "correo">
 
-export type VeterinaryOrderByWithAggregationInput = {
+export type BusinessOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
   nombre?: Prisma.SortOrder
   correo?: Prisma.SortOrder
@@ -325,32 +325,32 @@ export type VeterinaryOrderByWithAggregationInput = {
   estaActivo?: Prisma.SortOrder
   creadoEn?: Prisma.SortOrder
   actualizadoEn?: Prisma.SortOrder
-  _count?: Prisma.VeterinaryCountOrderByAggregateInput
-  _max?: Prisma.VeterinaryMaxOrderByAggregateInput
-  _min?: Prisma.VeterinaryMinOrderByAggregateInput
+  _count?: Prisma.BusinessCountOrderByAggregateInput
+  _max?: Prisma.BusinessMaxOrderByAggregateInput
+  _min?: Prisma.BusinessMinOrderByAggregateInput
 }
 
-export type VeterinaryScalarWhereWithAggregatesInput = {
-  AND?: Prisma.VeterinaryScalarWhereWithAggregatesInput | Prisma.VeterinaryScalarWhereWithAggregatesInput[]
-  OR?: Prisma.VeterinaryScalarWhereWithAggregatesInput[]
-  NOT?: Prisma.VeterinaryScalarWhereWithAggregatesInput | Prisma.VeterinaryScalarWhereWithAggregatesInput[]
-  id?: Prisma.UuidWithAggregatesFilter<"Veterinary"> | string
-  nombre?: Prisma.StringWithAggregatesFilter<"Veterinary"> | string
-  correo?: Prisma.StringWithAggregatesFilter<"Veterinary"> | string
-  telefono?: Prisma.StringNullableWithAggregatesFilter<"Veterinary"> | string | null
-  direccion?: Prisma.StringNullableWithAggregatesFilter<"Veterinary"> | string | null
-  ciudad?: Prisma.StringNullableWithAggregatesFilter<"Veterinary"> | string | null
-  estado?: Prisma.StringNullableWithAggregatesFilter<"Veterinary"> | string | null
-  pais?: Prisma.StringWithAggregatesFilter<"Veterinary"> | string
-  codigoPostal?: Prisma.StringNullableWithAggregatesFilter<"Veterinary"> | string | null
-  urlLogo?: Prisma.StringNullableWithAggregatesFilter<"Veterinary"> | string | null
-  horarioNegocio?: Prisma.JsonNullableWithAggregatesFilter<"Veterinary">
-  estaActivo?: Prisma.BoolWithAggregatesFilter<"Veterinary"> | boolean
-  creadoEn?: Prisma.DateTimeWithAggregatesFilter<"Veterinary"> | Date | string
-  actualizadoEn?: Prisma.DateTimeWithAggregatesFilter<"Veterinary"> | Date | string
+export type BusinessScalarWhereWithAggregatesInput = {
+  AND?: Prisma.BusinessScalarWhereWithAggregatesInput | Prisma.BusinessScalarWhereWithAggregatesInput[]
+  OR?: Prisma.BusinessScalarWhereWithAggregatesInput[]
+  NOT?: Prisma.BusinessScalarWhereWithAggregatesInput | Prisma.BusinessScalarWhereWithAggregatesInput[]
+  id?: Prisma.UuidWithAggregatesFilter<"Business"> | string
+  nombre?: Prisma.StringWithAggregatesFilter<"Business"> | string
+  correo?: Prisma.StringWithAggregatesFilter<"Business"> | string
+  telefono?: Prisma.StringNullableWithAggregatesFilter<"Business"> | string | null
+  direccion?: Prisma.StringNullableWithAggregatesFilter<"Business"> | string | null
+  ciudad?: Prisma.StringNullableWithAggregatesFilter<"Business"> | string | null
+  estado?: Prisma.StringNullableWithAggregatesFilter<"Business"> | string | null
+  pais?: Prisma.StringWithAggregatesFilter<"Business"> | string
+  codigoPostal?: Prisma.StringNullableWithAggregatesFilter<"Business"> | string | null
+  urlLogo?: Prisma.StringNullableWithAggregatesFilter<"Business"> | string | null
+  horarioNegocio?: Prisma.JsonNullableWithAggregatesFilter<"Business">
+  estaActivo?: Prisma.BoolWithAggregatesFilter<"Business"> | boolean
+  creadoEn?: Prisma.DateTimeWithAggregatesFilter<"Business"> | Date | string
+  actualizadoEn?: Prisma.DateTimeWithAggregatesFilter<"Business"> | Date | string
 }
 
-export type VeterinaryCreateInput = {
+export type BusinessCreateInput = {
   id?: string
   nombre: string
   correo: string
@@ -367,14 +367,14 @@ export type VeterinaryCreateInput = {
   actualizadoEn?: Date | string
   usuarios?: Prisma.UserCreateNestedManyWithoutVeterinariaInput
   propietarios?: Prisma.OwnerCreateNestedManyWithoutVeterinariaInput
-  operadores?: Prisma.OperatorCreateNestedManyWithoutVeterinariaInput
+  veterinarios?: Prisma.VeterinarianCreateNestedManyWithoutVeterinariaInput
   pacientes?: Prisma.PatientCreateNestedManyWithoutVeterinariaInput
   citas?: Prisma.AppointmentCreateNestedManyWithoutVeterinariaInput
   registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutVeterinariaInput
   registrosActividad?: Prisma.ActivityLogCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryUncheckedCreateInput = {
+export type BusinessUncheckedCreateInput = {
   id?: string
   nombre: string
   correo: string
@@ -391,14 +391,14 @@ export type VeterinaryUncheckedCreateInput = {
   actualizadoEn?: Date | string
   usuarios?: Prisma.UserUncheckedCreateNestedManyWithoutVeterinariaInput
   propietarios?: Prisma.OwnerUncheckedCreateNestedManyWithoutVeterinariaInput
-  operadores?: Prisma.OperatorUncheckedCreateNestedManyWithoutVeterinariaInput
+  veterinarios?: Prisma.VeterinarianUncheckedCreateNestedManyWithoutVeterinariaInput
   pacientes?: Prisma.PatientUncheckedCreateNestedManyWithoutVeterinariaInput
   citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutVeterinariaInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutVeterinariaInput
   registrosActividad?: Prisma.ActivityLogUncheckedCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryUpdateInput = {
+export type BusinessUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   nombre?: Prisma.StringFieldUpdateOperationsInput | string
   correo?: Prisma.StringFieldUpdateOperationsInput | string
@@ -415,14 +415,14 @@ export type VeterinaryUpdateInput = {
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   usuarios?: Prisma.UserUpdateManyWithoutVeterinariaNestedInput
   propietarios?: Prisma.OwnerUpdateManyWithoutVeterinariaNestedInput
-  operadores?: Prisma.OperatorUpdateManyWithoutVeterinariaNestedInput
+  veterinarios?: Prisma.VeterinarianUpdateManyWithoutVeterinariaNestedInput
   pacientes?: Prisma.PatientUpdateManyWithoutVeterinariaNestedInput
   citas?: Prisma.AppointmentUpdateManyWithoutVeterinariaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutVeterinariaNestedInput
   registrosActividad?: Prisma.ActivityLogUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryUncheckedUpdateInput = {
+export type BusinessUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   nombre?: Prisma.StringFieldUpdateOperationsInput | string
   correo?: Prisma.StringFieldUpdateOperationsInput | string
@@ -439,14 +439,14 @@ export type VeterinaryUncheckedUpdateInput = {
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   usuarios?: Prisma.UserUncheckedUpdateManyWithoutVeterinariaNestedInput
   propietarios?: Prisma.OwnerUncheckedUpdateManyWithoutVeterinariaNestedInput
-  operadores?: Prisma.OperatorUncheckedUpdateManyWithoutVeterinariaNestedInput
+  veterinarios?: Prisma.VeterinarianUncheckedUpdateManyWithoutVeterinariaNestedInput
   pacientes?: Prisma.PatientUncheckedUpdateManyWithoutVeterinariaNestedInput
   citas?: Prisma.AppointmentUncheckedUpdateManyWithoutVeterinariaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutVeterinariaNestedInput
   registrosActividad?: Prisma.ActivityLogUncheckedUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryCreateManyInput = {
+export type BusinessCreateManyInput = {
   id?: string
   nombre: string
   correo: string
@@ -463,7 +463,7 @@ export type VeterinaryCreateManyInput = {
   actualizadoEn?: Date | string
 }
 
-export type VeterinaryUpdateManyMutationInput = {
+export type BusinessUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   nombre?: Prisma.StringFieldUpdateOperationsInput | string
   correo?: Prisma.StringFieldUpdateOperationsInput | string
@@ -480,7 +480,7 @@ export type VeterinaryUpdateManyMutationInput = {
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type VeterinaryUncheckedUpdateManyInput = {
+export type BusinessUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   nombre?: Prisma.StringFieldUpdateOperationsInput | string
   correo?: Prisma.StringFieldUpdateOperationsInput | string
@@ -497,12 +497,12 @@ export type VeterinaryUncheckedUpdateManyInput = {
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type VeterinaryNullableScalarRelationFilter = {
-  is?: Prisma.VeterinaryWhereInput | null
-  isNot?: Prisma.VeterinaryWhereInput | null
+export type BusinessNullableScalarRelationFilter = {
+  is?: Prisma.BusinessWhereInput | null
+  isNot?: Prisma.BusinessWhereInput | null
 }
 
-export type VeterinaryCountOrderByAggregateInput = {
+export type BusinessCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   nombre?: Prisma.SortOrder
   correo?: Prisma.SortOrder
@@ -519,7 +519,7 @@ export type VeterinaryCountOrderByAggregateInput = {
   actualizadoEn?: Prisma.SortOrder
 }
 
-export type VeterinaryMaxOrderByAggregateInput = {
+export type BusinessMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
   nombre?: Prisma.SortOrder
   correo?: Prisma.SortOrder
@@ -535,7 +535,7 @@ export type VeterinaryMaxOrderByAggregateInput = {
   actualizadoEn?: Prisma.SortOrder
 }
 
-export type VeterinaryMinOrderByAggregateInput = {
+export type BusinessMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
   nombre?: Prisma.SortOrder
   correo?: Prisma.SortOrder
@@ -551,122 +551,122 @@ export type VeterinaryMinOrderByAggregateInput = {
   actualizadoEn?: Prisma.SortOrder
 }
 
-export type VeterinaryScalarRelationFilter = {
-  is?: Prisma.VeterinaryWhereInput
-  isNot?: Prisma.VeterinaryWhereInput
+export type BusinessScalarRelationFilter = {
+  is?: Prisma.BusinessWhereInput
+  isNot?: Prisma.BusinessWhereInput
 }
 
-export type VeterinaryCreateNestedOneWithoutUsuariosInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutUsuariosInput, Prisma.VeterinaryUncheckedCreateWithoutUsuariosInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutUsuariosInput
-  connect?: Prisma.VeterinaryWhereUniqueInput
+export type BusinessCreateNestedOneWithoutUsuariosInput = {
+  create?: Prisma.XOR<Prisma.BusinessCreateWithoutUsuariosInput, Prisma.BusinessUncheckedCreateWithoutUsuariosInput>
+  connectOrCreate?: Prisma.BusinessCreateOrConnectWithoutUsuariosInput
+  connect?: Prisma.BusinessWhereUniqueInput
 }
 
-export type VeterinaryUpdateOneWithoutUsuariosNestedInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutUsuariosInput, Prisma.VeterinaryUncheckedCreateWithoutUsuariosInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutUsuariosInput
-  upsert?: Prisma.VeterinaryUpsertWithoutUsuariosInput
-  disconnect?: Prisma.VeterinaryWhereInput | boolean
-  delete?: Prisma.VeterinaryWhereInput | boolean
-  connect?: Prisma.VeterinaryWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.VeterinaryUpdateToOneWithWhereWithoutUsuariosInput, Prisma.VeterinaryUpdateWithoutUsuariosInput>, Prisma.VeterinaryUncheckedUpdateWithoutUsuariosInput>
+export type BusinessUpdateOneWithoutUsuariosNestedInput = {
+  create?: Prisma.XOR<Prisma.BusinessCreateWithoutUsuariosInput, Prisma.BusinessUncheckedCreateWithoutUsuariosInput>
+  connectOrCreate?: Prisma.BusinessCreateOrConnectWithoutUsuariosInput
+  upsert?: Prisma.BusinessUpsertWithoutUsuariosInput
+  disconnect?: Prisma.BusinessWhereInput | boolean
+  delete?: Prisma.BusinessWhereInput | boolean
+  connect?: Prisma.BusinessWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.BusinessUpdateToOneWithWhereWithoutUsuariosInput, Prisma.BusinessUpdateWithoutUsuariosInput>, Prisma.BusinessUncheckedUpdateWithoutUsuariosInput>
 }
 
-export type VeterinaryCreateNestedOneWithoutPropietariosInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutPropietariosInput, Prisma.VeterinaryUncheckedCreateWithoutPropietariosInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutPropietariosInput
-  connect?: Prisma.VeterinaryWhereUniqueInput
+export type BusinessCreateNestedOneWithoutPropietariosInput = {
+  create?: Prisma.XOR<Prisma.BusinessCreateWithoutPropietariosInput, Prisma.BusinessUncheckedCreateWithoutPropietariosInput>
+  connectOrCreate?: Prisma.BusinessCreateOrConnectWithoutPropietariosInput
+  connect?: Prisma.BusinessWhereUniqueInput
 }
 
-export type VeterinaryUpdateOneWithoutPropietariosNestedInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutPropietariosInput, Prisma.VeterinaryUncheckedCreateWithoutPropietariosInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutPropietariosInput
-  upsert?: Prisma.VeterinaryUpsertWithoutPropietariosInput
-  disconnect?: Prisma.VeterinaryWhereInput | boolean
-  delete?: Prisma.VeterinaryWhereInput | boolean
-  connect?: Prisma.VeterinaryWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.VeterinaryUpdateToOneWithWhereWithoutPropietariosInput, Prisma.VeterinaryUpdateWithoutPropietariosInput>, Prisma.VeterinaryUncheckedUpdateWithoutPropietariosInput>
+export type BusinessUpdateOneWithoutPropietariosNestedInput = {
+  create?: Prisma.XOR<Prisma.BusinessCreateWithoutPropietariosInput, Prisma.BusinessUncheckedCreateWithoutPropietariosInput>
+  connectOrCreate?: Prisma.BusinessCreateOrConnectWithoutPropietariosInput
+  upsert?: Prisma.BusinessUpsertWithoutPropietariosInput
+  disconnect?: Prisma.BusinessWhereInput | boolean
+  delete?: Prisma.BusinessWhereInput | boolean
+  connect?: Prisma.BusinessWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.BusinessUpdateToOneWithWhereWithoutPropietariosInput, Prisma.BusinessUpdateWithoutPropietariosInput>, Prisma.BusinessUncheckedUpdateWithoutPropietariosInput>
 }
 
-export type VeterinaryCreateNestedOneWithoutOperadoresInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutOperadoresInput, Prisma.VeterinaryUncheckedCreateWithoutOperadoresInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutOperadoresInput
-  connect?: Prisma.VeterinaryWhereUniqueInput
+export type BusinessCreateNestedOneWithoutVeterinariosInput = {
+  create?: Prisma.XOR<Prisma.BusinessCreateWithoutVeterinariosInput, Prisma.BusinessUncheckedCreateWithoutVeterinariosInput>
+  connectOrCreate?: Prisma.BusinessCreateOrConnectWithoutVeterinariosInput
+  connect?: Prisma.BusinessWhereUniqueInput
 }
 
-export type VeterinaryUpdateOneRequiredWithoutOperadoresNestedInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutOperadoresInput, Prisma.VeterinaryUncheckedCreateWithoutOperadoresInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutOperadoresInput
-  upsert?: Prisma.VeterinaryUpsertWithoutOperadoresInput
-  connect?: Prisma.VeterinaryWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.VeterinaryUpdateToOneWithWhereWithoutOperadoresInput, Prisma.VeterinaryUpdateWithoutOperadoresInput>, Prisma.VeterinaryUncheckedUpdateWithoutOperadoresInput>
+export type BusinessUpdateOneRequiredWithoutVeterinariosNestedInput = {
+  create?: Prisma.XOR<Prisma.BusinessCreateWithoutVeterinariosInput, Prisma.BusinessUncheckedCreateWithoutVeterinariosInput>
+  connectOrCreate?: Prisma.BusinessCreateOrConnectWithoutVeterinariosInput
+  upsert?: Prisma.BusinessUpsertWithoutVeterinariosInput
+  connect?: Prisma.BusinessWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.BusinessUpdateToOneWithWhereWithoutVeterinariosInput, Prisma.BusinessUpdateWithoutVeterinariosInput>, Prisma.BusinessUncheckedUpdateWithoutVeterinariosInput>
 }
 
-export type VeterinaryCreateNestedOneWithoutPacientesInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutPacientesInput, Prisma.VeterinaryUncheckedCreateWithoutPacientesInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutPacientesInput
-  connect?: Prisma.VeterinaryWhereUniqueInput
+export type BusinessCreateNestedOneWithoutPacientesInput = {
+  create?: Prisma.XOR<Prisma.BusinessCreateWithoutPacientesInput, Prisma.BusinessUncheckedCreateWithoutPacientesInput>
+  connectOrCreate?: Prisma.BusinessCreateOrConnectWithoutPacientesInput
+  connect?: Prisma.BusinessWhereUniqueInput
 }
 
-export type VeterinaryUpdateOneWithoutPacientesNestedInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutPacientesInput, Prisma.VeterinaryUncheckedCreateWithoutPacientesInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutPacientesInput
-  upsert?: Prisma.VeterinaryUpsertWithoutPacientesInput
-  disconnect?: Prisma.VeterinaryWhereInput | boolean
-  delete?: Prisma.VeterinaryWhereInput | boolean
-  connect?: Prisma.VeterinaryWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.VeterinaryUpdateToOneWithWhereWithoutPacientesInput, Prisma.VeterinaryUpdateWithoutPacientesInput>, Prisma.VeterinaryUncheckedUpdateWithoutPacientesInput>
+export type BusinessUpdateOneWithoutPacientesNestedInput = {
+  create?: Prisma.XOR<Prisma.BusinessCreateWithoutPacientesInput, Prisma.BusinessUncheckedCreateWithoutPacientesInput>
+  connectOrCreate?: Prisma.BusinessCreateOrConnectWithoutPacientesInput
+  upsert?: Prisma.BusinessUpsertWithoutPacientesInput
+  disconnect?: Prisma.BusinessWhereInput | boolean
+  delete?: Prisma.BusinessWhereInput | boolean
+  connect?: Prisma.BusinessWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.BusinessUpdateToOneWithWhereWithoutPacientesInput, Prisma.BusinessUpdateWithoutPacientesInput>, Prisma.BusinessUncheckedUpdateWithoutPacientesInput>
 }
 
-export type VeterinaryCreateNestedOneWithoutCitasInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutCitasInput, Prisma.VeterinaryUncheckedCreateWithoutCitasInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutCitasInput
-  connect?: Prisma.VeterinaryWhereUniqueInput
+export type BusinessCreateNestedOneWithoutCitasInput = {
+  create?: Prisma.XOR<Prisma.BusinessCreateWithoutCitasInput, Prisma.BusinessUncheckedCreateWithoutCitasInput>
+  connectOrCreate?: Prisma.BusinessCreateOrConnectWithoutCitasInput
+  connect?: Prisma.BusinessWhereUniqueInput
 }
 
-export type VeterinaryUpdateOneWithoutCitasNestedInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutCitasInput, Prisma.VeterinaryUncheckedCreateWithoutCitasInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutCitasInput
-  upsert?: Prisma.VeterinaryUpsertWithoutCitasInput
-  disconnect?: Prisma.VeterinaryWhereInput | boolean
-  delete?: Prisma.VeterinaryWhereInput | boolean
-  connect?: Prisma.VeterinaryWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.VeterinaryUpdateToOneWithWhereWithoutCitasInput, Prisma.VeterinaryUpdateWithoutCitasInput>, Prisma.VeterinaryUncheckedUpdateWithoutCitasInput>
+export type BusinessUpdateOneWithoutCitasNestedInput = {
+  create?: Prisma.XOR<Prisma.BusinessCreateWithoutCitasInput, Prisma.BusinessUncheckedCreateWithoutCitasInput>
+  connectOrCreate?: Prisma.BusinessCreateOrConnectWithoutCitasInput
+  upsert?: Prisma.BusinessUpsertWithoutCitasInput
+  disconnect?: Prisma.BusinessWhereInput | boolean
+  delete?: Prisma.BusinessWhereInput | boolean
+  connect?: Prisma.BusinessWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.BusinessUpdateToOneWithWhereWithoutCitasInput, Prisma.BusinessUpdateWithoutCitasInput>, Prisma.BusinessUncheckedUpdateWithoutCitasInput>
 }
 
-export type VeterinaryCreateNestedOneWithoutRegistrosClinicoInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutRegistrosClinicoInput, Prisma.VeterinaryUncheckedCreateWithoutRegistrosClinicoInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutRegistrosClinicoInput
-  connect?: Prisma.VeterinaryWhereUniqueInput
+export type BusinessCreateNestedOneWithoutRegistrosClinicoInput = {
+  create?: Prisma.XOR<Prisma.BusinessCreateWithoutRegistrosClinicoInput, Prisma.BusinessUncheckedCreateWithoutRegistrosClinicoInput>
+  connectOrCreate?: Prisma.BusinessCreateOrConnectWithoutRegistrosClinicoInput
+  connect?: Prisma.BusinessWhereUniqueInput
 }
 
-export type VeterinaryUpdateOneWithoutRegistrosClinicoNestedInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutRegistrosClinicoInput, Prisma.VeterinaryUncheckedCreateWithoutRegistrosClinicoInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutRegistrosClinicoInput
-  upsert?: Prisma.VeterinaryUpsertWithoutRegistrosClinicoInput
-  disconnect?: Prisma.VeterinaryWhereInput | boolean
-  delete?: Prisma.VeterinaryWhereInput | boolean
-  connect?: Prisma.VeterinaryWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.VeterinaryUpdateToOneWithWhereWithoutRegistrosClinicoInput, Prisma.VeterinaryUpdateWithoutRegistrosClinicoInput>, Prisma.VeterinaryUncheckedUpdateWithoutRegistrosClinicoInput>
+export type BusinessUpdateOneWithoutRegistrosClinicoNestedInput = {
+  create?: Prisma.XOR<Prisma.BusinessCreateWithoutRegistrosClinicoInput, Prisma.BusinessUncheckedCreateWithoutRegistrosClinicoInput>
+  connectOrCreate?: Prisma.BusinessCreateOrConnectWithoutRegistrosClinicoInput
+  upsert?: Prisma.BusinessUpsertWithoutRegistrosClinicoInput
+  disconnect?: Prisma.BusinessWhereInput | boolean
+  delete?: Prisma.BusinessWhereInput | boolean
+  connect?: Prisma.BusinessWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.BusinessUpdateToOneWithWhereWithoutRegistrosClinicoInput, Prisma.BusinessUpdateWithoutRegistrosClinicoInput>, Prisma.BusinessUncheckedUpdateWithoutRegistrosClinicoInput>
 }
 
-export type VeterinaryCreateNestedOneWithoutRegistrosActividadInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutRegistrosActividadInput, Prisma.VeterinaryUncheckedCreateWithoutRegistrosActividadInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutRegistrosActividadInput
-  connect?: Prisma.VeterinaryWhereUniqueInput
+export type BusinessCreateNestedOneWithoutRegistrosActividadInput = {
+  create?: Prisma.XOR<Prisma.BusinessCreateWithoutRegistrosActividadInput, Prisma.BusinessUncheckedCreateWithoutRegistrosActividadInput>
+  connectOrCreate?: Prisma.BusinessCreateOrConnectWithoutRegistrosActividadInput
+  connect?: Prisma.BusinessWhereUniqueInput
 }
 
-export type VeterinaryUpdateOneWithoutRegistrosActividadNestedInput = {
-  create?: Prisma.XOR<Prisma.VeterinaryCreateWithoutRegistrosActividadInput, Prisma.VeterinaryUncheckedCreateWithoutRegistrosActividadInput>
-  connectOrCreate?: Prisma.VeterinaryCreateOrConnectWithoutRegistrosActividadInput
-  upsert?: Prisma.VeterinaryUpsertWithoutRegistrosActividadInput
-  disconnect?: Prisma.VeterinaryWhereInput | boolean
-  delete?: Prisma.VeterinaryWhereInput | boolean
-  connect?: Prisma.VeterinaryWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.VeterinaryUpdateToOneWithWhereWithoutRegistrosActividadInput, Prisma.VeterinaryUpdateWithoutRegistrosActividadInput>, Prisma.VeterinaryUncheckedUpdateWithoutRegistrosActividadInput>
+export type BusinessUpdateOneWithoutRegistrosActividadNestedInput = {
+  create?: Prisma.XOR<Prisma.BusinessCreateWithoutRegistrosActividadInput, Prisma.BusinessUncheckedCreateWithoutRegistrosActividadInput>
+  connectOrCreate?: Prisma.BusinessCreateOrConnectWithoutRegistrosActividadInput
+  upsert?: Prisma.BusinessUpsertWithoutRegistrosActividadInput
+  disconnect?: Prisma.BusinessWhereInput | boolean
+  delete?: Prisma.BusinessWhereInput | boolean
+  connect?: Prisma.BusinessWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.BusinessUpdateToOneWithWhereWithoutRegistrosActividadInput, Prisma.BusinessUpdateWithoutRegistrosActividadInput>, Prisma.BusinessUncheckedUpdateWithoutRegistrosActividadInput>
 }
 
-export type VeterinaryCreateWithoutUsuariosInput = {
+export type BusinessCreateWithoutUsuariosInput = {
   id?: string
   nombre: string
   correo: string
@@ -682,14 +682,14 @@ export type VeterinaryCreateWithoutUsuariosInput = {
   creadoEn?: Date | string
   actualizadoEn?: Date | string
   propietarios?: Prisma.OwnerCreateNestedManyWithoutVeterinariaInput
-  operadores?: Prisma.OperatorCreateNestedManyWithoutVeterinariaInput
+  veterinarios?: Prisma.VeterinarianCreateNestedManyWithoutVeterinariaInput
   pacientes?: Prisma.PatientCreateNestedManyWithoutVeterinariaInput
   citas?: Prisma.AppointmentCreateNestedManyWithoutVeterinariaInput
   registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutVeterinariaInput
   registrosActividad?: Prisma.ActivityLogCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryUncheckedCreateWithoutUsuariosInput = {
+export type BusinessUncheckedCreateWithoutUsuariosInput = {
   id?: string
   nombre: string
   correo: string
@@ -705,30 +705,30 @@ export type VeterinaryUncheckedCreateWithoutUsuariosInput = {
   creadoEn?: Date | string
   actualizadoEn?: Date | string
   propietarios?: Prisma.OwnerUncheckedCreateNestedManyWithoutVeterinariaInput
-  operadores?: Prisma.OperatorUncheckedCreateNestedManyWithoutVeterinariaInput
+  veterinarios?: Prisma.VeterinarianUncheckedCreateNestedManyWithoutVeterinariaInput
   pacientes?: Prisma.PatientUncheckedCreateNestedManyWithoutVeterinariaInput
   citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutVeterinariaInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutVeterinariaInput
   registrosActividad?: Prisma.ActivityLogUncheckedCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryCreateOrConnectWithoutUsuariosInput = {
-  where: Prisma.VeterinaryWhereUniqueInput
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutUsuariosInput, Prisma.VeterinaryUncheckedCreateWithoutUsuariosInput>
+export type BusinessCreateOrConnectWithoutUsuariosInput = {
+  where: Prisma.BusinessWhereUniqueInput
+  create: Prisma.XOR<Prisma.BusinessCreateWithoutUsuariosInput, Prisma.BusinessUncheckedCreateWithoutUsuariosInput>
 }
 
-export type VeterinaryUpsertWithoutUsuariosInput = {
-  update: Prisma.XOR<Prisma.VeterinaryUpdateWithoutUsuariosInput, Prisma.VeterinaryUncheckedUpdateWithoutUsuariosInput>
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutUsuariosInput, Prisma.VeterinaryUncheckedCreateWithoutUsuariosInput>
-  where?: Prisma.VeterinaryWhereInput
+export type BusinessUpsertWithoutUsuariosInput = {
+  update: Prisma.XOR<Prisma.BusinessUpdateWithoutUsuariosInput, Prisma.BusinessUncheckedUpdateWithoutUsuariosInput>
+  create: Prisma.XOR<Prisma.BusinessCreateWithoutUsuariosInput, Prisma.BusinessUncheckedCreateWithoutUsuariosInput>
+  where?: Prisma.BusinessWhereInput
 }
 
-export type VeterinaryUpdateToOneWithWhereWithoutUsuariosInput = {
-  where?: Prisma.VeterinaryWhereInput
-  data: Prisma.XOR<Prisma.VeterinaryUpdateWithoutUsuariosInput, Prisma.VeterinaryUncheckedUpdateWithoutUsuariosInput>
+export type BusinessUpdateToOneWithWhereWithoutUsuariosInput = {
+  where?: Prisma.BusinessWhereInput
+  data: Prisma.XOR<Prisma.BusinessUpdateWithoutUsuariosInput, Prisma.BusinessUncheckedUpdateWithoutUsuariosInput>
 }
 
-export type VeterinaryUpdateWithoutUsuariosInput = {
+export type BusinessUpdateWithoutUsuariosInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   nombre?: Prisma.StringFieldUpdateOperationsInput | string
   correo?: Prisma.StringFieldUpdateOperationsInput | string
@@ -744,14 +744,14 @@ export type VeterinaryUpdateWithoutUsuariosInput = {
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   propietarios?: Prisma.OwnerUpdateManyWithoutVeterinariaNestedInput
-  operadores?: Prisma.OperatorUpdateManyWithoutVeterinariaNestedInput
+  veterinarios?: Prisma.VeterinarianUpdateManyWithoutVeterinariaNestedInput
   pacientes?: Prisma.PatientUpdateManyWithoutVeterinariaNestedInput
   citas?: Prisma.AppointmentUpdateManyWithoutVeterinariaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutVeterinariaNestedInput
   registrosActividad?: Prisma.ActivityLogUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryUncheckedUpdateWithoutUsuariosInput = {
+export type BusinessUncheckedUpdateWithoutUsuariosInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   nombre?: Prisma.StringFieldUpdateOperationsInput | string
   correo?: Prisma.StringFieldUpdateOperationsInput | string
@@ -767,14 +767,14 @@ export type VeterinaryUncheckedUpdateWithoutUsuariosInput = {
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   propietarios?: Prisma.OwnerUncheckedUpdateManyWithoutVeterinariaNestedInput
-  operadores?: Prisma.OperatorUncheckedUpdateManyWithoutVeterinariaNestedInput
+  veterinarios?: Prisma.VeterinarianUncheckedUpdateManyWithoutVeterinariaNestedInput
   pacientes?: Prisma.PatientUncheckedUpdateManyWithoutVeterinariaNestedInput
   citas?: Prisma.AppointmentUncheckedUpdateManyWithoutVeterinariaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutVeterinariaNestedInput
   registrosActividad?: Prisma.ActivityLogUncheckedUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryCreateWithoutPropietariosInput = {
+export type BusinessCreateWithoutPropietariosInput = {
   id?: string
   nombre: string
   correo: string
@@ -790,14 +790,14 @@ export type VeterinaryCreateWithoutPropietariosInput = {
   creadoEn?: Date | string
   actualizadoEn?: Date | string
   usuarios?: Prisma.UserCreateNestedManyWithoutVeterinariaInput
-  operadores?: Prisma.OperatorCreateNestedManyWithoutVeterinariaInput
+  veterinarios?: Prisma.VeterinarianCreateNestedManyWithoutVeterinariaInput
   pacientes?: Prisma.PatientCreateNestedManyWithoutVeterinariaInput
   citas?: Prisma.AppointmentCreateNestedManyWithoutVeterinariaInput
   registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutVeterinariaInput
   registrosActividad?: Prisma.ActivityLogCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryUncheckedCreateWithoutPropietariosInput = {
+export type BusinessUncheckedCreateWithoutPropietariosInput = {
   id?: string
   nombre: string
   correo: string
@@ -813,30 +813,30 @@ export type VeterinaryUncheckedCreateWithoutPropietariosInput = {
   creadoEn?: Date | string
   actualizadoEn?: Date | string
   usuarios?: Prisma.UserUncheckedCreateNestedManyWithoutVeterinariaInput
-  operadores?: Prisma.OperatorUncheckedCreateNestedManyWithoutVeterinariaInput
+  veterinarios?: Prisma.VeterinarianUncheckedCreateNestedManyWithoutVeterinariaInput
   pacientes?: Prisma.PatientUncheckedCreateNestedManyWithoutVeterinariaInput
   citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutVeterinariaInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutVeterinariaInput
   registrosActividad?: Prisma.ActivityLogUncheckedCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryCreateOrConnectWithoutPropietariosInput = {
-  where: Prisma.VeterinaryWhereUniqueInput
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutPropietariosInput, Prisma.VeterinaryUncheckedCreateWithoutPropietariosInput>
+export type BusinessCreateOrConnectWithoutPropietariosInput = {
+  where: Prisma.BusinessWhereUniqueInput
+  create: Prisma.XOR<Prisma.BusinessCreateWithoutPropietariosInput, Prisma.BusinessUncheckedCreateWithoutPropietariosInput>
 }
 
-export type VeterinaryUpsertWithoutPropietariosInput = {
-  update: Prisma.XOR<Prisma.VeterinaryUpdateWithoutPropietariosInput, Prisma.VeterinaryUncheckedUpdateWithoutPropietariosInput>
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutPropietariosInput, Prisma.VeterinaryUncheckedCreateWithoutPropietariosInput>
-  where?: Prisma.VeterinaryWhereInput
+export type BusinessUpsertWithoutPropietariosInput = {
+  update: Prisma.XOR<Prisma.BusinessUpdateWithoutPropietariosInput, Prisma.BusinessUncheckedUpdateWithoutPropietariosInput>
+  create: Prisma.XOR<Prisma.BusinessCreateWithoutPropietariosInput, Prisma.BusinessUncheckedCreateWithoutPropietariosInput>
+  where?: Prisma.BusinessWhereInput
 }
 
-export type VeterinaryUpdateToOneWithWhereWithoutPropietariosInput = {
-  where?: Prisma.VeterinaryWhereInput
-  data: Prisma.XOR<Prisma.VeterinaryUpdateWithoutPropietariosInput, Prisma.VeterinaryUncheckedUpdateWithoutPropietariosInput>
+export type BusinessUpdateToOneWithWhereWithoutPropietariosInput = {
+  where?: Prisma.BusinessWhereInput
+  data: Prisma.XOR<Prisma.BusinessUpdateWithoutPropietariosInput, Prisma.BusinessUncheckedUpdateWithoutPropietariosInput>
 }
 
-export type VeterinaryUpdateWithoutPropietariosInput = {
+export type BusinessUpdateWithoutPropietariosInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   nombre?: Prisma.StringFieldUpdateOperationsInput | string
   correo?: Prisma.StringFieldUpdateOperationsInput | string
@@ -852,14 +852,14 @@ export type VeterinaryUpdateWithoutPropietariosInput = {
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   usuarios?: Prisma.UserUpdateManyWithoutVeterinariaNestedInput
-  operadores?: Prisma.OperatorUpdateManyWithoutVeterinariaNestedInput
+  veterinarios?: Prisma.VeterinarianUpdateManyWithoutVeterinariaNestedInput
   pacientes?: Prisma.PatientUpdateManyWithoutVeterinariaNestedInput
   citas?: Prisma.AppointmentUpdateManyWithoutVeterinariaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutVeterinariaNestedInput
   registrosActividad?: Prisma.ActivityLogUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryUncheckedUpdateWithoutPropietariosInput = {
+export type BusinessUncheckedUpdateWithoutPropietariosInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   nombre?: Prisma.StringFieldUpdateOperationsInput | string
   correo?: Prisma.StringFieldUpdateOperationsInput | string
@@ -875,14 +875,14 @@ export type VeterinaryUncheckedUpdateWithoutPropietariosInput = {
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   usuarios?: Prisma.UserUncheckedUpdateManyWithoutVeterinariaNestedInput
-  operadores?: Prisma.OperatorUncheckedUpdateManyWithoutVeterinariaNestedInput
+  veterinarios?: Prisma.VeterinarianUncheckedUpdateManyWithoutVeterinariaNestedInput
   pacientes?: Prisma.PatientUncheckedUpdateManyWithoutVeterinariaNestedInput
   citas?: Prisma.AppointmentUncheckedUpdateManyWithoutVeterinariaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutVeterinariaNestedInput
   registrosActividad?: Prisma.ActivityLogUncheckedUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryCreateWithoutOperadoresInput = {
+export type BusinessCreateWithoutVeterinariosInput = {
   id?: string
   nombre: string
   correo: string
@@ -905,7 +905,7 @@ export type VeterinaryCreateWithoutOperadoresInput = {
   registrosActividad?: Prisma.ActivityLogCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryUncheckedCreateWithoutOperadoresInput = {
+export type BusinessUncheckedCreateWithoutVeterinariosInput = {
   id?: string
   nombre: string
   correo: string
@@ -928,23 +928,23 @@ export type VeterinaryUncheckedCreateWithoutOperadoresInput = {
   registrosActividad?: Prisma.ActivityLogUncheckedCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryCreateOrConnectWithoutOperadoresInput = {
-  where: Prisma.VeterinaryWhereUniqueInput
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutOperadoresInput, Prisma.VeterinaryUncheckedCreateWithoutOperadoresInput>
+export type BusinessCreateOrConnectWithoutVeterinariosInput = {
+  where: Prisma.BusinessWhereUniqueInput
+  create: Prisma.XOR<Prisma.BusinessCreateWithoutVeterinariosInput, Prisma.BusinessUncheckedCreateWithoutVeterinariosInput>
 }
 
-export type VeterinaryUpsertWithoutOperadoresInput = {
-  update: Prisma.XOR<Prisma.VeterinaryUpdateWithoutOperadoresInput, Prisma.VeterinaryUncheckedUpdateWithoutOperadoresInput>
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutOperadoresInput, Prisma.VeterinaryUncheckedCreateWithoutOperadoresInput>
-  where?: Prisma.VeterinaryWhereInput
+export type BusinessUpsertWithoutVeterinariosInput = {
+  update: Prisma.XOR<Prisma.BusinessUpdateWithoutVeterinariosInput, Prisma.BusinessUncheckedUpdateWithoutVeterinariosInput>
+  create: Prisma.XOR<Prisma.BusinessCreateWithoutVeterinariosInput, Prisma.BusinessUncheckedCreateWithoutVeterinariosInput>
+  where?: Prisma.BusinessWhereInput
 }
 
-export type VeterinaryUpdateToOneWithWhereWithoutOperadoresInput = {
-  where?: Prisma.VeterinaryWhereInput
-  data: Prisma.XOR<Prisma.VeterinaryUpdateWithoutOperadoresInput, Prisma.VeterinaryUncheckedUpdateWithoutOperadoresInput>
+export type BusinessUpdateToOneWithWhereWithoutVeterinariosInput = {
+  where?: Prisma.BusinessWhereInput
+  data: Prisma.XOR<Prisma.BusinessUpdateWithoutVeterinariosInput, Prisma.BusinessUncheckedUpdateWithoutVeterinariosInput>
 }
 
-export type VeterinaryUpdateWithoutOperadoresInput = {
+export type BusinessUpdateWithoutVeterinariosInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   nombre?: Prisma.StringFieldUpdateOperationsInput | string
   correo?: Prisma.StringFieldUpdateOperationsInput | string
@@ -967,7 +967,7 @@ export type VeterinaryUpdateWithoutOperadoresInput = {
   registrosActividad?: Prisma.ActivityLogUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryUncheckedUpdateWithoutOperadoresInput = {
+export type BusinessUncheckedUpdateWithoutVeterinariosInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   nombre?: Prisma.StringFieldUpdateOperationsInput | string
   correo?: Prisma.StringFieldUpdateOperationsInput | string
@@ -990,7 +990,7 @@ export type VeterinaryUncheckedUpdateWithoutOperadoresInput = {
   registrosActividad?: Prisma.ActivityLogUncheckedUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryCreateWithoutPacientesInput = {
+export type BusinessCreateWithoutPacientesInput = {
   id?: string
   nombre: string
   correo: string
@@ -1007,13 +1007,13 @@ export type VeterinaryCreateWithoutPacientesInput = {
   actualizadoEn?: Date | string
   usuarios?: Prisma.UserCreateNestedManyWithoutVeterinariaInput
   propietarios?: Prisma.OwnerCreateNestedManyWithoutVeterinariaInput
-  operadores?: Prisma.OperatorCreateNestedManyWithoutVeterinariaInput
+  veterinarios?: Prisma.VeterinarianCreateNestedManyWithoutVeterinariaInput
   citas?: Prisma.AppointmentCreateNestedManyWithoutVeterinariaInput
   registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutVeterinariaInput
   registrosActividad?: Prisma.ActivityLogCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryUncheckedCreateWithoutPacientesInput = {
+export type BusinessUncheckedCreateWithoutPacientesInput = {
   id?: string
   nombre: string
   correo: string
@@ -1030,29 +1030,29 @@ export type VeterinaryUncheckedCreateWithoutPacientesInput = {
   actualizadoEn?: Date | string
   usuarios?: Prisma.UserUncheckedCreateNestedManyWithoutVeterinariaInput
   propietarios?: Prisma.OwnerUncheckedCreateNestedManyWithoutVeterinariaInput
-  operadores?: Prisma.OperatorUncheckedCreateNestedManyWithoutVeterinariaInput
+  veterinarios?: Prisma.VeterinarianUncheckedCreateNestedManyWithoutVeterinariaInput
   citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutVeterinariaInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutVeterinariaInput
   registrosActividad?: Prisma.ActivityLogUncheckedCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryCreateOrConnectWithoutPacientesInput = {
-  where: Prisma.VeterinaryWhereUniqueInput
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutPacientesInput, Prisma.VeterinaryUncheckedCreateWithoutPacientesInput>
+export type BusinessCreateOrConnectWithoutPacientesInput = {
+  where: Prisma.BusinessWhereUniqueInput
+  create: Prisma.XOR<Prisma.BusinessCreateWithoutPacientesInput, Prisma.BusinessUncheckedCreateWithoutPacientesInput>
 }
 
-export type VeterinaryUpsertWithoutPacientesInput = {
-  update: Prisma.XOR<Prisma.VeterinaryUpdateWithoutPacientesInput, Prisma.VeterinaryUncheckedUpdateWithoutPacientesInput>
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutPacientesInput, Prisma.VeterinaryUncheckedCreateWithoutPacientesInput>
-  where?: Prisma.VeterinaryWhereInput
+export type BusinessUpsertWithoutPacientesInput = {
+  update: Prisma.XOR<Prisma.BusinessUpdateWithoutPacientesInput, Prisma.BusinessUncheckedUpdateWithoutPacientesInput>
+  create: Prisma.XOR<Prisma.BusinessCreateWithoutPacientesInput, Prisma.BusinessUncheckedCreateWithoutPacientesInput>
+  where?: Prisma.BusinessWhereInput
 }
 
-export type VeterinaryUpdateToOneWithWhereWithoutPacientesInput = {
-  where?: Prisma.VeterinaryWhereInput
-  data: Prisma.XOR<Prisma.VeterinaryUpdateWithoutPacientesInput, Prisma.VeterinaryUncheckedUpdateWithoutPacientesInput>
+export type BusinessUpdateToOneWithWhereWithoutPacientesInput = {
+  where?: Prisma.BusinessWhereInput
+  data: Prisma.XOR<Prisma.BusinessUpdateWithoutPacientesInput, Prisma.BusinessUncheckedUpdateWithoutPacientesInput>
 }
 
-export type VeterinaryUpdateWithoutPacientesInput = {
+export type BusinessUpdateWithoutPacientesInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   nombre?: Prisma.StringFieldUpdateOperationsInput | string
   correo?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1069,13 +1069,13 @@ export type VeterinaryUpdateWithoutPacientesInput = {
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   usuarios?: Prisma.UserUpdateManyWithoutVeterinariaNestedInput
   propietarios?: Prisma.OwnerUpdateManyWithoutVeterinariaNestedInput
-  operadores?: Prisma.OperatorUpdateManyWithoutVeterinariaNestedInput
+  veterinarios?: Prisma.VeterinarianUpdateManyWithoutVeterinariaNestedInput
   citas?: Prisma.AppointmentUpdateManyWithoutVeterinariaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutVeterinariaNestedInput
   registrosActividad?: Prisma.ActivityLogUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryUncheckedUpdateWithoutPacientesInput = {
+export type BusinessUncheckedUpdateWithoutPacientesInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   nombre?: Prisma.StringFieldUpdateOperationsInput | string
   correo?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1092,13 +1092,13 @@ export type VeterinaryUncheckedUpdateWithoutPacientesInput = {
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   usuarios?: Prisma.UserUncheckedUpdateManyWithoutVeterinariaNestedInput
   propietarios?: Prisma.OwnerUncheckedUpdateManyWithoutVeterinariaNestedInput
-  operadores?: Prisma.OperatorUncheckedUpdateManyWithoutVeterinariaNestedInput
+  veterinarios?: Prisma.VeterinarianUncheckedUpdateManyWithoutVeterinariaNestedInput
   citas?: Prisma.AppointmentUncheckedUpdateManyWithoutVeterinariaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutVeterinariaNestedInput
   registrosActividad?: Prisma.ActivityLogUncheckedUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryCreateWithoutCitasInput = {
+export type BusinessCreateWithoutCitasInput = {
   id?: string
   nombre: string
   correo: string
@@ -1115,13 +1115,13 @@ export type VeterinaryCreateWithoutCitasInput = {
   actualizadoEn?: Date | string
   usuarios?: Prisma.UserCreateNestedManyWithoutVeterinariaInput
   propietarios?: Prisma.OwnerCreateNestedManyWithoutVeterinariaInput
-  operadores?: Prisma.OperatorCreateNestedManyWithoutVeterinariaInput
+  veterinarios?: Prisma.VeterinarianCreateNestedManyWithoutVeterinariaInput
   pacientes?: Prisma.PatientCreateNestedManyWithoutVeterinariaInput
   registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutVeterinariaInput
   registrosActividad?: Prisma.ActivityLogCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryUncheckedCreateWithoutCitasInput = {
+export type BusinessUncheckedCreateWithoutCitasInput = {
   id?: string
   nombre: string
   correo: string
@@ -1138,29 +1138,29 @@ export type VeterinaryUncheckedCreateWithoutCitasInput = {
   actualizadoEn?: Date | string
   usuarios?: Prisma.UserUncheckedCreateNestedManyWithoutVeterinariaInput
   propietarios?: Prisma.OwnerUncheckedCreateNestedManyWithoutVeterinariaInput
-  operadores?: Prisma.OperatorUncheckedCreateNestedManyWithoutVeterinariaInput
+  veterinarios?: Prisma.VeterinarianUncheckedCreateNestedManyWithoutVeterinariaInput
   pacientes?: Prisma.PatientUncheckedCreateNestedManyWithoutVeterinariaInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutVeterinariaInput
   registrosActividad?: Prisma.ActivityLogUncheckedCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryCreateOrConnectWithoutCitasInput = {
-  where: Prisma.VeterinaryWhereUniqueInput
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutCitasInput, Prisma.VeterinaryUncheckedCreateWithoutCitasInput>
+export type BusinessCreateOrConnectWithoutCitasInput = {
+  where: Prisma.BusinessWhereUniqueInput
+  create: Prisma.XOR<Prisma.BusinessCreateWithoutCitasInput, Prisma.BusinessUncheckedCreateWithoutCitasInput>
 }
 
-export type VeterinaryUpsertWithoutCitasInput = {
-  update: Prisma.XOR<Prisma.VeterinaryUpdateWithoutCitasInput, Prisma.VeterinaryUncheckedUpdateWithoutCitasInput>
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutCitasInput, Prisma.VeterinaryUncheckedCreateWithoutCitasInput>
-  where?: Prisma.VeterinaryWhereInput
+export type BusinessUpsertWithoutCitasInput = {
+  update: Prisma.XOR<Prisma.BusinessUpdateWithoutCitasInput, Prisma.BusinessUncheckedUpdateWithoutCitasInput>
+  create: Prisma.XOR<Prisma.BusinessCreateWithoutCitasInput, Prisma.BusinessUncheckedCreateWithoutCitasInput>
+  where?: Prisma.BusinessWhereInput
 }
 
-export type VeterinaryUpdateToOneWithWhereWithoutCitasInput = {
-  where?: Prisma.VeterinaryWhereInput
-  data: Prisma.XOR<Prisma.VeterinaryUpdateWithoutCitasInput, Prisma.VeterinaryUncheckedUpdateWithoutCitasInput>
+export type BusinessUpdateToOneWithWhereWithoutCitasInput = {
+  where?: Prisma.BusinessWhereInput
+  data: Prisma.XOR<Prisma.BusinessUpdateWithoutCitasInput, Prisma.BusinessUncheckedUpdateWithoutCitasInput>
 }
 
-export type VeterinaryUpdateWithoutCitasInput = {
+export type BusinessUpdateWithoutCitasInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   nombre?: Prisma.StringFieldUpdateOperationsInput | string
   correo?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1177,13 +1177,13 @@ export type VeterinaryUpdateWithoutCitasInput = {
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   usuarios?: Prisma.UserUpdateManyWithoutVeterinariaNestedInput
   propietarios?: Prisma.OwnerUpdateManyWithoutVeterinariaNestedInput
-  operadores?: Prisma.OperatorUpdateManyWithoutVeterinariaNestedInput
+  veterinarios?: Prisma.VeterinarianUpdateManyWithoutVeterinariaNestedInput
   pacientes?: Prisma.PatientUpdateManyWithoutVeterinariaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutVeterinariaNestedInput
   registrosActividad?: Prisma.ActivityLogUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryUncheckedUpdateWithoutCitasInput = {
+export type BusinessUncheckedUpdateWithoutCitasInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   nombre?: Prisma.StringFieldUpdateOperationsInput | string
   correo?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1200,13 +1200,13 @@ export type VeterinaryUncheckedUpdateWithoutCitasInput = {
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   usuarios?: Prisma.UserUncheckedUpdateManyWithoutVeterinariaNestedInput
   propietarios?: Prisma.OwnerUncheckedUpdateManyWithoutVeterinariaNestedInput
-  operadores?: Prisma.OperatorUncheckedUpdateManyWithoutVeterinariaNestedInput
+  veterinarios?: Prisma.VeterinarianUncheckedUpdateManyWithoutVeterinariaNestedInput
   pacientes?: Prisma.PatientUncheckedUpdateManyWithoutVeterinariaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutVeterinariaNestedInput
   registrosActividad?: Prisma.ActivityLogUncheckedUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryCreateWithoutRegistrosClinicoInput = {
+export type BusinessCreateWithoutRegistrosClinicoInput = {
   id?: string
   nombre: string
   correo: string
@@ -1223,13 +1223,13 @@ export type VeterinaryCreateWithoutRegistrosClinicoInput = {
   actualizadoEn?: Date | string
   usuarios?: Prisma.UserCreateNestedManyWithoutVeterinariaInput
   propietarios?: Prisma.OwnerCreateNestedManyWithoutVeterinariaInput
-  operadores?: Prisma.OperatorCreateNestedManyWithoutVeterinariaInput
+  veterinarios?: Prisma.VeterinarianCreateNestedManyWithoutVeterinariaInput
   pacientes?: Prisma.PatientCreateNestedManyWithoutVeterinariaInput
   citas?: Prisma.AppointmentCreateNestedManyWithoutVeterinariaInput
   registrosActividad?: Prisma.ActivityLogCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryUncheckedCreateWithoutRegistrosClinicoInput = {
+export type BusinessUncheckedCreateWithoutRegistrosClinicoInput = {
   id?: string
   nombre: string
   correo: string
@@ -1246,29 +1246,29 @@ export type VeterinaryUncheckedCreateWithoutRegistrosClinicoInput = {
   actualizadoEn?: Date | string
   usuarios?: Prisma.UserUncheckedCreateNestedManyWithoutVeterinariaInput
   propietarios?: Prisma.OwnerUncheckedCreateNestedManyWithoutVeterinariaInput
-  operadores?: Prisma.OperatorUncheckedCreateNestedManyWithoutVeterinariaInput
+  veterinarios?: Prisma.VeterinarianUncheckedCreateNestedManyWithoutVeterinariaInput
   pacientes?: Prisma.PatientUncheckedCreateNestedManyWithoutVeterinariaInput
   citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutVeterinariaInput
   registrosActividad?: Prisma.ActivityLogUncheckedCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryCreateOrConnectWithoutRegistrosClinicoInput = {
-  where: Prisma.VeterinaryWhereUniqueInput
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutRegistrosClinicoInput, Prisma.VeterinaryUncheckedCreateWithoutRegistrosClinicoInput>
+export type BusinessCreateOrConnectWithoutRegistrosClinicoInput = {
+  where: Prisma.BusinessWhereUniqueInput
+  create: Prisma.XOR<Prisma.BusinessCreateWithoutRegistrosClinicoInput, Prisma.BusinessUncheckedCreateWithoutRegistrosClinicoInput>
 }
 
-export type VeterinaryUpsertWithoutRegistrosClinicoInput = {
-  update: Prisma.XOR<Prisma.VeterinaryUpdateWithoutRegistrosClinicoInput, Prisma.VeterinaryUncheckedUpdateWithoutRegistrosClinicoInput>
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutRegistrosClinicoInput, Prisma.VeterinaryUncheckedCreateWithoutRegistrosClinicoInput>
-  where?: Prisma.VeterinaryWhereInput
+export type BusinessUpsertWithoutRegistrosClinicoInput = {
+  update: Prisma.XOR<Prisma.BusinessUpdateWithoutRegistrosClinicoInput, Prisma.BusinessUncheckedUpdateWithoutRegistrosClinicoInput>
+  create: Prisma.XOR<Prisma.BusinessCreateWithoutRegistrosClinicoInput, Prisma.BusinessUncheckedCreateWithoutRegistrosClinicoInput>
+  where?: Prisma.BusinessWhereInput
 }
 
-export type VeterinaryUpdateToOneWithWhereWithoutRegistrosClinicoInput = {
-  where?: Prisma.VeterinaryWhereInput
-  data: Prisma.XOR<Prisma.VeterinaryUpdateWithoutRegistrosClinicoInput, Prisma.VeterinaryUncheckedUpdateWithoutRegistrosClinicoInput>
+export type BusinessUpdateToOneWithWhereWithoutRegistrosClinicoInput = {
+  where?: Prisma.BusinessWhereInput
+  data: Prisma.XOR<Prisma.BusinessUpdateWithoutRegistrosClinicoInput, Prisma.BusinessUncheckedUpdateWithoutRegistrosClinicoInput>
 }
 
-export type VeterinaryUpdateWithoutRegistrosClinicoInput = {
+export type BusinessUpdateWithoutRegistrosClinicoInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   nombre?: Prisma.StringFieldUpdateOperationsInput | string
   correo?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1285,13 +1285,13 @@ export type VeterinaryUpdateWithoutRegistrosClinicoInput = {
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   usuarios?: Prisma.UserUpdateManyWithoutVeterinariaNestedInput
   propietarios?: Prisma.OwnerUpdateManyWithoutVeterinariaNestedInput
-  operadores?: Prisma.OperatorUpdateManyWithoutVeterinariaNestedInput
+  veterinarios?: Prisma.VeterinarianUpdateManyWithoutVeterinariaNestedInput
   pacientes?: Prisma.PatientUpdateManyWithoutVeterinariaNestedInput
   citas?: Prisma.AppointmentUpdateManyWithoutVeterinariaNestedInput
   registrosActividad?: Prisma.ActivityLogUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryUncheckedUpdateWithoutRegistrosClinicoInput = {
+export type BusinessUncheckedUpdateWithoutRegistrosClinicoInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   nombre?: Prisma.StringFieldUpdateOperationsInput | string
   correo?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1308,13 +1308,13 @@ export type VeterinaryUncheckedUpdateWithoutRegistrosClinicoInput = {
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   usuarios?: Prisma.UserUncheckedUpdateManyWithoutVeterinariaNestedInput
   propietarios?: Prisma.OwnerUncheckedUpdateManyWithoutVeterinariaNestedInput
-  operadores?: Prisma.OperatorUncheckedUpdateManyWithoutVeterinariaNestedInput
+  veterinarios?: Prisma.VeterinarianUncheckedUpdateManyWithoutVeterinariaNestedInput
   pacientes?: Prisma.PatientUncheckedUpdateManyWithoutVeterinariaNestedInput
   citas?: Prisma.AppointmentUncheckedUpdateManyWithoutVeterinariaNestedInput
   registrosActividad?: Prisma.ActivityLogUncheckedUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryCreateWithoutRegistrosActividadInput = {
+export type BusinessCreateWithoutRegistrosActividadInput = {
   id?: string
   nombre: string
   correo: string
@@ -1331,13 +1331,13 @@ export type VeterinaryCreateWithoutRegistrosActividadInput = {
   actualizadoEn?: Date | string
   usuarios?: Prisma.UserCreateNestedManyWithoutVeterinariaInput
   propietarios?: Prisma.OwnerCreateNestedManyWithoutVeterinariaInput
-  operadores?: Prisma.OperatorCreateNestedManyWithoutVeterinariaInput
+  veterinarios?: Prisma.VeterinarianCreateNestedManyWithoutVeterinariaInput
   pacientes?: Prisma.PatientCreateNestedManyWithoutVeterinariaInput
   citas?: Prisma.AppointmentCreateNestedManyWithoutVeterinariaInput
   registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryUncheckedCreateWithoutRegistrosActividadInput = {
+export type BusinessUncheckedCreateWithoutRegistrosActividadInput = {
   id?: string
   nombre: string
   correo: string
@@ -1354,29 +1354,29 @@ export type VeterinaryUncheckedCreateWithoutRegistrosActividadInput = {
   actualizadoEn?: Date | string
   usuarios?: Prisma.UserUncheckedCreateNestedManyWithoutVeterinariaInput
   propietarios?: Prisma.OwnerUncheckedCreateNestedManyWithoutVeterinariaInput
-  operadores?: Prisma.OperatorUncheckedCreateNestedManyWithoutVeterinariaInput
+  veterinarios?: Prisma.VeterinarianUncheckedCreateNestedManyWithoutVeterinariaInput
   pacientes?: Prisma.PatientUncheckedCreateNestedManyWithoutVeterinariaInput
   citas?: Prisma.AppointmentUncheckedCreateNestedManyWithoutVeterinariaInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutVeterinariaInput
 }
 
-export type VeterinaryCreateOrConnectWithoutRegistrosActividadInput = {
-  where: Prisma.VeterinaryWhereUniqueInput
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutRegistrosActividadInput, Prisma.VeterinaryUncheckedCreateWithoutRegistrosActividadInput>
+export type BusinessCreateOrConnectWithoutRegistrosActividadInput = {
+  where: Prisma.BusinessWhereUniqueInput
+  create: Prisma.XOR<Prisma.BusinessCreateWithoutRegistrosActividadInput, Prisma.BusinessUncheckedCreateWithoutRegistrosActividadInput>
 }
 
-export type VeterinaryUpsertWithoutRegistrosActividadInput = {
-  update: Prisma.XOR<Prisma.VeterinaryUpdateWithoutRegistrosActividadInput, Prisma.VeterinaryUncheckedUpdateWithoutRegistrosActividadInput>
-  create: Prisma.XOR<Prisma.VeterinaryCreateWithoutRegistrosActividadInput, Prisma.VeterinaryUncheckedCreateWithoutRegistrosActividadInput>
-  where?: Prisma.VeterinaryWhereInput
+export type BusinessUpsertWithoutRegistrosActividadInput = {
+  update: Prisma.XOR<Prisma.BusinessUpdateWithoutRegistrosActividadInput, Prisma.BusinessUncheckedUpdateWithoutRegistrosActividadInput>
+  create: Prisma.XOR<Prisma.BusinessCreateWithoutRegistrosActividadInput, Prisma.BusinessUncheckedCreateWithoutRegistrosActividadInput>
+  where?: Prisma.BusinessWhereInput
 }
 
-export type VeterinaryUpdateToOneWithWhereWithoutRegistrosActividadInput = {
-  where?: Prisma.VeterinaryWhereInput
-  data: Prisma.XOR<Prisma.VeterinaryUpdateWithoutRegistrosActividadInput, Prisma.VeterinaryUncheckedUpdateWithoutRegistrosActividadInput>
+export type BusinessUpdateToOneWithWhereWithoutRegistrosActividadInput = {
+  where?: Prisma.BusinessWhereInput
+  data: Prisma.XOR<Prisma.BusinessUpdateWithoutRegistrosActividadInput, Prisma.BusinessUncheckedUpdateWithoutRegistrosActividadInput>
 }
 
-export type VeterinaryUpdateWithoutRegistrosActividadInput = {
+export type BusinessUpdateWithoutRegistrosActividadInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   nombre?: Prisma.StringFieldUpdateOperationsInput | string
   correo?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1393,13 +1393,13 @@ export type VeterinaryUpdateWithoutRegistrosActividadInput = {
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   usuarios?: Prisma.UserUpdateManyWithoutVeterinariaNestedInput
   propietarios?: Prisma.OwnerUpdateManyWithoutVeterinariaNestedInput
-  operadores?: Prisma.OperatorUpdateManyWithoutVeterinariaNestedInput
+  veterinarios?: Prisma.VeterinarianUpdateManyWithoutVeterinariaNestedInput
   pacientes?: Prisma.PatientUpdateManyWithoutVeterinariaNestedInput
   citas?: Prisma.AppointmentUpdateManyWithoutVeterinariaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutVeterinariaNestedInput
 }
 
-export type VeterinaryUncheckedUpdateWithoutRegistrosActividadInput = {
+export type BusinessUncheckedUpdateWithoutRegistrosActividadInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   nombre?: Prisma.StringFieldUpdateOperationsInput | string
   correo?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1416,7 +1416,7 @@ export type VeterinaryUncheckedUpdateWithoutRegistrosActividadInput = {
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   usuarios?: Prisma.UserUncheckedUpdateManyWithoutVeterinariaNestedInput
   propietarios?: Prisma.OwnerUncheckedUpdateManyWithoutVeterinariaNestedInput
-  operadores?: Prisma.OperatorUncheckedUpdateManyWithoutVeterinariaNestedInput
+  veterinarios?: Prisma.VeterinarianUncheckedUpdateManyWithoutVeterinariaNestedInput
   pacientes?: Prisma.PatientUncheckedUpdateManyWithoutVeterinariaNestedInput
   citas?: Prisma.AppointmentUncheckedUpdateManyWithoutVeterinariaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutVeterinariaNestedInput
@@ -1424,90 +1424,90 @@ export type VeterinaryUncheckedUpdateWithoutRegistrosActividadInput = {
 
 
 /**
- * Count Type VeterinaryCountOutputType
+ * Count Type BusinessCountOutputType
  */
 
-export type VeterinaryCountOutputType = {
+export type BusinessCountOutputType = {
   usuarios: number
   propietarios: number
-  operadores: number
+  veterinarios: number
   pacientes: number
   citas: number
   registrosClinico: number
   registrosActividad: number
 }
 
-export type VeterinaryCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  usuarios?: boolean | VeterinaryCountOutputTypeCountUsuariosArgs
-  propietarios?: boolean | VeterinaryCountOutputTypeCountPropietariosArgs
-  operadores?: boolean | VeterinaryCountOutputTypeCountOperadoresArgs
-  pacientes?: boolean | VeterinaryCountOutputTypeCountPacientesArgs
-  citas?: boolean | VeterinaryCountOutputTypeCountCitasArgs
-  registrosClinico?: boolean | VeterinaryCountOutputTypeCountRegistrosClinicoArgs
-  registrosActividad?: boolean | VeterinaryCountOutputTypeCountRegistrosActividadArgs
+export type BusinessCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  usuarios?: boolean | BusinessCountOutputTypeCountUsuariosArgs
+  propietarios?: boolean | BusinessCountOutputTypeCountPropietariosArgs
+  veterinarios?: boolean | BusinessCountOutputTypeCountVeterinariosArgs
+  pacientes?: boolean | BusinessCountOutputTypeCountPacientesArgs
+  citas?: boolean | BusinessCountOutputTypeCountCitasArgs
+  registrosClinico?: boolean | BusinessCountOutputTypeCountRegistrosClinicoArgs
+  registrosActividad?: boolean | BusinessCountOutputTypeCountRegistrosActividadArgs
 }
 
 /**
- * VeterinaryCountOutputType without action
+ * BusinessCountOutputType without action
  */
-export type VeterinaryCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type BusinessCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the VeterinaryCountOutputType
+   * Select specific fields to fetch from the BusinessCountOutputType
    */
-  select?: Prisma.VeterinaryCountOutputTypeSelect<ExtArgs> | null
+  select?: Prisma.BusinessCountOutputTypeSelect<ExtArgs> | null
 }
 
 /**
- * VeterinaryCountOutputType without action
+ * BusinessCountOutputType without action
  */
-export type VeterinaryCountOutputTypeCountUsuariosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type BusinessCountOutputTypeCountUsuariosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.UserWhereInput
 }
 
 /**
- * VeterinaryCountOutputType without action
+ * BusinessCountOutputType without action
  */
-export type VeterinaryCountOutputTypeCountPropietariosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type BusinessCountOutputTypeCountPropietariosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.OwnerWhereInput
 }
 
 /**
- * VeterinaryCountOutputType without action
+ * BusinessCountOutputType without action
  */
-export type VeterinaryCountOutputTypeCountOperadoresArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.OperatorWhereInput
+export type BusinessCountOutputTypeCountVeterinariosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.VeterinarianWhereInput
 }
 
 /**
- * VeterinaryCountOutputType without action
+ * BusinessCountOutputType without action
  */
-export type VeterinaryCountOutputTypeCountPacientesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type BusinessCountOutputTypeCountPacientesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.PatientWhereInput
 }
 
 /**
- * VeterinaryCountOutputType without action
+ * BusinessCountOutputType without action
  */
-export type VeterinaryCountOutputTypeCountCitasArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type BusinessCountOutputTypeCountCitasArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.AppointmentWhereInput
 }
 
 /**
- * VeterinaryCountOutputType without action
+ * BusinessCountOutputType without action
  */
-export type VeterinaryCountOutputTypeCountRegistrosClinicoArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type BusinessCountOutputTypeCountRegistrosClinicoArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.ClinicalRecordWhereInput
 }
 
 /**
- * VeterinaryCountOutputType without action
+ * BusinessCountOutputType without action
  */
-export type VeterinaryCountOutputTypeCountRegistrosActividadArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type BusinessCountOutputTypeCountRegistrosActividadArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.ActivityLogWhereInput
 }
 
 
-export type VeterinarySelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
+export type BusinessSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
   nombre?: boolean
   correo?: boolean
@@ -1522,17 +1522,17 @@ export type VeterinarySelect<ExtArgs extends runtime.Types.Extensions.InternalAr
   estaActivo?: boolean
   creadoEn?: boolean
   actualizadoEn?: boolean
-  usuarios?: boolean | Prisma.Veterinary$usuariosArgs<ExtArgs>
-  propietarios?: boolean | Prisma.Veterinary$propietariosArgs<ExtArgs>
-  operadores?: boolean | Prisma.Veterinary$operadoresArgs<ExtArgs>
-  pacientes?: boolean | Prisma.Veterinary$pacientesArgs<ExtArgs>
-  citas?: boolean | Prisma.Veterinary$citasArgs<ExtArgs>
-  registrosClinico?: boolean | Prisma.Veterinary$registrosClinicoArgs<ExtArgs>
-  registrosActividad?: boolean | Prisma.Veterinary$registrosActividadArgs<ExtArgs>
-  _count?: boolean | Prisma.VeterinaryCountOutputTypeDefaultArgs<ExtArgs>
-}, ExtArgs["result"]["veterinary"]>
+  usuarios?: boolean | Prisma.Business$usuariosArgs<ExtArgs>
+  propietarios?: boolean | Prisma.Business$propietariosArgs<ExtArgs>
+  veterinarios?: boolean | Prisma.Business$veterinariosArgs<ExtArgs>
+  pacientes?: boolean | Prisma.Business$pacientesArgs<ExtArgs>
+  citas?: boolean | Prisma.Business$citasArgs<ExtArgs>
+  registrosClinico?: boolean | Prisma.Business$registrosClinicoArgs<ExtArgs>
+  registrosActividad?: boolean | Prisma.Business$registrosActividadArgs<ExtArgs>
+  _count?: boolean | Prisma.BusinessCountOutputTypeDefaultArgs<ExtArgs>
+}, ExtArgs["result"]["business"]>
 
-export type VeterinarySelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
+export type BusinessSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
   nombre?: boolean
   correo?: boolean
@@ -1547,9 +1547,9 @@ export type VeterinarySelectCreateManyAndReturn<ExtArgs extends runtime.Types.Ex
   estaActivo?: boolean
   creadoEn?: boolean
   actualizadoEn?: boolean
-}, ExtArgs["result"]["veterinary"]>
+}, ExtArgs["result"]["business"]>
 
-export type VeterinarySelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
+export type BusinessSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
   nombre?: boolean
   correo?: boolean
@@ -1564,9 +1564,9 @@ export type VeterinarySelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Ex
   estaActivo?: boolean
   creadoEn?: boolean
   actualizadoEn?: boolean
-}, ExtArgs["result"]["veterinary"]>
+}, ExtArgs["result"]["business"]>
 
-export type VeterinarySelectScalar = {
+export type BusinessSelectScalar = {
   id?: boolean
   nombre?: boolean
   correo?: boolean
@@ -1583,26 +1583,26 @@ export type VeterinarySelectScalar = {
   actualizadoEn?: boolean
 }
 
-export type VeterinaryOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "nombre" | "correo" | "telefono" | "direccion" | "ciudad" | "estado" | "pais" | "codigoPostal" | "urlLogo" | "horarioNegocio" | "estaActivo" | "creadoEn" | "actualizadoEn", ExtArgs["result"]["veterinary"]>
-export type VeterinaryInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  usuarios?: boolean | Prisma.Veterinary$usuariosArgs<ExtArgs>
-  propietarios?: boolean | Prisma.Veterinary$propietariosArgs<ExtArgs>
-  operadores?: boolean | Prisma.Veterinary$operadoresArgs<ExtArgs>
-  pacientes?: boolean | Prisma.Veterinary$pacientesArgs<ExtArgs>
-  citas?: boolean | Prisma.Veterinary$citasArgs<ExtArgs>
-  registrosClinico?: boolean | Prisma.Veterinary$registrosClinicoArgs<ExtArgs>
-  registrosActividad?: boolean | Prisma.Veterinary$registrosActividadArgs<ExtArgs>
-  _count?: boolean | Prisma.VeterinaryCountOutputTypeDefaultArgs<ExtArgs>
+export type BusinessOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "nombre" | "correo" | "telefono" | "direccion" | "ciudad" | "estado" | "pais" | "codigoPostal" | "urlLogo" | "horarioNegocio" | "estaActivo" | "creadoEn" | "actualizadoEn", ExtArgs["result"]["business"]>
+export type BusinessInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  usuarios?: boolean | Prisma.Business$usuariosArgs<ExtArgs>
+  propietarios?: boolean | Prisma.Business$propietariosArgs<ExtArgs>
+  veterinarios?: boolean | Prisma.Business$veterinariosArgs<ExtArgs>
+  pacientes?: boolean | Prisma.Business$pacientesArgs<ExtArgs>
+  citas?: boolean | Prisma.Business$citasArgs<ExtArgs>
+  registrosClinico?: boolean | Prisma.Business$registrosClinicoArgs<ExtArgs>
+  registrosActividad?: boolean | Prisma.Business$registrosActividadArgs<ExtArgs>
+  _count?: boolean | Prisma.BusinessCountOutputTypeDefaultArgs<ExtArgs>
 }
-export type VeterinaryIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {}
-export type VeterinaryIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {}
+export type BusinessIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {}
+export type BusinessIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {}
 
-export type $VeterinaryPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  name: "Veterinary"
+export type $BusinessPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  name: "Business"
   objects: {
     usuarios: Prisma.$UserPayload<ExtArgs>[]
     propietarios: Prisma.$OwnerPayload<ExtArgs>[]
-    operadores: Prisma.$OperatorPayload<ExtArgs>[]
+    veterinarios: Prisma.$VeterinarianPayload<ExtArgs>[]
     pacientes: Prisma.$PatientPayload<ExtArgs>[]
     citas: Prisma.$AppointmentPayload<ExtArgs>[]
     registrosClinico: Prisma.$ClinicalRecordPayload<ExtArgs>[]
@@ -1623,136 +1623,136 @@ export type $VeterinaryPayload<ExtArgs extends runtime.Types.Extensions.Internal
     estaActivo: boolean
     creadoEn: Date
     actualizadoEn: Date
-  }, ExtArgs["result"]["veterinary"]>
+  }, ExtArgs["result"]["business"]>
   composites: {}
 }
 
-export type VeterinaryGetPayload<S extends boolean | null | undefined | VeterinaryDefaultArgs> = runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload, S>
+export type BusinessGetPayload<S extends boolean | null | undefined | BusinessDefaultArgs> = runtime.Types.Result.GetResult<Prisma.$BusinessPayload, S>
 
-export type VeterinaryCountArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> =
-  Omit<VeterinaryFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-    select?: VeterinaryCountAggregateInputType | true
+export type BusinessCountArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> =
+  Omit<BusinessFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+    select?: BusinessCountAggregateInputType | true
   }
 
-export interface VeterinaryDelegate<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-  [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Veterinary'], meta: { name: 'Veterinary' } }
+export interface BusinessDelegate<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+  [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Business'], meta: { name: 'Business' } }
   /**
-   * Find zero or one Veterinary that matches the filter.
-   * @param {VeterinaryFindUniqueArgs} args - Arguments to find a Veterinary
+   * Find zero or one Business that matches the filter.
+   * @param {BusinessFindUniqueArgs} args - Arguments to find a Business
    * @example
-   * // Get one Veterinary
-   * const veterinary = await prisma.veterinary.findUnique({
+   * // Get one Business
+   * const business = await prisma.business.findUnique({
    *   where: {
    *     // ... provide filter here
    *   }
    * })
    */
-  findUnique<T extends VeterinaryFindUniqueArgs>(args: Prisma.SelectSubset<T, VeterinaryFindUniqueArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  findUnique<T extends BusinessFindUniqueArgs>(args: Prisma.SelectSubset<T, BusinessFindUniqueArgs<ExtArgs>>): Prisma.Prisma__BusinessClient<runtime.Types.Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
   /**
-   * Find one Veterinary that matches the filter or throw an error with `error.code='P2025'`
+   * Find one Business that matches the filter or throw an error with `error.code='P2025'`
    * if no matches were found.
-   * @param {VeterinaryFindUniqueOrThrowArgs} args - Arguments to find a Veterinary
+   * @param {BusinessFindUniqueOrThrowArgs} args - Arguments to find a Business
    * @example
-   * // Get one Veterinary
-   * const veterinary = await prisma.veterinary.findUniqueOrThrow({
+   * // Get one Business
+   * const business = await prisma.business.findUniqueOrThrow({
    *   where: {
    *     // ... provide filter here
    *   }
    * })
    */
-  findUniqueOrThrow<T extends VeterinaryFindUniqueOrThrowArgs>(args: Prisma.SelectSubset<T, VeterinaryFindUniqueOrThrowArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  findUniqueOrThrow<T extends BusinessFindUniqueOrThrowArgs>(args: Prisma.SelectSubset<T, BusinessFindUniqueOrThrowArgs<ExtArgs>>): Prisma.Prisma__BusinessClient<runtime.Types.Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
   /**
-   * Find the first Veterinary that matches the filter.
+   * Find the first Business that matches the filter.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {VeterinaryFindFirstArgs} args - Arguments to find a Veterinary
+   * @param {BusinessFindFirstArgs} args - Arguments to find a Business
    * @example
-   * // Get one Veterinary
-   * const veterinary = await prisma.veterinary.findFirst({
+   * // Get one Business
+   * const business = await prisma.business.findFirst({
    *   where: {
    *     // ... provide filter here
    *   }
    * })
    */
-  findFirst<T extends VeterinaryFindFirstArgs>(args?: Prisma.SelectSubset<T, VeterinaryFindFirstArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  findFirst<T extends BusinessFindFirstArgs>(args?: Prisma.SelectSubset<T, BusinessFindFirstArgs<ExtArgs>>): Prisma.Prisma__BusinessClient<runtime.Types.Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
   /**
-   * Find the first Veterinary that matches the filter or
+   * Find the first Business that matches the filter or
    * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {VeterinaryFindFirstOrThrowArgs} args - Arguments to find a Veterinary
+   * @param {BusinessFindFirstOrThrowArgs} args - Arguments to find a Business
    * @example
-   * // Get one Veterinary
-   * const veterinary = await prisma.veterinary.findFirstOrThrow({
+   * // Get one Business
+   * const business = await prisma.business.findFirstOrThrow({
    *   where: {
    *     // ... provide filter here
    *   }
    * })
    */
-  findFirstOrThrow<T extends VeterinaryFindFirstOrThrowArgs>(args?: Prisma.SelectSubset<T, VeterinaryFindFirstOrThrowArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  findFirstOrThrow<T extends BusinessFindFirstOrThrowArgs>(args?: Prisma.SelectSubset<T, BusinessFindFirstOrThrowArgs<ExtArgs>>): Prisma.Prisma__BusinessClient<runtime.Types.Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
   /**
-   * Find zero or more Veterinaries that matches the filter.
+   * Find zero or more Businesses that matches the filter.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {VeterinaryFindManyArgs} args - Arguments to filter and select certain fields only.
+   * @param {BusinessFindManyArgs} args - Arguments to filter and select certain fields only.
    * @example
-   * // Get all Veterinaries
-   * const veterinaries = await prisma.veterinary.findMany()
+   * // Get all Businesses
+   * const businesses = await prisma.business.findMany()
    * 
-   * // Get first 10 Veterinaries
-   * const veterinaries = await prisma.veterinary.findMany({ take: 10 })
+   * // Get first 10 Businesses
+   * const businesses = await prisma.business.findMany({ take: 10 })
    * 
    * // Only select the `id`
-   * const veterinaryWithIdOnly = await prisma.veterinary.findMany({ select: { id: true } })
+   * const businessWithIdOnly = await prisma.business.findMany({ select: { id: true } })
    * 
    */
-  findMany<T extends VeterinaryFindManyArgs>(args?: Prisma.SelectSubset<T, VeterinaryFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+  findMany<T extends BusinessFindManyArgs>(args?: Prisma.SelectSubset<T, BusinessFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
   /**
-   * Create a Veterinary.
-   * @param {VeterinaryCreateArgs} args - Arguments to create a Veterinary.
+   * Create a Business.
+   * @param {BusinessCreateArgs} args - Arguments to create a Business.
    * @example
-   * // Create one Veterinary
-   * const Veterinary = await prisma.veterinary.create({
+   * // Create one Business
+   * const Business = await prisma.business.create({
    *   data: {
-   *     // ... data to create a Veterinary
+   *     // ... data to create a Business
    *   }
    * })
    * 
    */
-  create<T extends VeterinaryCreateArgs>(args: Prisma.SelectSubset<T, VeterinaryCreateArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  create<T extends BusinessCreateArgs>(args: Prisma.SelectSubset<T, BusinessCreateArgs<ExtArgs>>): Prisma.Prisma__BusinessClient<runtime.Types.Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
   /**
-   * Create many Veterinaries.
-   * @param {VeterinaryCreateManyArgs} args - Arguments to create many Veterinaries.
+   * Create many Businesses.
+   * @param {BusinessCreateManyArgs} args - Arguments to create many Businesses.
    * @example
-   * // Create many Veterinaries
-   * const veterinary = await prisma.veterinary.createMany({
+   * // Create many Businesses
+   * const business = await prisma.business.createMany({
    *   data: [
    *     // ... provide data here
    *   ]
    * })
    *     
    */
-  createMany<T extends VeterinaryCreateManyArgs>(args?: Prisma.SelectSubset<T, VeterinaryCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
+  createMany<T extends BusinessCreateManyArgs>(args?: Prisma.SelectSubset<T, BusinessCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
 
   /**
-   * Create many Veterinaries and returns the data saved in the database.
-   * @param {VeterinaryCreateManyAndReturnArgs} args - Arguments to create many Veterinaries.
+   * Create many Businesses and returns the data saved in the database.
+   * @param {BusinessCreateManyAndReturnArgs} args - Arguments to create many Businesses.
    * @example
-   * // Create many Veterinaries
-   * const veterinary = await prisma.veterinary.createManyAndReturn({
+   * // Create many Businesses
+   * const business = await prisma.business.createManyAndReturn({
    *   data: [
    *     // ... provide data here
    *   ]
    * })
    * 
-   * // Create many Veterinaries and only return the `id`
-   * const veterinaryWithIdOnly = await prisma.veterinary.createManyAndReturn({
+   * // Create many Businesses and only return the `id`
+   * const businessWithIdOnly = await prisma.business.createManyAndReturn({
    *   select: { id: true },
    *   data: [
    *     // ... provide data here
@@ -1762,28 +1762,28 @@ export interface VeterinaryDelegate<ExtArgs extends runtime.Types.Extensions.Int
    * Read more here: https://pris.ly/d/null-undefined
    * 
    */
-  createManyAndReturn<T extends VeterinaryCreateManyAndReturnArgs>(args?: Prisma.SelectSubset<T, VeterinaryCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+  createManyAndReturn<T extends BusinessCreateManyAndReturnArgs>(args?: Prisma.SelectSubset<T, BusinessCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
   /**
-   * Delete a Veterinary.
-   * @param {VeterinaryDeleteArgs} args - Arguments to delete one Veterinary.
+   * Delete a Business.
+   * @param {BusinessDeleteArgs} args - Arguments to delete one Business.
    * @example
-   * // Delete one Veterinary
-   * const Veterinary = await prisma.veterinary.delete({
+   * // Delete one Business
+   * const Business = await prisma.business.delete({
    *   where: {
-   *     // ... filter to delete one Veterinary
+   *     // ... filter to delete one Business
    *   }
    * })
    * 
    */
-  delete<T extends VeterinaryDeleteArgs>(args: Prisma.SelectSubset<T, VeterinaryDeleteArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  delete<T extends BusinessDeleteArgs>(args: Prisma.SelectSubset<T, BusinessDeleteArgs<ExtArgs>>): Prisma.Prisma__BusinessClient<runtime.Types.Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
   /**
-   * Update one Veterinary.
-   * @param {VeterinaryUpdateArgs} args - Arguments to update one Veterinary.
+   * Update one Business.
+   * @param {BusinessUpdateArgs} args - Arguments to update one Business.
    * @example
-   * // Update one Veterinary
-   * const veterinary = await prisma.veterinary.update({
+   * // Update one Business
+   * const business = await prisma.business.update({
    *   where: {
    *     // ... provide filter here
    *   },
@@ -1793,30 +1793,30 @@ export interface VeterinaryDelegate<ExtArgs extends runtime.Types.Extensions.Int
    * })
    * 
    */
-  update<T extends VeterinaryUpdateArgs>(args: Prisma.SelectSubset<T, VeterinaryUpdateArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  update<T extends BusinessUpdateArgs>(args: Prisma.SelectSubset<T, BusinessUpdateArgs<ExtArgs>>): Prisma.Prisma__BusinessClient<runtime.Types.Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
   /**
-   * Delete zero or more Veterinaries.
-   * @param {VeterinaryDeleteManyArgs} args - Arguments to filter Veterinaries to delete.
+   * Delete zero or more Businesses.
+   * @param {BusinessDeleteManyArgs} args - Arguments to filter Businesses to delete.
    * @example
-   * // Delete a few Veterinaries
-   * const { count } = await prisma.veterinary.deleteMany({
+   * // Delete a few Businesses
+   * const { count } = await prisma.business.deleteMany({
    *   where: {
    *     // ... provide filter here
    *   }
    * })
    * 
    */
-  deleteMany<T extends VeterinaryDeleteManyArgs>(args?: Prisma.SelectSubset<T, VeterinaryDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
+  deleteMany<T extends BusinessDeleteManyArgs>(args?: Prisma.SelectSubset<T, BusinessDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
 
   /**
-   * Update zero or more Veterinaries.
+   * Update zero or more Businesses.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {VeterinaryUpdateManyArgs} args - Arguments to update one or more rows.
+   * @param {BusinessUpdateManyArgs} args - Arguments to update one or more rows.
    * @example
-   * // Update many Veterinaries
-   * const veterinary = await prisma.veterinary.updateMany({
+   * // Update many Businesses
+   * const business = await prisma.business.updateMany({
    *   where: {
    *     // ... provide filter here
    *   },
@@ -1826,14 +1826,14 @@ export interface VeterinaryDelegate<ExtArgs extends runtime.Types.Extensions.Int
    * })
    * 
    */
-  updateMany<T extends VeterinaryUpdateManyArgs>(args: Prisma.SelectSubset<T, VeterinaryUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
+  updateMany<T extends BusinessUpdateManyArgs>(args: Prisma.SelectSubset<T, BusinessUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
 
   /**
-   * Update zero or more Veterinaries and returns the data updated in the database.
-   * @param {VeterinaryUpdateManyAndReturnArgs} args - Arguments to update many Veterinaries.
+   * Update zero or more Businesses and returns the data updated in the database.
+   * @param {BusinessUpdateManyAndReturnArgs} args - Arguments to update many Businesses.
    * @example
-   * // Update many Veterinaries
-   * const veterinary = await prisma.veterinary.updateManyAndReturn({
+   * // Update many Businesses
+   * const business = await prisma.business.updateManyAndReturn({
    *   where: {
    *     // ... provide filter here
    *   },
@@ -1842,8 +1842,8 @@ export interface VeterinaryDelegate<ExtArgs extends runtime.Types.Extensions.Int
    *   ]
    * })
    * 
-   * // Update zero or more Veterinaries and only return the `id`
-   * const veterinaryWithIdOnly = await prisma.veterinary.updateManyAndReturn({
+   * // Update zero or more Businesses and only return the `id`
+   * const businessWithIdOnly = await prisma.business.updateManyAndReturn({
    *   select: { id: true },
    *   where: {
    *     // ... provide filter here
@@ -1856,56 +1856,56 @@ export interface VeterinaryDelegate<ExtArgs extends runtime.Types.Extensions.Int
    * Read more here: https://pris.ly/d/null-undefined
    * 
    */
-  updateManyAndReturn<T extends VeterinaryUpdateManyAndReturnArgs>(args: Prisma.SelectSubset<T, VeterinaryUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+  updateManyAndReturn<T extends BusinessUpdateManyAndReturnArgs>(args: Prisma.SelectSubset<T, BusinessUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
   /**
-   * Create or update one Veterinary.
-   * @param {VeterinaryUpsertArgs} args - Arguments to update or create a Veterinary.
+   * Create or update one Business.
+   * @param {BusinessUpsertArgs} args - Arguments to update or create a Business.
    * @example
-   * // Update or create a Veterinary
-   * const veterinary = await prisma.veterinary.upsert({
+   * // Update or create a Business
+   * const business = await prisma.business.upsert({
    *   create: {
-   *     // ... data to create a Veterinary
+   *     // ... data to create a Business
    *   },
    *   update: {
    *     // ... in case it already exists, update
    *   },
    *   where: {
-   *     // ... the filter for the Veterinary we want to update
+   *     // ... the filter for the Business we want to update
    *   }
    * })
    */
-  upsert<T extends VeterinaryUpsertArgs>(args: Prisma.SelectSubset<T, VeterinaryUpsertArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  upsert<T extends BusinessUpsertArgs>(args: Prisma.SelectSubset<T, BusinessUpsertArgs<ExtArgs>>): Prisma.Prisma__BusinessClient<runtime.Types.Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
   /**
-   * Count the number of Veterinaries.
+   * Count the number of Businesses.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {VeterinaryCountArgs} args - Arguments to filter Veterinaries to count.
+   * @param {BusinessCountArgs} args - Arguments to filter Businesses to count.
    * @example
-   * // Count the number of Veterinaries
-   * const count = await prisma.veterinary.count({
+   * // Count the number of Businesses
+   * const count = await prisma.business.count({
    *   where: {
-   *     // ... the filter for the Veterinaries we want to count
+   *     // ... the filter for the Businesses we want to count
    *   }
    * })
   **/
-  count<T extends VeterinaryCountArgs>(
-    args?: Prisma.Subset<T, VeterinaryCountArgs>,
+  count<T extends BusinessCountArgs>(
+    args?: Prisma.Subset<T, BusinessCountArgs>,
   ): Prisma.PrismaPromise<
     T extends runtime.Types.Utils.Record<'select', any>
       ? T['select'] extends true
         ? number
-        : Prisma.GetScalarType<T['select'], VeterinaryCountAggregateOutputType>
+        : Prisma.GetScalarType<T['select'], BusinessCountAggregateOutputType>
       : number
   >
 
   /**
-   * Allows you to perform aggregations operations on a Veterinary.
+   * Allows you to perform aggregations operations on a Business.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {VeterinaryAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+   * @param {BusinessAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
    * @example
    * // Ordered by age ascending
    * // Where email contains prisma.io
@@ -1925,13 +1925,13 @@ export interface VeterinaryDelegate<ExtArgs extends runtime.Types.Extensions.Int
    *   take: 10,
    * })
   **/
-  aggregate<T extends VeterinaryAggregateArgs>(args: Prisma.Subset<T, VeterinaryAggregateArgs>): Prisma.PrismaPromise<GetVeterinaryAggregateType<T>>
+  aggregate<T extends BusinessAggregateArgs>(args: Prisma.Subset<T, BusinessAggregateArgs>): Prisma.PrismaPromise<GetBusinessAggregateType<T>>
 
   /**
-   * Group by Veterinary.
+   * Group by Business.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {VeterinaryGroupByArgs} args - Group by arguments.
+   * @param {BusinessGroupByArgs} args - Group by arguments.
    * @example
    * // Group by city, order by createdAt, get count
    * const result = await prisma.user.groupBy({
@@ -1946,14 +1946,14 @@ export interface VeterinaryDelegate<ExtArgs extends runtime.Types.Extensions.Int
    * 
   **/
   groupBy<
-    T extends VeterinaryGroupByArgs,
+    T extends BusinessGroupByArgs,
     HasSelectOrTake extends Prisma.Or<
       Prisma.Extends<'skip', Prisma.Keys<T>>,
       Prisma.Extends<'take', Prisma.Keys<T>>
     >,
     OrderByArg extends Prisma.True extends HasSelectOrTake
-      ? { orderBy: VeterinaryGroupByArgs['orderBy'] }
-      : { orderBy?: VeterinaryGroupByArgs['orderBy'] },
+      ? { orderBy: BusinessGroupByArgs['orderBy'] }
+      : { orderBy?: BusinessGroupByArgs['orderBy'] },
     OrderFields extends Prisma.ExcludeUnderscoreKeys<Prisma.Keys<Prisma.MaybeTupleToUnion<T['orderBy']>>>,
     ByFields extends Prisma.MaybeTupleToUnion<T['by']>,
     ByValid extends Prisma.Has<ByFields, OrderFields>,
@@ -2002,28 +2002,28 @@ export interface VeterinaryDelegate<ExtArgs extends runtime.Types.Extensions.Int
           ? never
           : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
       }[OrderFields]
-  >(args: Prisma.SubsetIntersection<T, VeterinaryGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetVeterinaryGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  >(args: Prisma.SubsetIntersection<T, BusinessGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetBusinessGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
 /**
- * Fields of the Veterinary model
+ * Fields of the Business model
  */
-readonly fields: VeterinaryFieldRefs;
+readonly fields: BusinessFieldRefs;
 }
 
 /**
- * The delegate class that acts as a "Promise-like" for Veterinary.
+ * The delegate class that acts as a "Promise-like" for Business.
  * Why is this prefixed with `Prisma__`?
  * Because we want to prevent naming conflicts as mentioned in
  * https://github.com/prisma/prisma-client-js/issues/707
  */
-export interface Prisma__VeterinaryClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+export interface Prisma__BusinessClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  usuarios<T extends Prisma.Veterinary$usuariosArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Veterinary$usuariosArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  propietarios<T extends Prisma.Veterinary$propietariosArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Veterinary$propietariosArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$OwnerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  operadores<T extends Prisma.Veterinary$operadoresArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Veterinary$operadoresArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$OperatorPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  pacientes<T extends Prisma.Veterinary$pacientesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Veterinary$pacientesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$PatientPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  citas<T extends Prisma.Veterinary$citasArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Veterinary$citasArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AppointmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  registrosClinico<T extends Prisma.Veterinary$registrosClinicoArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Veterinary$registrosClinicoArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ClinicalRecordPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  registrosActividad<T extends Prisma.Veterinary$registrosActividadArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Veterinary$registrosActividadArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ActivityLogPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  usuarios<T extends Prisma.Business$usuariosArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Business$usuariosArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  propietarios<T extends Prisma.Business$propietariosArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Business$propietariosArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$OwnerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  veterinarios<T extends Prisma.Business$veterinariosArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Business$veterinariosArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$VeterinarianPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  pacientes<T extends Prisma.Business$pacientesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Business$pacientesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$PatientPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  citas<T extends Prisma.Business$citasArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Business$citasArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AppointmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  registrosClinico<T extends Prisma.Business$registrosClinicoArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Business$registrosClinicoArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ClinicalRecordPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  registrosActividad<T extends Prisma.Business$registrosActividadArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Business$registrosActividadArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ActivityLogPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2050,414 +2050,414 @@ export interface Prisma__VeterinaryClient<T, Null = never, ExtArgs extends runti
 
 
 /**
- * Fields of the Veterinary model
+ * Fields of the Business model
  */
-export interface VeterinaryFieldRefs {
-  readonly id: Prisma.FieldRef<"Veterinary", 'String'>
-  readonly nombre: Prisma.FieldRef<"Veterinary", 'String'>
-  readonly correo: Prisma.FieldRef<"Veterinary", 'String'>
-  readonly telefono: Prisma.FieldRef<"Veterinary", 'String'>
-  readonly direccion: Prisma.FieldRef<"Veterinary", 'String'>
-  readonly ciudad: Prisma.FieldRef<"Veterinary", 'String'>
-  readonly estado: Prisma.FieldRef<"Veterinary", 'String'>
-  readonly pais: Prisma.FieldRef<"Veterinary", 'String'>
-  readonly codigoPostal: Prisma.FieldRef<"Veterinary", 'String'>
-  readonly urlLogo: Prisma.FieldRef<"Veterinary", 'String'>
-  readonly horarioNegocio: Prisma.FieldRef<"Veterinary", 'Json'>
-  readonly estaActivo: Prisma.FieldRef<"Veterinary", 'Boolean'>
-  readonly creadoEn: Prisma.FieldRef<"Veterinary", 'DateTime'>
-  readonly actualizadoEn: Prisma.FieldRef<"Veterinary", 'DateTime'>
+export interface BusinessFieldRefs {
+  readonly id: Prisma.FieldRef<"Business", 'String'>
+  readonly nombre: Prisma.FieldRef<"Business", 'String'>
+  readonly correo: Prisma.FieldRef<"Business", 'String'>
+  readonly telefono: Prisma.FieldRef<"Business", 'String'>
+  readonly direccion: Prisma.FieldRef<"Business", 'String'>
+  readonly ciudad: Prisma.FieldRef<"Business", 'String'>
+  readonly estado: Prisma.FieldRef<"Business", 'String'>
+  readonly pais: Prisma.FieldRef<"Business", 'String'>
+  readonly codigoPostal: Prisma.FieldRef<"Business", 'String'>
+  readonly urlLogo: Prisma.FieldRef<"Business", 'String'>
+  readonly horarioNegocio: Prisma.FieldRef<"Business", 'Json'>
+  readonly estaActivo: Prisma.FieldRef<"Business", 'Boolean'>
+  readonly creadoEn: Prisma.FieldRef<"Business", 'DateTime'>
+  readonly actualizadoEn: Prisma.FieldRef<"Business", 'DateTime'>
 }
     
 
 // Custom InputTypes
 /**
- * Veterinary findUnique
+ * Business findUnique
  */
-export type VeterinaryFindUniqueArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type BusinessFindUniqueArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Veterinary
+   * Select specific fields to fetch from the Business
    */
-  select?: Prisma.VeterinarySelect<ExtArgs> | null
+  select?: Prisma.BusinessSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Veterinary
+   * Omit specific fields from the Business
    */
-  omit?: Prisma.VeterinaryOmit<ExtArgs> | null
+  omit?: Prisma.BusinessOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.VeterinaryInclude<ExtArgs> | null
+  include?: Prisma.BusinessInclude<ExtArgs> | null
   /**
-   * Filter, which Veterinary to fetch.
+   * Filter, which Business to fetch.
    */
-  where: Prisma.VeterinaryWhereUniqueInput
+  where: Prisma.BusinessWhereUniqueInput
 }
 
 /**
- * Veterinary findUniqueOrThrow
+ * Business findUniqueOrThrow
  */
-export type VeterinaryFindUniqueOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type BusinessFindUniqueOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Veterinary
+   * Select specific fields to fetch from the Business
    */
-  select?: Prisma.VeterinarySelect<ExtArgs> | null
+  select?: Prisma.BusinessSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Veterinary
+   * Omit specific fields from the Business
    */
-  omit?: Prisma.VeterinaryOmit<ExtArgs> | null
+  omit?: Prisma.BusinessOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.VeterinaryInclude<ExtArgs> | null
+  include?: Prisma.BusinessInclude<ExtArgs> | null
   /**
-   * Filter, which Veterinary to fetch.
+   * Filter, which Business to fetch.
    */
-  where: Prisma.VeterinaryWhereUniqueInput
+  where: Prisma.BusinessWhereUniqueInput
 }
 
 /**
- * Veterinary findFirst
+ * Business findFirst
  */
-export type VeterinaryFindFirstArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type BusinessFindFirstArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Veterinary
+   * Select specific fields to fetch from the Business
    */
-  select?: Prisma.VeterinarySelect<ExtArgs> | null
+  select?: Prisma.BusinessSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Veterinary
+   * Omit specific fields from the Business
    */
-  omit?: Prisma.VeterinaryOmit<ExtArgs> | null
+  omit?: Prisma.BusinessOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.VeterinaryInclude<ExtArgs> | null
+  include?: Prisma.BusinessInclude<ExtArgs> | null
   /**
-   * Filter, which Veterinary to fetch.
+   * Filter, which Business to fetch.
    */
-  where?: Prisma.VeterinaryWhereInput
+  where?: Prisma.BusinessWhereInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
    * 
-   * Determine the order of Veterinaries to fetch.
+   * Determine the order of Businesses to fetch.
    */
-  orderBy?: Prisma.VeterinaryOrderByWithRelationInput | Prisma.VeterinaryOrderByWithRelationInput[]
+  orderBy?: Prisma.BusinessOrderByWithRelationInput | Prisma.BusinessOrderByWithRelationInput[]
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
    * 
-   * Sets the position for searching for Veterinaries.
+   * Sets the position for searching for Businesses.
    */
-  cursor?: Prisma.VeterinaryWhereUniqueInput
+  cursor?: Prisma.BusinessWhereUniqueInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Take `±n` Veterinaries from the position of the cursor.
+   * Take `±n` Businesses from the position of the cursor.
    */
   take?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Skip the first `n` Veterinaries.
+   * Skip the first `n` Businesses.
    */
   skip?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
    * 
-   * Filter by unique combinations of Veterinaries.
+   * Filter by unique combinations of Businesses.
    */
-  distinct?: Prisma.VeterinaryScalarFieldEnum | Prisma.VeterinaryScalarFieldEnum[]
+  distinct?: Prisma.BusinessScalarFieldEnum | Prisma.BusinessScalarFieldEnum[]
 }
 
 /**
- * Veterinary findFirstOrThrow
+ * Business findFirstOrThrow
  */
-export type VeterinaryFindFirstOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type BusinessFindFirstOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Veterinary
+   * Select specific fields to fetch from the Business
    */
-  select?: Prisma.VeterinarySelect<ExtArgs> | null
+  select?: Prisma.BusinessSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Veterinary
+   * Omit specific fields from the Business
    */
-  omit?: Prisma.VeterinaryOmit<ExtArgs> | null
+  omit?: Prisma.BusinessOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.VeterinaryInclude<ExtArgs> | null
+  include?: Prisma.BusinessInclude<ExtArgs> | null
   /**
-   * Filter, which Veterinary to fetch.
+   * Filter, which Business to fetch.
    */
-  where?: Prisma.VeterinaryWhereInput
+  where?: Prisma.BusinessWhereInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
    * 
-   * Determine the order of Veterinaries to fetch.
+   * Determine the order of Businesses to fetch.
    */
-  orderBy?: Prisma.VeterinaryOrderByWithRelationInput | Prisma.VeterinaryOrderByWithRelationInput[]
+  orderBy?: Prisma.BusinessOrderByWithRelationInput | Prisma.BusinessOrderByWithRelationInput[]
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
    * 
-   * Sets the position for searching for Veterinaries.
+   * Sets the position for searching for Businesses.
    */
-  cursor?: Prisma.VeterinaryWhereUniqueInput
+  cursor?: Prisma.BusinessWhereUniqueInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Take `±n` Veterinaries from the position of the cursor.
+   * Take `±n` Businesses from the position of the cursor.
    */
   take?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Skip the first `n` Veterinaries.
+   * Skip the first `n` Businesses.
    */
   skip?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
    * 
-   * Filter by unique combinations of Veterinaries.
+   * Filter by unique combinations of Businesses.
    */
-  distinct?: Prisma.VeterinaryScalarFieldEnum | Prisma.VeterinaryScalarFieldEnum[]
+  distinct?: Prisma.BusinessScalarFieldEnum | Prisma.BusinessScalarFieldEnum[]
 }
 
 /**
- * Veterinary findMany
+ * Business findMany
  */
-export type VeterinaryFindManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type BusinessFindManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Veterinary
+   * Select specific fields to fetch from the Business
    */
-  select?: Prisma.VeterinarySelect<ExtArgs> | null
+  select?: Prisma.BusinessSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Veterinary
+   * Omit specific fields from the Business
    */
-  omit?: Prisma.VeterinaryOmit<ExtArgs> | null
+  omit?: Prisma.BusinessOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.VeterinaryInclude<ExtArgs> | null
+  include?: Prisma.BusinessInclude<ExtArgs> | null
   /**
-   * Filter, which Veterinaries to fetch.
+   * Filter, which Businesses to fetch.
    */
-  where?: Prisma.VeterinaryWhereInput
+  where?: Prisma.BusinessWhereInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
    * 
-   * Determine the order of Veterinaries to fetch.
+   * Determine the order of Businesses to fetch.
    */
-  orderBy?: Prisma.VeterinaryOrderByWithRelationInput | Prisma.VeterinaryOrderByWithRelationInput[]
+  orderBy?: Prisma.BusinessOrderByWithRelationInput | Prisma.BusinessOrderByWithRelationInput[]
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
    * 
-   * Sets the position for listing Veterinaries.
+   * Sets the position for listing Businesses.
    */
-  cursor?: Prisma.VeterinaryWhereUniqueInput
+  cursor?: Prisma.BusinessWhereUniqueInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Take `±n` Veterinaries from the position of the cursor.
+   * Take `±n` Businesses from the position of the cursor.
    */
   take?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Skip the first `n` Veterinaries.
+   * Skip the first `n` Businesses.
    */
   skip?: number
-  distinct?: Prisma.VeterinaryScalarFieldEnum | Prisma.VeterinaryScalarFieldEnum[]
+  distinct?: Prisma.BusinessScalarFieldEnum | Prisma.BusinessScalarFieldEnum[]
 }
 
 /**
- * Veterinary create
+ * Business create
  */
-export type VeterinaryCreateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type BusinessCreateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Veterinary
+   * Select specific fields to fetch from the Business
    */
-  select?: Prisma.VeterinarySelect<ExtArgs> | null
+  select?: Prisma.BusinessSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Veterinary
+   * Omit specific fields from the Business
    */
-  omit?: Prisma.VeterinaryOmit<ExtArgs> | null
+  omit?: Prisma.BusinessOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.VeterinaryInclude<ExtArgs> | null
+  include?: Prisma.BusinessInclude<ExtArgs> | null
   /**
-   * The data needed to create a Veterinary.
+   * The data needed to create a Business.
    */
-  data: Prisma.XOR<Prisma.VeterinaryCreateInput, Prisma.VeterinaryUncheckedCreateInput>
+  data: Prisma.XOR<Prisma.BusinessCreateInput, Prisma.BusinessUncheckedCreateInput>
 }
 
 /**
- * Veterinary createMany
+ * Business createMany
  */
-export type VeterinaryCreateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type BusinessCreateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * The data used to create many Veterinaries.
+   * The data used to create many Businesses.
    */
-  data: Prisma.VeterinaryCreateManyInput | Prisma.VeterinaryCreateManyInput[]
+  data: Prisma.BusinessCreateManyInput | Prisma.BusinessCreateManyInput[]
   skipDuplicates?: boolean
 }
 
 /**
- * Veterinary createManyAndReturn
+ * Business createManyAndReturn
  */
-export type VeterinaryCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type BusinessCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Veterinary
+   * Select specific fields to fetch from the Business
    */
-  select?: Prisma.VeterinarySelectCreateManyAndReturn<ExtArgs> | null
+  select?: Prisma.BusinessSelectCreateManyAndReturn<ExtArgs> | null
   /**
-   * Omit specific fields from the Veterinary
+   * Omit specific fields from the Business
    */
-  omit?: Prisma.VeterinaryOmit<ExtArgs> | null
+  omit?: Prisma.BusinessOmit<ExtArgs> | null
   /**
-   * The data used to create many Veterinaries.
+   * The data used to create many Businesses.
    */
-  data: Prisma.VeterinaryCreateManyInput | Prisma.VeterinaryCreateManyInput[]
+  data: Prisma.BusinessCreateManyInput | Prisma.BusinessCreateManyInput[]
   skipDuplicates?: boolean
 }
 
 /**
- * Veterinary update
+ * Business update
  */
-export type VeterinaryUpdateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type BusinessUpdateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Veterinary
+   * Select specific fields to fetch from the Business
    */
-  select?: Prisma.VeterinarySelect<ExtArgs> | null
+  select?: Prisma.BusinessSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Veterinary
+   * Omit specific fields from the Business
    */
-  omit?: Prisma.VeterinaryOmit<ExtArgs> | null
+  omit?: Prisma.BusinessOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.VeterinaryInclude<ExtArgs> | null
+  include?: Prisma.BusinessInclude<ExtArgs> | null
   /**
-   * The data needed to update a Veterinary.
+   * The data needed to update a Business.
    */
-  data: Prisma.XOR<Prisma.VeterinaryUpdateInput, Prisma.VeterinaryUncheckedUpdateInput>
+  data: Prisma.XOR<Prisma.BusinessUpdateInput, Prisma.BusinessUncheckedUpdateInput>
   /**
-   * Choose, which Veterinary to update.
+   * Choose, which Business to update.
    */
-  where: Prisma.VeterinaryWhereUniqueInput
+  where: Prisma.BusinessWhereUniqueInput
 }
 
 /**
- * Veterinary updateMany
+ * Business updateMany
  */
-export type VeterinaryUpdateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type BusinessUpdateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * The data used to update Veterinaries.
+   * The data used to update Businesses.
    */
-  data: Prisma.XOR<Prisma.VeterinaryUpdateManyMutationInput, Prisma.VeterinaryUncheckedUpdateManyInput>
+  data: Prisma.XOR<Prisma.BusinessUpdateManyMutationInput, Prisma.BusinessUncheckedUpdateManyInput>
   /**
-   * Filter which Veterinaries to update
+   * Filter which Businesses to update
    */
-  where?: Prisma.VeterinaryWhereInput
+  where?: Prisma.BusinessWhereInput
   /**
-   * Limit how many Veterinaries to update.
+   * Limit how many Businesses to update.
    */
   limit?: number
 }
 
 /**
- * Veterinary updateManyAndReturn
+ * Business updateManyAndReturn
  */
-export type VeterinaryUpdateManyAndReturnArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type BusinessUpdateManyAndReturnArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Veterinary
+   * Select specific fields to fetch from the Business
    */
-  select?: Prisma.VeterinarySelectUpdateManyAndReturn<ExtArgs> | null
+  select?: Prisma.BusinessSelectUpdateManyAndReturn<ExtArgs> | null
   /**
-   * Omit specific fields from the Veterinary
+   * Omit specific fields from the Business
    */
-  omit?: Prisma.VeterinaryOmit<ExtArgs> | null
+  omit?: Prisma.BusinessOmit<ExtArgs> | null
   /**
-   * The data used to update Veterinaries.
+   * The data used to update Businesses.
    */
-  data: Prisma.XOR<Prisma.VeterinaryUpdateManyMutationInput, Prisma.VeterinaryUncheckedUpdateManyInput>
+  data: Prisma.XOR<Prisma.BusinessUpdateManyMutationInput, Prisma.BusinessUncheckedUpdateManyInput>
   /**
-   * Filter which Veterinaries to update
+   * Filter which Businesses to update
    */
-  where?: Prisma.VeterinaryWhereInput
+  where?: Prisma.BusinessWhereInput
   /**
-   * Limit how many Veterinaries to update.
+   * Limit how many Businesses to update.
    */
   limit?: number
 }
 
 /**
- * Veterinary upsert
+ * Business upsert
  */
-export type VeterinaryUpsertArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type BusinessUpsertArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Veterinary
+   * Select specific fields to fetch from the Business
    */
-  select?: Prisma.VeterinarySelect<ExtArgs> | null
+  select?: Prisma.BusinessSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Veterinary
+   * Omit specific fields from the Business
    */
-  omit?: Prisma.VeterinaryOmit<ExtArgs> | null
+  omit?: Prisma.BusinessOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.VeterinaryInclude<ExtArgs> | null
+  include?: Prisma.BusinessInclude<ExtArgs> | null
   /**
-   * The filter to search for the Veterinary to update in case it exists.
+   * The filter to search for the Business to update in case it exists.
    */
-  where: Prisma.VeterinaryWhereUniqueInput
+  where: Prisma.BusinessWhereUniqueInput
   /**
-   * In case the Veterinary found by the `where` argument doesn't exist, create a new Veterinary with this data.
+   * In case the Business found by the `where` argument doesn't exist, create a new Business with this data.
    */
-  create: Prisma.XOR<Prisma.VeterinaryCreateInput, Prisma.VeterinaryUncheckedCreateInput>
+  create: Prisma.XOR<Prisma.BusinessCreateInput, Prisma.BusinessUncheckedCreateInput>
   /**
-   * In case the Veterinary was found with the provided `where` argument, update it with this data.
+   * In case the Business was found with the provided `where` argument, update it with this data.
    */
-  update: Prisma.XOR<Prisma.VeterinaryUpdateInput, Prisma.VeterinaryUncheckedUpdateInput>
+  update: Prisma.XOR<Prisma.BusinessUpdateInput, Prisma.BusinessUncheckedUpdateInput>
 }
 
 /**
- * Veterinary delete
+ * Business delete
  */
-export type VeterinaryDeleteArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type BusinessDeleteArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Veterinary
+   * Select specific fields to fetch from the Business
    */
-  select?: Prisma.VeterinarySelect<ExtArgs> | null
+  select?: Prisma.BusinessSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Veterinary
+   * Omit specific fields from the Business
    */
-  omit?: Prisma.VeterinaryOmit<ExtArgs> | null
+  omit?: Prisma.BusinessOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.VeterinaryInclude<ExtArgs> | null
+  include?: Prisma.BusinessInclude<ExtArgs> | null
   /**
-   * Filter which Veterinary to delete.
+   * Filter which Business to delete.
    */
-  where: Prisma.VeterinaryWhereUniqueInput
+  where: Prisma.BusinessWhereUniqueInput
 }
 
 /**
- * Veterinary deleteMany
+ * Business deleteMany
  */
-export type VeterinaryDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type BusinessDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Filter which Veterinaries to delete
+   * Filter which Businesses to delete
    */
-  where?: Prisma.VeterinaryWhereInput
+  where?: Prisma.BusinessWhereInput
   /**
-   * Limit how many Veterinaries to delete.
+   * Limit how many Businesses to delete.
    */
   limit?: number
 }
 
 /**
- * Veterinary.usuarios
+ * Business.usuarios
  */
-export type Veterinary$usuariosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Business$usuariosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the User
    */
@@ -2479,9 +2479,9 @@ export type Veterinary$usuariosArgs<ExtArgs extends runtime.Types.Extensions.Int
 }
 
 /**
- * Veterinary.propietarios
+ * Business.propietarios
  */
-export type Veterinary$propietariosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Business$propietariosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Owner
    */
@@ -2503,33 +2503,33 @@ export type Veterinary$propietariosArgs<ExtArgs extends runtime.Types.Extensions
 }
 
 /**
- * Veterinary.operadores
+ * Business.veterinarios
  */
-export type Veterinary$operadoresArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Business$veterinariosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Operator
+   * Select specific fields to fetch from the Veterinarian
    */
-  select?: Prisma.OperatorSelect<ExtArgs> | null
+  select?: Prisma.VeterinarianSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Operator
+   * Omit specific fields from the Veterinarian
    */
-  omit?: Prisma.OperatorOmit<ExtArgs> | null
+  omit?: Prisma.VeterinarianOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.OperatorInclude<ExtArgs> | null
-  where?: Prisma.OperatorWhereInput
-  orderBy?: Prisma.OperatorOrderByWithRelationInput | Prisma.OperatorOrderByWithRelationInput[]
-  cursor?: Prisma.OperatorWhereUniqueInput
+  include?: Prisma.VeterinarianInclude<ExtArgs> | null
+  where?: Prisma.VeterinarianWhereInput
+  orderBy?: Prisma.VeterinarianOrderByWithRelationInput | Prisma.VeterinarianOrderByWithRelationInput[]
+  cursor?: Prisma.VeterinarianWhereUniqueInput
   take?: number
   skip?: number
-  distinct?: Prisma.OperatorScalarFieldEnum | Prisma.OperatorScalarFieldEnum[]
+  distinct?: Prisma.VeterinarianScalarFieldEnum | Prisma.VeterinarianScalarFieldEnum[]
 }
 
 /**
- * Veterinary.pacientes
+ * Business.pacientes
  */
-export type Veterinary$pacientesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Business$pacientesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Patient
    */
@@ -2551,9 +2551,9 @@ export type Veterinary$pacientesArgs<ExtArgs extends runtime.Types.Extensions.In
 }
 
 /**
- * Veterinary.citas
+ * Business.citas
  */
-export type Veterinary$citasArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Business$citasArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Appointment
    */
@@ -2575,9 +2575,9 @@ export type Veterinary$citasArgs<ExtArgs extends runtime.Types.Extensions.Intern
 }
 
 /**
- * Veterinary.registrosClinico
+ * Business.registrosClinico
  */
-export type Veterinary$registrosClinicoArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Business$registrosClinicoArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the ClinicalRecord
    */
@@ -2599,9 +2599,9 @@ export type Veterinary$registrosClinicoArgs<ExtArgs extends runtime.Types.Extens
 }
 
 /**
- * Veterinary.registrosActividad
+ * Business.registrosActividad
  */
-export type Veterinary$registrosActividadArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Business$registrosActividadArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the ActivityLog
    */
@@ -2623,19 +2623,19 @@ export type Veterinary$registrosActividadArgs<ExtArgs extends runtime.Types.Exte
 }
 
 /**
- * Veterinary without action
+ * Business without action
  */
-export type VeterinaryDefaultArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type BusinessDefaultArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Veterinary
+   * Select specific fields to fetch from the Business
    */
-  select?: Prisma.VeterinarySelect<ExtArgs> | null
+  select?: Prisma.BusinessSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Veterinary
+   * Omit specific fields from the Business
    */
-  omit?: Prisma.VeterinaryOmit<ExtArgs> | null
+  omit?: Prisma.BusinessOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.VeterinaryInclude<ExtArgs> | null
+  include?: Prisma.BusinessInclude<ExtArgs> | null
 }

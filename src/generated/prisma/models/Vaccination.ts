@@ -232,7 +232,7 @@ export type VaccinationWhereInput = {
   creadoEn?: Prisma.DateTimeFilter<"Vaccination"> | Date | string
   paciente?: Prisma.XOR<Prisma.PatientScalarRelationFilter, Prisma.PatientWhereInput>
   registroClinico?: Prisma.XOR<Prisma.ClinicalRecordNullableScalarRelationFilter, Prisma.ClinicalRecordWhereInput> | null
-  administrador?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
+  administrador?: Prisma.XOR<Prisma.VeterinarianNullableScalarRelationFilter, Prisma.VeterinarianWhereInput> | null
 }
 
 export type VaccinationOrderByWithRelationInput = {
@@ -249,7 +249,7 @@ export type VaccinationOrderByWithRelationInput = {
   creadoEn?: Prisma.SortOrder
   paciente?: Prisma.PatientOrderByWithRelationInput
   registroClinico?: Prisma.ClinicalRecordOrderByWithRelationInput
-  administrador?: Prisma.OperatorOrderByWithRelationInput
+  administrador?: Prisma.VeterinarianOrderByWithRelationInput
 }
 
 export type VaccinationWhereUniqueInput = Prisma.AtLeast<{
@@ -269,7 +269,7 @@ export type VaccinationWhereUniqueInput = Prisma.AtLeast<{
   creadoEn?: Prisma.DateTimeFilter<"Vaccination"> | Date | string
   paciente?: Prisma.XOR<Prisma.PatientScalarRelationFilter, Prisma.PatientWhereInput>
   registroClinico?: Prisma.XOR<Prisma.ClinicalRecordNullableScalarRelationFilter, Prisma.ClinicalRecordWhereInput> | null
-  administrador?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
+  administrador?: Prisma.XOR<Prisma.VeterinarianNullableScalarRelationFilter, Prisma.VeterinarianWhereInput> | null
 }, "id">
 
 export type VaccinationOrderByWithAggregationInput = {
@@ -317,7 +317,7 @@ export type VaccinationCreateInput = {
   creadoEn?: Date | string
   paciente: Prisma.PatientCreateNestedOneWithoutVacunacionesInput
   registroClinico?: Prisma.ClinicalRecordCreateNestedOneWithoutVacunacionesInput
-  administrador?: Prisma.OperatorCreateNestedOneWithoutVacunacionesInput
+  administrador?: Prisma.VeterinarianCreateNestedOneWithoutVacunacionesInput
 }
 
 export type VaccinationUncheckedCreateInput = {
@@ -345,7 +345,7 @@ export type VaccinationUpdateInput = {
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   paciente?: Prisma.PatientUpdateOneRequiredWithoutVacunacionesNestedInput
   registroClinico?: Prisma.ClinicalRecordUpdateOneWithoutVacunacionesNestedInput
-  administrador?: Prisma.OperatorUpdateOneWithoutVacunacionesNestedInput
+  administrador?: Prisma.VeterinarianUpdateOneWithoutVacunacionesNestedInput
 }
 
 export type VaccinationUncheckedUpdateInput = {
@@ -658,7 +658,7 @@ export type VaccinationCreateWithoutPacienteInput = {
   notas?: string | null
   creadoEn?: Date | string
   registroClinico?: Prisma.ClinicalRecordCreateNestedOneWithoutVacunacionesInput
-  administrador?: Prisma.OperatorCreateNestedOneWithoutVacunacionesInput
+  administrador?: Prisma.VeterinarianCreateNestedOneWithoutVacunacionesInput
 }
 
 export type VaccinationUncheckedCreateWithoutPacienteInput = {
@@ -710,7 +710,7 @@ export type VaccinationCreateWithoutRegistroClinicoInput = {
   notas?: string | null
   creadoEn?: Date | string
   paciente: Prisma.PatientCreateNestedOneWithoutVacunacionesInput
-  administrador?: Prisma.OperatorCreateNestedOneWithoutVacunacionesInput
+  administrador?: Prisma.VeterinarianCreateNestedOneWithoutVacunacionesInput
 }
 
 export type VaccinationUncheckedCreateWithoutRegistroClinicoInput = {
@@ -827,7 +827,7 @@ export type VaccinationUpdateWithoutPacienteInput = {
   notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   registroClinico?: Prisma.ClinicalRecordUpdateOneWithoutVacunacionesNestedInput
-  administrador?: Prisma.OperatorUpdateOneWithoutVacunacionesNestedInput
+  administrador?: Prisma.VeterinarianUpdateOneWithoutVacunacionesNestedInput
 }
 
 export type VaccinationUncheckedUpdateWithoutPacienteInput = {
@@ -879,7 +879,7 @@ export type VaccinationUpdateWithoutRegistroClinicoInput = {
   notas?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   paciente?: Prisma.PatientUpdateOneRequiredWithoutVacunacionesNestedInput
-  administrador?: Prisma.OperatorUpdateOneWithoutVacunacionesNestedInput
+  administrador?: Prisma.VeterinarianUpdateOneWithoutVacunacionesNestedInput
 }
 
 export type VaccinationUncheckedUpdateWithoutRegistroClinicoInput = {
@@ -997,7 +997,7 @@ export type $VaccinationPayload<ExtArgs extends runtime.Types.Extensions.Interna
   objects: {
     paciente: Prisma.$PatientPayload<ExtArgs>
     registroClinico: Prisma.$ClinicalRecordPayload<ExtArgs> | null
-    administrador: Prisma.$OperatorPayload<ExtArgs> | null
+    administrador: Prisma.$VeterinarianPayload<ExtArgs> | null
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -1407,7 +1407,7 @@ export interface Prisma__VaccinationClient<T, Null = never, ExtArgs extends runt
   readonly [Symbol.toStringTag]: "PrismaPromise"
   paciente<T extends Prisma.PatientDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.PatientDefaultArgs<ExtArgs>>): Prisma.Prisma__PatientClient<runtime.Types.Result.GetResult<Prisma.$PatientPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   registroClinico<T extends Prisma.Vaccination$registroClinicoArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Vaccination$registroClinicoArgs<ExtArgs>>): Prisma.Prisma__ClinicalRecordClient<runtime.Types.Result.GetResult<Prisma.$ClinicalRecordPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-  administrador<T extends Prisma.Vaccination$administradorArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Vaccination$administradorArgs<ExtArgs>>): Prisma.Prisma__OperatorClient<runtime.Types.Result.GetResult<Prisma.$OperatorPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  administrador<T extends Prisma.Vaccination$administradorArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Vaccination$administradorArgs<ExtArgs>>): Prisma.Prisma__VeterinarianClient<runtime.Types.Result.GetResult<Prisma.$VeterinarianPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1867,18 +1867,18 @@ export type Vaccination$registroClinicoArgs<ExtArgs extends runtime.Types.Extens
  */
 export type Vaccination$administradorArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Operator
+   * Select specific fields to fetch from the Veterinarian
    */
-  select?: Prisma.OperatorSelect<ExtArgs> | null
+  select?: Prisma.VeterinarianSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Operator
+   * Omit specific fields from the Veterinarian
    */
-  omit?: Prisma.OperatorOmit<ExtArgs> | null
+  omit?: Prisma.VeterinarianOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.OperatorInclude<ExtArgs> | null
-  where?: Prisma.OperatorWhereInput
+  include?: Prisma.VeterinarianInclude<ExtArgs> | null
+  where?: Prisma.VeterinarianWhereInput
 }
 
 /**
