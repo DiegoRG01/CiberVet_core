@@ -83,6 +83,11 @@ export type Appointment = Prisma.AppointmentModel
  */
 export type Procedure = Prisma.ProcedureModel
 /**
+ * Model ProcedureCita
+ * 
+ */
+export type ProcedureCita = Prisma.ProcedureCitaModel
+/**
  * Model ClinicalRecord
  * 
  */

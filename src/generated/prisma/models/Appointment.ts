@@ -333,7 +333,7 @@ export type AppointmentWhereInput = {
   veterinaria?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
   operador?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
   creador?: Prisma.XOR<Prisma.UserNullableScalarRelationFilter, Prisma.UserWhereInput> | null
-  procedimientos?: Prisma.ProcedureListRelationFilter
+  procedimientos?: Prisma.ProcedureCitaListRelationFilter
   registrosClinico?: Prisma.ClinicalRecordListRelationFilter
   recordatoriosCorreo?: Prisma.EmailReminderListRelationFilter
 }
@@ -363,7 +363,7 @@ export type AppointmentOrderByWithRelationInput = {
   veterinaria?: Prisma.VeterinaryOrderByWithRelationInput
   operador?: Prisma.OperatorOrderByWithRelationInput
   creador?: Prisma.UserOrderByWithRelationInput
-  procedimientos?: Prisma.ProcedureOrderByRelationAggregateInput
+  procedimientos?: Prisma.ProcedureCitaOrderByRelationAggregateInput
   registrosClinico?: Prisma.ClinicalRecordOrderByRelationAggregateInput
   recordatoriosCorreo?: Prisma.EmailReminderOrderByRelationAggregateInput
 }
@@ -396,7 +396,7 @@ export type AppointmentWhereUniqueInput = Prisma.AtLeast<{
   veterinaria?: Prisma.XOR<Prisma.VeterinaryNullableScalarRelationFilter, Prisma.VeterinaryWhereInput> | null
   operador?: Prisma.XOR<Prisma.OperatorNullableScalarRelationFilter, Prisma.OperatorWhereInput> | null
   creador?: Prisma.XOR<Prisma.UserNullableScalarRelationFilter, Prisma.UserWhereInput> | null
-  procedimientos?: Prisma.ProcedureListRelationFilter
+  procedimientos?: Prisma.ProcedureCitaListRelationFilter
   registrosClinico?: Prisma.ClinicalRecordListRelationFilter
   recordatoriosCorreo?: Prisma.EmailReminderListRelationFilter
 }, "id">
@@ -473,7 +473,7 @@ export type AppointmentCreateInput = {
   veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutCitasInput
   operador?: Prisma.OperatorCreateNestedOneWithoutCitasInput
   creador?: Prisma.UserCreateNestedOneWithoutCitasCreadasInput
-  procedimientos?: Prisma.ProcedureCreateNestedManyWithoutCitaInput
+  procedimientos?: Prisma.ProcedureCitaCreateNestedManyWithoutCitaInput
   registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutCitaInput
   recordatoriosCorreo?: Prisma.EmailReminderCreateNestedManyWithoutCitaInput
 }
@@ -498,7 +498,7 @@ export type AppointmentUncheckedCreateInput = {
   creadoPor?: string | null
   creadoEn?: Date | string
   actualizadoEn?: Date | string
-  procedimientos?: Prisma.ProcedureUncheckedCreateNestedManyWithoutCitaInput
+  procedimientos?: Prisma.ProcedureCitaUncheckedCreateNestedManyWithoutCitaInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutCitaInput
   recordatoriosCorreo?: Prisma.EmailReminderUncheckedCreateNestedManyWithoutCitaInput
 }
@@ -523,7 +523,7 @@ export type AppointmentUpdateInput = {
   veterinaria?: Prisma.VeterinaryUpdateOneWithoutCitasNestedInput
   operador?: Prisma.OperatorUpdateOneWithoutCitasNestedInput
   creador?: Prisma.UserUpdateOneWithoutCitasCreadasNestedInput
-  procedimientos?: Prisma.ProcedureUpdateManyWithoutCitaNestedInput
+  procedimientos?: Prisma.ProcedureCitaUpdateManyWithoutCitaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutCitaNestedInput
   recordatoriosCorreo?: Prisma.EmailReminderUpdateManyWithoutCitaNestedInput
 }
@@ -548,7 +548,7 @@ export type AppointmentUncheckedUpdateInput = {
   creadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  procedimientos?: Prisma.ProcedureUncheckedUpdateManyWithoutCitaNestedInput
+  procedimientos?: Prisma.ProcedureCitaUncheckedUpdateManyWithoutCitaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutCitaNestedInput
   recordatoriosCorreo?: Prisma.EmailReminderUncheckedUpdateManyWithoutCitaNestedInput
 }
@@ -993,7 +993,7 @@ export type AppointmentCreateWithoutCreadorInput = {
   propietario?: Prisma.OwnerCreateNestedOneWithoutCitasInput
   veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutCitasInput
   operador?: Prisma.OperatorCreateNestedOneWithoutCitasInput
-  procedimientos?: Prisma.ProcedureCreateNestedManyWithoutCitaInput
+  procedimientos?: Prisma.ProcedureCitaCreateNestedManyWithoutCitaInput
   registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutCitaInput
   recordatoriosCorreo?: Prisma.EmailReminderCreateNestedManyWithoutCitaInput
 }
@@ -1017,7 +1017,7 @@ export type AppointmentUncheckedCreateWithoutCreadorInput = {
   motivoCancelacion?: string | null
   creadoEn?: Date | string
   actualizadoEn?: Date | string
-  procedimientos?: Prisma.ProcedureUncheckedCreateNestedManyWithoutCitaInput
+  procedimientos?: Prisma.ProcedureCitaUncheckedCreateNestedManyWithoutCitaInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutCitaInput
   recordatoriosCorreo?: Prisma.EmailReminderUncheckedCreateNestedManyWithoutCitaInput
 }
@@ -1092,7 +1092,7 @@ export type AppointmentCreateWithoutVeterinariaInput = {
   propietario?: Prisma.OwnerCreateNestedOneWithoutCitasInput
   operador?: Prisma.OperatorCreateNestedOneWithoutCitasInput
   creador?: Prisma.UserCreateNestedOneWithoutCitasCreadasInput
-  procedimientos?: Prisma.ProcedureCreateNestedManyWithoutCitaInput
+  procedimientos?: Prisma.ProcedureCitaCreateNestedManyWithoutCitaInput
   registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutCitaInput
   recordatoriosCorreo?: Prisma.EmailReminderCreateNestedManyWithoutCitaInput
 }
@@ -1116,7 +1116,7 @@ export type AppointmentUncheckedCreateWithoutVeterinariaInput = {
   creadoPor?: string | null
   creadoEn?: Date | string
   actualizadoEn?: Date | string
-  procedimientos?: Prisma.ProcedureUncheckedCreateNestedManyWithoutCitaInput
+  procedimientos?: Prisma.ProcedureCitaUncheckedCreateNestedManyWithoutCitaInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutCitaInput
   recordatoriosCorreo?: Prisma.EmailReminderUncheckedCreateNestedManyWithoutCitaInput
 }
@@ -1166,7 +1166,7 @@ export type AppointmentCreateWithoutPropietarioInput = {
   veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutCitasInput
   operador?: Prisma.OperatorCreateNestedOneWithoutCitasInput
   creador?: Prisma.UserCreateNestedOneWithoutCitasCreadasInput
-  procedimientos?: Prisma.ProcedureCreateNestedManyWithoutCitaInput
+  procedimientos?: Prisma.ProcedureCitaCreateNestedManyWithoutCitaInput
   registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutCitaInput
   recordatoriosCorreo?: Prisma.EmailReminderCreateNestedManyWithoutCitaInput
 }
@@ -1190,7 +1190,7 @@ export type AppointmentUncheckedCreateWithoutPropietarioInput = {
   creadoPor?: string | null
   creadoEn?: Date | string
   actualizadoEn?: Date | string
-  procedimientos?: Prisma.ProcedureUncheckedCreateNestedManyWithoutCitaInput
+  procedimientos?: Prisma.ProcedureCitaUncheckedCreateNestedManyWithoutCitaInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutCitaInput
   recordatoriosCorreo?: Prisma.EmailReminderUncheckedCreateNestedManyWithoutCitaInput
 }
@@ -1240,7 +1240,7 @@ export type AppointmentCreateWithoutOperadorInput = {
   propietario?: Prisma.OwnerCreateNestedOneWithoutCitasInput
   veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutCitasInput
   creador?: Prisma.UserCreateNestedOneWithoutCitasCreadasInput
-  procedimientos?: Prisma.ProcedureCreateNestedManyWithoutCitaInput
+  procedimientos?: Prisma.ProcedureCitaCreateNestedManyWithoutCitaInput
   registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutCitaInput
   recordatoriosCorreo?: Prisma.EmailReminderCreateNestedManyWithoutCitaInput
 }
@@ -1264,7 +1264,7 @@ export type AppointmentUncheckedCreateWithoutOperadorInput = {
   creadoPor?: string | null
   creadoEn?: Date | string
   actualizadoEn?: Date | string
-  procedimientos?: Prisma.ProcedureUncheckedCreateNestedManyWithoutCitaInput
+  procedimientos?: Prisma.ProcedureCitaUncheckedCreateNestedManyWithoutCitaInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutCitaInput
   recordatoriosCorreo?: Prisma.EmailReminderUncheckedCreateNestedManyWithoutCitaInput
 }
@@ -1314,7 +1314,7 @@ export type AppointmentCreateWithoutPacienteInput = {
   veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutCitasInput
   operador?: Prisma.OperatorCreateNestedOneWithoutCitasInput
   creador?: Prisma.UserCreateNestedOneWithoutCitasCreadasInput
-  procedimientos?: Prisma.ProcedureCreateNestedManyWithoutCitaInput
+  procedimientos?: Prisma.ProcedureCitaCreateNestedManyWithoutCitaInput
   registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutCitaInput
   recordatoriosCorreo?: Prisma.EmailReminderCreateNestedManyWithoutCitaInput
 }
@@ -1338,7 +1338,7 @@ export type AppointmentUncheckedCreateWithoutPacienteInput = {
   creadoPor?: string | null
   creadoEn?: Date | string
   actualizadoEn?: Date | string
-  procedimientos?: Prisma.ProcedureUncheckedCreateNestedManyWithoutCitaInput
+  procedimientos?: Prisma.ProcedureCitaUncheckedCreateNestedManyWithoutCitaInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutCitaInput
   recordatoriosCorreo?: Prisma.EmailReminderUncheckedCreateNestedManyWithoutCitaInput
 }
@@ -1501,7 +1501,7 @@ export type AppointmentCreateWithoutRegistrosClinicoInput = {
   veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutCitasInput
   operador?: Prisma.OperatorCreateNestedOneWithoutCitasInput
   creador?: Prisma.UserCreateNestedOneWithoutCitasCreadasInput
-  procedimientos?: Prisma.ProcedureCreateNestedManyWithoutCitaInput
+  procedimientos?: Prisma.ProcedureCitaCreateNestedManyWithoutCitaInput
   recordatoriosCorreo?: Prisma.EmailReminderCreateNestedManyWithoutCitaInput
 }
 
@@ -1525,7 +1525,7 @@ export type AppointmentUncheckedCreateWithoutRegistrosClinicoInput = {
   creadoPor?: string | null
   creadoEn?: Date | string
   actualizadoEn?: Date | string
-  procedimientos?: Prisma.ProcedureUncheckedCreateNestedManyWithoutCitaInput
+  procedimientos?: Prisma.ProcedureCitaUncheckedCreateNestedManyWithoutCitaInput
   recordatoriosCorreo?: Prisma.EmailReminderUncheckedCreateNestedManyWithoutCitaInput
 }
 
@@ -1565,7 +1565,7 @@ export type AppointmentUpdateWithoutRegistrosClinicoInput = {
   veterinaria?: Prisma.VeterinaryUpdateOneWithoutCitasNestedInput
   operador?: Prisma.OperatorUpdateOneWithoutCitasNestedInput
   creador?: Prisma.UserUpdateOneWithoutCitasCreadasNestedInput
-  procedimientos?: Prisma.ProcedureUpdateManyWithoutCitaNestedInput
+  procedimientos?: Prisma.ProcedureCitaUpdateManyWithoutCitaNestedInput
   recordatoriosCorreo?: Prisma.EmailReminderUpdateManyWithoutCitaNestedInput
 }
 
@@ -1589,7 +1589,7 @@ export type AppointmentUncheckedUpdateWithoutRegistrosClinicoInput = {
   creadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  procedimientos?: Prisma.ProcedureUncheckedUpdateManyWithoutCitaNestedInput
+  procedimientos?: Prisma.ProcedureCitaUncheckedUpdateManyWithoutCitaNestedInput
   recordatoriosCorreo?: Prisma.EmailReminderUncheckedUpdateManyWithoutCitaNestedInput
 }
 
@@ -1613,7 +1613,7 @@ export type AppointmentCreateWithoutRecordatoriosCorreoInput = {
   veterinaria?: Prisma.VeterinaryCreateNestedOneWithoutCitasInput
   operador?: Prisma.OperatorCreateNestedOneWithoutCitasInput
   creador?: Prisma.UserCreateNestedOneWithoutCitasCreadasInput
-  procedimientos?: Prisma.ProcedureCreateNestedManyWithoutCitaInput
+  procedimientos?: Prisma.ProcedureCitaCreateNestedManyWithoutCitaInput
   registrosClinico?: Prisma.ClinicalRecordCreateNestedManyWithoutCitaInput
 }
 
@@ -1637,7 +1637,7 @@ export type AppointmentUncheckedCreateWithoutRecordatoriosCorreoInput = {
   creadoPor?: string | null
   creadoEn?: Date | string
   actualizadoEn?: Date | string
-  procedimientos?: Prisma.ProcedureUncheckedCreateNestedManyWithoutCitaInput
+  procedimientos?: Prisma.ProcedureCitaUncheckedCreateNestedManyWithoutCitaInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedCreateNestedManyWithoutCitaInput
 }
 
@@ -1677,7 +1677,7 @@ export type AppointmentUpdateWithoutRecordatoriosCorreoInput = {
   veterinaria?: Prisma.VeterinaryUpdateOneWithoutCitasNestedInput
   operador?: Prisma.OperatorUpdateOneWithoutCitasNestedInput
   creador?: Prisma.UserUpdateOneWithoutCitasCreadasNestedInput
-  procedimientos?: Prisma.ProcedureUpdateManyWithoutCitaNestedInput
+  procedimientos?: Prisma.ProcedureCitaUpdateManyWithoutCitaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutCitaNestedInput
 }
 
@@ -1701,7 +1701,7 @@ export type AppointmentUncheckedUpdateWithoutRecordatoriosCorreoInput = {
   creadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  procedimientos?: Prisma.ProcedureUncheckedUpdateManyWithoutCitaNestedInput
+  procedimientos?: Prisma.ProcedureCitaUncheckedUpdateManyWithoutCitaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutCitaNestedInput
 }
 
@@ -1745,7 +1745,7 @@ export type AppointmentUpdateWithoutCreadorInput = {
   propietario?: Prisma.OwnerUpdateOneWithoutCitasNestedInput
   veterinaria?: Prisma.VeterinaryUpdateOneWithoutCitasNestedInput
   operador?: Prisma.OperatorUpdateOneWithoutCitasNestedInput
-  procedimientos?: Prisma.ProcedureUpdateManyWithoutCitaNestedInput
+  procedimientos?: Prisma.ProcedureCitaUpdateManyWithoutCitaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutCitaNestedInput
   recordatoriosCorreo?: Prisma.EmailReminderUpdateManyWithoutCitaNestedInput
 }
@@ -1769,7 +1769,7 @@ export type AppointmentUncheckedUpdateWithoutCreadorInput = {
   motivoCancelacion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  procedimientos?: Prisma.ProcedureUncheckedUpdateManyWithoutCitaNestedInput
+  procedimientos?: Prisma.ProcedureCitaUncheckedUpdateManyWithoutCitaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutCitaNestedInput
   recordatoriosCorreo?: Prisma.EmailReminderUncheckedUpdateManyWithoutCitaNestedInput
 }
@@ -1835,7 +1835,7 @@ export type AppointmentUpdateWithoutVeterinariaInput = {
   propietario?: Prisma.OwnerUpdateOneWithoutCitasNestedInput
   operador?: Prisma.OperatorUpdateOneWithoutCitasNestedInput
   creador?: Prisma.UserUpdateOneWithoutCitasCreadasNestedInput
-  procedimientos?: Prisma.ProcedureUpdateManyWithoutCitaNestedInput
+  procedimientos?: Prisma.ProcedureCitaUpdateManyWithoutCitaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutCitaNestedInput
   recordatoriosCorreo?: Prisma.EmailReminderUpdateManyWithoutCitaNestedInput
 }
@@ -1859,7 +1859,7 @@ export type AppointmentUncheckedUpdateWithoutVeterinariaInput = {
   creadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  procedimientos?: Prisma.ProcedureUncheckedUpdateManyWithoutCitaNestedInput
+  procedimientos?: Prisma.ProcedureCitaUncheckedUpdateManyWithoutCitaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutCitaNestedInput
   recordatoriosCorreo?: Prisma.EmailReminderUncheckedUpdateManyWithoutCitaNestedInput
 }
@@ -1925,7 +1925,7 @@ export type AppointmentUpdateWithoutPropietarioInput = {
   veterinaria?: Prisma.VeterinaryUpdateOneWithoutCitasNestedInput
   operador?: Prisma.OperatorUpdateOneWithoutCitasNestedInput
   creador?: Prisma.UserUpdateOneWithoutCitasCreadasNestedInput
-  procedimientos?: Prisma.ProcedureUpdateManyWithoutCitaNestedInput
+  procedimientos?: Prisma.ProcedureCitaUpdateManyWithoutCitaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutCitaNestedInput
   recordatoriosCorreo?: Prisma.EmailReminderUpdateManyWithoutCitaNestedInput
 }
@@ -1949,7 +1949,7 @@ export type AppointmentUncheckedUpdateWithoutPropietarioInput = {
   creadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  procedimientos?: Prisma.ProcedureUncheckedUpdateManyWithoutCitaNestedInput
+  procedimientos?: Prisma.ProcedureCitaUncheckedUpdateManyWithoutCitaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutCitaNestedInput
   recordatoriosCorreo?: Prisma.EmailReminderUncheckedUpdateManyWithoutCitaNestedInput
 }
@@ -2015,7 +2015,7 @@ export type AppointmentUpdateWithoutOperadorInput = {
   propietario?: Prisma.OwnerUpdateOneWithoutCitasNestedInput
   veterinaria?: Prisma.VeterinaryUpdateOneWithoutCitasNestedInput
   creador?: Prisma.UserUpdateOneWithoutCitasCreadasNestedInput
-  procedimientos?: Prisma.ProcedureUpdateManyWithoutCitaNestedInput
+  procedimientos?: Prisma.ProcedureCitaUpdateManyWithoutCitaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutCitaNestedInput
   recordatoriosCorreo?: Prisma.EmailReminderUpdateManyWithoutCitaNestedInput
 }
@@ -2039,7 +2039,7 @@ export type AppointmentUncheckedUpdateWithoutOperadorInput = {
   creadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  procedimientos?: Prisma.ProcedureUncheckedUpdateManyWithoutCitaNestedInput
+  procedimientos?: Prisma.ProcedureCitaUncheckedUpdateManyWithoutCitaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutCitaNestedInput
   recordatoriosCorreo?: Prisma.EmailReminderUncheckedUpdateManyWithoutCitaNestedInput
 }
@@ -2105,7 +2105,7 @@ export type AppointmentUpdateWithoutPacienteInput = {
   veterinaria?: Prisma.VeterinaryUpdateOneWithoutCitasNestedInput
   operador?: Prisma.OperatorUpdateOneWithoutCitasNestedInput
   creador?: Prisma.UserUpdateOneWithoutCitasCreadasNestedInput
-  procedimientos?: Prisma.ProcedureUpdateManyWithoutCitaNestedInput
+  procedimientos?: Prisma.ProcedureCitaUpdateManyWithoutCitaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUpdateManyWithoutCitaNestedInput
   recordatoriosCorreo?: Prisma.EmailReminderUpdateManyWithoutCitaNestedInput
 }
@@ -2129,7 +2129,7 @@ export type AppointmentUncheckedUpdateWithoutPacienteInput = {
   creadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   actualizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  procedimientos?: Prisma.ProcedureUncheckedUpdateManyWithoutCitaNestedInput
+  procedimientos?: Prisma.ProcedureCitaUncheckedUpdateManyWithoutCitaNestedInput
   registrosClinico?: Prisma.ClinicalRecordUncheckedUpdateManyWithoutCitaNestedInput
   recordatoriosCorreo?: Prisma.EmailReminderUncheckedUpdateManyWithoutCitaNestedInput
 }
@@ -2186,7 +2186,7 @@ export type AppointmentCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.
  * AppointmentCountOutputType without action
  */
 export type AppointmentCountOutputTypeCountProcedimientosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.ProcedureWhereInput
+  where?: Prisma.ProcedureCitaWhereInput
 }
 
 /**
@@ -2346,7 +2346,7 @@ export type $AppointmentPayload<ExtArgs extends runtime.Types.Extensions.Interna
     veterinaria: Prisma.$VeterinaryPayload<ExtArgs> | null
     operador: Prisma.$OperatorPayload<ExtArgs> | null
     creador: Prisma.$UserPayload<ExtArgs> | null
-    procedimientos: Prisma.$ProcedurePayload<ExtArgs>[]
+    procedimientos: Prisma.$ProcedureCitaPayload<ExtArgs>[]
     registrosClinico: Prisma.$ClinicalRecordPayload<ExtArgs>[]
     recordatoriosCorreo: Prisma.$EmailReminderPayload<ExtArgs>[]
   }
@@ -2769,7 +2769,7 @@ export interface Prisma__AppointmentClient<T, Null = never, ExtArgs extends runt
   veterinaria<T extends Prisma.Appointment$veterinariaArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Appointment$veterinariaArgs<ExtArgs>>): Prisma.Prisma__VeterinaryClient<runtime.Types.Result.GetResult<Prisma.$VeterinaryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   operador<T extends Prisma.Appointment$operadorArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Appointment$operadorArgs<ExtArgs>>): Prisma.Prisma__OperatorClient<runtime.Types.Result.GetResult<Prisma.$OperatorPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   creador<T extends Prisma.Appointment$creadorArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Appointment$creadorArgs<ExtArgs>>): Prisma.Prisma__UserClient<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-  procedimientos<T extends Prisma.Appointment$procedimientosArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Appointment$procedimientosArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ProcedurePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  procedimientos<T extends Prisma.Appointment$procedimientosArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Appointment$procedimientosArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ProcedureCitaPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   registrosClinico<T extends Prisma.Appointment$registrosClinicoArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Appointment$registrosClinicoArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ClinicalRecordPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   recordatoriosCorreo<T extends Prisma.Appointment$recordatoriosCorreoArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Appointment$recordatoriosCorreoArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$EmailReminderPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
@@ -3296,23 +3296,23 @@ export type Appointment$creadorArgs<ExtArgs extends runtime.Types.Extensions.Int
  */
 export type Appointment$procedimientosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Procedure
+   * Select specific fields to fetch from the ProcedureCita
    */
-  select?: Prisma.ProcedureSelect<ExtArgs> | null
+  select?: Prisma.ProcedureCitaSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Procedure
+   * Omit specific fields from the ProcedureCita
    */
-  omit?: Prisma.ProcedureOmit<ExtArgs> | null
+  omit?: Prisma.ProcedureCitaOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.ProcedureInclude<ExtArgs> | null
-  where?: Prisma.ProcedureWhereInput
-  orderBy?: Prisma.ProcedureOrderByWithRelationInput | Prisma.ProcedureOrderByWithRelationInput[]
-  cursor?: Prisma.ProcedureWhereUniqueInput
+  include?: Prisma.ProcedureCitaInclude<ExtArgs> | null
+  where?: Prisma.ProcedureCitaWhereInput
+  orderBy?: Prisma.ProcedureCitaOrderByWithRelationInput | Prisma.ProcedureCitaOrderByWithRelationInput[]
+  cursor?: Prisma.ProcedureCitaWhereUniqueInput
   take?: number
   skip?: number
-  distinct?: Prisma.ProcedureScalarFieldEnum | Prisma.ProcedureScalarFieldEnum[]
+  distinct?: Prisma.ProcedureCitaScalarFieldEnum | Prisma.ProcedureCitaScalarFieldEnum[]
 }
 
 /**

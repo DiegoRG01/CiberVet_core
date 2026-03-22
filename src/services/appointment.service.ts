@@ -123,7 +123,19 @@ export class AppointmentService {
               },
             },
           },
-          procedimientos: true,
+          procedimientos: {
+            include: {
+              procedimiento: {
+                select: { id: true, nombre: true, costo: true, duracionMinutos: true },
+              },
+              ejecutor: {
+                select: {
+                  id: true,
+                  usuario: { select: { nombreCompleto: true } },
+                },
+              },
+            },
+          },
           registrosClinico: true,
         },
       });
