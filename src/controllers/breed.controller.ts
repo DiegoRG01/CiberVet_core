@@ -158,6 +158,16 @@ export class BreedController {
     } catch (error: any) {
       console.error("Error en BreedController.deleteBreed:", error);
 
+      if (error.code === "BREED_HAS_PATIENTS") {
+        res.status(409).json({
+          success: false,
+          error: "Conflicto",
+          message: error.message,
+          patientCount: error.patientCount,
+        });
+        return;
+      }
+
       if (error.code === "P2025") {
         res.status(404).json({
           success: false,

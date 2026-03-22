@@ -149,6 +149,16 @@ export class SpeciesController {
     } catch (error: any) {
       console.error("Error en SpeciesController.deleteSpecies:", error);
 
+      if (error.code === "SPECIES_HAS_PATIENTS") {
+        res.status(409).json({
+          success: false,
+          error: "Conflicto",
+          message: error.message,
+          patientCount: error.patientCount,
+        });
+        return;
+      }
+
       if (error.code === "P2025") {
         res.status(404).json({
           success: false,

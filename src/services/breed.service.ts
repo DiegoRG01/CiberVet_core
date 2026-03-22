@@ -138,6 +138,19 @@ export class BreedService {
    */
   async deleteBreed(breedId: string) {
     try {
+      const patientCount = await prisma.patient.count({
+        where: { razaId: breedId, estaActivo: true },
+      });
+
+      if (patientCount > 0) {
+        const error: any = new Error(
+          `No se puede desactivar: ${patientCount} paciente(s) activo(s) están asociados a esta raza. Reasigna o desactiva los pacientes primero.`,
+        );
+        error.code = "BREED_HAS_PATIENTS";
+        error.patientCount = patientCount;
+        throw error;
+      }
+
       const breed = await prisma.breed.update({
         where: { id: breedId },
         data: { estaActivo: false },

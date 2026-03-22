@@ -118,6 +118,19 @@ export class SpeciesService {
 
   async deleteSpecies(speciesId: string) {
     try {
+      const patientCount = await prisma.patient.count({
+        where: { especieId: speciesId, estaActivo: true },
+      });
+
+      if (patientCount > 0) {
+        const error: any = new Error(
+          `No se puede desactivar: ${patientCount} paciente(s) activo(s) están asociados a esta especie. Reasigna o desactiva los pacientes primero.`,
+        );
+        error.code = "SPECIES_HAS_PATIENTS";
+        error.patientCount = patientCount;
+        throw error;
+      }
+
       const [, species] = await prisma.$transaction([
         prisma.breed.updateMany({
           where: { especieId: speciesId, estaActivo: true },
