@@ -44,6 +44,7 @@ export type ProcedureMinAggregateOutputType = {
   costo: runtime.Decimal | null
   duracionMinutos: number | null
   realizadoPor: string | null
+  estaActivo: boolean | null
   realizadoEn: Date | null
   creadoEn: Date | null
 }
@@ -56,6 +57,7 @@ export type ProcedureMaxAggregateOutputType = {
   costo: runtime.Decimal | null
   duracionMinutos: number | null
   realizadoPor: string | null
+  estaActivo: boolean | null
   realizadoEn: Date | null
   creadoEn: Date | null
 }
@@ -68,6 +70,7 @@ export type ProcedureCountAggregateOutputType = {
   costo: number
   duracionMinutos: number
   realizadoPor: number
+  estaActivo: number
   realizadoEn: number
   creadoEn: number
   _all: number
@@ -92,6 +95,7 @@ export type ProcedureMinAggregateInputType = {
   costo?: true
   duracionMinutos?: true
   realizadoPor?: true
+  estaActivo?: true
   realizadoEn?: true
   creadoEn?: true
 }
@@ -104,6 +108,7 @@ export type ProcedureMaxAggregateInputType = {
   costo?: true
   duracionMinutos?: true
   realizadoPor?: true
+  estaActivo?: true
   realizadoEn?: true
   creadoEn?: true
 }
@@ -116,6 +121,7 @@ export type ProcedureCountAggregateInputType = {
   costo?: true
   duracionMinutos?: true
   realizadoPor?: true
+  estaActivo?: true
   realizadoEn?: true
   creadoEn?: true
   _all?: true
@@ -215,6 +221,7 @@ export type ProcedureGroupByOutputType = {
   costo: runtime.Decimal | null
   duracionMinutos: number | null
   realizadoPor: string | null
+  estaActivo: boolean
   realizadoEn: Date
   creadoEn: Date
   _count: ProcedureCountAggregateOutputType | null
@@ -250,6 +257,7 @@ export type ProcedureWhereInput = {
   costo?: Prisma.DecimalNullableFilter<"Procedure"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: Prisma.IntNullableFilter<"Procedure"> | number | null
   realizadoPor?: Prisma.UuidNullableFilter<"Procedure"> | string | null
+  estaActivo?: Prisma.BoolFilter<"Procedure"> | boolean
   realizadoEn?: Prisma.DateTimeFilter<"Procedure"> | Date | string
   creadoEn?: Prisma.DateTimeFilter<"Procedure"> | Date | string
   cita?: Prisma.XOR<Prisma.AppointmentScalarRelationFilter, Prisma.AppointmentWhereInput>
@@ -264,6 +272,7 @@ export type ProcedureOrderByWithRelationInput = {
   costo?: Prisma.SortOrderInput | Prisma.SortOrder
   duracionMinutos?: Prisma.SortOrderInput | Prisma.SortOrder
   realizadoPor?: Prisma.SortOrderInput | Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
   realizadoEn?: Prisma.SortOrder
   creadoEn?: Prisma.SortOrder
   cita?: Prisma.AppointmentOrderByWithRelationInput
@@ -281,6 +290,7 @@ export type ProcedureWhereUniqueInput = Prisma.AtLeast<{
   costo?: Prisma.DecimalNullableFilter<"Procedure"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: Prisma.IntNullableFilter<"Procedure"> | number | null
   realizadoPor?: Prisma.UuidNullableFilter<"Procedure"> | string | null
+  estaActivo?: Prisma.BoolFilter<"Procedure"> | boolean
   realizadoEn?: Prisma.DateTimeFilter<"Procedure"> | Date | string
   creadoEn?: Prisma.DateTimeFilter<"Procedure"> | Date | string
   cita?: Prisma.XOR<Prisma.AppointmentScalarRelationFilter, Prisma.AppointmentWhereInput>
@@ -295,6 +305,7 @@ export type ProcedureOrderByWithAggregationInput = {
   costo?: Prisma.SortOrderInput | Prisma.SortOrder
   duracionMinutos?: Prisma.SortOrderInput | Prisma.SortOrder
   realizadoPor?: Prisma.SortOrderInput | Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
   realizadoEn?: Prisma.SortOrder
   creadoEn?: Prisma.SortOrder
   _count?: Prisma.ProcedureCountOrderByAggregateInput
@@ -315,6 +326,7 @@ export type ProcedureScalarWhereWithAggregatesInput = {
   costo?: Prisma.DecimalNullableWithAggregatesFilter<"Procedure"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: Prisma.IntNullableWithAggregatesFilter<"Procedure"> | number | null
   realizadoPor?: Prisma.UuidNullableWithAggregatesFilter<"Procedure"> | string | null
+  estaActivo?: Prisma.BoolWithAggregatesFilter<"Procedure"> | boolean
   realizadoEn?: Prisma.DateTimeWithAggregatesFilter<"Procedure"> | Date | string
   creadoEn?: Prisma.DateTimeWithAggregatesFilter<"Procedure"> | Date | string
 }
@@ -325,6 +337,7 @@ export type ProcedureCreateInput = {
   descripcion?: string | null
   costo?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: number | null
+  estaActivo?: boolean
   realizadoEn?: Date | string
   creadoEn?: Date | string
   cita: Prisma.AppointmentCreateNestedOneWithoutProcedimientosInput
@@ -339,6 +352,7 @@ export type ProcedureUncheckedCreateInput = {
   costo?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: number | null
   realizadoPor?: string | null
+  estaActivo?: boolean
   realizadoEn?: Date | string
   creadoEn?: Date | string
 }
@@ -349,6 +363,7 @@ export type ProcedureUpdateInput = {
   descripcion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   costo?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
   realizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   cita?: Prisma.AppointmentUpdateOneRequiredWithoutProcedimientosNestedInput
@@ -363,6 +378,7 @@ export type ProcedureUncheckedUpdateInput = {
   costo?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   realizadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
   realizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -375,6 +391,7 @@ export type ProcedureCreateManyInput = {
   costo?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: number | null
   realizadoPor?: string | null
+  estaActivo?: boolean
   realizadoEn?: Date | string
   creadoEn?: Date | string
 }
@@ -385,6 +402,7 @@ export type ProcedureUpdateManyMutationInput = {
   descripcion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   costo?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
   realizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -397,6 +415,7 @@ export type ProcedureUncheckedUpdateManyInput = {
   costo?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   realizadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
   realizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -419,6 +438,7 @@ export type ProcedureCountOrderByAggregateInput = {
   costo?: Prisma.SortOrder
   duracionMinutos?: Prisma.SortOrder
   realizadoPor?: Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
   realizadoEn?: Prisma.SortOrder
   creadoEn?: Prisma.SortOrder
 }
@@ -436,6 +456,7 @@ export type ProcedureMaxOrderByAggregateInput = {
   costo?: Prisma.SortOrder
   duracionMinutos?: Prisma.SortOrder
   realizadoPor?: Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
   realizadoEn?: Prisma.SortOrder
   creadoEn?: Prisma.SortOrder
 }
@@ -448,6 +469,7 @@ export type ProcedureMinOrderByAggregateInput = {
   costo?: Prisma.SortOrder
   duracionMinutos?: Prisma.SortOrder
   realizadoPor?: Prisma.SortOrder
+  estaActivo?: Prisma.SortOrder
   realizadoEn?: Prisma.SortOrder
   creadoEn?: Prisma.SortOrder
 }
@@ -555,6 +577,7 @@ export type ProcedureCreateWithoutEjecutorInput = {
   descripcion?: string | null
   costo?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: number | null
+  estaActivo?: boolean
   realizadoEn?: Date | string
   creadoEn?: Date | string
   cita: Prisma.AppointmentCreateNestedOneWithoutProcedimientosInput
@@ -567,6 +590,7 @@ export type ProcedureUncheckedCreateWithoutEjecutorInput = {
   descripcion?: string | null
   costo?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: number | null
+  estaActivo?: boolean
   realizadoEn?: Date | string
   creadoEn?: Date | string
 }
@@ -608,6 +632,7 @@ export type ProcedureScalarWhereInput = {
   costo?: Prisma.DecimalNullableFilter<"Procedure"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: Prisma.IntNullableFilter<"Procedure"> | number | null
   realizadoPor?: Prisma.UuidNullableFilter<"Procedure"> | string | null
+  estaActivo?: Prisma.BoolFilter<"Procedure"> | boolean
   realizadoEn?: Prisma.DateTimeFilter<"Procedure"> | Date | string
   creadoEn?: Prisma.DateTimeFilter<"Procedure"> | Date | string
 }
@@ -618,6 +643,7 @@ export type ProcedureCreateWithoutCitaInput = {
   descripcion?: string | null
   costo?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: number | null
+  estaActivo?: boolean
   realizadoEn?: Date | string
   creadoEn?: Date | string
   ejecutor?: Prisma.OperatorCreateNestedOneWithoutProcedimientosInput
@@ -630,6 +656,7 @@ export type ProcedureUncheckedCreateWithoutCitaInput = {
   costo?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: number | null
   realizadoPor?: string | null
+  estaActivo?: boolean
   realizadoEn?: Date | string
   creadoEn?: Date | string
 }
@@ -667,6 +694,7 @@ export type ProcedureCreateManyEjecutorInput = {
   descripcion?: string | null
   costo?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: number | null
+  estaActivo?: boolean
   realizadoEn?: Date | string
   creadoEn?: Date | string
 }
@@ -677,6 +705,7 @@ export type ProcedureUpdateWithoutEjecutorInput = {
   descripcion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   costo?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
   realizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   cita?: Prisma.AppointmentUpdateOneRequiredWithoutProcedimientosNestedInput
@@ -689,6 +718,7 @@ export type ProcedureUncheckedUpdateWithoutEjecutorInput = {
   descripcion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   costo?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
   realizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -700,6 +730,7 @@ export type ProcedureUncheckedUpdateManyWithoutEjecutorInput = {
   descripcion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   costo?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
   realizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -711,6 +742,7 @@ export type ProcedureCreateManyCitaInput = {
   costo?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: number | null
   realizadoPor?: string | null
+  estaActivo?: boolean
   realizadoEn?: Date | string
   creadoEn?: Date | string
 }
@@ -721,6 +753,7 @@ export type ProcedureUpdateWithoutCitaInput = {
   descripcion?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   costo?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
   realizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   ejecutor?: Prisma.OperatorUpdateOneWithoutProcedimientosNestedInput
@@ -733,6 +766,7 @@ export type ProcedureUncheckedUpdateWithoutCitaInput = {
   costo?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   realizadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
   realizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -744,6 +778,7 @@ export type ProcedureUncheckedUpdateManyWithoutCitaInput = {
   costo?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   duracionMinutos?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   realizadoPor?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  estaActivo?: Prisma.BoolFieldUpdateOperationsInput | boolean
   realizadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   creadoEn?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -758,6 +793,7 @@ export type ProcedureSelect<ExtArgs extends runtime.Types.Extensions.InternalArg
   costo?: boolean
   duracionMinutos?: boolean
   realizadoPor?: boolean
+  estaActivo?: boolean
   realizadoEn?: boolean
   creadoEn?: boolean
   cita?: boolean | Prisma.AppointmentDefaultArgs<ExtArgs>
@@ -772,6 +808,7 @@ export type ProcedureSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Ext
   costo?: boolean
   duracionMinutos?: boolean
   realizadoPor?: boolean
+  estaActivo?: boolean
   realizadoEn?: boolean
   creadoEn?: boolean
   cita?: boolean | Prisma.AppointmentDefaultArgs<ExtArgs>
@@ -786,6 +823,7 @@ export type ProcedureSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Ext
   costo?: boolean
   duracionMinutos?: boolean
   realizadoPor?: boolean
+  estaActivo?: boolean
   realizadoEn?: boolean
   creadoEn?: boolean
   cita?: boolean | Prisma.AppointmentDefaultArgs<ExtArgs>
@@ -800,11 +838,12 @@ export type ProcedureSelectScalar = {
   costo?: boolean
   duracionMinutos?: boolean
   realizadoPor?: boolean
+  estaActivo?: boolean
   realizadoEn?: boolean
   creadoEn?: boolean
 }
 
-export type ProcedureOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "citaId" | "nombre" | "descripcion" | "costo" | "duracionMinutos" | "realizadoPor" | "realizadoEn" | "creadoEn", ExtArgs["result"]["procedure"]>
+export type ProcedureOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "citaId" | "nombre" | "descripcion" | "costo" | "duracionMinutos" | "realizadoPor" | "estaActivo" | "realizadoEn" | "creadoEn", ExtArgs["result"]["procedure"]>
 export type ProcedureInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   cita?: boolean | Prisma.AppointmentDefaultArgs<ExtArgs>
   ejecutor?: boolean | Prisma.Procedure$ejecutorArgs<ExtArgs>
@@ -832,6 +871,7 @@ export type $ProcedurePayload<ExtArgs extends runtime.Types.Extensions.InternalA
     costo: runtime.Decimal | null
     duracionMinutos: number | null
     realizadoPor: string | null
+    estaActivo: boolean
     realizadoEn: Date
     creadoEn: Date
   }, ExtArgs["result"]["procedure"]>
@@ -1266,6 +1306,7 @@ export interface ProcedureFieldRefs {
   readonly costo: Prisma.FieldRef<"Procedure", 'Decimal'>
   readonly duracionMinutos: Prisma.FieldRef<"Procedure", 'Int'>
   readonly realizadoPor: Prisma.FieldRef<"Procedure", 'String'>
+  readonly estaActivo: Prisma.FieldRef<"Procedure", 'Boolean'>
   readonly realizadoEn: Prisma.FieldRef<"Procedure", 'DateTime'>
   readonly creadoEn: Prisma.FieldRef<"Procedure", 'DateTime'>
 }

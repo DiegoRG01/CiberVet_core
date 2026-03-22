@@ -238,6 +238,7 @@ model Procedure {
   costo           Decimal?  @db.Decimal(10, 2)
   duracionMinutos Int?
   realizadoPor    String?   @db.Uuid
+  estaActivo      Boolean   @default(true)
   realizadoEn     DateTime  @default(now()) @db.Timestamptz(6)
   creadoEn        DateTime  @default(now()) @db.Timestamptz(6)
 

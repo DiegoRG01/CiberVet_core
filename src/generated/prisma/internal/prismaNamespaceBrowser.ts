@@ -230,6 +230,7 @@ export const ProcedureScalarFieldEnum = {
   costo: 'costo',
   duracionMinutos: 'duracionMinutos',
   realizadoPor: 'realizadoPor',
+  estaActivo: 'estaActivo',
   realizadoEn: 'realizadoEn',
   creadoEn: 'creadoEn'
 } as const

@@ -6,6 +6,7 @@ import breedRoutes from "./breed.routes";
 import appointmentRoutes from "./appointment.routes";
 import patientRoutes from "./patient.routes";
 import ownerRoutes from "./owner.routes";
+import procedureRoutes from "./procedure.routes";
 
 const router: Router = Router();
 
@@ -16,6 +17,7 @@ router.use("/species", speciesRoutes);
 router.use("/breeds", breedRoutes);
 router.use("/appointments", appointmentRoutes);
 router.use("/patients", patientRoutes);
+router.use("/procedures", procedureRoutes);
 
 export default router;
 
